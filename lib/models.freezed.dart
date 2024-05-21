@@ -340,10 +340,10 @@ mixin _$TotalValueWidgetConfig {
   set borderRadius(double value) => throw _privateConstructorUsedError;
   BorderStyle get borderStyle => throw _privateConstructorUsedError;
   set borderStyle(BorderStyle value) => throw _privateConstructorUsedError;
-  FontConfig get headerFont => throw _privateConstructorUsedError;
-  set headerFont(FontConfig value) => throw _privateConstructorUsedError;
-  FontConfig get labelFont => throw _privateConstructorUsedError;
-  set labelFont(FontConfig value) => throw _privateConstructorUsedError;
+  FontConfig? get headerFont => throw _privateConstructorUsedError;
+  set headerFont(FontConfig? value) => throw _privateConstructorUsedError;
+  FontConfig? get labelFont => throw _privateConstructorUsedError;
+  set labelFont(FontConfig? value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
@@ -370,13 +370,13 @@ abstract class $TotalValueWidgetConfigCopyWith<$Res> {
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      FontConfig headerFont,
-      FontConfig labelFont,
+      FontConfig? headerFont,
+      FontConfig? labelFont,
       String field,
       List<String> modelIds});
 
-  $FontConfigCopyWith<$Res> get headerFont;
-  $FontConfigCopyWith<$Res> get labelFont;
+  $FontConfigCopyWith<$Res>? get headerFont;
+  $FontConfigCopyWith<$Res>? get labelFont;
 }
 
 /// @nodoc
@@ -401,8 +401,8 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? borderStyle = null,
-    Object? headerFont = null,
-    Object? labelFont = null,
+    Object? headerFont = freezed,
+    Object? labelFont = freezed,
     Object? field = null,
     Object? modelIds = null,
   }) {
@@ -439,14 +439,14 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
           ? _value.borderStyle
           : borderStyle // ignore: cast_nullable_to_non_nullable
               as BorderStyle,
-      headerFont: null == headerFont
+      headerFont: freezed == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as FontConfig,
-      labelFont: null == labelFont
+              as FontConfig?,
+      labelFont: freezed == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
-              as FontConfig,
+              as FontConfig?,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -460,16 +460,24 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $FontConfigCopyWith<$Res> get headerFont {
-    return $FontConfigCopyWith<$Res>(_value.headerFont, (value) {
+  $FontConfigCopyWith<$Res>? get headerFont {
+    if (_value.headerFont == null) {
+      return null;
+    }
+
+    return $FontConfigCopyWith<$Res>(_value.headerFont!, (value) {
       return _then(_value.copyWith(headerFont: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $FontConfigCopyWith<$Res> get labelFont {
-    return $FontConfigCopyWith<$Res>(_value.labelFont, (value) {
+  $FontConfigCopyWith<$Res>? get labelFont {
+    if (_value.labelFont == null) {
+      return null;
+    }
+
+    return $FontConfigCopyWith<$Res>(_value.labelFont!, (value) {
       return _then(_value.copyWith(labelFont: value) as $Val);
     });
   }
@@ -493,15 +501,15 @@ abstract class _$$TotalValueWidgetConfigImplCopyWith<$Res>
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      FontConfig headerFont,
-      FontConfig labelFont,
+      FontConfig? headerFont,
+      FontConfig? labelFont,
       String field,
       List<String> modelIds});
 
   @override
-  $FontConfigCopyWith<$Res> get headerFont;
+  $FontConfigCopyWith<$Res>? get headerFont;
   @override
-  $FontConfigCopyWith<$Res> get labelFont;
+  $FontConfigCopyWith<$Res>? get labelFont;
 }
 
 /// @nodoc
@@ -525,8 +533,8 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? borderStyle = null,
-    Object? headerFont = null,
-    Object? labelFont = null,
+    Object? headerFont = freezed,
+    Object? labelFont = freezed,
     Object? field = null,
     Object? modelIds = null,
   }) {
@@ -563,14 +571,14 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
           ? _value.borderStyle
           : borderStyle // ignore: cast_nullable_to_non_nullable
               as BorderStyle,
-      headerFont: null == headerFont
+      headerFont: freezed == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as FontConfig,
-      labelFont: null == labelFont
+              as FontConfig?,
+      labelFont: freezed == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
-              as FontConfig,
+              as FontConfig?,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -595,8 +603,8 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
       this.borderWidth = 2.0,
       this.borderRadius = 0.0,
       this.borderStyle = BorderStyle.solid,
-      this.headerFont = const FontConfig(fontSize: 20, fontBold: true),
-      this.labelFont = const FontConfig(),
+      this.headerFont,
+      this.labelFont,
       this.field = '',
       this.modelIds = const []})
       : super._();
@@ -629,11 +637,9 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
   @JsonKey()
   BorderStyle borderStyle;
   @override
-  @JsonKey()
-  FontConfig headerFont;
+  FontConfig? headerFont;
   @override
-  @JsonKey()
-  FontConfig labelFont;
+  FontConfig? labelFont;
   @override
   @JsonKey()
   String field;
@@ -671,8 +677,8 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      FontConfig headerFont,
-      FontConfig labelFont,
+      FontConfig? headerFont,
+      FontConfig? labelFont,
       String field,
       List<String> modelIds}) = _$TotalValueWidgetConfigImpl;
   _TotalValueWidgetConfig._() : super._();
@@ -705,11 +711,11 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   BorderStyle get borderStyle;
   set borderStyle(BorderStyle value);
   @override
-  FontConfig get headerFont;
-  set headerFont(FontConfig value);
+  FontConfig? get headerFont;
+  set headerFont(FontConfig? value);
   @override
-  FontConfig get labelFont;
-  set labelFont(FontConfig value);
+  FontConfig? get labelFont;
+  set labelFont(FontConfig? value);
   @override
   String get field;
   set field(String value);

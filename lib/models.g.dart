@@ -46,10 +46,10 @@ _$TotalValueWidgetConfigImpl _$$TotalValueWidgetConfigImplFromJson(
           $enumDecodeNullable(_$BorderStyleEnumMap, json['borderStyle']) ??
               BorderStyle.solid,
       headerFont: json['headerFont'] == null
-          ? const FontConfig(fontSize: 20, fontBold: true)
+          ? null
           : FontConfig.fromJson(json['headerFont'] as Map<String, dynamic>),
       labelFont: json['labelFont'] == null
-          ? const FontConfig()
+          ? null
           : FontConfig.fromJson(json['labelFont'] as Map<String, dynamic>),
       field: json['field'] as String? ?? '',
       modelIds: (json['modelIds'] as List<dynamic>?)

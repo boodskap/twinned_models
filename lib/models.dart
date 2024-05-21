@@ -102,8 +102,8 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
     @Default(2.0) double borderWidth,
     @Default(0.0) double borderRadius,
     @Default(BorderStyle.solid) BorderStyle borderStyle,
-    @Default(FontConfig(fontSize: 20, fontBold: true)) FontConfig headerFont,
-    @Default(FontConfig()) FontConfig labelFont,
+    FontConfig? headerFont,
+    FontConfig? labelFont,
     @Default('') String field,
     @Default([]) List<String> modelIds,
   }) = _TotalValueWidgetConfig;
