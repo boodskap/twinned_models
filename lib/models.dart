@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'models.freezed.dart';
 part 'models.g.dart';
@@ -15,7 +14,7 @@ enum DataType {
   listOfTexts,
   listOfNumbers,
   listOfDecimals,
-  listOfObjects,
+  listOfRanges,
 }
 
 enum HintType {
@@ -23,7 +22,6 @@ enum HintType {
   color,
   field,
   modelId,
-  range,
   assetModelId,
   deviceId,
   assetId,
@@ -38,6 +36,8 @@ abstract class BaseConfig {
   const BaseConfig();
 
   DataType getDataType(String parameter);
+
+  Map<String, dynamic> toJson();
 
   HintType getHintType(String parameter) {
     return HintType.none;
@@ -55,7 +55,13 @@ abstract class BaseConfig {
     return true;
   }
 
-  Map<String, dynamic> toJson();
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  String getTooltip(String parameter) {
+    return '';
+  }
 }
 
 @unfreezed
@@ -232,7 +238,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
       case 'modelIds':
         return DataType.listOfTexts;
       case 'segments':
-        return DataType.listOfObjects;
+        return DataType.listOfRanges;
       default:
         return DataType.text;
     }
@@ -245,8 +251,6 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
         return HintType.modelId;
       case 'field':
         return HintType.field;
-      case 'segments':
-        return HintType.range;
     }
 
     return HintType.none;
