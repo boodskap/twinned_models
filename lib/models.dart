@@ -25,6 +25,13 @@ enum HintType {
   modelId,
   range,
   assetModelId,
+  deviceId,
+  assetId,
+  userId,
+  premiseId,
+  facilityId,
+  floorId,
+  deviceModelId,
 }
 
 abstract class BaseConfig {
@@ -313,6 +320,40 @@ class TotalAndReportingAssetWidgetConfig extends BaseConfig
         return true;
       default:
         return false;
+    }
+  }
+}
+
+@unfreezed
+class DeviceCartesianChartWidgetConfig extends BaseConfig
+    with _$DeviceCartesianChartWidgetConfig {
+  DeviceCartesianChartWidgetConfig._();
+
+  factory DeviceCartesianChartWidgetConfig(
+      {required String field,
+      required String deviceId}) = _DeviceCartesianChartWidgetConfig;
+
+  factory DeviceCartesianChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceCartesianChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      default:
+        return DataType.text;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      default:
+        return HintType.none;
     }
   }
 }

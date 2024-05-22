@@ -164,3 +164,18 @@ Map<String, dynamic> _$$TotalAndReportingAssetWidgetConfigImplToJson(
       'labelFont': instance.labelFont,
       'assetModelIds': instance.assetModelIds,
     };
+
+_$DeviceCartesianChartWidgetConfigImpl
+    _$$DeviceCartesianChartWidgetConfigImplFromJson(
+            Map<String, dynamic> json) =>
+        _$DeviceCartesianChartWidgetConfigImpl(
+          field: json['field'] as String,
+          deviceId: json['deviceId'] as String,
+        );
+
+Map<String, dynamic> _$$DeviceCartesianChartWidgetConfigImplToJson(
+        _$DeviceCartesianChartWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'field': instance.field,
+      'deviceId': instance.deviceId,
+    };

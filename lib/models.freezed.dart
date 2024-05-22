@@ -1398,3 +1398,165 @@ abstract class _TotalAndReportingAssetWidgetConfig
           _$TotalAndReportingAssetWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+DeviceCartesianChartWidgetConfig _$DeviceCartesianChartWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceCartesianChartWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceCartesianChartWidgetConfig {
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceCartesianChartWidgetConfigCopyWith<DeviceCartesianChartWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  factory $DeviceCartesianChartWidgetConfigCopyWith(
+          DeviceCartesianChartWidgetConfig value,
+          $Res Function(DeviceCartesianChartWidgetConfig) then) =
+      _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+          DeviceCartesianChartWidgetConfig>;
+  @useResult
+  $Res call({String field, String deviceId});
+}
+
+/// @nodoc
+class _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceCartesianChartWidgetConfig>
+    implements $DeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  _$DeviceCartesianChartWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_value.copyWith(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DeviceCartesianChartWidgetConfigImplCopyWith<$Res>
+    implements $DeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceCartesianChartWidgetConfigImplCopyWith(
+          _$DeviceCartesianChartWidgetConfigImpl value,
+          $Res Function(_$DeviceCartesianChartWidgetConfigImpl) then) =
+      __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String field, String deviceId});
+}
+
+/// @nodoc
+class __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+        _$DeviceCartesianChartWidgetConfigImpl>
+    implements _$$DeviceCartesianChartWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl(
+      _$DeviceCartesianChartWidgetConfigImpl _value,
+      $Res Function(_$DeviceCartesianChartWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_$DeviceCartesianChartWidgetConfigImpl(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DeviceCartesianChartWidgetConfigImpl
+    extends _DeviceCartesianChartWidgetConfig {
+  _$DeviceCartesianChartWidgetConfigImpl(
+      {required this.field, required this.deviceId})
+      : super._();
+
+  factory _$DeviceCartesianChartWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DeviceCartesianChartWidgetConfigImplFromJson(json);
+
+  @override
+  String field;
+  @override
+  String deviceId;
+
+  @override
+  String toString() {
+    return 'DeviceCartesianChartWidgetConfig(field: $field, deviceId: $deviceId)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeviceCartesianChartWidgetConfigImplCopyWith<
+          _$DeviceCartesianChartWidgetConfigImpl>
+      get copyWith => __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<
+          _$DeviceCartesianChartWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeviceCartesianChartWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DeviceCartesianChartWidgetConfig
+    extends DeviceCartesianChartWidgetConfig {
+  factory _DeviceCartesianChartWidgetConfig(
+      {required String field,
+      required String deviceId}) = _$DeviceCartesianChartWidgetConfigImpl;
+  _DeviceCartesianChartWidgetConfig._() : super._();
+
+  factory _DeviceCartesianChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$DeviceCartesianChartWidgetConfigImpl.fromJson;
+
+  @override
+  String get field;
+  set field(String value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  @JsonKey(ignore: true)
+  _$$DeviceCartesianChartWidgetConfigImplCopyWith<
+          _$DeviceCartesianChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
