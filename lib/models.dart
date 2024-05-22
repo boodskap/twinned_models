@@ -329,9 +329,15 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     with _$DeviceCartesianChartWidgetConfig {
   DeviceCartesianChartWidgetConfig._();
 
-  factory DeviceCartesianChartWidgetConfig(
-      {required String field,
-      required String deviceId}) = _DeviceCartesianChartWidgetConfig;
+  factory DeviceCartesianChartWidgetConfig({
+    @Default('') String title,
+    @Default('') String field,
+    @Default('') String deviceId,
+    @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
+    Map<String, dynamic> headerFont,
+    @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
+    Map<String, dynamic> labelFont,
+  }) = _DeviceCartesianChartWidgetConfig;
 
   factory DeviceCartesianChartWidgetConfig.fromJson(
           Map<String, dynamic> json) =>

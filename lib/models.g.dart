@@ -169,13 +169,21 @@ _$DeviceCartesianChartWidgetConfigImpl
     _$$DeviceCartesianChartWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$DeviceCartesianChartWidgetConfigImpl(
-          field: json['field'] as String,
-          deviceId: json['deviceId'] as String,
+          title: json['title'] as String? ?? '',
+          field: json['field'] as String? ?? '',
+          deviceId: json['deviceId'] as String? ?? '',
+          headerFont: json['headerFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
         );
 
 Map<String, dynamic> _$$DeviceCartesianChartWidgetConfigImplToJson(
         _$DeviceCartesianChartWidgetConfigImpl instance) =>
     <String, dynamic>{
+      'title': instance.title,
       'field': instance.field,
       'deviceId': instance.deviceId,
+      'headerFont': instance.headerFont,
+      'labelFont': instance.labelFont,
     };
