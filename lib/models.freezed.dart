@@ -1643,3 +1643,253 @@ abstract class _DeviceCartesianChartWidgetConfig
           _$DeviceCartesianChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+MultipleDeviceCartesianChartWidgetConfig
+    _$MultipleDeviceCartesianChartWidgetConfigFromJson(
+        Map<String, dynamic> json) {
+  return _MultipleDeviceCartesianChartWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MultipleDeviceCartesianChartWidgetConfig {
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MultipleDeviceCartesianChartWidgetConfigCopyWith<
+          MultipleDeviceCartesianChartWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MultipleDeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  factory $MultipleDeviceCartesianChartWidgetConfigCopyWith(
+          MultipleDeviceCartesianChartWidgetConfig value,
+          $Res Function(MultipleDeviceCartesianChartWidgetConfig) then) =
+      _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+          MultipleDeviceCartesianChartWidgetConfig>;
+  @useResult
+  $Res call(
+      {String title,
+      String field,
+      String deviceId,
+      Map<String, dynamic> headerFont,
+      Map<String, dynamic> labelFont});
+}
+
+/// @nodoc
+class _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+        $Val extends MultipleDeviceCartesianChartWidgetConfig>
+    implements $MultipleDeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl(
+      this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+    Object? headerFont = null,
+    Object? labelFont = null,
+  }) {
+    return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<$Res>
+    implements $MultipleDeviceCartesianChartWidgetConfigCopyWith<$Res> {
+  factory _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith(
+          _$MultipleDeviceCartesianChartWidgetConfigImpl value,
+          $Res Function(_$MultipleDeviceCartesianChartWidgetConfigImpl) then) =
+      __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String title,
+      String field,
+      String deviceId,
+      Map<String, dynamic> headerFont,
+      Map<String, dynamic> labelFont});
+}
+
+/// @nodoc
+class __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
+    extends _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
+        _$MultipleDeviceCartesianChartWidgetConfigImpl>
+    implements _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<$Res> {
+  __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl(
+      _$MultipleDeviceCartesianChartWidgetConfigImpl _value,
+      $Res Function(_$MultipleDeviceCartesianChartWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+    Object? headerFont = null,
+    Object? labelFont = null,
+  }) {
+    return _then(_$MultipleDeviceCartesianChartWidgetConfigImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MultipleDeviceCartesianChartWidgetConfigImpl
+    extends _MultipleDeviceCartesianChartWidgetConfig {
+  _$MultipleDeviceCartesianChartWidgetConfigImpl(
+      {this.title = '',
+      this.field = '',
+      this.deviceId = '',
+      this.headerFont = const {
+        'fontSize': 18,
+        'fontColor': 0,
+        'fontBold': true
+      },
+      this.labelFont = const {
+        'fontSize': 14,
+        'fontColor': 0,
+        'fontBold': false
+      }})
+      : super._();
+
+  factory _$MultipleDeviceCartesianChartWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MultipleDeviceCartesianChartWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String title;
+  @override
+  @JsonKey()
+  String field;
+  @override
+  @JsonKey()
+  String deviceId;
+  @override
+  @JsonKey()
+  Map<String, dynamic> headerFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
+
+  @override
+  String toString() {
+    return 'MultipleDeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<
+          _$MultipleDeviceCartesianChartWidgetConfigImpl>
+      get copyWith =>
+          __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<
+              _$MultipleDeviceCartesianChartWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MultipleDeviceCartesianChartWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MultipleDeviceCartesianChartWidgetConfig
+    extends MultipleDeviceCartesianChartWidgetConfig {
+  factory _MultipleDeviceCartesianChartWidgetConfig(
+          {String title,
+          String field,
+          String deviceId,
+          Map<String, dynamic> headerFont,
+          Map<String, dynamic> labelFont}) =
+      _$MultipleDeviceCartesianChartWidgetConfigImpl;
+  _MultipleDeviceCartesianChartWidgetConfig._() : super._();
+
+  factory _MultipleDeviceCartesianChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$MultipleDeviceCartesianChartWidgetConfigImpl.fromJson;
+
+  @override
+  String get title;
+  set title(String value);
+  @override
+  String get field;
+  set field(String value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<
+          _$MultipleDeviceCartesianChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
