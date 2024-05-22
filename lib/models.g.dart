@@ -174,6 +174,8 @@ _$DeviceCartesianChartWidgetConfigImpl
               const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
+          bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+          borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
         );
 
 Map<String, dynamic> _$$DeviceCartesianChartWidgetConfigImplToJson(
@@ -184,4 +186,6 @@ Map<String, dynamic> _$$DeviceCartesianChartWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'headerFont': instance.headerFont,
       'labelFont': instance.labelFont,
+      'bgColor': instance.bgColor,
+      'borderColor': instance.borderColor,
     };

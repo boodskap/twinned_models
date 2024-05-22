@@ -343,6 +343,8 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
+     @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFFFFFFFF) int borderColor,
   }) = _DeviceCartesianChartWidgetConfig;
 
   factory DeviceCartesianChartWidgetConfig.fromJson(
@@ -352,6 +354,9 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'bgColor':
+      case 'borderColor':
+        return DataType.numeric;
       default:
         return DataType.text;
     }
@@ -364,6 +369,9 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'bgColor':
+      case 'borderColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
