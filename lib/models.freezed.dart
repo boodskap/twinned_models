@@ -901,8 +901,8 @@ mixin _$ValueDistributionPieChartWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
-  List<Range> get segments => throw _privateConstructorUsedError;
-  set segments(List<Range> value) => throw _privateConstructorUsedError;
+  List<dynamic> get segments => throw _privateConstructorUsedError;
+  set segments(List<dynamic> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -926,7 +926,7 @@ abstract class $ValueDistributionPieChartWidgetConfigCopyWith<$Res> {
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments});
+      List<dynamic> segments});
 }
 
 /// @nodoc
@@ -979,7 +979,7 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
     ) as $Val);
   }
 }
@@ -1000,7 +1000,7 @@ abstract class _$$ValueDistributionPieChartWidgetConfigImplCopyWith<$Res>
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments});
+      List<dynamic> segments});
 }
 
 /// @nodoc
@@ -1052,7 +1052,7 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
     ));
   }
 }
@@ -1077,10 +1077,10 @@ class _$ValueDistributionPieChartWidgetConfigImpl
       this.field = '',
       this.modelIds = const [],
       this.segments = const [
-        Range(from: 0, to: 25, color: 0xFFFFFFFF),
-        Range(from: 26, to: 50, color: 0xFFFFFFFF),
-        Range(from: 51, to: 75, color: 0xFFFFFFFF),
-        Range(from: 76, to: 100, color: 0xFFFFFFFF)
+        {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+        {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+        {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+        {'from': 76, 'color': 0xFFFFFFFF}
       ]})
       : super._();
 
@@ -1108,7 +1108,7 @@ class _$ValueDistributionPieChartWidgetConfigImpl
   List<String> modelIds;
   @override
   @JsonKey()
-  List<Range> segments;
+  List<dynamic> segments;
 
   @override
   String toString() {
@@ -1140,7 +1140,7 @@ abstract class _ValueDistributionPieChartWidgetConfig
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments}) = _$ValueDistributionPieChartWidgetConfigImpl;
+      List<dynamic> segments}) = _$ValueDistributionPieChartWidgetConfigImpl;
   _ValueDistributionPieChartWidgetConfig._() : super._();
 
   factory _ValueDistributionPieChartWidgetConfig.fromJson(
@@ -1166,8 +1166,8 @@ abstract class _ValueDistributionPieChartWidgetConfig
   List<String> get modelIds;
   set modelIds(List<String> value);
   @override
-  List<Range> get segments;
-  set segments(List<Range> value);
+  List<dynamic> get segments;
+  set segments(List<dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
