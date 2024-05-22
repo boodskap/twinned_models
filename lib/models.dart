@@ -54,6 +54,8 @@ abstract class BaseConfig {
   bool isValid(String parameter, dynamic value) {
     return true;
   }
+
+  Map<String, dynamic> toJson();
 }
 
 @unfreezed
