@@ -110,14 +110,12 @@ _$ValueDistributionPieChartWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
-          segments: (json['segments'] as List<dynamic>?)
-                  ?.map((e) => Range.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
+          segments: json['segments'] as List<dynamic>? ??
               const [
-                Range(from: 0, to: 25, color: 0xFFFFFFFF),
-                Range(from: 26, to: 50, color: 0xFFFFFFFF),
-                Range(from: 51, to: 75, color: 0xFFFFFFFF),
-                Range(from: 76, to: 100, color: 0xFFFFFFFF)
+                {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+                {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+                {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+                {'from': 76, 'color': 0xFFFFFFFF}
               ],
         );
 

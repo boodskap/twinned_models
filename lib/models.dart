@@ -54,6 +54,8 @@ abstract class BaseConfig {
   bool isValid(String parameter, dynamic value) {
     return true;
   }
+
+  Map<String, dynamic> toJson();
 }
 
 @unfreezed
@@ -207,12 +209,12 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default([]) List<String> modelIds,
     @Default([
-      Range(from: 0, to: 25, color: 0xFFFFFFFF),
-      Range(from: 26, to: 50, color: 0xFFFFFFFF),
-      Range(from: 51, to: 75, color: 0xFFFFFFFF),
-      Range(from: 76, to: 100, color: 0xFFFFFFFF),
+      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+      {'from': 76, 'color': 0xFFFFFFFF},
     ])
-    List<Range> segments,
+    List<dynamic> segments,
   }) = _ValueDistributionPieChartWidgetConfig;
 
   factory ValueDistributionPieChartWidgetConfig.fromJson(
