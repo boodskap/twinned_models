@@ -45,12 +45,10 @@ _$TotalValueWidgetConfigImpl _$$TotalValueWidgetConfigImplFromJson(
       borderStyle:
           $enumDecodeNullable(_$BorderStyleEnumMap, json['borderStyle']) ??
               BorderStyle.solid,
-      headerFont: json['headerFont'] == null
-          ? null
-          : FontConfig.fromJson(json['headerFont'] as Map<String, dynamic>),
-      labelFont: json['labelFont'] == null
-          ? null
-          : FontConfig.fromJson(json['labelFont'] as Map<String, dynamic>),
+      headerFont: json['headerFont'] as Map<String, dynamic>? ??
+          const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+      labelFont: json['labelFont'] as Map<String, dynamic>? ??
+          const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
       field: json['field'] as String? ?? '',
       modelIds: (json['modelIds'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -100,12 +98,10 @@ _$ValueDistributionPieChartWidgetConfigImpl
             Map<String, dynamic> json) =>
         _$ValueDistributionPieChartWidgetConfigImpl(
           title: json['title'] as String? ?? 'Title',
-          headerFont: json['headerFont'] == null
-              ? const FontConfig(fontSize: 20, fontBold: true)
-              : FontConfig.fromJson(json['headerFont'] as Map<String, dynamic>),
-          labelFont: json['labelFont'] == null
-              ? const FontConfig()
-              : FontConfig.fromJson(json['labelFont'] as Map<String, dynamic>),
+          headerFont: json['headerFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
           type: $enumDecodeNullable(
                   _$DistributionChartTypeEnumMap, json['type']) ??
               DistributionChartType.pie,
@@ -150,12 +146,10 @@ _$TotalAndReportingAssetWidgetConfigImpl
             Map<String, dynamic> json) =>
         _$TotalAndReportingAssetWidgetConfigImpl(
           title: json['title'] as String? ?? 'Title',
-          headerFont: json['headerFont'] == null
-              ? const FontConfig(fontSize: 20, fontBold: true)
-              : FontConfig.fromJson(json['headerFont'] as Map<String, dynamic>),
-          labelFont: json['labelFont'] == null
-              ? const FontConfig()
-              : FontConfig.fromJson(json['labelFont'] as Map<String, dynamic>),
+          headerFont: json['headerFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
           assetModelIds: (json['assetModelIds'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
