@@ -1658,6 +1658,8 @@ mixin _$MultipleDeviceCartesianChartWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   List<String> get deviceId => throw _privateConstructorUsedError;
   set deviceId(List<String> value) => throw _privateConstructorUsedError;
+  int get bgColor => throw _privateConstructorUsedError;
+  set bgColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
   set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -1684,6 +1686,7 @@ abstract class $MultipleDeviceCartesianChartWidgetConfigCopyWith<$Res> {
       {String title,
       String field,
       List<String> deviceId,
+      int bgColor,
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont});
 }
@@ -1706,6 +1709,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? field = null,
     Object? deviceId = null,
+    Object? bgColor = null,
     Object? headerFont = null,
     Object? labelFont = null,
   }) {
@@ -1722,6 +1726,10 @@ class _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
@@ -1747,6 +1755,7 @@ abstract class _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<$Res>
       {String title,
       String field,
       List<String> deviceId,
+      int bgColor,
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont});
 }
@@ -1767,6 +1776,7 @@ class __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? field = null,
     Object? deviceId = null,
+    Object? bgColor = null,
     Object? headerFont = null,
     Object? labelFont = null,
   }) {
@@ -1783,6 +1793,10 @@ class __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
@@ -1803,6 +1817,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
       {this.title = '',
       this.field = '',
       this.deviceId = const [],
+      this.bgColor = 0xFFFFFFFF,
       this.headerFont = const {
         'fontSize': 18,
         'fontColor': 0,
@@ -1830,6 +1845,9 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
   List<String> deviceId;
   @override
   @JsonKey()
+  int bgColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> headerFont;
   @override
   @JsonKey()
@@ -1837,7 +1855,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultipleDeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont)';
+    return 'MultipleDeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, bgColor: $bgColor, headerFont: $headerFont, labelFont: $labelFont)';
   }
 
   @JsonKey(ignore: true)
@@ -1863,6 +1881,7 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
           {String title,
           String field,
           List<String> deviceId,
+          int bgColor,
           Map<String, dynamic> headerFont,
           Map<String, dynamic> labelFont}) =
       _$MultipleDeviceCartesianChartWidgetConfigImpl;
@@ -1881,6 +1900,9 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
   @override
   List<String> get deviceId;
   set deviceId(List<String> value);
+  @override
+  int get bgColor;
+  set bgColor(int value);
   @override
   Map<String, dynamic> get headerFont;
   set headerFont(Map<String, dynamic> value);

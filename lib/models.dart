@@ -373,6 +373,7 @@ class MultipleDeviceCartesianChartWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String field,
     @Default([]) List<String> deviceId,
+    @Default(0xFFFFFFFF) int bgColor,
     @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
     Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
