@@ -340,8 +340,8 @@ mixin _$TotalValueWidgetConfig {
   set borderRadius(double value) => throw _privateConstructorUsedError;
   BorderStyle get borderStyle => throw _privateConstructorUsedError;
   set borderStyle(BorderStyle value) => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get headerFont => throw _privateConstructorUsedError;
-  set headerFont(Map<String, dynamic>? value) =>
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
@@ -372,7 +372,7 @@ abstract class $TotalValueWidgetConfigCopyWith<$Res> {
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
       List<String> modelIds});
@@ -400,7 +400,7 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? borderStyle = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? field = null,
     Object? modelIds = null,
@@ -438,10 +438,10 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
           ? _value.borderStyle
           : borderStyle // ignore: cast_nullable_to_non_nullable
               as BorderStyle,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -476,7 +476,7 @@ abstract class _$$TotalValueWidgetConfigImplCopyWith<$Res>
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
       List<String> modelIds});
@@ -503,7 +503,7 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? borderStyle = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? field = null,
     Object? modelIds = null,
@@ -541,10 +541,10 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
           ? _value.borderStyle
           : borderStyle // ignore: cast_nullable_to_non_nullable
               as BorderStyle,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -616,7 +616,7 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
   BorderStyle borderStyle;
   @override
   @JsonKey()
-  Map<String, dynamic>? headerFont;
+  Map<String, dynamic> headerFont;
   @override
   @JsonKey()
   Map<String, dynamic> labelFont;
@@ -657,7 +657,7 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
       double borderWidth,
       double borderRadius,
       BorderStyle borderStyle,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
       List<String> modelIds}) = _$TotalValueWidgetConfigImpl;
@@ -691,8 +691,8 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   BorderStyle get borderStyle;
   set borderStyle(BorderStyle value);
   @override
-  Map<String, dynamic>? get headerFont;
-  set headerFont(Map<String, dynamic>? value);
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
@@ -889,8 +889,8 @@ ValueDistributionPieChartWidgetConfig
 mixin _$ValueDistributionPieChartWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get headerFont => throw _privateConstructorUsedError;
-  set headerFont(Map<String, dynamic>? value) =>
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
@@ -921,7 +921,7 @@ abstract class $ValueDistributionPieChartWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
@@ -944,7 +944,7 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? title = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? type = null,
     Object? field = null,
@@ -956,10 +956,10 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -995,7 +995,7 @@ abstract class _$$ValueDistributionPieChartWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
@@ -1017,7 +1017,7 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? type = null,
     Object? field = null,
@@ -1029,10 +1029,10 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -1093,7 +1093,7 @@ class _$ValueDistributionPieChartWidgetConfigImpl
   String title;
   @override
   @JsonKey()
-  Map<String, dynamic>? headerFont;
+  Map<String, dynamic> headerFont;
   @override
   @JsonKey()
   Map<String, dynamic> labelFont;
@@ -1135,7 +1135,7 @@ abstract class _ValueDistributionPieChartWidgetConfig
     extends ValueDistributionPieChartWidgetConfig {
   factory _ValueDistributionPieChartWidgetConfig(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
@@ -1151,8 +1151,8 @@ abstract class _ValueDistributionPieChartWidgetConfig
   String get title;
   set title(String value);
   @override
-  Map<String, dynamic>? get headerFont;
-  set headerFont(Map<String, dynamic>? value);
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
@@ -1184,8 +1184,8 @@ TotalAndReportingAssetWidgetConfig _$TotalAndReportingAssetWidgetConfigFromJson(
 mixin _$TotalAndReportingAssetWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get headerFont => throw _privateConstructorUsedError;
-  set headerFont(Map<String, dynamic>? value) =>
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
@@ -1210,7 +1210,7 @@ abstract class $TotalAndReportingAssetWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       List<String> assetModelIds});
 }
@@ -1230,7 +1230,7 @@ class _$TotalAndReportingAssetWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? title = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? assetModelIds = null,
   }) {
@@ -1239,10 +1239,10 @@ class _$TotalAndReportingAssetWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -1266,7 +1266,7 @@ abstract class _$$TotalAndReportingAssetWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       List<String> assetModelIds});
 }
@@ -1285,7 +1285,7 @@ class __$$TotalAndReportingAssetWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? headerFont = freezed,
+    Object? headerFont = null,
     Object? labelFont = null,
     Object? assetModelIds = null,
   }) {
@@ -1294,10 +1294,10 @@ class __$$TotalAndReportingAssetWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      headerFont: freezed == headerFont
+      headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -1338,7 +1338,7 @@ class _$TotalAndReportingAssetWidgetConfigImpl
   String title;
   @override
   @JsonKey()
-  Map<String, dynamic>? headerFont;
+  Map<String, dynamic> headerFont;
   @override
   @JsonKey()
   Map<String, dynamic> labelFont;
@@ -1371,7 +1371,7 @@ abstract class _TotalAndReportingAssetWidgetConfig
     extends TotalAndReportingAssetWidgetConfig {
   factory _TotalAndReportingAssetWidgetConfig(
       {String title,
-      Map<String, dynamic>? headerFont,
+      Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       List<String> assetModelIds}) = _$TotalAndReportingAssetWidgetConfigImpl;
   _TotalAndReportingAssetWidgetConfig._() : super._();
@@ -1384,8 +1384,8 @@ abstract class _TotalAndReportingAssetWidgetConfig
   String get title;
   set title(String value);
   @override
-  Map<String, dynamic>? get headerFont;
-  set headerFont(Map<String, dynamic>? value);
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);

@@ -103,7 +103,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
     @Default(0.0) double borderRadius,
     @Default(BorderStyle.solid) BorderStyle borderStyle,
     @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
-    Map<String, dynamic>? headerFont,
+    Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
     @Default('') String field,
@@ -193,7 +193,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
   factory ValueDistributionPieChartWidgetConfig({
     @Default('Title') String title,
     @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
-    Map<String, dynamic>? headerFont,
+    Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
     @Default(DistributionChartType.pie) DistributionChartType type,
@@ -273,7 +273,7 @@ class TotalAndReportingAssetWidgetConfig extends BaseConfig
   factory TotalAndReportingAssetWidgetConfig({
     @Default('Title') String title,
     @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
-    Map<String, dynamic>? headerFont,
+    Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
     @Default([]) List<String> assetModelIds,
