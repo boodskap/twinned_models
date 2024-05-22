@@ -1656,8 +1656,8 @@ mixin _$MultipleDeviceCartesianChartWidgetConfig {
   set title(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
-  String get deviceId => throw _privateConstructorUsedError;
-  set deviceId(String value) => throw _privateConstructorUsedError;
+  List<String> get deviceId => throw _privateConstructorUsedError;
+  set deviceId(List<String> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
   set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -1683,7 +1683,7 @@ abstract class $MultipleDeviceCartesianChartWidgetConfigCopyWith<$Res> {
   $Res call(
       {String title,
       String field,
-      String deviceId,
+      List<String> deviceId,
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont});
 }
@@ -1721,7 +1721,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>,
       headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
@@ -1746,7 +1746,7 @@ abstract class _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String title,
       String field,
-      String deviceId,
+      List<String> deviceId,
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont});
 }
@@ -1782,7 +1782,7 @@ class __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>,
       headerFont: null == headerFont
           ? _value.headerFont
           : headerFont // ignore: cast_nullable_to_non_nullable
@@ -1802,7 +1802,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
   _$MultipleDeviceCartesianChartWidgetConfigImpl(
       {this.title = '',
       this.field = '',
-      this.deviceId = '',
+      this.deviceId = const [],
       this.headerFont = const {
         'fontSize': 18,
         'fontColor': 0,
@@ -1827,7 +1827,7 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
   String field;
   @override
   @JsonKey()
-  String deviceId;
+  List<String> deviceId;
   @override
   @JsonKey()
   Map<String, dynamic> headerFont;
@@ -1862,7 +1862,7 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
   factory _MultipleDeviceCartesianChartWidgetConfig(
           {String title,
           String field,
-          String deviceId,
+          List<String> deviceId,
           Map<String, dynamic> headerFont,
           Map<String, dynamic> labelFont}) =
       _$MultipleDeviceCartesianChartWidgetConfigImpl;
@@ -1879,8 +1879,8 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
   String get field;
   set field(String value);
   @override
-  String get deviceId;
-  set deviceId(String value);
+  List<String> get deviceId;
+  set deviceId(List<String> value);
   @override
   Map<String, dynamic> get headerFont;
   set headerFont(Map<String, dynamic> value);

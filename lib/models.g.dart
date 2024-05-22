@@ -194,7 +194,10 @@ _$MultipleDeviceCartesianChartWidgetConfigImpl
         _$MultipleDeviceCartesianChartWidgetConfigImpl(
           title: json['title'] as String? ?? '',
           field: json['field'] as String? ?? '',
-          deviceId: json['deviceId'] as String? ?? '',
+          deviceId: (json['deviceId'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
           headerFont: json['headerFont'] as Map<String, dynamic>? ??
               const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
