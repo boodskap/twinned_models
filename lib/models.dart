@@ -55,7 +55,7 @@ class Example extends BaseConfig with _$Example {
 
   factory Example({required String name, required int age}) = _Example;
 
-  factory Example.fromJson(Map<String, Object?> json) =>
+  factory Example.fromJson(Map<String, dynamic> json) =>
       _$ExampleFromJson(json);
 
   @override
@@ -85,7 +85,7 @@ class FontConfig with _$FontConfig {
       @Default(0) final int fontColor,
       @Default(false) final bool fontBold}) = _FontConfig;
 
-  factory FontConfig.fromJson(Map<String, Object?> json) =>
+  factory FontConfig.fromJson(Map<String, dynamic> json) =>
       _$FontConfigFromJson(json);
 }
 
@@ -110,7 +110,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
     @Default([]) List<String> modelIds,
   }) = _TotalValueWidgetConfig;
 
-  factory TotalValueWidgetConfig.fromJson(Map<String, Object?> json) =>
+  factory TotalValueWidgetConfig.fromJson(Map<String, dynamic> json) =>
       _$TotalValueWidgetConfigFromJson(json);
 
   @override
@@ -180,7 +180,7 @@ class Range with _$Range {
       final int? color,
       @Default('Label') final String label}) = _Range;
 
-  factory Range.fromJson(Map<String, Object?> json) => _$RangeFromJson(json);
+  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
 }
 
 enum DistributionChartType { pie, doughnut, radial, pyramid, funnel }
@@ -209,7 +209,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
   }) = _ValueDistributionPieChartWidgetConfig;
 
   factory ValueDistributionPieChartWidgetConfig.fromJson(
-          Map<String, Object?> json) =>
+          Map<String, dynamic> json) =>
       _$ValueDistributionPieChartWidgetConfigFromJson(json);
 
   @override
@@ -280,7 +280,7 @@ class TotalAndReportingAssetWidgetConfig extends BaseConfig
   }) = _TotalAndReportingAssetWidgetConfig;
 
   factory TotalAndReportingAssetWidgetConfig.fromJson(
-          Map<String, Object?> json) =>
+          Map<String, dynamic> json) =>
       _$TotalAndReportingAssetWidgetConfigFromJson(json);
 
   @override
