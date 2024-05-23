@@ -901,8 +901,8 @@ mixin _$ValueDistributionPieChartWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
-  List<Range> get segments => throw _privateConstructorUsedError;
-  set segments(List<Range> value) => throw _privateConstructorUsedError;
+  List<dynamic> get segments => throw _privateConstructorUsedError;
+  set segments(List<dynamic> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -926,7 +926,7 @@ abstract class $ValueDistributionPieChartWidgetConfigCopyWith<$Res> {
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments});
+      List<dynamic> segments});
 }
 
 /// @nodoc
@@ -979,7 +979,7 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
     ) as $Val);
   }
 }
@@ -1000,7 +1000,7 @@ abstract class _$$ValueDistributionPieChartWidgetConfigImplCopyWith<$Res>
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments});
+      List<dynamic> segments});
 }
 
 /// @nodoc
@@ -1052,7 +1052,7 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
     ));
   }
 }
@@ -1077,10 +1077,10 @@ class _$ValueDistributionPieChartWidgetConfigImpl
       this.field = '',
       this.modelIds = const [],
       this.segments = const [
-        Range(from: 0, to: 25, color: 0xFFFFFFFF),
-        Range(from: 26, to: 50, color: 0xFFFFFFFF),
-        Range(from: 51, to: 75, color: 0xFFFFFFFF),
-        Range(from: 76, to: 100, color: 0xFFFFFFFF)
+        {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+        {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+        {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+        {'from': 76, 'color': 0xFFFFFFFF}
       ]})
       : super._();
 
@@ -1108,7 +1108,7 @@ class _$ValueDistributionPieChartWidgetConfigImpl
   List<String> modelIds;
   @override
   @JsonKey()
-  List<Range> segments;
+  List<dynamic> segments;
 
   @override
   String toString() {
@@ -1140,7 +1140,7 @@ abstract class _ValueDistributionPieChartWidgetConfig
       DistributionChartType type,
       String field,
       List<String> modelIds,
-      List<Range> segments}) = _$ValueDistributionPieChartWidgetConfigImpl;
+      List<dynamic> segments}) = _$ValueDistributionPieChartWidgetConfigImpl;
   _ValueDistributionPieChartWidgetConfig._() : super._();
 
   factory _ValueDistributionPieChartWidgetConfig.fromJson(
@@ -1166,8 +1166,8 @@ abstract class _ValueDistributionPieChartWidgetConfig
   List<String> get modelIds;
   set modelIds(List<String> value);
   @override
-  List<Range> get segments;
-  set segments(List<Range> value);
+  List<dynamic> get segments;
+  set segments(List<dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
@@ -1418,6 +1418,10 @@ mixin _$DeviceCartesianChartWidgetConfig {
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  int get bgColor => throw _privateConstructorUsedError;
+  set bgColor(int value) => throw _privateConstructorUsedError;
+  int get borderColor => throw _privateConstructorUsedError;
+  set borderColor(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1438,7 +1442,9 @@ abstract class $DeviceCartesianChartWidgetConfigCopyWith<$Res> {
       String field,
       String deviceId,
       Map<String, dynamic> headerFont,
-      Map<String, dynamic> labelFont});
+      Map<String, dynamic> labelFont,
+      int bgColor,
+      int borderColor});
 }
 
 /// @nodoc
@@ -1460,6 +1466,8 @@ class _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? headerFont = null,
     Object? labelFont = null,
+    Object? bgColor = null,
+    Object? borderColor = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -1482,6 +1490,14 @@ class _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      borderColor: null == borderColor
+          ? _value.borderColor
+          : borderColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -1500,7 +1516,9 @@ abstract class _$$DeviceCartesianChartWidgetConfigImplCopyWith<$Res>
       String field,
       String deviceId,
       Map<String, dynamic> headerFont,
-      Map<String, dynamic> labelFont});
+      Map<String, dynamic> labelFont,
+      int bgColor,
+      int borderColor});
 }
 
 /// @nodoc
@@ -1521,6 +1539,8 @@ class __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? headerFont = null,
     Object? labelFont = null,
+    Object? bgColor = null,
+    Object? borderColor = null,
   }) {
     return _then(_$DeviceCartesianChartWidgetConfigImpl(
       title: null == title
@@ -1543,6 +1563,14 @@ class __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      borderColor: null == borderColor
+          ? _value.borderColor
+          : borderColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1564,7 +1592,9 @@ class _$DeviceCartesianChartWidgetConfigImpl
         'fontSize': 14,
         'fontColor': 0,
         'fontBold': false
-      }})
+      },
+      this.bgColor = 0xFFFFFFFF,
+      this.borderColor = 0xFFFFFFFF})
       : super._();
 
   factory _$DeviceCartesianChartWidgetConfigImpl.fromJson(
@@ -1586,10 +1616,16 @@ class _$DeviceCartesianChartWidgetConfigImpl
   @override
   @JsonKey()
   Map<String, dynamic> labelFont;
+  @override
+  @JsonKey()
+  int bgColor;
+  @override
+  @JsonKey()
+  int borderColor;
 
   @override
   String toString() {
-    return 'DeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont)';
+    return 'DeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor)';
   }
 
   @JsonKey(ignore: true)
@@ -1615,7 +1651,9 @@ abstract class _DeviceCartesianChartWidgetConfig
       String field,
       String deviceId,
       Map<String, dynamic> headerFont,
-      Map<String, dynamic> labelFont}) = _$DeviceCartesianChartWidgetConfigImpl;
+      Map<String, dynamic> labelFont,
+      int bgColor,
+      int borderColor}) = _$DeviceCartesianChartWidgetConfigImpl;
   _DeviceCartesianChartWidgetConfig._() : super._();
 
   factory _DeviceCartesianChartWidgetConfig.fromJson(
@@ -1638,9 +1676,198 @@ abstract class _DeviceCartesianChartWidgetConfig
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
   @override
+  int get bgColor;
+  set bgColor(int value);
+  @override
+  int get borderColor;
+  set borderColor(int value);
+  @override
   @JsonKey(ignore: true)
   _$$DeviceCartesianChartWidgetConfigImplCopyWith<
           _$DeviceCartesianChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+DeviceMultiFieldChartWidgetConfig _$DeviceMultiFieldChartWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceMultiFieldChartWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceMultiFieldChartWidgetConfig {
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
+  List<String> get field => throw _privateConstructorUsedError;
+  set field(List<String> value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceMultiFieldChartWidgetConfigCopyWith<DeviceMultiFieldChartWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  factory $DeviceMultiFieldChartWidgetConfigCopyWith(
+          DeviceMultiFieldChartWidgetConfig value,
+          $Res Function(DeviceMultiFieldChartWidgetConfig) then) =
+      _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+          DeviceMultiFieldChartWidgetConfig>;
+  @useResult
+  $Res call({String title, List<String> field, String deviceId});
+}
+
+/// @nodoc
+class _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceMultiFieldChartWidgetConfig>
+    implements $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  _$DeviceMultiFieldChartWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<$Res>
+    implements $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceMultiFieldChartWidgetConfigImplCopyWith(
+          _$DeviceMultiFieldChartWidgetConfigImpl value,
+          $Res Function(_$DeviceMultiFieldChartWidgetConfigImpl) then) =
+      __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String title, List<String> field, String deviceId});
+}
+
+/// @nodoc
+class __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+        _$DeviceMultiFieldChartWidgetConfigImpl>
+    implements _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl(
+      _$DeviceMultiFieldChartWidgetConfigImpl _value,
+      $Res Function(_$DeviceMultiFieldChartWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_$DeviceMultiFieldChartWidgetConfigImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DeviceMultiFieldChartWidgetConfigImpl
+    extends _DeviceMultiFieldChartWidgetConfig {
+  _$DeviceMultiFieldChartWidgetConfigImpl(
+      {this.title = '', this.field = const [], this.deviceId = ''})
+      : super._();
+
+  factory _$DeviceMultiFieldChartWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DeviceMultiFieldChartWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String title;
+  @override
+  @JsonKey()
+  List<String> field;
+  @override
+  @JsonKey()
+  String deviceId;
+
+  @override
+  String toString() {
+    return 'DeviceMultiFieldChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
+          _$DeviceMultiFieldChartWidgetConfigImpl>
+      get copyWith => __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<
+          _$DeviceMultiFieldChartWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeviceMultiFieldChartWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DeviceMultiFieldChartWidgetConfig
+    extends DeviceMultiFieldChartWidgetConfig {
+  factory _DeviceMultiFieldChartWidgetConfig(
+      {String title,
+      List<String> field,
+      String deviceId}) = _$DeviceMultiFieldChartWidgetConfigImpl;
+  _DeviceMultiFieldChartWidgetConfig._() : super._();
+
+  factory _DeviceMultiFieldChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$DeviceMultiFieldChartWidgetConfigImpl.fromJson;
+
+  @override
+  String get title;
+  set title(String value);
+  @override
+  List<String> get field;
+  set field(List<String> value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  @JsonKey(ignore: true)
+  _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
+          _$DeviceMultiFieldChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
