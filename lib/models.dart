@@ -21,7 +21,6 @@ enum HintType {
   none,
   color,
   field,
-  modelId,
   assetModelId,
   deviceId,
   assetId,
@@ -156,7 +155,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
       case 'borderColor':
         return HintType.color;
       case 'modelIds':
-        return HintType.modelId;
+        return HintType.deviceModelId;
       case 'field':
         return HintType.field;
     }
@@ -248,7 +247,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'modelIds':
-        return HintType.modelId;
+        return HintType.deviceModelId;
       case 'field':
         return HintType.field;
     }
