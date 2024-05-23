@@ -198,7 +198,6 @@ _$MultipleDeviceCartesianChartWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
-          bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           headerFont: json['headerFont'] as Map<String, dynamic>? ??
               const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
@@ -211,7 +210,6 @@ Map<String, dynamic> _$$MultipleDeviceCartesianChartWidgetConfigImplToJson(
       'title': instance.title,
       'field': instance.field,
       'deviceId': instance.deviceId,
-      'bgColor': instance.bgColor,
       'headerFont': instance.headerFont,
       'labelFont': instance.labelFont,
     };
