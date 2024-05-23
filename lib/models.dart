@@ -363,3 +363,43 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     }
   }
 }
+
+@unfreezed
+class DeviceMultiFieldChartWidgetConfig extends BaseConfig
+    with _$DeviceMultiFieldChartWidgetConfig {
+  DeviceMultiFieldChartWidgetConfig._();
+
+  factory DeviceMultiFieldChartWidgetConfig({
+    @Default('') String title,
+    @Default([]) List<String> field,
+    @Default('') String deviceId,
+  }) = _DeviceMultiFieldChartWidgetConfig;
+
+  factory DeviceMultiFieldChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceMultiFieldChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return DataType.listOfTexts;
+      default:
+        return DataType.text;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    // return HintType.none;
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      default:
+        return HintType.none;
+    }
+  }
+}
+
