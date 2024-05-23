@@ -209,3 +209,29 @@ Map<String, dynamic> _$$DeviceMultiFieldChartWidgetConfigImplToJson(
       'field': instance.field,
       'deviceId': instance.deviceId,
     };
+
+_$MultipleDeviceCartesianChartWidgetConfigImpl
+    _$$MultipleDeviceCartesianChartWidgetConfigImplFromJson(
+            Map<String, dynamic> json) =>
+        _$MultipleDeviceCartesianChartWidgetConfigImpl(
+          title: json['title'] as String? ?? '',
+          field: json['field'] as String? ?? '',
+          deviceId: (json['deviceId'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          headerFont: json['headerFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
+        );
+
+Map<String, dynamic> _$$MultipleDeviceCartesianChartWidgetConfigImplToJson(
+        _$MultipleDeviceCartesianChartWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'field': instance.field,
+      'deviceId': instance.deviceId,
+      'headerFont': instance.headerFont,
+      'labelFont': instance.labelFont,
+    };
