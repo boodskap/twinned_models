@@ -1687,3 +1687,186 @@ abstract class _DeviceCartesianChartWidgetConfig
           _$DeviceCartesianChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+DeviceMultiFieldChartWidgetConfig _$DeviceMultiFieldChartWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceMultiFieldChartWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DeviceMultiFieldChartWidgetConfig {
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
+  List<String> get field => throw _privateConstructorUsedError;
+  set field(List<String> value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeviceMultiFieldChartWidgetConfigCopyWith<DeviceMultiFieldChartWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  factory $DeviceMultiFieldChartWidgetConfigCopyWith(
+          DeviceMultiFieldChartWidgetConfig value,
+          $Res Function(DeviceMultiFieldChartWidgetConfig) then) =
+      _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+          DeviceMultiFieldChartWidgetConfig>;
+  @useResult
+  $Res call({String title, List<String> field, String deviceId});
+}
+
+/// @nodoc
+class _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceMultiFieldChartWidgetConfig>
+    implements $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  _$DeviceMultiFieldChartWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<$Res>
+    implements $DeviceMultiFieldChartWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceMultiFieldChartWidgetConfigImplCopyWith(
+          _$DeviceMultiFieldChartWidgetConfigImpl value,
+          $Res Function(_$DeviceMultiFieldChartWidgetConfigImpl) then) =
+      __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String title, List<String> field, String deviceId});
+}
+
+/// @nodoc
+class __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
+        _$DeviceMultiFieldChartWidgetConfigImpl>
+    implements _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl(
+      _$DeviceMultiFieldChartWidgetConfigImpl _value,
+      $Res Function(_$DeviceMultiFieldChartWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? deviceId = null,
+  }) {
+    return _then(_$DeviceMultiFieldChartWidgetConfigImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DeviceMultiFieldChartWidgetConfigImpl
+    extends _DeviceMultiFieldChartWidgetConfig {
+  _$DeviceMultiFieldChartWidgetConfigImpl(
+      {this.title = '', this.field = const [], this.deviceId = ''})
+      : super._();
+
+  factory _$DeviceMultiFieldChartWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DeviceMultiFieldChartWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String title;
+  @override
+  @JsonKey()
+  List<String> field;
+  @override
+  @JsonKey()
+  String deviceId;
+
+  @override
+  String toString() {
+    return 'DeviceMultiFieldChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
+          _$DeviceMultiFieldChartWidgetConfigImpl>
+      get copyWith => __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<
+          _$DeviceMultiFieldChartWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DeviceMultiFieldChartWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DeviceMultiFieldChartWidgetConfig
+    extends DeviceMultiFieldChartWidgetConfig {
+  factory _DeviceMultiFieldChartWidgetConfig(
+      {String title,
+      List<String> field,
+      String deviceId}) = _$DeviceMultiFieldChartWidgetConfigImpl;
+  _DeviceMultiFieldChartWidgetConfig._() : super._();
+
+  factory _DeviceMultiFieldChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$DeviceMultiFieldChartWidgetConfigImpl.fromJson;
+
+  @override
+  String get title;
+  set title(String value);
+  @override
+  List<String> get field;
+  set field(List<String> value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  @JsonKey(ignore: true)
+  _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
+          _$DeviceMultiFieldChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

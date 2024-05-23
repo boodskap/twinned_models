@@ -5,6 +5,7 @@ part 'models.freezed.dart';
 part 'models.g.dart';
 
 enum DataType {
+  none,
   numeric,
   decimal,
   text,
@@ -353,11 +354,18 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return DataType.text;
+      case 'headerFont':
+      case 'labelFont':
+        return DataType.font;
       case 'bgColor':
       case 'borderColor':
         return DataType.numeric;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
@@ -371,6 +379,48 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
       case 'bgColor':
       case 'borderColor':
         return HintType.color;
+      default:
+        return HintType.none;
+    }
+  }
+}
+
+@unfreezed
+class DeviceMultiFieldChartWidgetConfig extends BaseConfig
+    with _$DeviceMultiFieldChartWidgetConfig {
+  DeviceMultiFieldChartWidgetConfig._();
+
+  factory DeviceMultiFieldChartWidgetConfig({
+    @Default('') String title,
+    @Default([]) List<String> field,
+    @Default('') String deviceId,
+  }) = _DeviceMultiFieldChartWidgetConfig;
+
+  factory DeviceMultiFieldChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceMultiFieldChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'deviceId':
+        return DataType.text;
+      case 'field':
+        return DataType.listOfTexts;
+      default:
+        return DataType.none;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    // return HintType.none;
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
       default:
         return HintType.none;
     }
