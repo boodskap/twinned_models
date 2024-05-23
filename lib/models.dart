@@ -426,3 +426,43 @@ class DeviceMultiFieldChartWidgetConfig extends BaseConfig
     }
   }
 }
+
+@unfreezed
+class MultipleDeviceCartesianChartWidgetConfig extends BaseConfig
+    with _$MultipleDeviceCartesianChartWidgetConfig {
+  MultipleDeviceCartesianChartWidgetConfig._();
+
+  factory MultipleDeviceCartesianChartWidgetConfig({
+    @Default('') String title,
+    @Default('') String field,
+    @Default([]) List<String> deviceId,
+    @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
+    Map<String, dynamic> headerFont,
+    @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
+    Map<String, dynamic> labelFont,
+  }) = _MultipleDeviceCartesianChartWidgetConfig;
+
+  factory MultipleDeviceCartesianChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$MultipleDeviceCartesianChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      default:
+        return DataType.text;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      default:
+        return HintType.none;
+    }
+  }
+}
