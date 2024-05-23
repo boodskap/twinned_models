@@ -43,25 +43,15 @@ abstract class BaseConfig {
     return HintType.none;
   }
 
-  List<String> getEnumeratedValues(String parameter) {
-    return [];
-  }
+  List<String> getEnumeratedValues(String parameter);
 
-  bool isRequired(String parameter) {
-    return false;
-  }
+  bool isRequired(String parameter);
 
-  bool isValid(String parameter, dynamic value) {
-    return true;
-  }
+  bool isValid(String parameter, dynamic value);
 
-  String getLabel(String parameter) {
-    return parameter;
-  }
+  String getLabel(String parameter);
 
-  String getTooltip(String parameter) {
-    return '';
-  }
+  String getTooltip(String parameter);
 }
 
 @unfreezed
@@ -88,6 +78,36 @@ class Example extends BaseConfig with _$Example {
   @override
   HintType getHintType(String parameter) {
     return HintType.none;
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    // TODO: implement getEnumeratedValues
+    throw UnimplementedError();
+  }
+
+  @override
+  String getLabel(String parameter) {
+    // TODO: implement getLabel
+    throw UnimplementedError();
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    // TODO: implement getTooltip
+    throw UnimplementedError();
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    // TODO: implement isRequired
+    throw UnimplementedError();
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    // TODO: implement isValid
+    throw UnimplementedError();
   }
 }
 
@@ -183,6 +203,21 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
         return false;
     }
   }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return "";
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
 }
 
 @unfreezed
@@ -276,6 +311,21 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
         return false;
     }
   }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return "";
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
 }
 
 @unfreezed
@@ -328,6 +378,26 @@ class TotalAndReportingAssetWidgetConfig extends BaseConfig
         return false;
     }
   }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return "";
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
 }
 
 @unfreezed
@@ -343,7 +413,7 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
-     @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFFFFFFFF) int bgColor,
     @Default(0xFFFFFFFF) int borderColor,
   }) = _DeviceCartesianChartWidgetConfig;
 
@@ -383,6 +453,38 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
         return HintType.none;
     }
   }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return "";
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
 }
 
 @unfreezed
@@ -415,7 +517,6 @@ class DeviceMultiFieldChartWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
-    // return HintType.none;
     switch (parameter) {
       case 'field':
         return HintType.field;
@@ -424,6 +525,38 @@ class DeviceMultiFieldChartWidgetConfig extends BaseConfig
       default:
         return HintType.none;
     }
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return "";
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
   }
 }
 
