@@ -5,6 +5,7 @@ part 'models.freezed.dart';
 part 'models.g.dart';
 
 enum DataType {
+  none,
   numeric,
   decimal,
   text,
@@ -353,11 +354,18 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return DataType.text;
+      case 'headerFont':
+      case 'labelFont':
+        return DataType.font;
       case 'bgColor':
       case 'borderColor':
         return DataType.numeric;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
@@ -395,10 +403,13 @@ class DeviceMultiFieldChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'title':
+      case 'deviceId':
+        return DataType.text;
       case 'field':
         return DataType.listOfTexts;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
