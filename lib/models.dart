@@ -343,6 +343,8 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
+     @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFFFFFFFF) int borderColor,
   }) = _DeviceCartesianChartWidgetConfig;
 
   factory DeviceCartesianChartWidgetConfig.fromJson(
@@ -359,6 +361,9 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
       case 'headerFont':
       case 'labelFont':
         return DataType.font;
+      case 'bgColor':
+      case 'borderColor':
+        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -366,6 +371,51 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      case 'bgColor':
+      case 'borderColor':
+        return HintType.color;
+      default:
+        return HintType.none;
+    }
+  }
+}
+
+@unfreezed
+class DeviceMultiFieldChartWidgetConfig extends BaseConfig
+    with _$DeviceMultiFieldChartWidgetConfig {
+  DeviceMultiFieldChartWidgetConfig._();
+
+  factory DeviceMultiFieldChartWidgetConfig({
+    @Default('') String title,
+    @Default([]) List<String> field,
+    @Default('') String deviceId,
+  }) = _DeviceMultiFieldChartWidgetConfig;
+
+  factory DeviceMultiFieldChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceMultiFieldChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'deviceId':
+        return DataType.text;
+      case 'field':
+        return DataType.listOfTexts;
+      default:
+        return DataType.none;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    // return HintType.none;
     switch (parameter) {
       case 'field':
         return HintType.field;
