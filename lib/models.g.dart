@@ -209,23 +209,3 @@ Map<String, dynamic> _$$DeviceMultiFieldChartWidgetConfigImplToJson(
       'field': instance.field,
       'deviceId': instance.deviceId,
     };
-
-_$DeviceMultiFieldChartWidgetConfigImpl
-    _$$DeviceMultiFieldChartWidgetConfigImplFromJson(
-            Map<String, dynamic> json) =>
-        _$DeviceMultiFieldChartWidgetConfigImpl(
-          title: json['title'] as String? ?? '',
-          field: (json['field'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
-          deviceId: json['deviceId'] as String? ?? '',
-        );
-
-Map<String, dynamic> _$$DeviceMultiFieldChartWidgetConfigImplToJson(
-        _$DeviceMultiFieldChartWidgetConfigImpl instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'field': instance.field,
-      'deviceId': instance.deviceId,
-    };
