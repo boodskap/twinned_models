@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'models.freezed.dart';
 part 'models.g.dart';
@@ -15,15 +14,13 @@ enum DataType {
   listOfTexts,
   listOfNumbers,
   listOfDecimals,
-  listOfObjects,
+  listOfRanges,
 }
 
 enum HintType {
   none,
   color,
   field,
-  modelId,
-  range,
   assetModelId,
   deviceId,
   assetId,
@@ -39,6 +36,8 @@ abstract class BaseConfig {
 
   DataType getDataType(String parameter);
 
+  Map<String, dynamic> toJson();
+
   HintType getHintType(String parameter) {
     return HintType.none;
   }
@@ -53,6 +52,14 @@ abstract class BaseConfig {
 
   bool isValid(String parameter, dynamic value) {
     return true;
+  }
+
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  String getTooltip(String parameter) {
+    return '';
   }
 }
 
@@ -148,7 +155,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
       case 'borderColor':
         return HintType.color;
       case 'modelIds':
-        return HintType.modelId;
+        return HintType.deviceModelId;
       case 'field':
         return HintType.field;
     }
@@ -207,12 +214,12 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default([]) List<String> modelIds,
     @Default([
-      Range(from: 0, to: 25, color: 0xFFFFFFFF),
-      Range(from: 26, to: 50, color: 0xFFFFFFFF),
-      Range(from: 51, to: 75, color: 0xFFFFFFFF),
-      Range(from: 76, to: 100, color: 0xFFFFFFFF),
+      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+      {'from': 76, 'color': 0xFFFFFFFF},
     ])
-    List<Range> segments,
+    List<dynamic> segments,
   }) = _ValueDistributionPieChartWidgetConfig;
 
   factory ValueDistributionPieChartWidgetConfig.fromJson(
@@ -230,7 +237,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
       case 'modelIds':
         return DataType.listOfTexts;
       case 'segments':
-        return DataType.listOfObjects;
+        return DataType.listOfRanges;
       default:
         return DataType.text;
     }
@@ -240,11 +247,9 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'modelIds':
-        return HintType.modelId;
+        return HintType.deviceModelId;
       case 'field':
         return HintType.field;
-      case 'segments':
-        return HintType.range;
     }
 
     return HintType.none;
@@ -337,6 +342,8 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
     Map<String, dynamic> headerFont,
     @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
     Map<String, dynamic> labelFont,
+     @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFFFFFFFF) int borderColor,
   }) = _DeviceCartesianChartWidgetConfig;
 
   factory DeviceCartesianChartWidgetConfig.fromJson(
@@ -346,6 +353,9 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'bgColor':
+      case 'borderColor':
+        return DataType.numeric;
       default:
         return DataType.text;
     }
@@ -358,6 +368,9 @@ class DeviceCartesianChartWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'bgColor':
+      case 'borderColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
