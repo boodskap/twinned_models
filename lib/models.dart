@@ -582,8 +582,16 @@ class MultipleDeviceCartesianChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      default:
+      case 'title':
+      case 'field':
         return DataType.text;
+      case 'deviceId':
+        return DataType.listOfTexts;
+      case 'headerFont':
+      case 'labelFont':
+        return DataType.font;
+      default:
+        return DataType.none;
     }
   }
 
@@ -597,5 +605,37 @@ class MultipleDeviceCartesianChartWidgetConfig extends BaseConfig
       default:
         return HintType.none;
     }
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return '';
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
   }
 }
