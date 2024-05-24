@@ -25,39 +25,28 @@ mixin _$DeviceFieldPercentageWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
-  set valueFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get prefixFont => throw _privateConstructorUsedError;
-  set prefixFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get suffixFont => throw _privateConstructorUsedError;
-  set suffixFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  String get minLabel => throw _privateConstructorUsedError;
-  set minLabel(String value) => throw _privateConstructorUsedError;
-  String get maxLabel => throw _privateConstructorUsedError;
-  set maxLabel(String value) => throw _privateConstructorUsedError;
-  String get avgLabel => throw _privateConstructorUsedError;
-  set avgLabel(String value) => throw _privateConstructorUsedError;
-  int get minBgColor => throw _privateConstructorUsedError;
-  set minBgColor(int value) => throw _privateConstructorUsedError;
-  int get maxBgColor => throw _privateConstructorUsedError;
-  set maxBgColor(int value) => throw _privateConstructorUsedError;
-  int get avgBgColor => throw _privateConstructorUsedError;
-  set avgBgColor(int value) => throw _privateConstructorUsedError;
+  int get bgColor => throw _privateConstructorUsedError;
+  set bgColor(int value) => throw _privateConstructorUsedError;
   int get borderColor => throw _privateConstructorUsedError;
   set borderColor(int value) => throw _privateConstructorUsedError;
+  int get fillColor => throw _privateConstructorUsedError;
+  set fillColor(int value) => throw _privateConstructorUsedError;
   double get borderWidth => throw _privateConstructorUsedError;
   set borderWidth(double value) => throw _privateConstructorUsedError;
+  double get borderRadius => throw _privateConstructorUsedError;
+  set borderRadius(double value) => throw _privateConstructorUsedError;
+  bool get animate => throw _privateConstructorUsedError;
+  set animate(bool value) => throw _privateConstructorUsedError;
+  PercentageWidgetShape get shape => throw _privateConstructorUsedError;
+  set shape(PercentageWidgetShape value) => throw _privateConstructorUsedError;
+  Axis get waveDirection => throw _privateConstructorUsedError;
+  set waveDirection(Axis value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -76,20 +65,16 @@ abstract class $DeviceFieldPercentageWidgetConfigCopyWith<$Res> {
   $Res call(
       {String field,
       String deviceId,
-      String title,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixFont,
-      Map<String, dynamic> suffixFont,
       Map<String, dynamic> labelFont,
-      String minLabel,
-      String maxLabel,
-      String avgLabel,
-      int minBgColor,
-      int maxBgColor,
-      int avgBgColor,
+      int bgColor,
       int borderColor,
-      double borderWidth});
+      int fillColor,
+      double borderWidth,
+      double borderRadius,
+      bool animate,
+      PercentageWidgetShape shape,
+      Axis waveDirection});
 }
 
 /// @nodoc
@@ -108,20 +93,16 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? field = null,
     Object? deviceId = null,
-    Object? title = null,
     Object? titleFont = null,
-    Object? valueFont = null,
-    Object? prefixFont = null,
-    Object? suffixFont = null,
     Object? labelFont = null,
-    Object? minLabel = null,
-    Object? maxLabel = null,
-    Object? avgLabel = null,
-    Object? minBgColor = null,
-    Object? maxBgColor = null,
-    Object? avgBgColor = null,
+    Object? bgColor = null,
     Object? borderColor = null,
+    Object? fillColor = null,
     Object? borderWidth = null,
+    Object? borderRadius = null,
+    Object? animate = null,
+    Object? shape = null,
+    Object? waveDirection = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -132,62 +113,46 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixFont: null == prefixFont
-          ? _value.prefixFont
-          : prefixFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixFont: null == suffixFont
-          ? _value.suffixFont
-          : suffixFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      minLabel: null == minLabel
-          ? _value.minLabel
-          : minLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      maxLabel: null == maxLabel
-          ? _value.maxLabel
-          : maxLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      avgLabel: null == avgLabel
-          ? _value.avgLabel
-          : avgLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      minBgColor: null == minBgColor
-          ? _value.minBgColor
-          : minBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxBgColor: null == maxBgColor
-          ? _value.maxBgColor
-          : maxBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      avgBgColor: null == avgBgColor
-          ? _value.avgBgColor
-          : avgBgColor // ignore: cast_nullable_to_non_nullable
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
               as int,
       borderColor: null == borderColor
           ? _value.borderColor
           : borderColor // ignore: cast_nullable_to_non_nullable
               as int,
+      fillColor: null == fillColor
+          ? _value.fillColor
+          : fillColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      borderRadius: null == borderRadius
+          ? _value.borderRadius
+          : borderRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      animate: null == animate
+          ? _value.animate
+          : animate // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as PercentageWidgetShape,
+      waveDirection: null == waveDirection
+          ? _value.waveDirection
+          : waveDirection // ignore: cast_nullable_to_non_nullable
+              as Axis,
     ) as $Val);
   }
 }
@@ -204,20 +169,16 @@ abstract class _$$DeviceFieldPercentageWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String field,
       String deviceId,
-      String title,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixFont,
-      Map<String, dynamic> suffixFont,
       Map<String, dynamic> labelFont,
-      String minLabel,
-      String maxLabel,
-      String avgLabel,
-      int minBgColor,
-      int maxBgColor,
-      int avgBgColor,
+      int bgColor,
       int borderColor,
-      double borderWidth});
+      int fillColor,
+      double borderWidth,
+      double borderRadius,
+      bool animate,
+      PercentageWidgetShape shape,
+      Axis waveDirection});
 }
 
 /// @nodoc
@@ -235,20 +196,16 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? field = null,
     Object? deviceId = null,
-    Object? title = null,
     Object? titleFont = null,
-    Object? valueFont = null,
-    Object? prefixFont = null,
-    Object? suffixFont = null,
     Object? labelFont = null,
-    Object? minLabel = null,
-    Object? maxLabel = null,
-    Object? avgLabel = null,
-    Object? minBgColor = null,
-    Object? maxBgColor = null,
-    Object? avgBgColor = null,
+    Object? bgColor = null,
     Object? borderColor = null,
+    Object? fillColor = null,
     Object? borderWidth = null,
+    Object? borderRadius = null,
+    Object? animate = null,
+    Object? shape = null,
+    Object? waveDirection = null,
   }) {
     return _then(_$DeviceFieldPercentageWidgetConfigImpl(
       field: null == field
@@ -259,62 +216,46 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixFont: null == prefixFont
-          ? _value.prefixFont
-          : prefixFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixFont: null == suffixFont
-          ? _value.suffixFont
-          : suffixFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      minLabel: null == minLabel
-          ? _value.minLabel
-          : minLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      maxLabel: null == maxLabel
-          ? _value.maxLabel
-          : maxLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      avgLabel: null == avgLabel
-          ? _value.avgLabel
-          : avgLabel // ignore: cast_nullable_to_non_nullable
-              as String,
-      minBgColor: null == minBgColor
-          ? _value.minBgColor
-          : minBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxBgColor: null == maxBgColor
-          ? _value.maxBgColor
-          : maxBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      avgBgColor: null == avgBgColor
-          ? _value.avgBgColor
-          : avgBgColor // ignore: cast_nullable_to_non_nullable
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
               as int,
       borderColor: null == borderColor
           ? _value.borderColor
           : borderColor // ignore: cast_nullable_to_non_nullable
               as int,
+      fillColor: null == fillColor
+          ? _value.fillColor
+          : fillColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      borderRadius: null == borderRadius
+          ? _value.borderRadius
+          : borderRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      animate: null == animate
+          ? _value.animate
+          : animate // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as PercentageWidgetShape,
+      waveDirection: null == waveDirection
+          ? _value.waveDirection
+          : waveDirection // ignore: cast_nullable_to_non_nullable
+              as Axis,
     ));
   }
 }
@@ -326,28 +267,9 @@ class _$DeviceFieldPercentageWidgetConfigImpl
   _$DeviceFieldPercentageWidgetConfigImpl(
       {this.field = '',
       this.deviceId = '',
-      this.title = 'Min Max Avg',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.valueFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 20,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.prefixFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 14,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.suffixFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 14,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
@@ -357,14 +279,14 @@ class _$DeviceFieldPercentageWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.minLabel = 'Min',
-      this.maxLabel = 'Max',
-      this.avgLabel = 'Avg',
-      this.minBgColor = 0xFFFFFFFF,
-      this.maxBgColor = 0xFFFFFFFF,
-      this.avgBgColor = 0xFFFFFFFF,
-      this.borderColor = 0x00000000,
-      this.borderWidth = 1.0})
+      this.bgColor = 0xFFFFFFFF,
+      this.borderColor = 0xFFFFEBEE,
+      this.fillColor = 0xFFFFEBEE,
+      this.borderWidth = 1.0,
+      this.borderRadius = 12.0,
+      this.animate = true,
+      this.shape = PercentageWidgetShape.rectangle,
+      this.waveDirection = Axis.horizontal})
       : super._();
 
   factory _$DeviceFieldPercentageWidgetConfigImpl.fromJson(
@@ -379,50 +301,38 @@ class _$DeviceFieldPercentageWidgetConfigImpl
   String deviceId;
   @override
   @JsonKey()
-  String title;
-  @override
-  @JsonKey()
   Map<String, dynamic> titleFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> valueFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> prefixFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> suffixFont;
   @override
   @JsonKey()
   Map<String, dynamic> labelFont;
   @override
   @JsonKey()
-  String minLabel;
-  @override
-  @JsonKey()
-  String maxLabel;
-  @override
-  @JsonKey()
-  String avgLabel;
-  @override
-  @JsonKey()
-  int minBgColor;
-  @override
-  @JsonKey()
-  int maxBgColor;
-  @override
-  @JsonKey()
-  int avgBgColor;
+  int bgColor;
   @override
   @JsonKey()
   int borderColor;
   @override
   @JsonKey()
+  int fillColor;
+  @override
+  @JsonKey()
   double borderWidth;
+  @override
+  @JsonKey()
+  double borderRadius;
+  @override
+  @JsonKey()
+  bool animate;
+  @override
+  @JsonKey()
+  PercentageWidgetShape shape;
+  @override
+  @JsonKey()
+  Axis waveDirection;
 
   @override
   String toString() {
-    return 'DeviceFieldPercentageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, valueFont: $valueFont, prefixFont: $prefixFont, suffixFont: $suffixFont, labelFont: $labelFont, minLabel: $minLabel, maxLabel: $maxLabel, avgLabel: $avgLabel, minBgColor: $minBgColor, maxBgColor: $maxBgColor, avgBgColor: $avgBgColor, borderColor: $borderColor, borderWidth: $borderWidth)';
+    return 'DeviceFieldPercentageWidgetConfig(field: $field, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor, fillColor: $fillColor, borderWidth: $borderWidth, borderRadius: $borderRadius, animate: $animate, shape: $shape, waveDirection: $waveDirection)';
   }
 
   @JsonKey(ignore: true)
@@ -446,20 +356,16 @@ abstract class _DeviceFieldPercentageWidgetConfig
   factory _DeviceFieldPercentageWidgetConfig(
       {String field,
       String deviceId,
-      String title,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixFont,
-      Map<String, dynamic> suffixFont,
       Map<String, dynamic> labelFont,
-      String minLabel,
-      String maxLabel,
-      String avgLabel,
-      int minBgColor,
-      int maxBgColor,
-      int avgBgColor,
+      int bgColor,
       int borderColor,
-      double borderWidth}) = _$DeviceFieldPercentageWidgetConfigImpl;
+      int fillColor,
+      double borderWidth,
+      double borderRadius,
+      bool animate,
+      PercentageWidgetShape shape,
+      Axis waveDirection}) = _$DeviceFieldPercentageWidgetConfigImpl;
   _DeviceFieldPercentageWidgetConfig._() : super._();
 
   factory _DeviceFieldPercentageWidgetConfig.fromJson(
@@ -473,47 +379,35 @@ abstract class _DeviceFieldPercentageWidgetConfig
   String get deviceId;
   set deviceId(String value);
   @override
-  String get title;
-  set title(String value);
-  @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get valueFont;
-  set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get prefixFont;
-  set prefixFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get suffixFont;
-  set suffixFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
   @override
-  String get minLabel;
-  set minLabel(String value);
-  @override
-  String get maxLabel;
-  set maxLabel(String value);
-  @override
-  String get avgLabel;
-  set avgLabel(String value);
-  @override
-  int get minBgColor;
-  set minBgColor(int value);
-  @override
-  int get maxBgColor;
-  set maxBgColor(int value);
-  @override
-  int get avgBgColor;
-  set avgBgColor(int value);
+  int get bgColor;
+  set bgColor(int value);
   @override
   int get borderColor;
   set borderColor(int value);
   @override
+  int get fillColor;
+  set fillColor(int value);
+  @override
   double get borderWidth;
   set borderWidth(double value);
+  @override
+  double get borderRadius;
+  set borderRadius(double value);
+  @override
+  bool get animate;
+  set animate(bool value);
+  @override
+  PercentageWidgetShape get shape;
+  set shape(PercentageWidgetShape value);
+  @override
+  Axis get waveDirection;
+  set waveDirection(Axis value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceFieldPercentageWidgetConfigImplCopyWith<

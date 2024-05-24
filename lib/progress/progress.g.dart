@@ -12,32 +12,10 @@ _$DeviceFieldPercentageWidgetConfigImpl
         _$DeviceFieldPercentageWidgetConfigImpl(
           field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
-          title: json['title'] as String? ?? 'Min Max Avg',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 30,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          valueFont: json['valueFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 20,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 14,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          suffixFont: json['suffixFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 14,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
@@ -48,14 +26,18 @@ _$DeviceFieldPercentageWidgetConfigImpl
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
-          minLabel: json['minLabel'] as String? ?? 'Min',
-          maxLabel: json['maxLabel'] as String? ?? 'Max',
-          avgLabel: json['avgLabel'] as String? ?? 'Avg',
-          minBgColor: (json['minBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-          maxBgColor: (json['maxBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-          avgBgColor: (json['avgBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-          borderColor: (json['borderColor'] as num?)?.toInt() ?? 0x00000000,
+          bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+          borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
+          fillColor: (json['fillColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
           borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1.0,
+          borderRadius: (json['borderRadius'] as num?)?.toDouble() ?? 12.0,
+          animate: json['animate'] as bool? ?? true,
+          shape: $enumDecodeNullable(
+                  _$PercentageWidgetShapeEnumMap, json['shape']) ??
+              PercentageWidgetShape.rectangle,
+          waveDirection:
+              $enumDecodeNullable(_$AxisEnumMap, json['waveDirection']) ??
+                  Axis.horizontal,
         );
 
 Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
@@ -63,18 +45,24 @@ Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
     <String, dynamic>{
       'field': instance.field,
       'deviceId': instance.deviceId,
-      'title': instance.title,
       'titleFont': instance.titleFont,
-      'valueFont': instance.valueFont,
-      'prefixFont': instance.prefixFont,
-      'suffixFont': instance.suffixFont,
       'labelFont': instance.labelFont,
-      'minLabel': instance.minLabel,
-      'maxLabel': instance.maxLabel,
-      'avgLabel': instance.avgLabel,
-      'minBgColor': instance.minBgColor,
-      'maxBgColor': instance.maxBgColor,
-      'avgBgColor': instance.avgBgColor,
+      'bgColor': instance.bgColor,
       'borderColor': instance.borderColor,
+      'fillColor': instance.fillColor,
       'borderWidth': instance.borderWidth,
+      'borderRadius': instance.borderRadius,
+      'animate': instance.animate,
+      'shape': _$PercentageWidgetShapeEnumMap[instance.shape]!,
+      'waveDirection': _$AxisEnumMap[instance.waveDirection]!,
     };
+
+const _$PercentageWidgetShapeEnumMap = {
+  PercentageWidgetShape.circle: 'circle',
+  PercentageWidgetShape.rectangle: 'rectangle',
+};
+
+const _$AxisEnumMap = {
+  Axis.horizontal: 'horizontal',
+  Axis.vertical: 'vertical',
+};
