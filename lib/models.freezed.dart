@@ -160,6 +160,7 @@ FontConfig _$FontConfigFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FontConfig {
+  String get fontFamily => throw _privateConstructorUsedError;
   double get fontSize => throw _privateConstructorUsedError;
   int get fontColor => throw _privateConstructorUsedError;
   bool get fontBold => throw _privateConstructorUsedError;
@@ -176,7 +177,7 @@ abstract class $FontConfigCopyWith<$Res> {
           FontConfig value, $Res Function(FontConfig) then) =
       _$FontConfigCopyWithImpl<$Res, FontConfig>;
   @useResult
-  $Res call({double fontSize, int fontColor, bool fontBold});
+  $Res call({String fontFamily, double fontSize, int fontColor, bool fontBold});
 }
 
 /// @nodoc
@@ -192,11 +193,16 @@ class _$FontConfigCopyWithImpl<$Res, $Val extends FontConfig>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? fontFamily = null,
     Object? fontSize = null,
     Object? fontColor = null,
     Object? fontBold = null,
   }) {
     return _then(_value.copyWith(
+      fontFamily: null == fontFamily
+          ? _value.fontFamily
+          : fontFamily // ignore: cast_nullable_to_non_nullable
+              as String,
       fontSize: null == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
@@ -221,7 +227,7 @@ abstract class _$$FontConfigImplCopyWith<$Res>
       __$$FontConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double fontSize, int fontColor, bool fontBold});
+  $Res call({String fontFamily, double fontSize, int fontColor, bool fontBold});
 }
 
 /// @nodoc
@@ -235,11 +241,16 @@ class __$$FontConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? fontFamily = null,
     Object? fontSize = null,
     Object? fontColor = null,
     Object? fontBold = null,
   }) {
     return _then(_$FontConfigImpl(
+      fontFamily: null == fontFamily
+          ? _value.fontFamily
+          : fontFamily // ignore: cast_nullable_to_non_nullable
+              as String,
       fontSize: null == fontSize
           ? _value.fontSize
           : fontSize // ignore: cast_nullable_to_non_nullable
@@ -260,12 +271,18 @@ class __$$FontConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FontConfigImpl extends _FontConfig {
   const _$FontConfigImpl(
-      {this.fontSize = 14, this.fontColor = 0, this.fontBold = false})
+      {this.fontFamily = 'Open Sans',
+      this.fontSize = 14,
+      this.fontColor = 0,
+      this.fontBold = false})
       : super._();
 
   factory _$FontConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$FontConfigImplFromJson(json);
 
+  @override
+  @JsonKey()
+  final String fontFamily;
   @override
   @JsonKey()
   final double fontSize;
@@ -278,7 +295,7 @@ class _$FontConfigImpl extends _FontConfig {
 
   @override
   String toString() {
-    return 'FontConfig(fontSize: $fontSize, fontColor: $fontColor, fontBold: $fontBold)';
+    return 'FontConfig(fontFamily: $fontFamily, fontSize: $fontSize, fontColor: $fontColor, fontBold: $fontBold)';
   }
 
   @JsonKey(ignore: true)
@@ -297,7 +314,8 @@ class _$FontConfigImpl extends _FontConfig {
 
 abstract class _FontConfig extends FontConfig {
   const factory _FontConfig(
-      {final double fontSize,
+      {final String fontFamily,
+      final double fontSize,
       final int fontColor,
       final bool fontBold}) = _$FontConfigImpl;
   const _FontConfig._() : super._();
@@ -305,6 +323,8 @@ abstract class _FontConfig extends FontConfig {
   factory _FontConfig.fromJson(Map<String, dynamic> json) =
       _$FontConfigImpl.fromJson;
 
+  @override
+  String get fontFamily;
   @override
   double get fontSize;
   @override
@@ -2118,5 +2138,166 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
   @JsonKey(ignore: true)
   _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<
           _$MultipleDeviceCartesianChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+StaticTextWidgetConfig _$StaticTextWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _StaticTextWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$StaticTextWidgetConfig {
+  String get value => throw _privateConstructorUsedError;
+  set value(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get font => throw _privateConstructorUsedError;
+  set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $StaticTextWidgetConfigCopyWith<StaticTextWidgetConfig> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $StaticTextWidgetConfigCopyWith<$Res> {
+  factory $StaticTextWidgetConfigCopyWith(StaticTextWidgetConfig value,
+          $Res Function(StaticTextWidgetConfig) then) =
+      _$StaticTextWidgetConfigCopyWithImpl<$Res, StaticTextWidgetConfig>;
+  @useResult
+  $Res call({String value, Map<String, dynamic> font});
+}
+
+/// @nodoc
+class _$StaticTextWidgetConfigCopyWithImpl<$Res,
+        $Val extends StaticTextWidgetConfig>
+    implements $StaticTextWidgetConfigCopyWith<$Res> {
+  _$StaticTextWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+    Object? font = null,
+  }) {
+    return _then(_value.copyWith(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+      font: null == font
+          ? _value.font
+          : font // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$StaticTextWidgetConfigImplCopyWith<$Res>
+    implements $StaticTextWidgetConfigCopyWith<$Res> {
+  factory _$$StaticTextWidgetConfigImplCopyWith(
+          _$StaticTextWidgetConfigImpl value,
+          $Res Function(_$StaticTextWidgetConfigImpl) then) =
+      __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String value, Map<String, dynamic> font});
+}
+
+/// @nodoc
+class __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>
+    extends _$StaticTextWidgetConfigCopyWithImpl<$Res,
+        _$StaticTextWidgetConfigImpl>
+    implements _$$StaticTextWidgetConfigImplCopyWith<$Res> {
+  __$$StaticTextWidgetConfigImplCopyWithImpl(
+      _$StaticTextWidgetConfigImpl _value,
+      $Res Function(_$StaticTextWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+    Object? font = null,
+  }) {
+    return _then(_$StaticTextWidgetConfigImpl(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+      font: null == font
+          ? _value.font
+          : font // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$StaticTextWidgetConfigImpl extends _StaticTextWidgetConfig {
+  _$StaticTextWidgetConfigImpl(
+      {this.value = '',
+      this.font = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      }})
+      : super._();
+
+  factory _$StaticTextWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StaticTextWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String value;
+  @override
+  @JsonKey()
+  Map<String, dynamic> font;
+
+  @override
+  String toString() {
+    return 'StaticTextWidgetConfig(value: $value, font: $font)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StaticTextWidgetConfigImplCopyWith<_$StaticTextWidgetConfigImpl>
+      get copyWith => __$$StaticTextWidgetConfigImplCopyWithImpl<
+          _$StaticTextWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$StaticTextWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _StaticTextWidgetConfig extends StaticTextWidgetConfig {
+  factory _StaticTextWidgetConfig({String value, Map<String, dynamic> font}) =
+      _$StaticTextWidgetConfigImpl;
+  _StaticTextWidgetConfig._() : super._();
+
+  factory _StaticTextWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$StaticTextWidgetConfigImpl.fromJson;
+
+  @override
+  String get value;
+  set value(String value);
+  @override
+  Map<String, dynamic> get font;
+  set font(Map<String, dynamic> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$StaticTextWidgetConfigImplCopyWith<_$StaticTextWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
