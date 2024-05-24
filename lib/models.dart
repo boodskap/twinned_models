@@ -116,7 +116,8 @@ class FontConfig with _$FontConfig {
   const FontConfig._();
 
   const factory FontConfig(
-      {@Default(14) final double fontSize,
+      {@Default('Open Sans') final String fontFamily,
+      @Default(14) final double fontSize,
       @Default(0) final int fontColor,
       @Default(false) final bool fontBold}) = _FontConfig;
 
@@ -628,6 +629,83 @@ class MultipleDeviceCartesianChartWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
+}
+
+@unfreezed
+class StaticTextWidgetConfig extends BaseConfig with _$StaticTextWidgetConfig {
+  StaticTextWidgetConfig._();
+
+  factory StaticTextWidgetConfig({
+    @Default('') String value,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> font,
+  }) = _StaticTextWidgetConfig;
+
+  factory StaticTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$StaticTextWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'value':
+        return DataType.text;
+      case 'font':
+        return DataType.font;
+      default:
+        return DataType.none;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    switch (parameter) {
+      default:
+        return HintType.none;
+    }
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    switch (parameter) {
+      case 'value':
+        return 'Text Value';
+      case 'font':
+        return 'Font Config';
+      default:
+        return parameter;
+    }
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return '';
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'value':
+      case 'font':
         return true;
       default:
         return false;
