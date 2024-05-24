@@ -20,6 +20,7 @@ Map<String, dynamic> _$$ExampleImplToJson(_$ExampleImpl instance) =>
 
 _$FontConfigImpl _$$FontConfigImplFromJson(Map<String, dynamic> json) =>
     _$FontConfigImpl(
+      fontFamily: json['fontFamily'] as String? ?? 'Open Sans',
       fontSize: (json['fontSize'] as num?)?.toDouble() ?? 14,
       fontColor: (json['fontColor'] as num?)?.toInt() ?? 0,
       fontBold: json['fontBold'] as bool? ?? false,
@@ -27,6 +28,7 @@ _$FontConfigImpl _$$FontConfigImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$FontConfigImplToJson(_$FontConfigImpl instance) =>
     <String, dynamic>{
+      'fontFamily': instance.fontFamily,
       'fontSize': instance.fontSize,
       'fontColor': instance.fontColor,
       'fontBold': instance.fontBold,
@@ -234,4 +236,24 @@ Map<String, dynamic> _$$MultipleDeviceCartesianChartWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'headerFont': instance.headerFont,
       'labelFont': instance.labelFont,
+    };
+
+_$StaticTextWidgetConfigImpl _$$StaticTextWidgetConfigImplFromJson(
+        Map<String, dynamic> json) =>
+    _$StaticTextWidgetConfigImpl(
+      value: json['value'] as String? ?? '',
+      font: json['font'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
+          },
+    );
+
+Map<String, dynamic> _$$StaticTextWidgetConfigImplToJson(
+        _$StaticTextWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+      'font': instance.font,
     };
