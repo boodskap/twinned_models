@@ -50,11 +50,14 @@ _$DeviceMinMaxAvgWidgetConfigImpl _$$DeviceMinMaxAvgWidgetConfigImplFromJson(
       minLabel: json['minLabel'] as String? ?? 'Min',
       maxLabel: json['maxLabel'] as String? ?? 'Max',
       avgLabel: json['avgLabel'] as String? ?? 'Avg',
+      prefixLabel: json['prefixLabel'] as String? ?? '',
+      suffixLabel: json['suffixLabel'] as String? ?? '',
       minBgColor: (json['minBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
       maxBgColor: (json['maxBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
       avgBgColor: (json['avgBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
       borderColor: (json['borderColor'] as num?)?.toInt() ?? 0x00000000,
       borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1.0,
+      labelSpacing: (json['labelSpacing'] as num?)?.toDouble() ?? 10.0,
     );
 
 Map<String, dynamic> _$$DeviceMinMaxAvgWidgetConfigImplToJson(
@@ -71,9 +74,12 @@ Map<String, dynamic> _$$DeviceMinMaxAvgWidgetConfigImplToJson(
       'minLabel': instance.minLabel,
       'maxLabel': instance.maxLabel,
       'avgLabel': instance.avgLabel,
+      'prefixLabel': instance.prefixLabel,
+      'suffixLabel': instance.suffixLabel,
       'minBgColor': instance.minBgColor,
       'maxBgColor': instance.maxBgColor,
       'avgBgColor': instance.avgBgColor,
       'borderColor': instance.borderColor,
       'borderWidth': instance.borderWidth,
+      'labelSpacing': instance.labelSpacing,
     };
