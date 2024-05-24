@@ -51,11 +51,14 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
     @Default('Min') String minLabel,
     @Default('Max') String maxLabel,
     @Default('Avg') String avgLabel,
+    @Default('') String prefixLabel,
+    @Default('') String suffixLabel,
     @Default(0xFFFFFFFF) int minBgColor,
     @Default(0xFFFFFFFF) int maxBgColor,
     @Default(0xFFFFFFFF) int avgBgColor,
     @Default(0x00000000) int borderColor,
     @Default(1.0) double borderWidth,
+    @Default(10.0) double labelSpacing,
   }) = _DeviceMinMaxAvgWidgetConfig;
 
   factory DeviceMinMaxAvgWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -74,6 +77,8 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
       case 'minLabel':
       case 'maxLabel':
       case 'avgLabel':
+      case 'prefixLabel':
+      case 'suffixLabel':
       case 'field':
       case 'deviceId':
         return DataType.text;
@@ -83,6 +88,7 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
       case 'borderColor':
         return DataType.numeric;
       case 'borderWidth':
+      case 'labelSpacing':
         return DataType.decimal;
       default:
         return DataType.none;
