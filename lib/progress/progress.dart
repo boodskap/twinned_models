@@ -1,8 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
 part 'progress.freezed.dart';
 part 'progress.g.dart';
+
+enum PercentageWidgetShape {
+  circle,
+  rectangle,
+}
 
 @unfreezed
 class DeviceFieldPercentageWidgetConfig extends BaseConfig
@@ -12,7 +18,6 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   factory DeviceFieldPercentageWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
-    @Default('Min Max Avg') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -26,36 +31,15 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> prefixFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> suffixFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 20,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
     Map<String, dynamic> labelFont,
-    @Default('Min') String minLabel,
-    @Default('Max') String maxLabel,
-    @Default('Avg') String avgLabel,
-    @Default(0xFFFFFFFF) int minBgColor,
-    @Default(0xFFFFFFFF) int maxBgColor,
-    @Default(0xFFFFFFFF) int avgBgColor,
-    @Default(0x00000000) int borderColor,
+    @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFFFFEBEE) int borderColor,
+    @Default(0xFFFFEBEE) int fillColor,
     @Default(1.0) double borderWidth,
+    @Default(12.0) double borderRadius,
+    @Default(true) bool animate,
+    @Default(PercentageWidgetShape.rectangle) PercentageWidgetShape shape,
+    @Default(Axis.horizontal) Axis waveDirection,
   }) = _DeviceFieldPercentageWidgetConfig;
 
   factory DeviceFieldPercentageWidgetConfig.fromJson(
@@ -66,25 +50,20 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'titleFont':
-      case 'valueFont':
-      case 'prefixFont':
-      case 'suffixFont':
       case 'labelFont':
         return DataType.font;
-      case 'title':
-      case 'minLabel':
-      case 'maxLabel':
-      case 'avgLabel':
-      case 'field':
-      case 'deviceId':
-        return DataType.text;
-      case 'minBgColor':
-      case 'maxBgColor':
-      case 'avgBgColor':
+      case 'bgColor':
       case 'borderColor':
+      case 'fillColor':
         return DataType.numeric;
       case 'borderWidth':
+      case 'borderRadius':
         return DataType.decimal;
+      case 'animate':
+        return DataType.yesno;
+      case 'shape':
+      case 'waveDirection':
+        return DataType.enumerated;
       default:
         return DataType.none;
     }
@@ -93,10 +72,9 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'minBgColor':
-      case 'maxBgColor':
-      case 'avgBgColor':
+      case 'bgColor':
       case 'borderColor':
+      case 'fillColor':
         return HintType.color;
       case 'field':
         return HintType.field;
@@ -109,7 +87,14 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    return [];
+    switch (parameter) {
+      case 'shape':
+        return PercentageWidgetShape.values.asNameMap().keys.toList();
+      case 'waveDirection':
+        return Axis.values.asNameMap().keys.toList();
+      default:
+        return ['THIS SHOULD NOT HAPPEN'];
+    }
   }
 
   @override
@@ -130,10 +115,6 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
       case 'deviceId':
-      case 'title':
-      case 'minLabel':
-      case 'maxLabel':
-      case 'avgLabel':
         return true;
       default:
         return false;
