@@ -49,6 +49,9 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'deviceId':
+      case 'field':
+        return DataType.text;
       case 'titleFont':
       case 'labelFont':
         return DataType.font;
