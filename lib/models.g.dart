@@ -257,3 +257,25 @@ Map<String, dynamic> _$$StaticTextWidgetConfigImplToJson(
       'value': instance.value,
       'font': instance.font,
     };
+
+_$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DynamicTextWidgetConfigImpl(
+      field: json['field'] as String? ?? '',
+      deviceId: json['deviceId'] as String? ?? '',
+      font: json['font'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
+          },
+    );
+
+Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
+        _$DynamicTextWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'field': instance.field,
+      'deviceId': instance.deviceId,
+      'font': instance.font,
+    };
