@@ -11,6 +11,7 @@ _$DeviceFieldPercentageWidgetConfigImpl
             Map<String, dynamic> json) =>
         _$DeviceFieldPercentageWidgetConfigImpl(
           field: json['field'] as String? ?? '',
+          title: json['title'] as String? ?? 'Percentage',
           deviceId: json['deviceId'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
@@ -44,6 +45,7 @@ Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
         _$DeviceFieldPercentageWidgetConfigImpl instance) =>
     <String, dynamic>{
       'field': instance.field,
+      'title': instance.title,
       'deviceId': instance.deviceId,
       'titleFont': instance.titleFont,
       'labelFont': instance.labelFont,

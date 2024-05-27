@@ -23,6 +23,8 @@ DeviceFieldPercentageWidgetConfig _$DeviceFieldPercentageWidgetConfigFromJson(
 mixin _$DeviceFieldPercentageWidgetConfig {
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -64,6 +66,7 @@ abstract class $DeviceFieldPercentageWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String field,
+      String title,
       String deviceId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
@@ -92,6 +95,7 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? field = null,
+    Object? title = null,
     Object? deviceId = null,
     Object? titleFont = null,
     Object? labelFont = null,
@@ -108,6 +112,10 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -168,6 +176,7 @@ abstract class _$$DeviceFieldPercentageWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String field,
+      String title,
       String deviceId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
@@ -195,6 +204,7 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? field = null,
+    Object? title = null,
     Object? deviceId = null,
     Object? titleFont = null,
     Object? labelFont = null,
@@ -211,6 +221,10 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -266,6 +280,7 @@ class _$DeviceFieldPercentageWidgetConfigImpl
     extends _DeviceFieldPercentageWidgetConfig {
   _$DeviceFieldPercentageWidgetConfigImpl(
       {this.field = '',
+      this.title = 'Percentage',
       this.deviceId = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -296,6 +311,9 @@ class _$DeviceFieldPercentageWidgetConfigImpl
   @override
   @JsonKey()
   String field;
+  @override
+  @JsonKey()
+  String title;
   @override
   @JsonKey()
   String deviceId;
@@ -332,7 +350,7 @@ class _$DeviceFieldPercentageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldPercentageWidgetConfig(field: $field, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor, fillColor: $fillColor, borderWidth: $borderWidth, borderRadius: $borderRadius, animate: $animate, shape: $shape, waveDirection: $waveDirection)';
+    return 'DeviceFieldPercentageWidgetConfig(field: $field, title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor, fillColor: $fillColor, borderWidth: $borderWidth, borderRadius: $borderRadius, animate: $animate, shape: $shape, waveDirection: $waveDirection)';
   }
 
   @JsonKey(ignore: true)
@@ -355,6 +373,7 @@ abstract class _DeviceFieldPercentageWidgetConfig
     extends DeviceFieldPercentageWidgetConfig {
   factory _DeviceFieldPercentageWidgetConfig(
       {String field,
+      String title,
       String deviceId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
@@ -375,6 +394,9 @@ abstract class _DeviceFieldPercentageWidgetConfig
   @override
   String get field;
   set field(String value);
+  @override
+  String get title;
+  set title(String value);
   @override
   String get deviceId;
   set deviceId(String value);
