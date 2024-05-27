@@ -810,3 +810,83 @@ class DynamicTextWidgetConfig extends BaseConfig
     return true;
   }
 }
+
+@unfreezed
+class MultipleDeviceModelChartWidgetConfig extends BaseConfig
+    with _$MultipleDeviceModelChartWidgetConfig {
+  MultipleDeviceModelChartWidgetConfig._();
+
+  factory MultipleDeviceModelChartWidgetConfig({
+    @Default('') String title,
+    @Default('') String field,
+    @Default([]) List<String> modelId,
+    @Default({'fontSize': 18, 'fontColor': 0, 'fontBold': true})
+    Map<String, dynamic> headerFont,
+    @Default({'fontSize': 14, 'fontColor': 0, 'fontBold': false})
+    Map<String, dynamic> labelFont,
+  }) = _MultipleDeviceModelChartWidgetConfig;
+
+  factory MultipleDeviceModelChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$MultipleDeviceModelChartWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+        return DataType.text;
+      case 'modelId':
+        return DataType.listOfTexts;
+      case 'headerFont':
+      case 'labelFont':
+        return DataType.font;
+      default:
+        return DataType.none;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'modelId':
+        return HintType.deviceModelId;
+      default:
+        return HintType.none;
+    }
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    return parameter;
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return '';
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'modelId':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
+}
