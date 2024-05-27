@@ -2483,3 +2483,250 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+MultipleDeviceModelChartWidgetConfig
+    _$MultipleDeviceModelChartWidgetConfigFromJson(Map<String, dynamic> json) {
+  return _MultipleDeviceModelChartWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MultipleDeviceModelChartWidgetConfig {
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
+  List<String> get modelId => throw _privateConstructorUsedError;
+  set modelId(List<String> value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MultipleDeviceModelChartWidgetConfigCopyWith<
+          MultipleDeviceModelChartWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MultipleDeviceModelChartWidgetConfigCopyWith<$Res> {
+  factory $MultipleDeviceModelChartWidgetConfigCopyWith(
+          MultipleDeviceModelChartWidgetConfig value,
+          $Res Function(MultipleDeviceModelChartWidgetConfig) then) =
+      _$MultipleDeviceModelChartWidgetConfigCopyWithImpl<$Res,
+          MultipleDeviceModelChartWidgetConfig>;
+  @useResult
+  $Res call(
+      {String title,
+      String field,
+      List<String> modelId,
+      Map<String, dynamic> headerFont,
+      Map<String, dynamic> labelFont});
+}
+
+/// @nodoc
+class _$MultipleDeviceModelChartWidgetConfigCopyWithImpl<$Res,
+        $Val extends MultipleDeviceModelChartWidgetConfig>
+    implements $MultipleDeviceModelChartWidgetConfigCopyWith<$Res> {
+  _$MultipleDeviceModelChartWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? modelId = null,
+    Object? headerFont = null,
+    Object? labelFont = null,
+  }) {
+    return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      modelId: null == modelId
+          ? _value.modelId
+          : modelId // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<$Res>
+    implements $MultipleDeviceModelChartWidgetConfigCopyWith<$Res> {
+  factory _$$MultipleDeviceModelChartWidgetConfigImplCopyWith(
+          _$MultipleDeviceModelChartWidgetConfigImpl value,
+          $Res Function(_$MultipleDeviceModelChartWidgetConfigImpl) then) =
+      __$$MultipleDeviceModelChartWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String title,
+      String field,
+      List<String> modelId,
+      Map<String, dynamic> headerFont,
+      Map<String, dynamic> labelFont});
+}
+
+/// @nodoc
+class __$$MultipleDeviceModelChartWidgetConfigImplCopyWithImpl<$Res>
+    extends _$MultipleDeviceModelChartWidgetConfigCopyWithImpl<$Res,
+        _$MultipleDeviceModelChartWidgetConfigImpl>
+    implements _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<$Res> {
+  __$$MultipleDeviceModelChartWidgetConfigImplCopyWithImpl(
+      _$MultipleDeviceModelChartWidgetConfigImpl _value,
+      $Res Function(_$MultipleDeviceModelChartWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? field = null,
+    Object? modelId = null,
+    Object? headerFont = null,
+    Object? labelFont = null,
+  }) {
+    return _then(_$MultipleDeviceModelChartWidgetConfigImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      modelId: null == modelId
+          ? _value.modelId
+          : modelId // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MultipleDeviceModelChartWidgetConfigImpl
+    extends _MultipleDeviceModelChartWidgetConfig {
+  _$MultipleDeviceModelChartWidgetConfigImpl(
+      {this.title = '',
+      this.field = '',
+      this.modelId = const [],
+      this.headerFont = const {
+        'fontSize': 18,
+        'fontColor': 0,
+        'fontBold': true
+      },
+      this.labelFont = const {
+        'fontSize': 14,
+        'fontColor': 0,
+        'fontBold': false
+      }})
+      : super._();
+
+  factory _$MultipleDeviceModelChartWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$MultipleDeviceModelChartWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String title;
+  @override
+  @JsonKey()
+  String field;
+  @override
+  @JsonKey()
+  List<String> modelId;
+  @override
+  @JsonKey()
+  Map<String, dynamic> headerFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
+
+  @override
+  String toString() {
+    return 'MultipleDeviceModelChartWidgetConfig(title: $title, field: $field, modelId: $modelId, headerFont: $headerFont, labelFont: $labelFont)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<
+          _$MultipleDeviceModelChartWidgetConfigImpl>
+      get copyWith => __$$MultipleDeviceModelChartWidgetConfigImplCopyWithImpl<
+          _$MultipleDeviceModelChartWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MultipleDeviceModelChartWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MultipleDeviceModelChartWidgetConfig
+    extends MultipleDeviceModelChartWidgetConfig {
+  factory _MultipleDeviceModelChartWidgetConfig(
+          {String title,
+          String field,
+          List<String> modelId,
+          Map<String, dynamic> headerFont,
+          Map<String, dynamic> labelFont}) =
+      _$MultipleDeviceModelChartWidgetConfigImpl;
+  _MultipleDeviceModelChartWidgetConfig._() : super._();
+
+  factory _MultipleDeviceModelChartWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$MultipleDeviceModelChartWidgetConfigImpl.fromJson;
+
+  @override
+  String get title;
+  set title(String value);
+  @override
+  String get field;
+  set field(String value);
+  @override
+  List<String> get modelId;
+  set modelId(List<String> value);
+  @override
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<
+          _$MultipleDeviceModelChartWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

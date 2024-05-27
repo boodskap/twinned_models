@@ -279,3 +279,29 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'font': instance.font,
     };
+
+_$MultipleDeviceModelChartWidgetConfigImpl
+    _$$MultipleDeviceModelChartWidgetConfigImplFromJson(
+            Map<String, dynamic> json) =>
+        _$MultipleDeviceModelChartWidgetConfigImpl(
+          title: json['title'] as String? ?? '',
+          field: json['field'] as String? ?? '',
+          modelId: (json['modelId'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          headerFont: json['headerFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 18, 'fontColor': 0, 'fontBold': true},
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {'fontSize': 14, 'fontColor': 0, 'fontBold': false},
+        );
+
+Map<String, dynamic> _$$MultipleDeviceModelChartWidgetConfigImplToJson(
+        _$MultipleDeviceModelChartWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'field': instance.field,
+      'modelId': instance.modelId,
+      'headerFont': instance.headerFont,
+      'labelFont': instance.labelFont,
+    };
