@@ -730,11 +730,18 @@ class DynamicTextWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
-      'fontColor': 0xFFFFFFFF,
+      'fontSize': 14,
+      'fontColor': 0x000000,
       'fontBold': true
     })
     Map<String, dynamic> font,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0x000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> titleFont,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -748,6 +755,7 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'deviceId':
         return DataType.text;
       case 'font':
+      case 'titleFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -781,6 +789,7 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'deviceId':
         return 'Device ID';
       case 'font':
+      case 'titleFont':
         return 'Font Config';
       default:
         return parameter;
