@@ -727,7 +727,6 @@ class DynamicTextWidgetConfig extends BaseConfig
   factory DynamicTextWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
-     @Default('') String value,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -745,7 +744,6 @@ class DynamicTextWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
       case 'deviceId':
-      case 'value':
         return DataType.text;
       case 'font':
         return DataType.font;
@@ -780,8 +778,6 @@ class DynamicTextWidgetConfig extends BaseConfig
         return 'Device ID';
       case 'font':
         return 'Font Config';
-        case 'value':
-        return 'Text Value';
       default:
         return parameter;
     }
@@ -798,7 +794,6 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'field':
       case 'deviceId':
       case 'font':
-      case 'value':
         return true;
       default:
         return false;
