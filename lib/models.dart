@@ -725,6 +725,7 @@ class DynamicTextWidgetConfig extends BaseConfig
   DynamicTextWidgetConfig._();
 
   factory DynamicTextWidgetConfig({
+    @Default('') String title,
     @Default('') String field,
     @Default('') String deviceId,
     @Default({
@@ -742,6 +743,7 @@ class DynamicTextWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'title':
       case 'field':
       case 'deviceId':
         return DataType.text;
@@ -772,6 +774,8 @@ class DynamicTextWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
+      case 'title':
+        return 'Title';
       case 'field':
         return 'Field Value';
       case 'deviceId':

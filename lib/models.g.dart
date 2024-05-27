@@ -261,6 +261,7 @@ Map<String, dynamic> _$$StaticTextWidgetConfigImplToJson(
 _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$DynamicTextWidgetConfigImpl(
+      title: json['title'] as String? ?? '',
       field: json['field'] as String? ?? '',
       deviceId: json['deviceId'] as String? ?? '',
       font: json['font'] as Map<String, dynamic>? ??
@@ -275,6 +276,7 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
 Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
         _$DynamicTextWidgetConfigImpl instance) =>
     <String, dynamic>{
+      'title': instance.title,
       'field': instance.field,
       'deviceId': instance.deviceId,
       'font': instance.font,
