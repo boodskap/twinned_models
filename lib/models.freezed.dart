@@ -2301,3 +2301,185 @@ abstract class _StaticTextWidgetConfig extends StaticTextWidgetConfig {
   _$$StaticTextWidgetConfigImplCopyWith<_$StaticTextWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+DynamicTextWidgetConfig _$DynamicTextWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _DynamicTextWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DynamicTextWidgetConfig {
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get font => throw _privateConstructorUsedError;
+  set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DynamicTextWidgetConfigCopyWith<DynamicTextWidgetConfig> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
+  factory $DynamicTextWidgetConfigCopyWith(DynamicTextWidgetConfig value,
+          $Res Function(DynamicTextWidgetConfig) then) =
+      _$DynamicTextWidgetConfigCopyWithImpl<$Res, DynamicTextWidgetConfig>;
+  @useResult
+  $Res call({String field, String deviceId, Map<String, dynamic> font});
+}
+
+/// @nodoc
+class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
+        $Val extends DynamicTextWidgetConfig>
+    implements $DynamicTextWidgetConfigCopyWith<$Res> {
+  _$DynamicTextWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+    Object? font = null,
+  }) {
+    return _then(_value.copyWith(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      font: null == font
+          ? _value.font
+          : font // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
+    implements $DynamicTextWidgetConfigCopyWith<$Res> {
+  factory _$$DynamicTextWidgetConfigImplCopyWith(
+          _$DynamicTextWidgetConfigImpl value,
+          $Res Function(_$DynamicTextWidgetConfigImpl) then) =
+      __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String field, String deviceId, Map<String, dynamic> font});
+}
+
+/// @nodoc
+class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DynamicTextWidgetConfigCopyWithImpl<$Res,
+        _$DynamicTextWidgetConfigImpl>
+    implements _$$DynamicTextWidgetConfigImplCopyWith<$Res> {
+  __$$DynamicTextWidgetConfigImplCopyWithImpl(
+      _$DynamicTextWidgetConfigImpl _value,
+      $Res Function(_$DynamicTextWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+    Object? font = null,
+  }) {
+    return _then(_$DynamicTextWidgetConfigImpl(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      font: null == font
+          ? _value.font
+          : font // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
+  _$DynamicTextWidgetConfigImpl(
+      {this.field = '',
+      this.deviceId = '',
+      this.font = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      }})
+      : super._();
+
+  factory _$DynamicTextWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DynamicTextWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String field;
+  @override
+  @JsonKey()
+  String deviceId;
+  @override
+  @JsonKey()
+  Map<String, dynamic> font;
+
+  @override
+  String toString() {
+    return 'DynamicTextWidgetConfig(field: $field, deviceId: $deviceId, font: $font)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
+      get copyWith => __$$DynamicTextWidgetConfigImplCopyWithImpl<
+          _$DynamicTextWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DynamicTextWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
+  factory _DynamicTextWidgetConfig(
+      {String field,
+      String deviceId,
+      Map<String, dynamic> font}) = _$DynamicTextWidgetConfigImpl;
+  _DynamicTextWidgetConfig._() : super._();
+
+  factory _DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$DynamicTextWidgetConfigImpl.fromJson;
+
+  @override
+  String get field;
+  set field(String value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  Map<String, dynamic> get font;
+  set font(Map<String, dynamic> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
