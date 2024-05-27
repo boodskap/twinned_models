@@ -2317,6 +2317,9 @@ mixin _$DynamicTextWidgetConfig {
   set deviceId(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get font => throw _privateConstructorUsedError;
   set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
+  set titleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2331,7 +2334,11 @@ abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
       _$DynamicTextWidgetConfigCopyWithImpl<$Res, DynamicTextWidgetConfig>;
   @useResult
   $Res call(
-      {String title, String field, String deviceId, Map<String, dynamic> font});
+      {String title,
+      String field,
+      String deviceId,
+      Map<String, dynamic> font,
+      Map<String, dynamic> titleFont});
 }
 
 /// @nodoc
@@ -2352,6 +2359,7 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
     Object? field = null,
     Object? deviceId = null,
     Object? font = null,
+    Object? titleFont = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -2370,6 +2378,10 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ) as $Val);
   }
 }
@@ -2384,7 +2396,11 @@ abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title, String field, String deviceId, Map<String, dynamic> font});
+      {String title,
+      String field,
+      String deviceId,
+      Map<String, dynamic> font,
+      Map<String, dynamic> titleFont});
 }
 
 /// @nodoc
@@ -2404,6 +2420,7 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
     Object? field = null,
     Object? deviceId = null,
     Object? font = null,
+    Object? titleFont = null,
   }) {
     return _then(_$DynamicTextWidgetConfigImpl(
       title: null == title
@@ -2422,6 +2439,10 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ));
   }
 }
@@ -2435,8 +2456,14 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       this.deviceId = '',
       this.font = const {
         'fontFamily': 'Open Sans',
+        'fontSize': 14,
+        'fontColor': 0x000000,
+        'fontBold': true
+      },
+      this.titleFont = const {
+        'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0x000000,
         'fontBold': true
       }})
       : super._();
@@ -2456,10 +2483,13 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> font;
+  @override
+  @JsonKey()
+  Map<String, dynamic> titleFont;
 
   @override
   String toString() {
-    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, font: $font)';
+    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, font: $font, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -2482,7 +2512,8 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
       {String title,
       String field,
       String deviceId,
-      Map<String, dynamic> font}) = _$DynamicTextWidgetConfigImpl;
+      Map<String, dynamic> font,
+      Map<String, dynamic> titleFont}) = _$DynamicTextWidgetConfigImpl;
   _DynamicTextWidgetConfig._() : super._();
 
   factory _DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -2500,6 +2531,9 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   Map<String, dynamic> get font;
   set font(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get titleFont;
+  set titleFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
