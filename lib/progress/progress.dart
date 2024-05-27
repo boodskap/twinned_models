@@ -17,6 +17,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
 
   factory DeviceFieldPercentageWidgetConfig({
     @Default('') String field,
+    @Default('Percentage') String title,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
@@ -49,6 +50,10 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'deviceId':
+      case 'field':
+      case 'title':
+        return DataType.text;
       case 'titleFont':
       case 'labelFont':
         return DataType.font;
@@ -115,6 +120,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
       case 'deviceId':
+      case 'title':
         return true;
       default:
         return false;
