@@ -61,6 +61,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       case 'bgColor':
       case 'borderColor':
       case 'fillColor':
+      case 'titleBgColor':
         return DataType.numeric;
       case 'borderWidth':
       case 'borderRadius':
@@ -81,6 +82,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       case 'bgColor':
       case 'borderColor':
       case 'fillColor':
+      case 'titleBgColor':
         return HintType.color;
       case 'field':
         return HintType.field;
