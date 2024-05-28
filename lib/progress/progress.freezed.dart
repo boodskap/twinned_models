@@ -39,6 +39,8 @@ mixin _$DeviceFieldPercentageWidgetConfig {
   set borderColor(int value) => throw _privateConstructorUsedError;
   int get fillColor => throw _privateConstructorUsedError;
   set fillColor(int value) => throw _privateConstructorUsedError;
+  int get titleBgColor => throw _privateConstructorUsedError;
+  set titleBgColor(int value) => throw _privateConstructorUsedError;
   double get borderWidth => throw _privateConstructorUsedError;
   set borderWidth(double value) => throw _privateConstructorUsedError;
   double get borderRadius => throw _privateConstructorUsedError;
@@ -73,6 +75,7 @@ abstract class $DeviceFieldPercentageWidgetConfigCopyWith<$Res> {
       int bgColor,
       int borderColor,
       int fillColor,
+      int titleBgColor,
       double borderWidth,
       double borderRadius,
       bool animate,
@@ -102,6 +105,7 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
     Object? bgColor = null,
     Object? borderColor = null,
     Object? fillColor = null,
+    Object? titleBgColor = null,
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? animate = null,
@@ -140,6 +144,10 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
       fillColor: null == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
               as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
@@ -183,6 +191,7 @@ abstract class _$$DeviceFieldPercentageWidgetConfigImplCopyWith<$Res>
       int bgColor,
       int borderColor,
       int fillColor,
+      int titleBgColor,
       double borderWidth,
       double borderRadius,
       bool animate,
@@ -211,6 +220,7 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
     Object? bgColor = null,
     Object? borderColor = null,
     Object? fillColor = null,
+    Object? titleBgColor = null,
     Object? borderWidth = null,
     Object? borderRadius = null,
     Object? animate = null,
@@ -249,6 +259,10 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
       fillColor: null == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
               as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
@@ -297,11 +311,12 @@ class _$DeviceFieldPercentageWidgetConfigImpl
       this.bgColor = 0xFFFFFFFF,
       this.borderColor = 0xFFFFEBEE,
       this.fillColor = 0xFFFFEBEE,
+      this.titleBgColor = 0x00000000,
       this.borderWidth = 1.0,
       this.borderRadius = 12.0,
       this.animate = true,
       this.shape = PercentageWidgetShape.rectangle,
-      this.waveDirection = Axis.horizontal})
+      this.waveDirection = Axis.vertical})
       : super._();
 
   factory _$DeviceFieldPercentageWidgetConfigImpl.fromJson(
@@ -334,6 +349,9 @@ class _$DeviceFieldPercentageWidgetConfigImpl
   int fillColor;
   @override
   @JsonKey()
+  int titleBgColor;
+  @override
+  @JsonKey()
   double borderWidth;
   @override
   @JsonKey()
@@ -350,7 +368,7 @@ class _$DeviceFieldPercentageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldPercentageWidgetConfig(field: $field, title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor, fillColor: $fillColor, borderWidth: $borderWidth, borderRadius: $borderRadius, animate: $animate, shape: $shape, waveDirection: $waveDirection)';
+    return 'DeviceFieldPercentageWidgetConfig(field: $field, title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor, fillColor: $fillColor, titleBgColor: $titleBgColor, borderWidth: $borderWidth, borderRadius: $borderRadius, animate: $animate, shape: $shape, waveDirection: $waveDirection)';
   }
 
   @JsonKey(ignore: true)
@@ -380,6 +398,7 @@ abstract class _DeviceFieldPercentageWidgetConfig
       int bgColor,
       int borderColor,
       int fillColor,
+      int titleBgColor,
       double borderWidth,
       double borderRadius,
       bool animate,
@@ -415,6 +434,9 @@ abstract class _DeviceFieldPercentageWidgetConfig
   @override
   int get fillColor;
   set fillColor(int value);
+  @override
+  int get titleBgColor;
+  set titleBgColor(int value);
   @override
   double get borderWidth;
   set borderWidth(double value);

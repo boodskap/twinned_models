@@ -16,7 +16,7 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
@@ -53,10 +53,11 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
     @Default('Avg') String avgLabel,
     @Default('') String prefixLabel,
     @Default('') String suffixLabel,
-    @Default(0xFFFFFFFF) int minBgColor,
-    @Default(0xFFFFFFFF) int maxBgColor,
-    @Default(0xFFFFFFFF) int avgBgColor,
+    @Default(0x1F000000) int minBgColor,
+    @Default(0x61000000) int maxBgColor,
+    @Default(0x42000000) int avgBgColor,
     @Default(0x00000000) int borderColor,
+    @Default(0x00000000) int titleBgColor,
     @Default(1.0) double borderWidth,
     @Default(10.0) double labelSpacing,
   }) = _DeviceMinMaxAvgWidgetConfig;
@@ -85,6 +86,7 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
       case 'minBgColor':
       case 'maxBgColor':
       case 'avgBgColor':
+      case 'titleBgColor':
       case 'borderColor':
         return DataType.numeric;
       case 'borderWidth':
@@ -102,6 +104,7 @@ class DeviceMinMaxAvgWidgetConfig extends BaseConfig
       case 'maxBgColor':
       case 'avgBgColor':
       case 'borderColor':
+      case 'titleBgColor':
         return HintType.color;
       case 'field':
         return HintType.field;
