@@ -12,6 +12,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
   factory AssetModelGridWidgetConfig({
     @Default([]) List<String> modelIds,
     @Default([]) List<String> fields,
+    @Default([]) List<String> fieldLabels,
     @Default('Data Grid') String title,
     @Default({
       'fontFamily': 'Open Sans',
@@ -30,6 +31,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'modelIds':
       case 'fields':
+      case 'fieldLabels':
         return DataType.listOfTexts;
       case 'title':
         return DataType.text;
@@ -64,6 +66,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return 'Asset Models';
       case 'fields':
         return 'Sensor Fields';
+      case 'fieldLabels':
+        return 'Sensor Field Labels';
       case 'title':
         return 'Title';
       case 'titleFont':
@@ -87,6 +91,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'modelIds':
         return true;
       case 'fields':
+        return true;
+      case 'fieldLabels':
         return true;
       default:
         return false;

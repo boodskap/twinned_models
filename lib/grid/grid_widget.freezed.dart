@@ -25,6 +25,8 @@ mixin _$AssetModelGridWidgetConfig {
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
   List<String> get fields => throw _privateConstructorUsedError;
   set fields(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get fieldLabels => throw _privateConstructorUsedError;
+  set fieldLabels(List<String> value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -47,6 +49,7 @@ abstract class $AssetModelGridWidgetConfigCopyWith<$Res> {
   $Res call(
       {List<String> modelIds,
       List<String> fields,
+      List<String> fieldLabels,
       String title,
       Map<String, dynamic> titleFont});
 }
@@ -67,6 +70,7 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? modelIds = null,
     Object? fields = null,
+    Object? fieldLabels = null,
     Object? title = null,
     Object? titleFont = null,
   }) {
@@ -78,6 +82,10 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
       fields: null == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      fieldLabels: null == fieldLabels
+          ? _value.fieldLabels
+          : fieldLabels // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -103,6 +111,7 @@ abstract class _$$AssetModelGridWidgetConfigImplCopyWith<$Res>
   $Res call(
       {List<String> modelIds,
       List<String> fields,
+      List<String> fieldLabels,
       String title,
       Map<String, dynamic> titleFont});
 }
@@ -122,6 +131,7 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? modelIds = null,
     Object? fields = null,
+    Object? fieldLabels = null,
     Object? title = null,
     Object? titleFont = null,
   }) {
@@ -133,6 +143,10 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
       fields: null == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      fieldLabels: null == fieldLabels
+          ? _value.fieldLabels
+          : fieldLabels // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -152,6 +166,7 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
   _$AssetModelGridWidgetConfigImpl(
       {this.modelIds = const [],
       this.fields = const [],
+      this.fieldLabels = const [],
       this.title = 'Data Grid',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -173,6 +188,9 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
   List<String> fields;
   @override
   @JsonKey()
+  List<String> fieldLabels;
+  @override
+  @JsonKey()
   String title;
   @override
   @JsonKey()
@@ -180,7 +198,7 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
 
   @override
   String toString() {
-    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, title: $title, titleFont: $titleFont)';
+    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, title: $title, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -202,6 +220,7 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   factory _AssetModelGridWidgetConfig(
       {List<String> modelIds,
       List<String> fields,
+      List<String> fieldLabels,
       String title,
       Map<String, dynamic> titleFont}) = _$AssetModelGridWidgetConfigImpl;
   _AssetModelGridWidgetConfig._() : super._();
@@ -215,6 +234,9 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   @override
   List<String> get fields;
   set fields(List<String> value);
+  @override
+  List<String> get fieldLabels;
+  set fieldLabels(List<String> value);
   @override
   String get title;
   set title(String value);
