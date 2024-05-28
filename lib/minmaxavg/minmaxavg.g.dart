@@ -16,7 +16,7 @@ _$DeviceMinMaxAvgWidgetConfigImpl _$$DeviceMinMaxAvgWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
+            'fontColor': 0xFF000000,
             'fontBold': true
           },
       valueFont: json['valueFont'] as Map<String, dynamic>? ??
@@ -52,10 +52,11 @@ _$DeviceMinMaxAvgWidgetConfigImpl _$$DeviceMinMaxAvgWidgetConfigImplFromJson(
       avgLabel: json['avgLabel'] as String? ?? 'Avg',
       prefixLabel: json['prefixLabel'] as String? ?? '',
       suffixLabel: json['suffixLabel'] as String? ?? '',
-      minBgColor: (json['minBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-      maxBgColor: (json['maxBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-      avgBgColor: (json['avgBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      minBgColor: (json['minBgColor'] as num?)?.toInt() ?? 0x1F000000,
+      maxBgColor: (json['maxBgColor'] as num?)?.toInt() ?? 0x61000000,
+      avgBgColor: (json['avgBgColor'] as num?)?.toInt() ?? 0x42000000,
       borderColor: (json['borderColor'] as num?)?.toInt() ?? 0x00000000,
+      titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
       borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1.0,
       labelSpacing: (json['labelSpacing'] as num?)?.toDouble() ?? 10.0,
     );
@@ -80,6 +81,7 @@ Map<String, dynamic> _$$DeviceMinMaxAvgWidgetConfigImplToJson(
       'maxBgColor': instance.maxBgColor,
       'avgBgColor': instance.avgBgColor,
       'borderColor': instance.borderColor,
+      'titleBgColor': instance.titleBgColor,
       'borderWidth': instance.borderWidth,
       'labelSpacing': instance.labelSpacing,
     };

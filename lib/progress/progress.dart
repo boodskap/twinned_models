@@ -36,11 +36,12 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
     @Default(0xFFFFFFFF) int bgColor,
     @Default(0xFFFFEBEE) int borderColor,
     @Default(0xFFFFEBEE) int fillColor,
+    @Default(0x00000000) int titleBgColor,
     @Default(1.0) double borderWidth,
     @Default(12.0) double borderRadius,
     @Default(true) bool animate,
     @Default(PercentageWidgetShape.rectangle) PercentageWidgetShape shape,
-    @Default(Axis.horizontal) Axis waveDirection,
+    @Default(Axis.vertical) Axis waveDirection,
   }) = _DeviceFieldPercentageWidgetConfig;
 
   factory DeviceFieldPercentageWidgetConfig.fromJson(

@@ -30,6 +30,7 @@ _$DeviceFieldPercentageWidgetConfigImpl
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
           fillColor: (json['fillColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
+          titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
           borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1.0,
           borderRadius: (json['borderRadius'] as num?)?.toDouble() ?? 12.0,
           animate: json['animate'] as bool? ?? true,
@@ -38,7 +39,7 @@ _$DeviceFieldPercentageWidgetConfigImpl
               PercentageWidgetShape.rectangle,
           waveDirection:
               $enumDecodeNullable(_$AxisEnumMap, json['waveDirection']) ??
-                  Axis.horizontal,
+                  Axis.vertical,
         );
 
 Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
@@ -52,6 +53,7 @@ Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
       'bgColor': instance.bgColor,
       'borderColor': instance.borderColor,
       'fillColor': instance.fillColor,
+      'titleBgColor': instance.titleBgColor,
       'borderWidth': instance.borderWidth,
       'borderRadius': instance.borderRadius,
       'animate': instance.animate,

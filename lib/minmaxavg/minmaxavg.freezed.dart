@@ -60,6 +60,8 @@ mixin _$DeviceMinMaxAvgWidgetConfig {
   set avgBgColor(int value) => throw _privateConstructorUsedError;
   int get borderColor => throw _privateConstructorUsedError;
   set borderColor(int value) => throw _privateConstructorUsedError;
+  int get titleBgColor => throw _privateConstructorUsedError;
+  set titleBgColor(int value) => throw _privateConstructorUsedError;
   double get borderWidth => throw _privateConstructorUsedError;
   set borderWidth(double value) => throw _privateConstructorUsedError;
   double get labelSpacing => throw _privateConstructorUsedError;
@@ -97,6 +99,7 @@ abstract class $DeviceMinMaxAvgWidgetConfigCopyWith<$Res> {
       int maxBgColor,
       int avgBgColor,
       int borderColor,
+      int titleBgColor,
       double borderWidth,
       double labelSpacing});
 }
@@ -132,6 +135,7 @@ class _$DeviceMinMaxAvgWidgetConfigCopyWithImpl<$Res,
     Object? maxBgColor = null,
     Object? avgBgColor = null,
     Object? borderColor = null,
+    Object? titleBgColor = null,
     Object? borderWidth = null,
     Object? labelSpacing = null,
   }) {
@@ -204,6 +208,10 @@ class _$DeviceMinMaxAvgWidgetConfigCopyWithImpl<$Res,
           ? _value.borderColor
           : borderColor // ignore: cast_nullable_to_non_nullable
               as int,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
@@ -243,6 +251,7 @@ abstract class _$$DeviceMinMaxAvgWidgetConfigImplCopyWith<$Res>
       int maxBgColor,
       int avgBgColor,
       int borderColor,
+      int titleBgColor,
       double borderWidth,
       double labelSpacing});
 }
@@ -277,6 +286,7 @@ class __$$DeviceMinMaxAvgWidgetConfigImplCopyWithImpl<$Res>
     Object? maxBgColor = null,
     Object? avgBgColor = null,
     Object? borderColor = null,
+    Object? titleBgColor = null,
     Object? borderWidth = null,
     Object? labelSpacing = null,
   }) {
@@ -349,6 +359,10 @@ class __$$DeviceMinMaxAvgWidgetConfigImplCopyWithImpl<$Res>
           ? _value.borderColor
           : borderColor // ignore: cast_nullable_to_non_nullable
               as int,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
@@ -371,7 +385,7 @@ class _$DeviceMinMaxAvgWidgetConfigImpl extends _DeviceMinMaxAvgWidgetConfig {
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
@@ -403,10 +417,11 @@ class _$DeviceMinMaxAvgWidgetConfigImpl extends _DeviceMinMaxAvgWidgetConfig {
       this.avgLabel = 'Avg',
       this.prefixLabel = '',
       this.suffixLabel = '',
-      this.minBgColor = 0xFFFFFFFF,
-      this.maxBgColor = 0xFFFFFFFF,
-      this.avgBgColor = 0xFFFFFFFF,
+      this.minBgColor = 0x1F000000,
+      this.maxBgColor = 0x61000000,
+      this.avgBgColor = 0x42000000,
       this.borderColor = 0x00000000,
+      this.titleBgColor = 0x00000000,
       this.borderWidth = 1.0,
       this.labelSpacing = 10.0})
       : super._();
@@ -468,6 +483,9 @@ class _$DeviceMinMaxAvgWidgetConfigImpl extends _DeviceMinMaxAvgWidgetConfig {
   int borderColor;
   @override
   @JsonKey()
+  int titleBgColor;
+  @override
+  @JsonKey()
   double borderWidth;
   @override
   @JsonKey()
@@ -475,7 +493,7 @@ class _$DeviceMinMaxAvgWidgetConfigImpl extends _DeviceMinMaxAvgWidgetConfig {
 
   @override
   String toString() {
-    return 'DeviceMinMaxAvgWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, valueFont: $valueFont, prefixFont: $prefixFont, suffixFont: $suffixFont, labelFont: $labelFont, minLabel: $minLabel, maxLabel: $maxLabel, avgLabel: $avgLabel, prefixLabel: $prefixLabel, suffixLabel: $suffixLabel, minBgColor: $minBgColor, maxBgColor: $maxBgColor, avgBgColor: $avgBgColor, borderColor: $borderColor, borderWidth: $borderWidth, labelSpacing: $labelSpacing)';
+    return 'DeviceMinMaxAvgWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, valueFont: $valueFont, prefixFont: $prefixFont, suffixFont: $suffixFont, labelFont: $labelFont, minLabel: $minLabel, maxLabel: $maxLabel, avgLabel: $avgLabel, prefixLabel: $prefixLabel, suffixLabel: $suffixLabel, minBgColor: $minBgColor, maxBgColor: $maxBgColor, avgBgColor: $avgBgColor, borderColor: $borderColor, titleBgColor: $titleBgColor, borderWidth: $borderWidth, labelSpacing: $labelSpacing)';
   }
 
   @JsonKey(ignore: true)
@@ -513,6 +531,7 @@ abstract class _DeviceMinMaxAvgWidgetConfig
       int maxBgColor,
       int avgBgColor,
       int borderColor,
+      int titleBgColor,
       double borderWidth,
       double labelSpacing}) = _$DeviceMinMaxAvgWidgetConfigImpl;
   _DeviceMinMaxAvgWidgetConfig._() : super._();
@@ -571,6 +590,9 @@ abstract class _DeviceMinMaxAvgWidgetConfig
   @override
   int get borderColor;
   set borderColor(int value);
+  @override
+  int get titleBgColor;
+  set titleBgColor(int value);
   @override
   double get borderWidth;
   set borderWidth(double value);
