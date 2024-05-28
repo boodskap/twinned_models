@@ -299,13 +299,13 @@ class _$DeviceFieldPercentageWidgetConfigImpl
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.bgColor = 0xFFFFFFFF,
