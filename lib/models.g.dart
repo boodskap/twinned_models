@@ -325,35 +325,35 @@ _$TimeStampWidgetConfigImpl _$$TimeStampWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': false
           },
       yearFont: json['yearFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': false
           },
       monthFont: json['monthFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': false
           },
       dateFont: json['dateFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': false
           },
       timeFont: json['timeFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': true
           },
     );
