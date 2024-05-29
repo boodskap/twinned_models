@@ -60,50 +60,50 @@ Map<String, dynamic> _$$AssetModelGridWidgetConfigImplToJson(
       'headerFont': instance.headerFont,
     };
 
-_$DeviceDataGridWidgetConfigImpl _$$DeviceDataGridWidgetConfigImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DeviceDataGridWidgetConfigImpl(
-      title: json['title'] as String? ?? 'Data Grid',
-      titleFont: json['titleFont'] as Map<String, dynamic>? ??
-          const {
-            'fontFamily': 'Open Sans',
-            'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
-            'fontBold': true
-          },
-      labelFont: json['labelFont'] as Map<String, dynamic>? ??
-          const {
-            'fontFamily': 'Open Sans',
-            'fontSize': 12,
-            'fontColor': 0xFFFFFFFF,
-            'fontBold': false
-          },
-      modelIds: (json['modelIds'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      sortField: json['sortField'] as String? ?? '',
-      sortType: $enumDecodeNullable(_$SortTypeEnumMap, json['sortType']) ??
-          SortType.asc,
-      pageSize: (json['pageSize'] as num?)?.toInt() ?? 10,
-      showSearch: json['showSearch'] as bool? ?? true,
-      showFilter: json['showFilter'] as bool? ?? true,
-      showTimestamp: json['showTimestamp'] as bool? ?? true,
-      showAsset: json['showAsset'] as bool? ?? true,
-      showDevice: json['showDevice'] as bool? ?? true,
-      showPremise: json['showPremise'] as bool? ?? true,
-      showFacility: json['showFacility'] as bool? ?? true,
-      showFloor: json['showFloor'] as bool? ?? true,
-      showData: json['showData'] as bool? ?? true,
-      oldSearchVersion: json['oldSearchVersion'] as bool? ?? false,
-      filterFields: (json['filterFields'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-    );
+_$AssetModelDataGridWidgetConfigImpl
+    _$$AssetModelDataGridWidgetConfigImplFromJson(Map<String, dynamic> json) =>
+        _$AssetModelDataGridWidgetConfigImpl(
+          title: json['title'] as String? ?? 'Data Grid',
+          titleFont: json['titleFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 30,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': true
+              },
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 12,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': false
+              },
+          modelIds: (json['modelIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          sortField: json['sortField'] as String? ?? '',
+          sortType: $enumDecodeNullable(_$SortTypeEnumMap, json['sortType']) ??
+              SortType.asc,
+          pageSize: (json['pageSize'] as num?)?.toInt() ?? 10,
+          showSearch: json['showSearch'] as bool? ?? true,
+          showFilter: json['showFilter'] as bool? ?? true,
+          showTimestamp: json['showTimestamp'] as bool? ?? true,
+          showAsset: json['showAsset'] as bool? ?? true,
+          showDevice: json['showDevice'] as bool? ?? true,
+          showPremise: json['showPremise'] as bool? ?? true,
+          showFacility: json['showFacility'] as bool? ?? true,
+          showFloor: json['showFloor'] as bool? ?? true,
+          showData: json['showData'] as bool? ?? true,
+          oldSearchVersion: json['oldSearchVersion'] as bool? ?? false,
+          filterFields: (json['filterFields'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+        );
 
-Map<String, dynamic> _$$DeviceDataGridWidgetConfigImplToJson(
-        _$DeviceDataGridWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$AssetModelDataGridWidgetConfigImplToJson(
+        _$AssetModelDataGridWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
