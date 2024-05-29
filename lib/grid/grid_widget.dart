@@ -13,6 +13,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
     @Default([]) List<String> modelIds,
     @Default([]) List<String> fields,
     @Default([]) List<String> fieldLabels,
+    @Default([]) List<String> sortingFields,
     @Default('Data Grid') String title,
     @Default(10) int pageSize,
     @Default({
@@ -22,6 +23,16 @@ class AssetModelGridWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default(0xFFFFFFFF) int headerBgColor,
+    @Default(0xFFFFFFFF) int iconColor,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 30,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> headerFont,
+   
   }) = _AssetModelGridWidgetConfig;
 
   factory AssetModelGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -33,12 +44,16 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'modelIds':
       case 'fields':
       case 'fieldLabels':
+      case 'sortingFields':
         return DataType.listOfTexts;
       case 'title':
         return DataType.text;
       case 'titleFont':
+      case 'headerFont':
         return DataType.font;
       case 'pageSize':
+      case 'headerBgColor':
+      case 'iconColor':
         return DataType.numeric;
       default:
         return DataType.none;
@@ -50,8 +65,12 @@ class AssetModelGridWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'modelIds':
         return HintType.assetModelId;
+         case 'sortingFields':
       case 'fields':
         return HintType.field;
+      case 'headerBgColor':
+      case 'iconColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -77,6 +96,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return 'Title Font';
       case 'pageSize':
         return 'Page Size';
+      case 'sortingFields':
+        return 'Sorting Fields';
       default:
         return parameter;
     }
@@ -98,6 +119,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'fields':
         return true;
       case 'fieldLabels':
+        return true;
+      case 'pageSize':
         return true;
       default:
         return false;

@@ -911,35 +911,35 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': false
     })
     Map<String, dynamic> meridiemFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': false
     })
     Map<String, dynamic> yearFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': false
     })
     Map<String, dynamic> monthFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': false
     })
     Map<String, dynamic> dateFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': true
     })
     Map<String, dynamic> timeFont,
