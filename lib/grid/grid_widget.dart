@@ -32,7 +32,6 @@ class AssetModelGridWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> headerFont,
-   
   }) = _AssetModelGridWidgetConfig;
 
   factory AssetModelGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -65,7 +64,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'modelIds':
         return HintType.assetModelId;
-         case 'sortingFields':
+      case 'sortingFields':
       case 'fields':
         return HintType.field;
       case 'headerBgColor':
@@ -134,11 +133,11 @@ class AssetModelGridWidgetConfig extends BaseConfig
 }
 
 @unfreezed
-class DeviceDataGridWidgetConfig extends BaseConfig
-    with _$DeviceDataGridWidgetConfig {
-  DeviceDataGridWidgetConfig._();
+class AssetModelDataGridWidgetConfig extends BaseConfig
+    with _$AssetModelDataGridWidgetConfig {
+  AssetModelDataGridWidgetConfig._();
 
-  factory DeviceDataGridWidgetConfig({
+  factory AssetModelDataGridWidgetConfig({
     @Default('Data Grid') String title,
     @Default({
       'fontFamily': 'Open Sans',
@@ -169,10 +168,10 @@ class DeviceDataGridWidgetConfig extends BaseConfig
     @Default(true) bool showData,
     @Default(false) bool oldSearchVersion,
     @Default([]) List<String> filterFields,
-  }) = _DeviceDataGridWidgetConfig;
+  }) = _AssetModelDataGridWidgetConfig;
 
-  factory DeviceDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDataGridWidgetConfigFromJson(json);
+  factory AssetModelDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$AssetModelDataGridWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
