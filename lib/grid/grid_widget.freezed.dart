@@ -29,6 +29,8 @@ mixin _$AssetModelGridWidgetConfig {
   set fieldLabels(List<String> value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
+  int get pageSize => throw _privateConstructorUsedError;
+  set pageSize(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -51,6 +53,7 @@ abstract class $AssetModelGridWidgetConfigCopyWith<$Res> {
       List<String> fields,
       List<String> fieldLabels,
       String title,
+      int pageSize,
       Map<String, dynamic> titleFont});
 }
 
@@ -72,6 +75,7 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
     Object? fields = null,
     Object? fieldLabels = null,
     Object? title = null,
+    Object? pageSize = null,
     Object? titleFont = null,
   }) {
     return _then(_value.copyWith(
@@ -91,6 +95,10 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -113,6 +121,7 @@ abstract class _$$AssetModelGridWidgetConfigImplCopyWith<$Res>
       List<String> fields,
       List<String> fieldLabels,
       String title,
+      int pageSize,
       Map<String, dynamic> titleFont});
 }
 
@@ -133,6 +142,7 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
     Object? fields = null,
     Object? fieldLabels = null,
     Object? title = null,
+    Object? pageSize = null,
     Object? titleFont = null,
   }) {
     return _then(_$AssetModelGridWidgetConfigImpl(
@@ -152,6 +162,10 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -168,6 +182,7 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
       this.fields = const [],
       this.fieldLabels = const [],
       this.title = 'Data Grid',
+      this.pageSize = 10,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
@@ -194,11 +209,14 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
   String title;
   @override
   @JsonKey()
+  int pageSize;
+  @override
+  @JsonKey()
   Map<String, dynamic> titleFont;
 
   @override
   String toString() {
-    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, title: $title, titleFont: $titleFont)';
+    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, title: $title, pageSize: $pageSize, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -222,6 +240,7 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
       List<String> fields,
       List<String> fieldLabels,
       String title,
+      int pageSize,
       Map<String, dynamic> titleFont}) = _$AssetModelGridWidgetConfigImpl;
   _AssetModelGridWidgetConfig._() : super._();
 
@@ -240,6 +259,9 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   @override
   String get title;
   set title(String value);
+  @override
+  int get pageSize;
+  set pageSize(int value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);

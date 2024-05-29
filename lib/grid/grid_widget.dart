@@ -14,6 +14,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
     @Default([]) List<String> fields,
     @Default([]) List<String> fieldLabels,
     @Default('Data Grid') String title,
+    @Default(10) int pageSize,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -37,6 +38,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
         return DataType.font;
+         case 'pageSize':
+        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -72,6 +75,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return 'Title';
       case 'titleFont':
         return 'Title Font';
+        case 'pageSize':
+        return 'Page Size';
       default:
         return parameter;
     }
