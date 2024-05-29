@@ -22,6 +22,7 @@ _$AssetModelGridWidgetConfigImpl _$$AssetModelGridWidgetConfigImplFromJson(
               .toList() ??
           const [],
       title: json['title'] as String? ?? 'Data Grid',
+      pageSize: (json['pageSize'] as num?)?.toInt() ?? 10,
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -38,5 +39,6 @@ Map<String, dynamic> _$$AssetModelGridWidgetConfigImplToJson(
       'fields': instance.fields,
       'fieldLabels': instance.fieldLabels,
       'title': instance.title,
+      'pageSize': instance.pageSize,
       'titleFont': instance.titleFont,
     };
