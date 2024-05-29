@@ -2972,31 +2972,31 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
       this.meridiemFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': false
       },
       this.yearFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': false
       },
       this.monthFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': false
       },
       this.dateFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': false
       },
       this.timeFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': true
       }})
       : super._();
