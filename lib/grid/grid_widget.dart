@@ -24,7 +24,6 @@ class AssetModelGridWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> titleFont,
     @Default(0xFFFFFFFF) int headerBgColor,
-    @Default(0xFFFFFFFF) int rowBgColor,
     @Default(0xFFFFFFFF) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
@@ -33,13 +32,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> headerFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 30,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> rowFont,
+   
   }) = _AssetModelGridWidgetConfig;
 
   factory AssetModelGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -57,11 +50,9 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'headerFont':
-      case 'rowFont':
         return DataType.font;
       case 'pageSize':
       case 'headerBgColor':
-      case 'rowBgColor':
       case 'iconColor':
         return DataType.numeric;
       default:
@@ -78,7 +69,6 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'fields':
         return HintType.field;
       case 'headerBgColor':
-      case 'rowBgColor':
       case 'iconColor':
         return HintType.color;
       default:
