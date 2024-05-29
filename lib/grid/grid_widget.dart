@@ -64,8 +64,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'modelIds':
-      case 'sortingFields':
         return HintType.assetModelId;
+         case 'sortingFields':
       case 'fields':
         return HintType.field;
       case 'headerBgColor':
