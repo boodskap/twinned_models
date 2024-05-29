@@ -14,10 +14,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
-          ranges: (json['ranges'] as List<dynamic>?)
-                  ?.map((e) => Range.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const [],
+          ranges: json['ranges'] as List<dynamic>? ?? const [],
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0x1F000000,
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Radial Axes Widget',
