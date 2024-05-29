@@ -2786,3 +2786,303 @@ abstract class _MultipleDeviceModelChartWidgetConfig
           _$MultipleDeviceModelChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+TimeStampWidgetConfig _$TimeStampWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _TimeStampWidgetConfig.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TimeStampWidgetConfig {
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
+  String get deviceId => throw _privateConstructorUsedError;
+  set deviceId(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get meridiemFont => throw _privateConstructorUsedError;
+  set meridiemFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get yearFont => throw _privateConstructorUsedError;
+  set yearFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get monthFont => throw _privateConstructorUsedError;
+  set monthFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get dateFont => throw _privateConstructorUsedError;
+  set dateFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get timeFont => throw _privateConstructorUsedError;
+  set timeFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TimeStampWidgetConfigCopyWith<TimeStampWidgetConfig> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TimeStampWidgetConfigCopyWith<$Res> {
+  factory $TimeStampWidgetConfigCopyWith(TimeStampWidgetConfig value,
+          $Res Function(TimeStampWidgetConfig) then) =
+      _$TimeStampWidgetConfigCopyWithImpl<$Res, TimeStampWidgetConfig>;
+  @useResult
+  $Res call(
+      {String field,
+      String deviceId,
+      Map<String, dynamic> meridiemFont,
+      Map<String, dynamic> yearFont,
+      Map<String, dynamic> monthFont,
+      Map<String, dynamic> dateFont,
+      Map<String, dynamic> timeFont});
+}
+
+/// @nodoc
+class _$TimeStampWidgetConfigCopyWithImpl<$Res,
+        $Val extends TimeStampWidgetConfig>
+    implements $TimeStampWidgetConfigCopyWith<$Res> {
+  _$TimeStampWidgetConfigCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+    Object? meridiemFont = null,
+    Object? yearFont = null,
+    Object? monthFont = null,
+    Object? dateFont = null,
+    Object? timeFont = null,
+  }) {
+    return _then(_value.copyWith(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      meridiemFont: null == meridiemFont
+          ? _value.meridiemFont
+          : meridiemFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      yearFont: null == yearFont
+          ? _value.yearFont
+          : yearFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      monthFont: null == monthFont
+          ? _value.monthFont
+          : monthFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      dateFont: null == dateFont
+          ? _value.dateFont
+          : dateFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      timeFont: null == timeFont
+          ? _value.timeFont
+          : timeFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TimeStampWidgetConfigImplCopyWith<$Res>
+    implements $TimeStampWidgetConfigCopyWith<$Res> {
+  factory _$$TimeStampWidgetConfigImplCopyWith(
+          _$TimeStampWidgetConfigImpl value,
+          $Res Function(_$TimeStampWidgetConfigImpl) then) =
+      __$$TimeStampWidgetConfigImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String field,
+      String deviceId,
+      Map<String, dynamic> meridiemFont,
+      Map<String, dynamic> yearFont,
+      Map<String, dynamic> monthFont,
+      Map<String, dynamic> dateFont,
+      Map<String, dynamic> timeFont});
+}
+
+/// @nodoc
+class __$$TimeStampWidgetConfigImplCopyWithImpl<$Res>
+    extends _$TimeStampWidgetConfigCopyWithImpl<$Res,
+        _$TimeStampWidgetConfigImpl>
+    implements _$$TimeStampWidgetConfigImplCopyWith<$Res> {
+  __$$TimeStampWidgetConfigImplCopyWithImpl(_$TimeStampWidgetConfigImpl _value,
+      $Res Function(_$TimeStampWidgetConfigImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? field = null,
+    Object? deviceId = null,
+    Object? meridiemFont = null,
+    Object? yearFont = null,
+    Object? monthFont = null,
+    Object? dateFont = null,
+    Object? timeFont = null,
+  }) {
+    return _then(_$TimeStampWidgetConfigImpl(
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      deviceId: null == deviceId
+          ? _value.deviceId
+          : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      meridiemFont: null == meridiemFont
+          ? _value.meridiemFont
+          : meridiemFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      yearFont: null == yearFont
+          ? _value.yearFont
+          : yearFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      monthFont: null == monthFont
+          ? _value.monthFont
+          : monthFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      dateFont: null == dateFont
+          ? _value.dateFont
+          : dateFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      timeFont: null == timeFont
+          ? _value.timeFont
+          : timeFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
+  _$TimeStampWidgetConfigImpl(
+      {this.field = '',
+      this.deviceId = '',
+      this.meridiemFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 14,
+        'fontColor': 0x000000,
+        'fontBold': false
+      },
+      this.yearFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0x000000,
+        'fontBold': false
+      },
+      this.monthFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0x000000,
+        'fontBold': false
+      },
+      this.dateFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0x000000,
+        'fontBold': false
+      },
+      this.timeFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0x000000,
+        'fontBold': true
+      }})
+      : super._();
+
+  factory _$TimeStampWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TimeStampWidgetConfigImplFromJson(json);
+
+  @override
+  @JsonKey()
+  String field;
+  @override
+  @JsonKey()
+  String deviceId;
+  @override
+  @JsonKey()
+  Map<String, dynamic> meridiemFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> yearFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> monthFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> dateFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> timeFont;
+
+  @override
+  String toString() {
+    return 'TimeStampWidgetConfig(field: $field, deviceId: $deviceId, meridiemFont: $meridiemFont, yearFont: $yearFont, monthFont: $monthFont, dateFont: $dateFont, timeFont: $timeFont)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TimeStampWidgetConfigImplCopyWith<_$TimeStampWidgetConfigImpl>
+      get copyWith => __$$TimeStampWidgetConfigImplCopyWithImpl<
+          _$TimeStampWidgetConfigImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TimeStampWidgetConfigImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TimeStampWidgetConfig extends TimeStampWidgetConfig {
+  factory _TimeStampWidgetConfig(
+      {String field,
+      String deviceId,
+      Map<String, dynamic> meridiemFont,
+      Map<String, dynamic> yearFont,
+      Map<String, dynamic> monthFont,
+      Map<String, dynamic> dateFont,
+      Map<String, dynamic> timeFont}) = _$TimeStampWidgetConfigImpl;
+  _TimeStampWidgetConfig._() : super._();
+
+  factory _TimeStampWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$TimeStampWidgetConfigImpl.fromJson;
+
+  @override
+  String get field;
+  set field(String value);
+  @override
+  String get deviceId;
+  set deviceId(String value);
+  @override
+  Map<String, dynamic> get meridiemFont;
+  set meridiemFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get yearFont;
+  set yearFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get monthFont;
+  set monthFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get dateFont;
+  set dateFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get timeFont;
+  set timeFont(Map<String, dynamic> value);
+  @override
+  @JsonKey(ignore: true)
+  _$$TimeStampWidgetConfigImplCopyWith<_$TimeStampWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
