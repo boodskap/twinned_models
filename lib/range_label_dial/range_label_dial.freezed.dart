@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-DeviceFieldRangeLabelDialWidgetComfig
-    _$DeviceFieldRangeLabelDialWidgetComfigFromJson(Map<String, dynamic> json) {
-  return _DeviceFieldRangeLabelDialWidgetComfig.fromJson(json);
+DeviceFieldRangeLabelDialWidgetConfig
+    _$DeviceFieldRangeLabelDialWidgetConfigFromJson(Map<String, dynamic> json) {
+  return _DeviceFieldRangeLabelDialWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DeviceFieldRangeLabelDialWidgetComfig {
+mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
@@ -35,18 +35,18 @@ mixin _$DeviceFieldRangeLabelDialWidgetComfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceFieldRangeLabelDialWidgetComfigCopyWith<
-          DeviceFieldRangeLabelDialWidgetComfig>
+  $DeviceFieldRangeLabelDialWidgetConfigCopyWith<
+          DeviceFieldRangeLabelDialWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeviceFieldRangeLabelDialWidgetComfigCopyWith<$Res> {
-  factory $DeviceFieldRangeLabelDialWidgetComfigCopyWith(
-          DeviceFieldRangeLabelDialWidgetComfig value,
-          $Res Function(DeviceFieldRangeLabelDialWidgetComfig) then) =
-      _$DeviceFieldRangeLabelDialWidgetComfigCopyWithImpl<$Res,
-          DeviceFieldRangeLabelDialWidgetComfig>;
+abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
+  factory $DeviceFieldRangeLabelDialWidgetConfigCopyWith(
+          DeviceFieldRangeLabelDialWidgetConfig value,
+          $Res Function(DeviceFieldRangeLabelDialWidgetConfig) then) =
+      _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
+          DeviceFieldRangeLabelDialWidgetConfig>;
   @useResult
   $Res call(
       {String field,
@@ -57,10 +57,10 @@ abstract class $DeviceFieldRangeLabelDialWidgetComfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceFieldRangeLabelDialWidgetComfigCopyWithImpl<$Res,
-        $Val extends DeviceFieldRangeLabelDialWidgetComfig>
-    implements $DeviceFieldRangeLabelDialWidgetComfigCopyWith<$Res> {
-  _$DeviceFieldRangeLabelDialWidgetComfigCopyWithImpl(this._value, this._then);
+class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceFieldRangeLabelDialWidgetConfig>
+    implements $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
+  _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -102,12 +102,12 @@ class _$DeviceFieldRangeLabelDialWidgetComfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith<$Res>
-    implements $DeviceFieldRangeLabelDialWidgetComfigCopyWith<$Res> {
-  factory _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith(
-          _$DeviceFieldRangeLabelDialWidgetComfigImpl value,
-          $Res Function(_$DeviceFieldRangeLabelDialWidgetComfigImpl) then) =
-      __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl<$Res>;
+abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
+    implements $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith(
+          _$DeviceFieldRangeLabelDialWidgetConfigImpl value,
+          $Res Function(_$DeviceFieldRangeLabelDialWidgetConfigImpl) then) =
+      __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,13 +119,13 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl<$Res>
-    extends _$DeviceFieldRangeLabelDialWidgetComfigCopyWithImpl<$Res,
-        _$DeviceFieldRangeLabelDialWidgetComfigImpl>
-    implements _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith<$Res> {
-  __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl(
-      _$DeviceFieldRangeLabelDialWidgetComfigImpl _value,
-      $Res Function(_$DeviceFieldRangeLabelDialWidgetComfigImpl) _then)
+class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
+        _$DeviceFieldRangeLabelDialWidgetConfigImpl>
+    implements _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl(
+      _$DeviceFieldRangeLabelDialWidgetConfigImpl _value,
+      $Res Function(_$DeviceFieldRangeLabelDialWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? titleFont = null,
   }) {
-    return _then(_$DeviceFieldRangeLabelDialWidgetComfigImpl(
+    return _then(_$DeviceFieldRangeLabelDialWidgetConfigImpl(
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -164,9 +164,9 @@ class __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DeviceFieldRangeLabelDialWidgetComfigImpl
-    extends _DeviceFieldRangeLabelDialWidgetComfig {
-  _$DeviceFieldRangeLabelDialWidgetComfigImpl(
+class _$DeviceFieldRangeLabelDialWidgetConfigImpl
+    extends _DeviceFieldRangeLabelDialWidgetConfig {
+  _$DeviceFieldRangeLabelDialWidgetConfigImpl(
       {this.field = '',
       this.deviceId = '',
       this.ranges = '[]',
@@ -179,9 +179,9 @@ class _$DeviceFieldRangeLabelDialWidgetComfigImpl
       }})
       : super._();
 
-  factory _$DeviceFieldRangeLabelDialWidgetComfigImpl.fromJson(
+  factory _$DeviceFieldRangeLabelDialWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$DeviceFieldRangeLabelDialWidgetComfigImplFromJson(json);
+      _$$DeviceFieldRangeLabelDialWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -201,39 +201,39 @@ class _$DeviceFieldRangeLabelDialWidgetComfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldRangeLabelDialWidgetComfig(field: $field, deviceId: $deviceId, ranges: $ranges, title: $title, titleFont: $titleFont)';
+    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, ranges: $ranges, title: $title, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith<
-          _$DeviceFieldRangeLabelDialWidgetComfigImpl>
-      get copyWith => __$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWithImpl<
-          _$DeviceFieldRangeLabelDialWidgetComfigImpl>(this, _$identity);
+  _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<
+          _$DeviceFieldRangeLabelDialWidgetConfigImpl>
+      get copyWith => __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<
+          _$DeviceFieldRangeLabelDialWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeviceFieldRangeLabelDialWidgetComfigImplToJson(
+    return _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _DeviceFieldRangeLabelDialWidgetComfig
-    extends DeviceFieldRangeLabelDialWidgetComfig {
-  factory _DeviceFieldRangeLabelDialWidgetComfig(
+abstract class _DeviceFieldRangeLabelDialWidgetConfig
+    extends DeviceFieldRangeLabelDialWidgetConfig {
+  factory _DeviceFieldRangeLabelDialWidgetConfig(
           {String field,
           String deviceId,
           String ranges,
           String title,
           Map<String, dynamic> titleFont}) =
-      _$DeviceFieldRangeLabelDialWidgetComfigImpl;
-  _DeviceFieldRangeLabelDialWidgetComfig._() : super._();
+      _$DeviceFieldRangeLabelDialWidgetConfigImpl;
+  _DeviceFieldRangeLabelDialWidgetConfig._() : super._();
 
-  factory _DeviceFieldRangeLabelDialWidgetComfig.fromJson(
+  factory _DeviceFieldRangeLabelDialWidgetConfig.fromJson(
           Map<String, dynamic> json) =
-      _$DeviceFieldRangeLabelDialWidgetComfigImpl.fromJson;
+      _$DeviceFieldRangeLabelDialWidgetConfigImpl.fromJson;
 
   @override
   String get field;
@@ -252,7 +252,7 @@ abstract class _DeviceFieldRangeLabelDialWidgetComfig
   set titleFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
-  _$$DeviceFieldRangeLabelDialWidgetComfigImplCopyWith<
-          _$DeviceFieldRangeLabelDialWidgetComfigImpl>
+  _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<
+          _$DeviceFieldRangeLabelDialWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,10 +6,10 @@ part of 'range_label_dial.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeviceFieldRangeLabelDialWidgetComfigImpl
-    _$$DeviceFieldRangeLabelDialWidgetComfigImplFromJson(
+_$DeviceFieldRangeLabelDialWidgetConfigImpl
+    _$$DeviceFieldRangeLabelDialWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
-        _$DeviceFieldRangeLabelDialWidgetComfigImpl(
+        _$DeviceFieldRangeLabelDialWidgetConfigImpl(
           field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
           ranges: json['ranges'] as String? ?? '[]',
@@ -23,8 +23,8 @@ _$DeviceFieldRangeLabelDialWidgetComfigImpl
               },
         );
 
-Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetComfigImplToJson(
-        _$DeviceFieldRangeLabelDialWidgetComfigImpl instance) =>
+Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
+        _$DeviceFieldRangeLabelDialWidgetConfigImpl instance) =>
     <String, dynamic>{
       'field': instance.field,
       'deviceId': instance.deviceId,

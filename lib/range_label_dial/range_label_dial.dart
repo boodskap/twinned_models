@@ -5,11 +5,11 @@ part 'range_label_dial.freezed.dart';
 part 'range_label_dial.g.dart';
 
 @unfreezed
-class DeviceFieldRangeLabelDialWidgetComfig extends BaseConfig
-    with _$DeviceFieldRangeLabelDialWidgetComfig {
-  DeviceFieldRangeLabelDialWidgetComfig._();
+class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
+    with _$DeviceFieldRangeLabelDialWidgetConfig {
+  DeviceFieldRangeLabelDialWidgetConfig._();
 
-  factory DeviceFieldRangeLabelDialWidgetComfig({
+  factory DeviceFieldRangeLabelDialWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
     @Default('[]') String ranges,
@@ -21,11 +21,11 @@ class DeviceFieldRangeLabelDialWidgetComfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-  }) = _DeviceFieldRangeLabelDialWidgetComfig;
+  }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
-  factory DeviceFieldRangeLabelDialWidgetComfig.fromJson(
+  factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$DeviceFieldRangeLabelDialWidgetComfigFromJson(json);
+      _$DeviceFieldRangeLabelDialWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
