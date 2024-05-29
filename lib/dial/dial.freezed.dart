@@ -181,7 +181,12 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
     extends _DeviceMultiFieldDialWidgetConfig {
   _$DeviceMultiFieldDialWidgetConfigImpl(
       {this.field = const [],
-      this.ranges = const [],
+      this.ranges = const [
+        {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+        {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+        {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+        {'from': 76, 'color': 0xFFFFFFFF}
+      ],
       this.bgColor = 0x1F000000,
       this.deviceId = '',
       this.title = 'Radial Axes Widget',
