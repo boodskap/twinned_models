@@ -17,14 +17,14 @@ _$DeviceFieldPercentageWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 30,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 20,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
