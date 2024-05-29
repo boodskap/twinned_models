@@ -168,6 +168,7 @@ class AssetModelDataGridWidgetConfig extends BaseConfig
     @Default(true) bool showData,
     @Default(false) bool oldSearchVersion,
     @Default([]) List<String> filterFields,
+    @Default(200) int dataWidht,
   }) = _AssetModelDataGridWidgetConfig;
 
   factory AssetModelDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -186,6 +187,7 @@ class AssetModelDataGridWidgetConfig extends BaseConfig
       case 'labelFont':
         return DataType.font;
       case 'pageSize':
+      case 'dataWidth':
         return DataType.numeric;
       case 'showSearch':
       case 'showFilter':
@@ -267,6 +269,8 @@ class AssetModelDataGridWidgetConfig extends BaseConfig
         return 'Sort';
       case 'oldSearchVersion':
         return 'Old Search Version';
+      case 'dataWidth':
+        return 'Data Width';
       default:
         return parameter;
     }

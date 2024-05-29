@@ -100,6 +100,7 @@ _$AssetModelDataGridWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
+          dataWidht: (json['dataWidht'] as num?)?.toInt() ?? 200,
         );
 
 Map<String, dynamic> _$$AssetModelDataGridWidgetConfigImplToJson(
@@ -123,6 +124,7 @@ Map<String, dynamic> _$$AssetModelDataGridWidgetConfigImplToJson(
       'showData': instance.showData,
       'oldSearchVersion': instance.oldSearchVersion,
       'filterFields': instance.filterFields,
+      'dataWidht': instance.dataWidht,
     };
 
 const _$SortTypeEnumMap = {
