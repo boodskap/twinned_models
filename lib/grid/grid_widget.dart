@@ -168,7 +168,7 @@ class AssetModelDataGridWidgetConfig extends BaseConfig
     @Default(true) bool showData,
     @Default(false) bool oldSearchVersion,
     @Default([]) List<String> filterFields,
-    @Default(200) int dataWidht,
+    @Default(200) int dataWidth,
   }) = _AssetModelDataGridWidgetConfig;
 
   factory AssetModelDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =>
