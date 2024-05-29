@@ -283,6 +283,9 @@ mixin _$DeviceDataGridWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
   String get sortField => throw _privateConstructorUsedError;
@@ -309,6 +312,8 @@ mixin _$DeviceDataGridWidgetConfig {
   set showFloor(bool value) => throw _privateConstructorUsedError;
   bool get showData => throw _privateConstructorUsedError;
   set showData(bool value) => throw _privateConstructorUsedError;
+  bool get oldSearchVersion => throw _privateConstructorUsedError;
+  set oldSearchVersion(bool value) => throw _privateConstructorUsedError;
   List<String> get filterFields => throw _privateConstructorUsedError;
   set filterFields(List<String> value) => throw _privateConstructorUsedError;
 
@@ -328,6 +333,7 @@ abstract class $DeviceDataGridWidgetConfigCopyWith<$Res> {
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -341,6 +347,7 @@ abstract class $DeviceDataGridWidgetConfigCopyWith<$Res> {
       bool showFacility,
       bool showFloor,
       bool showData,
+      bool oldSearchVersion,
       List<String> filterFields});
 }
 
@@ -360,6 +367,7 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? labelFont = null,
     Object? modelIds = null,
     Object? sortField = null,
     Object? sortType = null,
@@ -373,6 +381,7 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
     Object? showFacility = null,
     Object? showFloor = null,
     Object? showData = null,
+    Object? oldSearchVersion = null,
     Object? filterFields = null,
   }) {
     return _then(_value.copyWith(
@@ -383,6 +392,10 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       modelIds: null == modelIds
           ? _value.modelIds
@@ -435,6 +448,10 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
       showData: null == showData
           ? _value.showData
           : showData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      oldSearchVersion: null == oldSearchVersion
+          ? _value.oldSearchVersion
+          : oldSearchVersion // ignore: cast_nullable_to_non_nullable
               as bool,
       filterFields: null == filterFields
           ? _value.filterFields
@@ -456,6 +473,7 @@ abstract class _$$DeviceDataGridWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -469,6 +487,7 @@ abstract class _$$DeviceDataGridWidgetConfigImplCopyWith<$Res>
       bool showFacility,
       bool showFloor,
       bool showData,
+      bool oldSearchVersion,
       List<String> filterFields});
 }
 
@@ -487,6 +506,7 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? labelFont = null,
     Object? modelIds = null,
     Object? sortField = null,
     Object? sortType = null,
@@ -500,6 +520,7 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
     Object? showFacility = null,
     Object? showFloor = null,
     Object? showData = null,
+    Object? oldSearchVersion = null,
     Object? filterFields = null,
   }) {
     return _then(_$DeviceDataGridWidgetConfigImpl(
@@ -510,6 +531,10 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       modelIds: null == modelIds
           ? _value.modelIds
@@ -563,6 +588,10 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showData
           : showData // ignore: cast_nullable_to_non_nullable
               as bool,
+      oldSearchVersion: null == oldSearchVersion
+          ? _value.oldSearchVersion
+          : oldSearchVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
       filterFields: null == filterFields
           ? _value.filterFields
           : filterFields // ignore: cast_nullable_to_non_nullable
@@ -582,6 +611,12 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
+      this.labelFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 12,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': false
+      },
       this.modelIds = const [],
       this.sortField = '',
       this.sortType = SortType.asc,
@@ -595,6 +630,7 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
       this.showFacility = true,
       this.showFloor = true,
       this.showData = true,
+      this.oldSearchVersion = false,
       this.filterFields = const []})
       : super._();
 
@@ -608,6 +644,9 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
   @override
   @JsonKey()
   List<String> modelIds;
@@ -649,11 +688,14 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
   bool showData;
   @override
   @JsonKey()
+  bool oldSearchVersion;
+  @override
+  @JsonKey()
   List<String> filterFields;
 
   @override
   String toString() {
-    return 'DeviceDataGridWidgetConfig(title: $title, titleFont: $titleFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, filterFields: $filterFields)';
+    return 'DeviceDataGridWidgetConfig(title: $title, titleFont: $titleFont, labelFont: $labelFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, oldSearchVersion: $oldSearchVersion, filterFields: $filterFields)';
   }
 
   @JsonKey(ignore: true)
@@ -675,6 +717,7 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
   factory _DeviceDataGridWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -688,6 +731,7 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
       bool showFacility,
       bool showFloor,
       bool showData,
+      bool oldSearchVersion,
       List<String> filterFields}) = _$DeviceDataGridWidgetConfigImpl;
   _DeviceDataGridWidgetConfig._() : super._();
 
@@ -700,6 +744,9 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
   @override
   List<String> get modelIds;
   set modelIds(List<String> value);
@@ -739,6 +786,9 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
   @override
   bool get showData;
   set showData(bool value);
+  @override
+  bool get oldSearchVersion;
+  set oldSearchVersion(bool value);
   @override
   List<String> get filterFields;
   set filterFields(List<String> value);

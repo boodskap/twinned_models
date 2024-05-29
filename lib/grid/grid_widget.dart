@@ -124,6 +124,13 @@ class DeviceDataGridWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': false
+    })
+    Map<String, dynamic> labelFont,
     @Default([]) List<String> modelIds,
     @Default('') String sortField,
     @Default(SortType.asc) SortType sortType,
@@ -137,6 +144,7 @@ class DeviceDataGridWidgetConfig extends BaseConfig
     @Default(true) bool showFacility,
     @Default(true) bool showFloor,
     @Default(true) bool showData,
+    @Default(false) bool oldSearchVersion,
     @Default([]) List<String> filterFields,
   }) = _DeviceDataGridWidgetConfig;
 
@@ -153,6 +161,7 @@ class DeviceDataGridWidgetConfig extends BaseConfig
       case 'title':
         return DataType.text;
       case 'titleFont':
+      case 'labelFont':
         return DataType.font;
       case 'pageSize':
         return DataType.numeric;
@@ -165,6 +174,7 @@ class DeviceDataGridWidgetConfig extends BaseConfig
       case 'showFacility':
       case 'showFloor':
       case 'showData':
+      case 'oldSearchVersion':
         return DataType.yesno;
       case 'sortType':
         return DataType.enumerated;
@@ -209,6 +219,8 @@ class DeviceDataGridWidgetConfig extends BaseConfig
         return 'Title';
       case 'titleFont':
         return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
       case 'pageSize':
         return 'Maximum Rows';
       case 'showSearch':
@@ -231,6 +243,8 @@ class DeviceDataGridWidgetConfig extends BaseConfig
         return 'Show Data';
       case 'sortType':
         return 'Sort';
+      case 'oldSearchVersion':
+        return 'Old Search Version';
       default:
         return parameter;
     }
