@@ -12,8 +12,14 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
   factory DeviceFieldRangeLabelDialWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
-    @Default('[]') String ranges,
     @Default('Range Label') String title,
+    @Default([
+      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+      {'from': 76, 'color': 0xFFFFFFFF},
+    ])
+    List<dynamic> ranges,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -59,6 +65,8 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     return [];
   }
+
+
 
   @override
   String getLabel(String parameter) {
