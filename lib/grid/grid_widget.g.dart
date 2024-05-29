@@ -71,6 +71,13 @@ _$DeviceDataGridWidgetConfigImpl _$$DeviceDataGridWidgetConfigImplFromJson(
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
+      labelFont: json['labelFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 12,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': false
+          },
       modelIds: (json['modelIds'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -88,6 +95,7 @@ _$DeviceDataGridWidgetConfigImpl _$$DeviceDataGridWidgetConfigImplFromJson(
       showFacility: json['showFacility'] as bool? ?? true,
       showFloor: json['showFloor'] as bool? ?? true,
       showData: json['showData'] as bool? ?? true,
+      oldSearchVersion: json['oldSearchVersion'] as bool? ?? false,
       filterFields: (json['filterFields'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -99,6 +107,7 @@ Map<String, dynamic> _$$DeviceDataGridWidgetConfigImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
+      'labelFont': instance.labelFont,
       'modelIds': instance.modelIds,
       'sortField': instance.sortField,
       'sortType': _$SortTypeEnumMap[instance.sortType]!,
@@ -112,6 +121,7 @@ Map<String, dynamic> _$$DeviceDataGridWidgetConfigImplToJson(
       'showFacility': instance.showFacility,
       'showFloor': instance.showFloor,
       'showData': instance.showData,
+      'oldSearchVersion': instance.oldSearchVersion,
       'filterFields': instance.filterFields,
     };
 
