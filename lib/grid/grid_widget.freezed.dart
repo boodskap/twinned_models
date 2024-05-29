@@ -410,6 +410,8 @@ mixin _$AssetModelDataGridWidgetConfig {
   set oldSearchVersion(bool value) => throw _privateConstructorUsedError;
   List<String> get filterFields => throw _privateConstructorUsedError;
   set filterFields(List<String> value) => throw _privateConstructorUsedError;
+  int get dataWidht => throw _privateConstructorUsedError;
+  set dataWidht(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -443,7 +445,8 @@ abstract class $AssetModelDataGridWidgetConfigCopyWith<$Res> {
       bool showFloor,
       bool showData,
       bool oldSearchVersion,
-      List<String> filterFields});
+      List<String> filterFields,
+      int dataWidht});
 }
 
 /// @nodoc
@@ -478,6 +481,7 @@ class _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
     Object? showData = null,
     Object? oldSearchVersion = null,
     Object? filterFields = null,
+    Object? dataWidht = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -552,6 +556,10 @@ class _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
           ? _value.filterFields
           : filterFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dataWidht: null == dataWidht
+          ? _value.dataWidht
+          : dataWidht // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -583,7 +591,8 @@ abstract class _$$AssetModelDataGridWidgetConfigImplCopyWith<$Res>
       bool showFloor,
       bool showData,
       bool oldSearchVersion,
-      List<String> filterFields});
+      List<String> filterFields,
+      int dataWidht});
 }
 
 /// @nodoc
@@ -617,6 +626,7 @@ class __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<$Res>
     Object? showData = null,
     Object? oldSearchVersion = null,
     Object? filterFields = null,
+    Object? dataWidht = null,
   }) {
     return _then(_$AssetModelDataGridWidgetConfigImpl(
       title: null == title
@@ -691,6 +701,10 @@ class __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<$Res>
           ? _value.filterFields
           : filterFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dataWidht: null == dataWidht
+          ? _value.dataWidht
+          : dataWidht // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -727,7 +741,8 @@ class _$AssetModelDataGridWidgetConfigImpl
       this.showFloor = true,
       this.showData = true,
       this.oldSearchVersion = false,
-      this.filterFields = const []})
+      this.filterFields = const [],
+      this.dataWidht = 200})
       : super._();
 
   factory _$AssetModelDataGridWidgetConfigImpl.fromJson(
@@ -788,10 +803,13 @@ class _$AssetModelDataGridWidgetConfigImpl
   @override
   @JsonKey()
   List<String> filterFields;
+  @override
+  @JsonKey()
+  int dataWidht;
 
   @override
   String toString() {
-    return 'AssetModelDataGridWidgetConfig(title: $title, titleFont: $titleFont, labelFont: $labelFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, oldSearchVersion: $oldSearchVersion, filterFields: $filterFields)';
+    return 'AssetModelDataGridWidgetConfig(title: $title, titleFont: $titleFont, labelFont: $labelFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, oldSearchVersion: $oldSearchVersion, filterFields: $filterFields, dataWidht: $dataWidht)';
   }
 
   @JsonKey(ignore: true)
@@ -830,7 +848,8 @@ abstract class _AssetModelDataGridWidgetConfig
       bool showFloor,
       bool showData,
       bool oldSearchVersion,
-      List<String> filterFields}) = _$AssetModelDataGridWidgetConfigImpl;
+      List<String> filterFields,
+      int dataWidht}) = _$AssetModelDataGridWidgetConfigImpl;
   _AssetModelDataGridWidgetConfig._() : super._();
 
   factory _AssetModelDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -890,6 +909,9 @@ abstract class _AssetModelDataGridWidgetConfig
   @override
   List<String> get filterFields;
   set filterFields(List<String> value);
+  @override
+  int get dataWidht;
+  set dataWidht(int value);
   @override
   @JsonKey(ignore: true)
   _$$AssetModelDataGridWidgetConfigImplCopyWith<
