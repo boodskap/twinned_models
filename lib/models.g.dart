@@ -315,3 +315,57 @@ Map<String, dynamic> _$$MultipleDeviceModelChartWidgetConfigImplToJson(
       'headerFont': instance.headerFont,
       'labelFont': instance.labelFont,
     };
+
+_$TimeStampWidgetConfigImpl _$$TimeStampWidgetConfigImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TimeStampWidgetConfigImpl(
+      field: json['field'] as String? ?? '',
+      deviceId: json['deviceId'] as String? ?? '',
+      meridiemFont: json['meridiemFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 14,
+            'fontColor': 0x000000,
+            'fontBold': false
+          },
+      yearFont: json['yearFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0x000000,
+            'fontBold': false
+          },
+      monthFont: json['monthFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0x000000,
+            'fontBold': false
+          },
+      dateFont: json['dateFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0x000000,
+            'fontBold': false
+          },
+      timeFont: json['timeFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0x000000,
+            'fontBold': true
+          },
+    );
+
+Map<String, dynamic> _$$TimeStampWidgetConfigImplToJson(
+        _$TimeStampWidgetConfigImpl instance) =>
+    <String, dynamic>{
+      'field': instance.field,
+      'deviceId': instance.deviceId,
+      'meridiemFont': instance.meridiemFont,
+      'yearFont': instance.yearFont,
+      'monthFont': instance.monthFont,
+      'dateFont': instance.dateFont,
+      'timeFont': instance.timeFont,
+    };
