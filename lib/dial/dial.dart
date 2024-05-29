@@ -12,7 +12,13 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   factory DeviceMultiFieldDialWidgetConfig({
     @Default([]) List<String> field,
-    @Default([]) List<dynamic> ranges,
+    @Default([
+      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+      {'from': 76, 'color': 0xFFFFFFFF}
+    ])
+    List<dynamic> ranges,
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
