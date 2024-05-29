@@ -36,6 +36,13 @@ mixin _$AssetModelGridWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  int get headerBgColor => throw _privateConstructorUsedError;
+  set headerBgColor(int value) => throw _privateConstructorUsedError;
+  int get iconColor => throw _privateConstructorUsedError;
+  set iconColor(int value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get headerFont => throw _privateConstructorUsedError;
+  set headerFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,7 +64,10 @@ abstract class $AssetModelGridWidgetConfigCopyWith<$Res> {
       List<String> sortingFields,
       String title,
       int pageSize,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      int headerBgColor,
+      int iconColor,
+      Map<String, dynamic> headerFont});
 }
 
 /// @nodoc
@@ -81,6 +91,9 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? pageSize = null,
     Object? titleFont = null,
+    Object? headerBgColor = null,
+    Object? iconColor = null,
+    Object? headerFont = null,
   }) {
     return _then(_value.copyWith(
       modelIds: null == modelIds
@@ -111,6 +124,18 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      headerBgColor: null == headerBgColor
+          ? _value.headerBgColor
+          : headerBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      iconColor: null == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ) as $Val);
   }
 }
@@ -131,7 +156,10 @@ abstract class _$$AssetModelGridWidgetConfigImplCopyWith<$Res>
       List<String> sortingFields,
       String title,
       int pageSize,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      int headerBgColor,
+      int iconColor,
+      Map<String, dynamic> headerFont});
 }
 
 /// @nodoc
@@ -154,6 +182,9 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? pageSize = null,
     Object? titleFont = null,
+    Object? headerBgColor = null,
+    Object? iconColor = null,
+    Object? headerFont = null,
   }) {
     return _then(_$AssetModelGridWidgetConfigImpl(
       modelIds: null == modelIds
@@ -184,6 +215,18 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      headerBgColor: null == headerBgColor
+          ? _value.headerBgColor
+          : headerBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      iconColor: null == iconColor
+          ? _value.iconColor
+          : iconColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      headerFont: null == headerFont
+          ? _value.headerFont
+          : headerFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ));
   }
 }
@@ -199,6 +242,14 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
       this.title = 'Data Grid',
       this.pageSize = 10,
       this.titleFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 30,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      },
+      this.headerBgColor = 0xFFFFFFFF,
+      this.iconColor = 0xFFFFFFFF,
+      this.headerFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
         'fontColor': 0xFFFFFFFF,
@@ -231,10 +282,19 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  int headerBgColor;
+  @override
+  @JsonKey()
+  int iconColor;
+  @override
+  @JsonKey()
+  Map<String, dynamic> headerFont;
 
   @override
   String toString() {
-    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, sortingFields: $sortingFields, title: $title, pageSize: $pageSize, titleFont: $titleFont)';
+    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, sortingFields: $sortingFields, title: $title, pageSize: $pageSize, titleFont: $titleFont, headerBgColor: $headerBgColor, iconColor: $iconColor, headerFont: $headerFont)';
   }
 
   @JsonKey(ignore: true)
@@ -260,7 +320,10 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
       List<String> sortingFields,
       String title,
       int pageSize,
-      Map<String, dynamic> titleFont}) = _$AssetModelGridWidgetConfigImpl;
+      Map<String, dynamic> titleFont,
+      int headerBgColor,
+      int iconColor,
+      Map<String, dynamic> headerFont}) = _$AssetModelGridWidgetConfigImpl;
   _AssetModelGridWidgetConfig._() : super._();
 
   factory _AssetModelGridWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -287,6 +350,15 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  int get headerBgColor;
+  set headerBgColor(int value);
+  @override
+  int get iconColor;
+  set iconColor(int value);
+  @override
+  Map<String, dynamic> get headerFont;
+  set headerFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$AssetModelGridWidgetConfigImplCopyWith<_$AssetModelGridWidgetConfigImpl>
