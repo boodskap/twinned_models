@@ -33,6 +33,8 @@ enum HintType {
   deviceModelId,
 }
 
+enum SortType { asc, desc }
+
 abstract class BaseConfig {
   const BaseConfig();
 
