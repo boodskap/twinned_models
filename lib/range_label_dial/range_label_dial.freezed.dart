@@ -25,10 +25,10 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
-  String get ranges => throw _privateConstructorUsedError;
-  set ranges(String value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
+  List<dynamic> get ranges => throw _privateConstructorUsedError;
+  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -51,8 +51,8 @@ abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
   $Res call(
       {String field,
       String deviceId,
-      String ranges,
       String title,
+      List<dynamic> ranges,
       Map<String, dynamic> titleFont});
 }
 
@@ -72,8 +72,8 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? field = null,
     Object? deviceId = null,
-    Object? ranges = null,
     Object? title = null,
+    Object? ranges = null,
     Object? titleFont = null,
   }) {
     return _then(_value.copyWith(
@@ -85,14 +85,14 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      ranges: null == ranges
-          ? _value.ranges
-          : ranges // ignore: cast_nullable_to_non_nullable
-              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -113,8 +113,8 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String field,
       String deviceId,
-      String ranges,
       String title,
+      List<dynamic> ranges,
       Map<String, dynamic> titleFont});
 }
 
@@ -133,8 +133,8 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? field = null,
     Object? deviceId = null,
-    Object? ranges = null,
     Object? title = null,
+    Object? ranges = null,
     Object? titleFont = null,
   }) {
     return _then(_$DeviceFieldRangeLabelDialWidgetConfigImpl(
@@ -146,14 +146,14 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      ranges: null == ranges
-          ? _value.ranges
-          : ranges // ignore: cast_nullable_to_non_nullable
-              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -169,8 +169,13 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   _$DeviceFieldRangeLabelDialWidgetConfigImpl(
       {this.field = '',
       this.deviceId = '',
-      this.ranges = '[]',
       this.title = 'Range Label',
+      this.ranges = const [
+        {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+        {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+        {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+        {'from': 76, 'color': 0xFFFFFFFF}
+      ],
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
@@ -191,17 +196,17 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   String deviceId;
   @override
   @JsonKey()
-  String ranges;
+  String title;
   @override
   @JsonKey()
-  String title;
+  List<dynamic> ranges;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
 
   @override
   String toString() {
-    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, ranges: $ranges, title: $title, titleFont: $titleFont)';
+    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, ranges: $ranges, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -225,8 +230,8 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   factory _DeviceFieldRangeLabelDialWidgetConfig(
           {String field,
           String deviceId,
-          String ranges,
           String title,
+          List<dynamic> ranges,
           Map<String, dynamic> titleFont}) =
       _$DeviceFieldRangeLabelDialWidgetConfigImpl;
   _DeviceFieldRangeLabelDialWidgetConfig._() : super._();
@@ -242,11 +247,11 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   String get deviceId;
   set deviceId(String value);
   @override
-  String get ranges;
-  set ranges(String value);
-  @override
   String get title;
   set title(String value);
+  @override
+  List<dynamic> get ranges;
+  set ranges(List<dynamic> value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
