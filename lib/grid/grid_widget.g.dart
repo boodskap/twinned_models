@@ -34,6 +34,23 @@ _$AssetModelGridWidgetConfigImpl _$$AssetModelGridWidgetConfigImplFromJson(
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
+      headerBgColor: (json['headerBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      rowBgColor: (json['rowBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      iconColor: (json['iconColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      headerFont: json['headerFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 30,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
+          },
+      rowFont: json['rowFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 30,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
+          },
     );
 
 Map<String, dynamic> _$$AssetModelGridWidgetConfigImplToJson(
@@ -46,6 +63,11 @@ Map<String, dynamic> _$$AssetModelGridWidgetConfigImplToJson(
       'title': instance.title,
       'pageSize': instance.pageSize,
       'titleFont': instance.titleFont,
+      'headerBgColor': instance.headerBgColor,
+      'rowBgColor': instance.rowBgColor,
+      'iconColor': instance.iconColor,
+      'headerFont': instance.headerFont,
+      'rowFont': instance.rowFont,
     };
 
 _$DeviceDataGridWidgetConfigImpl _$$DeviceDataGridWidgetConfigImplFromJson(
