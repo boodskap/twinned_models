@@ -27,6 +27,8 @@ mixin _$AssetModelGridWidgetConfig {
   set fields(List<String> value) => throw _privateConstructorUsedError;
   List<String> get fieldLabels => throw _privateConstructorUsedError;
   set fieldLabels(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get sortingFields => throw _privateConstructorUsedError;
+  set sortingFields(List<String> value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   int get pageSize => throw _privateConstructorUsedError;
@@ -52,6 +54,7 @@ abstract class $AssetModelGridWidgetConfigCopyWith<$Res> {
       {List<String> modelIds,
       List<String> fields,
       List<String> fieldLabels,
+      List<String> sortingFields,
       String title,
       int pageSize,
       Map<String, dynamic> titleFont});
@@ -74,6 +77,7 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
     Object? modelIds = null,
     Object? fields = null,
     Object? fieldLabels = null,
+    Object? sortingFields = null,
     Object? title = null,
     Object? pageSize = null,
     Object? titleFont = null,
@@ -90,6 +94,10 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
       fieldLabels: null == fieldLabels
           ? _value.fieldLabels
           : fieldLabels // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      sortingFields: null == sortingFields
+          ? _value.sortingFields
+          : sortingFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -120,6 +128,7 @@ abstract class _$$AssetModelGridWidgetConfigImplCopyWith<$Res>
       {List<String> modelIds,
       List<String> fields,
       List<String> fieldLabels,
+      List<String> sortingFields,
       String title,
       int pageSize,
       Map<String, dynamic> titleFont});
@@ -141,6 +150,7 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
     Object? modelIds = null,
     Object? fields = null,
     Object? fieldLabels = null,
+    Object? sortingFields = null,
     Object? title = null,
     Object? pageSize = null,
     Object? titleFont = null,
@@ -157,6 +167,10 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
       fieldLabels: null == fieldLabels
           ? _value.fieldLabels
           : fieldLabels // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      sortingFields: null == sortingFields
+          ? _value.sortingFields
+          : sortingFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -181,6 +195,7 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
       {this.modelIds = const [],
       this.fields = const [],
       this.fieldLabels = const [],
+      this.sortingFields = const [],
       this.title = 'Data Grid',
       this.pageSize = 10,
       this.titleFont = const {
@@ -206,6 +221,9 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
   List<String> fieldLabels;
   @override
   @JsonKey()
+  List<String> sortingFields;
+  @override
+  @JsonKey()
   String title;
   @override
   @JsonKey()
@@ -216,7 +234,7 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
 
   @override
   String toString() {
-    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, title: $title, pageSize: $pageSize, titleFont: $titleFont)';
+    return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, sortingFields: $sortingFields, title: $title, pageSize: $pageSize, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -239,6 +257,7 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
       {List<String> modelIds,
       List<String> fields,
       List<String> fieldLabels,
+      List<String> sortingFields,
       String title,
       int pageSize,
       Map<String, dynamic> titleFont}) = _$AssetModelGridWidgetConfigImpl;
@@ -256,6 +275,9 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   @override
   List<String> get fieldLabels;
   set fieldLabels(List<String> value);
+  @override
+  List<String> get sortingFields;
+  set sortingFields(List<String> value);
   @override
   String get title;
   set title(String value);
