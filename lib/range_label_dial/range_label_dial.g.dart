@@ -12,8 +12,14 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
         _$DeviceFieldRangeLabelDialWidgetConfigImpl(
           field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
-          ranges: json['ranges'] as String? ?? '[]',
           title: json['title'] as String? ?? 'Range Label',
+          ranges: json['ranges'] as List<dynamic>? ??
+              const [
+                {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
+                {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
+                {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
+                {'from': 76, 'color': 0xFFFFFFFF}
+              ],
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -28,7 +34,7 @@ Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
     <String, dynamic>{
       'field': instance.field,
       'deviceId': instance.deviceId,
-      'ranges': instance.ranges,
       'title': instance.title,
+      'ranges': instance.ranges,
       'titleFont': instance.titleFont,
     };
