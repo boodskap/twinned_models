@@ -13,6 +13,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
     @Default([]) List<String> modelIds,
     @Default([]) List<String> fields,
     @Default([]) List<String> fieldLabels,
+    @Default([]) List<String> sortingFields,
     @Default('Data Grid') String title,
     @Default(10) int pageSize,
     @Default({
@@ -33,12 +34,13 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'modelIds':
       case 'fields':
       case 'fieldLabels':
+      case 'sortingFields':
         return DataType.listOfTexts;
       case 'title':
         return DataType.text;
       case 'titleFont':
         return DataType.font;
-         case 'pageSize':
+      case 'pageSize':
         return DataType.numeric;
       default:
         return DataType.none;
@@ -49,6 +51,7 @@ class AssetModelGridWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'modelIds':
+      case 'sortingFields':
         return HintType.assetModelId;
       case 'fields':
         return HintType.field;
@@ -75,8 +78,10 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return 'Title';
       case 'titleFont':
         return 'Title Font';
-        case 'pageSize':
+      case 'pageSize':
         return 'Page Size';
+      case 'sortingFields':
+        return 'Sorting Fields';
       default:
         return parameter;
     }
@@ -98,6 +103,8 @@ class AssetModelGridWidgetConfig extends BaseConfig
       case 'fields':
         return true;
       case 'fieldLabels':
+        return true;
+      case 'pageSize':
         return true;
       default:
         return false;

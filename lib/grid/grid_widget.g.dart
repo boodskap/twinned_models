@@ -21,6 +21,10 @@ _$AssetModelGridWidgetConfigImpl _$$AssetModelGridWidgetConfigImplFromJson(
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      sortingFields: (json['sortingFields'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
       title: json['title'] as String? ?? 'Data Grid',
       pageSize: (json['pageSize'] as num?)?.toInt() ?? 10,
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
@@ -38,6 +42,7 @@ Map<String, dynamic> _$$AssetModelGridWidgetConfigImplToJson(
       'modelIds': instance.modelIds,
       'fields': instance.fields,
       'fieldLabels': instance.fieldLabels,
+      'sortingFields': instance.sortingFields,
       'title': instance.title,
       'pageSize': instance.pageSize,
       'titleFont': instance.titleFont,
