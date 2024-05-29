@@ -23,8 +23,8 @@ DeviceMultiFieldDialWidgetConfig _$DeviceMultiFieldDialWidgetConfigFromJson(
 mixin _$DeviceMultiFieldDialWidgetConfig {
   List<String> get field => throw _privateConstructorUsedError;
   set field(List<String> value) => throw _privateConstructorUsedError;
-  List<Range> get ranges => throw _privateConstructorUsedError;
-  set ranges(List<Range> value) => throw _privateConstructorUsedError;
+  List<dynamic> get ranges => throw _privateConstructorUsedError;
+  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
   int get bgColor => throw _privateConstructorUsedError;
   set bgColor(int value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
@@ -51,7 +51,7 @@ abstract class $DeviceMultiFieldDialWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {List<String> field,
-      List<Range> ranges,
+      List<dynamic> ranges,
       int bgColor,
       String deviceId,
       String title,
@@ -87,7 +87,7 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
       ranges: null == ranges
           ? _value.ranges
           : ranges // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
       bgColor: null == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
@@ -119,7 +119,7 @@ abstract class _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<String> field,
-      List<Range> ranges,
+      List<dynamic> ranges,
       int bgColor,
       String deviceId,
       String title,
@@ -154,7 +154,7 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
       ranges: null == ranges
           ? _value.ranges
           : ranges // ignore: cast_nullable_to_non_nullable
-              as List<Range>,
+              as List<dynamic>,
       bgColor: null == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
@@ -202,7 +202,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
   List<String> field;
   @override
   @JsonKey()
-  List<Range> ranges;
+  List<dynamic> ranges;
   @override
   @JsonKey()
   int bgColor;
@@ -241,7 +241,7 @@ abstract class _DeviceMultiFieldDialWidgetConfig
     extends DeviceMultiFieldDialWidgetConfig {
   factory _DeviceMultiFieldDialWidgetConfig(
       {List<String> field,
-      List<Range> ranges,
+      List<dynamic> ranges,
       int bgColor,
       String deviceId,
       String title,
@@ -256,8 +256,8 @@ abstract class _DeviceMultiFieldDialWidgetConfig
   List<String> get field;
   set field(List<String> value);
   @override
-  List<Range> get ranges;
-  set ranges(List<Range> value);
+  List<dynamic> get ranges;
+  set ranges(List<dynamic> value);
   @override
   int get bgColor;
   set bgColor(int value);

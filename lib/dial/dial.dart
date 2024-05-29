@@ -12,7 +12,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   factory DeviceMultiFieldDialWidgetConfig({
     @Default([]) List<String> field,
-    @Default([]) List<Range> ranges,
+    @Default([]) List<dynamic> ranges,
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
@@ -63,31 +63,33 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    // TODO: implement getEnumeratedValues
-    throw UnimplementedError();
+    return [];
   }
 
   @override
   String getLabel(String parameter) {
-    // TODO: implement getLabel
-    throw UnimplementedError();
+    return parameter;
   }
 
   @override
   String getTooltip(String parameter) {
-    // TODO: implement getTooltip
-    throw UnimplementedError();
+    return "";
   }
 
   @override
   bool isRequired(String parameter) {
-    // TODO: implement isRequired
-    throw UnimplementedError();
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
   }
 
   @override
   bool isValid(String parameter, value) {
-    // TODO: implement isValid
-    throw UnimplementedError();
+    return true;
   }
 }
