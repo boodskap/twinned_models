@@ -365,17 +365,20 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
       get copyWith => throw _privateConstructorUsedError;
 }
 
-DeviceDataGridWidgetConfig _$DeviceDataGridWidgetConfigFromJson(
+AssetModelDataGridWidgetConfig _$AssetModelDataGridWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _DeviceDataGridWidgetConfig.fromJson(json);
+  return _AssetModelDataGridWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DeviceDataGridWidgetConfig {
+mixin _$AssetModelDataGridWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
@@ -403,25 +406,31 @@ mixin _$DeviceDataGridWidgetConfig {
   set showFloor(bool value) => throw _privateConstructorUsedError;
   bool get showData => throw _privateConstructorUsedError;
   set showData(bool value) => throw _privateConstructorUsedError;
+  bool get oldSearchVersion => throw _privateConstructorUsedError;
+  set oldSearchVersion(bool value) => throw _privateConstructorUsedError;
   List<String> get filterFields => throw _privateConstructorUsedError;
   set filterFields(List<String> value) => throw _privateConstructorUsedError;
+  int get dataWidth => throw _privateConstructorUsedError;
+  set dataWidth(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceDataGridWidgetConfigCopyWith<DeviceDataGridWidgetConfig>
+  $AssetModelDataGridWidgetConfigCopyWith<AssetModelDataGridWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeviceDataGridWidgetConfigCopyWith<$Res> {
-  factory $DeviceDataGridWidgetConfigCopyWith(DeviceDataGridWidgetConfig value,
-          $Res Function(DeviceDataGridWidgetConfig) then) =
-      _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
-          DeviceDataGridWidgetConfig>;
+abstract class $AssetModelDataGridWidgetConfigCopyWith<$Res> {
+  factory $AssetModelDataGridWidgetConfigCopyWith(
+          AssetModelDataGridWidgetConfig value,
+          $Res Function(AssetModelDataGridWidgetConfig) then) =
+      _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
+          AssetModelDataGridWidgetConfig>;
   @useResult
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -435,14 +444,16 @@ abstract class $DeviceDataGridWidgetConfigCopyWith<$Res> {
       bool showFacility,
       bool showFloor,
       bool showData,
-      List<String> filterFields});
+      bool oldSearchVersion,
+      List<String> filterFields,
+      int dataWidth});
 }
 
 /// @nodoc
-class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
-        $Val extends DeviceDataGridWidgetConfig>
-    implements $DeviceDataGridWidgetConfigCopyWith<$Res> {
-  _$DeviceDataGridWidgetConfigCopyWithImpl(this._value, this._then);
+class _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
+        $Val extends AssetModelDataGridWidgetConfig>
+    implements $AssetModelDataGridWidgetConfigCopyWith<$Res> {
+  _$AssetModelDataGridWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -454,6 +465,7 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? labelFont = null,
     Object? modelIds = null,
     Object? sortField = null,
     Object? sortType = null,
@@ -467,7 +479,9 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
     Object? showFacility = null,
     Object? showFloor = null,
     Object? showData = null,
+    Object? oldSearchVersion = null,
     Object? filterFields = null,
+    Object? dataWidth = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -477,6 +491,10 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       modelIds: null == modelIds
           ? _value.modelIds
@@ -530,26 +548,35 @@ class _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
           ? _value.showData
           : showData // ignore: cast_nullable_to_non_nullable
               as bool,
+      oldSearchVersion: null == oldSearchVersion
+          ? _value.oldSearchVersion
+          : oldSearchVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
       filterFields: null == filterFields
           ? _value.filterFields
           : filterFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dataWidth: null == dataWidth
+          ? _value.dataWidth
+          : dataWidth // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$DeviceDataGridWidgetConfigImplCopyWith<$Res>
-    implements $DeviceDataGridWidgetConfigCopyWith<$Res> {
-  factory _$$DeviceDataGridWidgetConfigImplCopyWith(
-          _$DeviceDataGridWidgetConfigImpl value,
-          $Res Function(_$DeviceDataGridWidgetConfigImpl) then) =
-      __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$AssetModelDataGridWidgetConfigImplCopyWith<$Res>
+    implements $AssetModelDataGridWidgetConfigCopyWith<$Res> {
+  factory _$$AssetModelDataGridWidgetConfigImplCopyWith(
+          _$AssetModelDataGridWidgetConfigImpl value,
+          $Res Function(_$AssetModelDataGridWidgetConfigImpl) then) =
+      __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -563,17 +590,19 @@ abstract class _$$DeviceDataGridWidgetConfigImplCopyWith<$Res>
       bool showFacility,
       bool showFloor,
       bool showData,
-      List<String> filterFields});
+      bool oldSearchVersion,
+      List<String> filterFields,
+      int dataWidth});
 }
 
 /// @nodoc
-class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
-    extends _$DeviceDataGridWidgetConfigCopyWithImpl<$Res,
-        _$DeviceDataGridWidgetConfigImpl>
-    implements _$$DeviceDataGridWidgetConfigImplCopyWith<$Res> {
-  __$$DeviceDataGridWidgetConfigImplCopyWithImpl(
-      _$DeviceDataGridWidgetConfigImpl _value,
-      $Res Function(_$DeviceDataGridWidgetConfigImpl) _then)
+class __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<$Res>
+    extends _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
+        _$AssetModelDataGridWidgetConfigImpl>
+    implements _$$AssetModelDataGridWidgetConfigImplCopyWith<$Res> {
+  __$$AssetModelDataGridWidgetConfigImplCopyWithImpl(
+      _$AssetModelDataGridWidgetConfigImpl _value,
+      $Res Function(_$AssetModelDataGridWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -581,6 +610,7 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? labelFont = null,
     Object? modelIds = null,
     Object? sortField = null,
     Object? sortType = null,
@@ -594,9 +624,11 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
     Object? showFacility = null,
     Object? showFloor = null,
     Object? showData = null,
+    Object? oldSearchVersion = null,
     Object? filterFields = null,
+    Object? dataWidth = null,
   }) {
-    return _then(_$DeviceDataGridWidgetConfigImpl(
+    return _then(_$AssetModelDataGridWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -604,6 +636,10 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       modelIds: null == modelIds
           ? _value.modelIds
@@ -657,24 +693,39 @@ class __$$DeviceDataGridWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showData
           : showData // ignore: cast_nullable_to_non_nullable
               as bool,
+      oldSearchVersion: null == oldSearchVersion
+          ? _value.oldSearchVersion
+          : oldSearchVersion // ignore: cast_nullable_to_non_nullable
+              as bool,
       filterFields: null == filterFields
           ? _value.filterFields
           : filterFields // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dataWidth: null == dataWidth
+          ? _value.dataWidth
+          : dataWidth // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
-  _$DeviceDataGridWidgetConfigImpl(
+class _$AssetModelDataGridWidgetConfigImpl
+    extends _AssetModelDataGridWidgetConfig {
+  _$AssetModelDataGridWidgetConfigImpl(
       {this.title = 'Data Grid',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
+      },
+      this.labelFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 12,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': false
       },
       this.modelIds = const [],
       this.sortField = '',
@@ -689,12 +740,14 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
       this.showFacility = true,
       this.showFloor = true,
       this.showData = true,
-      this.filterFields = const []})
+      this.oldSearchVersion = false,
+      this.filterFields = const [],
+      this.dataWidth = 200})
       : super._();
 
-  factory _$DeviceDataGridWidgetConfigImpl.fromJson(
+  factory _$AssetModelDataGridWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$DeviceDataGridWidgetConfigImplFromJson(json);
+      _$$AssetModelDataGridWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -702,6 +755,9 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
   @override
   @JsonKey()
   List<String> modelIds;
@@ -743,32 +799,41 @@ class _$DeviceDataGridWidgetConfigImpl extends _DeviceDataGridWidgetConfig {
   bool showData;
   @override
   @JsonKey()
+  bool oldSearchVersion;
+  @override
+  @JsonKey()
   List<String> filterFields;
+  @override
+  @JsonKey()
+  int dataWidth;
 
   @override
   String toString() {
-    return 'DeviceDataGridWidgetConfig(title: $title, titleFont: $titleFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, filterFields: $filterFields)';
+    return 'AssetModelDataGridWidgetConfig(title: $title, titleFont: $titleFont, labelFont: $labelFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, oldSearchVersion: $oldSearchVersion, filterFields: $filterFields, dataWidth: $dataWidth)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeviceDataGridWidgetConfigImplCopyWith<_$DeviceDataGridWidgetConfigImpl>
-      get copyWith => __$$DeviceDataGridWidgetConfigImplCopyWithImpl<
-          _$DeviceDataGridWidgetConfigImpl>(this, _$identity);
+  _$$AssetModelDataGridWidgetConfigImplCopyWith<
+          _$AssetModelDataGridWidgetConfigImpl>
+      get copyWith => __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<
+          _$AssetModelDataGridWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeviceDataGridWidgetConfigImplToJson(
+    return _$$AssetModelDataGridWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
-  factory _DeviceDataGridWidgetConfig(
+abstract class _AssetModelDataGridWidgetConfig
+    extends AssetModelDataGridWidgetConfig {
+  factory _AssetModelDataGridWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont,
       List<String> modelIds,
       String sortField,
       SortType sortType,
@@ -782,11 +847,13 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
       bool showFacility,
       bool showFloor,
       bool showData,
-      List<String> filterFields}) = _$DeviceDataGridWidgetConfigImpl;
-  _DeviceDataGridWidgetConfig._() : super._();
+      bool oldSearchVersion,
+      List<String> filterFields,
+      int dataWidth}) = _$AssetModelDataGridWidgetConfigImpl;
+  _AssetModelDataGridWidgetConfig._() : super._();
 
-  factory _DeviceDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$DeviceDataGridWidgetConfigImpl.fromJson;
+  factory _AssetModelDataGridWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$AssetModelDataGridWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -794,6 +861,9 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
   @override
   List<String> get modelIds;
   set modelIds(List<String> value);
@@ -834,10 +904,17 @@ abstract class _DeviceDataGridWidgetConfig extends DeviceDataGridWidgetConfig {
   bool get showData;
   set showData(bool value);
   @override
+  bool get oldSearchVersion;
+  set oldSearchVersion(bool value);
+  @override
   List<String> get filterFields;
   set filterFields(List<String> value);
   @override
+  int get dataWidth;
+  set dataWidth(int value);
+  @override
   @JsonKey(ignore: true)
-  _$$DeviceDataGridWidgetConfigImplCopyWith<_$DeviceDataGridWidgetConfigImpl>
+  _$$AssetModelDataGridWidgetConfigImplCopyWith<
+          _$AssetModelDataGridWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
