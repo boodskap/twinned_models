@@ -13,13 +13,8 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default('') String deviceId,
     @Default('Range Label') String title,
-    @Default([
-      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
-      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
-      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
-      {'from': 76, 'color': 0xFFFFFFFF},
-    ])
-    List<dynamic> ranges,
+    @Default(0x00000000) int titleBgColor,
+    @Default(true) bool animate,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -27,6 +22,13 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
   factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
@@ -40,9 +42,14 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       case 'field':
       case 'deviceId':
         return DataType.text;
+      case 'titleBgColor':
+        return DataType.numeric;
       case 'ranges':
         return DataType.listOfRanges;
+      case 'animate':
+        return DataType.yesno;
       case 'titleFont':
+      case 'labelFont':
         return DataType.font;
       default:
         return DataType.text;
@@ -54,6 +61,8 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
         return HintType.field;
+      case 'titleBgColor':
+        return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
       default:
@@ -65,8 +74,6 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     return [];
   }
-
-
 
   @override
   String getLabel(String parameter) {

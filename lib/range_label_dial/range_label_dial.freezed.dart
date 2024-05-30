@@ -27,10 +27,15 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  List<dynamic> get ranges => throw _privateConstructorUsedError;
-  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
+  int get titleBgColor => throw _privateConstructorUsedError;
+  set titleBgColor(int value) => throw _privateConstructorUsedError;
+  bool get animate => throw _privateConstructorUsedError;
+  set animate(bool value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -52,8 +57,10 @@ abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
       {String field,
       String deviceId,
       String title,
-      List<dynamic> ranges,
-      Map<String, dynamic> titleFont});
+      int titleBgColor,
+      bool animate,
+      Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont});
 }
 
 /// @nodoc
@@ -73,8 +80,10 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
     Object? field = null,
     Object? deviceId = null,
     Object? title = null,
-    Object? ranges = null,
+    Object? titleBgColor = null,
+    Object? animate = null,
     Object? titleFont = null,
+    Object? labelFont = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -89,13 +98,21 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      ranges: null == ranges
-          ? _value.ranges
-          : ranges // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      animate: null == animate
+          ? _value.animate
+          : animate // ignore: cast_nullable_to_non_nullable
+              as bool,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ) as $Val);
   }
@@ -114,8 +131,10 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
       {String field,
       String deviceId,
       String title,
-      List<dynamic> ranges,
-      Map<String, dynamic> titleFont});
+      int titleBgColor,
+      bool animate,
+      Map<String, dynamic> titleFont,
+      Map<String, dynamic> labelFont});
 }
 
 /// @nodoc
@@ -134,8 +153,10 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
     Object? field = null,
     Object? deviceId = null,
     Object? title = null,
-    Object? ranges = null,
+    Object? titleBgColor = null,
+    Object? animate = null,
     Object? titleFont = null,
+    Object? labelFont = null,
   }) {
     return _then(_$DeviceFieldRangeLabelDialWidgetConfigImpl(
       field: null == field
@@ -150,13 +171,21 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      ranges: null == ranges
-          ? _value.ranges
-          : ranges // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+      titleBgColor: null == titleBgColor
+          ? _value.titleBgColor
+          : titleBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      animate: null == animate
+          ? _value.animate
+          : animate // ignore: cast_nullable_to_non_nullable
+              as bool,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ));
   }
@@ -170,16 +199,18 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
       {this.field = '',
       this.deviceId = '',
       this.title = 'Range Label',
-      this.ranges = const [
-        {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
-        {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
-        {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
-        {'from': 76, 'color': 0xFFFFFFFF}
-      ],
+      this.titleBgColor = 0x00000000,
+      this.animate = true,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
         'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      },
+      this.labelFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFF000000,
         'fontBold': true
       }})
       : super._();
@@ -199,14 +230,20 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   String title;
   @override
   @JsonKey()
-  List<dynamic> ranges;
+  int titleBgColor;
+  @override
+  @JsonKey()
+  bool animate;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
 
   @override
   String toString() {
-    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, ranges: $ranges, titleFont: $titleFont)';
+    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, animate: $animate, titleFont: $titleFont, labelFont: $labelFont)';
   }
 
   @JsonKey(ignore: true)
@@ -231,8 +268,10 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
           {String field,
           String deviceId,
           String title,
-          List<dynamic> ranges,
-          Map<String, dynamic> titleFont}) =
+          int titleBgColor,
+          bool animate,
+          Map<String, dynamic> titleFont,
+          Map<String, dynamic> labelFont}) =
       _$DeviceFieldRangeLabelDialWidgetConfigImpl;
   _DeviceFieldRangeLabelDialWidgetConfig._() : super._();
 
@@ -250,11 +289,17 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   String get title;
   set title(String value);
   @override
-  List<dynamic> get ranges;
-  set ranges(List<dynamic> value);
+  int get titleBgColor;
+  set titleBgColor(int value);
+  @override
+  bool get animate;
+  set animate(bool value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<
