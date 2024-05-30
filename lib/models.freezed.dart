@@ -2150,6 +2150,8 @@ StaticTextWidgetConfig _$StaticTextWidgetConfigFromJson(
 mixin _$StaticTextWidgetConfig {
   String get value => throw _privateConstructorUsedError;
   set value(String value) => throw _privateConstructorUsedError;
+  int get fontColor => throw _privateConstructorUsedError;
+  set fontColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get font => throw _privateConstructorUsedError;
   set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
 
@@ -2165,7 +2167,7 @@ abstract class $StaticTextWidgetConfigCopyWith<$Res> {
           $Res Function(StaticTextWidgetConfig) then) =
       _$StaticTextWidgetConfigCopyWithImpl<$Res, StaticTextWidgetConfig>;
   @useResult
-  $Res call({String value, Map<String, dynamic> font});
+  $Res call({String value, int fontColor, Map<String, dynamic> font});
 }
 
 /// @nodoc
@@ -2183,6 +2185,7 @@ class _$StaticTextWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? value = null,
+    Object? fontColor = null,
     Object? font = null,
   }) {
     return _then(_value.copyWith(
@@ -2190,6 +2193,10 @@ class _$StaticTextWidgetConfigCopyWithImpl<$Res,
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
+      fontColor: null == fontColor
+          ? _value.fontColor
+          : fontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       font: null == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
@@ -2207,7 +2214,7 @@ abstract class _$$StaticTextWidgetConfigImplCopyWith<$Res>
       __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String value, Map<String, dynamic> font});
+  $Res call({String value, int fontColor, Map<String, dynamic> font});
 }
 
 /// @nodoc
@@ -2224,6 +2231,7 @@ class __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? value = null,
+    Object? fontColor = null,
     Object? font = null,
   }) {
     return _then(_$StaticTextWidgetConfigImpl(
@@ -2231,6 +2239,10 @@ class __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
+      fontColor: null == fontColor
+          ? _value.fontColor
+          : fontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       font: null == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
@@ -2244,10 +2256,11 @@ class __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>
 class _$StaticTextWidgetConfigImpl extends _StaticTextWidgetConfig {
   _$StaticTextWidgetConfigImpl(
       {this.value = '',
+      this.fontColor = 0x000000,
       this.font = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0,
         'fontBold': true
       }})
       : super._();
@@ -2260,11 +2273,14 @@ class _$StaticTextWidgetConfigImpl extends _StaticTextWidgetConfig {
   String value;
   @override
   @JsonKey()
+  int fontColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> font;
 
   @override
   String toString() {
-    return 'StaticTextWidgetConfig(value: $value, font: $font)';
+    return 'StaticTextWidgetConfig(value: $value, fontColor: $fontColor, font: $font)';
   }
 
   @JsonKey(ignore: true)
@@ -2283,8 +2299,10 @@ class _$StaticTextWidgetConfigImpl extends _StaticTextWidgetConfig {
 }
 
 abstract class _StaticTextWidgetConfig extends StaticTextWidgetConfig {
-  factory _StaticTextWidgetConfig({String value, Map<String, dynamic> font}) =
-      _$StaticTextWidgetConfigImpl;
+  factory _StaticTextWidgetConfig(
+      {String value,
+      int fontColor,
+      Map<String, dynamic> font}) = _$StaticTextWidgetConfigImpl;
   _StaticTextWidgetConfig._() : super._();
 
   factory _StaticTextWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -2293,6 +2311,9 @@ abstract class _StaticTextWidgetConfig extends StaticTextWidgetConfig {
   @override
   String get value;
   set value(String value);
+  @override
+  int get fontColor;
+  set fontColor(int value);
   @override
   Map<String, dynamic> get font;
   set font(Map<String, dynamic> value);
@@ -2315,6 +2336,10 @@ mixin _$DynamicTextWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  int get fontColor => throw _privateConstructorUsedError;
+  set fontColor(int value) => throw _privateConstructorUsedError;
+  int get titleFontColor => throw _privateConstructorUsedError;
+  set titleFontColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get font => throw _privateConstructorUsedError;
   set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -2337,6 +2362,8 @@ abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
       {String title,
       String field,
       String deviceId,
+      int fontColor,
+      int titleFontColor,
       Map<String, dynamic> font,
       Map<String, dynamic> titleFont});
 }
@@ -2358,6 +2385,8 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? field = null,
     Object? deviceId = null,
+    Object? fontColor = null,
+    Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
   }) {
@@ -2374,6 +2403,14 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fontColor: null == fontColor
+          ? _value.fontColor
+          : fontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      titleFontColor: null == titleFontColor
+          ? _value.titleFontColor
+          : titleFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       font: null == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
@@ -2399,6 +2436,8 @@ abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
       {String title,
       String field,
       String deviceId,
+      int fontColor,
+      int titleFontColor,
       Map<String, dynamic> font,
       Map<String, dynamic> titleFont});
 }
@@ -2419,6 +2458,8 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? field = null,
     Object? deviceId = null,
+    Object? fontColor = null,
+    Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
   }) {
@@ -2435,6 +2476,14 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fontColor: null == fontColor
+          ? _value.fontColor
+          : fontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      titleFontColor: null == titleFontColor
+          ? _value.titleFontColor
+          : titleFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       font: null == font
           ? _value.font
           : font // ignore: cast_nullable_to_non_nullable
@@ -2454,16 +2503,18 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       {this.title = '',
       this.field = '',
       this.deviceId = '',
+      this.fontColor = 0x000000,
+      this.titleFontColor = 0x000000,
       this.font = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': true
       },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x000000,
+        'fontColor': 0,
         'fontBold': true
       }})
       : super._();
@@ -2482,6 +2533,12 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
   String deviceId;
   @override
   @JsonKey()
+  int fontColor;
+  @override
+  @JsonKey()
+  int titleFontColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> font;
   @override
   @JsonKey()
@@ -2489,7 +2546,7 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
 
   @override
   String toString() {
-    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, font: $font, titleFont: $titleFont)';
+    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -2512,6 +2569,8 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
       {String title,
       String field,
       String deviceId,
+      int fontColor,
+      int titleFontColor,
       Map<String, dynamic> font,
       Map<String, dynamic> titleFont}) = _$DynamicTextWidgetConfigImpl;
   _DynamicTextWidgetConfig._() : super._();
@@ -2528,6 +2587,12 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  int get fontColor;
+  set fontColor(int value);
+  @override
+  int get titleFontColor;
+  set titleFontColor(int value);
   @override
   Map<String, dynamic> get font;
   set font(Map<String, dynamic> value);
@@ -2798,6 +2863,16 @@ mixin _$TimeStampWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  int get yearFontColor => throw _privateConstructorUsedError;
+  set yearFontColor(int value) => throw _privateConstructorUsedError;
+  int get monthFontColor => throw _privateConstructorUsedError;
+  set monthFontColor(int value) => throw _privateConstructorUsedError;
+  int get dateFontColor => throw _privateConstructorUsedError;
+  set dateFontColor(int value) => throw _privateConstructorUsedError;
+  int get timeFontColor => throw _privateConstructorUsedError;
+  set timeFontColor(int value) => throw _privateConstructorUsedError;
+  int get meridiemFontColor => throw _privateConstructorUsedError;
+  set meridiemFontColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get meridiemFont => throw _privateConstructorUsedError;
   set meridiemFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -2829,6 +2904,11 @@ abstract class $TimeStampWidgetConfigCopyWith<$Res> {
   $Res call(
       {String field,
       String deviceId,
+      int yearFontColor,
+      int monthFontColor,
+      int dateFontColor,
+      int timeFontColor,
+      int meridiemFontColor,
       Map<String, dynamic> meridiemFont,
       Map<String, dynamic> yearFont,
       Map<String, dynamic> monthFont,
@@ -2852,6 +2932,11 @@ class _$TimeStampWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? field = null,
     Object? deviceId = null,
+    Object? yearFontColor = null,
+    Object? monthFontColor = null,
+    Object? dateFontColor = null,
+    Object? timeFontColor = null,
+    Object? meridiemFontColor = null,
     Object? meridiemFont = null,
     Object? yearFont = null,
     Object? monthFont = null,
@@ -2867,6 +2952,26 @@ class _$TimeStampWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      yearFontColor: null == yearFontColor
+          ? _value.yearFontColor
+          : yearFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      monthFontColor: null == monthFontColor
+          ? _value.monthFontColor
+          : monthFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      dateFontColor: null == dateFontColor
+          ? _value.dateFontColor
+          : dateFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      timeFontColor: null == timeFontColor
+          ? _value.timeFontColor
+          : timeFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      meridiemFontColor: null == meridiemFontColor
+          ? _value.meridiemFontColor
+          : meridiemFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       meridiemFont: null == meridiemFont
           ? _value.meridiemFont
           : meridiemFont // ignore: cast_nullable_to_non_nullable
@@ -2903,6 +3008,11 @@ abstract class _$$TimeStampWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String field,
       String deviceId,
+      int yearFontColor,
+      int monthFontColor,
+      int dateFontColor,
+      int timeFontColor,
+      int meridiemFontColor,
       Map<String, dynamic> meridiemFont,
       Map<String, dynamic> yearFont,
       Map<String, dynamic> monthFont,
@@ -2924,6 +3034,11 @@ class __$$TimeStampWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? field = null,
     Object? deviceId = null,
+    Object? yearFontColor = null,
+    Object? monthFontColor = null,
+    Object? dateFontColor = null,
+    Object? timeFontColor = null,
+    Object? meridiemFontColor = null,
     Object? meridiemFont = null,
     Object? yearFont = null,
     Object? monthFont = null,
@@ -2939,6 +3054,26 @@ class __$$TimeStampWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      yearFontColor: null == yearFontColor
+          ? _value.yearFontColor
+          : yearFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      monthFontColor: null == monthFontColor
+          ? _value.monthFontColor
+          : monthFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      dateFontColor: null == dateFontColor
+          ? _value.dateFontColor
+          : dateFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      timeFontColor: null == timeFontColor
+          ? _value.timeFontColor
+          : timeFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      meridiemFontColor: null == meridiemFontColor
+          ? _value.meridiemFontColor
+          : meridiemFontColor // ignore: cast_nullable_to_non_nullable
+              as int,
       meridiemFont: null == meridiemFont
           ? _value.meridiemFont
           : meridiemFont // ignore: cast_nullable_to_non_nullable
@@ -2969,6 +3104,11 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
   _$TimeStampWidgetConfigImpl(
       {this.field = '',
       this.deviceId = '',
+      this.yearFontColor = 0x000000,
+      this.monthFontColor = 0x000000,
+      this.dateFontColor = 0x000000,
+      this.timeFontColor = 0x000000,
+      this.meridiemFontColor = 0x000000,
       this.meridiemFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
@@ -3012,6 +3152,21 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
   String deviceId;
   @override
   @JsonKey()
+  int yearFontColor;
+  @override
+  @JsonKey()
+  int monthFontColor;
+  @override
+  @JsonKey()
+  int dateFontColor;
+  @override
+  @JsonKey()
+  int timeFontColor;
+  @override
+  @JsonKey()
+  int meridiemFontColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> meridiemFont;
   @override
   @JsonKey()
@@ -3028,7 +3183,7 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
 
   @override
   String toString() {
-    return 'TimeStampWidgetConfig(field: $field, deviceId: $deviceId, meridiemFont: $meridiemFont, yearFont: $yearFont, monthFont: $monthFont, dateFont: $dateFont, timeFont: $timeFont)';
+    return 'TimeStampWidgetConfig(field: $field, deviceId: $deviceId, yearFontColor: $yearFontColor, monthFontColor: $monthFontColor, dateFontColor: $dateFontColor, timeFontColor: $timeFontColor, meridiemFontColor: $meridiemFontColor, meridiemFont: $meridiemFont, yearFont: $yearFont, monthFont: $monthFont, dateFont: $dateFont, timeFont: $timeFont)';
   }
 
   @JsonKey(ignore: true)
@@ -3050,6 +3205,11 @@ abstract class _TimeStampWidgetConfig extends TimeStampWidgetConfig {
   factory _TimeStampWidgetConfig(
       {String field,
       String deviceId,
+      int yearFontColor,
+      int monthFontColor,
+      int dateFontColor,
+      int timeFontColor,
+      int meridiemFontColor,
       Map<String, dynamic> meridiemFont,
       Map<String, dynamic> yearFont,
       Map<String, dynamic> monthFont,
@@ -3066,6 +3226,21 @@ abstract class _TimeStampWidgetConfig extends TimeStampWidgetConfig {
   @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  int get yearFontColor;
+  set yearFontColor(int value);
+  @override
+  int get monthFontColor;
+  set monthFontColor(int value);
+  @override
+  int get dateFontColor;
+  set dateFontColor(int value);
+  @override
+  int get timeFontColor;
+  set timeFontColor(int value);
+  @override
+  int get meridiemFontColor;
+  set meridiemFontColor(int value);
   @override
   Map<String, dynamic> get meridiemFont;
   set meridiemFont(Map<String, dynamic> value);
