@@ -750,9 +750,6 @@ class DynamicTextWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'fontColor':
-      case 'titleFontColor':
-        return DataType.numeric;
       case 'title':
       case 'field':
       case 'deviceId':
@@ -951,12 +948,6 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
       case 'field':
       case 'deviceId':
         return DataType.text;
-      case 'yearFontColor':
-      case 'monthFontColor':
-      case 'dateFontColor':
-      case 'timeFontColor':
-      case 'meridiemFontColor':
-        return DataType.numeric;
       case 'meridiemFont':
       case 'yearFont':
       case 'monthFont':
