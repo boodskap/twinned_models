@@ -242,11 +242,12 @@ _$StaticTextWidgetConfigImpl _$$StaticTextWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$StaticTextWidgetConfigImpl(
       value: json['value'] as String? ?? '',
+      fontColor: (json['fontColor'] as num?)?.toInt() ?? 0x000000,
       font: json['font'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0xFFFFFFFF,
+            'fontColor': 0,
             'fontBold': true
           },
     );
@@ -255,6 +256,7 @@ Map<String, dynamic> _$$StaticTextWidgetConfigImplToJson(
         _$StaticTextWidgetConfigImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
+      'fontColor': instance.fontColor,
       'font': instance.font,
     };
 
@@ -264,18 +266,20 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
       title: json['title'] as String? ?? '',
       field: json['field'] as String? ?? '',
       deviceId: json['deviceId'] as String? ?? '',
+      fontColor: (json['fontColor'] as num?)?.toInt() ?? 0x000000,
+      titleFontColor: (json['titleFontColor'] as num?)?.toInt() ?? 0x000000,
       font: json['font'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': true
           },
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0x000000,
+            'fontColor': 0,
             'fontBold': true
           },
     );
@@ -286,6 +290,8 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
       'title': instance.title,
       'field': instance.field,
       'deviceId': instance.deviceId,
+      'fontColor': instance.fontColor,
+      'titleFontColor': instance.titleFontColor,
       'font': instance.font,
       'titleFont': instance.titleFont,
     };
@@ -321,6 +327,12 @@ _$TimeStampWidgetConfigImpl _$$TimeStampWidgetConfigImplFromJson(
     _$TimeStampWidgetConfigImpl(
       field: json['field'] as String? ?? '',
       deviceId: json['deviceId'] as String? ?? '',
+      yearFontColor: (json['yearFontColor'] as num?)?.toInt() ?? 0x000000,
+      monthFontColor: (json['monthFontColor'] as num?)?.toInt() ?? 0x000000,
+      dateFontColor: (json['dateFontColor'] as num?)?.toInt() ?? 0x000000,
+      timeFontColor: (json['timeFontColor'] as num?)?.toInt() ?? 0x000000,
+      meridiemFontColor:
+          (json['meridiemFontColor'] as num?)?.toInt() ?? 0x000000,
       meridiemFont: json['meridiemFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -363,6 +375,11 @@ Map<String, dynamic> _$$TimeStampWidgetConfigImplToJson(
     <String, dynamic>{
       'field': instance.field,
       'deviceId': instance.deviceId,
+      'yearFontColor': instance.yearFontColor,
+      'monthFontColor': instance.monthFontColor,
+      'dateFontColor': instance.dateFontColor,
+      'timeFontColor': instance.timeFontColor,
+      'meridiemFontColor': instance.meridiemFontColor,
       'meridiemFont': instance.meridiemFont,
       'yearFont': instance.yearFont,
       'monthFont': instance.monthFont,

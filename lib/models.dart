@@ -650,10 +650,11 @@ class StaticTextWidgetConfig extends BaseConfig with _$StaticTextWidgetConfig {
 
   factory StaticTextWidgetConfig({
     @Default('') String value,
+    @Default(0x000000) int fontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0,
       'fontBold': true
     })
     Map<String, dynamic> font,
@@ -677,6 +678,8 @@ class StaticTextWidgetConfig extends BaseConfig with _$StaticTextWidgetConfig {
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
+      case 'fontColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -689,14 +692,7 @@ class StaticTextWidgetConfig extends BaseConfig with _$StaticTextWidgetConfig {
 
   @override
   String getLabel(String parameter) {
-    switch (parameter) {
-      case 'value':
-        return 'Text Value';
-      case 'font':
-        return 'Font Config';
-      default:
-        return parameter;
-    }
+    return parameter;
   }
 
   @override
@@ -730,17 +726,19 @@ class DynamicTextWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String field,
     @Default('') String deviceId,
+    @Default(0x000000) int fontColor,
+    @Default(0x000000) int titleFontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': true
     })
     Map<String, dynamic> font,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x000000,
+      'fontColor': 0,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
@@ -771,6 +769,9 @@ class DynamicTextWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'fontColor':
+      case 'titleFontColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -783,19 +784,7 @@ class DynamicTextWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    switch (parameter) {
-      case 'title':
-        return 'Title';
-      case 'field':
-        return 'Field Value';
-      case 'deviceId':
-        return 'Device ID';
-      case 'font':
-      case 'titleFont':
-        return 'Font Config';
-      default:
-        return parameter;
-    }
+    return parameter;
   }
 
   @override
@@ -908,6 +897,11 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
   factory TimeStampWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
+    @Default(0x000000) int yearFontColor,
+    @Default(0x000000) int monthFontColor,
+    @Default(0x000000) int dateFontColor,
+    @Default(0x000000) int timeFontColor,
+    @Default(0x000000) int meridiemFontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -972,6 +966,12 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'yearFontColor':
+      case 'monthFontColor':
+      case 'dateFontColor':
+      case 'timeFontColor':
+      case 'meridiemFontColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -984,20 +984,7 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
 
   @override
   String getLabel(String parameter) {
-    switch (parameter) {
-      case 'field':
-        return 'Field Value';
-      case 'deviceId':
-        return 'Device ID';
-      case 'meridiemFont':
-      case 'yearFont':
-      case 'monthFont':
-      case 'dateFont':
-      case 'timeFont':
-        return 'Font Config';
-      default:
-        return parameter;
-    }
+    return parameter;
   }
 
   @override
