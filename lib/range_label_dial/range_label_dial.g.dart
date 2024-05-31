@@ -14,7 +14,6 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Range Label',
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
-          animate: json['animate'] as bool? ?? true,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -29,6 +28,14 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          valueFont: json['valueFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 30,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
+          animate: json['animate'] as bool? ?? true,
         );
 
 Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
@@ -38,7 +45,8 @@ Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'title': instance.title,
       'titleBgColor': instance.titleBgColor,
-      'animate': instance.animate,
       'titleFont': instance.titleFont,
       'labelFont': instance.labelFont,
+      'valueFont': instance.valueFont,
+      'animate': instance.animate,
     };

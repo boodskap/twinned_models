@@ -14,7 +14,6 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default('Range Label') String title,
     @Default(0x00000000) int titleBgColor,
-    @Default(true) bool animate,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -29,6 +28,14 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 30,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default(true) bool animate,
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
   factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
@@ -50,6 +57,7 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
         return DataType.yesno;
       case 'titleFont':
       case 'labelFont':
+      case 'valueFont':
         return DataType.font;
       default:
         return DataType.text;
