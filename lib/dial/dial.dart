@@ -12,16 +12,10 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   factory DeviceMultiFieldDialWidgetConfig({
     @Default([]) List<String> field,
-    @Default([
-      {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
-      {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
-      {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
-      {'from': 76, 'color': 0xFFFFFFFF}
-    ])
-    List<dynamic> ranges,
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
+    @Default([]) List<int> axesColors,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -44,9 +38,9 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'field':
         return DataType.listOfTexts;
       case 'bgColor':
+      case 'axesColors':
         return DataType.numeric;
-      case 'range':
-        return DataType.listOfRanges;
+
       default:
         return DataType.text;
     }
@@ -60,6 +54,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'deviceId':
         return HintType.deviceId;
       case 'bgColor':
+      case 'axesColors':
         return HintType.color;
 
       default:
@@ -88,7 +83,6 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
-        return true;
       default:
         return false;
     }
@@ -98,4 +92,6 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   bool isValid(String parameter, value) {
     return true;
   }
+
+  
 }
