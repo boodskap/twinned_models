@@ -809,7 +809,12 @@ class DynamicTextWidgetConfig extends BaseConfig
         return DataType.text;
       case 'font':
       case 'titleFont':
+      case 'prefixFont':
+      case 'suffixFont':
         return DataType.font;
+         case 'prefixTextAlignment':
+      case 'suffixTextAlignment':
+        return DataType.enumerated;
       case 'width':
       case 'height':
         return DataType.numeric;
