@@ -1,3 +1,5 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -717,6 +719,33 @@ class StaticTextWidgetConfig extends BaseConfig with _$StaticTextWidgetConfig {
   }
 }
 
+enum TextAlignment {
+  center,
+  centerRight,
+  centerLeft,
+  topCenter,
+  topLeft,
+  topRight,
+  bottomCenter,
+  bottomLeft,
+  bottomRight,
+}
+
+class AlignmentConverter implements JsonConverter<Alignment, Map<String, double>> {
+  const AlignmentConverter();
+
+  @override
+  Alignment fromJson(Map<String, double> json) {
+    return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
+  }
+
+  @override
+  Map<String, double> toJson(Alignment alignment) {
+    return {'x': alignment.x, 'y': alignment.y};
+  }
+}
+
+
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
     with _$DynamicTextWidgetConfig {
@@ -742,6 +771,24 @@ class DynamicTextWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default('') String prefixText,
+    @Default('') String suffixText,
+     @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0x000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> prefixFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0x000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> suffixFont,
+    @AlignmentConverter() @Default(Alignment.centerLeft) Alignment prefixTextAlignment,
+    @AlignmentConverter() @Default(Alignment.centerRight) Alignment suffixTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -779,7 +826,13 @@ class DynamicTextWidgetConfig extends BaseConfig
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    return [];
+    switch(parameter){
+      case 'prefixTextAlignment':
+       case 'suffixTextAlignment':
+       return TextAlignment.values.asNameMap().keys.toList();
+      default:
+      return [];
+    }
   }
 
   @override
