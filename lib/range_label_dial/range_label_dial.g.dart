@@ -35,7 +35,7 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          animate: json['animate'] as bool? ?? true,
+          gaugeAnimate: json['gaugeAnimate'] as bool? ?? true,
           ranges: json['ranges'] as List<dynamic>? ??
               const [
                 {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
@@ -67,7 +67,7 @@ Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
       'titleFont': instance.titleFont,
       'labelFont': instance.labelFont,
       'valueFont': instance.valueFont,
-      'animate': instance.animate,
+      'gaugeAnimate': instance.gaugeAnimate,
       'ranges': instance.ranges,
       'positionFactor': instance.positionFactor,
       'radiusFactor': instance.radiusFactor,

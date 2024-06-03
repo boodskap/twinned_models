@@ -38,8 +38,8 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  bool get animate => throw _privateConstructorUsedError;
-  set animate(bool value) => throw _privateConstructorUsedError;
+  bool get gaugeAnimate => throw _privateConstructorUsedError;
+  set gaugeAnimate(bool value) => throw _privateConstructorUsedError;
   List<dynamic> get ranges => throw _privateConstructorUsedError;
   set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
   double get positionFactor => throw _privateConstructorUsedError;
@@ -80,7 +80,7 @@ abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate,
+      bool gaugeAnimate,
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
@@ -112,7 +112,7 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
     Object? titleFont = null,
     Object? labelFont = null,
     Object? valueFont = null,
-    Object? animate = null,
+    Object? gaugeAnimate = null,
     Object? ranges = null,
     Object? positionFactor = null,
     Object? radiusFactor = null,
@@ -151,9 +151,9 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      animate: null == animate
-          ? _value.animate
-          : animate // ignore: cast_nullable_to_non_nullable
+      gaugeAnimate: null == gaugeAnimate
+          ? _value.gaugeAnimate
+          : gaugeAnimate // ignore: cast_nullable_to_non_nullable
               as bool,
       ranges: null == ranges
           ? _value.ranges
@@ -208,7 +208,7 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate,
+      bool gaugeAnimate,
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
@@ -239,7 +239,7 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
     Object? titleFont = null,
     Object? labelFont = null,
     Object? valueFont = null,
-    Object? animate = null,
+    Object? gaugeAnimate = null,
     Object? ranges = null,
     Object? positionFactor = null,
     Object? radiusFactor = null,
@@ -278,9 +278,9 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      animate: null == animate
-          ? _value.animate
-          : animate // ignore: cast_nullable_to_non_nullable
+      gaugeAnimate: null == gaugeAnimate
+          ? _value.gaugeAnimate
+          : gaugeAnimate // ignore: cast_nullable_to_non_nullable
               as bool,
       ranges: null == ranges
           ? _value.ranges
@@ -345,7 +345,7 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.animate = true,
+      this.gaugeAnimate = true,
       this.ranges = const [
         {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
         {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
@@ -388,7 +388,7 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  bool animate;
+  bool gaugeAnimate;
   @override
   @JsonKey()
   List<dynamic> ranges;
@@ -416,7 +416,7 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, animate: $animate, ranges: $ranges, positionFactor: $positionFactor, radiusFactor: $radiusFactor, dialStartWidth: $dialStartWidth, dialEndWidth: $dialEndWidth, angle: $angle, axisThickness: $axisThickness, showLabel: $showLabel)';
+    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, gaugeAnimate: $gaugeAnimate, ranges: $ranges, positionFactor: $positionFactor, radiusFactor: $radiusFactor, dialStartWidth: $dialStartWidth, dialEndWidth: $dialEndWidth, angle: $angle, axisThickness: $axisThickness, showLabel: $showLabel)';
   }
 
   @JsonKey(ignore: true)
@@ -445,7 +445,7 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate,
+      bool gaugeAnimate,
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
@@ -482,8 +482,8 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  bool get animate;
-  set animate(bool value);
+  bool get gaugeAnimate;
+  set gaugeAnimate(bool value);
   @override
   List<dynamic> get ranges;
   set ranges(List<dynamic> value);
