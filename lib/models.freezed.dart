@@ -2345,6 +2345,10 @@ mixin _$DynamicTextWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
+  set width(int value) => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
+  set height(int value) => throw _privateConstructorUsedError;
   String get prefixText => throw _privateConstructorUsedError;
   set prefixText(String value) => throw _privateConstructorUsedError;
   String get suffixText => throw _privateConstructorUsedError;
@@ -2386,6 +2390,8 @@ abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
       int titleFontColor,
       Map<String, dynamic> font,
       Map<String, dynamic> titleFont,
+      int width,
+      int height,
       String prefixText,
       String suffixText,
       Map<String, dynamic> prefixFont,
@@ -2415,6 +2421,8 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
     Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
+    Object? width = null,
+    Object? height = null,
     Object? prefixText = null,
     Object? suffixText = null,
     Object? prefixFont = null,
@@ -2451,6 +2459,14 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
       prefixText: null == prefixText
           ? _value.prefixText
           : prefixText // ignore: cast_nullable_to_non_nullable
@@ -2496,6 +2512,8 @@ abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
       int titleFontColor,
       Map<String, dynamic> font,
       Map<String, dynamic> titleFont,
+      int width,
+      int height,
       String prefixText,
       String suffixText,
       Map<String, dynamic> prefixFont,
@@ -2524,6 +2542,8 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
     Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
+    Object? width = null,
+    Object? height = null,
     Object? prefixText = null,
     Object? suffixText = null,
     Object? prefixFont = null,
@@ -2560,6 +2580,14 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
       prefixText: null == prefixText
           ? _value.prefixText
           : prefixText // ignore: cast_nullable_to_non_nullable
@@ -2609,6 +2637,8 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
         'fontColor': 0,
         'fontBold': true
       },
+      this.width = 150,
+      this.height = 50,
       this.prefixText = '',
       this.suffixText = '',
       this.prefixFont = const {
@@ -2653,6 +2683,12 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
+  int width;
+  @override
+  @JsonKey()
+  int height;
+  @override
+  @JsonKey()
   String prefixText;
   @override
   @JsonKey()
@@ -2674,7 +2710,7 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
 
   @override
   String toString() {
-    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment)';
+    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, width: $width, height: $height, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment)';
   }
 
   @JsonKey(ignore: true)
@@ -2701,6 +2737,8 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
           int titleFontColor,
           Map<String, dynamic> font,
           Map<String, dynamic> titleFont,
+          int width,
+          int height,
           String prefixText,
           String suffixText,
           Map<String, dynamic> prefixFont,
@@ -2734,6 +2772,12 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  int get width;
+  set width(int value);
+  @override
+  int get height;
+  set height(int value);
   @override
   String get prefixText;
   set prefixText(String value);
