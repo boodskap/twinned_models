@@ -2666,7 +2666,7 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       },
       this.prefixTextAlignment = TextAlignment.centerLeft,
       this.suffixTextAlignment = TextAlignment.centerRight,
-      this.valueTextAlignment = TextAlignment.centerRight})
+      this.valueTextAlignment = TextAlignment.center})
       : super._();
 
   factory _$DynamicTextWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>

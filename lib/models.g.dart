@@ -308,7 +308,7 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
           TextAlignment.centerRight,
       valueTextAlignment: $enumDecodeNullable(
               _$TextAlignmentEnumMap, json['valueTextAlignment']) ??
-          TextAlignment.centerRight,
+          TextAlignment.center,
     );
 
 Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
