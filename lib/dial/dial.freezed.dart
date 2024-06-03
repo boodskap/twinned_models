@@ -34,6 +34,8 @@ mixin _$DeviceMultiFieldDialWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  List<dynamic> get ranges => throw _privateConstructorUsedError;
+  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -55,7 +57,8 @@ abstract class $DeviceMultiFieldDialWidgetConfigCopyWith<$Res> {
       String deviceId,
       String title,
       int titleBgColor,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      List<dynamic> ranges});
 }
 
 /// @nodoc
@@ -78,6 +81,7 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? titleBgColor = null,
     Object? titleFont = null,
+    Object? ranges = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -104,6 +108,10 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ) as $Val);
   }
 }
@@ -123,7 +131,8 @@ abstract class _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String title,
       int titleBgColor,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      List<dynamic> ranges});
 }
 
 /// @nodoc
@@ -145,6 +154,7 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? titleBgColor = null,
     Object? titleFont = null,
+    Object? ranges = null,
   }) {
     return _then(_$DeviceMultiFieldDialWidgetConfigImpl(
       field: null == field
@@ -171,6 +181,10 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
     ));
   }
 }
@@ -190,7 +204,13 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
         'fontSize': 30,
         'fontColor': 0xFF000000,
         'fontBold': true
-      }})
+      },
+      this.ranges = const [
+        {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+        {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
+        {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+        {'from': 76, 'color': 0xFF000000, 'label': 'High'}
+      ]})
       : super._();
 
   factory _$DeviceMultiFieldDialWidgetConfigImpl.fromJson(
@@ -215,10 +235,13 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  List<dynamic> ranges;
 
   @override
   String toString() {
-    return 'DeviceMultiFieldDialWidgetConfig(field: $field, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont)';
+    return 'DeviceMultiFieldDialWidgetConfig(field: $field, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, ranges: $ranges)';
   }
 
   @JsonKey(ignore: true)
@@ -245,7 +268,8 @@ abstract class _DeviceMultiFieldDialWidgetConfig
       String deviceId,
       String title,
       int titleBgColor,
-      Map<String, dynamic> titleFont}) = _$DeviceMultiFieldDialWidgetConfigImpl;
+      Map<String, dynamic> titleFont,
+      List<dynamic> ranges}) = _$DeviceMultiFieldDialWidgetConfigImpl;
   _DeviceMultiFieldDialWidgetConfig._() : super._();
 
   factory _DeviceMultiFieldDialWidgetConfig.fromJson(
@@ -270,6 +294,9 @@ abstract class _DeviceMultiFieldDialWidgetConfig
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  List<dynamic> get ranges;
+  set ranges(List<dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<
