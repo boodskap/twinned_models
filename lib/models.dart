@@ -731,20 +731,20 @@ enum TextAlignment {
   bottomRight,
 }
 
-class AlignmentConverter
-    implements JsonConverter<Alignment, Map<String, double>> {
-  const AlignmentConverter();
+// class AlignmentConverter
+//     implements JsonConverter<Alignment, Map<String, double>> {
+//   const AlignmentConverter();
 
-  @override
-  Alignment fromJson(Map<String, double> json) {
-    return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
-  }
+//   @override
+//   Alignment fromJson(Map<String, double> json) {
+//     return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
+//   }
 
-  @override
-  Map<String, double> toJson(Alignment alignment) {
-    return {'x': alignment.x, 'y': alignment.y};
-  }
-}
+//   @override
+//   Map<String, double> toJson(Alignment alignment) {
+//     return {'x': alignment.x, 'y': alignment.y};
+//   }
+// }
 
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
@@ -789,12 +789,12 @@ class DynamicTextWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> suffixFont,
-    @AlignmentConverter()
-    @Default(Alignment.centerLeft)
-    Alignment prefixTextAlignment,
-    @AlignmentConverter()
-    @Default(Alignment.centerRight)
-    Alignment suffixTextAlignment,
+    
+    @Default(TextAlignment.centerLeft)
+    TextAlignment prefixTextAlignment,
+    
+    @Default(TextAlignment.centerRight)
+    TextAlignment suffixTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -812,6 +812,9 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'prefixFont':
       case 'suffixFont':
       return DataType.font;
+      case 'prefixTextAlignment':
+      case 'suffixTextAlignment':
+      return DataType.enumerated;
       case 'width':
       case 'height':
         return DataType.numeric;
