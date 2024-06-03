@@ -795,6 +795,8 @@ class DynamicTextWidgetConfig extends BaseConfig
     
     @Default(TextAlignment.centerRight)
     TextAlignment suffixTextAlignment,
+    @Default(TextAlignment.centerRight)
+    TextAlignment valueTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -814,6 +816,7 @@ class DynamicTextWidgetConfig extends BaseConfig
       return DataType.font;
       case 'prefixTextAlignment':
       case 'suffixTextAlignment':
+      case 'valueTextAlignment':
       return DataType.enumerated;
       case 'width':
       case 'height':

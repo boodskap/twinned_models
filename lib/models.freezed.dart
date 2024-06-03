@@ -2365,6 +2365,9 @@ mixin _$DynamicTextWidgetConfig {
   TextAlignment get suffixTextAlignment => throw _privateConstructorUsedError;
   set suffixTextAlignment(TextAlignment value) =>
       throw _privateConstructorUsedError;
+  TextAlignment get valueTextAlignment => throw _privateConstructorUsedError;
+  set valueTextAlignment(TextAlignment value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2393,7 +2396,8 @@ abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       TextAlignment prefixTextAlignment,
-      TextAlignment suffixTextAlignment});
+      TextAlignment suffixTextAlignment,
+      TextAlignment valueTextAlignment});
 }
 
 /// @nodoc
@@ -2425,6 +2429,7 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
     Object? suffixFont = null,
     Object? prefixTextAlignment = null,
     Object? suffixTextAlignment = null,
+    Object? valueTextAlignment = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -2487,6 +2492,10 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
           ? _value.suffixTextAlignment
           : suffixTextAlignment // ignore: cast_nullable_to_non_nullable
               as TextAlignment,
+      valueTextAlignment: null == valueTextAlignment
+          ? _value.valueTextAlignment
+          : valueTextAlignment // ignore: cast_nullable_to_non_nullable
+              as TextAlignment,
     ) as $Val);
   }
 }
@@ -2515,7 +2524,8 @@ abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       TextAlignment prefixTextAlignment,
-      TextAlignment suffixTextAlignment});
+      TextAlignment suffixTextAlignment,
+      TextAlignment valueTextAlignment});
 }
 
 /// @nodoc
@@ -2546,6 +2556,7 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
     Object? suffixFont = null,
     Object? prefixTextAlignment = null,
     Object? suffixTextAlignment = null,
+    Object? valueTextAlignment = null,
   }) {
     return _then(_$DynamicTextWidgetConfigImpl(
       title: null == title
@@ -2608,6 +2619,10 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.suffixTextAlignment
           : suffixTextAlignment // ignore: cast_nullable_to_non_nullable
               as TextAlignment,
+      valueTextAlignment: null == valueTextAlignment
+          ? _value.valueTextAlignment
+          : valueTextAlignment // ignore: cast_nullable_to_non_nullable
+              as TextAlignment,
     ));
   }
 }
@@ -2650,7 +2665,8 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
         'fontBold': true
       },
       this.prefixTextAlignment = TextAlignment.centerLeft,
-      this.suffixTextAlignment = TextAlignment.centerRight})
+      this.suffixTextAlignment = TextAlignment.centerRight,
+      this.valueTextAlignment = TextAlignment.centerRight})
       : super._();
 
   factory _$DynamicTextWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -2701,10 +2717,13 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
   @override
   @JsonKey()
   TextAlignment suffixTextAlignment;
+  @override
+  @JsonKey()
+  TextAlignment valueTextAlignment;
 
   @override
   String toString() {
-    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, width: $width, height: $height, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment)';
+    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, width: $width, height: $height, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment, valueTextAlignment: $valueTextAlignment)';
   }
 
   @JsonKey(ignore: true)
@@ -2738,7 +2757,8 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       TextAlignment prefixTextAlignment,
-      TextAlignment suffixTextAlignment}) = _$DynamicTextWidgetConfigImpl;
+      TextAlignment suffixTextAlignment,
+      TextAlignment valueTextAlignment}) = _$DynamicTextWidgetConfigImpl;
   _DynamicTextWidgetConfig._() : super._();
 
   factory _DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -2789,6 +2809,9 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   TextAlignment get suffixTextAlignment;
   set suffixTextAlignment(TextAlignment value);
+  @override
+  TextAlignment get valueTextAlignment;
+  set valueTextAlignment(TextAlignment value);
   @override
   @JsonKey(ignore: true)
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
