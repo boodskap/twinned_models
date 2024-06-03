@@ -27,7 +27,7 @@ _$DeviceFieldPercentageWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          unfillColor: (json['unfillColor'] as num?)?.toInt() ?? 0xbfbfbf,
+          unfillColor: (json['unfillColor'] as num?)?.toInt() ?? 0xf8f8f8,
           fillColor: (json['fillColor'] as num?)?.toInt() ?? 0x0000FF,
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
           progressbarWidth:
