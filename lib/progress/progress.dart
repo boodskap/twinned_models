@@ -7,7 +7,7 @@ part 'progress.g.dart';
 
 enum PercentageWidgetShape {
   circle,
-  rectangle,
+  linear,
 }
 
 @unfreezed
@@ -28,20 +28,17 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
-    @Default(0xFFFFFFFF) int bgColor,
-    @Default(0xFFFFEBEE) int borderColor,
+    @Default(0xFFFFFFFF) int unfillColor,
     @Default(0xFFFFEBEE) int fillColor,
     @Default(0x00000000) int titleBgColor,
-    @Default(1.0) double borderWidth,
-    @Default(12.0) double borderRadius,
-    @Default(true) bool animate,
-    @Default(PercentageWidgetShape.rectangle) PercentageWidgetShape shape,
-    @Default(Axis.vertical) Axis waveDirection,
+    @Default(20.0) double progressbarWidth,
+    @Default(120.0) double circularRadius,
+    @Default(PercentageWidgetShape.linear) PercentageWidgetShape shape,
   }) = _DeviceFieldPercentageWidgetConfig;
 
   factory DeviceFieldPercentageWidgetConfig.fromJson(
@@ -58,16 +55,13 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       case 'titleFont':
       case 'labelFont':
         return DataType.font;
-      case 'bgColor':
-      case 'borderColor':
+      case 'unfillColor':
       case 'fillColor':
       case 'titleBgColor':
         return DataType.numeric;
-      case 'borderWidth':
-      case 'borderRadius':
+      case 'progressbarWidth':
+      case 'circularRadius':
         return DataType.decimal;
-      case 'animate':
-        return DataType.yesno;
       case 'shape':
       case 'waveDirection':
         return DataType.enumerated;
@@ -79,8 +73,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'bgColor':
-      case 'borderColor':
+      case 'unfillColor':
       case 'fillColor':
       case 'titleBgColor':
         return HintType.color;
