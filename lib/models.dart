@@ -731,7 +731,8 @@ enum TextAlignment {
   bottomRight,
 }
 
-class AlignmentConverter implements JsonConverter<Alignment, Map<String, double>> {
+class AlignmentConverter
+    implements JsonConverter<Alignment, Map<String, double>> {
   const AlignmentConverter();
 
   @override
@@ -744,7 +745,6 @@ class AlignmentConverter implements JsonConverter<Alignment, Map<String, double>
     return {'x': alignment.x, 'y': alignment.y};
   }
 }
-
 
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
@@ -771,9 +771,11 @@ class DynamicTextWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default(150) int width,
+    @Default(50) int height,
     @Default('') String prefixText,
     @Default('') String suffixText,
-     @Default({
+    @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0x000000,
@@ -787,8 +789,12 @@ class DynamicTextWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> suffixFont,
-    @AlignmentConverter() @Default(Alignment.centerLeft) Alignment prefixTextAlignment,
-    @AlignmentConverter() @Default(Alignment.centerRight) Alignment suffixTextAlignment,
+    @AlignmentConverter()
+    @Default(Alignment.centerLeft)
+    Alignment prefixTextAlignment,
+    @AlignmentConverter()
+    @Default(Alignment.centerRight)
+    Alignment suffixTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -803,7 +809,15 @@ class DynamicTextWidgetConfig extends BaseConfig
         return DataType.text;
       case 'font':
       case 'titleFont':
+      case 'prefixFont':
+      case 'suffixFont':
         return DataType.font;
+         case 'prefixTextAlignment':
+      case 'suffixTextAlignment':
+        return DataType.enumerated;
+      case 'width':
+      case 'height':
+        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -826,12 +840,12 @@ class DynamicTextWidgetConfig extends BaseConfig
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    switch(parameter){
+    switch (parameter) {
       case 'prefixTextAlignment':
-       case 'suffixTextAlignment':
-       return TextAlignment.values.asNameMap().keys.toList();
+      case 'suffixTextAlignment':
+        return TextAlignment.values.asNameMap().keys.toList();
       default:
-      return [];
+        return [];
     }
   }
 
