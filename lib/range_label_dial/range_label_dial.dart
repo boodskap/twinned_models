@@ -36,6 +36,13 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> valueFont,
     @Default(true) bool animate,
+    @Default([
+      {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+      {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
+      {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+      {'from': 76, 'color': 0xFF000000, 'label': 'High'},
+    ])
+    List<dynamic> ranges,
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
   factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
