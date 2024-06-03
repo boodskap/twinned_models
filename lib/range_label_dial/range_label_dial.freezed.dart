@@ -46,14 +46,14 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   set positionFactor(double value) => throw _privateConstructorUsedError;
   double get radiusFactor => throw _privateConstructorUsedError;
   set radiusFactor(double value) => throw _privateConstructorUsedError;
-  int get dialStartWidth => throw _privateConstructorUsedError;
-  set dialStartWidth(int value) => throw _privateConstructorUsedError;
-  int get dialEndWidth => throw _privateConstructorUsedError;
-  set dialEndWidth(int value) => throw _privateConstructorUsedError;
-  int get angle => throw _privateConstructorUsedError;
-  set angle(int value) => throw _privateConstructorUsedError;
-  int get axisThickness => throw _privateConstructorUsedError;
-  set axisThickness(int value) => throw _privateConstructorUsedError;
+  double get dialStartWidth => throw _privateConstructorUsedError;
+  set dialStartWidth(double value) => throw _privateConstructorUsedError;
+  double get dialEndWidth => throw _privateConstructorUsedError;
+  set dialEndWidth(double value) => throw _privateConstructorUsedError;
+  double get angle => throw _privateConstructorUsedError;
+  set angle(double value) => throw _privateConstructorUsedError;
+  double get axisThickness => throw _privateConstructorUsedError;
+  set axisThickness(double value) => throw _privateConstructorUsedError;
   bool get showLabel => throw _privateConstructorUsedError;
   set showLabel(bool value) => throw _privateConstructorUsedError;
 
@@ -84,10 +84,10 @@ abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
-      int dialStartWidth,
-      int dialEndWidth,
-      int angle,
-      int axisThickness,
+      double dialStartWidth,
+      double dialEndWidth,
+      double angle,
+      double axisThickness,
       bool showLabel});
 }
 
@@ -170,19 +170,19 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
       dialStartWidth: null == dialStartWidth
           ? _value.dialStartWidth
           : dialStartWidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       dialEndWidth: null == dialEndWidth
           ? _value.dialEndWidth
           : dialEndWidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       angle: null == angle
           ? _value.angle
           : angle // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       axisThickness: null == axisThickness
           ? _value.axisThickness
           : axisThickness // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       showLabel: null == showLabel
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
@@ -212,10 +212,10 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
-      int dialStartWidth,
-      int dialEndWidth,
-      int angle,
-      int axisThickness,
+      double dialStartWidth,
+      double dialEndWidth,
+      double angle,
+      double axisThickness,
       bool showLabel});
 }
 
@@ -297,19 +297,19 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
       dialStartWidth: null == dialStartWidth
           ? _value.dialStartWidth
           : dialStartWidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       dialEndWidth: null == dialEndWidth
           ? _value.dialEndWidth
           : dialEndWidth // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       angle: null == angle
           ? _value.angle
           : angle // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       axisThickness: null == axisThickness
           ? _value.axisThickness
           : axisThickness // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       showLabel: null == showLabel
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
@@ -400,16 +400,16 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   double radiusFactor;
   @override
   @JsonKey()
-  int dialStartWidth;
+  double dialStartWidth;
   @override
   @JsonKey()
-  int dialEndWidth;
+  double dialEndWidth;
   @override
   @JsonKey()
-  int angle;
+  double angle;
   @override
   @JsonKey()
-  int axisThickness;
+  double axisThickness;
   @override
   @JsonKey()
   bool showLabel;
@@ -449,10 +449,10 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
       List<dynamic> ranges,
       double positionFactor,
       double radiusFactor,
-      int dialStartWidth,
-      int dialEndWidth,
-      int angle,
-      int axisThickness,
+      double dialStartWidth,
+      double dialEndWidth,
+      double angle,
+      double axisThickness,
       bool showLabel}) = _$DeviceFieldRangeLabelDialWidgetConfigImpl;
   _DeviceFieldRangeLabelDialWidgetConfig._() : super._();
 
@@ -494,17 +494,17 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   double get radiusFactor;
   set radiusFactor(double value);
   @override
-  int get dialStartWidth;
-  set dialStartWidth(int value);
+  double get dialStartWidth;
+  set dialStartWidth(double value);
   @override
-  int get dialEndWidth;
-  set dialEndWidth(int value);
+  double get dialEndWidth;
+  set dialEndWidth(double value);
   @override
-  int get angle;
-  set angle(int value);
+  double get angle;
+  set angle(double value);
   @override
-  int get axisThickness;
-  set axisThickness(int value);
+  double get axisThickness;
+  set axisThickness(double value);
   @override
   bool get showLabel;
   set showLabel(bool value);
