@@ -843,6 +843,7 @@ class DynamicTextWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'prefixTextAlignment':
       case 'suffixTextAlignment':
+      case 'valueTextAlignment':
         return TextAlignment.values.asNameMap().keys.toList();
       default:
         return [];
