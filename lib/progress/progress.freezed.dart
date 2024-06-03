@@ -266,8 +266,8 @@ class _$DeviceFieldPercentageWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.unfillColor = 0xf8f8f8,
-      this.fillColor = 0x0000FF,
+      this.unfillColor = 0xFFD3E3FD,
+      this.fillColor = 0xFF4F9FDE,
       this.titleBgColor = 0x00000000,
       this.progressbarWidth = 20.0,
       this.circularRadius = 120.0,
