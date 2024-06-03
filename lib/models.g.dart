@@ -300,14 +300,12 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
             'fontColor': 0x000000,
             'fontBold': true
           },
-      prefixTextAlignment: json['prefixTextAlignment'] == null
-          ? Alignment.centerLeft
-          : const AlignmentConverter()
-              .fromJson(json['prefixTextAlignment'] as Map<String, double>),
-      suffixTextAlignment: json['suffixTextAlignment'] == null
-          ? Alignment.centerRight
-          : const AlignmentConverter()
-              .fromJson(json['suffixTextAlignment'] as Map<String, double>),
+      prefixTextAlignment: $enumDecodeNullable(
+              _$TextAlignmentEnumMap, json['prefixTextAlignment']) ??
+          TextAlignment.centerLeft,
+      suffixTextAlignment: $enumDecodeNullable(
+              _$TextAlignmentEnumMap, json['suffixTextAlignment']) ??
+          TextAlignment.centerRight,
     );
 
 Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
@@ -327,10 +325,22 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'prefixTextAlignment':
-          const AlignmentConverter().toJson(instance.prefixTextAlignment),
+          _$TextAlignmentEnumMap[instance.prefixTextAlignment]!,
       'suffixTextAlignment':
-          const AlignmentConverter().toJson(instance.suffixTextAlignment),
+          _$TextAlignmentEnumMap[instance.suffixTextAlignment]!,
     };
+
+const _$TextAlignmentEnumMap = {
+  TextAlignment.center: 'center',
+  TextAlignment.centerRight: 'centerRight',
+  TextAlignment.centerLeft: 'centerLeft',
+  TextAlignment.topCenter: 'topCenter',
+  TextAlignment.topLeft: 'topLeft',
+  TextAlignment.topRight: 'topRight',
+  TextAlignment.bottomCenter: 'bottomCenter',
+  TextAlignment.bottomLeft: 'bottomLeft',
+  TextAlignment.bottomRight: 'bottomRight',
+};
 
 _$MultipleDeviceModelChartWidgetConfigImpl
     _$$MultipleDeviceModelChartWidgetConfigImplFromJson(
