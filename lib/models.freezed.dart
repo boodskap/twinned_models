@@ -2345,6 +2345,26 @@ mixin _$DynamicTextWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  String get prefixText => throw _privateConstructorUsedError;
+  set prefixText(String value) => throw _privateConstructorUsedError;
+  String get suffixText => throw _privateConstructorUsedError;
+  set suffixText(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get prefixFont => throw _privateConstructorUsedError;
+  set prefixFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get suffixFont => throw _privateConstructorUsedError;
+  set suffixFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  @AlignmentConverter()
+  Alignment get prefixTextAlignment => throw _privateConstructorUsedError;
+  @AlignmentConverter()
+  set prefixTextAlignment(Alignment value) =>
+      throw _privateConstructorUsedError;
+  @AlignmentConverter()
+  Alignment get suffixTextAlignment => throw _privateConstructorUsedError;
+  @AlignmentConverter()
+  set suffixTextAlignment(Alignment value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2365,7 +2385,13 @@ abstract class $DynamicTextWidgetConfigCopyWith<$Res> {
       int fontColor,
       int titleFontColor,
       Map<String, dynamic> font,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      String prefixText,
+      String suffixText,
+      Map<String, dynamic> prefixFont,
+      Map<String, dynamic> suffixFont,
+      @AlignmentConverter() Alignment prefixTextAlignment,
+      @AlignmentConverter() Alignment suffixTextAlignment});
 }
 
 /// @nodoc
@@ -2389,6 +2415,12 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
     Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
+    Object? prefixText = null,
+    Object? suffixText = null,
+    Object? prefixFont = null,
+    Object? suffixFont = null,
+    Object? prefixTextAlignment = null,
+    Object? suffixTextAlignment = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -2419,6 +2451,30 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      prefixText: null == prefixText
+          ? _value.prefixText
+          : prefixText // ignore: cast_nullable_to_non_nullable
+              as String,
+      suffixText: null == suffixText
+          ? _value.suffixText
+          : suffixText // ignore: cast_nullable_to_non_nullable
+              as String,
+      prefixFont: null == prefixFont
+          ? _value.prefixFont
+          : prefixFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      suffixFont: null == suffixFont
+          ? _value.suffixFont
+          : suffixFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      prefixTextAlignment: null == prefixTextAlignment
+          ? _value.prefixTextAlignment
+          : prefixTextAlignment // ignore: cast_nullable_to_non_nullable
+              as Alignment,
+      suffixTextAlignment: null == suffixTextAlignment
+          ? _value.suffixTextAlignment
+          : suffixTextAlignment // ignore: cast_nullable_to_non_nullable
+              as Alignment,
     ) as $Val);
   }
 }
@@ -2439,7 +2495,13 @@ abstract class _$$DynamicTextWidgetConfigImplCopyWith<$Res>
       int fontColor,
       int titleFontColor,
       Map<String, dynamic> font,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      String prefixText,
+      String suffixText,
+      Map<String, dynamic> prefixFont,
+      Map<String, dynamic> suffixFont,
+      @AlignmentConverter() Alignment prefixTextAlignment,
+      @AlignmentConverter() Alignment suffixTextAlignment});
 }
 
 /// @nodoc
@@ -2462,6 +2524,12 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
     Object? titleFontColor = null,
     Object? font = null,
     Object? titleFont = null,
+    Object? prefixText = null,
+    Object? suffixText = null,
+    Object? prefixFont = null,
+    Object? suffixFont = null,
+    Object? prefixTextAlignment = null,
+    Object? suffixTextAlignment = null,
   }) {
     return _then(_$DynamicTextWidgetConfigImpl(
       title: null == title
@@ -2492,6 +2560,30 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      prefixText: null == prefixText
+          ? _value.prefixText
+          : prefixText // ignore: cast_nullable_to_non_nullable
+              as String,
+      suffixText: null == suffixText
+          ? _value.suffixText
+          : suffixText // ignore: cast_nullable_to_non_nullable
+              as String,
+      prefixFont: null == prefixFont
+          ? _value.prefixFont
+          : prefixFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      suffixFont: null == suffixFont
+          ? _value.suffixFont
+          : suffixFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      prefixTextAlignment: null == prefixTextAlignment
+          ? _value.prefixTextAlignment
+          : prefixTextAlignment // ignore: cast_nullable_to_non_nullable
+              as Alignment,
+      suffixTextAlignment: null == suffixTextAlignment
+          ? _value.suffixTextAlignment
+          : suffixTextAlignment // ignore: cast_nullable_to_non_nullable
+              as Alignment,
     ));
   }
 }
@@ -2516,7 +2608,23 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
         'fontSize': 20,
         'fontColor': 0,
         'fontBold': true
-      }})
+      },
+      this.prefixText = '',
+      this.suffixText = '',
+      this.prefixFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 14,
+        'fontColor': 0x000000,
+        'fontBold': true
+      },
+      this.suffixFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0x000000,
+        'fontBold': true
+      },
+      @AlignmentConverter() this.prefixTextAlignment = Alignment.centerLeft,
+      @AlignmentConverter() this.suffixTextAlignment = Alignment.centerRight})
       : super._();
 
   factory _$DynamicTextWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -2543,10 +2651,30 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  String prefixText;
+  @override
+  @JsonKey()
+  String suffixText;
+  @override
+  @JsonKey()
+  Map<String, dynamic> prefixFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> suffixFont;
+  @override
+  @JsonKey()
+  @AlignmentConverter()
+  Alignment prefixTextAlignment;
+  @override
+  @JsonKey()
+  @AlignmentConverter()
+  Alignment suffixTextAlignment;
 
   @override
   String toString() {
-    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont)';
+    return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment)';
   }
 
   @JsonKey(ignore: true)
@@ -2566,13 +2694,20 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
 
 abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   factory _DynamicTextWidgetConfig(
-      {String title,
-      String field,
-      String deviceId,
-      int fontColor,
-      int titleFontColor,
-      Map<String, dynamic> font,
-      Map<String, dynamic> titleFont}) = _$DynamicTextWidgetConfigImpl;
+          {String title,
+          String field,
+          String deviceId,
+          int fontColor,
+          int titleFontColor,
+          Map<String, dynamic> font,
+          Map<String, dynamic> titleFont,
+          String prefixText,
+          String suffixText,
+          Map<String, dynamic> prefixFont,
+          Map<String, dynamic> suffixFont,
+          @AlignmentConverter() Alignment prefixTextAlignment,
+          @AlignmentConverter() Alignment suffixTextAlignment}) =
+      _$DynamicTextWidgetConfigImpl;
   _DynamicTextWidgetConfig._() : super._();
 
   factory _DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -2599,6 +2734,28 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  String get prefixText;
+  set prefixText(String value);
+  @override
+  String get suffixText;
+  set suffixText(String value);
+  @override
+  Map<String, dynamic> get prefixFont;
+  set prefixFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get suffixFont;
+  set suffixFont(Map<String, dynamic> value);
+  @override
+  @AlignmentConverter()
+  Alignment get prefixTextAlignment;
+  @AlignmentConverter()
+  set prefixTextAlignment(Alignment value);
+  @override
+  @AlignmentConverter()
+  Alignment get suffixTextAlignment;
+  @AlignmentConverter()
+  set suffixTextAlignment(Alignment value);
   @override
   @JsonKey(ignore: true)
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
