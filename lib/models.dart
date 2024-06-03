@@ -789,14 +789,9 @@ class DynamicTextWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> suffixFont,
-    
-    @Default(TextAlignment.centerLeft)
-    TextAlignment prefixTextAlignment,
-    
-    @Default(TextAlignment.centerRight)
-    TextAlignment suffixTextAlignment,
-    @Default(TextAlignment.centerRight)
-    TextAlignment valueTextAlignment,
+    @Default(TextAlignment.centerLeft) TextAlignment prefixTextAlignment,
+    @Default(TextAlignment.centerRight) TextAlignment suffixTextAlignment,
+    @Default(TextAlignment.center) TextAlignment valueTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -808,16 +803,18 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+      case 'prefixText':
+      case 'suffixText':
         return DataType.text;
       case 'font':
       case 'titleFont':
       case 'prefixFont':
       case 'suffixFont':
-      return DataType.font;
+        return DataType.font;
       case 'prefixTextAlignment':
       case 'suffixTextAlignment':
       case 'valueTextAlignment':
-      return DataType.enumerated;
+        return DataType.enumerated;
       case 'width':
       case 'height':
         return DataType.numeric;
@@ -854,7 +851,42 @@ class DynamicTextWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'title':
+        return 'Title';
+      case 'field':
+        return 'Field';
+      case 'deviceId':
+        return 'DeviceId';
+      case 'prefixText':
+        return 'Prefix Text';
+
+      case 'suffixText':
+        return 'Suffix Text';
+      case 'font':
+        return 'Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'prefixFont':
+        return 'Prefix font';
+
+      case 'suffixFont':
+        return 'Suffix Font';
+      case 'prefixTextAlignment':
+        return 'Prefix TextAlignment';
+      case 'suffixTextAlignment':
+        return 'Suffix TextAlignment';
+      case 'valueTextAlignment':
+        return 'Value TextAlignment';
+
+      case 'width':
+        return 'Width';
+      case 'height':
+        return 'Height';
+
+      default:
+        return parameter;
+    }
   }
 
   @override
