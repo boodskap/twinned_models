@@ -282,6 +282,8 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
             'fontColor': 0,
             'fontBold': true
           },
+      width: (json['width'] as num?)?.toInt() ?? 150,
+      height: (json['height'] as num?)?.toInt() ?? 50,
       prefixText: json['prefixText'] as String? ?? '',
       suffixText: json['suffixText'] as String? ?? '',
       prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
@@ -318,6 +320,8 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
       'titleFontColor': instance.titleFontColor,
       'font': instance.font,
       'titleFont': instance.titleFont,
+      'width': instance.width,
+      'height': instance.height,
       'prefixText': instance.prefixText,
       'suffixText': instance.suffixText,
       'prefixFont': instance.prefixFont,
