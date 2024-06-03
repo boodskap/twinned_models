@@ -43,6 +43,14 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       {'from': 76, 'color': 0xFF000000, 'label': 'High'},
     ])
     List<dynamic> ranges,
+    @Default(0.7) double positionFactor,
+    @Default(0.95) double radiusFactor,
+    @Default(50) int dialStartWidth,
+    @Default(50) int dialEndWidth,
+    @Default(90) int angle,
+    @Default(50) int axisThickness,
+    @Default(true) bool showLabel,
+    
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
   factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
