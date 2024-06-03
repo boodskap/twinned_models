@@ -40,6 +40,22 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
       throw _privateConstructorUsedError;
   bool get animate => throw _privateConstructorUsedError;
   set animate(bool value) => throw _privateConstructorUsedError;
+  List<dynamic> get ranges => throw _privateConstructorUsedError;
+  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
+  double get positionFactor => throw _privateConstructorUsedError;
+  set positionFactor(double value) => throw _privateConstructorUsedError;
+  double get radiusFactor => throw _privateConstructorUsedError;
+  set radiusFactor(double value) => throw _privateConstructorUsedError;
+  int get dialStartWidth => throw _privateConstructorUsedError;
+  set dialStartWidth(int value) => throw _privateConstructorUsedError;
+  int get dialEndWidth => throw _privateConstructorUsedError;
+  set dialEndWidth(int value) => throw _privateConstructorUsedError;
+  int get angle => throw _privateConstructorUsedError;
+  set angle(int value) => throw _privateConstructorUsedError;
+  int get axisThickness => throw _privateConstructorUsedError;
+  set axisThickness(int value) => throw _privateConstructorUsedError;
+  bool get showLabel => throw _privateConstructorUsedError;
+  set showLabel(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -64,7 +80,15 @@ abstract class $DeviceFieldRangeLabelDialWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate});
+      bool animate,
+      List<dynamic> ranges,
+      double positionFactor,
+      double radiusFactor,
+      int dialStartWidth,
+      int dialEndWidth,
+      int angle,
+      int axisThickness,
+      bool showLabel});
 }
 
 /// @nodoc
@@ -89,6 +113,14 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
     Object? labelFont = null,
     Object? valueFont = null,
     Object? animate = null,
+    Object? ranges = null,
+    Object? positionFactor = null,
+    Object? radiusFactor = null,
+    Object? dialStartWidth = null,
+    Object? dialEndWidth = null,
+    Object? angle = null,
+    Object? axisThickness = null,
+    Object? showLabel = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -123,6 +155,38 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
           ? _value.animate
           : animate // ignore: cast_nullable_to_non_nullable
               as bool,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+      positionFactor: null == positionFactor
+          ? _value.positionFactor
+          : positionFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      radiusFactor: null == radiusFactor
+          ? _value.radiusFactor
+          : radiusFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      dialStartWidth: null == dialStartWidth
+          ? _value.dialStartWidth
+          : dialStartWidth // ignore: cast_nullable_to_non_nullable
+              as int,
+      dialEndWidth: null == dialEndWidth
+          ? _value.dialEndWidth
+          : dialEndWidth // ignore: cast_nullable_to_non_nullable
+              as int,
+      angle: null == angle
+          ? _value.angle
+          : angle // ignore: cast_nullable_to_non_nullable
+              as int,
+      axisThickness: null == axisThickness
+          ? _value.axisThickness
+          : axisThickness // ignore: cast_nullable_to_non_nullable
+              as int,
+      showLabel: null == showLabel
+          ? _value.showLabel
+          : showLabel // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -144,7 +208,15 @@ abstract class _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate});
+      bool animate,
+      List<dynamic> ranges,
+      double positionFactor,
+      double radiusFactor,
+      int dialStartWidth,
+      int dialEndWidth,
+      int angle,
+      int axisThickness,
+      bool showLabel});
 }
 
 /// @nodoc
@@ -168,6 +240,14 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
     Object? labelFont = null,
     Object? valueFont = null,
     Object? animate = null,
+    Object? ranges = null,
+    Object? positionFactor = null,
+    Object? radiusFactor = null,
+    Object? dialStartWidth = null,
+    Object? dialEndWidth = null,
+    Object? angle = null,
+    Object? axisThickness = null,
+    Object? showLabel = null,
   }) {
     return _then(_$DeviceFieldRangeLabelDialWidgetConfigImpl(
       field: null == field
@@ -202,6 +282,38 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.animate
           : animate // ignore: cast_nullable_to_non_nullable
               as bool,
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+      positionFactor: null == positionFactor
+          ? _value.positionFactor
+          : positionFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      radiusFactor: null == radiusFactor
+          ? _value.radiusFactor
+          : radiusFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      dialStartWidth: null == dialStartWidth
+          ? _value.dialStartWidth
+          : dialStartWidth // ignore: cast_nullable_to_non_nullable
+              as int,
+      dialEndWidth: null == dialEndWidth
+          ? _value.dialEndWidth
+          : dialEndWidth // ignore: cast_nullable_to_non_nullable
+              as int,
+      angle: null == angle
+          ? _value.angle
+          : angle // ignore: cast_nullable_to_non_nullable
+              as int,
+      axisThickness: null == axisThickness
+          ? _value.axisThickness
+          : axisThickness // ignore: cast_nullable_to_non_nullable
+              as int,
+      showLabel: null == showLabel
+          ? _value.showLabel
+          : showLabel // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -233,7 +345,20 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.animate = true})
+      this.animate = true,
+      this.ranges = const [
+        {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+        {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
+        {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+        {'from': 76, 'color': 0xFF000000, 'label': 'High'}
+      ],
+      this.positionFactor = 0.7,
+      this.radiusFactor = 0.95,
+      this.dialStartWidth = 50,
+      this.dialEndWidth = 50,
+      this.angle = 90,
+      this.axisThickness = 50,
+      this.showLabel = true})
       : super._();
 
   factory _$DeviceFieldRangeLabelDialWidgetConfigImpl.fromJson(
@@ -264,10 +389,34 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
   @override
   @JsonKey()
   bool animate;
+  @override
+  @JsonKey()
+  List<dynamic> ranges;
+  @override
+  @JsonKey()
+  double positionFactor;
+  @override
+  @JsonKey()
+  double radiusFactor;
+  @override
+  @JsonKey()
+  int dialStartWidth;
+  @override
+  @JsonKey()
+  int dialEndWidth;
+  @override
+  @JsonKey()
+  int angle;
+  @override
+  @JsonKey()
+  int axisThickness;
+  @override
+  @JsonKey()
+  bool showLabel;
 
   @override
   String toString() {
-    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, animate: $animate)';
+    return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, animate: $animate, ranges: $ranges, positionFactor: $positionFactor, radiusFactor: $radiusFactor, dialStartWidth: $dialStartWidth, dialEndWidth: $dialEndWidth, angle: $angle, axisThickness: $axisThickness, showLabel: $showLabel)';
   }
 
   @JsonKey(ignore: true)
@@ -296,7 +445,15 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
-      bool animate}) = _$DeviceFieldRangeLabelDialWidgetConfigImpl;
+      bool animate,
+      List<dynamic> ranges,
+      double positionFactor,
+      double radiusFactor,
+      int dialStartWidth,
+      int dialEndWidth,
+      int angle,
+      int axisThickness,
+      bool showLabel}) = _$DeviceFieldRangeLabelDialWidgetConfigImpl;
   _DeviceFieldRangeLabelDialWidgetConfig._() : super._();
 
   factory _DeviceFieldRangeLabelDialWidgetConfig.fromJson(
@@ -327,6 +484,30 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   @override
   bool get animate;
   set animate(bool value);
+  @override
+  List<dynamic> get ranges;
+  set ranges(List<dynamic> value);
+  @override
+  double get positionFactor;
+  set positionFactor(double value);
+  @override
+  double get radiusFactor;
+  set radiusFactor(double value);
+  @override
+  int get dialStartWidth;
+  set dialStartWidth(int value);
+  @override
+  int get dialEndWidth;
+  set dialEndWidth(int value);
+  @override
+  int get angle;
+  set angle(int value);
+  @override
+  int get axisThickness;
+  set axisThickness(int value);
+  @override
+  bool get showLabel;
+  set showLabel(bool value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<

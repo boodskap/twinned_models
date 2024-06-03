@@ -282,6 +282,30 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
             'fontColor': 0,
             'fontBold': true
           },
+      prefixText: json['prefixText'] as String? ?? '',
+      suffixText: json['suffixText'] as String? ?? '',
+      prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 14,
+            'fontColor': 0x000000,
+            'fontBold': true
+          },
+      suffixFont: json['suffixFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 20,
+            'fontColor': 0x000000,
+            'fontBold': true
+          },
+      prefixTextAlignment: json['prefixTextAlignment'] == null
+          ? Alignment.centerLeft
+          : const AlignmentConverter()
+              .fromJson(json['prefixTextAlignment'] as Map<String, double>),
+      suffixTextAlignment: json['suffixTextAlignment'] == null
+          ? Alignment.centerRight
+          : const AlignmentConverter()
+              .fromJson(json['suffixTextAlignment'] as Map<String, double>),
     );
 
 Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
@@ -294,6 +318,14 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
       'titleFontColor': instance.titleFontColor,
       'font': instance.font,
       'titleFont': instance.titleFont,
+      'prefixText': instance.prefixText,
+      'suffixText': instance.suffixText,
+      'prefixFont': instance.prefixFont,
+      'suffixFont': instance.suffixFont,
+      'prefixTextAlignment':
+          const AlignmentConverter().toJson(instance.prefixTextAlignment),
+      'suffixTextAlignment':
+          const AlignmentConverter().toJson(instance.suffixTextAlignment),
     };
 
 _$MultipleDeviceModelChartWidgetConfigImpl

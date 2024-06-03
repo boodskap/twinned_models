@@ -15,7 +15,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
-    @Default([]) List<int> axesColors,
+    @Default(0x00000000) int titleBgColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -23,6 +23,13 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default([
+      {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+      {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
+      {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+      {'from': 76, 'color': 0xFF000000, 'label': 'High'},
+    ])
+    List<dynamic> ranges,
   }) = _DeviceMultiFieldDialWidgetConfig;
 
   factory DeviceMultiFieldDialWidgetConfig.fromJson(
@@ -38,9 +45,12 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'field':
         return DataType.listOfTexts;
       case 'bgColor':
-      case 'axesColors':
+      case 'titleBgColor':
         return DataType.numeric;
-
+      case 'titleFont':
+        return DataType.font;
+      case 'ranges':
+        return DataType.listOfRanges;
       default:
         return DataType.text;
     }
@@ -54,7 +64,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'deviceId':
         return HintType.deviceId;
       case 'bgColor':
-      case 'axesColors':
+      case 'titleBgColor':
         return HintType.color;
 
       default:
@@ -83,6 +93,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+      case 'ranges':
       default:
         return false;
     }
@@ -92,6 +103,4 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   bool isValid(String parameter, value) {
     return true;
   }
-
-  
 }

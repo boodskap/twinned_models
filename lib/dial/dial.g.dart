@@ -17,10 +17,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0x1F000000,
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Radial Axes Widget',
-          axesColors: (json['axesColors'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toInt())
-                  .toList() ??
-              const [],
+          titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -28,6 +25,18 @@ _$DeviceMultiFieldDialWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          ranges: json['ranges'] as List<dynamic>? ??
+              const [
+                {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+                {
+                  'from': 26,
+                  'to': 50,
+                  'color': 0xFF000000,
+                  'label': 'Moderate'
+                },
+                {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+                {'from': 76, 'color': 0xFF000000, 'label': 'High'}
+              ],
         );
 
 Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
@@ -37,6 +46,7 @@ Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
       'bgColor': instance.bgColor,
       'deviceId': instance.deviceId,
       'title': instance.title,
-      'axesColors': instance.axesColors,
+      'titleBgColor': instance.titleBgColor,
       'titleFont': instance.titleFont,
+      'ranges': instance.ranges,
     };
