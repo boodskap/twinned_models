@@ -23,6 +23,13 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default([
+      {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+      {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
+      {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
+      {'from': 76, 'color': 0xFF000000, 'label': 'High'},
+    ])
+    List<dynamic> ranges,
   }) = _DeviceMultiFieldDialWidgetConfig;
 
   factory DeviceMultiFieldDialWidgetConfig.fromJson(
@@ -42,7 +49,8 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
         return DataType.numeric;
       case 'titleFont':
         return DataType.font;
-
+      case 'ranges':
+        return DataType.listOfRanges;
       default:
         return DataType.text;
     }
@@ -85,6 +93,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+      case 'ranges':
       default:
         return false;
     }
