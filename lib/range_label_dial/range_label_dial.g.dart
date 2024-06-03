@@ -50,10 +50,10 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
               ],
           positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.7,
           radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.95,
-          dialStartWidth: (json['dialStartWidth'] as num?)?.toInt() ?? 50,
-          dialEndWidth: (json['dialEndWidth'] as num?)?.toInt() ?? 50,
-          angle: (json['angle'] as num?)?.toInt() ?? 90,
-          axisThickness: (json['axisThickness'] as num?)?.toInt() ?? 50,
+          dialStartWidth: (json['dialStartWidth'] as num?)?.toDouble() ?? 50,
+          dialEndWidth: (json['dialEndWidth'] as num?)?.toDouble() ?? 50,
+          angle: (json['angle'] as num?)?.toDouble() ?? 90,
+          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 50,
           showLabel: json['showLabel'] as bool? ?? true,
         );
 
