@@ -48,6 +48,13 @@ _$DeviceFieldRangeLabelDialWidgetConfigImpl
                 {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
                 {'from': 76, 'color': 0xFF000000, 'label': 'High'}
               ],
+          positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.7,
+          radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.95,
+          dialStartWidth: (json['dialStartWidth'] as num?)?.toInt() ?? 50,
+          dialEndWidth: (json['dialEndWidth'] as num?)?.toInt() ?? 50,
+          angle: (json['angle'] as num?)?.toInt() ?? 90,
+          axisThickness: (json['axisThickness'] as num?)?.toInt() ?? 50,
+          showLabel: json['showLabel'] as bool? ?? true,
         );
 
 Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
@@ -62,4 +69,11 @@ Map<String, dynamic> _$$DeviceFieldRangeLabelDialWidgetConfigImplToJson(
       'valueFont': instance.valueFont,
       'animate': instance.animate,
       'ranges': instance.ranges,
+      'positionFactor': instance.positionFactor,
+      'radiusFactor': instance.radiusFactor,
+      'dialStartWidth': instance.dialStartWidth,
+      'dialEndWidth': instance.dialEndWidth,
+      'angle': instance.angle,
+      'axisThickness': instance.axisThickness,
+      'showLabel': instance.showLabel,
     };
