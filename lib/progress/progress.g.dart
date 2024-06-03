@@ -23,23 +23,19 @@ _$DeviceFieldPercentageWidgetConfigImpl
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 20,
+                'fontSize': 14,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-          borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
+          unfillColor: (json['unfillColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           fillColor: (json['fillColor'] as num?)?.toInt() ?? 0xFFFFEBEE,
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
-          borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1.0,
-          borderRadius: (json['borderRadius'] as num?)?.toDouble() ?? 12.0,
-          animate: json['animate'] as bool? ?? true,
+          progressbarWidth:
+              (json['progressbarWidth'] as num?)?.toDouble() ?? 20.0,
+          circularRadius: (json['circularRadius'] as num?)?.toDouble() ?? 120.0,
           shape: $enumDecodeNullable(
                   _$PercentageWidgetShapeEnumMap, json['shape']) ??
-              PercentageWidgetShape.rectangle,
-          waveDirection:
-              $enumDecodeNullable(_$AxisEnumMap, json['waveDirection']) ??
-                  Axis.vertical,
+              PercentageWidgetShape.linear,
         );
 
 Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
@@ -50,23 +46,15 @@ Map<String, dynamic> _$$DeviceFieldPercentageWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'titleFont': instance.titleFont,
       'labelFont': instance.labelFont,
-      'bgColor': instance.bgColor,
-      'borderColor': instance.borderColor,
+      'unfillColor': instance.unfillColor,
       'fillColor': instance.fillColor,
       'titleBgColor': instance.titleBgColor,
-      'borderWidth': instance.borderWidth,
-      'borderRadius': instance.borderRadius,
-      'animate': instance.animate,
+      'progressbarWidth': instance.progressbarWidth,
+      'circularRadius': instance.circularRadius,
       'shape': _$PercentageWidgetShapeEnumMap[instance.shape]!,
-      'waveDirection': _$AxisEnumMap[instance.waveDirection]!,
     };
 
 const _$PercentageWidgetShapeEnumMap = {
   PercentageWidgetShape.circle: 'circle',
-  PercentageWidgetShape.rectangle: 'rectangle',
-};
-
-const _$AxisEnumMap = {
-  Axis.horizontal: 'horizontal',
-  Axis.vertical: 'vertical',
+  PercentageWidgetShape.linear: 'linear',
 };
