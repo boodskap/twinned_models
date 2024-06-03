@@ -784,7 +784,7 @@ class DynamicTextWidgetConfig extends BaseConfig
     Map<String, dynamic> prefixFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 14,
       'fontColor': 0x000000,
       'fontBold': true
     })
