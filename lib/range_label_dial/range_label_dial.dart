@@ -45,10 +45,10 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     List<dynamic> ranges,
     @Default(0.7) double positionFactor,
     @Default(0.95) double radiusFactor,
-    @Default(50) int dialStartWidth,
-    @Default(50) int dialEndWidth,
-    @Default(90) int angle,
-    @Default(50) int axisThickness,
+    @Default(50) double dialStartWidth,
+    @Default(50) double dialEndWidth,
+    @Default(90) double angle,
+    @Default(50) double axisThickness,
     @Default(true) bool showLabel,
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
@@ -64,13 +64,13 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       case 'deviceId':
         return DataType.text;
       case 'titleBgColor':
+        return DataType.numeric;
+      case 'positionFactor':
+      case 'radiusFactor':
       case 'dialStartWidth':
       case 'dialEndWidth':
       case 'angle':
       case 'axisThickness':
-        return DataType.numeric;
-      case 'positionFactor':
-      case 'radiusFactor':
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
