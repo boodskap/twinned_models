@@ -35,7 +35,7 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(true) bool animate,
+    @Default(true) bool gaugeAnimate,
     @Default([
       {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
       {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
@@ -50,7 +50,6 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
     @Default(90) int angle,
     @Default(50) int axisThickness,
     @Default(true) bool showLabel,
-    
   }) = _DeviceFieldRangeLabelDialWidgetConfig;
 
   factory DeviceFieldRangeLabelDialWidgetConfig.fromJson(
@@ -65,10 +64,18 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       case 'deviceId':
         return DataType.text;
       case 'titleBgColor':
+      case 'dialStartWidth':
+      case 'dialEndWidth':
+      case 'angle':
+      case 'axisThickness':
         return DataType.numeric;
+      case 'positionFactor':
+      case 'radiusFactor':
+        return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
-      case 'animate':
+      case 'gaugeAnimate':
+      case 'showLabel':
         return DataType.yesno;
       case 'titleFont':
       case 'labelFont':
@@ -101,6 +108,38 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
+      case 'field':
+        return 'Select Field';
+      case 'deviceId':
+        return 'Asset Models';
+      case 'title':
+        return 'Title';
+      case 'titleFont':
+        return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleBgColor':
+        return 'Title BgColor';
+      case 'valueFont':
+        return 'Value Font';
+      case 'gaugeAnimate':
+        return 'Gauge Animate';
+      case 'ranges':
+        return 'Ranges';
+      case 'positionFactor':
+        return 'Position Factor';
+      case 'radiusFactor':
+        return 'Radius Factor';
+      case 'dialStartWidth':
+        return 'Dial Start Width';
+      case 'dialEndWidth':
+        return 'Dial End width';
+      case 'angle':
+        return 'Angle';
+      case 'axisThickness':
+        return 'Axis Thickness';
+      case 'showLabel':
+        return 'Show Label';
       default:
         return parameter;
     }
