@@ -16,6 +16,19 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
     @Default(0x00000000) int titleBgColor,
+    @Default(0.9) double positionFactor,
+    @Default(90.0) double angle,
+    @Default(0.3) double radiusFactor,
+    @Default(5.0) double axisThickness,
+    @Default(0.8) double needleLength,
+    @Default(true) bool gaugeAnimate,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 10,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -48,9 +61,18 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'titleBgColor':
         return DataType.numeric;
       case 'titleFont':
+      case 'labelFont':
         return DataType.font;
+      case 'positionFactor':
+      case 'radiusFactor':
+      case 'angle':
+      case 'axisThickness':
+      case 'needleLength':
+        return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
+      case 'gaugeAnimate':
+        return DataType.yesno;
       default:
         return DataType.text;
     }
@@ -79,7 +101,38 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'field':
+        return 'Select Field';
+      case 'deviceId':
+        return 'Asset Models';
+      case 'title':
+        return 'Title';
+      case 'titleFont':
+        return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleBgColor':
+        return 'Title BgColor';
+      case 'bgColor':
+        return ' BgColor';
+      case 'gaugeAnimate':
+        return 'Gauge Animate';
+      case 'ranges':
+        return 'Ranges';
+      case 'positionFactor':
+        return 'Position Factor';
+      case 'radiusFactor':
+        return 'Radius Factor';
+      case 'angle':
+        return 'Angle';
+      case 'axisThickness':
+        return 'Axis Thickness';
+      case 'needleLength':
+        return 'Needle Length';
+      default:
+        return parameter;
+    }
   }
 
   @override

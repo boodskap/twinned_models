@@ -18,6 +18,19 @@ _$DeviceMultiFieldDialWidgetConfigImpl
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Radial Axes Widget',
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
+          positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.9,
+          angle: (json['angle'] as num?)?.toDouble() ?? 90.0,
+          radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.3,
+          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 5.0,
+          needleLength: (json['needleLength'] as num?)?.toDouble() ?? 0.8,
+          gaugeAnimate: json['gaugeAnimate'] as bool? ?? true,
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 10,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -47,6 +60,13 @@ Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'title': instance.title,
       'titleBgColor': instance.titleBgColor,
+      'positionFactor': instance.positionFactor,
+      'angle': instance.angle,
+      'radiusFactor': instance.radiusFactor,
+      'axisThickness': instance.axisThickness,
+      'needleLength': instance.needleLength,
+      'gaugeAnimate': instance.gaugeAnimate,
+      'labelFont': instance.labelFont,
       'titleFont': instance.titleFont,
       'ranges': instance.ranges,
     };
