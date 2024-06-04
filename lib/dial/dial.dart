@@ -11,11 +11,23 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   DeviceMultiFieldDialWidgetConfig._();
 
   factory DeviceMultiFieldDialWidgetConfig({
-    @Default([]) List<String> field,
+    @Default([]) List<String> fields,
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
     @Default(0x00000000) int titleBgColor,
+    @Default(0.9) double positionFactor,
+    @Default(90.0) double angle,
+    @Default(0.3) double radiusFactor,
+    @Default(5.0) double axisThickness,
+    @Default(0.8) double needleLength,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 10,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -42,13 +54,20 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'title':
       case 'deviceId':
         return DataType.text;
-      case 'field':
+      case 'fields':
         return DataType.listOfTexts;
       case 'bgColor':
       case 'titleBgColor':
         return DataType.numeric;
       case 'titleFont':
+      case 'labelFont':
         return DataType.font;
+      case 'positionFactor':
+      case 'radiusFactor':
+      case 'angle':
+      case 'axisThickness':
+      case 'needleLength':
+        return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
       default:
@@ -59,7 +78,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'field':
+      case 'fields':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
@@ -91,7 +110,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'title':
-      case 'field':
+      case 'fields':
       case 'deviceId':
       case 'ranges':
       default:

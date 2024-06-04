@@ -21,8 +21,8 @@ DeviceMultiFieldDialWidgetConfig _$DeviceMultiFieldDialWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DeviceMultiFieldDialWidgetConfig {
-  List<String> get field => throw _privateConstructorUsedError;
-  set field(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   int get bgColor => throw _privateConstructorUsedError;
   set bgColor(int value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
@@ -31,6 +31,19 @@ mixin _$DeviceMultiFieldDialWidgetConfig {
   set title(String value) => throw _privateConstructorUsedError;
   int get titleBgColor => throw _privateConstructorUsedError;
   set titleBgColor(int value) => throw _privateConstructorUsedError;
+  double get positionFactor => throw _privateConstructorUsedError;
+  set positionFactor(double value) => throw _privateConstructorUsedError;
+  double get angle => throw _privateConstructorUsedError;
+  set angle(double value) => throw _privateConstructorUsedError;
+  double get radiusFactor => throw _privateConstructorUsedError;
+  set radiusFactor(double value) => throw _privateConstructorUsedError;
+  double get axisThickness => throw _privateConstructorUsedError;
+  set axisThickness(double value) => throw _privateConstructorUsedError;
+  double get needleLength => throw _privateConstructorUsedError;
+  set needleLength(double value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -52,11 +65,17 @@ abstract class $DeviceMultiFieldDialWidgetConfigCopyWith<$Res> {
           DeviceMultiFieldDialWidgetConfig>;
   @useResult
   $Res call(
-      {List<String> field,
+      {List<String> fields,
       int bgColor,
       String deviceId,
       String title,
       int titleBgColor,
+      double positionFactor,
+      double angle,
+      double radiusFactor,
+      double axisThickness,
+      double needleLength,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges});
 }
@@ -75,18 +94,24 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
+    Object? fields = null,
     Object? bgColor = null,
     Object? deviceId = null,
     Object? title = null,
     Object? titleBgColor = null,
+    Object? positionFactor = null,
+    Object? angle = null,
+    Object? radiusFactor = null,
+    Object? axisThickness = null,
+    Object? needleLength = null,
+    Object? labelFont = null,
     Object? titleFont = null,
     Object? ranges = null,
   }) {
     return _then(_value.copyWith(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bgColor: null == bgColor
           ? _value.bgColor
@@ -104,6 +129,30 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
           ? _value.titleBgColor
           : titleBgColor // ignore: cast_nullable_to_non_nullable
               as int,
+      positionFactor: null == positionFactor
+          ? _value.positionFactor
+          : positionFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      angle: null == angle
+          ? _value.angle
+          : angle // ignore: cast_nullable_to_non_nullable
+              as double,
+      radiusFactor: null == radiusFactor
+          ? _value.radiusFactor
+          : radiusFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      axisThickness: null == axisThickness
+          ? _value.axisThickness
+          : axisThickness // ignore: cast_nullable_to_non_nullable
+              as double,
+      needleLength: null == needleLength
+          ? _value.needleLength
+          : needleLength // ignore: cast_nullable_to_non_nullable
+              as double,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -126,11 +175,17 @@ abstract class _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> field,
+      {List<String> fields,
       int bgColor,
       String deviceId,
       String title,
       int titleBgColor,
+      double positionFactor,
+      double angle,
+      double radiusFactor,
+      double axisThickness,
+      double needleLength,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges});
 }
@@ -148,18 +203,24 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
+    Object? fields = null,
     Object? bgColor = null,
     Object? deviceId = null,
     Object? title = null,
     Object? titleBgColor = null,
+    Object? positionFactor = null,
+    Object? angle = null,
+    Object? radiusFactor = null,
+    Object? axisThickness = null,
+    Object? needleLength = null,
+    Object? labelFont = null,
     Object? titleFont = null,
     Object? ranges = null,
   }) {
     return _then(_$DeviceMultiFieldDialWidgetConfigImpl(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bgColor: null == bgColor
           ? _value.bgColor
@@ -177,6 +238,30 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleBgColor
           : titleBgColor // ignore: cast_nullable_to_non_nullable
               as int,
+      positionFactor: null == positionFactor
+          ? _value.positionFactor
+          : positionFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      angle: null == angle
+          ? _value.angle
+          : angle // ignore: cast_nullable_to_non_nullable
+              as double,
+      radiusFactor: null == radiusFactor
+          ? _value.radiusFactor
+          : radiusFactor // ignore: cast_nullable_to_non_nullable
+              as double,
+      axisThickness: null == axisThickness
+          ? _value.axisThickness
+          : axisThickness // ignore: cast_nullable_to_non_nullable
+              as double,
+      needleLength: null == needleLength
+          ? _value.needleLength
+          : needleLength // ignore: cast_nullable_to_non_nullable
+              as double,
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -194,11 +279,22 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
 class _$DeviceMultiFieldDialWidgetConfigImpl
     extends _DeviceMultiFieldDialWidgetConfig {
   _$DeviceMultiFieldDialWidgetConfigImpl(
-      {this.field = const [],
+      {this.fields = const [],
       this.bgColor = 0x1F000000,
       this.deviceId = '',
       this.title = 'Radial Axes Widget',
       this.titleBgColor = 0x00000000,
+      this.positionFactor = 0.9,
+      this.angle = 90.0,
+      this.radiusFactor = 0.3,
+      this.axisThickness = 5.0,
+      this.needleLength = 0.8,
+      this.labelFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 10,
+        'fontColor': 0xFF000000,
+        'fontBold': true
+      },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
@@ -219,7 +315,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 
   @override
   @JsonKey()
-  List<String> field;
+  List<String> fields;
   @override
   @JsonKey()
   int bgColor;
@@ -234,6 +330,24 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
   int titleBgColor;
   @override
   @JsonKey()
+  double positionFactor;
+  @override
+  @JsonKey()
+  double angle;
+  @override
+  @JsonKey()
+  double radiusFactor;
+  @override
+  @JsonKey()
+  double axisThickness;
+  @override
+  @JsonKey()
+  double needleLength;
+  @override
+  @JsonKey()
+  Map<String, dynamic> labelFont;
+  @override
+  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
@@ -241,7 +355,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceMultiFieldDialWidgetConfig(field: $field, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, ranges: $ranges)';
+    return 'DeviceMultiFieldDialWidgetConfig(fields: $fields, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
   @JsonKey(ignore: true)
@@ -263,11 +377,17 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 abstract class _DeviceMultiFieldDialWidgetConfig
     extends DeviceMultiFieldDialWidgetConfig {
   factory _DeviceMultiFieldDialWidgetConfig(
-      {List<String> field,
+      {List<String> fields,
       int bgColor,
       String deviceId,
       String title,
       int titleBgColor,
+      double positionFactor,
+      double angle,
+      double radiusFactor,
+      double axisThickness,
+      double needleLength,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges}) = _$DeviceMultiFieldDialWidgetConfigImpl;
   _DeviceMultiFieldDialWidgetConfig._() : super._();
@@ -277,8 +397,8 @@ abstract class _DeviceMultiFieldDialWidgetConfig
       _$DeviceMultiFieldDialWidgetConfigImpl.fromJson;
 
   @override
-  List<String> get field;
-  set field(List<String> value);
+  List<String> get fields;
+  set fields(List<String> value);
   @override
   int get bgColor;
   set bgColor(int value);
@@ -291,6 +411,24 @@ abstract class _DeviceMultiFieldDialWidgetConfig
   @override
   int get titleBgColor;
   set titleBgColor(int value);
+  @override
+  double get positionFactor;
+  set positionFactor(double value);
+  @override
+  double get angle;
+  set angle(double value);
+  @override
+  double get radiusFactor;
+  set radiusFactor(double value);
+  @override
+  double get axisThickness;
+  set axisThickness(double value);
+  @override
+  double get needleLength;
+  set needleLength(double value);
+  @override
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
