@@ -98,7 +98,6 @@ class GenericTemperatureWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'deviceId':
-      case 'temperatureField':
         return true;
       default:
         return false;
