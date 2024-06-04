@@ -41,6 +41,8 @@ mixin _$DeviceMultiFieldDialWidgetConfig {
   set axisThickness(double value) => throw _privateConstructorUsedError;
   double get needleLength => throw _privateConstructorUsedError;
   set needleLength(double value) => throw _privateConstructorUsedError;
+  bool get gaugeAnimate => throw _privateConstructorUsedError;
+  set gaugeAnimate(bool value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -75,6 +77,7 @@ abstract class $DeviceMultiFieldDialWidgetConfigCopyWith<$Res> {
       double radiusFactor,
       double axisThickness,
       double needleLength,
+      bool gaugeAnimate,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges});
@@ -104,6 +107,7 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
     Object? radiusFactor = null,
     Object? axisThickness = null,
     Object? needleLength = null,
+    Object? gaugeAnimate = null,
     Object? labelFont = null,
     Object? titleFont = null,
     Object? ranges = null,
@@ -149,6 +153,10 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
           ? _value.needleLength
           : needleLength // ignore: cast_nullable_to_non_nullable
               as double,
+      gaugeAnimate: null == gaugeAnimate
+          ? _value.gaugeAnimate
+          : gaugeAnimate // ignore: cast_nullable_to_non_nullable
+              as bool,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -185,6 +193,7 @@ abstract class _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<$Res>
       double radiusFactor,
       double axisThickness,
       double needleLength,
+      bool gaugeAnimate,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges});
@@ -213,6 +222,7 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
     Object? radiusFactor = null,
     Object? axisThickness = null,
     Object? needleLength = null,
+    Object? gaugeAnimate = null,
     Object? labelFont = null,
     Object? titleFont = null,
     Object? ranges = null,
@@ -258,6 +268,10 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
           ? _value.needleLength
           : needleLength // ignore: cast_nullable_to_non_nullable
               as double,
+      gaugeAnimate: null == gaugeAnimate
+          ? _value.gaugeAnimate
+          : gaugeAnimate // ignore: cast_nullable_to_non_nullable
+              as bool,
       labelFont: null == labelFont
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
@@ -289,6 +303,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
       this.radiusFactor = 0.3,
       this.axisThickness = 5.0,
       this.needleLength = 0.8,
+      this.gaugeAnimate = true,
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 10,
@@ -345,6 +360,9 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
   double needleLength;
   @override
   @JsonKey()
+  bool gaugeAnimate;
+  @override
+  @JsonKey()
   Map<String, dynamic> labelFont;
   @override
   @JsonKey()
@@ -355,7 +373,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceMultiFieldDialWidgetConfig(fields: $fields, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
+    return 'DeviceMultiFieldDialWidgetConfig(fields: $fields, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
   @JsonKey(ignore: true)
@@ -387,6 +405,7 @@ abstract class _DeviceMultiFieldDialWidgetConfig
       double radiusFactor,
       double axisThickness,
       double needleLength,
+      bool gaugeAnimate,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> titleFont,
       List<dynamic> ranges}) = _$DeviceMultiFieldDialWidgetConfigImpl;
@@ -426,6 +445,9 @@ abstract class _DeviceMultiFieldDialWidgetConfig
   @override
   double get needleLength;
   set needleLength(double value);
+  @override
+  bool get gaugeAnimate;
+  set gaugeAnimate(bool value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
