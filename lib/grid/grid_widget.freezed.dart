@@ -243,16 +243,16 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
       this.pageSize = 10,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
+        'fontSize': 25,
+        'fontColor': 0XFF34495E,
         'fontBold': true
       },
-      this.headerBgColor = 0xFFFFFFFF,
-      this.iconColor = 0xFFFFFFFF,
+      this.headerBgColor = 0XFF80ced7,
+      this.iconColor = 0XFF34495E,
       this.headerFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
+        'fontSize': 14,
+        'fontColor': 0XFF34495E,
         'fontBold': true
       }})
       : super._();
