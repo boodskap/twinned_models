@@ -63,6 +63,10 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
+        case 'windField':
+        case 'gustField':
+        case 'directionField':
+        return HintType.field;
       default:
         return HintType.none;
     }
