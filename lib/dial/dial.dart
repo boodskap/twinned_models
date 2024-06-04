@@ -11,7 +11,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   DeviceMultiFieldDialWidgetConfig._();
 
   factory DeviceMultiFieldDialWidgetConfig({
-    @Default([]) List<String> fields,
+    @Default([]) List<String> field,
     @Default(0x1F000000) int bgColor,
     @Default('') String deviceId,
     @Default('Radial Axes Widget') String title,
@@ -55,7 +55,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'title':
       case 'deviceId':
         return DataType.text;
-      case 'fields':
+      case 'field':
         return DataType.listOfTexts;
       case 'bgColor':
       case 'titleBgColor':
@@ -81,7 +81,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'fields':
+      case 'field':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
@@ -102,7 +102,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'fields':
+      case 'field':
         return 'Select Field';
       case 'deviceId':
         return 'Asset Models';
@@ -144,7 +144,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'title':
-      case 'fields':
+      case 'field':
       case 'deviceId':
       case 'ranges':
       default:
