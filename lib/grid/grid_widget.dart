@@ -18,17 +18,17 @@ class AssetModelGridWidgetConfig extends BaseConfig
     @Default(10) int pageSize,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
-      'fontColor': 0xFFFFFFFF,
+      'fontSize': 25,
+      'fontColor': 0XFF34495E,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default(0xFFFFFFFF) int headerBgColor,
-    @Default(0xFFFFFFFF) int iconColor,
+    @Default(0XFF80ced7) int headerBgColor,
+    @Default(0XFF34495E) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
-      'fontColor': 0xFFFFFFFF,
+      'fontSize': 14,
+      'fontColor': 0XFF34495E,
       'fontBold': true
     })
     Map<String, dynamic> headerFont,
@@ -97,6 +97,12 @@ class AssetModelGridWidgetConfig extends BaseConfig
         return 'Page Size';
       case 'sortingFields':
         return 'Sorting Fields';
+         case 'headerBgColor':
+        return 'Header Background Color';
+      case 'iconColor':
+        return 'Icon Color';
+      case 'headerFont':
+        return 'Header Font';
       default:
         return parameter;
     }
