@@ -10,7 +10,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
     _$$DeviceMultiFieldDialWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$DeviceMultiFieldDialWidgetConfigImpl(
-          field: (json['field'] as List<dynamic>?)
+          fields: (json['fields'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
@@ -18,6 +18,18 @@ _$DeviceMultiFieldDialWidgetConfigImpl
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Radial Axes Widget',
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
+          positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.9,
+          angle: (json['angle'] as num?)?.toDouble() ?? 90.0,
+          radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.3,
+          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 5.0,
+          needleLength: (json['needleLength'] as num?)?.toDouble() ?? 0.8,
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 10,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -42,11 +54,17 @@ _$DeviceMultiFieldDialWidgetConfigImpl
 Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
         _$DeviceMultiFieldDialWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'field': instance.field,
+      'fields': instance.fields,
       'bgColor': instance.bgColor,
       'deviceId': instance.deviceId,
       'title': instance.title,
       'titleBgColor': instance.titleBgColor,
+      'positionFactor': instance.positionFactor,
+      'angle': instance.angle,
+      'radiusFactor': instance.radiusFactor,
+      'axisThickness': instance.axisThickness,
+      'needleLength': instance.needleLength,
+      'labelFont': instance.labelFont,
       'titleFont': instance.titleFont,
       'ranges': instance.ranges,
     };
