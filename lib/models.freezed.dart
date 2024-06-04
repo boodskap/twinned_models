@@ -2660,7 +2660,7 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       },
       this.suffixFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 20,
+        'fontSize': 14,
         'fontColor': 0x000000,
         'fontBold': true
       },
