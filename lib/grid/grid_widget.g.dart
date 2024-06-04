@@ -30,17 +30,17 @@ _$AssetModelGridWidgetConfigImpl _$$AssetModelGridWidgetConfigImplFromJson(
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
+            'fontSize': 25,
+            'fontColor': 0XFF34495E,
             'fontBold': true
           },
-      headerBgColor: (json['headerBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
-      iconColor: (json['iconColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      headerBgColor: (json['headerBgColor'] as num?)?.toInt() ?? 0XFF80ced7,
+      iconColor: (json['iconColor'] as num?)?.toInt() ?? 0XFF34495E,
       headerFont: json['headerFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
+            'fontSize': 14,
+            'fontColor': 0XFF34495E,
             'fontBold': true
           },
     );
