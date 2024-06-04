@@ -10,7 +10,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
     _$$DeviceMultiFieldDialWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$DeviceMultiFieldDialWidgetConfigImpl(
-          fields: (json['fields'] as List<dynamic>?)
+          field: (json['field'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
@@ -55,7 +55,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
 Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
         _$DeviceMultiFieldDialWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'fields': instance.fields,
+      'field': instance.field,
       'bgColor': instance.bgColor,
       'deviceId': instance.deviceId,
       'title': instance.title,

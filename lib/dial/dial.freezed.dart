@@ -21,8 +21,8 @@ DeviceMultiFieldDialWidgetConfig _$DeviceMultiFieldDialWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DeviceMultiFieldDialWidgetConfig {
-  List<String> get fields => throw _privateConstructorUsedError;
-  set fields(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get field => throw _privateConstructorUsedError;
+  set field(List<String> value) => throw _privateConstructorUsedError;
   int get bgColor => throw _privateConstructorUsedError;
   set bgColor(int value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
@@ -67,7 +67,7 @@ abstract class $DeviceMultiFieldDialWidgetConfigCopyWith<$Res> {
           DeviceMultiFieldDialWidgetConfig>;
   @useResult
   $Res call(
-      {List<String> fields,
+      {List<String> field,
       int bgColor,
       String deviceId,
       String title,
@@ -97,7 +97,7 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fields = null,
+    Object? field = null,
     Object? bgColor = null,
     Object? deviceId = null,
     Object? title = null,
@@ -113,9 +113,9 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
     Object? ranges = null,
   }) {
     return _then(_value.copyWith(
-      fields: null == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bgColor: null == bgColor
           ? _value.bgColor
@@ -183,7 +183,7 @@ abstract class _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> fields,
+      {List<String> field,
       int bgColor,
       String deviceId,
       String title,
@@ -212,7 +212,7 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fields = null,
+    Object? field = null,
     Object? bgColor = null,
     Object? deviceId = null,
     Object? title = null,
@@ -228,9 +228,9 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
     Object? ranges = null,
   }) {
     return _then(_$DeviceMultiFieldDialWidgetConfigImpl(
-      fields: null == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as List<String>,
       bgColor: null == bgColor
           ? _value.bgColor
@@ -293,7 +293,7 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
 class _$DeviceMultiFieldDialWidgetConfigImpl
     extends _DeviceMultiFieldDialWidgetConfig {
   _$DeviceMultiFieldDialWidgetConfigImpl(
-      {this.fields = const [],
+      {this.field = const [],
       this.bgColor = 0x1F000000,
       this.deviceId = '',
       this.title = 'Radial Axes Widget',
@@ -330,7 +330,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 
   @override
   @JsonKey()
-  List<String> fields;
+  List<String> field;
   @override
   @JsonKey()
   int bgColor;
@@ -373,7 +373,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceMultiFieldDialWidgetConfig(fields: $fields, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
+    return 'DeviceMultiFieldDialWidgetConfig(field: $field, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
   @JsonKey(ignore: true)
@@ -395,7 +395,7 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
 abstract class _DeviceMultiFieldDialWidgetConfig
     extends DeviceMultiFieldDialWidgetConfig {
   factory _DeviceMultiFieldDialWidgetConfig(
-      {List<String> fields,
+      {List<String> field,
       int bgColor,
       String deviceId,
       String title,
@@ -416,8 +416,8 @@ abstract class _DeviceMultiFieldDialWidgetConfig
       _$DeviceMultiFieldDialWidgetConfigImpl.fromJson;
 
   @override
-  List<String> get fields;
-  set fields(List<String> value);
+  List<String> get field;
+  set field(List<String> value);
   @override
   int get bgColor;
   set bgColor(int value);
