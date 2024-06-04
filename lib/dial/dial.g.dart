@@ -23,6 +23,7 @@ _$DeviceMultiFieldDialWidgetConfigImpl
           radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.3,
           axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 5.0,
           needleLength: (json['needleLength'] as num?)?.toDouble() ?? 0.8,
+          gaugeAnimate: json['gaugeAnimate'] as bool? ?? true,
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -64,6 +65,7 @@ Map<String, dynamic> _$$DeviceMultiFieldDialWidgetConfigImplToJson(
       'radiusFactor': instance.radiusFactor,
       'axisThickness': instance.axisThickness,
       'needleLength': instance.needleLength,
+      'gaugeAnimate': instance.gaugeAnimate,
       'labelFont': instance.labelFont,
       'titleFont': instance.titleFont,
       'ranges': instance.ranges,

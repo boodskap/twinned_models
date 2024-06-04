@@ -21,6 +21,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
     @Default(0.3) double radiusFactor,
     @Default(5.0) double axisThickness,
     @Default(0.8) double needleLength,
+    @Default(true) bool gaugeAnimate,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 10,
@@ -70,6 +71,8 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
+      case 'gaugeAnimate':
+        return DataType.yesno;
       default:
         return DataType.text;
     }
@@ -98,7 +101,38 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'fields':
+        return 'Select Field';
+      case 'deviceId':
+        return 'Asset Models';
+      case 'title':
+        return 'Title';
+      case 'titleFont':
+        return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleBgColor':
+        return 'Title BgColor';
+      case 'bgColor':
+        return ' BgColor';
+      case 'gaugeAnimate':
+        return 'Gauge Animate';
+      case 'ranges':
+        return 'Ranges';
+      case 'positionFactor':
+        return 'Position Factor';
+      case 'radiusFactor':
+        return 'Radius Factor';
+      case 'angle':
+        return 'Angle';
+      case 'axisThickness':
+        return 'Axis Thickness';
+      case 'needleLength':
+        return 'Needle Length';
+      default:
+        return parameter;
+    }
   }
 
   @override
