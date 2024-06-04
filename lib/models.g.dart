@@ -296,7 +296,7 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
       suffixFont: json['suffixFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 20,
+            'fontSize': 14,
             'fontColor': 0x000000,
             'fontBold': true
           },
@@ -306,6 +306,9 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
       suffixTextAlignment: $enumDecodeNullable(
               _$TextAlignmentEnumMap, json['suffixTextAlignment']) ??
           TextAlignment.centerRight,
+      valueTextAlignment: $enumDecodeNullable(
+              _$TextAlignmentEnumMap, json['valueTextAlignment']) ??
+          TextAlignment.center,
     );
 
 Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
@@ -328,6 +331,8 @@ Map<String, dynamic> _$$DynamicTextWidgetConfigImplToJson(
           _$TextAlignmentEnumMap[instance.prefixTextAlignment]!,
       'suffixTextAlignment':
           _$TextAlignmentEnumMap[instance.suffixTextAlignment]!,
+      'valueTextAlignment':
+          _$TextAlignmentEnumMap[instance.valueTextAlignment]!,
     };
 
 const _$TextAlignmentEnumMap = {
