@@ -731,20 +731,20 @@ enum TextAlignment {
   bottomRight,
 }
 
-class AlignmentConverter
-    implements JsonConverter<Alignment, Map<String, double>> {
-  const AlignmentConverter();
+// class AlignmentConverter
+//     implements JsonConverter<Alignment, Map<String, double>> {
+//   const AlignmentConverter();
 
-  @override
-  Alignment fromJson(Map<String, double> json) {
-    return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
-  }
+//   @override
+//   Alignment fromJson(Map<String, double> json) {
+//     return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
+//   }
 
-  @override
-  Map<String, double> toJson(Alignment alignment) {
-    return {'x': alignment.x, 'y': alignment.y};
-  }
-}
+//   @override
+//   Map<String, double> toJson(Alignment alignment) {
+//     return {'x': alignment.x, 'y': alignment.y};
+//   }
+// }
 
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
@@ -784,17 +784,14 @@ class DynamicTextWidgetConfig extends BaseConfig
     Map<String, dynamic> prefixFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 14,
       'fontColor': 0x000000,
       'fontBold': true
     })
     Map<String, dynamic> suffixFont,
-    @AlignmentConverter()
-    @Default(Alignment.centerLeft)
-    Alignment prefixTextAlignment,
-    @AlignmentConverter()
-    @Default(Alignment.centerRight)
-    Alignment suffixTextAlignment,
+    @Default(TextAlignment.centerLeft) TextAlignment prefixTextAlignment,
+    @Default(TextAlignment.centerRight) TextAlignment suffixTextAlignment,
+    @Default(TextAlignment.center) TextAlignment valueTextAlignment,
   }) = _DynamicTextWidgetConfig;
 
   factory DynamicTextWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -806,10 +803,18 @@ class DynamicTextWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+      case 'prefixText':
+      case 'suffixText':
         return DataType.text;
       case 'font':
       case 'titleFont':
+      case 'prefixFont':
+      case 'suffixFont':
         return DataType.font;
+      case 'prefixTextAlignment':
+      case 'suffixTextAlignment':
+      case 'valueTextAlignment':
+        return DataType.enumerated;
       case 'width':
       case 'height':
         return DataType.numeric;
@@ -838,6 +843,7 @@ class DynamicTextWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'prefixTextAlignment':
       case 'suffixTextAlignment':
+      case 'valueTextAlignment':
         return TextAlignment.values.asNameMap().keys.toList();
       default:
         return [];
@@ -846,7 +852,42 @@ class DynamicTextWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'title':
+        return 'Title';
+      case 'field':
+        return 'Field';
+      case 'deviceId':
+        return 'DeviceId';
+      case 'prefixText':
+        return 'Prefix Text';
+
+      case 'suffixText':
+        return 'Suffix Text';
+      case 'font':
+        return 'Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'prefixFont':
+        return 'Prefix font';
+
+      case 'suffixFont':
+        return 'Suffix Font';
+      case 'prefixTextAlignment':
+        return 'Prefix TextAlignment';
+      case 'suffixTextAlignment':
+        return 'Suffix TextAlignment';
+      case 'valueTextAlignment':
+        return 'Value TextAlignment';
+
+      case 'width':
+        return 'Width';
+      case 'height':
+        return 'Height';
+
+      default:
+        return parameter;
+    }
   }
 
   @override

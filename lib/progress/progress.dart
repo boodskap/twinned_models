@@ -33,8 +33,8 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
-    @Default(0xbfbfbf) int unfillColor,
-    @Default(0x0000FF) int fillColor,
+    @Default(0xFFD3E3FD) int unfillColor,
+    @Default(0xFF4F9FDE) int fillColor,
     @Default(0x00000000) int titleBgColor,
     @Default(20.0) double progressbarWidth,
     @Default(120.0) double circularRadius,
@@ -63,6 +63,7 @@ class DeviceFieldPercentageWidgetConfig extends BaseConfig
       case 'circularRadius':
         return DataType.decimal;
       case 'shape':
+      return DataType.enumerated;
       default:
         return DataType.none;
     }
