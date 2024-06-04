@@ -74,6 +74,11 @@ class GenericTemperatureWidgetConfig extends BaseConfig
         return HintType.deviceId;
       case 'widgetColor':
         return HintType.color;
+      case 'temperatureField':
+      case 'dewPointField':
+      case 'humidityField':
+      case 'windChillField':
+        return HintType.field;
       default:
         return HintType.none;
     }
