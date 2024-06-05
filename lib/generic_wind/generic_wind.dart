@@ -16,25 +16,25 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     @Default('MPH') String speedTitle,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 25,
       'fontColor': 0,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 25,
       'fontColor': 0,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> labelFont,
     @Default('') String deviceId,
     @Default('') String windField,
     @Default('') String gustField,
     @Default('') String directionField,
-    @Default(300) int width,
-    @Default(350) int height,
-    @Default(50) int contentFontSize,
+    @Default(270) int width,
+    @Default(270) int height,
+    @Default(40) int contentFontSize,
   }) = _GenericWindInfoWidgetConfig;
 
   factory GenericWindInfoWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -126,6 +126,7 @@ class GenericWindInfoWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'deviceId':
+       return true;
       default:
         return false;
     }
