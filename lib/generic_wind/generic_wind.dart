@@ -14,25 +14,27 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     @Default('|') String separator,
     @Default('GUST') String gustTitle,
     @Default('MPH') String speedTitle,
-
-     @Default({
+    @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 25,
       'fontColor': 0,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 25,
       'fontColor': 0,
-      'fontBold': false
+      'fontBold': true
     })
-     Map<String, dynamic> labelFont,
+    Map<String, dynamic> labelFont,
     @Default('') String deviceId,
     @Default('') String windField,
     @Default('') String gustField,
     @Default('') String directionField,
+    @Default(270) int width,
+    @Default(300) int height,
+    @Default(40) int contentFontSize,
   }) = _GenericWindInfoWidgetConfig;
 
   factory GenericWindInfoWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -49,10 +51,14 @@ class GenericWindInfoWidgetConfig extends BaseConfig
       case 'windField':
       case 'gustField':
       case 'directionField':
-       return DataType.text;
-        case 'titleFont':
+        return DataType.text;
+      case 'titleFont':
       case 'labelFont':
         return DataType.font;
+      case 'width':
+      case 'height':
+      case 'contentFontSize':
+        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -63,9 +69,9 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
-        case 'windField':
-        case 'gustField':
-        case 'directionField':
+      case 'windField':
+      case 'gustField':
+      case 'directionField':
         return HintType.field;
       default:
         return HintType.none;
@@ -79,31 +85,35 @@ class GenericWindInfoWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    switch(parameter){
+    switch (parameter) {
       case 'windTitle':
-      return 'Wind Title';
+        return 'Wind Title';
       case 'separator':
-      return 'Separator';
+        return 'Separator';
       case 'gustTitle':
-      return 'Gust Title';
+        return 'Gust Title';
       case 'speedTitle':
-      return 'Speed Title';
-
+        return 'Speed Title';
       case 'deviceId':
-      return 'Device Id';
+        return 'Device Id';
       case 'windField':
-      return 'Wind Field';
+        return 'Wind Field';
       case 'gustField':
-      return 'Gust Field';
+        return 'Gust Field';
       case 'directionField':
-      return 'Direction Field';
-       case 'titleFont':
-      return 'Title Font';
-       case 'labelFont':
-      return 'Label Font';
+        return 'Direction Field';
+      case 'titleFont':
+        return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'width':
+        return 'Width';
+      case 'height':
+        return 'Height';
+      case 'contentFontSize':
+        return 'Content Font Size';
       default:
         return parameter;
-
     }
   }
 
@@ -116,6 +126,7 @@ class GenericWindInfoWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'deviceId':
+       return true;
       default:
         return false;
     }

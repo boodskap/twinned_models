@@ -731,20 +731,7 @@ enum TextAlignment {
   bottomRight,
 }
 
-// class AlignmentConverter
-//     implements JsonConverter<Alignment, Map<String, double>> {
-//   const AlignmentConverter();
 
-//   @override
-//   Alignment fromJson(Map<String, double> json) {
-//     return Alignment(json['x'] ?? 0.0, json['y'] ?? 0.0);
-//   }
-
-//   @override
-//   Map<String, double> toJson(Alignment alignment) {
-//     return {'x': alignment.x, 'y': alignment.y};
-//   }
-// }
 
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
@@ -1000,11 +987,11 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
   factory TimeStampWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
-    @Default(0x000000) int yearFontColor,
-    @Default(0x000000) int monthFontColor,
-    @Default(0x000000) int dateFontColor,
-    @Default(0x000000) int timeFontColor,
-    @Default(0x000000) int meridiemFontColor,
+    @Default(0xFF000000) int yearFontColor,
+    @Default(0xFF000000) int monthFontColor,
+    @Default(0xFF000000) int dateFontColor,
+    @Default(0xFF000000) int timeFontColor,
+    @Default(0xFF000000) int meridiemFontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,

@@ -16,21 +16,24 @@ _$GenericWindInfoWidgetConfigImpl _$$GenericWindInfoWidgetConfigImplFromJson(
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 14,
+            'fontSize': 25,
             'fontColor': 0,
-            'fontBold': false
+            'fontBold': true
           },
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 14,
+            'fontSize': 25,
             'fontColor': 0,
-            'fontBold': false
+            'fontBold': true
           },
       deviceId: json['deviceId'] as String? ?? '',
       windField: json['windField'] as String? ?? '',
       gustField: json['gustField'] as String? ?? '',
       directionField: json['directionField'] as String? ?? '',
+      width: (json['width'] as num?)?.toInt() ?? 270,
+      height: (json['height'] as num?)?.toInt() ?? 300,
+      contentFontSize: (json['contentFontSize'] as num?)?.toInt() ?? 40,
     );
 
 Map<String, dynamic> _$$GenericWindInfoWidgetConfigImplToJson(
@@ -46,4 +49,7 @@ Map<String, dynamic> _$$GenericWindInfoWidgetConfigImplToJson(
       'windField': instance.windField,
       'gustField': instance.gustField,
       'directionField': instance.directionField,
+      'width': instance.width,
+      'height': instance.height,
+      'contentFontSize': instance.contentFontSize,
     };
