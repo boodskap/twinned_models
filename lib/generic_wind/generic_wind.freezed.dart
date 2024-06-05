@@ -284,23 +284,23 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
       this.speedTitle = 'MPH',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 25,
         'fontColor': 0,
-        'fontBold': false
+        'fontBold': true
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 25,
         'fontColor': 0,
-        'fontBold': false
+        'fontBold': true
       },
       this.deviceId = '',
       this.windField = '',
       this.gustField = '',
       this.directionField = '',
-      this.width = 300,
-      this.height = 350,
-      this.contentFontSize = 50})
+      this.width = 270,
+      this.height = 270,
+      this.contentFontSize = 40})
       : super._();
 
   factory _$GenericWindInfoWidgetConfigImpl.fromJson(
