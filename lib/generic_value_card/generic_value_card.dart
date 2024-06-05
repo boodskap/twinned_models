@@ -61,7 +61,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'iconWidth':
       case 'iconHeight':
         return DataType.decimal;
-      case '':
+      case 'iconId':
         return DataType.image;
       default:
         return DataType.text;
@@ -105,7 +105,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'iconId':
         return 'Image upload';
       case 'elevation':
-        return 'eElevation';
+        return 'Elevation';
       case 'iconWidth':
         return 'Icon Width';
       case 'iconHeight':
