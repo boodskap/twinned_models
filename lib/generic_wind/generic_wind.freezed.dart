@@ -299,7 +299,7 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
       this.gustField = '',
       this.directionField = '',
       this.width = 270,
-      this.height = 270,
+      this.height = 300,
       this.contentFontSize = 40})
       : super._();
 
