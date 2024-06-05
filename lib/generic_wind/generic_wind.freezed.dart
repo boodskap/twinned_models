@@ -43,6 +43,12 @@ mixin _$GenericWindInfoWidgetConfig {
   set gustField(String value) => throw _privateConstructorUsedError;
   String get directionField => throw _privateConstructorUsedError;
   set directionField(String value) => throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
+  set width(int value) => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
+  set height(int value) => throw _privateConstructorUsedError;
+  int get contentFontSize => throw _privateConstructorUsedError;
+  set contentFontSize(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,7 +74,10 @@ abstract class $GenericWindInfoWidgetConfigCopyWith<$Res> {
       String deviceId,
       String windField,
       String gustField,
-      String directionField});
+      String directionField,
+      int width,
+      int height,
+      int contentFontSize});
 }
 
 /// @nodoc
@@ -95,6 +104,9 @@ class _$GenericWindInfoWidgetConfigCopyWithImpl<$Res,
     Object? windField = null,
     Object? gustField = null,
     Object? directionField = null,
+    Object? width = null,
+    Object? height = null,
+    Object? contentFontSize = null,
   }) {
     return _then(_value.copyWith(
       windTitle: null == windTitle
@@ -137,6 +149,18 @@ class _$GenericWindInfoWidgetConfigCopyWithImpl<$Res,
           ? _value.directionField
           : directionField // ignore: cast_nullable_to_non_nullable
               as String,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      contentFontSize: null == contentFontSize
+          ? _value.contentFontSize
+          : contentFontSize // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -160,7 +184,10 @@ abstract class _$$GenericWindInfoWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String windField,
       String gustField,
-      String directionField});
+      String directionField,
+      int width,
+      int height,
+      int contentFontSize});
 }
 
 /// @nodoc
@@ -186,6 +213,9 @@ class __$$GenericWindInfoWidgetConfigImplCopyWithImpl<$Res>
     Object? windField = null,
     Object? gustField = null,
     Object? directionField = null,
+    Object? width = null,
+    Object? height = null,
+    Object? contentFontSize = null,
   }) {
     return _then(_$GenericWindInfoWidgetConfigImpl(
       windTitle: null == windTitle
@@ -228,6 +258,18 @@ class __$$GenericWindInfoWidgetConfigImplCopyWithImpl<$Res>
           ? _value.directionField
           : directionField // ignore: cast_nullable_to_non_nullable
               as String,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      contentFontSize: null == contentFontSize
+          ? _value.contentFontSize
+          : contentFontSize // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -255,7 +297,10 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
       this.deviceId = '',
       this.windField = '',
       this.gustField = '',
-      this.directionField = ''})
+      this.directionField = '',
+      this.width = 300,
+      this.height = 350,
+      this.contentFontSize = 50})
       : super._();
 
   factory _$GenericWindInfoWidgetConfigImpl.fromJson(
@@ -292,10 +337,19 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
   @override
   @JsonKey()
   String directionField;
+  @override
+  @JsonKey()
+  int width;
+  @override
+  @JsonKey()
+  int height;
+  @override
+  @JsonKey()
+  int contentFontSize;
 
   @override
   String toString() {
-    return 'GenericWindInfoWidgetConfig(windTitle: $windTitle, separator: $separator, gustTitle: $gustTitle, speedTitle: $speedTitle, titleFont: $titleFont, labelFont: $labelFont, deviceId: $deviceId, windField: $windField, gustField: $gustField, directionField: $directionField)';
+    return 'GenericWindInfoWidgetConfig(windTitle: $windTitle, separator: $separator, gustTitle: $gustTitle, speedTitle: $speedTitle, titleFont: $titleFont, labelFont: $labelFont, deviceId: $deviceId, windField: $windField, gustField: $gustField, directionField: $directionField, width: $width, height: $height, contentFontSize: $contentFontSize)';
   }
 
   @JsonKey(ignore: true)
@@ -325,7 +379,10 @@ abstract class _GenericWindInfoWidgetConfig
       String deviceId,
       String windField,
       String gustField,
-      String directionField}) = _$GenericWindInfoWidgetConfigImpl;
+      String directionField,
+      int width,
+      int height,
+      int contentFontSize}) = _$GenericWindInfoWidgetConfigImpl;
   _GenericWindInfoWidgetConfig._() : super._();
 
   factory _GenericWindInfoWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -361,6 +418,15 @@ abstract class _GenericWindInfoWidgetConfig
   @override
   String get directionField;
   set directionField(String value);
+  @override
+  int get width;
+  set width(int value);
+  @override
+  int get height;
+  set height(int value);
+  @override
+  int get contentFontSize;
+  set contentFontSize(int value);
   @override
   @JsonKey(ignore: true)
   _$$GenericWindInfoWidgetConfigImplCopyWith<_$GenericWindInfoWidgetConfigImpl>
