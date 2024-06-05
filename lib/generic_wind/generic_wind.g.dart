@@ -31,6 +31,9 @@ _$GenericWindInfoWidgetConfigImpl _$$GenericWindInfoWidgetConfigImplFromJson(
       windField: json['windField'] as String? ?? '',
       gustField: json['gustField'] as String? ?? '',
       directionField: json['directionField'] as String? ?? '',
+      width: (json['width'] as num?)?.toInt() ?? 300,
+      height: (json['height'] as num?)?.toInt() ?? 350,
+      contentFontSize: (json['contentFontSize'] as num?)?.toInt() ?? 50,
     );
 
 Map<String, dynamic> _$$GenericWindInfoWidgetConfigImplToJson(
@@ -46,4 +49,7 @@ Map<String, dynamic> _$$GenericWindInfoWidgetConfigImplToJson(
       'windField': instance.windField,
       'gustField': instance.gustField,
       'directionField': instance.directionField,
+      'width': instance.width,
+      'height': instance.height,
+      'contentFontSize': instance.contentFontSize,
     };
