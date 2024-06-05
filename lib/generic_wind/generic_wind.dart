@@ -33,7 +33,7 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     @Default('') String gustField,
     @Default('') String directionField,
     @Default(270) int width,
-    @Default(270) int height,
+    @Default(300) int height,
     @Default(40) int contentFontSize,
   }) = _GenericWindInfoWidgetConfig;
 
