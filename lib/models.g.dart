@@ -378,12 +378,12 @@ _$TimeStampWidgetConfigImpl _$$TimeStampWidgetConfigImplFromJson(
     _$TimeStampWidgetConfigImpl(
       field: json['field'] as String? ?? '',
       deviceId: json['deviceId'] as String? ?? '',
-      yearFontColor: (json['yearFontColor'] as num?)?.toInt() ?? 0x000000,
-      monthFontColor: (json['monthFontColor'] as num?)?.toInt() ?? 0x000000,
-      dateFontColor: (json['dateFontColor'] as num?)?.toInt() ?? 0x000000,
-      timeFontColor: (json['timeFontColor'] as num?)?.toInt() ?? 0x000000,
+      yearFontColor: (json['yearFontColor'] as num?)?.toInt() ?? 0xFF000000,
+      monthFontColor: (json['monthFontColor'] as num?)?.toInt() ?? 0xFF000000,
+      dateFontColor: (json['dateFontColor'] as num?)?.toInt() ?? 0xFF000000,
+      timeFontColor: (json['timeFontColor'] as num?)?.toInt() ?? 0xFF000000,
       meridiemFontColor:
-          (json['meridiemFontColor'] as num?)?.toInt() ?? 0x000000,
+          (json['meridiemFontColor'] as num?)?.toInt() ?? 0xFF000000,
       meridiemFont: json['meridiemFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
