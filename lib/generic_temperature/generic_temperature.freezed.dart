@@ -41,8 +41,8 @@ mixin _$GenericTemperatureWidgetConfig {
   set humidityTitle(String value) => throw _privateConstructorUsedError;
   String get windChillTitle => throw _privateConstructorUsedError;
   set windChillTitle(String value) => throw _privateConstructorUsedError;
-  bool get showdisplayInCelcius => throw _privateConstructorUsedError;
-  set showdisplayInCelcius(bool value) => throw _privateConstructorUsedError;
+  bool get displayInCelcius => throw _privateConstructorUsedError;
+  set displayInCelcius(bool value) => throw _privateConstructorUsedError;
   String get temperatureField => throw _privateConstructorUsedError;
   set temperatureField(String value) => throw _privateConstructorUsedError;
   String get dewPointField => throw _privateConstructorUsedError;
@@ -76,7 +76,7 @@ abstract class $GenericTemperatureWidgetConfigCopyWith<$Res> {
       String dewPointTitle,
       String humidityTitle,
       String windChillTitle,
-      bool showdisplayInCelcius,
+      bool displayInCelcius,
       String temperatureField,
       String dewPointField,
       String humidityField,
@@ -106,7 +106,7 @@ class _$GenericTemperatureWidgetConfigCopyWithImpl<$Res,
     Object? dewPointTitle = null,
     Object? humidityTitle = null,
     Object? windChillTitle = null,
-    Object? showdisplayInCelcius = null,
+    Object? displayInCelcius = null,
     Object? temperatureField = null,
     Object? dewPointField = null,
     Object? humidityField = null,
@@ -149,9 +149,9 @@ class _$GenericTemperatureWidgetConfigCopyWithImpl<$Res,
           ? _value.windChillTitle
           : windChillTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      showdisplayInCelcius: null == showdisplayInCelcius
-          ? _value.showdisplayInCelcius
-          : showdisplayInCelcius // ignore: cast_nullable_to_non_nullable
+      displayInCelcius: null == displayInCelcius
+          ? _value.displayInCelcius
+          : displayInCelcius // ignore: cast_nullable_to_non_nullable
               as bool,
       temperatureField: null == temperatureField
           ? _value.temperatureField
@@ -192,7 +192,7 @@ abstract class _$$GenericTemperatureWidgetConfigImplCopyWith<$Res>
       String dewPointTitle,
       String humidityTitle,
       String windChillTitle,
-      bool showdisplayInCelcius,
+      bool displayInCelcius,
       String temperatureField,
       String dewPointField,
       String humidityField,
@@ -221,7 +221,7 @@ class __$$GenericTemperatureWidgetConfigImplCopyWithImpl<$Res>
     Object? dewPointTitle = null,
     Object? humidityTitle = null,
     Object? windChillTitle = null,
-    Object? showdisplayInCelcius = null,
+    Object? displayInCelcius = null,
     Object? temperatureField = null,
     Object? dewPointField = null,
     Object? humidityField = null,
@@ -264,9 +264,9 @@ class __$$GenericTemperatureWidgetConfigImplCopyWithImpl<$Res>
           ? _value.windChillTitle
           : windChillTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      showdisplayInCelcius: null == showdisplayInCelcius
-          ? _value.showdisplayInCelcius
-          : showdisplayInCelcius // ignore: cast_nullable_to_non_nullable
+      displayInCelcius: null == displayInCelcius
+          ? _value.displayInCelcius
+          : displayInCelcius // ignore: cast_nullable_to_non_nullable
               as bool,
       temperatureField: null == temperatureField
           ? _value.temperatureField
@@ -293,7 +293,7 @@ class __$$GenericTemperatureWidgetConfigImplCopyWithImpl<$Res>
 class _$GenericTemperatureWidgetConfigImpl
     extends _GenericTemperatureWidgetConfig {
   _$GenericTemperatureWidgetConfigImpl(
-      {this.title = 'TEMPERATUE',
+      {this.title = 'TEMPERATURE',
       this.deviceId = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -307,12 +307,12 @@ class _$GenericTemperatureWidgetConfigImpl
         'fontColor': 0,
         'fontBold': false
       },
-      this.widgetColor = 0x000000,
+      this.widgetColor = 0xFF000000,
       this.currentTitle = 'CURRENT',
       this.dewPointTitle = 'DEWPOINT',
       this.humidityTitle = 'HUMIDITY',
       this.windChillTitle = 'WIND CHILL',
-      this.showdisplayInCelcius = false,
+      this.displayInCelcius = false,
       this.temperatureField = '',
       this.dewPointField = '',
       this.humidityField = '',
@@ -352,7 +352,7 @@ class _$GenericTemperatureWidgetConfigImpl
   String windChillTitle;
   @override
   @JsonKey()
-  bool showdisplayInCelcius;
+  bool displayInCelcius;
   @override
   @JsonKey()
   String temperatureField;
@@ -368,7 +368,7 @@ class _$GenericTemperatureWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericTemperatureWidgetConfig(title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, widgetColor: $widgetColor, currentTitle: $currentTitle, dewPointTitle: $dewPointTitle, humidityTitle: $humidityTitle, windChillTitle: $windChillTitle, showdisplayInCelcius: $showdisplayInCelcius, temperatureField: $temperatureField, dewPointField: $dewPointField, humidityField: $humidityField, windChillField: $windChillField)';
+    return 'GenericTemperatureWidgetConfig(title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, widgetColor: $widgetColor, currentTitle: $currentTitle, dewPointTitle: $dewPointTitle, humidityTitle: $humidityTitle, windChillTitle: $windChillTitle, displayInCelcius: $displayInCelcius, temperatureField: $temperatureField, dewPointField: $dewPointField, humidityField: $humidityField, windChillField: $windChillField)';
   }
 
   @JsonKey(ignore: true)
@@ -399,7 +399,7 @@ abstract class _GenericTemperatureWidgetConfig
       String dewPointTitle,
       String humidityTitle,
       String windChillTitle,
-      bool showdisplayInCelcius,
+      bool displayInCelcius,
       String temperatureField,
       String dewPointField,
       String humidityField,
@@ -437,8 +437,8 @@ abstract class _GenericTemperatureWidgetConfig
   String get windChillTitle;
   set windChillTitle(String value);
   @override
-  bool get showdisplayInCelcius;
-  set showdisplayInCelcius(bool value);
+  bool get displayInCelcius;
+  set displayInCelcius(bool value);
   @override
   String get temperatureField;
   set temperatureField(String value);

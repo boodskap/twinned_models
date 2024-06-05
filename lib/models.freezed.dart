@@ -3317,11 +3317,11 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
   _$TimeStampWidgetConfigImpl(
       {this.field = '',
       this.deviceId = '',
-      this.yearFontColor = 0x000000,
-      this.monthFontColor = 0x000000,
-      this.dateFontColor = 0x000000,
-      this.timeFontColor = 0x000000,
-      this.meridiemFontColor = 0x000000,
+      this.yearFontColor = 0xFF000000,
+      this.monthFontColor = 0xFF000000,
+      this.dateFontColor = 0xFF000000,
+      this.timeFontColor = 0xFF000000,
+      this.meridiemFontColor = 0xFF000000,
       this.meridiemFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
