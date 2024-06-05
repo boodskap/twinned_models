@@ -987,11 +987,11 @@ class TimeStampWidgetConfig extends BaseConfig with _$TimeStampWidgetConfig {
   factory TimeStampWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
-    @Default(0x000000) int yearFontColor,
-    @Default(0x000000) int monthFontColor,
-    @Default(0x000000) int dateFontColor,
-    @Default(0x000000) int timeFontColor,
-    @Default(0x000000) int meridiemFontColor,
+    @Default(0xFF000000) int yearFontColor,
+    @Default(0xFF000000) int monthFontColor,
+    @Default(0xFF000000) int dateFontColor,
+    @Default(0xFF000000) int timeFontColor,
+    @Default(0xFF000000) int meridiemFontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
