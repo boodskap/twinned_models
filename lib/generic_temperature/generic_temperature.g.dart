@@ -9,7 +9,7 @@ part of 'generic_temperature.dart';
 _$GenericTemperatureWidgetConfigImpl
     _$$GenericTemperatureWidgetConfigImplFromJson(Map<String, dynamic> json) =>
         _$GenericTemperatureWidgetConfigImpl(
-          title: json['title'] as String? ?? 'TEMPERATUE',
+          title: json['title'] as String? ?? 'TEMPERATURE',
           deviceId: json['deviceId'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
@@ -25,12 +25,12 @@ _$GenericTemperatureWidgetConfigImpl
                 'fontColor': 0,
                 'fontBold': false
               },
-          widgetColor: (json['widgetColor'] as num?)?.toInt() ?? 0x000000,
+          widgetColor: (json['widgetColor'] as num?)?.toInt() ?? 0xFF000000,
           currentTitle: json['currentTitle'] as String? ?? 'CURRENT',
           dewPointTitle: json['dewPointTitle'] as String? ?? 'DEWPOINT',
           humidityTitle: json['humidityTitle'] as String? ?? 'HUMIDITY',
           windChillTitle: json['windChillTitle'] as String? ?? 'WIND CHILL',
-          showdisplayInCelcius: json['showdisplayInCelcius'] as bool? ?? false,
+          displayInCelcius: json['displayInCelcius'] as bool? ?? false,
           temperatureField: json['temperatureField'] as String? ?? '',
           dewPointField: json['dewPointField'] as String? ?? '',
           humidityField: json['humidityField'] as String? ?? '',
@@ -49,7 +49,7 @@ Map<String, dynamic> _$$GenericTemperatureWidgetConfigImplToJson(
       'dewPointTitle': instance.dewPointTitle,
       'humidityTitle': instance.humidityTitle,
       'windChillTitle': instance.windChillTitle,
-      'showdisplayInCelcius': instance.showdisplayInCelcius,
+      'displayInCelcius': instance.displayInCelcius,
       'temperatureField': instance.temperatureField,
       'dewPointField': instance.dewPointField,
       'humidityField': instance.humidityField,

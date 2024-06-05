@@ -10,7 +10,7 @@ class GenericTemperatureWidgetConfig extends BaseConfig
   GenericTemperatureWidgetConfig._();
 
   factory GenericTemperatureWidgetConfig({
-    @Default('TEMPERATUE') String title,
+    @Default('TEMPERATURE') String title,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
@@ -26,12 +26,12 @@ class GenericTemperatureWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> labelFont,
-    @Default(0x000000) int widgetColor,
+    @Default(0xFF000000) int widgetColor,
     @Default('CURRENT') String currentTitle,
     @Default('DEWPOINT') String dewPointTitle,
     @Default('HUMIDITY') String humidityTitle,
     @Default('WIND CHILL') String windChillTitle,
-    @Default(false) bool showdisplayInCelcius,
+    @Default(false) bool displayInCelcius,
     @Default('') String temperatureField,
     @Default('') String dewPointField,
     @Default('') String humidityField,
