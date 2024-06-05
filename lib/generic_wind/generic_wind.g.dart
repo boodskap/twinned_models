@@ -32,7 +32,7 @@ _$GenericWindInfoWidgetConfigImpl _$$GenericWindInfoWidgetConfigImplFromJson(
       gustField: json['gustField'] as String? ?? '',
       directionField: json['directionField'] as String? ?? '',
       width: (json['width'] as num?)?.toInt() ?? 270,
-      height: (json['height'] as num?)?.toInt() ?? 270,
+      height: (json['height'] as num?)?.toInt() ?? 300,
       contentFontSize: (json['contentFontSize'] as num?)?.toInt() ?? 40,
     );
 
