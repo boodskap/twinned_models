@@ -742,19 +742,19 @@ class DynamicTextWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String field,
     @Default('') String deviceId,
-    @Default(0x000000) int fontColor,
-    @Default(0x000000) int titleFontColor,
+    @Default(0XFF000000) int fontColor,
+    @Default(0XFF000000) int titleFontColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> font,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
@@ -765,14 +765,14 @@ class DynamicTextWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0x000000,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> prefixFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0x000000,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> suffixFont,
