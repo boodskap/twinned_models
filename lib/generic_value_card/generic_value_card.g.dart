@@ -17,6 +17,7 @@ _$GenericValueCardWidgetConfigImpl _$$GenericValueCardWidgetConfigImplFromJson(
       elevation: (json['elevation'] as num?)?.toDouble() ?? 8.0,
       iconWidth: (json['iconWidth'] as num?)?.toDouble() ?? 96,
       iconHeight: (json['iconHeight'] as num?)?.toDouble() ?? 96,
+      valueBgColor: (json['valueBgColor'] as num?)?.toInt() ?? 0xFFF0F1F2,
       topFont: json['topFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -51,6 +52,7 @@ Map<String, dynamic> _$$GenericValueCardWidgetConfigImplToJson(
       'elevation': instance.elevation,
       'iconWidth': instance.iconWidth,
       'iconHeight': instance.iconHeight,
+      'valueBgColor': instance.valueBgColor,
       'topFont': instance.topFont,
       'valueFont': instance.valueFont,
       'bottomFont': instance.bottomFont,
