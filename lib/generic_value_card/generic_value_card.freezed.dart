@@ -37,6 +37,8 @@ mixin _$GenericValueCardWidgetConfig {
   set iconWidth(double value) => throw _privateConstructorUsedError;
   double get iconHeight => throw _privateConstructorUsedError;
   set iconHeight(double value) => throw _privateConstructorUsedError;
+  int get valueBgColor => throw _privateConstructorUsedError;
+  set valueBgColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get topFont => throw _privateConstructorUsedError;
   set topFont(Map<String, dynamic> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
@@ -69,6 +71,7 @@ abstract class $GenericValueCardWidgetConfigCopyWith<$Res> {
       double elevation,
       double iconWidth,
       double iconHeight,
+      int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> bottomFont});
@@ -96,6 +99,7 @@ class _$GenericValueCardWidgetConfigCopyWithImpl<$Res,
     Object? elevation = null,
     Object? iconWidth = null,
     Object? iconHeight = null,
+    Object? valueBgColor = null,
     Object? topFont = null,
     Object? valueFont = null,
     Object? bottomFont = null,
@@ -133,6 +137,10 @@ class _$GenericValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.iconHeight
           : iconHeight // ignore: cast_nullable_to_non_nullable
               as double,
+      valueBgColor: null == valueBgColor
+          ? _value.valueBgColor
+          : valueBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       topFont: null == topFont
           ? _value.topFont
           : topFont // ignore: cast_nullable_to_non_nullable
@@ -167,6 +175,7 @@ abstract class _$$GenericValueCardWidgetConfigImplCopyWith<$Res>
       double elevation,
       double iconWidth,
       double iconHeight,
+      int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> bottomFont});
@@ -193,6 +202,7 @@ class __$$GenericValueCardWidgetConfigImplCopyWithImpl<$Res>
     Object? elevation = null,
     Object? iconWidth = null,
     Object? iconHeight = null,
+    Object? valueBgColor = null,
     Object? topFont = null,
     Object? valueFont = null,
     Object? bottomFont = null,
@@ -230,6 +240,10 @@ class __$$GenericValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.iconHeight
           : iconHeight // ignore: cast_nullable_to_non_nullable
               as double,
+      valueBgColor: null == valueBgColor
+          ? _value.valueBgColor
+          : valueBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       topFont: null == topFont
           ? _value.topFont
           : topFont // ignore: cast_nullable_to_non_nullable
@@ -258,6 +272,7 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       this.elevation = 8.0,
       this.iconWidth = 96,
       this.iconHeight = 96,
+      this.valueBgColor = 0xFFF0F1F2,
       this.topFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
@@ -308,6 +323,9 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
   double iconHeight;
   @override
   @JsonKey()
+  int valueBgColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> topFont;
   @override
   @JsonKey()
@@ -318,7 +336,7 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
 
   @override
   String toString() {
-    return 'GenericValueCardWidgetConfig(field: $field, deviceId: $deviceId, topLabel: $topLabel, bottomLabel: $bottomLabel, iconId: $iconId, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, topFont: $topFont, valueFont: $valueFont, bottomFont: $bottomFont)';
+    return 'GenericValueCardWidgetConfig(field: $field, deviceId: $deviceId, topLabel: $topLabel, bottomLabel: $bottomLabel, iconId: $iconId, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFont: $topFont, valueFont: $valueFont, bottomFont: $bottomFont)';
   }
 
   @JsonKey(ignore: true)
@@ -348,6 +366,7 @@ abstract class _GenericValueCardWidgetConfig
       double elevation,
       double iconWidth,
       double iconHeight,
+      int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> bottomFont}) = _$GenericValueCardWidgetConfigImpl;
@@ -380,6 +399,9 @@ abstract class _GenericValueCardWidgetConfig
   @override
   double get iconHeight;
   set iconHeight(double value);
+  @override
+  int get valueBgColor;
+  set valueBgColor(int value);
   @override
   Map<String, dynamic> get topFont;
   set topFont(Map<String, dynamic> value);
