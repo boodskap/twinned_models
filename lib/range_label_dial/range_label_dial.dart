@@ -82,7 +82,7 @@ class DeviceFieldRangeLabelDialWidgetConfig extends BaseConfig
       case 'valueFont':
         return DataType.font;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 

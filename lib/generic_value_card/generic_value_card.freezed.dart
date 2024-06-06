@@ -261,7 +261,7 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       this.topFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
