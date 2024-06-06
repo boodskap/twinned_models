@@ -79,7 +79,7 @@ class GenericDayWeatherWidgetConfig extends BaseConfig
         return DataType.font;
 
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
