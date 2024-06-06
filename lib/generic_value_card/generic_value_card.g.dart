@@ -21,7 +21,7 @@ _$GenericValueCardWidgetConfigImpl _$$GenericValueCardWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
+            'fontColor': 0xFF000000,
             'fontBold': true
           },
       valueFont: json['valueFont'] as Map<String, dynamic>? ??

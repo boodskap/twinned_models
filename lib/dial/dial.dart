@@ -74,7 +74,7 @@ class DeviceMultiFieldDialWidgetConfig extends BaseConfig
       case 'gaugeAnimate':
         return DataType.yesno;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 

@@ -22,7 +22,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> topFont,
@@ -64,7 +64,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'iconId':
         return DataType.image;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
