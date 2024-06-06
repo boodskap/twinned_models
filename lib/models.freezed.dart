@@ -2634,18 +2634,18 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       {this.title = '',
       this.field = '',
       this.deviceId = '',
-      this.fontColor = 0x000000,
-      this.titleFontColor = 0x000000,
+      this.fontColor = 0XFF000000,
+      this.titleFontColor = 0XFF000000,
       this.font = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.width = 150,
@@ -2655,13 +2655,13 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
       this.prefixFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0x000000,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.suffixFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0x000000,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.prefixTextAlignment = TextAlignment.centerLeft,
