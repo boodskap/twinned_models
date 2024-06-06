@@ -19,6 +19,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
     @Default(8.0) double elevation,
     @Default(96) double iconWidth,
     @Default(96) double iconHeight,
+    @Default(0xFFF0F1F2) int valueBgColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 30,
@@ -53,6 +54,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'topLabel':
       case 'bottomLabel':
         return DataType.text;
+      case 'valueBgColor':
+        return DataType.numeric;
       case 'topFont':
       case 'bottomFont':
       case 'valueFont':
@@ -73,6 +76,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
         return HintType.field;
+      case 'valueBgColor':
+        return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
       default:
@@ -110,6 +115,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
         return 'Icon Width';
       case 'iconHeight':
         return 'Icon Height';
+      case 'valueBgColor':
+        return 'Value BgColor';
       default:
         return parameter;
     }
