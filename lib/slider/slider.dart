@@ -14,33 +14,33 @@ class SingleValueSliderWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default('Label') String label,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
-      'fontColor': 0,
-      'fontBold': true
+      'fontSize': 15,
+      'fontColor': 0XFF000000,
+      'fontBold': false
     })
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
-      'fontColor': 0,
-      'fontBold': true
+      'fontSize': 15,
+      'fontColor': 0XFF000000,
+      'fontBold': false
     })
     Map<String, dynamic> valueFont,
     @Default('') String deviceId,
     @Default(0) double min,
     @Default(100) double max,
     @Default(300) double width,
+    @Default(300) double height,
     @Default('') String field,
     @Default(0XFFFFA500) int activeColor,
     @Default(0XFF000000) int inactiveColor,
-   
     @Default(40) int contentFontSize,
   }) = _SingleValueSliderWidgetConfig;
 
@@ -60,6 +60,7 @@ class SingleValueSliderWidgetConfig extends BaseConfig
       case 'valueFont':
         return DataType.font;
       case 'width':
+      case 'height':
       case 'min':
       case 'max':
        case 'activeColor':
@@ -103,7 +104,7 @@ class SingleValueSliderWidgetConfig extends BaseConfig
       case 'label':
         return 'Label';
       case 'titleFont':
-        return 'Title Fonr';
+        return 'Title Font';
       case 'labelFont':
         return 'Label Font';
       case 'valueFont':
@@ -114,6 +115,8 @@ class SingleValueSliderWidgetConfig extends BaseConfig
         return 'Max';
       case 'width':
         return 'Width';
+        case 'height':
+        return 'Height';
       case 'activeColor':
         return 'Active Color';
       case 'inactiveColor':
