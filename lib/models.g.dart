@@ -266,20 +266,20 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
       title: json['title'] as String? ?? '',
       field: json['field'] as String? ?? '',
       deviceId: json['deviceId'] as String? ?? '',
-      fontColor: (json['fontColor'] as num?)?.toInt() ?? 0x000000,
-      titleFontColor: (json['titleFontColor'] as num?)?.toInt() ?? 0x000000,
+      fontColor: (json['fontColor'] as num?)?.toInt() ?? 0XFF000000,
+      titleFontColor: (json['titleFontColor'] as num?)?.toInt() ?? 0XFF000000,
       font: json['font'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 20,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       width: (json['width'] as num?)?.toInt() ?? 150,
@@ -290,14 +290,14 @@ _$DynamicTextWidgetConfigImpl _$$DynamicTextWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0x000000,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       suffixFont: json['suffixFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0x000000,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       prefixTextAlignment: $enumDecodeNullable(
