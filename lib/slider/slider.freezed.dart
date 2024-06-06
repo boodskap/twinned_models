@@ -42,6 +42,8 @@ mixin _$SingleValueSliderWidgetConfig {
   set max(double value) => throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  set height(double value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   int get activeColor => throw _privateConstructorUsedError;
@@ -75,6 +77,7 @@ abstract class $SingleValueSliderWidgetConfigCopyWith<$Res> {
       double min,
       double max,
       double width,
+      double height,
       String field,
       int activeColor,
       int inactiveColor,
@@ -104,6 +107,7 @@ class _$SingleValueSliderWidgetConfigCopyWithImpl<$Res,
     Object? min = null,
     Object? max = null,
     Object? width = null,
+    Object? height = null,
     Object? field = null,
     Object? activeColor = null,
     Object? inactiveColor = null,
@@ -146,6 +150,10 @@ class _$SingleValueSliderWidgetConfigCopyWithImpl<$Res,
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -185,6 +193,7 @@ abstract class _$$SingleValueSliderWidgetConfigImplCopyWith<$Res>
       double min,
       double max,
       double width,
+      double height,
       String field,
       int activeColor,
       int inactiveColor,
@@ -213,6 +222,7 @@ class __$$SingleValueSliderWidgetConfigImplCopyWithImpl<$Res>
     Object? min = null,
     Object? max = null,
     Object? width = null,
+    Object? height = null,
     Object? field = null,
     Object? activeColor = null,
     Object? inactiveColor = null,
@@ -255,6 +265,10 @@ class __$$SingleValueSliderWidgetConfigImplCopyWithImpl<$Res>
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -284,26 +298,27 @@ class _$SingleValueSliderWidgetConfigImpl
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.label = 'Label',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
-        'fontColor': 0,
-        'fontBold': true
+        'fontSize': 15,
+        'fontColor': 0XFF000000,
+        'fontBold': false
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
-        'fontColor': 0,
-        'fontBold': true
+        'fontSize': 15,
+        'fontColor': 0XFF000000,
+        'fontBold': false
       },
       this.deviceId = '',
       this.min = 0,
       this.max = 100,
       this.width = 300,
+      this.height = 300,
       this.field = '',
       this.activeColor = 0XFFFFA500,
       this.inactiveColor = 0XFF000000,
@@ -343,6 +358,9 @@ class _$SingleValueSliderWidgetConfigImpl
   double width;
   @override
   @JsonKey()
+  double height;
+  @override
+  @JsonKey()
   String field;
   @override
   @JsonKey()
@@ -356,7 +374,7 @@ class _$SingleValueSliderWidgetConfigImpl
 
   @override
   String toString() {
-    return 'SingleValueSliderWidgetConfig(title: $title, titleFont: $titleFont, label: $label, labelFont: $labelFont, valueFont: $valueFont, deviceId: $deviceId, min: $min, max: $max, width: $width, field: $field, activeColor: $activeColor, inactiveColor: $inactiveColor, contentFontSize: $contentFontSize)';
+    return 'SingleValueSliderWidgetConfig(title: $title, titleFont: $titleFont, label: $label, labelFont: $labelFont, valueFont: $valueFont, deviceId: $deviceId, min: $min, max: $max, width: $width, height: $height, field: $field, activeColor: $activeColor, inactiveColor: $inactiveColor, contentFontSize: $contentFontSize)';
   }
 
   @JsonKey(ignore: true)
@@ -387,6 +405,7 @@ abstract class _SingleValueSliderWidgetConfig
       double min,
       double max,
       double width,
+      double height,
       String field,
       int activeColor,
       int inactiveColor,
@@ -423,6 +442,9 @@ abstract class _SingleValueSliderWidgetConfig
   @override
   double get width;
   set width(double value);
+  @override
+  double get height;
+  set height(double value);
   @override
   String get field;
   set field(String value);

@@ -14,28 +14,29 @@ _$SingleValueSliderWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 25,
-                'fontColor': 0,
+                'fontColor': 0XFF000000,
                 'fontBold': true
               },
           label: json['label'] as String? ?? 'Label',
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
-                'fontColor': 0,
-                'fontBold': true
+                'fontSize': 15,
+                'fontColor': 0XFF000000,
+                'fontBold': false
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
-                'fontColor': 0,
-                'fontBold': true
+                'fontSize': 15,
+                'fontColor': 0XFF000000,
+                'fontBold': false
               },
           deviceId: json['deviceId'] as String? ?? '',
           min: (json['min'] as num?)?.toDouble() ?? 0,
           max: (json['max'] as num?)?.toDouble() ?? 100,
           width: (json['width'] as num?)?.toDouble() ?? 300,
+          height: (json['height'] as num?)?.toDouble() ?? 300,
           field: json['field'] as String? ?? '',
           activeColor: (json['activeColor'] as num?)?.toInt() ?? 0XFFFFA500,
           inactiveColor: (json['inactiveColor'] as num?)?.toInt() ?? 0XFF000000,
@@ -54,6 +55,7 @@ Map<String, dynamic> _$$SingleValueSliderWidgetConfigImplToJson(
       'min': instance.min,
       'max': instance.max,
       'width': instance.width,
+      'height': instance.height,
       'field': instance.field,
       'activeColor': instance.activeColor,
       'inactiveColor': instance.inactiveColor,
