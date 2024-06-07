@@ -17,14 +17,14 @@ class GenericWindInfoWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
