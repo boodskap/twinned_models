@@ -15,14 +15,14 @@ _$GenericTemperatureWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
-                'fontColor': 0,
+                'fontColor': 0XFF000000,
                 'fontBold': false
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
-                'fontColor': 0,
+                'fontColor': 0XFF000000,
                 'fontBold': false
               },
           widgetColor: (json['widgetColor'] as num?)?.toInt() ?? 0xFF000000,
