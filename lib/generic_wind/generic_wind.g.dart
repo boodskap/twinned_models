@@ -17,14 +17,14 @@ _$GenericWindInfoWidgetConfigImpl _$$GenericWindInfoWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 25,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 25,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': true
           },
       deviceId: json['deviceId'] as String? ?? '',
