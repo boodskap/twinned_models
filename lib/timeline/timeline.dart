@@ -34,7 +34,6 @@ class StaticTimelineWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> messageFont,
-    @Default([]) List<int> colors,
     @Default(170) double width,
     @Default(170) double height,
     @Default(2) int section,
@@ -50,8 +49,6 @@ class StaticTimelineWidgetConfig extends BaseConfig
       case 'heading':
       case 'message':
         return DataType.listOfTexts;
-      case 'colors':
-        return DataType.listOfNumbers;
       case 'titleFont':
       case 'headingFont':
       case 'messageFont':
@@ -82,7 +79,7 @@ class StaticTimelineWidgetConfig extends BaseConfig
         return 'Section';
       case 'title':
         return 'Title';
-      case 'heading ':
+      case 'heading':
         return 'Heading';
       case 'message':
         return 'Message';
@@ -90,7 +87,7 @@ class StaticTimelineWidgetConfig extends BaseConfig
         return 'Label';
       case 'titleFont':
         return 'Title Font';
-      case 'headerFont':
+      case 'headingFont':
         return 'Header Font';
       case 'messageFont':
         return 'Message Font';

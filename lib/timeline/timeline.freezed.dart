@@ -36,8 +36,6 @@ mixin _$StaticTimelineWidgetConfig {
   Map<String, dynamic> get messageFont => throw _privateConstructorUsedError;
   set messageFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  List<int> get colors => throw _privateConstructorUsedError;
-  set colors(List<int> value) => throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
@@ -65,7 +63,6 @@ abstract class $StaticTimelineWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> headingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
       double height,
       int section});
@@ -91,7 +88,6 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
     Object? headingFont = null,
     Object? message = null,
     Object? messageFont = null,
-    Object? colors = null,
     Object? width = null,
     Object? height = null,
     Object? section = null,
@@ -121,10 +117,6 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
           ? _value.messageFont
           : messageFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      colors: null == colors
-          ? _value.colors
-          : colors // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -157,7 +149,6 @@ abstract class _$$StaticTimelineWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> headingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
       double height,
       int section});
@@ -182,7 +173,6 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
     Object? headingFont = null,
     Object? message = null,
     Object? messageFont = null,
-    Object? colors = null,
     Object? width = null,
     Object? height = null,
     Object? section = null,
@@ -212,10 +202,6 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
           ? _value.messageFont
           : messageFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      colors: null == colors
-          ? _value.colors
-          : colors // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -257,7 +243,6 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
         'fontColor': 0XFF000000,
         'fontBold': false
       },
-      this.colors = const [],
       this.width = 170,
       this.height = 170,
       this.section = 2})
@@ -287,9 +272,6 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
   Map<String, dynamic> messageFont;
   @override
   @JsonKey()
-  List<int> colors;
-  @override
-  @JsonKey()
   double width;
   @override
   @JsonKey()
@@ -300,7 +282,7 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
 
   @override
   String toString() {
-    return 'StaticTimelineWidgetConfig(title: $title, titleFont: $titleFont, heading: $heading, headingFont: $headingFont, message: $message, messageFont: $messageFont, colors: $colors, width: $width, height: $height, section: $section)';
+    return 'StaticTimelineWidgetConfig(title: $title, titleFont: $titleFont, heading: $heading, headingFont: $headingFont, message: $message, messageFont: $messageFont, width: $width, height: $height, section: $section)';
   }
 
   @JsonKey(ignore: true)
@@ -326,7 +308,6 @@ abstract class _StaticTimelineWidgetConfig extends StaticTimelineWidgetConfig {
       Map<String, dynamic> headingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
       double height,
       int section}) = _$StaticTimelineWidgetConfigImpl;
@@ -353,9 +334,6 @@ abstract class _StaticTimelineWidgetConfig extends StaticTimelineWidgetConfig {
   @override
   Map<String, dynamic> get messageFont;
   set messageFont(Map<String, dynamic> value);
-  @override
-  List<int> get colors;
-  set colors(List<int> value);
   @override
   double get width;
   set width(double value);
