@@ -285,13 +285,13 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': true
       },
       this.deviceId = '',
