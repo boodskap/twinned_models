@@ -57,6 +57,8 @@ abstract class BaseConfig {
   String getLabel(String parameter);
 
   String getTooltip(String parameter);
+
+  String? validate() {}
 }
 
 @unfreezed
@@ -730,8 +732,6 @@ enum TextAlignment {
   bottomLeft,
   bottomRight,
 }
-
-
 
 @unfreezed
 class DynamicTextWidgetConfig extends BaseConfig
