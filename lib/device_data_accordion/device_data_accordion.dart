@@ -1,15 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'flow_meter.freezed.dart';
-part 'flow_meter.g.dart';
+part 'device_data_accordion.freezed.dart';
+part 'device_data_accordion.g.dart';
 
 @unfreezed
-class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
-  FlowMeterWidgetConfig._();
+class DeviceDataAccordionWidgetConfig extends BaseConfig
+    with _$DeviceDataAccordionWidgetConfig {
+  DeviceDataAccordionWidgetConfig._();
 
-  factory FlowMeterWidgetConfig({
-    @Default('FLOW METER') String title,
+  factory DeviceDataAccordionWidgetConfig({
+    @Default('Device Data Accordion') String title,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
@@ -24,18 +25,28 @@ class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
       'fontColor': 0XFF000000,
       'fontBold': false
     })
-    Map<String, dynamic> labelFont,
-    @Default('') String field,
-    @Default(0xFF808080) int innerFillColor,
-    @Default(0xFFFF0000) int innerIndicatorColor,
-    @Default(0xFFFFFFFF) int innerBorderColor,
-    @Default(0xFF0000FF) int flowColor,
-    @Default(0xFF595959) int outerDialColor,
-    @Default(0xFF2a6e93) int bodyColor,
-  }) = _FlowMeterWidgetConfig;
+    Map<String, dynamic> accordionTitleFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0XFF000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> tableColumnFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0XFF000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> tableRowFont,
+    @Default(0xFFFF5733) int headerOpenedColor,
+    @Default(0xFF1F3B4D) int headerClosedColor,
+    @Default(0xFFFFFFFF) int tableContentColor,
+  }) = _DeviceDataAccordionWidgetConfig;
 
-  factory FlowMeterWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$FlowMeterWidgetConfigFromJson(json);
+  factory DeviceDataAccordionWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$DeviceDataAccordionWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -44,14 +55,13 @@ class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
       case 'deviceId':
         return DataType.text;
       case 'titleFont':
-      case 'labelFont':
+      case 'accordionTitleFont':
+      case 'tableColumnFont':
+      case 'tableRowFont':
         return DataType.font;
-      case 'innerFillColor':
-      case 'innerIndicatorColor':
-      case 'innerBorderColor':
-      case 'flowColor':
-      case 'outerDialColor':
-      case 'bodyColor':
+      case 'headerOpenedColor':
+      case 'headerClosedColor':
+      case 'tableContentColor':
         return DataType.numeric;
       default:
         return DataType.text;
@@ -63,14 +73,9 @@ class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
-      case 'field':
-        return HintType.field;
-      case 'innerFillColor':
-      case 'innerIndicatorColor':
-      case 'innerBorderColor':
-      case 'flowColor':
-      case 'outerDialColor':
-      case 'bodyColor':
+      case 'headerOpenedColor':
+      case 'headerClosedColor':
+      case 'tableContentColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -96,7 +101,6 @@ class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'deviceId':
-      case 'field':
         return true;
       default:
         return false;
