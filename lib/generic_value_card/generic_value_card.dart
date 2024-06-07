@@ -1,4 +1,3 @@
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
@@ -96,7 +95,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'field':
         return 'Select Field';
       case 'deviceId':
-        return 'Asset Models';
+        return 'Device ID';
       case 'topFont':
         return 'Top Font';
       case 'bottomFont':
@@ -134,7 +133,6 @@ class GenericValueCardWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'valueFont':
       case 'topFont':
-      case 'iconId':
       case 'elevation':
       case 'iconWidth':
       case 'iconHeight':
