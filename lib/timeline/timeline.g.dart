@@ -41,10 +41,6 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
             'fontColor': 0XFF000000,
             'fontBold': false
           },
-      colors: (json['colors'] as List<dynamic>?)
-              ?.map((e) => (e as num).toInt())
-              .toList() ??
-          const [],
       width: (json['width'] as num?)?.toDouble() ?? 170,
       height: (json['height'] as num?)?.toDouble() ?? 170,
       section: (json['section'] as num?)?.toInt() ?? 2,
@@ -59,7 +55,6 @@ Map<String, dynamic> _$$StaticTimelineWidgetConfigImplToJson(
       'headingFont': instance.headingFont,
       'message': instance.message,
       'messageFont': instance.messageFont,
-      'colors': instance.colors,
       'width': instance.width,
       'height': instance.height,
       'section': instance.section,
