@@ -25,9 +25,9 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
       headingFont: json['headingFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 14,
+            'fontSize': 16,
             'fontColor': 0XFF000000,
-            'fontBold': false
+            'fontBold': true
           },
       subHeading: (json['subHeading'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -36,9 +36,9 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
       subHeadingFont: json['subHeadingFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 12,
+            'fontSize': 14,
             'fontColor': 0XFF000000,
-            'fontBold': false
+            'fontBold': true
           },
       message: (json['message'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -47,7 +47,7 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
       messageFont: json['messageFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 10,
+            'fontSize': 12,
             'fontColor': 0XFF000000,
             'fontBold': false
           },
