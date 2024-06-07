@@ -22,23 +22,23 @@ class StaticTimelineWidgetConfig extends BaseConfig
     @Default([]) List<String> heading,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 16,
       'fontColor': 0XFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> headingFont,
      @Default([]) List<String> subHeading,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 12,
+      'fontSize': 14,
       'fontColor': 0XFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> subHeadingFont,
     @Default([]) List<String> message,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 10,
+      'fontSize': 12,
       'fontColor': 0XFF000000,
       'fontBold': false
     })

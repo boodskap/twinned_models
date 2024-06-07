@@ -262,21 +262,21 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
       this.heading = const [],
       this.headingFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 16,
         'fontColor': 0XFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.subHeading = const [],
       this.subHeadingFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 12,
+        'fontSize': 14,
         'fontColor': 0XFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.message = const [],
       this.messageFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 10,
+        'fontSize': 12,
         'fontColor': 0XFF000000,
         'fontBold': false
       },
