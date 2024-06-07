@@ -252,13 +252,13 @@ class _$FlowMeterWidgetConfigImpl extends _FlowMeterWidgetConfig {
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': false
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0,
+        'fontColor': 0XFF000000,
         'fontBold': false
       },
       this.field = '',
