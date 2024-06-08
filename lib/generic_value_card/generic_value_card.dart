@@ -16,8 +16,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
     @Default('') String bottomLabel,
     @Default('') String iconId,
     @Default(8.0) double elevation,
-    @Default(96) double iconWidth,
-    @Default(96) double iconHeight,
+    @Default(32) double iconWidth,
+    @Default(32) double iconHeight,
     @Default(0xFFF0F1F2) int valueBgColor,
     @Default({
       'fontFamily': 'Open Sans',
@@ -28,14 +28,14 @@ class GenericValueCardWidgetConfig extends BaseConfig
     Map<String, dynamic> topFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })

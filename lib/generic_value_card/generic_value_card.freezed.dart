@@ -270,8 +270,8 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       this.bottomLabel = '',
       this.iconId = '',
       this.elevation = 8.0,
-      this.iconWidth = 96,
-      this.iconHeight = 96,
+      this.iconWidth = 32,
+      this.iconHeight = 32,
       this.valueBgColor = 0xFFF0F1F2,
       this.topFont = const {
         'fontFamily': 'Open Sans',
@@ -281,13 +281,13 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.bottomFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
       }})
