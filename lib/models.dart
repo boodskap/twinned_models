@@ -36,6 +36,7 @@ enum HintType {
   floorId,
   deviceModelId,
   font,
+  textArea
 }
 
 enum SortType { asc, desc }
@@ -62,6 +63,10 @@ abstract class BaseConfig {
   String getTooltip(String parameter);
 
   String? validate() {}
+
+  bool canDuplicate(String parameter) {
+    return true;
+  }
 }
 
 @unfreezed
