@@ -29,8 +29,8 @@ mixin _$GenericMultiValueCardWidgetConfig {
   set topLabels(List<String> value) => throw _privateConstructorUsedError;
   List<String> get bottomLabels => throw _privateConstructorUsedError;
   set bottomLabels(List<String> value) => throw _privateConstructorUsedError;
-  List<String> get iconId => throw _privateConstructorUsedError;
-  set iconId(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get iconIds => throw _privateConstructorUsedError;
+  set iconIds(List<String> value) => throw _privateConstructorUsedError;
   int get columns => throw _privateConstructorUsedError;
   set columns(int value) => throw _privateConstructorUsedError;
   double get elevation => throw _privateConstructorUsedError;
@@ -72,7 +72,7 @@ abstract class $GenericMultiValueCardWidgetConfigCopyWith<$Res> {
       List<String> deviceIds,
       List<String> topLabels,
       List<String> bottomLabels,
-      List<String> iconId,
+      List<String> iconIds,
       int columns,
       double elevation,
       double iconWidth,
@@ -101,7 +101,7 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
     Object? deviceIds = null,
     Object? topLabels = null,
     Object? bottomLabels = null,
-    Object? iconId = null,
+    Object? iconIds = null,
     Object? columns = null,
     Object? elevation = null,
     Object? iconWidth = null,
@@ -128,9 +128,9 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.bottomLabels
           : bottomLabels // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      iconId: null == iconId
-          ? _value.iconId
-          : iconId // ignore: cast_nullable_to_non_nullable
+      iconIds: null == iconIds
+          ? _value.iconIds
+          : iconIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       columns: null == columns
           ? _value.columns
@@ -182,7 +182,7 @@ abstract class _$$GenericMultiValueCardWidgetConfigImplCopyWith<$Res>
       List<String> deviceIds,
       List<String> topLabels,
       List<String> bottomLabels,
-      List<String> iconId,
+      List<String> iconIds,
       int columns,
       double elevation,
       double iconWidth,
@@ -210,7 +210,7 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceIds = null,
     Object? topLabels = null,
     Object? bottomLabels = null,
-    Object? iconId = null,
+    Object? iconIds = null,
     Object? columns = null,
     Object? elevation = null,
     Object? iconWidth = null,
@@ -237,9 +237,9 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.bottomLabels
           : bottomLabels // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      iconId: null == iconId
-          ? _value.iconId
-          : iconId // ignore: cast_nullable_to_non_nullable
+      iconIds: null == iconIds
+          ? _value.iconIds
+          : iconIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
       columns: null == columns
           ? _value.columns
@@ -286,7 +286,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
       this.deviceIds = const [],
       this.topLabels = const [],
       this.bottomLabels = const [],
-      this.iconId = const [],
+      this.iconIds = const [],
       this.columns = 2,
       this.elevation = 8.0,
       this.iconWidth = 32,
@@ -315,7 +315,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
   List<String> bottomLabels;
   @override
   @JsonKey()
-  List<String> iconId;
+  List<String> iconIds;
   @override
   @JsonKey()
   int columns;
@@ -343,7 +343,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconId: $iconId, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts)';
+    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts)';
   }
 
   @JsonKey(ignore: true)
@@ -369,7 +369,7 @@ abstract class _GenericMultiValueCardWidgetConfig
           List<String> deviceIds,
           List<String> topLabels,
           List<String> bottomLabels,
-          List<String> iconId,
+          List<String> iconIds,
           int columns,
           double elevation,
           double iconWidth,
@@ -398,8 +398,8 @@ abstract class _GenericMultiValueCardWidgetConfig
   List<String> get bottomLabels;
   set bottomLabels(List<String> value);
   @override
-  List<String> get iconId;
-  set iconId(List<String> value);
+  List<String> get iconIds;
+  set iconIds(List<String> value);
   @override
   int get columns;
   set columns(int value);
