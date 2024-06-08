@@ -19,6 +19,8 @@ enum DataType {
   listOfDecimals,
   listOfRanges,
   image,
+  listOfFonts,
+  listOfImages,
 }
 
 enum HintType {
