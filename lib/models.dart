@@ -36,6 +36,7 @@ enum HintType {
   floorId,
   deviceModelId,
   font,
+  textArea
 }
 
 enum SortType { asc, desc }
