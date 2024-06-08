@@ -14,7 +14,7 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
     @Default([]) List<String> deviceIds,
     @Default([]) List<String> topLabels,
     @Default([]) List<String> bottomLabels,
-    @Default([]) List<String> iconId,
+    @Default([]) List<String> iconIds,
     @Default(2) int columns,
     @Default(8.0) double elevation,
     @Default(32) double iconWidth,

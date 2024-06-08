@@ -26,7 +26,7 @@ _$GenericMultiValueCardWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
-          iconId: (json['iconId'] as List<dynamic>?)
+          iconIds: (json['iconIds'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
@@ -56,7 +56,7 @@ Map<String, dynamic> _$$GenericMultiValueCardWidgetConfigImplToJson(
       'deviceIds': instance.deviceIds,
       'topLabels': instance.topLabels,
       'bottomLabels': instance.bottomLabels,
-      'iconId': instance.iconId,
+      'iconIds': instance.iconIds,
       'columns': instance.columns,
       'elevation': instance.elevation,
       'iconWidth': instance.iconWidth,
