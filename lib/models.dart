@@ -67,6 +67,8 @@ abstract class BaseConfig {
   bool canDuplicate(String parameter) {
     return true;
   }
+
+  String? getDocumentUrl() {}
 }
 
 @unfreezed
