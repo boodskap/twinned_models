@@ -35,6 +35,7 @@ _$GenericMultiValueCardWidgetConfigImpl
           iconWidth: (json['iconWidth'] as num?)?.toDouble() ?? 32,
           iconHeight: (json['iconHeight'] as num?)?.toDouble() ?? 32,
           allowScrolling: json['allowScrolling'] as bool? ?? false,
+          bottomLabelAsSuffix: json['bottomLabelAsSuffix'] as bool? ?? true,
           topFonts: (json['topFonts'] as List<dynamic>?)
                   ?.map((e) => e as Map<String, dynamic>)
                   .toList() ??
@@ -66,6 +67,7 @@ Map<String, dynamic> _$$GenericMultiValueCardWidgetConfigImplToJson(
       'iconWidth': instance.iconWidth,
       'iconHeight': instance.iconHeight,
       'allowScrolling': instance.allowScrolling,
+      'bottomLabelAsSuffix': instance.bottomLabelAsSuffix,
       'topFonts': instance.topFonts,
       'valueFonts': instance.valueFonts,
       'bottomFonts': instance.bottomFonts,

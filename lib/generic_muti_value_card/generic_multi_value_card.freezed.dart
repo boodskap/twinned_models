@@ -41,6 +41,8 @@ mixin _$GenericMultiValueCardWidgetConfig {
   set iconHeight(double value) => throw _privateConstructorUsedError;
   bool get allowScrolling => throw _privateConstructorUsedError;
   set allowScrolling(bool value) => throw _privateConstructorUsedError;
+  bool get bottomLabelAsSuffix => throw _privateConstructorUsedError;
+  set bottomLabelAsSuffix(bool value) => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get topFonts => throw _privateConstructorUsedError;
   set topFonts(List<Map<String, dynamic>> value) =>
       throw _privateConstructorUsedError;
@@ -80,6 +82,7 @@ abstract class $GenericMultiValueCardWidgetConfigCopyWith<$Res> {
       double iconWidth,
       double iconHeight,
       bool allowScrolling,
+      bool bottomLabelAsSuffix,
       List<Map<String, dynamic>> topFonts,
       List<Map<String, dynamic>> valueFonts,
       List<Map<String, dynamic>> bottomFonts,
@@ -110,6 +113,7 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
     Object? iconWidth = null,
     Object? iconHeight = null,
     Object? allowScrolling = null,
+    Object? bottomLabelAsSuffix = null,
     Object? topFonts = null,
     Object? valueFonts = null,
     Object? bottomFonts = null,
@@ -156,6 +160,10 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.allowScrolling
           : allowScrolling // ignore: cast_nullable_to_non_nullable
               as bool,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
       topFonts: null == topFonts
           ? _value.topFonts
           : topFonts // ignore: cast_nullable_to_non_nullable
@@ -196,6 +204,7 @@ abstract class _$$GenericMultiValueCardWidgetConfigImplCopyWith<$Res>
       double iconWidth,
       double iconHeight,
       bool allowScrolling,
+      bool bottomLabelAsSuffix,
       List<Map<String, dynamic>> topFonts,
       List<Map<String, dynamic>> valueFonts,
       List<Map<String, dynamic>> bottomFonts,
@@ -225,6 +234,7 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
     Object? iconWidth = null,
     Object? iconHeight = null,
     Object? allowScrolling = null,
+    Object? bottomLabelAsSuffix = null,
     Object? topFonts = null,
     Object? valueFonts = null,
     Object? bottomFonts = null,
@@ -271,6 +281,10 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.allowScrolling
           : allowScrolling // ignore: cast_nullable_to_non_nullable
               as bool,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
       topFonts: null == topFonts
           ? _value.topFonts
           : topFonts // ignore: cast_nullable_to_non_nullable
@@ -306,6 +320,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
       this.iconWidth = 32,
       this.iconHeight = 32,
       this.allowScrolling = false,
+      this.bottomLabelAsSuffix = true,
       this.topFonts = const [],
       this.valueFonts = const [],
       this.bottomFonts = const [],
@@ -348,6 +363,9 @@ class _$GenericMultiValueCardWidgetConfigImpl
   bool allowScrolling;
   @override
   @JsonKey()
+  bool bottomLabelAsSuffix;
+  @override
+  @JsonKey()
   List<Map<String, dynamic>> topFonts;
   @override
   @JsonKey()
@@ -361,7 +379,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, allowScrolling: $allowScrolling, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts, valueBgColors: $valueBgColors)';
+    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, allowScrolling: $allowScrolling, bottomLabelAsSuffix: $bottomLabelAsSuffix, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts, valueBgColors: $valueBgColors)';
   }
 
   @JsonKey(ignore: true)
@@ -393,6 +411,7 @@ abstract class _GenericMultiValueCardWidgetConfig
       double iconWidth,
       double iconHeight,
       bool allowScrolling,
+      bool bottomLabelAsSuffix,
       List<Map<String, dynamic>> topFonts,
       List<Map<String, dynamic>> valueFonts,
       List<Map<String, dynamic>> bottomFonts,
@@ -433,6 +452,9 @@ abstract class _GenericMultiValueCardWidgetConfig
   @override
   bool get allowScrolling;
   set allowScrolling(bool value);
+  @override
+  bool get bottomLabelAsSuffix;
+  set bottomLabelAsSuffix(bool value);
   @override
   List<Map<String, dynamic>> get topFonts;
   set topFonts(List<Map<String, dynamic>> value);

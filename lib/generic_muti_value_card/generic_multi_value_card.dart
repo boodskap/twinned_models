@@ -20,6 +20,7 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
     @Default(32) double iconWidth,
     @Default(32) double iconHeight,
     @Default(false) bool allowScrolling,
+    @Default(true) bool bottomLabelAsSuffix,
     @Default([]) List<Map<String, dynamic>> topFonts,
     @Default([]) List<Map<String, dynamic>> valueFonts,
     @Default([]) List<Map<String, dynamic>> bottomFonts,
@@ -53,6 +54,7 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
       case 'columns':
         return DataType.numeric;
       case 'allowScrolling':
+      case 'bottomLabelAsSuffix':
         return DataType.yesno;
       default:
         return DataType.none;
@@ -105,6 +107,12 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
         return 'Icon Height';
       case 'valueBgColors':
         return 'Value Background Colors';
+      case 'columns':
+        return 'Columns';
+      case 'allowScrolling':
+        return 'Allow Scrolling';
+      case 'bottomLabelAsSuffix':
+        return 'Bottom Label as Suffix';
       default:
         return parameter;
     }

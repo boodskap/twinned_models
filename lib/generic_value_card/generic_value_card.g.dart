@@ -39,6 +39,7 @@ _$GenericValueCardWidgetConfigImpl _$$GenericValueCardWidgetConfigImplFromJson(
             'fontColor': 0xFF000000,
             'fontBold': true
           },
+      bottomLabelAsSuffix: json['bottomLabelAsSuffix'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$$GenericValueCardWidgetConfigImplToJson(
@@ -56,4 +57,5 @@ Map<String, dynamic> _$$GenericValueCardWidgetConfigImplToJson(
       'topFont': instance.topFont,
       'valueFont': instance.valueFont,
       'bottomFont': instance.bottomFont,
+      'bottomLabelAsSuffix': instance.bottomLabelAsSuffix,
     };
