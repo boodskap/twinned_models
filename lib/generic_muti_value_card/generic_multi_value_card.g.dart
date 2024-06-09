@@ -34,7 +34,7 @@ _$GenericMultiValueCardWidgetConfigImpl
           elevation: (json['elevation'] as num?)?.toDouble() ?? 8.0,
           iconWidth: (json['iconWidth'] as num?)?.toDouble() ?? 32,
           iconHeight: (json['iconHeight'] as num?)?.toDouble() ?? 32,
-          valueBgColor: (json['valueBgColor'] as num?)?.toInt() ?? 0xFFF0F1F2,
+          allowScrolling: json['allowScrolling'] as bool? ?? false,
           topFonts: (json['topFonts'] as List<dynamic>?)
                   ?.map((e) => e as Map<String, dynamic>)
                   .toList() ??
@@ -45,6 +45,10 @@ _$GenericMultiValueCardWidgetConfigImpl
               const [],
           bottomFonts: (json['bottomFonts'] as List<dynamic>?)
                   ?.map((e) => e as Map<String, dynamic>)
+                  .toList() ??
+              const [],
+          valueBgColors: (json['valueBgColors'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
                   .toList() ??
               const [],
         );
@@ -61,8 +65,9 @@ Map<String, dynamic> _$$GenericMultiValueCardWidgetConfigImplToJson(
       'elevation': instance.elevation,
       'iconWidth': instance.iconWidth,
       'iconHeight': instance.iconHeight,
-      'valueBgColor': instance.valueBgColor,
+      'allowScrolling': instance.allowScrolling,
       'topFonts': instance.topFonts,
       'valueFonts': instance.valueFonts,
       'bottomFonts': instance.bottomFonts,
+      'valueBgColors': instance.valueBgColors,
     };
