@@ -39,8 +39,8 @@ mixin _$GenericMultiValueCardWidgetConfig {
   set iconWidth(double value) => throw _privateConstructorUsedError;
   double get iconHeight => throw _privateConstructorUsedError;
   set iconHeight(double value) => throw _privateConstructorUsedError;
-  int get valueBgColor => throw _privateConstructorUsedError;
-  set valueBgColor(int value) => throw _privateConstructorUsedError;
+  bool get allowScrolling => throw _privateConstructorUsedError;
+  set allowScrolling(bool value) => throw _privateConstructorUsedError;
   List<Map<String, dynamic>> get topFonts => throw _privateConstructorUsedError;
   set topFonts(List<Map<String, dynamic>> value) =>
       throw _privateConstructorUsedError;
@@ -52,6 +52,8 @@ mixin _$GenericMultiValueCardWidgetConfig {
       throw _privateConstructorUsedError;
   set bottomFonts(List<Map<String, dynamic>> value) =>
       throw _privateConstructorUsedError;
+  List<int> get valueBgColors => throw _privateConstructorUsedError;
+  set valueBgColors(List<int> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -77,10 +79,11 @@ abstract class $GenericMultiValueCardWidgetConfigCopyWith<$Res> {
       double elevation,
       double iconWidth,
       double iconHeight,
-      int valueBgColor,
+      bool allowScrolling,
       List<Map<String, dynamic>> topFonts,
       List<Map<String, dynamic>> valueFonts,
-      List<Map<String, dynamic>> bottomFonts});
+      List<Map<String, dynamic>> bottomFonts,
+      List<int> valueBgColors});
 }
 
 /// @nodoc
@@ -106,10 +109,11 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
     Object? elevation = null,
     Object? iconWidth = null,
     Object? iconHeight = null,
-    Object? valueBgColor = null,
+    Object? allowScrolling = null,
     Object? topFonts = null,
     Object? valueFonts = null,
     Object? bottomFonts = null,
+    Object? valueBgColors = null,
   }) {
     return _then(_value.copyWith(
       fields: null == fields
@@ -148,10 +152,10 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.iconHeight
           : iconHeight // ignore: cast_nullable_to_non_nullable
               as double,
-      valueBgColor: null == valueBgColor
-          ? _value.valueBgColor
-          : valueBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
+      allowScrolling: null == allowScrolling
+          ? _value.allowScrolling
+          : allowScrolling // ignore: cast_nullable_to_non_nullable
+              as bool,
       topFonts: null == topFonts
           ? _value.topFonts
           : topFonts // ignore: cast_nullable_to_non_nullable
@@ -164,6 +168,10 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.bottomFonts
           : bottomFonts // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      valueBgColors: null == valueBgColors
+          ? _value.valueBgColors
+          : valueBgColors // ignore: cast_nullable_to_non_nullable
+              as List<int>,
     ) as $Val);
   }
 }
@@ -187,10 +195,11 @@ abstract class _$$GenericMultiValueCardWidgetConfigImplCopyWith<$Res>
       double elevation,
       double iconWidth,
       double iconHeight,
-      int valueBgColor,
+      bool allowScrolling,
       List<Map<String, dynamic>> topFonts,
       List<Map<String, dynamic>> valueFonts,
-      List<Map<String, dynamic>> bottomFonts});
+      List<Map<String, dynamic>> bottomFonts,
+      List<int> valueBgColors});
 }
 
 /// @nodoc
@@ -215,10 +224,11 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
     Object? elevation = null,
     Object? iconWidth = null,
     Object? iconHeight = null,
-    Object? valueBgColor = null,
+    Object? allowScrolling = null,
     Object? topFonts = null,
     Object? valueFonts = null,
     Object? bottomFonts = null,
+    Object? valueBgColors = null,
   }) {
     return _then(_$GenericMultiValueCardWidgetConfigImpl(
       fields: null == fields
@@ -257,10 +267,10 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.iconHeight
           : iconHeight // ignore: cast_nullable_to_non_nullable
               as double,
-      valueBgColor: null == valueBgColor
-          ? _value.valueBgColor
-          : valueBgColor // ignore: cast_nullable_to_non_nullable
-              as int,
+      allowScrolling: null == allowScrolling
+          ? _value.allowScrolling
+          : allowScrolling // ignore: cast_nullable_to_non_nullable
+              as bool,
       topFonts: null == topFonts
           ? _value.topFonts
           : topFonts // ignore: cast_nullable_to_non_nullable
@@ -273,6 +283,10 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.bottomFonts
           : bottomFonts // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>,
+      valueBgColors: null == valueBgColors
+          ? _value.valueBgColors
+          : valueBgColors // ignore: cast_nullable_to_non_nullable
+              as List<int>,
     ));
   }
 }
@@ -291,10 +305,11 @@ class _$GenericMultiValueCardWidgetConfigImpl
       this.elevation = 8.0,
       this.iconWidth = 32,
       this.iconHeight = 32,
-      this.valueBgColor = 0xFFF0F1F2,
+      this.allowScrolling = false,
       this.topFonts = const [],
       this.valueFonts = const [],
-      this.bottomFonts = const []})
+      this.bottomFonts = const [],
+      this.valueBgColors = const []})
       : super._();
 
   factory _$GenericMultiValueCardWidgetConfigImpl.fromJson(
@@ -330,7 +345,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
   double iconHeight;
   @override
   @JsonKey()
-  int valueBgColor;
+  bool allowScrolling;
   @override
   @JsonKey()
   List<Map<String, dynamic>> topFonts;
@@ -340,10 +355,13 @@ class _$GenericMultiValueCardWidgetConfigImpl
   @override
   @JsonKey()
   List<Map<String, dynamic>> bottomFonts;
+  @override
+  @JsonKey()
+  List<int> valueBgColors;
 
   @override
   String toString() {
-    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts)';
+    return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, allowScrolling: $allowScrolling, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts, valueBgColors: $valueBgColors)';
   }
 
   @JsonKey(ignore: true)
@@ -365,20 +383,20 @@ class _$GenericMultiValueCardWidgetConfigImpl
 abstract class _GenericMultiValueCardWidgetConfig
     extends GenericMultiValueCardWidgetConfig {
   factory _GenericMultiValueCardWidgetConfig(
-          {List<String> fields,
-          List<String> deviceIds,
-          List<String> topLabels,
-          List<String> bottomLabels,
-          List<String> iconIds,
-          int columns,
-          double elevation,
-          double iconWidth,
-          double iconHeight,
-          int valueBgColor,
-          List<Map<String, dynamic>> topFonts,
-          List<Map<String, dynamic>> valueFonts,
-          List<Map<String, dynamic>> bottomFonts}) =
-      _$GenericMultiValueCardWidgetConfigImpl;
+      {List<String> fields,
+      List<String> deviceIds,
+      List<String> topLabels,
+      List<String> bottomLabels,
+      List<String> iconIds,
+      int columns,
+      double elevation,
+      double iconWidth,
+      double iconHeight,
+      bool allowScrolling,
+      List<Map<String, dynamic>> topFonts,
+      List<Map<String, dynamic>> valueFonts,
+      List<Map<String, dynamic>> bottomFonts,
+      List<int> valueBgColors}) = _$GenericMultiValueCardWidgetConfigImpl;
   _GenericMultiValueCardWidgetConfig._() : super._();
 
   factory _GenericMultiValueCardWidgetConfig.fromJson(
@@ -413,8 +431,8 @@ abstract class _GenericMultiValueCardWidgetConfig
   double get iconHeight;
   set iconHeight(double value);
   @override
-  int get valueBgColor;
-  set valueBgColor(int value);
+  bool get allowScrolling;
+  set allowScrolling(bool value);
   @override
   List<Map<String, dynamic>> get topFonts;
   set topFonts(List<Map<String, dynamic>> value);
@@ -424,6 +442,9 @@ abstract class _GenericMultiValueCardWidgetConfig
   @override
   List<Map<String, dynamic>> get bottomFonts;
   set bottomFonts(List<Map<String, dynamic>> value);
+  @override
+  List<int> get valueBgColors;
+  set valueBgColors(List<int> value);
   @override
   @JsonKey(ignore: true)
   _$$GenericMultiValueCardWidgetConfigImplCopyWith<

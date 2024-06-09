@@ -19,10 +19,11 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
     @Default(8.0) double elevation,
     @Default(32) double iconWidth,
     @Default(32) double iconHeight,
-    @Default(0xFFF0F1F2) int valueBgColor,
+    @Default(false) bool allowScrolling,
     @Default([]) List<Map<String, dynamic>> topFonts,
     @Default([]) List<Map<String, dynamic>> valueFonts,
     @Default([]) List<Map<String, dynamic>> bottomFonts,
+    @Default([]) List<int> valueBgColors,
   }) = _GenericMultiValueCardWidgetConfig;
 
   factory GenericMultiValueCardWidgetConfig.fromJson(
@@ -51,6 +52,8 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
         return DataType.listOfImages;
       case 'columns':
         return DataType.numeric;
+      case 'allowScrolling':
+        return DataType.yesno;
       default:
         return DataType.none;
     }
