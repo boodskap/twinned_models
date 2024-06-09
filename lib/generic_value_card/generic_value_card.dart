@@ -40,6 +40,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> bottomFont,
+    @Default(true) bool bottomLabelAsSuffix,
   }) = _GenericValueCardWidgetConfig;
 
   factory GenericValueCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -65,6 +66,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'iconId':
         return DataType.image;
+      case 'bottomLabelAsSuffix':
+        return DataType.yesno;
       default:
         return DataType.none;
     }
@@ -93,7 +96,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
   String getLabel(String parameter) {
     switch (parameter) {
       case 'field':
-        return 'Select Field';
+        return 'Sensor Field';
       case 'deviceId':
         return 'Device ID';
       case 'topFont':
@@ -116,6 +119,10 @@ class GenericValueCardWidgetConfig extends BaseConfig
         return 'Icon Height';
       case 'valueBgColor':
         return 'Value BgColor';
+      case 'valueBgColor':
+        return 'Value BgColor';
+      case 'bottomLabelAsSuffix':
+        return 'Bottom Label as Suffix';
       default:
         return parameter;
     }
