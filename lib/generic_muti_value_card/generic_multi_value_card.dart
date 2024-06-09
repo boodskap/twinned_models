@@ -144,4 +144,9 @@ class GenericMultiValueCardWidgetConfig extends BaseConfig
   bool isValid(String parameter, value) {
     return true;
   }
+
+  @override
+  String? getDocumentUrl() {
+    return 'multi-value-card-widget';
+  }
 }
