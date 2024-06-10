@@ -19,6 +19,8 @@ enum DataType {
   listOfDecimals,
   listOfRanges,
   image,
+  listOfFonts,
+  listOfImages,
 }
 
 enum HintType {
@@ -33,6 +35,8 @@ enum HintType {
   facilityId,
   floorId,
   deviceModelId,
+  font,
+  textArea
 }
 
 enum SortType { asc, desc }
@@ -59,6 +63,12 @@ abstract class BaseConfig {
   String getTooltip(String parameter);
 
   String? validate() {}
+
+  bool canDuplicate(String parameter) {
+    return true;
+  }
+
+  String? getDocumentUrl() {}
 }
 
 @unfreezed

@@ -16,8 +16,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
     @Default('') String bottomLabel,
     @Default('') String iconId,
     @Default(8.0) double elevation,
-    @Default(96) double iconWidth,
-    @Default(96) double iconHeight,
+    @Default(32) double iconWidth,
+    @Default(32) double iconHeight,
     @Default(0xFFF0F1F2) int valueBgColor,
     @Default({
       'fontFamily': 'Open Sans',
@@ -28,18 +28,19 @@ class GenericValueCardWidgetConfig extends BaseConfig
     Map<String, dynamic> topFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> bottomFont,
+    @Default(true) bool bottomLabelAsSuffix,
   }) = _GenericValueCardWidgetConfig;
 
   factory GenericValueCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -65,6 +66,8 @@ class GenericValueCardWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'iconId':
         return DataType.image;
+      case 'bottomLabelAsSuffix':
+        return DataType.yesno;
       default:
         return DataType.none;
     }
@@ -93,7 +96,7 @@ class GenericValueCardWidgetConfig extends BaseConfig
   String getLabel(String parameter) {
     switch (parameter) {
       case 'field':
-        return 'Select Field';
+        return 'Sensor Field';
       case 'deviceId':
         return 'Device ID';
       case 'topFont':
@@ -116,6 +119,10 @@ class GenericValueCardWidgetConfig extends BaseConfig
         return 'Icon Height';
       case 'valueBgColor':
         return 'Value BgColor';
+      case 'valueBgColor':
+        return 'Value BgColor';
+      case 'bottomLabelAsSuffix':
+        return 'Bottom Label as Suffix';
       default:
         return parameter;
     }

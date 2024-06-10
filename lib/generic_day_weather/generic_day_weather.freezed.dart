@@ -67,6 +67,22 @@ mixin _$GenericDayWeatherWidgetConfig {
   set pressureField(String value) => throw _privateConstructorUsedError;
   String get humidityField => throw _privateConstructorUsedError;
   set humidityField(String value) => throw _privateConstructorUsedError;
+  int get sunriseColor => throw _privateConstructorUsedError;
+  set sunriseColor(int value) => throw _privateConstructorUsedError;
+  int get sunsetColor => throw _privateConstructorUsedError;
+  set sunsetColor(int value) => throw _privateConstructorUsedError;
+  int get currentColor => throw _privateConstructorUsedError;
+  set currentColor(int value) => throw _privateConstructorUsedError;
+  int get feelsLikeColor => throw _privateConstructorUsedError;
+  set feelsLikeColor(int value) => throw _privateConstructorUsedError;
+  int get minColor => throw _privateConstructorUsedError;
+  set minColor(int value) => throw _privateConstructorUsedError;
+  int get maxColor => throw _privateConstructorUsedError;
+  set maxColor(int value) => throw _privateConstructorUsedError;
+  int get pressureColor => throw _privateConstructorUsedError;
+  set pressureColor(int value) => throw _privateConstructorUsedError;
+  int get humidityColor => throw _privateConstructorUsedError;
+  set humidityColor(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -104,7 +120,15 @@ abstract class $GenericDayWeatherWidgetConfigCopyWith<$Res> {
       String minField,
       String maxField,
       String pressureField,
-      String humidityField});
+      String humidityField,
+      int sunriseColor,
+      int sunsetColor,
+      int currentColor,
+      int feelsLikeColor,
+      int minColor,
+      int maxColor,
+      int pressureColor,
+      int humidityColor});
 }
 
 /// @nodoc
@@ -143,6 +167,14 @@ class _$GenericDayWeatherWidgetConfigCopyWithImpl<$Res,
     Object? maxField = null,
     Object? pressureField = null,
     Object? humidityField = null,
+    Object? sunriseColor = null,
+    Object? sunsetColor = null,
+    Object? currentColor = null,
+    Object? feelsLikeColor = null,
+    Object? minColor = null,
+    Object? maxColor = null,
+    Object? pressureColor = null,
+    Object? humidityColor = null,
   }) {
     return _then(_value.copyWith(
       deviceId: null == deviceId
@@ -233,6 +265,38 @@ class _$GenericDayWeatherWidgetConfigCopyWithImpl<$Res,
           ? _value.humidityField
           : humidityField // ignore: cast_nullable_to_non_nullable
               as String,
+      sunriseColor: null == sunriseColor
+          ? _value.sunriseColor
+          : sunriseColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      sunsetColor: null == sunsetColor
+          ? _value.sunsetColor
+          : sunsetColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      currentColor: null == currentColor
+          ? _value.currentColor
+          : currentColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      feelsLikeColor: null == feelsLikeColor
+          ? _value.feelsLikeColor
+          : feelsLikeColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      minColor: null == minColor
+          ? _value.minColor
+          : minColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxColor: null == maxColor
+          ? _value.maxColor
+          : maxColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      pressureColor: null == pressureColor
+          ? _value.pressureColor
+          : pressureColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      humidityColor: null == humidityColor
+          ? _value.humidityColor
+          : humidityColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -268,7 +332,15 @@ abstract class _$$GenericDayWeatherWidgetConfigImplCopyWith<$Res>
       String minField,
       String maxField,
       String pressureField,
-      String humidityField});
+      String humidityField,
+      int sunriseColor,
+      int sunsetColor,
+      int currentColor,
+      int feelsLikeColor,
+      int minColor,
+      int maxColor,
+      int pressureColor,
+      int humidityColor});
 }
 
 /// @nodoc
@@ -306,6 +378,14 @@ class __$$GenericDayWeatherWidgetConfigImplCopyWithImpl<$Res>
     Object? maxField = null,
     Object? pressureField = null,
     Object? humidityField = null,
+    Object? sunriseColor = null,
+    Object? sunsetColor = null,
+    Object? currentColor = null,
+    Object? feelsLikeColor = null,
+    Object? minColor = null,
+    Object? maxColor = null,
+    Object? pressureColor = null,
+    Object? humidityColor = null,
   }) {
     return _then(_$GenericDayWeatherWidgetConfigImpl(
       deviceId: null == deviceId
@@ -396,6 +476,38 @@ class __$$GenericDayWeatherWidgetConfigImplCopyWithImpl<$Res>
           ? _value.humidityField
           : humidityField // ignore: cast_nullable_to_non_nullable
               as String,
+      sunriseColor: null == sunriseColor
+          ? _value.sunriseColor
+          : sunriseColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      sunsetColor: null == sunsetColor
+          ? _value.sunsetColor
+          : sunsetColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      currentColor: null == currentColor
+          ? _value.currentColor
+          : currentColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      feelsLikeColor: null == feelsLikeColor
+          ? _value.feelsLikeColor
+          : feelsLikeColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      minColor: null == minColor
+          ? _value.minColor
+          : minColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      maxColor: null == maxColor
+          ? _value.maxColor
+          : maxColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      pressureColor: null == pressureColor
+          ? _value.pressureColor
+          : pressureColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      humidityColor: null == humidityColor
+          ? _value.humidityColor
+          : humidityColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -436,7 +548,15 @@ class _$GenericDayWeatherWidgetConfigImpl
       this.minField = 'minTemperature',
       this.maxField = 'maxTemperature',
       this.pressureField = 'pressure',
-      this.humidityField = 'humidity'})
+      this.humidityField = 'humidity',
+      this.sunriseColor = 0x90B7FFFF,
+      this.sunsetColor = 0x90B7FFFF,
+      this.currentColor = 0x90B7FFFF,
+      this.feelsLikeColor = 0x90B7FFFF,
+      this.minColor = 0x90B7FFFF,
+      this.maxColor = 0x90B7FFFF,
+      this.pressureColor = 0x90B7FFFF,
+      this.humidityColor = 0x90B7FFFF})
       : super._();
 
   factory _$GenericDayWeatherWidgetConfigImpl.fromJson(
@@ -509,10 +629,34 @@ class _$GenericDayWeatherWidgetConfigImpl
   @override
   @JsonKey()
   String humidityField;
+  @override
+  @JsonKey()
+  int sunriseColor;
+  @override
+  @JsonKey()
+  int sunsetColor;
+  @override
+  @JsonKey()
+  int currentColor;
+  @override
+  @JsonKey()
+  int feelsLikeColor;
+  @override
+  @JsonKey()
+  int minColor;
+  @override
+  @JsonKey()
+  int maxColor;
+  @override
+  @JsonKey()
+  int pressureColor;
+  @override
+  @JsonKey()
+  int humidityColor;
 
   @override
   String toString() {
-    return 'GenericDayWeatherWidgetConfig(deviceId: $deviceId, sunriseTitle: $sunriseTitle, sunsetTitle: $sunsetTitle, temperatureTitle: $temperatureTitle, currentTitle: $currentTitle, feelsLikeTitle: $feelsLikeTitle, minTitle: $minTitle, maxTitle: $maxTitle, pressureTitle: $pressureTitle, humidityTitle: $humidityTitle, temperaturSuffix: $temperaturSuffix, pressureSuffix: $pressureSuffix, labelFont: $labelFont, titleFont: $titleFont, sunriseField: $sunriseField, sunsetField: $sunsetField, temperatureField: $temperatureField, feelsLikeField: $feelsLikeField, minField: $minField, maxField: $maxField, pressureField: $pressureField, humidityField: $humidityField)';
+    return 'GenericDayWeatherWidgetConfig(deviceId: $deviceId, sunriseTitle: $sunriseTitle, sunsetTitle: $sunsetTitle, temperatureTitle: $temperatureTitle, currentTitle: $currentTitle, feelsLikeTitle: $feelsLikeTitle, minTitle: $minTitle, maxTitle: $maxTitle, pressureTitle: $pressureTitle, humidityTitle: $humidityTitle, temperaturSuffix: $temperaturSuffix, pressureSuffix: $pressureSuffix, labelFont: $labelFont, titleFont: $titleFont, sunriseField: $sunriseField, sunsetField: $sunsetField, temperatureField: $temperatureField, feelsLikeField: $feelsLikeField, minField: $minField, maxField: $maxField, pressureField: $pressureField, humidityField: $humidityField, sunriseColor: $sunriseColor, sunsetColor: $sunsetColor, currentColor: $currentColor, feelsLikeColor: $feelsLikeColor, minColor: $minColor, maxColor: $maxColor, pressureColor: $pressureColor, humidityColor: $humidityColor)';
   }
 
   @JsonKey(ignore: true)
@@ -555,7 +699,15 @@ abstract class _GenericDayWeatherWidgetConfig
       String minField,
       String maxField,
       String pressureField,
-      String humidityField}) = _$GenericDayWeatherWidgetConfigImpl;
+      String humidityField,
+      int sunriseColor,
+      int sunsetColor,
+      int currentColor,
+      int feelsLikeColor,
+      int minColor,
+      int maxColor,
+      int pressureColor,
+      int humidityColor}) = _$GenericDayWeatherWidgetConfigImpl;
   _GenericDayWeatherWidgetConfig._() : super._();
 
   factory _GenericDayWeatherWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -627,6 +779,30 @@ abstract class _GenericDayWeatherWidgetConfig
   @override
   String get humidityField;
   set humidityField(String value);
+  @override
+  int get sunriseColor;
+  set sunriseColor(int value);
+  @override
+  int get sunsetColor;
+  set sunsetColor(int value);
+  @override
+  int get currentColor;
+  set currentColor(int value);
+  @override
+  int get feelsLikeColor;
+  set feelsLikeColor(int value);
+  @override
+  int get minColor;
+  set minColor(int value);
+  @override
+  int get maxColor;
+  set maxColor(int value);
+  @override
+  int get pressureColor;
+  set pressureColor(int value);
+  @override
+  int get humidityColor;
+  set humidityColor(int value);
   @override
   @JsonKey(ignore: true)
   _$$GenericDayWeatherWidgetConfigImplCopyWith<

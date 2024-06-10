@@ -47,6 +47,8 @@ mixin _$GenericValueCardWidgetConfig {
   Map<String, dynamic> get bottomFont => throw _privateConstructorUsedError;
   set bottomFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  bool get bottomLabelAsSuffix => throw _privateConstructorUsedError;
+  set bottomLabelAsSuffix(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -74,7 +76,8 @@ abstract class $GenericValueCardWidgetConfigCopyWith<$Res> {
       int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> bottomFont});
+      Map<String, dynamic> bottomFont,
+      bool bottomLabelAsSuffix});
 }
 
 /// @nodoc
@@ -103,6 +106,7 @@ class _$GenericValueCardWidgetConfigCopyWithImpl<$Res,
     Object? topFont = null,
     Object? valueFont = null,
     Object? bottomFont = null,
+    Object? bottomLabelAsSuffix = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -153,6 +157,10 @@ class _$GenericValueCardWidgetConfigCopyWithImpl<$Res,
           ? _value.bottomFont
           : bottomFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -178,7 +186,8 @@ abstract class _$$GenericValueCardWidgetConfigImplCopyWith<$Res>
       int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> bottomFont});
+      Map<String, dynamic> bottomFont,
+      bool bottomLabelAsSuffix});
 }
 
 /// @nodoc
@@ -206,6 +215,7 @@ class __$$GenericValueCardWidgetConfigImplCopyWithImpl<$Res>
     Object? topFont = null,
     Object? valueFont = null,
     Object? bottomFont = null,
+    Object? bottomLabelAsSuffix = null,
   }) {
     return _then(_$GenericValueCardWidgetConfigImpl(
       field: null == field
@@ -256,6 +266,10 @@ class __$$GenericValueCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.bottomFont
           : bottomFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -270,8 +284,8 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       this.bottomLabel = '',
       this.iconId = '',
       this.elevation = 8.0,
-      this.iconWidth = 96,
-      this.iconHeight = 96,
+      this.iconWidth = 32,
+      this.iconHeight = 32,
       this.valueBgColor = 0xFFF0F1F2,
       this.topFont = const {
         'fontFamily': 'Open Sans',
@@ -281,16 +295,17 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.bottomFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
-      }})
+      },
+      this.bottomLabelAsSuffix = true})
       : super._();
 
   factory _$GenericValueCardWidgetConfigImpl.fromJson(
@@ -333,10 +348,13 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> bottomFont;
+  @override
+  @JsonKey()
+  bool bottomLabelAsSuffix;
 
   @override
   String toString() {
-    return 'GenericValueCardWidgetConfig(field: $field, deviceId: $deviceId, topLabel: $topLabel, bottomLabel: $bottomLabel, iconId: $iconId, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFont: $topFont, valueFont: $valueFont, bottomFont: $bottomFont)';
+    return 'GenericValueCardWidgetConfig(field: $field, deviceId: $deviceId, topLabel: $topLabel, bottomLabel: $bottomLabel, iconId: $iconId, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFont: $topFont, valueFont: $valueFont, bottomFont: $bottomFont, bottomLabelAsSuffix: $bottomLabelAsSuffix)';
   }
 
   @JsonKey(ignore: true)
@@ -369,7 +387,8 @@ abstract class _GenericValueCardWidgetConfig
       int valueBgColor,
       Map<String, dynamic> topFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> bottomFont}) = _$GenericValueCardWidgetConfigImpl;
+      Map<String, dynamic> bottomFont,
+      bool bottomLabelAsSuffix}) = _$GenericValueCardWidgetConfigImpl;
   _GenericValueCardWidgetConfig._() : super._();
 
   factory _GenericValueCardWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -411,6 +430,9 @@ abstract class _GenericValueCardWidgetConfig
   @override
   Map<String, dynamic> get bottomFont;
   set bottomFont(Map<String, dynamic> value);
+  @override
+  bool get bottomLabelAsSuffix;
+  set bottomLabelAsSuffix(bool value);
   @override
   @JsonKey(ignore: true)
   _$$GenericValueCardWidgetConfigImplCopyWith<
