@@ -45,6 +45,15 @@ _$GenericDayWeatherWidgetConfigImpl
           maxField: json['maxField'] as String? ?? 'maxTemperature',
           pressureField: json['pressureField'] as String? ?? 'pressure',
           humidityField: json['humidityField'] as String? ?? 'humidity',
+          sunriseColor: (json['sunriseColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          sunsetColor: (json['sunsetColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          currentColor: (json['currentColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          feelsLikeColor:
+              (json['feelsLikeColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          minColor: (json['minColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          maxColor: (json['maxColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          pressureColor: (json['pressureColor'] as num?)?.toInt() ?? 0x90B7FFFF,
+          humidityColor: (json['humidityColor'] as num?)?.toInt() ?? 0x90B7FFFF,
         );
 
 Map<String, dynamic> _$$GenericDayWeatherWidgetConfigImplToJson(
@@ -72,4 +81,12 @@ Map<String, dynamic> _$$GenericDayWeatherWidgetConfigImplToJson(
       'maxField': instance.maxField,
       'pressureField': instance.pressureField,
       'humidityField': instance.humidityField,
+      'sunriseColor': instance.sunriseColor,
+      'sunsetColor': instance.sunsetColor,
+      'currentColor': instance.currentColor,
+      'feelsLikeColor': instance.feelsLikeColor,
+      'minColor': instance.minColor,
+      'maxColor': instance.maxColor,
+      'pressureColor': instance.pressureColor,
+      'humidityColor': instance.humidityColor,
     };

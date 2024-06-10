@@ -44,6 +44,14 @@ class GenericDayWeatherWidgetConfig extends BaseConfig
     @Default('maxTemperature') String maxField,
     @Default('pressure') String pressureField,
     @Default('humidity') String humidityField,
+    @Default(0x90B7FFFF) int sunriseColor,
+    @Default(0x90B7FFFF) int sunsetColor,
+    @Default(0x90B7FFFF) int currentColor,
+    @Default(0x90B7FFFF) int feelsLikeColor,
+    @Default(0x90B7FFFF) int minColor,
+    @Default(0x90B7FFFF) int maxColor,
+    @Default(0x90B7FFFF) int pressureColor,
+    @Default(0x90B7FFFF) int humidityColor,
   }) = _GenericDayWeatherWidgetConfig;
 
   factory GenericDayWeatherWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -77,7 +85,15 @@ class GenericDayWeatherWidgetConfig extends BaseConfig
       case 'titleFont':
       case 'labelFont':
         return DataType.font;
-
+      case 'sunriseColor':
+      case 'sunsetColor':
+      case 'currentColor':
+      case 'feelsLikeColor':
+      case 'minColor':
+      case 'maxColor':
+      case 'pressureColor':
+      case 'humidityColor':
+        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -97,6 +113,15 @@ class GenericDayWeatherWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'sunriseColor':
+      case 'sunsetColor':
+      case 'currentColor':
+      case 'feelsLikeColor':
+      case 'minColor':
+      case 'maxColor':
+      case 'pressureColor':
+      case 'humidityColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
