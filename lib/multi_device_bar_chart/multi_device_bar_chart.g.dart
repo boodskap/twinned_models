@@ -28,9 +28,23 @@ _$MultiDeviceBarChartWidgetConfigImpl
           chartDirection: $enumDecodeNullable(
                   _$BarChartDirectionEnumMap, json['chartDirection']) ??
               BarChartDirection.vertical,
-          barColor: (json['barColor'] as num?)?.toInt() ?? 0xFFFF5733,
+          barColor: (json['barColor'] as num?)?.toInt() ?? 0xFF008b8b,
+          barBorderColor:
+              (json['barBorderColor'] as num?)?.toInt() ?? 0xFF000000,
           barWidth: (json['barWidth'] as num?)?.toDouble() ?? 0.1,
           showTooltip: json['showTooltip'] as bool? ?? false,
+          chartBgColor: (json['chartBgColor'] as num?)?.toInt() ?? 0xFFEAEFF2,
+          chartAreaColor:
+              (json['chartAreaColor'] as num?)?.toInt() ?? 0xFFE8E8E8,
+          tooltipBgColor:
+              (json['tooltipBgColor'] as num?)?.toInt() ?? 0xFF000000,
+          tooltipFont: json['tooltipFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 14,
+                'fontColor': 0XFFFFFFFF,
+                'fontBold': false
+              },
         );
 
 Map<String, dynamic> _$$MultiDeviceBarChartWidgetConfigImplToJson(
@@ -43,8 +57,13 @@ Map<String, dynamic> _$$MultiDeviceBarChartWidgetConfigImplToJson(
       'chartType': _$BarChartTypeEnumMap[instance.chartType]!,
       'chartDirection': _$BarChartDirectionEnumMap[instance.chartDirection]!,
       'barColor': instance.barColor,
+      'barBorderColor': instance.barBorderColor,
       'barWidth': instance.barWidth,
       'showTooltip': instance.showTooltip,
+      'chartBgColor': instance.chartBgColor,
+      'chartAreaColor': instance.chartAreaColor,
+      'tooltipBgColor': instance.tooltipBgColor,
+      'tooltipFont': instance.tooltipFont,
     };
 
 const _$BarChartTypeEnumMap = {

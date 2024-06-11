@@ -37,10 +37,21 @@ mixin _$MultiDeviceBarChartWidgetConfig {
       throw _privateConstructorUsedError;
   int get barColor => throw _privateConstructorUsedError;
   set barColor(int value) => throw _privateConstructorUsedError;
+  int get barBorderColor => throw _privateConstructorUsedError;
+  set barBorderColor(int value) => throw _privateConstructorUsedError;
   double get barWidth => throw _privateConstructorUsedError;
   set barWidth(double value) => throw _privateConstructorUsedError;
   bool get showTooltip => throw _privateConstructorUsedError;
   set showTooltip(bool value) => throw _privateConstructorUsedError;
+  int get chartBgColor => throw _privateConstructorUsedError;
+  set chartBgColor(int value) => throw _privateConstructorUsedError;
+  int get chartAreaColor => throw _privateConstructorUsedError;
+  set chartAreaColor(int value) => throw _privateConstructorUsedError;
+  int get tooltipBgColor => throw _privateConstructorUsedError;
+  set tooltipBgColor(int value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get tooltipFont => throw _privateConstructorUsedError;
+  set tooltipFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -64,8 +75,13 @@ abstract class $MultiDeviceBarChartWidgetConfigCopyWith<$Res> {
       BarChartType chartType,
       BarChartDirection chartDirection,
       int barColor,
+      int barBorderColor,
       double barWidth,
-      bool showTooltip});
+      bool showTooltip,
+      int chartBgColor,
+      int chartAreaColor,
+      int tooltipBgColor,
+      Map<String, dynamic> tooltipFont});
 }
 
 /// @nodoc
@@ -89,8 +105,13 @@ class _$MultiDeviceBarChartWidgetConfigCopyWithImpl<$Res,
     Object? chartType = null,
     Object? chartDirection = null,
     Object? barColor = null,
+    Object? barBorderColor = null,
     Object? barWidth = null,
     Object? showTooltip = null,
+    Object? chartBgColor = null,
+    Object? chartAreaColor = null,
+    Object? tooltipBgColor = null,
+    Object? tooltipFont = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -121,6 +142,10 @@ class _$MultiDeviceBarChartWidgetConfigCopyWithImpl<$Res,
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
               as int,
+      barBorderColor: null == barBorderColor
+          ? _value.barBorderColor
+          : barBorderColor // ignore: cast_nullable_to_non_nullable
+              as int,
       barWidth: null == barWidth
           ? _value.barWidth
           : barWidth // ignore: cast_nullable_to_non_nullable
@@ -129,6 +154,22 @@ class _$MultiDeviceBarChartWidgetConfigCopyWithImpl<$Res,
           ? _value.showTooltip
           : showTooltip // ignore: cast_nullable_to_non_nullable
               as bool,
+      chartBgColor: null == chartBgColor
+          ? _value.chartBgColor
+          : chartBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      chartAreaColor: null == chartAreaColor
+          ? _value.chartAreaColor
+          : chartAreaColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      tooltipBgColor: null == tooltipBgColor
+          ? _value.tooltipBgColor
+          : tooltipBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      tooltipFont: null == tooltipFont
+          ? _value.tooltipFont
+          : tooltipFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ) as $Val);
   }
 }
@@ -150,8 +191,13 @@ abstract class _$$MultiDeviceBarChartWidgetConfigImplCopyWith<$Res>
       BarChartType chartType,
       BarChartDirection chartDirection,
       int barColor,
+      int barBorderColor,
       double barWidth,
-      bool showTooltip});
+      bool showTooltip,
+      int chartBgColor,
+      int chartAreaColor,
+      int tooltipBgColor,
+      Map<String, dynamic> tooltipFont});
 }
 
 /// @nodoc
@@ -174,8 +220,13 @@ class __$$MultiDeviceBarChartWidgetConfigImplCopyWithImpl<$Res>
     Object? chartType = null,
     Object? chartDirection = null,
     Object? barColor = null,
+    Object? barBorderColor = null,
     Object? barWidth = null,
     Object? showTooltip = null,
+    Object? chartBgColor = null,
+    Object? chartAreaColor = null,
+    Object? tooltipBgColor = null,
+    Object? tooltipFont = null,
   }) {
     return _then(_$MultiDeviceBarChartWidgetConfigImpl(
       title: null == title
@@ -206,6 +257,10 @@ class __$$MultiDeviceBarChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
               as int,
+      barBorderColor: null == barBorderColor
+          ? _value.barBorderColor
+          : barBorderColor // ignore: cast_nullable_to_non_nullable
+              as int,
       barWidth: null == barWidth
           ? _value.barWidth
           : barWidth // ignore: cast_nullable_to_non_nullable
@@ -214,6 +269,22 @@ class __$$MultiDeviceBarChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showTooltip
           : showTooltip // ignore: cast_nullable_to_non_nullable
               as bool,
+      chartBgColor: null == chartBgColor
+          ? _value.chartBgColor
+          : chartBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      chartAreaColor: null == chartAreaColor
+          ? _value.chartAreaColor
+          : chartAreaColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      tooltipBgColor: null == tooltipBgColor
+          ? _value.tooltipBgColor
+          : tooltipBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      tooltipFont: null == tooltipFont
+          ? _value.tooltipFont
+          : tooltipFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ));
   }
 }
@@ -234,9 +305,19 @@ class _$MultiDeviceBarChartWidgetConfigImpl
       },
       this.chartType = BarChartType.rectangularBar,
       this.chartDirection = BarChartDirection.vertical,
-      this.barColor = 0xFFFF5733,
+      this.barColor = 0xFF008b8b,
+      this.barBorderColor = 0xFF000000,
       this.barWidth = 0.1,
-      this.showTooltip = false})
+      this.showTooltip = false,
+      this.chartBgColor = 0xFFEAEFF2,
+      this.chartAreaColor = 0xFFE8E8E8,
+      this.tooltipBgColor = 0xFF000000,
+      this.tooltipFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 14,
+        'fontColor': 0XFFFFFFFF,
+        'fontBold': false
+      }})
       : super._();
 
   factory _$MultiDeviceBarChartWidgetConfigImpl.fromJson(
@@ -266,14 +347,29 @@ class _$MultiDeviceBarChartWidgetConfigImpl
   int barColor;
   @override
   @JsonKey()
+  int barBorderColor;
+  @override
+  @JsonKey()
   double barWidth;
   @override
   @JsonKey()
   bool showTooltip;
+  @override
+  @JsonKey()
+  int chartBgColor;
+  @override
+  @JsonKey()
+  int chartAreaColor;
+  @override
+  @JsonKey()
+  int tooltipBgColor;
+  @override
+  @JsonKey()
+  Map<String, dynamic> tooltipFont;
 
   @override
   String toString() {
-    return 'MultiDeviceBarChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, titleFont: $titleFont, chartType: $chartType, chartDirection: $chartDirection, barColor: $barColor, barWidth: $barWidth, showTooltip: $showTooltip)';
+    return 'MultiDeviceBarChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, titleFont: $titleFont, chartType: $chartType, chartDirection: $chartDirection, barColor: $barColor, barBorderColor: $barBorderColor, barWidth: $barWidth, showTooltip: $showTooltip, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
   }
 
   @JsonKey(ignore: true)
@@ -295,15 +391,21 @@ class _$MultiDeviceBarChartWidgetConfigImpl
 abstract class _MultiDeviceBarChartWidgetConfig
     extends MultiDeviceBarChartWidgetConfig {
   factory _MultiDeviceBarChartWidgetConfig(
-      {String title,
-      String field,
-      List<String> deviceId,
-      Map<String, dynamic> titleFont,
-      BarChartType chartType,
-      BarChartDirection chartDirection,
-      int barColor,
-      double barWidth,
-      bool showTooltip}) = _$MultiDeviceBarChartWidgetConfigImpl;
+          {String title,
+          String field,
+          List<String> deviceId,
+          Map<String, dynamic> titleFont,
+          BarChartType chartType,
+          BarChartDirection chartDirection,
+          int barColor,
+          int barBorderColor,
+          double barWidth,
+          bool showTooltip,
+          int chartBgColor,
+          int chartAreaColor,
+          int tooltipBgColor,
+          Map<String, dynamic> tooltipFont}) =
+      _$MultiDeviceBarChartWidgetConfigImpl;
   _MultiDeviceBarChartWidgetConfig._() : super._();
 
   factory _MultiDeviceBarChartWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -331,11 +433,26 @@ abstract class _MultiDeviceBarChartWidgetConfig
   int get barColor;
   set barColor(int value);
   @override
+  int get barBorderColor;
+  set barBorderColor(int value);
+  @override
   double get barWidth;
   set barWidth(double value);
   @override
   bool get showTooltip;
   set showTooltip(bool value);
+  @override
+  int get chartBgColor;
+  set chartBgColor(int value);
+  @override
+  int get chartAreaColor;
+  set chartAreaColor(int value);
+  @override
+  int get tooltipBgColor;
+  set tooltipBgColor(int value);
+  @override
+  Map<String, dynamic> get tooltipFont;
+  set tooltipFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$MultiDeviceBarChartWidgetConfigImplCopyWith<
