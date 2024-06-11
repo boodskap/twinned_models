@@ -11,6 +11,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
 
   factory GenericAirQualityWidgetConfig({
     @Default('Air Quality Monitoring Widget') String title,
+    @Default('Air Quality') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -23,7 +24,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
     @Default('') String qualityField,
       @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 16,
       'fontColor': 0XFF000000,
       'fontBold': true
     })
@@ -46,6 +47,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       case 'title':
       case 'deviceId':
       case 'qualityField':
+      case 'subTitle':
         return DataType.text;
       case 'titleFont':
       case 'labelFont':
@@ -88,7 +90,8 @@ class GenericAirQualityWidgetConfig extends BaseConfig
         return 'Label Font';
          case 'valueFont':
         return 'Value Font';
-   
+   case 'subTitle':
+        return 'Sub Title';
 
       default:
         return parameter;
