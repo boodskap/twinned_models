@@ -405,7 +405,7 @@ class _$GenericAirQualityWidgetConfigImpl
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 14,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -415,21 +415,21 @@ class _$GenericAirQualityWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.gaugeAnimate = true,
+      this.gaugeAnimate = false,
       this.interval = 20,
       this.ranges = const [
         {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
         {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
         {'from': 41, 'to': 60, 'color': 0xFFF7E379, 'label': 'Moderate'},
         {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
-        {'from': 81, 'color': 0XFF44CE1B, 'label': 'Excellent'}
+        {'from': 81, 'to': 100, 'color': 0XFF44CE1B, 'label': 'Excellent'}
       ],
-      this.positionFactor = 0.7,
+      this.positionFactor = 0.9,
       this.radiusFactor = 0.95,
       this.dialStartWidth = 30,
       this.dialEndWidth = 30,
       this.angle = 90,
-      this.axisThickness = 25,
+      this.axisThickness = 30,
       this.showLabel = true,
       this.markerSize = 10,
       this.markerBorderWidth = 2,
