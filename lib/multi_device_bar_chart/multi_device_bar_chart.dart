@@ -26,9 +26,20 @@ class MultiDeviceBarChartWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default(BarChartType.rectangularBar) BarChartType chartType,
     @Default(BarChartDirection.vertical) BarChartDirection chartDirection,
-    @Default(0xFFFF5733) int barColor,
+    @Default(0xFF008b8b) int barColor,
+    @Default(0xFF000000) int barBorderColor,
     @Default(0.1) double barWidth,
     @Default(false) bool showTooltip,
+    @Default(0xFFEAEFF2) int chartBgColor,
+    @Default(0xFFE8E8E8) int chartAreaColor,
+    @Default(0xFF000000) int tooltipBgColor,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0XFFFFFFFF,
+      'fontBold': false
+    })
+    Map<String, dynamic> tooltipFont,
   }) = _MultiDeviceBarChartWidgetConfig;
 
   factory MultiDeviceBarChartWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -41,10 +52,15 @@ class MultiDeviceBarChartWidgetConfig extends BaseConfig
       case 'field':
         return DataType.text;
       case 'barColor':
+      case 'barBorderColor':
+      case 'chartBgColor':
+      case 'chartAreaColor':
+      case 'tooltipBgColor':
         return DataType.numeric;
       case 'deviceId':
         return DataType.listOfTexts;
       case 'titleFont':
+      case 'tooltipFont':
         return DataType.font;
       case 'barWidth':
         return DataType.decimal;
@@ -62,6 +78,10 @@ class MultiDeviceBarChartWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'barColor':
+      case 'barBorderColor':
+      case 'chartBgColor':
+      case 'chartAreaColor':
+      case 'tooltipBgColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -103,9 +123,18 @@ class MultiDeviceBarChartWidgetConfig extends BaseConfig
         return 'Bar Width';
       case 'barColor':
         return 'Bar Color';
+      case 'barBorderColor':
+        return 'Bar Border Color';
+      case 'chartBgColor':
+        return 'Chart Bg Color';
+      case 'chartAreaColor':
+        return 'Chart Area Color';
+      case 'tooltipBgColor':
+        return 'Tooltip Bg Color';
       case 'showTooltip':
         return 'Show Tooltip';
-
+      case 'tooltipFont':
+        return 'Tooltip Font';
       default:
         return parameter;
     }
