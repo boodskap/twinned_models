@@ -23,6 +23,8 @@ GenericAirQualityWidgetConfig _$GenericAirQualityWidgetConfigFromJson(
 mixin _$GenericAirQualityWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
+  String get subTitle => throw _privateConstructorUsedError;
+  set subTitle(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -53,6 +55,7 @@ abstract class $GenericAirQualityWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
+      String subTitle,
       Map<String, dynamic> titleFont,
       String deviceId,
       String qualityField,
@@ -75,6 +78,7 @@ class _$GenericAirQualityWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? title = null,
+    Object? subTitle = null,
     Object? titleFont = null,
     Object? deviceId = null,
     Object? qualityField = null,
@@ -85,6 +89,10 @@ class _$GenericAirQualityWidgetConfigCopyWithImpl<$Res,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      subTitle: null == subTitle
+          ? _value.subTitle
+          : subTitle // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -121,6 +129,7 @@ abstract class _$$GenericAirQualityWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String title,
+      String subTitle,
       Map<String, dynamic> titleFont,
       String deviceId,
       String qualityField,
@@ -142,6 +151,7 @@ class __$$GenericAirQualityWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
+    Object? subTitle = null,
     Object? titleFont = null,
     Object? deviceId = null,
     Object? qualityField = null,
@@ -152,6 +162,10 @@ class __$$GenericAirQualityWidgetConfigImplCopyWithImpl<$Res>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      subTitle: null == subTitle
+          ? _value.subTitle
+          : subTitle // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -183,6 +197,7 @@ class _$GenericAirQualityWidgetConfigImpl
     extends _GenericAirQualityWidgetConfig {
   _$GenericAirQualityWidgetConfigImpl(
       {this.title = 'Air Quality Monitoring Widget',
+      this.subTitle = 'Air Quality',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
@@ -193,7 +208,7 @@ class _$GenericAirQualityWidgetConfigImpl
       this.qualityField = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 16,
         'fontColor': 0XFF000000,
         'fontBold': true
       },
@@ -214,6 +229,9 @@ class _$GenericAirQualityWidgetConfigImpl
   String title;
   @override
   @JsonKey()
+  String subTitle;
+  @override
+  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
@@ -230,7 +248,7 @@ class _$GenericAirQualityWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericAirQualityWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, qualityField: $qualityField, labelFont: $labelFont, valueFont: $valueFont)';
+    return 'GenericAirQualityWidgetConfig(title: $title, subTitle: $subTitle, titleFont: $titleFont, deviceId: $deviceId, qualityField: $qualityField, labelFont: $labelFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
@@ -253,6 +271,7 @@ abstract class _GenericAirQualityWidgetConfig
     extends GenericAirQualityWidgetConfig {
   factory _GenericAirQualityWidgetConfig(
       {String title,
+      String subTitle,
       Map<String, dynamic> titleFont,
       String deviceId,
       String qualityField,
@@ -266,6 +285,9 @@ abstract class _GenericAirQualityWidgetConfig
   @override
   String get title;
   set title(String value);
+  @override
+  String get subTitle;
+  set subTitle(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
