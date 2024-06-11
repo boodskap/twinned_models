@@ -17,21 +17,21 @@ _$GenericAirQualityWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 30,
+                'fontSize': 25,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 20,
+                'fontSize': 16,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 30,
+                'fontSize': 50,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -39,22 +39,23 @@ _$GenericAirQualityWidgetConfigImpl
           interval: (json['interval'] as num?)?.toDouble() ?? 20,
           ranges: json['ranges'] as List<dynamic>? ??
               const [
-                {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
+                {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
+                {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
                 {
-                  'from': 26,
-                  'to': 50,
-                  'color': 0xFF000000,
+                  'from': 41,
+                  'to': 60,
+                  'color': 0xFFF7E379,
                   'label': 'Moderate'
                 },
-                {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
-                {'from': 76, 'color': 0xFF000000, 'label': 'High'}
+                {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
+                {'from': 81, 'color': 0XFF44CE1B, 'label': 'Excellent'}
               ],
           positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.7,
           radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.95,
-          dialStartWidth: (json['dialStartWidth'] as num?)?.toDouble() ?? 50,
-          dialEndWidth: (json['dialEndWidth'] as num?)?.toDouble() ?? 50,
+          dialStartWidth: (json['dialStartWidth'] as num?)?.toDouble() ?? 30,
+          dialEndWidth: (json['dialEndWidth'] as num?)?.toDouble() ?? 30,
           angle: (json['angle'] as num?)?.toDouble() ?? 90,
-          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 50,
+          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 25,
           showLabel: json['showLabel'] as bool? ?? true,
           markerSize: (json['markerSize'] as num?)?.toDouble() ?? 10,
           markerBorderWidth:
