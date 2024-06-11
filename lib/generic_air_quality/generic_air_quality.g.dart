@@ -10,6 +10,7 @@ _$GenericAirQualityWidgetConfigImpl
     _$$GenericAirQualityWidgetConfigImplFromJson(Map<String, dynamic> json) =>
         _$GenericAirQualityWidgetConfigImpl(
           title: json['title'] as String? ?? 'Air Quality Monitoring Widget',
+          subTitle: json['subTitle'] as String? ?? 'Air Quality',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -22,7 +23,7 @@ _$GenericAirQualityWidgetConfigImpl
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 16,
                 'fontColor': 0XFF000000,
                 'fontBold': true
               },
@@ -39,6 +40,7 @@ Map<String, dynamic> _$$GenericAirQualityWidgetConfigImplToJson(
         _$GenericAirQualityWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
+      'subTitle': instance.subTitle,
       'titleFont': instance.titleFont,
       'deviceId': instance.deviceId,
       'qualityField': instance.qualityField,
