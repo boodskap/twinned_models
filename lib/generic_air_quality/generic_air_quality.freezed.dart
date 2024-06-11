@@ -399,36 +399,37 @@ class _$GenericAirQualityWidgetConfigImpl
       this.titleBgColor = 0xFFFFFFFF,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 25,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 20,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 50,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.gaugeAnimate = true,
       this.interval = 20,
       this.ranges = const [
-        {'from': 0, 'to': 25, 'color': 0xFF000000, 'label': 'Low'},
-        {'from': 26, 'to': 50, 'color': 0xFF000000, 'label': 'Moderate'},
-        {'from': 51, 'to': 75, 'color': 0xFF000000, 'label': 'Medium'},
-        {'from': 76, 'color': 0xFF000000, 'label': 'High'}
+        {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
+        {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
+        {'from': 41, 'to': 60, 'color': 0xFFF7E379, 'label': 'Moderate'},
+        {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
+        {'from': 81, 'color': 0XFF44CE1B, 'label': 'Excellent'}
       ],
       this.positionFactor = 0.7,
       this.radiusFactor = 0.95,
-      this.dialStartWidth = 50,
-      this.dialEndWidth = 50,
+      this.dialStartWidth = 30,
+      this.dialEndWidth = 30,
       this.angle = 90,
-      this.axisThickness = 50,
+      this.axisThickness = 25,
       this.showLabel = true,
       this.markerSize = 10,
       this.markerBorderWidth = 2,
