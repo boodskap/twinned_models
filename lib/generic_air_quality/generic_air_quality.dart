@@ -24,7 +24,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -36,26 +36,27 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(true) bool gaugeAnimate,
+    @Default(false) bool gaugeAnimate,
     @Default(20) double interval,
     @Default([
       {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
       {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
       {'from': 41, 'to': 60, 'color': 0xFFF7E379, 'label': 'Moderate'},
        {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
-      {'from': 81, 'color': 0XFF44CE1B, 'label': 'Excellent'},
+      {'from': 81,'to': 100, 'color': 0XFF44CE1B, 'label': 'Excellent'},
     ])
     List<dynamic> ranges,
-    @Default(0.7) double positionFactor,
+    @Default(0.9) double positionFactor,
     @Default(0.95) double radiusFactor,
     @Default(30) double dialStartWidth,
     @Default(30) double dialEndWidth,
     @Default(90) double angle,
-    @Default(25) double axisThickness,
+    @Default(30) double axisThickness,
     @Default(true) bool showLabel,
     @Default(10) double markerSize,
     @Default(2) double markerBorderWidth,
     @Default(0xFF000000) int markerBorderColor,
+
   }) = _GenericAirQualityWidgetConfig;
 
   factory GenericAirQualityWidgetConfig.fromJson(
@@ -123,7 +124,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       case 'field':
         return 'Select Field';
       case 'deviceId':
-        return 'Asset Models';
+        return 'Device Id';
       case 'title':
         return 'Title';
          case 'subTitle':
