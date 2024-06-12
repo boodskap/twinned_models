@@ -48,7 +48,8 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
     @Default(0xFF000000) int markerColor,
     @Default(20) double markerOffset,
     @Default(true) bool showLabel,
-    @Default(50) double rangeWidth,
+    @Default(20) double rangeWidth,
+    @Default(10) double markerSize,
   }) = _GenericAirQualityLinearWidgetConfig;
 
   factory GenericAirQualityLinearWidgetConfig.fromJson(
@@ -68,6 +69,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'width':
       case 'markerOffset':
       case 'rangeWidth':
+      case 'markerSize':
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
@@ -131,9 +133,10 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
         return 'Marker Offset';
       case 'showLabel':
         return 'Show Label';
-         case 'rangeWidth':
+      case 'rangeWidth':
         return 'Range Width';
-
+      case 'markerSize':
+        return 'Marker Size';
       default:
         return parameter;
     }
