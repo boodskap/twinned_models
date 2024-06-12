@@ -22,14 +22,14 @@ _$MultiDeviceFieldPageWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 32,
-                'fontColor': 0xFF000000,
+                'fontColor': 0x99FFFFFF,
                 'fontBold': true
               },
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 20,
-                'fontColor': 0x99FFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           subTextFont: json['subTextFont'] as Map<String, dynamic>? ??
