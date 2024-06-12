@@ -40,6 +40,9 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
+  set titleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   Map<String, dynamic> get subTextFont => throw _privateConstructorUsedError;
   set subTextFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -72,6 +75,7 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       String contentText,
       int fillColor,
       Map<String, dynamic> valueFont,
+      Map<String, dynamic> titleFont,
       Map<String, dynamic> subTextFont,
       Map<String, dynamic> contentTextFont});
 }
@@ -99,6 +103,7 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? contentText = null,
     Object? fillColor = null,
     Object? valueFont = null,
+    Object? titleFont = null,
     Object? subTextFont = null,
     Object? contentTextFont = null,
   }) {
@@ -139,6 +144,10 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       subTextFont: null == subTextFont
           ? _value.subTextFont
           : subTextFont // ignore: cast_nullable_to_non_nullable
@@ -170,6 +179,7 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       String contentText,
       int fillColor,
       Map<String, dynamic> valueFont,
+      Map<String, dynamic> titleFont,
       Map<String, dynamic> subTextFont,
       Map<String, dynamic> contentTextFont});
 }
@@ -196,6 +206,7 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? contentText = null,
     Object? fillColor = null,
     Object? valueFont = null,
+    Object? titleFont = null,
     Object? subTextFont = null,
     Object? contentTextFont = null,
   }) {
@@ -236,6 +247,10 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       subTextFont: null == subTextFont
           ? _value.subTextFont
           : subTextFont // ignore: cast_nullable_to_non_nullable
@@ -264,18 +279,24 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 32,
+        'fontColor': 0xFF000000,
+        'fontBold': true
+      },
+      this.titleFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
         'fontColor': 0x99FFFFFF,
         'fontBold': true
       },
       this.subTextFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 24,
+        'fontSize': 14,
         'fontColor': 0xB3FFFFFF,
         'fontBold': true
       },
       this.contentTextFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 24,
+        'fontSize': 14,
         'fontColor': 0xB3FFFFFF,
         'fontBold': false
       }})
@@ -314,6 +335,9 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
+  Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
   Map<String, dynamic> subTextFont;
   @override
   @JsonKey()
@@ -321,7 +345,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, imageId: $imageId, subText: $subText, contentText: $contentText, fillColor: $fillColor, valueFont: $valueFont, subTextFont: $subTextFont, contentTextFont: $contentTextFont)';
+    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, imageId: $imageId, subText: $subText, contentText: $contentText, fillColor: $fillColor, valueFont: $valueFont, titleFont: $titleFont, subTextFont: $subTextFont, contentTextFont: $contentTextFont)';
   }
 
   @JsonKey(ignore: true)
@@ -352,6 +376,7 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           String contentText,
           int fillColor,
           Map<String, dynamic> valueFont,
+          Map<String, dynamic> titleFont,
           Map<String, dynamic> subTextFont,
           Map<String, dynamic> contentTextFont}) =
       _$MultiDeviceFieldPageWidgetConfigImpl;
@@ -388,6 +413,9 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get titleFont;
+  set titleFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get subTextFont;
   set subTextFont(Map<String, dynamic> value);
