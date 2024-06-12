@@ -21,20 +21,27 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 32,
-      'fontColor': 0x99FFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 24,
+      'fontSize': 20,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> titleFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> subTextFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 24,
+      'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': false
     })

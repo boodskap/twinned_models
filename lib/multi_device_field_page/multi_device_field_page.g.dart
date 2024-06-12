@@ -22,20 +22,27 @@ _$MultiDeviceFieldPageWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 32,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
+          titleFont: json['titleFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
                 'fontColor': 0x99FFFFFF,
                 'fontBold': true
               },
           subTextFont: json['subTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 24,
+                'fontSize': 14,
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': true
               },
           contentTextFont: json['contentTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 24,
+                'fontSize': 14,
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': false
               },
@@ -53,6 +60,7 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'contentText': instance.contentText,
       'fillColor': instance.fillColor,
       'valueFont': instance.valueFont,
+      'titleFont': instance.titleFont,
       'subTextFont': instance.subTextFont,
       'contentTextFont': instance.contentTextFont,
     };
