@@ -279,13 +279,13 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 32,
-        'fontColor': 0xFF000000,
+        'fontColor': 0x99FFFFFF,
         'fontBold': true
       },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
-        'fontColor': 0x99FFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.subTextFont = const {
