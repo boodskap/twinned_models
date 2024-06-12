@@ -35,18 +35,10 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   set subText(String value) => throw _privateConstructorUsedError;
   String get contentText => throw _privateConstructorUsedError;
   set contentText(String value) => throw _privateConstructorUsedError;
-  int get dateTime => throw _privateConstructorUsedError;
-  set dateTime(int value) => throw _privateConstructorUsedError;
   int get fillColor => throw _privateConstructorUsedError;
   set fillColor(int value) => throw _privateConstructorUsedError;
-  int get borderColor => throw _privateConstructorUsedError;
-  set borderColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get preSuffixTextFont =>
-      throw _privateConstructorUsedError;
-  set preSuffixTextFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get subTextFont => throw _privateConstructorUsedError;
   set subTextFont(Map<String, dynamic> value) =>
@@ -78,11 +70,8 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       String imageId,
       String subText,
       String contentText,
-      int dateTime,
       int fillColor,
-      int borderColor,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> preSuffixTextFont,
       Map<String, dynamic> subTextFont,
       Map<String, dynamic> contentTextFont});
 }
@@ -108,11 +97,8 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? imageId = null,
     Object? subText = null,
     Object? contentText = null,
-    Object? dateTime = null,
     Object? fillColor = null,
-    Object? borderColor = null,
     Object? valueFont = null,
-    Object? preSuffixTextFont = null,
     Object? subTextFont = null,
     Object? contentTextFont = null,
   }) {
@@ -145,25 +131,13 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.contentText
           : contentText // ignore: cast_nullable_to_non_nullable
               as String,
-      dateTime: null == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as int,
       fillColor: null == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
               as int,
-      borderColor: null == borderColor
-          ? _value.borderColor
-          : borderColor // ignore: cast_nullable_to_non_nullable
-              as int,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      preSuffixTextFont: null == preSuffixTextFont
-          ? _value.preSuffixTextFont
-          : preSuffixTextFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       subTextFont: null == subTextFont
           ? _value.subTextFont
@@ -194,11 +168,8 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       String imageId,
       String subText,
       String contentText,
-      int dateTime,
       int fillColor,
-      int borderColor,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> preSuffixTextFont,
       Map<String, dynamic> subTextFont,
       Map<String, dynamic> contentTextFont});
 }
@@ -223,11 +194,8 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? imageId = null,
     Object? subText = null,
     Object? contentText = null,
-    Object? dateTime = null,
     Object? fillColor = null,
-    Object? borderColor = null,
     Object? valueFont = null,
-    Object? preSuffixTextFont = null,
     Object? subTextFont = null,
     Object? contentTextFont = null,
   }) {
@@ -260,25 +228,13 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.contentText
           : contentText // ignore: cast_nullable_to_non_nullable
               as String,
-      dateTime: null == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as int,
       fillColor: null == fillColor
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
               as int,
-      borderColor: null == borderColor
-          ? _value.borderColor
-          : borderColor // ignore: cast_nullable_to_non_nullable
-              as int,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      preSuffixTextFont: null == preSuffixTextFont
-          ? _value.preSuffixTextFont
-          : preSuffixTextFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       subTextFont: null == subTextFont
           ? _value.subTextFont
@@ -304,18 +260,10 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.imageId = '',
       this.subText = '',
       this.contentText = '',
-      this.dateTime = 0,
       this.fillColor = 0XFF640062,
-      this.borderColor = 0xFF7F39FB,
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 32,
-        'fontColor': 0x99FFFFFF,
-        'fontBold': true
-      },
-      this.preSuffixTextFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 20,
         'fontColor': 0x99FFFFFF,
         'fontBold': true
       },
@@ -360,19 +308,10 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   String contentText;
   @override
   @JsonKey()
-  int dateTime;
-  @override
-  @JsonKey()
   int fillColor;
   @override
   @JsonKey()
-  int borderColor;
-  @override
-  @JsonKey()
   Map<String, dynamic> valueFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> preSuffixTextFont;
   @override
   @JsonKey()
   Map<String, dynamic> subTextFont;
@@ -382,7 +321,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, imageId: $imageId, subText: $subText, contentText: $contentText, dateTime: $dateTime, fillColor: $fillColor, borderColor: $borderColor, valueFont: $valueFont, preSuffixTextFont: $preSuffixTextFont, subTextFont: $subTextFont, contentTextFont: $contentTextFont)';
+    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, imageId: $imageId, subText: $subText, contentText: $contentText, fillColor: $fillColor, valueFont: $valueFont, subTextFont: $subTextFont, contentTextFont: $contentTextFont)';
   }
 
   @JsonKey(ignore: true)
@@ -411,11 +350,8 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           String imageId,
           String subText,
           String contentText,
-          int dateTime,
           int fillColor,
-          int borderColor,
           Map<String, dynamic> valueFont,
-          Map<String, dynamic> preSuffixTextFont,
           Map<String, dynamic> subTextFont,
           Map<String, dynamic> contentTextFont}) =
       _$MultiDeviceFieldPageWidgetConfigImpl;
@@ -447,20 +383,11 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   String get contentText;
   set contentText(String value);
   @override
-  int get dateTime;
-  set dateTime(int value);
-  @override
   int get fillColor;
   set fillColor(int value);
   @override
-  int get borderColor;
-  set borderColor(int value);
-  @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get preSuffixTextFont;
-  set preSuffixTextFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get subTextFont;
   set subTextFont(Map<String, dynamic> value);
