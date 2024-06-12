@@ -65,6 +65,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'fillColor':
         return DataType.numeric;
       case 'valueFont':
+      case 'titleFont':
       case 'subTextFont':
       case 'contentTextFont':
         return DataType.font;
@@ -107,6 +108,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Content Text Font';
       case 'valueFont':
         return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
       case 'title':
         return 'Title';
       case 'cityName':
@@ -137,7 +140,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'imageId':
       case 'cityName':
       case 'title': 
-      case 'valueFont': 
         return true;
       default:
         return false;
