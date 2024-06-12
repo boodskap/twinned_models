@@ -52,6 +52,8 @@ mixin _$GenericAirQualityLinearWidgetConfig {
   set showLabel(bool value) => throw _privateConstructorUsedError;
   double get rangeWidth => throw _privateConstructorUsedError;
   set rangeWidth(double value) => throw _privateConstructorUsedError;
+  double get markerSize => throw _privateConstructorUsedError;
+  set markerSize(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -82,7 +84,8 @@ abstract class $GenericAirQualityLinearWidgetConfigCopyWith<$Res> {
       int markerColor,
       double markerOffset,
       bool showLabel,
-      double rangeWidth});
+      double rangeWidth,
+      double markerSize});
 }
 
 /// @nodoc
@@ -113,6 +116,7 @@ class _$GenericAirQualityLinearWidgetConfigCopyWithImpl<$Res,
     Object? markerOffset = null,
     Object? showLabel = null,
     Object? rangeWidth = null,
+    Object? markerSize = null,
   }) {
     return _then(_value.copyWith(
       field: null == field
@@ -171,6 +175,10 @@ class _$GenericAirQualityLinearWidgetConfigCopyWithImpl<$Res,
           ? _value.rangeWidth
           : rangeWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      markerSize: null == markerSize
+          ? _value.markerSize
+          : markerSize // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -198,7 +206,8 @@ abstract class _$$GenericAirQualityLinearWidgetConfigImplCopyWith<$Res>
       int markerColor,
       double markerOffset,
       bool showLabel,
-      double rangeWidth});
+      double rangeWidth,
+      double markerSize});
 }
 
 /// @nodoc
@@ -228,6 +237,7 @@ class __$$GenericAirQualityLinearWidgetConfigImplCopyWithImpl<$Res>
     Object? markerOffset = null,
     Object? showLabel = null,
     Object? rangeWidth = null,
+    Object? markerSize = null,
   }) {
     return _then(_$GenericAirQualityLinearWidgetConfigImpl(
       field: null == field
@@ -286,6 +296,10 @@ class __$$GenericAirQualityLinearWidgetConfigImplCopyWithImpl<$Res>
           ? _value.rangeWidth
           : rangeWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      markerSize: null == markerSize
+          ? _value.markerSize
+          : markerSize // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -329,7 +343,8 @@ class _$GenericAirQualityLinearWidgetConfigImpl
       this.markerColor = 0xFF000000,
       this.markerOffset = 20,
       this.showLabel = true,
-      this.rangeWidth = 50})
+      this.rangeWidth = 20,
+      this.markerSize = 10})
       : super._();
 
   factory _$GenericAirQualityLinearWidgetConfigImpl.fromJson(
@@ -378,10 +393,13 @@ class _$GenericAirQualityLinearWidgetConfigImpl
   @override
   @JsonKey()
   double rangeWidth;
+  @override
+  @JsonKey()
+  double markerSize;
 
   @override
   String toString() {
-    return 'GenericAirQualityLinearWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, labelFont: $labelFont, axisLabelFont: $axisLabelFont, gaugeAnimate: $gaugeAnimate, interval: $interval, ranges: $ranges, width: $width, markerColor: $markerColor, markerOffset: $markerOffset, showLabel: $showLabel, rangeWidth: $rangeWidth)';
+    return 'GenericAirQualityLinearWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, labelFont: $labelFont, axisLabelFont: $axisLabelFont, gaugeAnimate: $gaugeAnimate, interval: $interval, ranges: $ranges, width: $width, markerColor: $markerColor, markerOffset: $markerOffset, showLabel: $showLabel, rangeWidth: $rangeWidth, markerSize: $markerSize)';
   }
 
   @JsonKey(ignore: true)
@@ -416,7 +434,8 @@ abstract class _GenericAirQualityLinearWidgetConfig
       int markerColor,
       double markerOffset,
       bool showLabel,
-      double rangeWidth}) = _$GenericAirQualityLinearWidgetConfigImpl;
+      double rangeWidth,
+      double markerSize}) = _$GenericAirQualityLinearWidgetConfigImpl;
   _GenericAirQualityLinearWidgetConfig._() : super._();
 
   factory _GenericAirQualityLinearWidgetConfig.fromJson(
@@ -465,6 +484,9 @@ abstract class _GenericAirQualityLinearWidgetConfig
   @override
   double get rangeWidth;
   set rangeWidth(double value);
+  @override
+  double get markerSize;
+  set markerSize(double value);
   @override
   @JsonKey(ignore: true)
   _$$GenericAirQualityLinearWidgetConfigImplCopyWith<
