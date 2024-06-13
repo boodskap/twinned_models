@@ -16,7 +16,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
@@ -24,14 +24,14 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> fieldLabelFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,

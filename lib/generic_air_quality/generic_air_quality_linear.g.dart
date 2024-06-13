@@ -17,7 +17,7 @@ _$GenericAirQualityLinearWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 25,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           fieldLabel: json['fieldLabel'] as String? ?? 'Air Quality Index',
@@ -25,14 +25,14 @@ _$GenericAirQualityLinearWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 20,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 20,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
