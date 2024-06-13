@@ -65,7 +65,6 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
     @Default(true) bool showLabel,
     @Default(20) double rangeWidth,
     @Default(10) double markerSize,
-    @Default(10) double markerWidth,
   }) = _GenericAirQualityLinearWidgetConfig;
 
   factory GenericAirQualityLinearWidgetConfig.fromJson(
@@ -87,7 +86,6 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'markerOffset':
       case 'rangeWidth':
       case 'markerSize':
-      case 'markerWidth':
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
@@ -157,8 +155,6 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
         return 'Range Width';
       case 'markerSize':
         return 'Marker Size';
-      case 'markerWidth':
-        return 'Marker Width';
       case 'fieldLabel':
         return 'Field Label';
       case 'fieldLabelFont':
