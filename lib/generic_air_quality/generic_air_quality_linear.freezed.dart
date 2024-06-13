@@ -30,6 +30,14 @@ mixin _$GenericAirQualityLinearWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  String get fieldLabel => throw _privateConstructorUsedError;
+  set fieldLabel(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get fieldLabelFont => throw _privateConstructorUsedError;
+  set fieldLabelFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
+  set valueFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -75,6 +83,9 @@ abstract class $GenericAirQualityLinearWidgetConfigCopyWith<$Res> {
       String deviceId,
       String title,
       Map<String, dynamic> titleFont,
+      String fieldLabel,
+      Map<String, dynamic> fieldLabelFont,
+      Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> axisLabelFont,
       bool gaugeAnimate,
@@ -106,6 +117,9 @@ class _$GenericAirQualityLinearWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? title = null,
     Object? titleFont = null,
+    Object? fieldLabel = null,
+    Object? fieldLabelFont = null,
+    Object? valueFont = null,
     Object? labelFont = null,
     Object? axisLabelFont = null,
     Object? gaugeAnimate = null,
@@ -134,6 +148,18 @@ class _$GenericAirQualityLinearWidgetConfigCopyWithImpl<$Res,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      fieldLabel: null == fieldLabel
+          ? _value.fieldLabel
+          : fieldLabel // ignore: cast_nullable_to_non_nullable
+              as String,
+      fieldLabelFont: null == fieldLabelFont
+          ? _value.fieldLabelFont
+          : fieldLabelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
@@ -197,6 +223,9 @@ abstract class _$$GenericAirQualityLinearWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String title,
       Map<String, dynamic> titleFont,
+      String fieldLabel,
+      Map<String, dynamic> fieldLabelFont,
+      Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> axisLabelFont,
       bool gaugeAnimate,
@@ -227,6 +256,9 @@ class __$$GenericAirQualityLinearWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? title = null,
     Object? titleFont = null,
+    Object? fieldLabel = null,
+    Object? fieldLabelFont = null,
+    Object? valueFont = null,
     Object? labelFont = null,
     Object? axisLabelFont = null,
     Object? gaugeAnimate = null,
@@ -255,6 +287,18 @@ class __$$GenericAirQualityLinearWidgetConfigImplCopyWithImpl<$Res>
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      fieldLabel: null == fieldLabel
+          ? _value.fieldLabel
+          : fieldLabel // ignore: cast_nullable_to_non_nullable
+              as String,
+      fieldLabelFont: null == fieldLabelFont
+          ? _value.fieldLabelFont
+          : fieldLabelFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       labelFont: null == labelFont
           ? _value.labelFont
@@ -318,15 +362,28 @@ class _$GenericAirQualityLinearWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
+      this.fieldLabel = 'Air Quality Index',
+      this.fieldLabelFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      },
+      this.valueFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.axisLabelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 50,
+        'fontSize': 10,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -365,6 +422,15 @@ class _$GenericAirQualityLinearWidgetConfigImpl
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
+  String fieldLabel;
+  @override
+  @JsonKey()
+  Map<String, dynamic> fieldLabelFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> valueFont;
+  @override
+  @JsonKey()
   Map<String, dynamic> labelFont;
   @override
   @JsonKey()
@@ -399,7 +465,7 @@ class _$GenericAirQualityLinearWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericAirQualityLinearWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, labelFont: $labelFont, axisLabelFont: $axisLabelFont, gaugeAnimate: $gaugeAnimate, interval: $interval, ranges: $ranges, width: $width, markerColor: $markerColor, markerOffset: $markerOffset, showLabel: $showLabel, rangeWidth: $rangeWidth, markerSize: $markerSize)';
+    return 'GenericAirQualityLinearWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, fieldLabel: $fieldLabel, fieldLabelFont: $fieldLabelFont, valueFont: $valueFont, labelFont: $labelFont, axisLabelFont: $axisLabelFont, gaugeAnimate: $gaugeAnimate, interval: $interval, ranges: $ranges, width: $width, markerColor: $markerColor, markerOffset: $markerOffset, showLabel: $showLabel, rangeWidth: $rangeWidth, markerSize: $markerSize)';
   }
 
   @JsonKey(ignore: true)
@@ -425,6 +491,9 @@ abstract class _GenericAirQualityLinearWidgetConfig
       String deviceId,
       String title,
       Map<String, dynamic> titleFont,
+      String fieldLabel,
+      Map<String, dynamic> fieldLabelFont,
+      Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> axisLabelFont,
       bool gaugeAnimate,
@@ -454,6 +523,15 @@ abstract class _GenericAirQualityLinearWidgetConfig
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  String get fieldLabel;
+  set fieldLabel(String value);
+  @override
+  Map<String, dynamic> get fieldLabelFont;
+  set fieldLabelFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get valueFont;
+  set valueFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
