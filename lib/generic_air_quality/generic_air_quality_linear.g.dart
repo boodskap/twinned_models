@@ -75,7 +75,6 @@ _$GenericAirQualityLinearWidgetConfigImpl
           showLabel: json['showLabel'] as bool? ?? true,
           rangeWidth: (json['rangeWidth'] as num?)?.toDouble() ?? 20,
           markerSize: (json['markerSize'] as num?)?.toDouble() ?? 10,
-          markerWidth: (json['markerWidth'] as num?)?.toDouble() ?? 10,
         );
 
 Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
@@ -99,5 +98,4 @@ Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
       'showLabel': instance.showLabel,
       'rangeWidth': instance.rangeWidth,
       'markerSize': instance.markerSize,
-      'markerWidth': instance.markerWidth,
     };
