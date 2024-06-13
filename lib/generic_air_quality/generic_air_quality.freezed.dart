@@ -400,7 +400,7 @@ class _$GenericAirQualityWidgetConfigImpl
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.labelFont = const {

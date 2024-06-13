@@ -18,7 +18,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
