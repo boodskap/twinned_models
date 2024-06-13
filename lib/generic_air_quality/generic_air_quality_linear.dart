@@ -20,16 +20,31 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default('Air Quality Index') String fieldLabel,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 20,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> fieldLabelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 50,
+      'fontSize': 10,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -50,6 +65,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
     @Default(true) bool showLabel,
     @Default(20) double rangeWidth,
     @Default(10) double markerSize,
+    @Default(10) double markerWidth,
   }) = _GenericAirQualityLinearWidgetConfig;
 
   factory GenericAirQualityLinearWidgetConfig.fromJson(
@@ -62,6 +78,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
+      case 'fieldLabel':
         return DataType.text;
       case 'markerColor':
         return DataType.numeric;
@@ -70,6 +87,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'markerOffset':
       case 'rangeWidth':
       case 'markerSize':
+      case 'markerWidth':
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
@@ -79,6 +97,8 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'titleFont':
       case 'labelFont':
       case 'axisLabelFont':
+      case 'fieldLabelFont':
+      case 'valueFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -137,6 +157,14 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
         return 'Range Width';
       case 'markerSize':
         return 'Marker Size';
+      case 'markerWidth':
+        return 'Marker Width';
+      case 'fieldLabel':
+        return 'Field Label';
+      case 'fieldLabelFont':
+        return 'Field Label Font';
+      case 'valueFont':
+        return 'Value Font';
       default:
         return parameter;
     }
@@ -154,6 +182,7 @@ class GenericAirQualityLinearWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'title':
       case 'ranges':
+      case 'fieldLabel':
         return true;
       default:
         return false;

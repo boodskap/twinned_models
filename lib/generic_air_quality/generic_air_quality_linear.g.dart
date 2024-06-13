@@ -20,17 +20,32 @@ _$GenericAirQualityLinearWidgetConfigImpl
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
+          fieldLabel: json['fieldLabel'] as String? ?? 'Air Quality Index',
+          fieldLabelFont: json['fieldLabelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': true
+              },
+          valueFont: json['valueFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': true
+              },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 12,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           axisLabelFont: json['axisLabelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 50,
+                'fontSize': 10,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -60,6 +75,7 @@ _$GenericAirQualityLinearWidgetConfigImpl
           showLabel: json['showLabel'] as bool? ?? true,
           rangeWidth: (json['rangeWidth'] as num?)?.toDouble() ?? 20,
           markerSize: (json['markerSize'] as num?)?.toDouble() ?? 10,
+          markerWidth: (json['markerWidth'] as num?)?.toDouble() ?? 10,
         );
 
 Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
@@ -69,6 +85,9 @@ Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'title': instance.title,
       'titleFont': instance.titleFont,
+      'fieldLabel': instance.fieldLabel,
+      'fieldLabelFont': instance.fieldLabelFont,
+      'valueFont': instance.valueFont,
       'labelFont': instance.labelFont,
       'axisLabelFont': instance.axisLabelFont,
       'gaugeAnimate': instance.gaugeAnimate,
@@ -80,4 +99,5 @@ Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
       'showLabel': instance.showLabel,
       'rangeWidth': instance.rangeWidth,
       'markerSize': instance.markerSize,
+      'markerWidth': instance.markerWidth,
     };
