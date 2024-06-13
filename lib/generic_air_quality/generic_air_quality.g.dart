@@ -18,7 +18,7 @@ _$GenericAirQualityWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 25,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
