@@ -1,20 +1,18 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_air_quality.freezed.dart';
-part 'generic_air_quality.g.dart';
+part 'generic_air_quality_linear.freezed.dart';
+part 'generic_air_quality_linear.g.dart';
 
 @unfreezed
-class GenericAirQualityWidgetConfig extends BaseConfig
-    with _$GenericAirQualityWidgetConfig {
-  GenericAirQualityWidgetConfig._();
+class GenericAirQualityLinearWidgetConfig extends BaseConfig
+    with _$GenericAirQualityLinearWidgetConfig {
+  GenericAirQualityLinearWidgetConfig._();
 
-  factory GenericAirQualityWidgetConfig({
+  factory GenericAirQualityLinearWidgetConfig({
     @Default('') String field,
     @Default('') String deviceId,
     @Default('Air Quality Monitoring') String title,
-    @Default('Air Quality') String subTitle,
-    @Default(0xFFFFFFFF) int titleBgColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -22,46 +20,56 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default('Air Quality Index') String fieldLabel,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 20,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> fieldLabelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 50,
+      'fontSize': 10,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
-    Map<String, dynamic> valueFont,
+    Map<String, dynamic> axisLabelFont,
     @Default(false) bool gaugeAnimate,
     @Default(20) double interval,
     @Default([
       {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
-      {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
-      {'from': 41, 'to': 60, 'color': 0xFFF7E379, 'label': 'Moderate'},
-       {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
-      {'from': 81,'to': 100, 'color': 0XFF44CE1B, 'label': 'Excellent'},
+      {'from': 20.5, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
+      {'from': 40.5, 'to': 60, 'color': 0xFFF7E379, 'label': 'Moderate'},
+      {'from': 60.5, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
+      {'from': 80.5, 'to': 100, 'color': 0XFF44CE1B, 'label': 'Excellent'},
     ])
     List<dynamic> ranges,
-    @Default(0.9) double positionFactor,
-    @Default(0.95) double radiusFactor,
-    @Default(30) double dialStartWidth,
-    @Default(30) double dialEndWidth,
-    @Default(90) double angle,
-    @Default(30) double axisThickness,
+    @Default(350) double width,
+    @Default(0xFF000000) int markerColor,
+    @Default(20) double markerOffset,
     @Default(true) bool showLabel,
+    @Default(20) double rangeWidth,
     @Default(10) double markerSize,
-    @Default(2) double markerBorderWidth,
-    @Default(0xFF000000) int markerBorderColor,
+  }) = _GenericAirQualityLinearWidgetConfig;
 
-  }) = _GenericAirQualityWidgetConfig;
-
-  factory GenericAirQualityWidgetConfig.fromJson(
+  factory GenericAirQualityLinearWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$GenericAirQualityWidgetConfigFromJson(json);
+      _$GenericAirQualityLinearWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -69,20 +77,15 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       case 'title':
       case 'field':
       case 'deviceId':
-       case 'subTitle':
+      case 'fieldLabel':
         return DataType.text;
-      case 'titleBgColor':
-      case 'markerBorderColor':
+      case 'markerColor':
         return DataType.numeric;
-      case 'positionFactor':
-      case 'radiusFactor':
-      case 'dialStartWidth':
-      case 'dialEndWidth':
-      case 'angle':
-      case 'axisThickness':
-       case 'markerSize':
-        case 'markerBorderWidth':
-        case 'interval':
+      case 'interval':
+      case 'width':
+      case 'markerOffset':
+      case 'rangeWidth':
+      case 'markerSize':
         return DataType.decimal;
       case 'ranges':
         return DataType.listOfRanges;
@@ -91,6 +94,8 @@ class GenericAirQualityWidgetConfig extends BaseConfig
         return DataType.yesno;
       case 'titleFont':
       case 'labelFont':
+      case 'axisLabelFont':
+      case 'fieldLabelFont':
       case 'valueFont':
         return DataType.font;
       default:
@@ -103,8 +108,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
         return HintType.field;
-      case 'titleBgColor':
-      case 'markerBorderColor':
+      case 'markerColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -127,42 +131,36 @@ class GenericAirQualityWidgetConfig extends BaseConfig
         return 'Device Id';
       case 'title':
         return 'Title';
-         case 'subTitle':
-        return 'Sub Title';
       case 'titleFont':
         return 'Title Font';
       case 'labelFont':
         return 'Label Font';
-      case 'titleBgColor':
-        return 'Title BgColor';
-      case 'valueFont':
-        return 'Value Font';
+      case 'axisLabelFont':
+        return 'Axis Label Font';
       case 'gaugeAnimate':
         return 'Gauge Animate';
       case 'ranges':
         return 'Ranges';
-      case 'positionFactor':
-        return 'Position Factor';
-      case 'radiusFactor':
-        return 'Radius Factor';
-      case 'dialStartWidth':
-        return 'Dial Start Width';
-      case 'dialEndWidth':
-        return 'Dial End width';
-      case 'angle':
-        return 'Angle';
-      case 'axisThickness':
-        return 'Axis Thickness';
+      case 'interval':
+        return 'Interval';
+      case 'markerColor':
+        return 'Marker Color';
+      case 'width':
+        return 'Width';
+      case 'markerOffset':
+        return 'Marker Offset';
       case 'showLabel':
         return 'Show Label';
-        case 'markerSize':
+      case 'rangeWidth':
+        return 'Range Width';
+      case 'markerSize':
         return 'Marker Size';
-      case 'markerBorderColor':
-        return 'Marker Border Color';
-      case 'markerBorderWidth':
-        return 'Marker Border Width';
-        case 'interval':
-        return 'Interval';
+      case 'fieldLabel':
+        return 'Field Label';
+      case 'fieldLabelFont':
+        return 'Field Label Font';
+      case 'valueFont':
+        return 'Value Font';
       default:
         return parameter;
     }
@@ -180,6 +178,7 @@ class GenericAirQualityWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'title':
       case 'ranges':
+      case 'fieldLabel':
         return true;
       default:
         return false;

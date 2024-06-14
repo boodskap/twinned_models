@@ -1,19 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'generic_air_quality.dart';
+part of 'generic_air_quality_linear.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenericAirQualityWidgetConfigImpl
-    _$$GenericAirQualityWidgetConfigImplFromJson(Map<String, dynamic> json) =>
-        _$GenericAirQualityWidgetConfigImpl(
+_$GenericAirQualityLinearWidgetConfigImpl
+    _$$GenericAirQualityLinearWidgetConfigImplFromJson(
+            Map<String, dynamic> json) =>
+        _$GenericAirQualityLinearWidgetConfigImpl(
           field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? 'Air Quality Monitoring',
-          subTitle: json['subTitle'] as String? ?? 'Air Quality',
-          titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -21,17 +20,32 @@ _$GenericAirQualityWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+          fieldLabel: json['fieldLabel'] as String? ?? 'Air Quality Index',
+          fieldLabelFont: json['fieldLabelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 20,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 50,
+                'fontSize': 20,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 12,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
+          axisLabelFont: json['axisLabelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 10,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -40,57 +54,48 @@ _$GenericAirQualityWidgetConfigImpl
           ranges: json['ranges'] as List<dynamic>? ??
               const [
                 {'from': 0, 'to': 20, 'color': 0xFFE51F1F, 'label': 'Poor'},
-                {'from': 21, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
+                {'from': 20.5, 'to': 40, 'color': 0xFFF2A134, 'label': 'Low'},
                 {
-                  'from': 41,
+                  'from': 40.5,
                   'to': 60,
                   'color': 0xFFF7E379,
                   'label': 'Moderate'
                 },
-                {'from': 61, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
+                {'from': 60.5, 'to': 80, 'color': 0XFFBBDB44, 'label': 'Good'},
                 {
-                  'from': 81,
+                  'from': 80.5,
                   'to': 100,
                   'color': 0XFF44CE1B,
                   'label': 'Excellent'
                 }
               ],
-          positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.9,
-          radiusFactor: (json['radiusFactor'] as num?)?.toDouble() ?? 0.95,
-          dialStartWidth: (json['dialStartWidth'] as num?)?.toDouble() ?? 30,
-          dialEndWidth: (json['dialEndWidth'] as num?)?.toDouble() ?? 30,
-          angle: (json['angle'] as num?)?.toDouble() ?? 90,
-          axisThickness: (json['axisThickness'] as num?)?.toDouble() ?? 30,
+          width: (json['width'] as num?)?.toDouble() ?? 350,
+          markerColor: (json['markerColor'] as num?)?.toInt() ?? 0xFF000000,
+          markerOffset: (json['markerOffset'] as num?)?.toDouble() ?? 20,
           showLabel: json['showLabel'] as bool? ?? true,
+          rangeWidth: (json['rangeWidth'] as num?)?.toDouble() ?? 20,
           markerSize: (json['markerSize'] as num?)?.toDouble() ?? 10,
-          markerBorderWidth:
-              (json['markerBorderWidth'] as num?)?.toDouble() ?? 2,
-          markerBorderColor:
-              (json['markerBorderColor'] as num?)?.toInt() ?? 0xFF000000,
         );
 
-Map<String, dynamic> _$$GenericAirQualityWidgetConfigImplToJson(
-        _$GenericAirQualityWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$GenericAirQualityLinearWidgetConfigImplToJson(
+        _$GenericAirQualityLinearWidgetConfigImpl instance) =>
     <String, dynamic>{
       'field': instance.field,
       'deviceId': instance.deviceId,
       'title': instance.title,
-      'subTitle': instance.subTitle,
-      'titleBgColor': instance.titleBgColor,
       'titleFont': instance.titleFont,
-      'labelFont': instance.labelFont,
+      'fieldLabel': instance.fieldLabel,
+      'fieldLabelFont': instance.fieldLabelFont,
       'valueFont': instance.valueFont,
+      'labelFont': instance.labelFont,
+      'axisLabelFont': instance.axisLabelFont,
       'gaugeAnimate': instance.gaugeAnimate,
       'interval': instance.interval,
       'ranges': instance.ranges,
-      'positionFactor': instance.positionFactor,
-      'radiusFactor': instance.radiusFactor,
-      'dialStartWidth': instance.dialStartWidth,
-      'dialEndWidth': instance.dialEndWidth,
-      'angle': instance.angle,
-      'axisThickness': instance.axisThickness,
+      'width': instance.width,
+      'markerColor': instance.markerColor,
+      'markerOffset': instance.markerOffset,
       'showLabel': instance.showLabel,
+      'rangeWidth': instance.rangeWidth,
       'markerSize': instance.markerSize,
-      'markerBorderWidth': instance.markerBorderWidth,
-      'markerBorderColor': instance.markerBorderColor,
     };

@@ -17,9 +17,7 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           imageId: json['imageId'] as String? ?? '',
           subText: json['subText'] as String? ?? '',
           contentText: json['contentText'] as String? ?? '',
-          dateTime: (json['dateTime'] as num?)?.toInt() ?? 0,
           fillColor: (json['fillColor'] as num?)?.toInt() ?? 0XFF640062,
-          borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFF7F39FB,
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -27,25 +25,24 @@ _$MultiDeviceFieldPageWidgetConfigImpl
                 'fontColor': 0x99FFFFFF,
                 'fontBold': true
               },
-          preSuffixTextFont:
-              json['preSuffixTextFont'] as Map<String, dynamic>? ??
-                  const {
-                    'fontFamily': 'Open Sans',
-                    'fontSize': 20,
-                    'fontColor': 0x99FFFFFF,
-                    'fontBold': true
-                  },
+          titleFont: json['titleFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
           subTextFont: json['subTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 24,
+                'fontSize': 14,
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': true
               },
           contentTextFont: json['contentTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 24,
+                'fontSize': 14,
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': false
               },
@@ -61,11 +58,9 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'imageId': instance.imageId,
       'subText': instance.subText,
       'contentText': instance.contentText,
-      'dateTime': instance.dateTime,
       'fillColor': instance.fillColor,
-      'borderColor': instance.borderColor,
       'valueFont': instance.valueFont,
-      'preSuffixTextFont': instance.preSuffixTextFont,
+      'titleFont': instance.titleFont,
       'subTextFont': instance.subTextFont,
       'contentTextFont': instance.contentTextFont,
     };

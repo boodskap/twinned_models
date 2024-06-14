@@ -17,9 +17,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String imageId,
     @Default('') String subText,
     @Default('') String contentText,
-    @Default(0) int dateTime,
     @Default(0XFF640062) int fillColor,
-    @Default(0xFF7F39FB) int borderColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 32,
@@ -30,20 +28,20 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
-      'fontColor': 0x99FFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
-    Map<String, dynamic> preSuffixTextFont,
+    Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 24,
+      'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> subTextFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 24,
+      'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': false
     })
@@ -64,12 +62,10 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'subText':
       case 'contentText':
         return DataType.text;
-      case 'dateTime':
       case 'fillColor':
-      case 'borderColor':
         return DataType.numeric;
       case 'valueFont':
-      case 'preSuffixTextFont':
+      case 'titleFont':
       case 'subTextFont':
       case 'contentTextFont':
         return DataType.font;
@@ -88,7 +84,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'deviceId':
         return HintType.deviceId;
       case 'fillColor':
-      case 'borderColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -107,14 +102,14 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Sensor Field';
       case 'deviceId':
         return 'Device ID';
-      case 'preSuffixTextFont':
-        return 'Prefix Suffix Font';
       case 'subTextFont':
         return 'Sub Text Font';
       case 'contentTextFont':
         return 'Content Text Font';
       case 'valueFont':
         return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
       case 'title':
         return 'Title';
       case 'cityName':
@@ -123,10 +118,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Sub Text';
       case 'contentText':
         return 'Content Text';
-      case 'dateTime':
-        return 'Date Time';
-      case 'borderColor':
-        return 'Border Color';
       case 'fillColor':
         return 'Fill Color';
       case 'imageId':
@@ -149,9 +140,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'imageId':
       case 'cityName':
       case 'title': 
-      case 'dateTime': 
-      case 'preSuffixTextFont': 
-      case 'valueFont': 
         return true;
       default:
         return false;
