@@ -25,6 +25,8 @@ mixin _$DeviceDataAccordionWidgetConfig {
   set title(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  String get imageId => throw _privateConstructorUsedError;
+  set imageId(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -39,12 +41,14 @@ mixin _$DeviceDataAccordionWidgetConfig {
   Map<String, dynamic> get tableRowFont => throw _privateConstructorUsedError;
   set tableRowFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  int get headerOpenedColor => throw _privateConstructorUsedError;
-  set headerOpenedColor(int value) => throw _privateConstructorUsedError;
-  int get headerClosedColor => throw _privateConstructorUsedError;
-  set headerClosedColor(int value) => throw _privateConstructorUsedError;
+  int get openedHeaderColor => throw _privateConstructorUsedError;
+  set openedHeaderColor(int value) => throw _privateConstructorUsedError;
+  int get closedHeaderColor => throw _privateConstructorUsedError;
+  set closedHeaderColor(int value) => throw _privateConstructorUsedError;
   int get tableContentColor => throw _privateConstructorUsedError;
   set tableContentColor(int value) => throw _privateConstructorUsedError;
+  bool get showExpandable => throw _privateConstructorUsedError;
+  set showExpandable(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,13 +67,15 @@ abstract class $DeviceDataAccordionWidgetConfigCopyWith<$Res> {
   $Res call(
       {String title,
       String deviceId,
+      String imageId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> accordionTitleFont,
       Map<String, dynamic> tableColumnFont,
       Map<String, dynamic> tableRowFont,
-      int headerOpenedColor,
-      int headerClosedColor,
-      int tableContentColor});
+      int openedHeaderColor,
+      int closedHeaderColor,
+      int tableContentColor,
+      bool showExpandable});
 }
 
 /// @nodoc
@@ -88,13 +94,15 @@ class _$DeviceDataAccordionWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? deviceId = null,
+    Object? imageId = null,
     Object? titleFont = null,
     Object? accordionTitleFont = null,
     Object? tableColumnFont = null,
     Object? tableRowFont = null,
-    Object? headerOpenedColor = null,
-    Object? headerClosedColor = null,
+    Object? openedHeaderColor = null,
+    Object? closedHeaderColor = null,
     Object? tableContentColor = null,
+    Object? showExpandable = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -104,6 +112,10 @@ class _$DeviceDataAccordionWidgetConfigCopyWithImpl<$Res,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageId: null == imageId
+          ? _value.imageId
+          : imageId // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -121,18 +133,22 @@ class _$DeviceDataAccordionWidgetConfigCopyWithImpl<$Res,
           ? _value.tableRowFont
           : tableRowFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      headerOpenedColor: null == headerOpenedColor
-          ? _value.headerOpenedColor
-          : headerOpenedColor // ignore: cast_nullable_to_non_nullable
+      openedHeaderColor: null == openedHeaderColor
+          ? _value.openedHeaderColor
+          : openedHeaderColor // ignore: cast_nullable_to_non_nullable
               as int,
-      headerClosedColor: null == headerClosedColor
-          ? _value.headerClosedColor
-          : headerClosedColor // ignore: cast_nullable_to_non_nullable
+      closedHeaderColor: null == closedHeaderColor
+          ? _value.closedHeaderColor
+          : closedHeaderColor // ignore: cast_nullable_to_non_nullable
               as int,
       tableContentColor: null == tableContentColor
           ? _value.tableContentColor
           : tableContentColor // ignore: cast_nullable_to_non_nullable
               as int,
+      showExpandable: null == showExpandable
+          ? _value.showExpandable
+          : showExpandable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -149,13 +165,15 @@ abstract class _$$DeviceDataAccordionWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String title,
       String deviceId,
+      String imageId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> accordionTitleFont,
       Map<String, dynamic> tableColumnFont,
       Map<String, dynamic> tableRowFont,
-      int headerOpenedColor,
-      int headerClosedColor,
-      int tableContentColor});
+      int openedHeaderColor,
+      int closedHeaderColor,
+      int tableContentColor,
+      bool showExpandable});
 }
 
 /// @nodoc
@@ -173,13 +191,15 @@ class __$$DeviceDataAccordionWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? deviceId = null,
+    Object? imageId = null,
     Object? titleFont = null,
     Object? accordionTitleFont = null,
     Object? tableColumnFont = null,
     Object? tableRowFont = null,
-    Object? headerOpenedColor = null,
-    Object? headerClosedColor = null,
+    Object? openedHeaderColor = null,
+    Object? closedHeaderColor = null,
     Object? tableContentColor = null,
+    Object? showExpandable = null,
   }) {
     return _then(_$DeviceDataAccordionWidgetConfigImpl(
       title: null == title
@@ -189,6 +209,10 @@ class __$$DeviceDataAccordionWidgetConfigImplCopyWithImpl<$Res>
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageId: null == imageId
+          ? _value.imageId
+          : imageId // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -206,18 +230,22 @@ class __$$DeviceDataAccordionWidgetConfigImplCopyWithImpl<$Res>
           ? _value.tableRowFont
           : tableRowFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      headerOpenedColor: null == headerOpenedColor
-          ? _value.headerOpenedColor
-          : headerOpenedColor // ignore: cast_nullable_to_non_nullable
+      openedHeaderColor: null == openedHeaderColor
+          ? _value.openedHeaderColor
+          : openedHeaderColor // ignore: cast_nullable_to_non_nullable
               as int,
-      headerClosedColor: null == headerClosedColor
-          ? _value.headerClosedColor
-          : headerClosedColor // ignore: cast_nullable_to_non_nullable
+      closedHeaderColor: null == closedHeaderColor
+          ? _value.closedHeaderColor
+          : closedHeaderColor // ignore: cast_nullable_to_non_nullable
               as int,
       tableContentColor: null == tableContentColor
           ? _value.tableContentColor
           : tableContentColor // ignore: cast_nullable_to_non_nullable
               as int,
+      showExpandable: null == showExpandable
+          ? _value.showExpandable
+          : showExpandable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -229,6 +257,7 @@ class _$DeviceDataAccordionWidgetConfigImpl
   _$DeviceDataAccordionWidgetConfigImpl(
       {this.title = 'Device Data Accordion',
       this.deviceId = '',
+      this.imageId = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
@@ -253,9 +282,10 @@ class _$DeviceDataAccordionWidgetConfigImpl
         'fontColor': 0XFF000000,
         'fontBold': false
       },
-      this.headerOpenedColor = 0xFFFF5733,
-      this.headerClosedColor = 0xFF1F3B4D,
-      this.tableContentColor = 0xFFFFFFFF})
+      this.openedHeaderColor = 0xFFFF5733,
+      this.closedHeaderColor = 0xFF1F3B4D,
+      this.tableContentColor = 0xFFFFFFFF,
+      this.showExpandable = true})
       : super._();
 
   factory _$DeviceDataAccordionWidgetConfigImpl.fromJson(
@@ -270,6 +300,9 @@ class _$DeviceDataAccordionWidgetConfigImpl
   String deviceId;
   @override
   @JsonKey()
+  String imageId;
+  @override
+  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
@@ -282,17 +315,20 @@ class _$DeviceDataAccordionWidgetConfigImpl
   Map<String, dynamic> tableRowFont;
   @override
   @JsonKey()
-  int headerOpenedColor;
+  int openedHeaderColor;
   @override
   @JsonKey()
-  int headerClosedColor;
+  int closedHeaderColor;
   @override
   @JsonKey()
   int tableContentColor;
+  @override
+  @JsonKey()
+  bool showExpandable;
 
   @override
   String toString() {
-    return 'DeviceDataAccordionWidgetConfig(title: $title, deviceId: $deviceId, titleFont: $titleFont, accordionTitleFont: $accordionTitleFont, tableColumnFont: $tableColumnFont, tableRowFont: $tableRowFont, headerOpenedColor: $headerOpenedColor, headerClosedColor: $headerClosedColor, tableContentColor: $tableContentColor)';
+    return 'DeviceDataAccordionWidgetConfig(title: $title, deviceId: $deviceId, imageId: $imageId, titleFont: $titleFont, accordionTitleFont: $accordionTitleFont, tableColumnFont: $tableColumnFont, tableRowFont: $tableRowFont, openedHeaderColor: $openedHeaderColor, closedHeaderColor: $closedHeaderColor, tableContentColor: $tableContentColor, showExpandable: $showExpandable)';
   }
 
   @JsonKey(ignore: true)
@@ -316,13 +352,15 @@ abstract class _DeviceDataAccordionWidgetConfig
   factory _DeviceDataAccordionWidgetConfig(
       {String title,
       String deviceId,
+      String imageId,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> accordionTitleFont,
       Map<String, dynamic> tableColumnFont,
       Map<String, dynamic> tableRowFont,
-      int headerOpenedColor,
-      int headerClosedColor,
-      int tableContentColor}) = _$DeviceDataAccordionWidgetConfigImpl;
+      int openedHeaderColor,
+      int closedHeaderColor,
+      int tableContentColor,
+      bool showExpandable}) = _$DeviceDataAccordionWidgetConfigImpl;
   _DeviceDataAccordionWidgetConfig._() : super._();
 
   factory _DeviceDataAccordionWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -334,6 +372,9 @@ abstract class _DeviceDataAccordionWidgetConfig
   @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  String get imageId;
+  set imageId(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
@@ -347,14 +388,17 @@ abstract class _DeviceDataAccordionWidgetConfig
   Map<String, dynamic> get tableRowFont;
   set tableRowFont(Map<String, dynamic> value);
   @override
-  int get headerOpenedColor;
-  set headerOpenedColor(int value);
+  int get openedHeaderColor;
+  set openedHeaderColor(int value);
   @override
-  int get headerClosedColor;
-  set headerClosedColor(int value);
+  int get closedHeaderColor;
+  set closedHeaderColor(int value);
   @override
   int get tableContentColor;
   set tableContentColor(int value);
+  @override
+  bool get showExpandable;
+  set showExpandable(bool value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceDataAccordionWidgetConfigImplCopyWith<
