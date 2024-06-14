@@ -15,6 +15,7 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
     @Default('') String iconId,
     @Default('') String title,
     @Default('') String topLabel,
+    @Default('') String bottomLabel,
     @Default('') String message,
     @Default(150) int messageWidth,
     @Default(48.0) double iconWidth,
@@ -47,11 +48,19 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
     Map<String, dynamic> topFont,
     @Default({
       'fontFamily': 'Open Sans',
+      'fontSize': 30,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> bottomFont,
+    @Default({
+      'fontFamily': 'Open Sans',
       'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
+    @Default(true) bool bottomLabelAsSuffix,
   }) = _MultiDeviceFieldCardWidgetConfig;
 
   factory MultiDeviceFieldCardWidgetConfig.fromJson(
@@ -66,11 +75,13 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
       case 'title':
       case 'message':
       case 'topLabel':
+      case 'bottomLabel':
         return DataType.text;
       case 'titleFont':
       case 'messageFont':
       case 'topFont':
       case 'valueFont':
+      case 'bottomFont':
         return DataType.font;
       case 'messageWidth':
         return DataType.numeric;
@@ -85,6 +96,8 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
       case 'fields':
       case 'deviceIds':
         return DataType.listOfTexts;
+      case 'bottomLabelAsSuffix':
+        return DataType.yesno;
       default:
         return DataType.none;
     }
@@ -97,6 +110,8 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceIds':
         return HintType.deviceId;
+      case 'message':
+        return HintType.textArea;
 
       default:
         return HintType.none;
