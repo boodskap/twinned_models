@@ -15,16 +15,10 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String cityName,
     @Default('') String imageId,
-    @Default('') String subText,
-    @Default('') String contentText,
-    @Default(0XFF640062) int fillColor,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 32,
-      'fontColor': 0x99FFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueFont,
+    @Default('') String paraTitle,
+    @Default('') String paraText,
+    @Default(0XFF640062) int startFillColor,
+    @Default(0XFF640062) int endFillColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -34,18 +28,46 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
+      'fontSize': 16,
+      'fontColor': 0XFFFFFAFA,
+      'fontBold': false
+    })
+    Map<String, dynamic> timeStampFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 32,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': false
+    })
+    Map<String, dynamic> suffixFont,
+    @Default({
+      'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> subTextFont,
+    Map<String, dynamic> paraTitleFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': false
     })
-    Map<String, dynamic> contentTextFont,
+    Map<String, dynamic> paraTextFont,
   }) = _MultiDeviceFieldPageWidgetConfig;
 
   factory MultiDeviceFieldPageWidgetConfig.fromJson(
@@ -59,15 +81,19 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'title':
       case 'cityName':
-      case 'subText':
-      case 'contentText':
+      case 'paraTitle':
+      case 'paraText':
         return DataType.text;
-      case 'fillColor':
+      case 'startFillColor':
+      case 'endFillColor':
         return DataType.numeric;
-      case 'valueFont':
       case 'titleFont':
-      case 'subTextFont':
-      case 'contentTextFont':
+      case 'timeStampFont':
+      case 'valueFont':
+      case 'labelFont':
+      case 'suffixFont':
+      case 'paraTitleFont':
+      case 'paraTextFont':
         return DataType.font;
       case 'imageId':
         return DataType.image;
@@ -83,7 +109,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'fillColor':
+      case 'startFillColor':
+      case 'endFillColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -102,24 +129,32 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Sensor Field';
       case 'deviceId':
         return 'Device ID';
-      case 'subTextFont':
-        return 'Sub Text Font';
-      case 'contentTextFont':
-        return 'Content Text Font';
-      case 'valueFont':
-        return 'Value Font';
-      case 'titleFont':
-        return 'Title Font';
       case 'title':
         return 'Title';
       case 'cityName':
         return 'City Name';
-      case 'subText':
-        return 'Sub Text';
-      case 'contentText':
-        return 'Content Text';
-      case 'fillColor':
-        return 'Fill Color';
+      case 'titleFont':
+        return 'Title Font';
+      case 'timeStampFont':
+        return 'Time Stamp Font';
+      case 'valueFont':
+        return 'Value Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'suffixFont':
+        return 'Suffix Font';
+      case 'paraTitleFont':
+        return 'Paragraph Title Font';
+      case 'paraTextFont':
+        return 'Paragraph Content Font';
+      case 'paraTitle':
+        return 'Paragraph Title';
+      case 'paraText':
+        return 'Paragraph Content';
+      case 'startFillColor':
+        return 'Start Fill Color';
+      case 'endFillColor':
+        return 'End Fill Color';
       case 'imageId':
         return 'Image Upload';
       default:
@@ -138,8 +173,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'field':
       case 'deviceId':
       case 'imageId':
-      case 'cityName':
-      case 'title': 
+      case 'title':
         return true;
       default:
         return false;
