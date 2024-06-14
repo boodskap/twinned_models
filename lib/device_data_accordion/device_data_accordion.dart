@@ -12,6 +12,7 @@ class DeviceDataAccordionWidgetConfig extends BaseConfig
   factory DeviceDataAccordionWidgetConfig({
     @Default('Device Data Accordion') String title,
     @Default('') String deviceId,
+    @Default('') String imageId,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -40,9 +41,10 @@ class DeviceDataAccordionWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> tableRowFont,
-    @Default(0xFFFF5733) int headerOpenedColor,
-    @Default(0xFF1F3B4D) int headerClosedColor,
+    @Default(0xFFFF5733) int openedHeaderColor,
+    @Default(0xFF1F3B4D) int closedHeaderColor,
     @Default(0xFFFFFFFF) int tableContentColor,
+    @Default(true) bool showExpandable,
   }) = _DeviceDataAccordionWidgetConfig;
 
   factory DeviceDataAccordionWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -59,10 +61,14 @@ class DeviceDataAccordionWidgetConfig extends BaseConfig
       case 'tableColumnFont':
       case 'tableRowFont':
         return DataType.font;
-      case 'headerOpenedColor':
-      case 'headerClosedColor':
+      case 'openedHeaderColor':
+      case 'closedHeaderColor':
       case 'tableContentColor':
         return DataType.numeric;
+      case 'imageId':
+        return DataType.image;
+      case 'showExpandable':
+        return DataType.yesno;
       default:
         return DataType.text;
     }
@@ -73,8 +79,8 @@ class DeviceDataAccordionWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
-      case 'headerOpenedColor':
-      case 'headerClosedColor':
+      case 'openedHeaderColor':
+      case 'closedHeaderColor':
       case 'tableContentColor':
         return HintType.color;
       default:
@@ -89,7 +95,32 @@ class DeviceDataAccordionWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'title':
+        return 'Title';
+      case 'deviceId':
+        return 'Device Id';
+      case 'titleFont':
+        return 'Title Font';
+      case 'accordionTitleFont':
+        return 'Accordion Title Font';
+      case 'tableColumnFont':
+        return 'Table Column Title Font';
+      case 'tableRowFont':
+        return 'Table Row Title Font';
+      case 'openedHeaderColor':
+        return 'Opened Header Color';
+      case 'closedHeaderColor':
+        return 'Closed Header Color';
+      case 'tableContentColor':
+        return 'Table Content Color';
+      case 'imageId':
+        return 'Image';
+      case 'showExpandable':
+        return 'Show Expandable';
+      default:
+        return parameter;
+    }
   }
 
   @override
