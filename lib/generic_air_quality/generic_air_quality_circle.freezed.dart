@@ -26,6 +26,11 @@ mixin _$GenericAirQualityCircleWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  String get subTitle => throw _privateConstructorUsedError;
+  set subTitle(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get subTitleFont => throw _privateConstructorUsedError;
+  set subTitleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get mainText => throw _privateConstructorUsedError;
@@ -91,6 +96,8 @@ abstract class $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      String subTitle,
+      Map<String, dynamic> subTitleFont,
       String deviceId,
       String mainText,
       String mainField,
@@ -128,6 +135,8 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? subTitle = null,
+    Object? subTitleFont = null,
     Object? deviceId = null,
     Object? mainText = null,
     Object? mainField = null,
@@ -156,6 +165,14 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      subTitle: null == subTitle
+          ? _value.subTitle
+          : subTitle // ignore: cast_nullable_to_non_nullable
+              as String,
+      subTitleFont: null == subTitleFont
+          ? _value.subTitleFont
+          : subTitleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -249,6 +266,8 @@ abstract class _$$GenericAirQualityCircleWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
+      String subTitle,
+      Map<String, dynamic> subTitleFont,
       String deviceId,
       String mainText,
       String mainField,
@@ -285,6 +304,8 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? subTitle = null,
+    Object? subTitleFont = null,
     Object? deviceId = null,
     Object? mainText = null,
     Object? mainField = null,
@@ -313,6 +334,14 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      subTitle: null == subTitle
+          ? _value.subTitle
+          : subTitle // ignore: cast_nullable_to_non_nullable
+              as String,
+      subTitleFont: null == subTitleFont
+          ? _value.subTitleFont
+          : subTitleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -406,6 +435,13 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
+      this.subTitle = 'WHAT AM  I BREATHING RIGHT NOW',
+      this.subTitleFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 20,
+        'fontColor': 0xFF3B444B,
+        'fontBold': false
+      },
       this.deviceId = '',
       this.mainText = '',
       this.mainField = '',
@@ -474,6 +510,12 @@ class _$GenericAirQualityCircleWidgetConfigImpl
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
+  String subTitle;
+  @override
+  @JsonKey()
+  Map<String, dynamic> subTitleFont;
+  @override
+  @JsonKey()
   String deviceId;
   @override
   @JsonKey()
@@ -532,7 +574,7 @@ class _$GenericAirQualityCircleWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, mainText: $mainText, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
+    return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, mainText: $mainText, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -556,6 +598,8 @@ abstract class _GenericAirQualityCircleWidgetConfig
   factory _GenericAirQualityCircleWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
+      String subTitle,
+      Map<String, dynamic> subTitleFont,
       String deviceId,
       String mainText,
       String mainField,
@@ -587,6 +631,12 @@ abstract class _GenericAirQualityCircleWidgetConfig
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  String get subTitle;
+  set subTitle(String value);
+  @override
+  Map<String, dynamic> get subTitleFont;
+  set subTitleFont(Map<String, dynamic> value);
   @override
   String get deviceId;
   set deviceId(String value);
