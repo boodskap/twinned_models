@@ -18,7 +18,24 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default('WHAT AM  I BREATHING RIGHT NOW') String subTitle,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFF3B444B,
+      'fontBold': false
+    })
+    Map<String, dynamic> subTitleFont,
     @Default('') String deviceId,
+    @Default('') String mainText,
+    @Default('') String mainField,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 11,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': false
+    })
+      Map<String, dynamic> mainTextFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -37,7 +54,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
@@ -56,17 +73,22 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     Map<String, dynamic> suffixMainFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 15,
+      'fontSize': 17,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> valueMainFont,
     @Default(50) double activeCircleRadius,
-    @Default(0xFF000000) int activeCircleBGColor,
-    @Default(0xFF000000) int activeCircleBorderColor,
+    @Default(0XFFbbdb44) int activeCircleBGColor,
+    @Default(0XFFbbdb44) int activeCircleBorderColor,
     @Default(40) double inactiveCircleRadius,
-    @Default(0xFF000000) int inactiveCircleBGColor,
-    @Default(0xFF000000) int inactiveCircleBorderColor,
+    @Default(0XFFbcf766) int inactiveCircleBGColor,
+    @Default(0XFFbcf766) int inactiveCircleBorderColor,
+
+     @Default(5) double horizontalSpacing,
+      @Default(20) double verticalSpacing,
+       @Default(25) double imageSize,
+      
   }) = _GenericAirQualityCircleWidgetConfig;
 
   factory GenericAirQualityCircleWidgetConfig.fromJson(
@@ -78,6 +100,9 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'title':
       case 'deviceId':
+       case 'mainField':
+       case 'mainText':
+        case 'subTitle':
         return DataType.text;
       case 'activeCircleBGColor':
       case 'activeCircleBorderColor':
@@ -86,6 +111,9 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return DataType.numeric;
       case 'activeCircleRadius':
       case 'inactiveCircleRadius':
+      case 'horizontalSpacing':
+      case 'verticalSpacing':
+      case 'imageSize':
         return DataType.decimal;
       case 'titleFont':
       case 'prefixFont':
@@ -94,6 +122,8 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       case 'prefixMainFont':
       case 'suffixMainFont':
       case 'valueMainFont':
+      case 'mainTextFont':
+       case 'subTitleFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -103,7 +133,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'field':
+      case 'mainField':
         return HintType.field;
       case 'activeCircleBGColor':
       case 'activeCircleBorderColor':
@@ -131,6 +161,10 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return 'Title';
       case 'titleFont':
         return 'Title Font';
+          case 'subTitle':
+        return 'Sub Title';
+         case 'subTitleFont':
+        return 'Sub Title Font';
       case 'activeCircleBGColor':
         return 'Active Circle Bg Color';
       case 'activeCircleBorderColor':
@@ -155,6 +189,19 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return 'Suffix Main Font';
       case 'valueMainFont':
         return 'Value Main Font';
+         case 'mainField':
+        return 'Main Field';
+      case 'mainTextFont':
+        return 'Main Text Font';
+      case 'horizontalSpacing':
+        return 'Horizontal Spacing';
+      case 'verticalSpacing':
+        return 'Vertical Spacing';
+      case 'imageSize':
+        return 'Image Size';
+        case 'mainText':
+        return 'Main Text';
+       
       default:
         return parameter;
     }
@@ -170,6 +217,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
       case 'title':
+       case 'mainField':
         return true;
       default:
         return false;

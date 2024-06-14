@@ -18,7 +18,25 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          subTitle:
+              json['subTitle'] as String? ?? 'WHAT AM  I BREATHING RIGHT NOW',
+          subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
+                'fontColor': 0xFF3B444B,
+                'fontBold': false
+              },
           deviceId: json['deviceId'] as String? ?? '',
+          mainText: json['mainText'] as String? ?? '',
+          mainField: json['mainField'] as String? ?? '',
+          mainTextFont: json['mainTextFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 11,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': false
+              },
           prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -38,7 +56,7 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
                 'fontColor': 0xFF000000,
-                'fontBold': false
+                'fontBold': true
               },
           prefixMainFont: json['prefixMainFont'] as Map<String, dynamic>? ??
               const {
@@ -57,23 +75,27 @@ _$GenericAirQualityCircleWidgetConfigImpl
           valueMainFont: json['valueMainFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 15,
+                'fontSize': 17,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
           activeCircleRadius:
               (json['activeCircleRadius'] as num?)?.toDouble() ?? 50,
           activeCircleBGColor:
-              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0xFF000000,
+              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           activeCircleBorderColor:
-              (json['activeCircleBorderColor'] as num?)?.toInt() ?? 0xFF000000,
+              (json['activeCircleBorderColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           inactiveCircleRadius:
               (json['inactiveCircleRadius'] as num?)?.toDouble() ?? 40,
           inactiveCircleBGColor:
-              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0xFF000000,
+              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFbcf766,
           inactiveCircleBorderColor:
               (json['inactiveCircleBorderColor'] as num?)?.toInt() ??
-                  0xFF000000,
+                  0XFFbcf766,
+          horizontalSpacing:
+              (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
+          verticalSpacing: (json['verticalSpacing'] as num?)?.toDouble() ?? 20,
+          imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
 Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
@@ -81,7 +103,12 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
+      'subTitle': instance.subTitle,
+      'subTitleFont': instance.subTitleFont,
       'deviceId': instance.deviceId,
+      'mainText': instance.mainText,
+      'mainField': instance.mainField,
+      'mainTextFont': instance.mainTextFont,
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
@@ -94,4 +121,7 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
       'inactiveCircleRadius': instance.inactiveCircleRadius,
       'inactiveCircleBGColor': instance.inactiveCircleBGColor,
       'inactiveCircleBorderColor': instance.inactiveCircleBorderColor,
+      'horizontalSpacing': instance.horizontalSpacing,
+      'verticalSpacing': instance.verticalSpacing,
+      'imageSize': instance.imageSize,
     };
