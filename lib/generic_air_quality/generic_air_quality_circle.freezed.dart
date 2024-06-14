@@ -447,9 +447,9 @@ class _$GenericAirQualityCircleWidgetConfigImpl
       this.mainField = '',
       this.mainTextFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 13,
+        'fontSize': 11,
         'fontColor': 0xFFFFFFFF,
-        'fontBold': true
+        'fontBold': false
       },
       this.prefixFont = const {
         'fontFamily': 'Open Sans',
@@ -467,7 +467,7 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontFamily': 'Open Sans',
         'fontSize': 14,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.prefixMainFont = const {
         'fontFamily': 'Open Sans',
@@ -483,16 +483,16 @@ class _$GenericAirQualityCircleWidgetConfigImpl
       },
       this.valueMainFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 15,
+        'fontSize': 17,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.activeCircleRadius = 50,
-      this.activeCircleBGColor = 0XFFffbf00,
-      this.activeCircleBorderColor = 0XFFffbf00,
+      this.activeCircleBGColor = 0XFFBBDB44FF,
+      this.activeCircleBorderColor = 0XFFBBDB44FF,
       this.inactiveCircleRadius = 40,
-      this.inactiveCircleBGColor = 0XFFF6B092,
-      this.inactiveCircleBorderColor = 0XFFF6B092,
+      this.inactiveCircleBGColor = 0XFFC1F40CFF,
+      this.inactiveCircleBorderColor = 0XFFC1F40CFF,
       this.horizontalSpacing = 5,
       this.verticalSpacing = 20,
       this.imageSize = 25})
