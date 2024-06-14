@@ -21,6 +21,7 @@ _$MultiDeviceFieldCardWidgetConfigImpl
           iconId: json['iconId'] as String? ?? '',
           title: json['title'] as String? ?? '',
           topLabel: json['topLabel'] as String? ?? '',
+          bottomLabel: json['bottomLabel'] as String? ?? '',
           message: json['message'] as String? ?? '',
           messageWidth: (json['messageWidth'] as num?)?.toInt() ?? 150,
           iconWidth: (json['iconWidth'] as num?)?.toDouble() ?? 48.0,
@@ -52,6 +53,13 @@ _$MultiDeviceFieldCardWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          bottomFont: json['bottomFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 30,
+                'fontColor': 0xFF000000,
+                'fontBold': true
+              },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -59,6 +67,7 @@ _$MultiDeviceFieldCardWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          bottomLabelAsSuffix: json['bottomLabelAsSuffix'] as bool? ?? true,
         );
 
 Map<String, dynamic> _$$MultiDeviceFieldCardWidgetConfigImplToJson(
@@ -69,6 +78,7 @@ Map<String, dynamic> _$$MultiDeviceFieldCardWidgetConfigImplToJson(
       'iconId': instance.iconId,
       'title': instance.title,
       'topLabel': instance.topLabel,
+      'bottomLabel': instance.bottomLabel,
       'message': instance.message,
       'messageWidth': instance.messageWidth,
       'iconWidth': instance.iconWidth,
@@ -81,5 +91,7 @@ Map<String, dynamic> _$$MultiDeviceFieldCardWidgetConfigImplToJson(
       'titleFont': instance.titleFont,
       'messageFont': instance.messageFont,
       'topFont': instance.topFont,
+      'bottomFont': instance.bottomFont,
       'valueFont': instance.valueFont,
+      'bottomLabelAsSuffix': instance.bottomLabelAsSuffix,
     };
