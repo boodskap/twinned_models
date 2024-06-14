@@ -18,6 +18,14 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default('WHAT AM  I BREATHING RIGHT NOW') String subTitle,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFF3B444B,
+      'fontBold': false
+    })
+    Map<String, dynamic> subTitleFont,
     @Default('') String deviceId,
     @Default('') String mainText,
     @Default('') String mainField,
@@ -94,6 +102,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       case 'deviceId':
        case 'mainField':
        case 'mainText':
+        case 'subTitle':
         return DataType.text;
       case 'activeCircleBGColor':
       case 'activeCircleBorderColor':
@@ -114,6 +123,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       case 'suffixMainFont':
       case 'valueMainFont':
       case 'mainTextFont':
+       case 'subTitleFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -151,6 +161,10 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return 'Title';
       case 'titleFont':
         return 'Title Font';
+          case 'subTitle':
+        return 'Sub Title';
+         case 'subTitleFont':
+        return 'Sub Title Font';
       case 'activeCircleBGColor':
         return 'Active Circle Bg Color';
       case 'activeCircleBorderColor':
@@ -187,6 +201,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return 'Image Size';
         case 'mainText':
         return 'Main Text';
+       
       default:
         return parameter;
     }

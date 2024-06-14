@@ -18,6 +18,15 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          subTitle:
+              json['subTitle'] as String? ?? 'WHAT AM  I BREATHING RIGHT NOW',
+          subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 20,
+                'fontColor': 0xFF3B444B,
+                'fontBold': false
+              },
           deviceId: json['deviceId'] as String? ?? '',
           mainText: json['mainText'] as String? ?? '',
           mainField: json['mainField'] as String? ?? '',
@@ -94,6 +103,8 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
+      'subTitle': instance.subTitle,
+      'subTitleFont': instance.subTitleFont,
       'deviceId': instance.deviceId,
       'mainText': instance.mainText,
       'mainField': instance.mainField,
