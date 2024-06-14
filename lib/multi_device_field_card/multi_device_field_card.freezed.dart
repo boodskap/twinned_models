@@ -31,6 +31,8 @@ mixin _$MultiDeviceFieldCardWidgetConfig {
   set title(String value) => throw _privateConstructorUsedError;
   String get topLabel => throw _privateConstructorUsedError;
   set topLabel(String value) => throw _privateConstructorUsedError;
+  String get bottomLabel => throw _privateConstructorUsedError;
+  set bottomLabel(String value) => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
   set message(String value) => throw _privateConstructorUsedError;
   int get messageWidth => throw _privateConstructorUsedError;
@@ -57,9 +59,14 @@ mixin _$MultiDeviceFieldCardWidgetConfig {
       throw _privateConstructorUsedError;
   Map<String, dynamic> get topFont => throw _privateConstructorUsedError;
   set topFont(Map<String, dynamic> value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get bottomFont => throw _privateConstructorUsedError;
+  set bottomFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  bool get bottomLabelAsSuffix => throw _privateConstructorUsedError;
+  set bottomLabelAsSuffix(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -81,6 +88,7 @@ abstract class $MultiDeviceFieldCardWidgetConfigCopyWith<$Res> {
       String iconId,
       String title,
       String topLabel,
+      String bottomLabel,
       String message,
       int messageWidth,
       double iconWidth,
@@ -93,7 +101,9 @@ abstract class $MultiDeviceFieldCardWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> titleFont,
       Map<String, dynamic> messageFont,
       Map<String, dynamic> topFont,
-      Map<String, dynamic> valueFont});
+      Map<String, dynamic> bottomFont,
+      Map<String, dynamic> valueFont,
+      bool bottomLabelAsSuffix});
 }
 
 /// @nodoc
@@ -115,6 +125,7 @@ class _$MultiDeviceFieldCardWidgetConfigCopyWithImpl<$Res,
     Object? iconId = null,
     Object? title = null,
     Object? topLabel = null,
+    Object? bottomLabel = null,
     Object? message = null,
     Object? messageWidth = null,
     Object? iconWidth = null,
@@ -127,7 +138,9 @@ class _$MultiDeviceFieldCardWidgetConfigCopyWithImpl<$Res,
     Object? titleFont = null,
     Object? messageFont = null,
     Object? topFont = null,
+    Object? bottomFont = null,
     Object? valueFont = null,
+    Object? bottomLabelAsSuffix = null,
   }) {
     return _then(_value.copyWith(
       fields: null == fields
@@ -150,6 +163,10 @@ class _$MultiDeviceFieldCardWidgetConfigCopyWithImpl<$Res,
           ? _value.topLabel
           : topLabel // ignore: cast_nullable_to_non_nullable
               as String,
+      bottomLabel: null == bottomLabel
+          ? _value.bottomLabel
+          : bottomLabel // ignore: cast_nullable_to_non_nullable
+              as String,
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -198,10 +215,18 @@ class _$MultiDeviceFieldCardWidgetConfigCopyWithImpl<$Res,
           ? _value.topFont
           : topFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomFont: null == bottomFont
+          ? _value.bottomFont
+          : bottomFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -221,6 +246,7 @@ abstract class _$$MultiDeviceFieldCardWidgetConfigImplCopyWith<$Res>
       String iconId,
       String title,
       String topLabel,
+      String bottomLabel,
       String message,
       int messageWidth,
       double iconWidth,
@@ -233,7 +259,9 @@ abstract class _$$MultiDeviceFieldCardWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> titleFont,
       Map<String, dynamic> messageFont,
       Map<String, dynamic> topFont,
-      Map<String, dynamic> valueFont});
+      Map<String, dynamic> bottomFont,
+      Map<String, dynamic> valueFont,
+      bool bottomLabelAsSuffix});
 }
 
 /// @nodoc
@@ -254,6 +282,7 @@ class __$$MultiDeviceFieldCardWidgetConfigImplCopyWithImpl<$Res>
     Object? iconId = null,
     Object? title = null,
     Object? topLabel = null,
+    Object? bottomLabel = null,
     Object? message = null,
     Object? messageWidth = null,
     Object? iconWidth = null,
@@ -266,7 +295,9 @@ class __$$MultiDeviceFieldCardWidgetConfigImplCopyWithImpl<$Res>
     Object? titleFont = null,
     Object? messageFont = null,
     Object? topFont = null,
+    Object? bottomFont = null,
     Object? valueFont = null,
+    Object? bottomLabelAsSuffix = null,
   }) {
     return _then(_$MultiDeviceFieldCardWidgetConfigImpl(
       fields: null == fields
@@ -289,6 +320,10 @@ class __$$MultiDeviceFieldCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.topLabel
           : topLabel // ignore: cast_nullable_to_non_nullable
               as String,
+      bottomLabel: null == bottomLabel
+          ? _value.bottomLabel
+          : bottomLabel // ignore: cast_nullable_to_non_nullable
+              as String,
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -337,10 +372,18 @@ class __$$MultiDeviceFieldCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.topFont
           : topFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomFont: null == bottomFont
+          ? _value.bottomFont
+          : bottomFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      bottomLabelAsSuffix: null == bottomLabelAsSuffix
+          ? _value.bottomLabelAsSuffix
+          : bottomLabelAsSuffix // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -355,6 +398,7 @@ class _$MultiDeviceFieldCardWidgetConfigImpl
       this.iconId = '',
       this.title = '',
       this.topLabel = '',
+      this.bottomLabel = '',
       this.message = '',
       this.messageWidth = 150,
       this.iconWidth = 48.0,
@@ -382,12 +426,19 @@ class _$MultiDeviceFieldCardWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
+      this.bottomFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 30,
+        'fontColor': 0xFF000000,
+        'fontBold': true
+      },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
-      }})
+      },
+      this.bottomLabelAsSuffix = true})
       : super._();
 
   factory _$MultiDeviceFieldCardWidgetConfigImpl.fromJson(
@@ -409,6 +460,9 @@ class _$MultiDeviceFieldCardWidgetConfigImpl
   @override
   @JsonKey()
   String topLabel;
+  @override
+  @JsonKey()
+  String bottomLabel;
   @override
   @JsonKey()
   String message;
@@ -447,11 +501,17 @@ class _$MultiDeviceFieldCardWidgetConfigImpl
   Map<String, dynamic> topFont;
   @override
   @JsonKey()
+  Map<String, dynamic> bottomFont;
+  @override
+  @JsonKey()
   Map<String, dynamic> valueFont;
+  @override
+  @JsonKey()
+  bool bottomLabelAsSuffix;
 
   @override
   String toString() {
-    return 'MultiDeviceFieldCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, iconId: $iconId, title: $title, topLabel: $topLabel, message: $message, messageWidth: $messageWidth, iconWidth: $iconWidth, iconHeight: $iconHeight, fieldIconWidth: $fieldIconWidth, fieldIconHeight: $fieldIconHeight, fieldSpacing: $fieldSpacing, fieldElevation: $fieldElevation, cardElevation: $cardElevation, titleFont: $titleFont, messageFont: $messageFont, topFont: $topFont, valueFont: $valueFont)';
+    return 'MultiDeviceFieldCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, iconId: $iconId, title: $title, topLabel: $topLabel, bottomLabel: $bottomLabel, message: $message, messageWidth: $messageWidth, iconWidth: $iconWidth, iconHeight: $iconHeight, fieldIconWidth: $fieldIconWidth, fieldIconHeight: $fieldIconHeight, fieldSpacing: $fieldSpacing, fieldElevation: $fieldElevation, cardElevation: $cardElevation, titleFont: $titleFont, messageFont: $messageFont, topFont: $topFont, bottomFont: $bottomFont, valueFont: $valueFont, bottomLabelAsSuffix: $bottomLabelAsSuffix)';
   }
 
   @JsonKey(ignore: true)
@@ -478,6 +538,7 @@ abstract class _MultiDeviceFieldCardWidgetConfig
       String iconId,
       String title,
       String topLabel,
+      String bottomLabel,
       String message,
       int messageWidth,
       double iconWidth,
@@ -490,7 +551,9 @@ abstract class _MultiDeviceFieldCardWidgetConfig
       Map<String, dynamic> titleFont,
       Map<String, dynamic> messageFont,
       Map<String, dynamic> topFont,
-      Map<String, dynamic> valueFont}) = _$MultiDeviceFieldCardWidgetConfigImpl;
+      Map<String, dynamic> bottomFont,
+      Map<String, dynamic> valueFont,
+      bool bottomLabelAsSuffix}) = _$MultiDeviceFieldCardWidgetConfigImpl;
   _MultiDeviceFieldCardWidgetConfig._() : super._();
 
   factory _MultiDeviceFieldCardWidgetConfig.fromJson(
@@ -512,6 +575,9 @@ abstract class _MultiDeviceFieldCardWidgetConfig
   @override
   String get topLabel;
   set topLabel(String value);
+  @override
+  String get bottomLabel;
+  set bottomLabel(String value);
   @override
   String get message;
   set message(String value);
@@ -549,8 +615,14 @@ abstract class _MultiDeviceFieldCardWidgetConfig
   Map<String, dynamic> get topFont;
   set topFont(Map<String, dynamic> value);
   @override
+  Map<String, dynamic> get bottomFont;
+  set bottomFont(Map<String, dynamic> value);
+  @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+  @override
+  bool get bottomLabelAsSuffix;
+  set bottomLabelAsSuffix(bool value);
   @override
   @JsonKey(ignore: true)
   _$$MultiDeviceFieldCardWidgetConfigImplCopyWith<
