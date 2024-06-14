@@ -19,6 +19,7 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontBold': true
               },
           deviceId: json['deviceId'] as String? ?? '',
+          mainText: json['mainText'] as String? ?? '',
           mainField: json['mainField'] as String? ?? '',
           mainTextFont: json['mainTextFont'] as Map<String, dynamic>? ??
               const {
@@ -94,6 +95,7 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
       'title': instance.title,
       'titleFont': instance.titleFont,
       'deviceId': instance.deviceId,
+      'mainText': instance.mainText,
       'mainField': instance.mainField,
       'mainTextFont': instance.mainTextFont,
       'prefixFont': instance.prefixFont,
