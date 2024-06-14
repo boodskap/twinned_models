@@ -19,6 +19,14 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontBold': true
               },
           deviceId: json['deviceId'] as String? ?? '',
+          mainField: json['mainField'] as String? ?? '',
+          mainTextFont: json['mainTextFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 13,
+                'fontColor': 0xFFFFFFFF,
+                'fontBold': true
+              },
           prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -74,6 +82,10 @@ _$GenericAirQualityCircleWidgetConfigImpl
           inactiveCircleBorderColor:
               (json['inactiveCircleBorderColor'] as num?)?.toInt() ??
                   0xFF000000,
+          horizontalSpacing:
+              (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
+          verticalSpacing: (json['verticalSpacing'] as num?)?.toDouble() ?? 20,
+          imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
 Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
@@ -82,6 +94,8 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
       'title': instance.title,
       'titleFont': instance.titleFont,
       'deviceId': instance.deviceId,
+      'mainField': instance.mainField,
+      'mainTextFont': instance.mainTextFont,
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
@@ -94,4 +108,7 @@ Map<String, dynamic> _$$GenericAirQualityCircleWidgetConfigImplToJson(
       'inactiveCircleRadius': instance.inactiveCircleRadius,
       'inactiveCircleBGColor': instance.inactiveCircleBGColor,
       'inactiveCircleBorderColor': instance.inactiveCircleBorderColor,
+      'horizontalSpacing': instance.horizontalSpacing,
+      'verticalSpacing': instance.verticalSpacing,
+      'imageSize': instance.imageSize,
     };
