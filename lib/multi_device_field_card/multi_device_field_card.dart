@@ -61,6 +61,7 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> valueFont,
     @Default(true) bool bottomLabelAsSuffix,
+    @Default([]) List<int> cardBgColors,
   }) = _MultiDeviceFieldCardWidgetConfig;
 
   factory MultiDeviceFieldCardWidgetConfig.fromJson(
@@ -85,6 +86,8 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
         return DataType.font;
       case 'messageWidth':
         return DataType.numeric;
+      case 'cardBgColors':
+        return DataType.listOfNumbers;
       case 'iconWidth':
       case 'iconHeight':
       case 'fieldIconWidth':
@@ -112,6 +115,8 @@ class MultiDeviceFieldCardWidgetConfig extends BaseConfig
         return HintType.deviceId;
       case 'message':
         return HintType.textArea;
+      case 'cardBgColors':
+        return HintType.color;
 
       default:
         return HintType.none;
