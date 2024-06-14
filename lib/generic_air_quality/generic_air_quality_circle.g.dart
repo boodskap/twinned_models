@@ -33,9 +33,9 @@ _$GenericAirQualityCircleWidgetConfigImpl
           mainTextFont: json['mainTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 13,
+                'fontSize': 11,
                 'fontColor': 0xFFFFFFFF,
-                'fontBold': true
+                'fontBold': false
               },
           prefixFont: json['prefixFont'] as Map<String, dynamic>? ??
               const {
@@ -56,7 +56,7 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
                 'fontColor': 0xFF000000,
-                'fontBold': false
+                'fontBold': true
               },
           prefixMainFont: json['prefixMainFont'] as Map<String, dynamic>? ??
               const {
@@ -75,23 +75,24 @@ _$GenericAirQualityCircleWidgetConfigImpl
           valueMainFont: json['valueMainFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 15,
+                'fontSize': 17,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
           activeCircleRadius:
               (json['activeCircleRadius'] as num?)?.toDouble() ?? 50,
           activeCircleBGColor:
-              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFffbf00,
+              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFBBDB44FF,
           activeCircleBorderColor:
-              (json['activeCircleBorderColor'] as num?)?.toInt() ?? 0XFFffbf00,
+              (json['activeCircleBorderColor'] as num?)?.toInt() ??
+                  0XFFBBDB44FF,
           inactiveCircleRadius:
               (json['inactiveCircleRadius'] as num?)?.toDouble() ?? 40,
           inactiveCircleBGColor:
-              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFF6B092,
+              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFC1F40CFF,
           inactiveCircleBorderColor:
               (json['inactiveCircleBorderColor'] as num?)?.toInt() ??
-                  0XFFF6B092,
+                  0XFFC1F40CFF,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           verticalSpacing: (json['verticalSpacing'] as num?)?.toDouble() ?? 20,

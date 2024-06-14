@@ -31,9 +31,9 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     @Default('') String mainField,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 13,
+      'fontSize': 11,
       'fontColor': 0xFFFFFFFF,
-      'fontBold': true
+      'fontBold': false
     })
       Map<String, dynamic> mainTextFont,
     @Default({
@@ -54,7 +54,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
@@ -73,17 +73,17 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     Map<String, dynamic> suffixMainFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 15,
+      'fontSize': 17,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> valueMainFont,
     @Default(50) double activeCircleRadius,
-    @Default(0XFFffbf00) int activeCircleBGColor,
-    @Default(0XFFffbf00) int activeCircleBorderColor,
+    @Default(0XFFBBDB44FF) int activeCircleBGColor,
+    @Default(0XFFBBDB44FF) int activeCircleBorderColor,
     @Default(40) double inactiveCircleRadius,
-    @Default(0XFFF6B092) int inactiveCircleBGColor,
-    @Default(0XFFF6B092) int inactiveCircleBorderColor,
+    @Default(0XFFC1F40CFF) int inactiveCircleBGColor,
+    @Default(0XFFC1F40CFF) int inactiveCircleBorderColor,
 
      @Default(5) double horizontalSpacing,
       @Default(20) double verticalSpacing,
