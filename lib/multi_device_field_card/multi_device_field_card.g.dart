@@ -68,6 +68,10 @@ _$MultiDeviceFieldCardWidgetConfigImpl
                 'fontBold': true
               },
           bottomLabelAsSuffix: json['bottomLabelAsSuffix'] as bool? ?? true,
+          cardBgColors: (json['cardBgColors'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
+                  .toList() ??
+              const [],
         );
 
 Map<String, dynamic> _$$MultiDeviceFieldCardWidgetConfigImplToJson(
@@ -94,4 +98,5 @@ Map<String, dynamic> _$$MultiDeviceFieldCardWidgetConfigImplToJson(
       'bottomFont': instance.bottomFont,
       'valueFont': instance.valueFont,
       'bottomLabelAsSuffix': instance.bottomLabelAsSuffix,
+      'cardBgColors': instance.cardBgColors,
     };
