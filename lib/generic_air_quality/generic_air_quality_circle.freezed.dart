@@ -488,11 +488,11 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontBold': true
       },
       this.activeCircleRadius = 50,
-      this.activeCircleBGColor = 0XFFBBDB44FF,
-      this.activeCircleBorderColor = 0XFFBBDB44FF,
+      this.activeCircleBGColor = 0XFFbbdb44,
+      this.activeCircleBorderColor = 0XFFbbdb44,
       this.inactiveCircleRadius = 40,
-      this.inactiveCircleBGColor = 0XFFC1F40CFF,
-      this.inactiveCircleBorderColor = 0XFFC1F40CFF,
+      this.inactiveCircleBGColor = 0XFFbcf766,
+      this.inactiveCircleBorderColor = 0XFFbcf766,
       this.horizontalSpacing = 5,
       this.verticalSpacing = 20,
       this.imageSize = 25})
