@@ -28,6 +28,8 @@ mixin _$GenericAirQualityCircleWidgetConfig {
       throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  String get mainText => throw _privateConstructorUsedError;
+  set mainText(String value) => throw _privateConstructorUsedError;
   String get mainField => throw _privateConstructorUsedError;
   set mainField(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get mainTextFont => throw _privateConstructorUsedError;
@@ -90,6 +92,7 @@ abstract class $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
       {String title,
       Map<String, dynamic> titleFont,
       String deviceId,
+      String mainText,
       String mainField,
       Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
@@ -126,6 +129,7 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? titleFont = null,
     Object? deviceId = null,
+    Object? mainText = null,
     Object? mainField = null,
     Object? mainTextFont = null,
     Object? prefixFont = null,
@@ -156,6 +160,10 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      mainText: null == mainText
+          ? _value.mainText
+          : mainText // ignore: cast_nullable_to_non_nullable
               as String,
       mainField: null == mainField
           ? _value.mainField
@@ -242,6 +250,7 @@ abstract class _$$GenericAirQualityCircleWidgetConfigImplCopyWith<$Res>
       {String title,
       Map<String, dynamic> titleFont,
       String deviceId,
+      String mainText,
       String mainField,
       Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
@@ -277,6 +286,7 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? titleFont = null,
     Object? deviceId = null,
+    Object? mainText = null,
     Object? mainField = null,
     Object? mainTextFont = null,
     Object? prefixFont = null,
@@ -307,6 +317,10 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      mainText: null == mainText
+          ? _value.mainText
+          : mainText // ignore: cast_nullable_to_non_nullable
               as String,
       mainField: null == mainField
           ? _value.mainField
@@ -393,6 +407,7 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontBold': true
       },
       this.deviceId = '',
+      this.mainText = '',
       this.mainField = '',
       this.mainTextFont = const {
         'fontFamily': 'Open Sans',
@@ -462,6 +477,9 @@ class _$GenericAirQualityCircleWidgetConfigImpl
   String deviceId;
   @override
   @JsonKey()
+  String mainText;
+  @override
+  @JsonKey()
   String mainField;
   @override
   @JsonKey()
@@ -514,7 +532,7 @@ class _$GenericAirQualityCircleWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
+    return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, mainText: $mainText, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -539,6 +557,7 @@ abstract class _GenericAirQualityCircleWidgetConfig
       {String title,
       Map<String, dynamic> titleFont,
       String deviceId,
+      String mainText,
       String mainField,
       Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
@@ -571,6 +590,9 @@ abstract class _GenericAirQualityCircleWidgetConfig
   @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  String get mainText;
+  set mainText(String value);
   @override
   String get mainField;
   set mainField(String value);

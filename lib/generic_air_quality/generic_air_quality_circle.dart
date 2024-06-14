@@ -19,6 +19,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> titleFont,
     @Default('') String deviceId,
+    @Default('') String mainText,
     @Default('') String mainField,
     @Default({
       'fontFamily': 'Open Sans',
@@ -92,6 +93,7 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       case 'title':
       case 'deviceId':
        case 'mainField':
+       case 'mainText':
         return DataType.text;
       case 'activeCircleBGColor':
       case 'activeCircleBorderColor':
@@ -183,6 +185,8 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
         return 'Vertical Spacing';
       case 'imageSize':
         return 'Image Size';
+        case 'mainText':
+        return 'Main Text';
       default:
         return parameter;
     }
