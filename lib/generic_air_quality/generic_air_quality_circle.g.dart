@@ -82,17 +82,16 @@ _$GenericAirQualityCircleWidgetConfigImpl
           activeCircleRadius:
               (json['activeCircleRadius'] as num?)?.toDouble() ?? 50,
           activeCircleBGColor:
-              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFBBDB44FF,
+              (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           activeCircleBorderColor:
-              (json['activeCircleBorderColor'] as num?)?.toInt() ??
-                  0XFFBBDB44FF,
+              (json['activeCircleBorderColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           inactiveCircleRadius:
               (json['inactiveCircleRadius'] as num?)?.toDouble() ?? 40,
           inactiveCircleBGColor:
-              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFC1F40CFF,
+              (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFbcf766,
           inactiveCircleBorderColor:
               (json['inactiveCircleBorderColor'] as num?)?.toInt() ??
-                  0XFFC1F40CFF,
+                  0XFFbcf766,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           verticalSpacing: (json['verticalSpacing'] as num?)?.toDouble() ?? 20,
