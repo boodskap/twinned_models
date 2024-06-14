@@ -15,16 +15,11 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           title: json['title'] as String? ?? '',
           cityName: json['cityName'] as String? ?? '',
           imageId: json['imageId'] as String? ?? '',
-          subText: json['subText'] as String? ?? '',
-          contentText: json['contentText'] as String? ?? '',
-          fillColor: (json['fillColor'] as num?)?.toInt() ?? 0XFF640062,
-          valueFont: json['valueFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 32,
-                'fontColor': 0x99FFFFFF,
-                'fontBold': true
-              },
+          paraTitle: json['paraTitle'] as String? ?? '',
+          paraText: json['paraText'] as String? ?? '',
+          startFillColor:
+              (json['startFillColor'] as num?)?.toInt() ?? 0XFF640062,
+          endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF640062,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -32,14 +27,42 @@ _$MultiDeviceFieldPageWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          subTextFont: json['subTextFont'] as Map<String, dynamic>? ??
+          timeStampFont: json['timeStampFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 16,
+                'fontColor': 0XFFFFFAFA,
+                'fontBold': false
+              },
+          valueFont: json['valueFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 32,
+                'fontColor': 0x99FFFFFF,
+                'fontBold': true
+              },
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 14,
+                'fontColor': 0x99FFFFFF,
+                'fontBold': true
+              },
+          suffixFont: json['suffixFont'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 14,
+                'fontColor': 0x99FFFFFF,
+                'fontBold': false
+              },
+          paraTitleFont: json['paraTitleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': true
               },
-          contentTextFont: json['contentTextFont'] as Map<String, dynamic>? ??
+          paraTextFont: json['paraTextFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
@@ -56,11 +79,15 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'title': instance.title,
       'cityName': instance.cityName,
       'imageId': instance.imageId,
-      'subText': instance.subText,
-      'contentText': instance.contentText,
-      'fillColor': instance.fillColor,
-      'valueFont': instance.valueFont,
+      'paraTitle': instance.paraTitle,
+      'paraText': instance.paraText,
+      'startFillColor': instance.startFillColor,
+      'endFillColor': instance.endFillColor,
       'titleFont': instance.titleFont,
-      'subTextFont': instance.subTextFont,
-      'contentTextFont': instance.contentTextFont,
+      'timeStampFont': instance.timeStampFont,
+      'valueFont': instance.valueFont,
+      'labelFont': instance.labelFont,
+      'suffixFont': instance.suffixFont,
+      'paraTitleFont': instance.paraTitleFont,
+      'paraTextFont': instance.paraTextFont,
     };
