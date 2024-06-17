@@ -487,10 +487,10 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.activeCircleRadius = 50,
+      this.activeCircleRadius = 60,
       this.activeCircleBGColor = 0XFFbbdb44,
       this.activeCircleBorderColor = 0XFFbbdb44,
-      this.inactiveCircleRadius = 40,
+      this.inactiveCircleRadius = 50,
       this.inactiveCircleBGColor = 0XFFbcf766,
       this.inactiveCircleBorderColor = 0XFFbcf766,
       this.horizontalSpacing = 5,

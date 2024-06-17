@@ -80,13 +80,13 @@ _$GenericAirQualityCircleWidgetConfigImpl
                 'fontBold': true
               },
           activeCircleRadius:
-              (json['activeCircleRadius'] as num?)?.toDouble() ?? 50,
+              (json['activeCircleRadius'] as num?)?.toDouble() ?? 60,
           activeCircleBGColor:
               (json['activeCircleBGColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           activeCircleBorderColor:
               (json['activeCircleBorderColor'] as num?)?.toInt() ?? 0XFFbbdb44,
           inactiveCircleRadius:
-              (json['inactiveCircleRadius'] as num?)?.toDouble() ?? 40,
+              (json['inactiveCircleRadius'] as num?)?.toDouble() ?? 50,
           inactiveCircleBGColor:
               (json['inactiveCircleBGColor'] as num?)?.toInt() ?? 0XFFbcf766,
           inactiveCircleBorderColor:
