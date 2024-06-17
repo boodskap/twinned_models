@@ -78,10 +78,10 @@ class GenericAirQualityCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueMainFont,
-    @Default(50) double activeCircleRadius,
+    @Default(60) double activeCircleRadius,
     @Default(0XFFbbdb44) int activeCircleBGColor,
     @Default(0XFFbbdb44) int activeCircleBorderColor,
-    @Default(40) double inactiveCircleRadius,
+    @Default(50) double inactiveCircleRadius,
     @Default(0XFFbcf766) int inactiveCircleBGColor,
     @Default(0XFFbcf766) int inactiveCircleBorderColor,
 
