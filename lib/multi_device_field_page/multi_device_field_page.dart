@@ -10,13 +10,15 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
   MultiDeviceFieldPageWidgetConfig._();
 
   factory MultiDeviceFieldPageWidgetConfig({
-    @Default('') String field,
     @Default('') String deviceId,
+    @Default('') String field,
     @Default('') String title,
     @Default('') String cityName,
     @Default('') String paraTitle,
     @Default('') String paraText,
-    @Default([]) List<int> cardBgColor,
+    @Default(0XFF576680) int startFillColor,
+    @Default(0XFF788BAD) int endFillColor,
+    @Default([]) List<String> excludeFields,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -82,8 +84,11 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'paraTitle':
       case 'paraText':
         return DataType.text;
-      case 'cardBgColor':
-        return DataType.listOfNumbers;
+      case 'startFillColor':
+      case 'endFillColor':
+        return DataType.numeric;
+      case 'excludeFields':
+        return DataType.listOfTexts;
       case 'titleFont':
       case 'timeStampFont':
       case 'valueFont':
@@ -101,10 +106,12 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'field':
+      case 'excludeFields':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'cardBgColor':
+      case 'startFillColor':
+      case 'endFillColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -145,8 +152,10 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Paragraph Title';
       case 'paraText':
         return 'Paragraph Content';
-      case 'cardBgColor':
-        return 'Card BgColor';
+      case 'startFillColor':
+        return 'Start BgColor';
+      case 'endFillColor':
+        return 'End BgColor';
       default:
         return parameter;
     }
