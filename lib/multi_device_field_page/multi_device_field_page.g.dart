@@ -10,14 +10,17 @@ _$MultiDeviceFieldPageWidgetConfigImpl
     _$$MultiDeviceFieldPageWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$MultiDeviceFieldPageWidgetConfigImpl(
-          field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
+          field: json['field'] as String? ?? '',
           title: json['title'] as String? ?? '',
           cityName: json['cityName'] as String? ?? '',
           paraTitle: json['paraTitle'] as String? ?? '',
           paraText: json['paraText'] as String? ?? '',
-          cardBgColor: (json['cardBgColor'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toInt())
+          startFillColor:
+              (json['startFillColor'] as num?)?.toInt() ?? 0XFF576680,
+          endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF788BAD,
+          excludeFields: (json['excludeFields'] as List<dynamic>?)
+                  ?.map((e) => e as String)
                   .toList() ??
               const [],
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
@@ -74,13 +77,15 @@ _$MultiDeviceFieldPageWidgetConfigImpl
 Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
         _$MultiDeviceFieldPageWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'field': instance.field,
       'deviceId': instance.deviceId,
+      'field': instance.field,
       'title': instance.title,
       'cityName': instance.cityName,
       'paraTitle': instance.paraTitle,
       'paraText': instance.paraText,
-      'cardBgColor': instance.cardBgColor,
+      'startFillColor': instance.startFillColor,
+      'endFillColor': instance.endFillColor,
+      'excludeFields': instance.excludeFields,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
       'valueFont': instance.valueFont,
