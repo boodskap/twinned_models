@@ -19,6 +19,8 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           startFillColor:
               (json['startFillColor'] as num?)?.toInt() ?? 0XFF576680,
           endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF788BAD,
+          curveBgColor: (json['curveBgColor'] as num?)?.toInt() ?? 0XFFADBBDA,
+          cardBgColor: (json['cardBgColor'] as num?)?.toInt() ?? 0XFFFEFBF6,
           excludeFields: (json['excludeFields'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
@@ -72,6 +74,13 @@ _$MultiDeviceFieldPageWidgetConfigImpl
                 'fontColor': 0xB3FFFFFF,
                 'fontBold': false
               },
+          cardFontText: json['cardFontText'] as Map<String, dynamic>? ??
+              const {
+                'fontFamily': 'Open Sans',
+                'fontSize': 12,
+                'fontColor': 0x8A000000,
+                'fontBold': false
+              },
         );
 
 Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
@@ -85,6 +94,8 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'paraText': instance.paraText,
       'startFillColor': instance.startFillColor,
       'endFillColor': instance.endFillColor,
+      'curveBgColor': instance.curveBgColor,
+      'cardBgColor': instance.cardBgColor,
       'excludeFields': instance.excludeFields,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
@@ -93,4 +104,5 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'suffixFont': instance.suffixFont,
       'paraTitleFont': instance.paraTitleFont,
       'paraTextFont': instance.paraTextFont,
+      'cardFontText': instance.cardFontText,
     };
