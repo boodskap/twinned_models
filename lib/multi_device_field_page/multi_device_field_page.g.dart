@@ -14,12 +14,12 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           deviceId: json['deviceId'] as String? ?? '',
           title: json['title'] as String? ?? '',
           cityName: json['cityName'] as String? ?? '',
-          imageId: json['imageId'] as String? ?? '',
           paraTitle: json['paraTitle'] as String? ?? '',
           paraText: json['paraText'] as String? ?? '',
-          startFillColor:
-              (json['startFillColor'] as num?)?.toInt() ?? 0XFF640062,
-          endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF640062,
+          cardBgColor: (json['cardBgColor'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
+                  .toList() ??
+              const [],
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -37,7 +37,7 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 32,
+                'fontSize': 36,
                 'fontColor': 0x99FFFFFF,
                 'fontBold': true
               },
@@ -78,11 +78,9 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'title': instance.title,
       'cityName': instance.cityName,
-      'imageId': instance.imageId,
       'paraTitle': instance.paraTitle,
       'paraText': instance.paraText,
-      'startFillColor': instance.startFillColor,
-      'endFillColor': instance.endFillColor,
+      'cardBgColor': instance.cardBgColor,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
       'valueFont': instance.valueFont,

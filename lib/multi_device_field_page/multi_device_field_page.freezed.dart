@@ -29,16 +29,12 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   set title(String value) => throw _privateConstructorUsedError;
   String get cityName => throw _privateConstructorUsedError;
   set cityName(String value) => throw _privateConstructorUsedError;
-  String get imageId => throw _privateConstructorUsedError;
-  set imageId(String value) => throw _privateConstructorUsedError;
   String get paraTitle => throw _privateConstructorUsedError;
   set paraTitle(String value) => throw _privateConstructorUsedError;
   String get paraText => throw _privateConstructorUsedError;
   set paraText(String value) => throw _privateConstructorUsedError;
-  int get startFillColor => throw _privateConstructorUsedError;
-  set startFillColor(int value) => throw _privateConstructorUsedError;
-  int get endFillColor => throw _privateConstructorUsedError;
-  set endFillColor(int value) => throw _privateConstructorUsedError;
+  List<int> get cardBgColor => throw _privateConstructorUsedError;
+  set cardBgColor(List<int> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -80,11 +76,9 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       String deviceId,
       String title,
       String cityName,
-      String imageId,
       String paraTitle,
       String paraText,
-      int startFillColor,
-      int endFillColor,
+      List<int> cardBgColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> timeStampFont,
       Map<String, dynamic> valueFont,
@@ -112,11 +106,9 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? title = null,
     Object? cityName = null,
-    Object? imageId = null,
     Object? paraTitle = null,
     Object? paraText = null,
-    Object? startFillColor = null,
-    Object? endFillColor = null,
+    Object? cardBgColor = null,
     Object? titleFont = null,
     Object? timeStampFont = null,
     Object? valueFont = null,
@@ -142,10 +134,6 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.cityName
           : cityName // ignore: cast_nullable_to_non_nullable
               as String,
-      imageId: null == imageId
-          ? _value.imageId
-          : imageId // ignore: cast_nullable_to_non_nullable
-              as String,
       paraTitle: null == paraTitle
           ? _value.paraTitle
           : paraTitle // ignore: cast_nullable_to_non_nullable
@@ -154,14 +142,10 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.paraText
           : paraText // ignore: cast_nullable_to_non_nullable
               as String,
-      startFillColor: null == startFillColor
-          ? _value.startFillColor
-          : startFillColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      endFillColor: null == endFillColor
-          ? _value.endFillColor
-          : endFillColor // ignore: cast_nullable_to_non_nullable
-              as int,
+      cardBgColor: null == cardBgColor
+          ? _value.cardBgColor
+          : cardBgColor // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -208,11 +192,9 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String title,
       String cityName,
-      String imageId,
       String paraTitle,
       String paraText,
-      int startFillColor,
-      int endFillColor,
+      List<int> cardBgColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> timeStampFont,
       Map<String, dynamic> valueFont,
@@ -239,11 +221,9 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? title = null,
     Object? cityName = null,
-    Object? imageId = null,
     Object? paraTitle = null,
     Object? paraText = null,
-    Object? startFillColor = null,
-    Object? endFillColor = null,
+    Object? cardBgColor = null,
     Object? titleFont = null,
     Object? timeStampFont = null,
     Object? valueFont = null,
@@ -269,10 +249,6 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.cityName
           : cityName // ignore: cast_nullable_to_non_nullable
               as String,
-      imageId: null == imageId
-          ? _value.imageId
-          : imageId // ignore: cast_nullable_to_non_nullable
-              as String,
       paraTitle: null == paraTitle
           ? _value.paraTitle
           : paraTitle // ignore: cast_nullable_to_non_nullable
@@ -281,14 +257,10 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.paraText
           : paraText // ignore: cast_nullable_to_non_nullable
               as String,
-      startFillColor: null == startFillColor
-          ? _value.startFillColor
-          : startFillColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      endFillColor: null == endFillColor
-          ? _value.endFillColor
-          : endFillColor // ignore: cast_nullable_to_non_nullable
-              as int,
+      cardBgColor: null == cardBgColor
+          ? _value.cardBgColor
+          : cardBgColor // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -330,11 +302,9 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.deviceId = '',
       this.title = '',
       this.cityName = '',
-      this.imageId = '',
       this.paraTitle = '',
       this.paraText = '',
-      this.startFillColor = 0XFF640062,
-      this.endFillColor = 0XFF640062,
+      this.cardBgColor = const [],
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -349,7 +319,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 32,
+        'fontSize': 36,
         'fontColor': 0x99FFFFFF,
         'fontBold': true
       },
@@ -397,19 +367,13 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   String cityName;
   @override
   @JsonKey()
-  String imageId;
-  @override
-  @JsonKey()
   String paraTitle;
   @override
   @JsonKey()
   String paraText;
   @override
   @JsonKey()
-  int startFillColor;
-  @override
-  @JsonKey()
-  int endFillColor;
+  List<int> cardBgColor;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
@@ -434,7 +398,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, imageId: $imageId, paraTitle: $paraTitle, paraText: $paraText, startFillColor: $startFillColor, endFillColor: $endFillColor, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont)';
+    return 'MultiDeviceFieldPageWidgetConfig(field: $field, deviceId: $deviceId, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, cardBgColor: $cardBgColor, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont)';
   }
 
   @JsonKey(ignore: true)
@@ -460,11 +424,9 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           String deviceId,
           String title,
           String cityName,
-          String imageId,
           String paraTitle,
           String paraText,
-          int startFillColor,
-          int endFillColor,
+          List<int> cardBgColor,
           Map<String, dynamic> titleFont,
           Map<String, dynamic> timeStampFont,
           Map<String, dynamic> valueFont,
@@ -492,20 +454,14 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   String get cityName;
   set cityName(String value);
   @override
-  String get imageId;
-  set imageId(String value);
-  @override
   String get paraTitle;
   set paraTitle(String value);
   @override
   String get paraText;
   set paraText(String value);
   @override
-  int get startFillColor;
-  set startFillColor(int value);
-  @override
-  int get endFillColor;
-  set endFillColor(int value);
+  List<int> get cardBgColor;
+  set cardBgColor(List<int> value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);

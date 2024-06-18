@@ -14,11 +14,9 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default('') String title,
     @Default('') String cityName,
-    @Default('') String imageId,
     @Default('') String paraTitle,
     @Default('') String paraText,
-    @Default(0XFF640062) int startFillColor,
-    @Default(0XFF640062) int endFillColor,
+    @Default([]) List<int> cardBgColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -35,7 +33,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     Map<String, dynamic> timeStampFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 32,
+      'fontSize': 36,
       'fontColor': 0x99FFFFFF,
       'fontBold': true
     })
@@ -84,9 +82,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'paraTitle':
       case 'paraText':
         return DataType.text;
-      case 'startFillColor':
-      case 'endFillColor':
-        return DataType.numeric;
+      case 'cardBgColor':
+        return DataType.listOfNumbers;
       case 'titleFont':
       case 'timeStampFont':
       case 'valueFont':
@@ -95,8 +92,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'paraTitleFont':
       case 'paraTextFont':
         return DataType.font;
-      case 'imageId':
-        return DataType.image;
       default:
         return DataType.none;
     }
@@ -109,8 +104,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'startFillColor':
-      case 'endFillColor':
+      case 'cardBgColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -151,12 +145,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Paragraph Title';
       case 'paraText':
         return 'Paragraph Content';
-      case 'startFillColor':
-        return 'Start Fill Color';
-      case 'endFillColor':
-        return 'End Fill Color';
-      case 'imageId':
-        return 'Image Upload';
+      case 'cardBgColor':
+        return 'Card BgColor';
       default:
         return parameter;
     }
@@ -172,7 +162,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
       case 'deviceId':
-      case 'imageId':
       case 'title':
         return true;
       default:
