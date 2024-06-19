@@ -22,6 +22,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default(0XFFFEFBF6) int cardBgColor,
     @Default(8.0) double elevation,
     @Default([]) List<String> excludeFields,
+    @Default([]) List<int> cardBgColors,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -103,6 +104,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'excludeFields':
         return DataType.listOfTexts;
+      case 'cardBgColors':
+        return DataType.listOfNumbers;
       case 'titleFont':
       case 'timeStampFont':
       case 'valueFont':
@@ -129,6 +132,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'endFillColor':
       case 'curveBgColor':
       case 'cardBgColor':
+      case 'cardBgColors':
         return HintType.color;
       default:
         return HintType.none;
@@ -183,6 +187,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Card BgColor';
       case 'excludeFields':
         return 'Exclude Fields';
+      case 'cardBgColors':
+        return 'Gradiend BgColors';
       default:
         return parameter;
     }
