@@ -178,7 +178,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'excludeFields':
         return 'Exclude Fields';
       case 'gradientBgColor':
-        return 'Gradiend BgColor';
+        return 'Gradient BgColor';
       default:
         return parameter;
     }
