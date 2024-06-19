@@ -57,8 +57,8 @@ _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
               (json['labelBorderRadius'] as num?)?.toDouble() ?? 5.0,
           labelOpacity: (json['labelOpacity'] as num?)?.toDouble() ?? 1.0,
           labelPosition: $enumDecodeNullable(
-                  _$LabelPositionEnumMap, json['labelPosition']) ??
-              LabelPosition.outside,
+                  _$ChartDataLabelPositionEnumMap, json['labelPosition']) ??
+              ChartDataLabelPosition.outside,
           enableTooltip: json['enableTooltip'] as bool? ?? true,
           explode: json['explode'] as bool? ?? true,
           opacity: (json['opacity'] as num?)?.toDouble() ?? 1.0,
@@ -87,7 +87,7 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
       'labelBorderWidth': instance.labelBorderWidth,
       'labelBorderRadius': instance.labelBorderRadius,
       'labelOpacity': instance.labelOpacity,
-      'labelPosition': _$LabelPositionEnumMap[instance.labelPosition]!,
+      'labelPosition': _$ChartDataLabelPositionEnumMap[instance.labelPosition]!,
       'enableTooltip': instance.enableTooltip,
       'explode': instance.explode,
       'opacity': instance.opacity,
@@ -100,7 +100,7 @@ const _$IconTypeEnumMap = {
   IconType.circle: 'circle',
 };
 
-const _$LabelPositionEnumMap = {
-  LabelPosition.inside: 'inside',
-  LabelPosition.outside: 'outside',
+const _$ChartDataLabelPositionEnumMap = {
+  ChartDataLabelPosition.inside: 'inside',
+  ChartDataLabelPosition.outside: 'outside',
 };
