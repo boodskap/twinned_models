@@ -16,13 +16,11 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String cityName,
     @Default('') String paraTitle,
     @Default('') String paraText,
-    @Default(0XFF576680) int startFillColor,
-    @Default(0XFF788BAD) int endFillColor,
+    @Default([]) List<int> cardBgColors,
     @Default(0XFFADBBDA) int curveBgColor,
     @Default(0XFFFEFBF6) int cardBgColor,
     @Default(8.0) double elevation,
     @Default([]) List<String> excludeFields,
-    @Default([]) List<int> cardBgColors,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -95,8 +93,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'paraTitle':
       case 'paraText':
         return DataType.text;
-      case 'startFillColor':
-      case 'endFillColor':
       case 'curveBgColor':
       case 'cardBgColor':
         return DataType.numeric;
@@ -128,8 +124,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'startFillColor':
-      case 'endFillColor':
       case 'curveBgColor':
       case 'cardBgColor':
       case 'cardBgColors':
@@ -177,10 +171,6 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Paragraph Title';
       case 'paraText':
         return 'Paragraph Content';
-      case 'startFillColor':
-        return 'Start BgColor';
-      case 'endFillColor':
-        return 'End BgColor';
       case 'curveBgColor':
         return 'Curve BgColor';
       case 'cardBgColor':
@@ -205,6 +195,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'field':
       case 'deviceId':
       case 'title':
+      case 'cardBgColors':
         return true;
       default:
         return false;
