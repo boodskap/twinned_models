@@ -76,7 +76,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceIds':
         return DataType.listOfTexts;
-      case 'fields':
+      case 'field':
       case 'title':
       case 'value':
       case 'label':
@@ -117,7 +117,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceIds':
         return HintType.deviceId;
-      case 'fields':
+      case 'field':
         return HintType.field;
       case 'chartColors':
       case 'labelBgColor':
