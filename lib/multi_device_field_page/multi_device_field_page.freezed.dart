@@ -37,6 +37,12 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   set startFillColor(int value) => throw _privateConstructorUsedError;
   int get endFillColor => throw _privateConstructorUsedError;
   set endFillColor(int value) => throw _privateConstructorUsedError;
+  int get curveBgColor => throw _privateConstructorUsedError;
+  set curveBgColor(int value) => throw _privateConstructorUsedError;
+  int get cardBgColor => throw _privateConstructorUsedError;
+  set cardBgColor(int value) => throw _privateConstructorUsedError;
+  double get elevation => throw _privateConstructorUsedError;
+  set elevation(double value) => throw _privateConstructorUsedError;
   List<String> get excludeFields => throw _privateConstructorUsedError;
   set excludeFields(List<String> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -59,6 +65,9 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
       throw _privateConstructorUsedError;
   Map<String, dynamic> get paraTextFont => throw _privateConstructorUsedError;
   set paraTextFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> get cardFontText => throw _privateConstructorUsedError;
+  set cardFontText(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -84,6 +93,9 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       String paraText,
       int startFillColor,
       int endFillColor,
+      int curveBgColor,
+      int cardBgColor,
+      double elevation,
       List<String> excludeFields,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> timeStampFont,
@@ -91,7 +103,8 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> labelFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> paraTitleFont,
-      Map<String, dynamic> paraTextFont});
+      Map<String, dynamic> paraTextFont,
+      Map<String, dynamic> cardFontText});
 }
 
 /// @nodoc
@@ -116,6 +129,9 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? paraText = null,
     Object? startFillColor = null,
     Object? endFillColor = null,
+    Object? curveBgColor = null,
+    Object? cardBgColor = null,
+    Object? elevation = null,
     Object? excludeFields = null,
     Object? titleFont = null,
     Object? timeStampFont = null,
@@ -124,6 +140,7 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? suffixFont = null,
     Object? paraTitleFont = null,
     Object? paraTextFont = null,
+    Object? cardFontText = null,
   }) {
     return _then(_value.copyWith(
       deviceId: null == deviceId
@@ -158,6 +175,18 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.endFillColor
           : endFillColor // ignore: cast_nullable_to_non_nullable
               as int,
+      curveBgColor: null == curveBgColor
+          ? _value.curveBgColor
+          : curveBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      cardBgColor: null == cardBgColor
+          ? _value.cardBgColor
+          : cardBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      elevation: null == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double,
       excludeFields: null == excludeFields
           ? _value.excludeFields
           : excludeFields // ignore: cast_nullable_to_non_nullable
@@ -190,6 +219,10 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.paraTextFont
           : paraTextFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      cardFontText: null == cardFontText
+          ? _value.cardFontText
+          : cardFontText // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ) as $Val);
   }
 }
@@ -212,6 +245,9 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       String paraText,
       int startFillColor,
       int endFillColor,
+      int curveBgColor,
+      int cardBgColor,
+      double elevation,
       List<String> excludeFields,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> timeStampFont,
@@ -219,7 +255,8 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> labelFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> paraTitleFont,
-      Map<String, dynamic> paraTextFont});
+      Map<String, dynamic> paraTextFont,
+      Map<String, dynamic> cardFontText});
 }
 
 /// @nodoc
@@ -243,6 +280,9 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? paraText = null,
     Object? startFillColor = null,
     Object? endFillColor = null,
+    Object? curveBgColor = null,
+    Object? cardBgColor = null,
+    Object? elevation = null,
     Object? excludeFields = null,
     Object? titleFont = null,
     Object? timeStampFont = null,
@@ -251,6 +291,7 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? suffixFont = null,
     Object? paraTitleFont = null,
     Object? paraTextFont = null,
+    Object? cardFontText = null,
   }) {
     return _then(_$MultiDeviceFieldPageWidgetConfigImpl(
       deviceId: null == deviceId
@@ -285,6 +326,18 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.endFillColor
           : endFillColor // ignore: cast_nullable_to_non_nullable
               as int,
+      curveBgColor: null == curveBgColor
+          ? _value.curveBgColor
+          : curveBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      cardBgColor: null == cardBgColor
+          ? _value.cardBgColor
+          : cardBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      elevation: null == elevation
+          ? _value.elevation
+          : elevation // ignore: cast_nullable_to_non_nullable
+              as double,
       excludeFields: null == excludeFields
           ? _value.excludeFields
           : excludeFields // ignore: cast_nullable_to_non_nullable
@@ -317,6 +370,10 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.paraTextFont
           : paraTextFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      cardFontText: null == cardFontText
+          ? _value.cardFontText
+          : cardFontText // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
     ));
   }
 }
@@ -334,6 +391,9 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.paraText = '',
       this.startFillColor = 0XFF576680,
       this.endFillColor = 0XFF788BAD,
+      this.curveBgColor = 0XFFADBBDA,
+      this.cardBgColor = 0XFFFEFBF6,
+      this.elevation = 8.0,
       this.excludeFields = const [],
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -376,6 +436,12 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
         'fontSize': 14,
         'fontColor': 0xB3FFFFFF,
         'fontBold': false
+      },
+      this.cardFontText = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 12,
+        'fontColor': 0x8A000000,
+        'fontBold': false
       }})
       : super._();
 
@@ -409,6 +475,15 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   int endFillColor;
   @override
   @JsonKey()
+  int curveBgColor;
+  @override
+  @JsonKey()
+  int cardBgColor;
+  @override
+  @JsonKey()
+  double elevation;
+  @override
+  @JsonKey()
   List<String> excludeFields;
   @override
   @JsonKey()
@@ -431,10 +506,13 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   @override
   @JsonKey()
   Map<String, dynamic> paraTextFont;
+  @override
+  @JsonKey()
+  Map<String, dynamic> cardFontText;
 
   @override
   String toString() {
-    return 'MultiDeviceFieldPageWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, startFillColor: $startFillColor, endFillColor: $endFillColor, excludeFields: $excludeFields, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont)';
+    return 'MultiDeviceFieldPageWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, startFillColor: $startFillColor, endFillColor: $endFillColor, curveBgColor: $curveBgColor, cardBgColor: $cardBgColor, elevation: $elevation, excludeFields: $excludeFields, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont, cardFontText: $cardFontText)';
   }
 
   @JsonKey(ignore: true)
@@ -464,6 +542,9 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           String paraText,
           int startFillColor,
           int endFillColor,
+          int curveBgColor,
+          int cardBgColor,
+          double elevation,
           List<String> excludeFields,
           Map<String, dynamic> titleFont,
           Map<String, dynamic> timeStampFont,
@@ -471,7 +552,8 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           Map<String, dynamic> labelFont,
           Map<String, dynamic> suffixFont,
           Map<String, dynamic> paraTitleFont,
-          Map<String, dynamic> paraTextFont}) =
+          Map<String, dynamic> paraTextFont,
+          Map<String, dynamic> cardFontText}) =
       _$MultiDeviceFieldPageWidgetConfigImpl;
   _MultiDeviceFieldPageWidgetConfig._() : super._();
 
@@ -504,6 +586,15 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   int get endFillColor;
   set endFillColor(int value);
   @override
+  int get curveBgColor;
+  set curveBgColor(int value);
+  @override
+  int get cardBgColor;
+  set cardBgColor(int value);
+  @override
+  double get elevation;
+  set elevation(double value);
+  @override
   List<String> get excludeFields;
   set excludeFields(List<String> value);
   @override
@@ -527,6 +618,9 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   @override
   Map<String, dynamic> get paraTextFont;
   set paraTextFont(Map<String, dynamic> value);
+  @override
+  Map<String, dynamic> get cardFontText;
+  set cardFontText(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<

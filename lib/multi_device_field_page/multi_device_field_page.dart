@@ -18,6 +18,9 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String paraText,
     @Default(0XFF576680) int startFillColor,
     @Default(0XFF788BAD) int endFillColor,
+    @Default(0XFFADBBDA) int curveBgColor,
+    @Default(0XFFFEFBF6) int cardBgColor,
+    @Default(8.0) double elevation,
     @Default([]) List<String> excludeFields,
     @Default({
       'fontFamily': 'Open Sans',
@@ -68,6 +71,13 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> paraTextFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0x8A000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> cardFontText,
   }) = _MultiDeviceFieldPageWidgetConfig;
 
   factory MultiDeviceFieldPageWidgetConfig.fromJson(
@@ -86,7 +96,11 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return DataType.text;
       case 'startFillColor':
       case 'endFillColor':
+      case 'curveBgColor':
+      case 'cardBgColor':
         return DataType.numeric;
+      case 'elevation':
+        return DataType.decimal;
       case 'excludeFields':
         return DataType.listOfTexts;
       case 'titleFont':
@@ -96,6 +110,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'suffixFont':
       case 'paraTitleFont':
       case 'paraTextFont':
+      case 'cardFontText':
         return DataType.font;
       default:
         return DataType.none;
@@ -112,6 +127,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return HintType.deviceId;
       case 'startFillColor':
       case 'endFillColor':
+      case 'curveBgColor':
+      case 'cardBgColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -148,6 +165,10 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Paragraph Title Font';
       case 'paraTextFont':
         return 'Paragraph Content Font';
+      case 'elevation':
+        return 'Card Elevation';
+      case 'cardFontText':
+        return 'Card Font';
       case 'paraTitle':
         return 'Paragraph Title';
       case 'paraText':
@@ -156,6 +177,12 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Start BgColor';
       case 'endFillColor':
         return 'End BgColor';
+      case 'curveBgColor':
+        return 'Curve BgColor';
+      case 'cardBgColor':
+        return 'Card BgColor';
+      case 'excludeFields':
+        return 'Exclude Fields';
       default:
         return parameter;
     }
