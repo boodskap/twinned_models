@@ -33,8 +33,8 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   set paraTitle(String value) => throw _privateConstructorUsedError;
   String get paraText => throw _privateConstructorUsedError;
   set paraText(String value) => throw _privateConstructorUsedError;
-  List<int> get cardBgColors => throw _privateConstructorUsedError;
-  set cardBgColors(List<int> value) => throw _privateConstructorUsedError;
+  List<int> get gradientBgColor => throw _privateConstructorUsedError;
+  set gradientBgColor(List<int> value) => throw _privateConstructorUsedError;
   int get curveBgColor => throw _privateConstructorUsedError;
   set curveBgColor(int value) => throw _privateConstructorUsedError;
   int get cardBgColor => throw _privateConstructorUsedError;
@@ -89,7 +89,7 @@ abstract class $MultiDeviceFieldPageWidgetConfigCopyWith<$Res> {
       String cityName,
       String paraTitle,
       String paraText,
-      List<int> cardBgColors,
+      List<int> gradientBgColor,
       int curveBgColor,
       int cardBgColor,
       double elevation,
@@ -124,7 +124,7 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
     Object? cityName = null,
     Object? paraTitle = null,
     Object? paraText = null,
-    Object? cardBgColors = null,
+    Object? gradientBgColor = null,
     Object? curveBgColor = null,
     Object? cardBgColor = null,
     Object? elevation = null,
@@ -163,9 +163,9 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
           ? _value.paraText
           : paraText // ignore: cast_nullable_to_non_nullable
               as String,
-      cardBgColors: null == cardBgColors
-          ? _value.cardBgColors
-          : cardBgColors // ignore: cast_nullable_to_non_nullable
+      gradientBgColor: null == gradientBgColor
+          ? _value.gradientBgColor
+          : gradientBgColor // ignore: cast_nullable_to_non_nullable
               as List<int>,
       curveBgColor: null == curveBgColor
           ? _value.curveBgColor
@@ -235,7 +235,7 @@ abstract class _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<$Res>
       String cityName,
       String paraTitle,
       String paraText,
-      List<int> cardBgColors,
+      List<int> gradientBgColor,
       int curveBgColor,
       int cardBgColor,
       double elevation,
@@ -269,7 +269,7 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
     Object? cityName = null,
     Object? paraTitle = null,
     Object? paraText = null,
-    Object? cardBgColors = null,
+    Object? gradientBgColor = null,
     Object? curveBgColor = null,
     Object? cardBgColor = null,
     Object? elevation = null,
@@ -308,9 +308,9 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.paraText
           : paraText // ignore: cast_nullable_to_non_nullable
               as String,
-      cardBgColors: null == cardBgColors
-          ? _value.cardBgColors
-          : cardBgColors // ignore: cast_nullable_to_non_nullable
+      gradientBgColor: null == gradientBgColor
+          ? _value.gradientBgColor
+          : gradientBgColor // ignore: cast_nullable_to_non_nullable
               as List<int>,
       curveBgColor: null == curveBgColor
           ? _value.curveBgColor
@@ -375,7 +375,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
       this.cityName = '',
       this.paraTitle = '',
       this.paraText = '',
-      this.cardBgColors = const [],
+      this.gradientBgColor = const [],
       this.curveBgColor = 0XFFADBBDA,
       this.cardBgColor = 0XFFFEFBF6,
       this.elevation = 8.0,
@@ -454,7 +454,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   String paraText;
   @override
   @JsonKey()
-  List<int> cardBgColors;
+  List<int> gradientBgColor;
   @override
   @JsonKey()
   int curveBgColor;
@@ -494,7 +494,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceFieldPageWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, cardBgColors: $cardBgColors, curveBgColor: $curveBgColor, cardBgColor: $cardBgColor, elevation: $elevation, excludeFields: $excludeFields, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont, cardFontText: $cardFontText)';
+    return 'MultiDeviceFieldPageWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, gradientBgColor: $gradientBgColor, curveBgColor: $curveBgColor, cardBgColor: $cardBgColor, elevation: $elevation, excludeFields: $excludeFields, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont, cardFontText: $cardFontText)';
   }
 
   @JsonKey(ignore: true)
@@ -522,7 +522,7 @@ abstract class _MultiDeviceFieldPageWidgetConfig
           String cityName,
           String paraTitle,
           String paraText,
-          List<int> cardBgColors,
+          List<int> gradientBgColor,
           int curveBgColor,
           int cardBgColor,
           double elevation,
@@ -561,8 +561,8 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   String get paraText;
   set paraText(String value);
   @override
-  List<int> get cardBgColors;
-  set cardBgColors(List<int> value);
+  List<int> get gradientBgColor;
+  set gradientBgColor(List<int> value);
   @override
   int get curveBgColor;
   set curveBgColor(int value);
