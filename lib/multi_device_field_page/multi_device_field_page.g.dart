@@ -16,7 +16,7 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           cityName: json['cityName'] as String? ?? '',
           paraTitle: json['paraTitle'] as String? ?? '',
           paraText: json['paraText'] as String? ?? '',
-          cardBgColors: (json['cardBgColors'] as List<dynamic>?)
+          gradientBgColor: (json['gradientBgColor'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
               const [],
@@ -94,7 +94,7 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'cityName': instance.cityName,
       'paraTitle': instance.paraTitle,
       'paraText': instance.paraText,
-      'cardBgColors': instance.cardBgColors,
+      'gradientBgColor': instance.gradientBgColor,
       'curveBgColor': instance.curveBgColor,
       'cardBgColor': instance.cardBgColor,
       'elevation': instance.elevation,

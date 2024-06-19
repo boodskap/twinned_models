@@ -16,7 +16,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default('') String cityName,
     @Default('') String paraTitle,
     @Default('') String paraText,
-    @Default([]) List<int> cardBgColors,
+    @Default([]) List<int> gradientBgColor,
     @Default(0XFFADBBDA) int curveBgColor,
     @Default(0XFFFEFBF6) int cardBgColor,
     @Default(8.0) double elevation,
@@ -100,7 +100,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'excludeFields':
         return DataType.listOfTexts;
-      case 'cardBgColors':
+      case 'gradientBgColor':
         return DataType.listOfNumbers;
       case 'titleFont':
       case 'timeStampFont':
@@ -126,7 +126,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return HintType.deviceId;
       case 'curveBgColor':
       case 'cardBgColor':
-      case 'cardBgColors':
+      case 'gradientBgColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -177,8 +177,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Card BgColor';
       case 'excludeFields':
         return 'Exclude Fields';
-      case 'cardBgColors':
-        return 'Gradiend BgColors';
+      case 'gradientBgColor':
+        return 'Gradiend BgColor';
       default:
         return parameter;
     }
@@ -195,7 +195,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'field':
       case 'deviceId':
       case 'title':
-      case 'cardBgColors':
+      case 'gradientBgColor':
         return true;
       default:
         return false;
