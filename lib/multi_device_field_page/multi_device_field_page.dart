@@ -20,6 +20,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     @Default(0XFF788BAD) int endFillColor,
     @Default(0XFFADBBDA) int curveBgColor,
     @Default(0XFFFEFBF6) int cardBgColor,
+    @Default(8.0) double elevation,
     @Default([]) List<String> excludeFields,
     @Default({
       'fontFamily': 'Open Sans',
@@ -98,6 +99,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'curveBgColor':
       case 'cardBgColor':
         return DataType.numeric;
+      case 'elevation':
+        return DataType.decimal;
       case 'excludeFields':
         return DataType.listOfTexts;
       case 'titleFont':
@@ -162,6 +165,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Paragraph Title Font';
       case 'paraTextFont':
         return 'Paragraph Content Font';
+      case 'elevation':
+        return 'Card Elevation';
       case 'cardFontText':
         return 'Card Font';
       case 'paraTitle':
