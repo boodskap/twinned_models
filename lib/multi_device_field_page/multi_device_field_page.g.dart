@@ -26,6 +26,10 @@ _$MultiDeviceFieldPageWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
+          cardBgColors: (json['cardBgColors'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
+                  .toList() ??
+              const [],
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -99,6 +103,7 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'cardBgColor': instance.cardBgColor,
       'elevation': instance.elevation,
       'excludeFields': instance.excludeFields,
+      'cardBgColors': instance.cardBgColors,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
       'valueFont': instance.valueFont,
