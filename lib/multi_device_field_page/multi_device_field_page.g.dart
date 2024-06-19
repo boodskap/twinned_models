@@ -21,6 +21,7 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF788BAD,
           curveBgColor: (json['curveBgColor'] as num?)?.toInt() ?? 0XFFADBBDA,
           cardBgColor: (json['cardBgColor'] as num?)?.toInt() ?? 0XFFFEFBF6,
+          elevation: (json['elevation'] as num?)?.toDouble() ?? 8.0,
           excludeFields: (json['excludeFields'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
@@ -96,6 +97,7 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'endFillColor': instance.endFillColor,
       'curveBgColor': instance.curveBgColor,
       'cardBgColor': instance.cardBgColor,
+      'elevation': instance.elevation,
       'excludeFields': instance.excludeFields,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
