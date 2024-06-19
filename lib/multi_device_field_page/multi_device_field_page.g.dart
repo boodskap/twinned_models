@@ -16,18 +16,15 @@ _$MultiDeviceFieldPageWidgetConfigImpl
           cityName: json['cityName'] as String? ?? '',
           paraTitle: json['paraTitle'] as String? ?? '',
           paraText: json['paraText'] as String? ?? '',
-          startFillColor:
-              (json['startFillColor'] as num?)?.toInt() ?? 0XFF576680,
-          endFillColor: (json['endFillColor'] as num?)?.toInt() ?? 0XFF788BAD,
+          cardBgColors: (json['cardBgColors'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toInt())
+                  .toList() ??
+              const [],
           curveBgColor: (json['curveBgColor'] as num?)?.toInt() ?? 0XFFADBBDA,
           cardBgColor: (json['cardBgColor'] as num?)?.toInt() ?? 0XFFFEFBF6,
           elevation: (json['elevation'] as num?)?.toDouble() ?? 8.0,
           excludeFields: (json['excludeFields'] as List<dynamic>?)
                   ?.map((e) => e as String)
-                  .toList() ??
-              const [],
-          cardBgColors: (json['cardBgColors'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toInt())
                   .toList() ??
               const [],
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
@@ -97,13 +94,11 @@ Map<String, dynamic> _$$MultiDeviceFieldPageWidgetConfigImplToJson(
       'cityName': instance.cityName,
       'paraTitle': instance.paraTitle,
       'paraText': instance.paraText,
-      'startFillColor': instance.startFillColor,
-      'endFillColor': instance.endFillColor,
+      'cardBgColors': instance.cardBgColors,
       'curveBgColor': instance.curveBgColor,
       'cardBgColor': instance.cardBgColor,
       'elevation': instance.elevation,
       'excludeFields': instance.excludeFields,
-      'cardBgColors': instance.cardBgColors,
       'titleFont': instance.titleFont,
       'timeStampFont': instance.timeStampFont,
       'valueFont': instance.valueFont,
