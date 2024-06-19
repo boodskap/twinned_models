@@ -7,7 +7,7 @@ import 'package:twinned_models/models.dart';
 part 'multi_device_single_field_pie_chart.freezed.dart';
 part 'multi_device_single_field_pie_chart.g.dart';
 
-enum LabelPosition {
+enum ChartDataLabelPosition {
   inside,
   outside,
 }
@@ -59,7 +59,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(0.0) double labelBorderWidth,
     @Default(5.0) double labelBorderRadius,
     @Default(1.0) double labelOpacity,
-    @Default(LabelPosition.outside) LabelPosition labelPosition,
+    @Default(ChartDataLabelPosition.outside) ChartDataLabelPosition labelPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
@@ -134,7 +134,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'labelPosition':
-        return LabelPosition.values.asNameMap().keys.toList();
+        return ChartDataLabelPosition.values.asNameMap().keys.toList();
       case 'iconType':
         return IconType.values.asNameMap().keys.toList();
       default:

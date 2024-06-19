@@ -61,8 +61,10 @@ mixin _$MultiDeviceSingleFieldPieChartWidgetConfig {
   set labelBorderRadius(double value) => throw _privateConstructorUsedError;
   double get labelOpacity => throw _privateConstructorUsedError;
   set labelOpacity(double value) => throw _privateConstructorUsedError;
-  LabelPosition get labelPosition => throw _privateConstructorUsedError;
-  set labelPosition(LabelPosition value) => throw _privateConstructorUsedError;
+  ChartDataLabelPosition get labelPosition =>
+      throw _privateConstructorUsedError;
+  set labelPosition(ChartDataLabelPosition value) =>
+      throw _privateConstructorUsedError;
   bool get enableTooltip => throw _privateConstructorUsedError;
   set enableTooltip(bool value) => throw _privateConstructorUsedError;
   bool get explode => throw _privateConstructorUsedError;
@@ -108,7 +110,7 @@ abstract class $MultiDeviceSingleFieldPieChartWidgetConfigCopyWith<$Res> {
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      LabelPosition labelPosition,
+      ChartDataLabelPosition labelPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -232,7 +234,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
       labelPosition: null == labelPosition
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
-              as LabelPosition,
+              as ChartDataLabelPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -286,7 +288,7 @@ abstract class _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<$Res>
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      LabelPosition labelPosition,
+      ChartDataLabelPosition labelPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -408,7 +410,7 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
       labelPosition: null == labelPosition
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
-              as LabelPosition,
+              as ChartDataLabelPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -471,7 +473,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
       this.labelBorderWidth = 0.0,
       this.labelBorderRadius = 5.0,
       this.labelOpacity = 1.0,
-      this.labelPosition = LabelPosition.outside,
+      this.labelPosition = ChartDataLabelPosition.outside,
       this.enableTooltip = true,
       this.explode = true,
       this.opacity = 1.0,
@@ -539,7 +541,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
   double labelOpacity;
   @override
   @JsonKey()
-  LabelPosition labelPosition;
+  ChartDataLabelPosition labelPosition;
   @override
   @JsonKey()
   bool enableTooltip;
@@ -600,7 +602,7 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      LabelPosition labelPosition,
+      ChartDataLabelPosition labelPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -667,8 +669,8 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
   double get labelOpacity;
   set labelOpacity(double value);
   @override
-  LabelPosition get labelPosition;
-  set labelPosition(LabelPosition value);
+  ChartDataLabelPosition get labelPosition;
+  set labelPosition(ChartDataLabelPosition value);
   @override
   bool get enableTooltip;
   set enableTooltip(bool value);
