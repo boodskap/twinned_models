@@ -15,6 +15,14 @@ enum ChartDataLabelPosition {
 enum IconType {
   rectangle,
   circle,
+  seriesType,
+  image,
+  pentagon,
+  verticalLine,
+  horizontalLine,
+  diamond,
+  triangle,
+  invertedTriangle
 }
 
 @unfreezed
@@ -59,7 +67,8 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(0.0) double labelBorderWidth,
     @Default(5.0) double labelBorderRadius,
     @Default(1.0) double labelOpacity,
-    @Default(ChartDataLabelPosition.outside) ChartDataLabelPosition labelPosition,
+    @Default(ChartDataLabelPosition.outside)
+    ChartDataLabelPosition labelPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
