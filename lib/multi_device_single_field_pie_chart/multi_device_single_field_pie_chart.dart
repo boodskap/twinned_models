@@ -25,6 +25,13 @@ enum IconType {
   invertedTriangle
 }
 
+enum LegendPosition {
+  top,
+  bottom,
+  left,
+  right,
+}
+
 @unfreezed
 class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     with _$MultiDeviceSingleFieldPieChartWidgetConfig {
@@ -69,6 +76,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(1.0) double labelOpacity,
     @Default(ChartDataLabelPosition.outside)
     ChartDataLabelPosition labelPosition,
+    @Default(LegendPosition.right) LegendPosition legendPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
@@ -96,6 +104,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
         return DataType.listOfNumbers;
       case 'iconType':
       case 'labelPosition':
+      case 'legendPosition':
         return DataType.enumerated;
       case 'legendVisibility':
       case 'dataLabelVisibility':
@@ -142,6 +151,8 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'labelPosition':
         return ChartDataLabelPosition.values.asNameMap().keys.toList();
+      case 'legendPosition':
+        return LegendPosition.values.asNameMap().keys.toList();
       case 'iconType':
         return IconType.values.asNameMap().keys.toList();
       default:
