@@ -14,7 +14,7 @@ _$MultipleLinMinMaxAverageWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
+                'fontSize': 22,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
@@ -54,7 +54,8 @@ _$MultipleLinMinMaxAverageWidgetConfigImpl
               (json['chartThemeColor'] as num?)?.toInt() ?? 0XFFFFFFFF,
           axisLabelColor:
               (json['axisLabelColor'] as num?)?.toInt() ?? 0XFF000000,
-          width: (json['width'] as num?)?.toDouble() ?? 350,
+          width: (json['width'] as num?)?.toDouble() ?? 600,
+          height: (json['height'] as num?)?.toDouble() ?? 280,
           chartSeriesColors: (json['chartSeriesColors'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
@@ -85,5 +86,6 @@ Map<String, dynamic> _$$MultipleLinMinMaxAverageWidgetConfigImplToJson(
       'chartThemeColor': instance.chartThemeColor,
       'axisLabelColor': instance.axisLabelColor,
       'width': instance.width,
+      'height': instance.height,
       'chartSeriesColors': instance.chartSeriesColors,
     };

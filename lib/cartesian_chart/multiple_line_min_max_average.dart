@@ -13,7 +13,7 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 22,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
@@ -48,7 +48,8 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     @Default(true) bool showTooltip,
     @Default(0XFFFFFFFF) int chartThemeColor,
     @Default(0XFF000000) int axisLabelColor,
-    @Default(350) double width,
+    @Default(600) double width,
+    @Default(280) double height,
     @Default([]) List<int> chartSeriesColors,
   }) = _MultipleLinMinMaxAverageWidgetConfig;
 
@@ -75,6 +76,7 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
         return DataType.numeric;
       case 'interval':
       case 'width':
+      case 'height':
         return DataType.decimal;
       case 'titleFont':
       case 'totalTextFont':
@@ -136,7 +138,7 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
       case 'totalCardBgColor':
         return 'Total Card Bg Color';
       case 'chartThemeColor':
-        return 'chart Theme Color';
+        return 'Chart Theme Color';
       case 'interval':
         return 'Interval';
       case 'width':
@@ -163,8 +165,10 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
         return 'Show Tooltip';
       case 'chartSeriesColors':
         return 'Chart Series Colors';
- case 'axisLabelColor':
+      case 'axisLabelColor':
         return 'Axis Label Colors';
+         case 'height':
+        return 'Height';
       default:
         return parameter;
     }
@@ -191,6 +195,4 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
   bool isValid(String parameter, value) {
     return true;
   }
-
- 
 }
