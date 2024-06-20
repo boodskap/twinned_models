@@ -87,8 +87,6 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
         return DataType.listOfTexts;
       case 'field':
       case 'title':
-      case 'value':
-      case 'label':
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
