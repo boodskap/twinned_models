@@ -59,6 +59,9 @@ _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
           labelPosition: $enumDecodeNullable(
                   _$ChartDataLabelPositionEnumMap, json['labelPosition']) ??
               ChartDataLabelPosition.outside,
+          legendPosition: $enumDecodeNullable(
+                  _$LegendPositionEnumMap, json['legendPosition']) ??
+              LegendPosition.right,
           enableTooltip: json['enableTooltip'] as bool? ?? true,
           explode: json['explode'] as bool? ?? true,
           opacity: (json['opacity'] as num?)?.toDouble() ?? 1.0,
@@ -88,6 +91,7 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
       'labelBorderRadius': instance.labelBorderRadius,
       'labelOpacity': instance.labelOpacity,
       'labelPosition': _$ChartDataLabelPositionEnumMap[instance.labelPosition]!,
+      'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
       'enableTooltip': instance.enableTooltip,
       'explode': instance.explode,
       'opacity': instance.opacity,
@@ -111,4 +115,11 @@ const _$IconTypeEnumMap = {
 const _$ChartDataLabelPositionEnumMap = {
   ChartDataLabelPosition.inside: 'inside',
   ChartDataLabelPosition.outside: 'outside',
+};
+
+const _$LegendPositionEnumMap = {
+  LegendPosition.top: 'top',
+  LegendPosition.bottom: 'bottom',
+  LegendPosition.left: 'left',
+  LegendPosition.right: 'right',
 };
