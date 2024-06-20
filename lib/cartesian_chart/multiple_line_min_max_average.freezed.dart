@@ -62,6 +62,8 @@ mixin _$MultipleLinMinMaxAverageWidgetConfig {
   set showTooltip(bool value) => throw _privateConstructorUsedError;
   int get chartThemeColor => throw _privateConstructorUsedError;
   set chartThemeColor(int value) => throw _privateConstructorUsedError;
+  int get axisLabelColor => throw _privateConstructorUsedError;
+  set axisLabelColor(int value) => throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
   List<int> get chartSeriesColors => throw _privateConstructorUsedError;
@@ -102,6 +104,7 @@ abstract class $MultipleLinMinMaxAverageWidgetConfigCopyWith<$Res> {
       bool showLegend,
       bool showTooltip,
       int chartThemeColor,
+      int axisLabelColor,
       double width,
       List<int> chartSeriesColors});
 }
@@ -139,6 +142,7 @@ class _$MultipleLinMinMaxAverageWidgetConfigCopyWithImpl<$Res,
     Object? showLegend = null,
     Object? showTooltip = null,
     Object? chartThemeColor = null,
+    Object? axisLabelColor = null,
     Object? width = null,
     Object? chartSeriesColors = null,
   }) {
@@ -219,6 +223,10 @@ class _$MultipleLinMinMaxAverageWidgetConfigCopyWithImpl<$Res,
           ? _value.chartThemeColor
           : chartThemeColor // ignore: cast_nullable_to_non_nullable
               as int,
+      axisLabelColor: null == axisLabelColor
+          ? _value.axisLabelColor
+          : axisLabelColor // ignore: cast_nullable_to_non_nullable
+              as int,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -260,6 +268,7 @@ abstract class _$$MultipleLinMinMaxAverageWidgetConfigImplCopyWith<$Res>
       bool showLegend,
       bool showTooltip,
       int chartThemeColor,
+      int axisLabelColor,
       double width,
       List<int> chartSeriesColors});
 }
@@ -296,6 +305,7 @@ class __$$MultipleLinMinMaxAverageWidgetConfigImplCopyWithImpl<$Res>
     Object? showLegend = null,
     Object? showTooltip = null,
     Object? chartThemeColor = null,
+    Object? axisLabelColor = null,
     Object? width = null,
     Object? chartSeriesColors = null,
   }) {
@@ -376,6 +386,10 @@ class __$$MultipleLinMinMaxAverageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.chartThemeColor
           : chartThemeColor // ignore: cast_nullable_to_non_nullable
               as int,
+      axisLabelColor: null == axisLabelColor
+          ? _value.axisLabelColor
+          : axisLabelColor // ignore: cast_nullable_to_non_nullable
+              as int,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -397,7 +411,7 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
-        'fontColor': 0xFF000000,
+        'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.titleBgColor = 0XFF000000,
@@ -414,9 +428,9 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
       },
       this.totalCountFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 16,
         'fontColor': 0xFFFFFFFF,
-        'fontBold': false
+        'fontBold': true
       },
       this.unit = '',
       this.showGrid = false,
@@ -426,7 +440,8 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
       this.showMaxValue = true,
       this.showLegend = true,
       this.showTooltip = true,
-      this.chartThemeColor = 0XFF000000,
+      this.chartThemeColor = 0XFFFFFFFF,
+      this.axisLabelColor = 0XFF000000,
       this.width = 350,
       this.chartSeriesColors = const []})
       : super._();
@@ -494,6 +509,9 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
   int chartThemeColor;
   @override
   @JsonKey()
+  int axisLabelColor;
+  @override
+  @JsonKey()
   double width;
   @override
   @JsonKey()
@@ -501,7 +519,7 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultipleLinMinMaxAverageWidgetConfig(title: $title, titleFont: $titleFont, titleBgColor: $titleBgColor, field: $field, modelId: $modelId, showTotalCard: $showTotalCard, totalCardBgColor: $totalCardBgColor, totalText: $totalText, totalTextFont: $totalTextFont, totalCountFont: $totalCountFont, unit: $unit, showGrid: $showGrid, interval: $interval, showAverage: $showAverage, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showLegend: $showLegend, showTooltip: $showTooltip, chartThemeColor: $chartThemeColor, width: $width, chartSeriesColors: $chartSeriesColors)';
+    return 'MultipleLinMinMaxAverageWidgetConfig(title: $title, titleFont: $titleFont, titleBgColor: $titleBgColor, field: $field, modelId: $modelId, showTotalCard: $showTotalCard, totalCardBgColor: $totalCardBgColor, totalText: $totalText, totalTextFont: $totalTextFont, totalCountFont: $totalCountFont, unit: $unit, showGrid: $showGrid, interval: $interval, showAverage: $showAverage, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showLegend: $showLegend, showTooltip: $showTooltip, chartThemeColor: $chartThemeColor, axisLabelColor: $axisLabelColor, width: $width, chartSeriesColors: $chartSeriesColors)';
   }
 
   @JsonKey(ignore: true)
@@ -542,6 +560,7 @@ abstract class _MultipleLinMinMaxAverageWidgetConfig
           bool showLegend,
           bool showTooltip,
           int chartThemeColor,
+          int axisLabelColor,
           double width,
           List<int> chartSeriesColors}) =
       _$MultipleLinMinMaxAverageWidgetConfigImpl;
@@ -608,6 +627,9 @@ abstract class _MultipleLinMinMaxAverageWidgetConfig
   @override
   int get chartThemeColor;
   set chartThemeColor(int value);
+  @override
+  int get axisLabelColor;
+  set axisLabelColor(int value);
   @override
   double get width;
   set width(double value);

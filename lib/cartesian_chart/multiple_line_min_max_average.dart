@@ -14,7 +14,7 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
-      'fontColor': 0xFF000000,
+      'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
@@ -33,9 +33,9 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     Map<String, dynamic> totalTextFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 16,
       'fontColor': 0xFFFFFFFF,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> totalCountFont,
     @Default('') String unit,
@@ -46,9 +46,10 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     @Default(true) bool showMaxValue,
     @Default(true) bool showLegend,
     @Default(true) bool showTooltip,
-    @Default(0XFF000000) int chartThemeColor,
+    @Default(0XFFFFFFFF) int chartThemeColor,
+    @Default(0XFF000000) int axisLabelColor,
     @Default(350) double width,
-       @Default([]) List<int> chartSeriesColors,
+    @Default([]) List<int> chartSeriesColors,
   }) = _MultipleLinMinMaxAverageWidgetConfig;
 
   factory MultipleLinMinMaxAverageWidgetConfig.fromJson(
@@ -63,13 +64,14 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
       case 'totalText':
       case 'unit':
         return DataType.text;
-         case 'chartSeriesColors':
+      case 'chartSeriesColors':
         return DataType.listOfNumbers;
-         case 'modelId':
+      case 'modelId':
         return DataType.listOfTexts;
       case 'titleBgColor':
       case 'totalCardBgColor':
       case 'chartThemeColor':
+      case 'axisLabelColor':
         return DataType.numeric;
       case 'interval':
       case 'width':
@@ -99,10 +101,11 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
       case 'titleBgColor':
       case 'totalCardBgColor':
       case 'chartThemeColor':
+      case 'axisLabelColor':
         return HintType.color;
       case 'modelId':
-        return HintType.deviceModelId;  
-         case 'chartSeriesColors':
+        return HintType.deviceModelId;
+      case 'chartSeriesColors':
         return HintType.color;
 
       default:
@@ -120,11 +123,11 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'title':
         return 'Title';
-             case 'field':
+      case 'field':
         return 'Field';
       case 'totalText':
         return 'Total Text';
-        case 'unit':
+      case 'unit':
         return 'Unit';
       case 'modelId':
         return 'Model Id';
@@ -138,9 +141,8 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
         return 'Interval';
       case 'width':
         return 'Width';
-           case 'titleFont':
+      case 'titleFont':
         return 'Title Font';
-
       case 'totalTextFont':
         return 'Total Text Font';
       case 'totalCountFont':
@@ -159,9 +161,10 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
         return 'Show Legend';
       case 'showTooltip':
         return 'Show Tooltip';
-   case 'chartSeriesColors':
+      case 'chartSeriesColors':
         return 'Chart Series Colors';
-
+ case 'axisLabelColor':
+        return 'Axis Label Colors';
       default:
         return parameter;
     }
@@ -175,9 +178,9 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'deviceId':
+      case 'modelId':
       case 'title':
-      case 'mainField':
+      case 'field':
         return true;
       default:
         return false;
@@ -189,8 +192,5 @@ class MultipleLinMinMaxAverageWidgetConfig extends BaseConfig
     return true;
   }
 
-  // @override
-  // Map<String, dynamic> toJson() {
-  //   throw UnimplementedError();
-  // }
+ 
 }
