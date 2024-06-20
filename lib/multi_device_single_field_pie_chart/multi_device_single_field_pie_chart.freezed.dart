@@ -65,6 +65,9 @@ mixin _$MultiDeviceSingleFieldPieChartWidgetConfig {
       throw _privateConstructorUsedError;
   set labelPosition(ChartDataLabelPosition value) =>
       throw _privateConstructorUsedError;
+  LegendPosition get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPosition value) =>
+      throw _privateConstructorUsedError;
   bool get enableTooltip => throw _privateConstructorUsedError;
   set enableTooltip(bool value) => throw _privateConstructorUsedError;
   bool get explode => throw _privateConstructorUsedError;
@@ -111,6 +114,7 @@ abstract class $MultiDeviceSingleFieldPieChartWidgetConfigCopyWith<$Res> {
       double labelBorderRadius,
       double labelOpacity,
       ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -152,6 +156,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
     Object? labelBorderRadius = null,
     Object? labelOpacity = null,
     Object? labelPosition = null,
+    Object? legendPosition = null,
     Object? enableTooltip = null,
     Object? explode = null,
     Object? opacity = null,
@@ -235,6 +240,10 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
               as ChartDataLabelPosition,
+      legendPosition: null == legendPosition
+          ? _value.legendPosition
+          : legendPosition // ignore: cast_nullable_to_non_nullable
+              as LegendPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -289,6 +298,7 @@ abstract class _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<$Res>
       double labelBorderRadius,
       double labelOpacity,
       ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -328,6 +338,7 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
     Object? labelBorderRadius = null,
     Object? labelOpacity = null,
     Object? labelPosition = null,
+    Object? legendPosition = null,
     Object? enableTooltip = null,
     Object? explode = null,
     Object? opacity = null,
@@ -411,6 +422,10 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
               as ChartDataLabelPosition,
+      legendPosition: null == legendPosition
+          ? _value.legendPosition
+          : legendPosition // ignore: cast_nullable_to_non_nullable
+              as LegendPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -474,6 +489,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
       this.labelBorderRadius = 5.0,
       this.labelOpacity = 1.0,
       this.labelPosition = ChartDataLabelPosition.outside,
+      this.legendPosition = LegendPosition.right,
       this.enableTooltip = true,
       this.explode = true,
       this.opacity = 1.0,
@@ -544,6 +560,9 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
   ChartDataLabelPosition labelPosition;
   @override
   @JsonKey()
+  LegendPosition legendPosition;
+  @override
+  @JsonKey()
   bool enableTooltip;
   @override
   @JsonKey()
@@ -560,7 +579,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceSingleFieldPieChartWidgetConfig(deviceIds: $deviceIds, field: $field, chartColors: $chartColors, title: $title, value: $value, label: $label, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, legendVisibility: $legendVisibility, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, angle: $angle, labelBorderWidth: $labelBorderWidth, labelBorderRadius: $labelBorderRadius, labelOpacity: $labelOpacity, labelPosition: $labelPosition, enableTooltip: $enableTooltip, explode: $explode, opacity: $opacity, chartRadius: $chartRadius, strokeColor: $strokeColor)';
+    return 'MultiDeviceSingleFieldPieChartWidgetConfig(deviceIds: $deviceIds, field: $field, chartColors: $chartColors, title: $title, value: $value, label: $label, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, legendVisibility: $legendVisibility, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, angle: $angle, labelBorderWidth: $labelBorderWidth, labelBorderRadius: $labelBorderRadius, labelOpacity: $labelOpacity, labelPosition: $labelPosition, legendPosition: $legendPosition, enableTooltip: $enableTooltip, explode: $explode, opacity: $opacity, chartRadius: $chartRadius, strokeColor: $strokeColor)';
   }
 
   @JsonKey(ignore: true)
@@ -603,6 +622,7 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
       double labelBorderRadius,
       double labelOpacity,
       ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -671,6 +691,9 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
   @override
   ChartDataLabelPosition get labelPosition;
   set labelPosition(ChartDataLabelPosition value);
+  @override
+  LegendPosition get legendPosition;
+  set legendPosition(LegendPosition value);
   @override
   bool get enableTooltip;
   set enableTooltip(bool value);
