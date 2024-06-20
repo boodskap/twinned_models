@@ -15,7 +15,7 @@ _$MultipleLinMinMaxAverageWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 25,
-                'fontColor': 0xFF000000,
+                'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
           titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0XFF000000,
@@ -38,9 +38,9 @@ _$MultipleLinMinMaxAverageWidgetConfigImpl
           totalCountFont: json['totalCountFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 16,
                 'fontColor': 0xFFFFFFFF,
-                'fontBold': false
+                'fontBold': true
               },
           unit: json['unit'] as String? ?? '',
           showGrid: json['showGrid'] as bool? ?? false,
@@ -51,7 +51,9 @@ _$MultipleLinMinMaxAverageWidgetConfigImpl
           showLegend: json['showLegend'] as bool? ?? true,
           showTooltip: json['showTooltip'] as bool? ?? true,
           chartThemeColor:
-              (json['chartThemeColor'] as num?)?.toInt() ?? 0XFF000000,
+              (json['chartThemeColor'] as num?)?.toInt() ?? 0XFFFFFFFF,
+          axisLabelColor:
+              (json['axisLabelColor'] as num?)?.toInt() ?? 0XFF000000,
           width: (json['width'] as num?)?.toDouble() ?? 350,
           chartSeriesColors: (json['chartSeriesColors'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
@@ -81,6 +83,7 @@ Map<String, dynamic> _$$MultipleLinMinMaxAverageWidgetConfigImplToJson(
       'showLegend': instance.showLegend,
       'showTooltip': instance.showTooltip,
       'chartThemeColor': instance.chartThemeColor,
+      'axisLabelColor': instance.axisLabelColor,
       'width': instance.width,
       'chartSeriesColors': instance.chartSeriesColors,
     };
