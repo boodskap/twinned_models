@@ -98,6 +98,14 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
 const _$IconTypeEnumMap = {
   IconType.rectangle: 'rectangle',
   IconType.circle: 'circle',
+  IconType.seriesType: 'seriesType',
+  IconType.image: 'image',
+  IconType.pentagon: 'pentagon',
+  IconType.verticalLine: 'verticalLine',
+  IconType.horizontalLine: 'horizontalLine',
+  IconType.diamond: 'diamond',
+  IconType.triangle: 'triangle',
+  IconType.invertedTriangle: 'invertedTriangle',
 };
 
 const _$ChartDataLabelPositionEnumMap = {
