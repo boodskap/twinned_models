@@ -10,44 +10,45 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
     with _$DeviceFieldScatterChartWidgetConfig {
   DeviceFieldScatterChartWidgetConfig._();
 
-  factory DeviceFieldScatterChartWidgetConfig({
-    @Default('') String title,
-    @Default('') String deviceId,
-    @Default('') String field,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 30,
-      'fontColor': 0xFF000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> titleFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xFF000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xFF000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> legendFont,
-    @Default(true) bool legendVisibility,
-    @Default(LegendPosition.right) LegendPosition legendPosition,
-    @Default(LegendIconType.rectangle) LegendIconType iconType,
-    @Default(true) bool dataLabelVisibility,
-    @Default(0xFFFFFFFF) int bgColor,
-    @Default(0xFFFFFFFF) int borderColor,
-    @Default(0xFFFFFFFF) int plotAreaBackgroundColor,
-    @Default(true) bool enableTooltip,
-    @Default(1000) double duration,
-    @Default(0xFF263238) int toolTipColor,
-    @Default(0xFF000000) int toolTipBorderColor,
-    @Default(0xFF00C3FF) int markerColor,
-  }) = _DeviceFieldScatterChartWidgetConfig;
+  factory DeviceFieldScatterChartWidgetConfig(
+          {@Default('') String title,
+          @Default('') String deviceId,
+          @Default('') String field,
+          @Default({
+            'fontFamily': 'Open Sans',
+            'fontSize': 30,
+            'fontColor': 0xFF000000,
+            'fontBold': true
+          })
+          Map<String, dynamic> titleFont,
+          @Default({
+            'fontFamily': 'Open Sans',
+            'fontSize': 14,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
+          })
+          Map<String, dynamic> tooltipFont,
+          @Default({
+            'fontFamily': 'Open Sans',
+            'fontSize': 14,
+            'fontColor': 0xFF000000,
+            'fontBold': true
+          })
+          Map<String, dynamic> legendFont,
+          @Default(true) bool legendVisibility,
+          @Default(LegendPosition.right) LegendPosition legendPosition,
+          @Default(LegendIconType.rectangle) LegendIconType iconType,
+          @Default(true) bool dataLabelVisibility,
+          @Default(0xFFFFFFFF) int bgColor,
+          @Default(0xFFFFFFFF) int borderColor,
+          @Default(0xFFFFFFFF) int plotAreaBackgroundColor,
+          @Default(true) bool enableTooltip,
+          @Default(1000) double duration,
+          @Default(0xFF263238) int toolTipColor,
+          @Default(0xFF000000) int toolTipBorderColor,
+          @Default(0xFF00C3FF) int markerColor,
+          @Default(DataMarkerType.circle) DataMarkerType dataMarkerType}) =
+      _DeviceFieldScatterChartWidgetConfig;
 
   factory DeviceFieldScatterChartWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
@@ -62,7 +63,7 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'legendFont':
-      case 'valueFont':
+      case 'tooltipFont':
         return DataType.font;
       case 'dataLabelVisibility':
       case 'enableTooltip':
@@ -70,6 +71,7 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
         return DataType.yesno;
       case 'iconType':
       case 'legendPosition':
+      case 'dataMarkerType':
         return DataType.enumerated;
       case 'duration':
         return DataType.decimal;
@@ -112,6 +114,8 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
         return LegendPosition.values.asNameMap().keys.toList();
       case 'iconType':
         return LegendIconType.values.asNameMap().keys.toList();
+      case 'dataMarkerType':
+        return DataMarkerType.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
