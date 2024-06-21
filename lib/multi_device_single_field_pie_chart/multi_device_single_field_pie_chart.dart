@@ -1,18 +1,15 @@
-import 'dart:js_interop';
-
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
 part 'multi_device_single_field_pie_chart.freezed.dart';
 part 'multi_device_single_field_pie_chart.g.dart';
 
-enum ChartDataLabelPosition {
+enum ChartDataLabelPositions {
   inside,
   outside,
 }
 
-enum IconType {
+enum IconTypes {
   rectangle,
   circle,
   seriesType,
@@ -23,6 +20,13 @@ enum IconType {
   diamond,
   triangle,
   invertedTriangle
+}
+
+enum LegendPositions {
+  top,
+  bottom,
+  left,
+  right,
 }
 
 @unfreezed
@@ -59,7 +63,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> labelFont,
     @Default(true) bool legendVisibility,
-    @Default(IconType.rectangle) IconType iconType,
+    @Default(IconTypes.rectangle) IconTypes iconType,
     @Default(true) bool dataLabelVisibility,
     @Default(0x00FFFFFF) int labelBgColor,
     @Default(0x00000000) int labelBorderColor,
@@ -67,8 +71,9 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(0.0) double labelBorderWidth,
     @Default(5.0) double labelBorderRadius,
     @Default(1.0) double labelOpacity,
-    @Default(ChartDataLabelPosition.outside)
-    ChartDataLabelPosition labelPosition,
+    @Default(ChartDataLabelPositions.outside)
+    ChartDataLabelPositions labelPosition,
+    @Default(LegendPositions.right) LegendPositions legendPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
@@ -96,6 +101,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
         return DataType.listOfNumbers;
       case 'iconType':
       case 'labelPosition':
+      case 'legendPosition':
         return DataType.enumerated;
       case 'legendVisibility':
       case 'dataLabelVisibility':
@@ -141,9 +147,11 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'labelPosition':
-        return ChartDataLabelPosition.values.asNameMap().keys.toList();
+        return ChartDataLabelPositions.values.asNameMap().keys.toList();
+      case 'legendPosition':
+        return LegendPositions.values.asNameMap().keys.toList();
       case 'iconType':
-        return IconType.values.asNameMap().keys.toList();
+        return IconTypes.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
