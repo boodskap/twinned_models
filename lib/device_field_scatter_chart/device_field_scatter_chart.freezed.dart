@@ -38,11 +38,11 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
       throw _privateConstructorUsedError;
   bool get legendVisibility => throw _privateConstructorUsedError;
   set legendVisibility(bool value) => throw _privateConstructorUsedError;
-  LegendPosition get legendPosition => throw _privateConstructorUsedError;
-  set legendPosition(LegendPosition value) =>
+  LegendPositions get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPositions value) =>
       throw _privateConstructorUsedError;
-  IconType get iconType => throw _privateConstructorUsedError;
-  set iconType(IconType value) => throw _privateConstructorUsedError;
+  LegendIconTypes get iconType => throw _privateConstructorUsedError;
+  set iconType(LegendIconTypes value) => throw _privateConstructorUsedError;
   bool get dataLabelVisibility => throw _privateConstructorUsedError;
   set dataLabelVisibility(bool value) => throw _privateConstructorUsedError;
   int get bgColor => throw _privateConstructorUsedError;
@@ -85,8 +85,8 @@ abstract class $DeviceFieldScatterChartWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPosition legendPosition,
-      IconType iconType,
+      LegendPositions legendPosition,
+      LegendIconTypes iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
@@ -163,11 +163,11 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPosition,
+              as LegendPositions,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconType,
+              as LegendIconTypes,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -225,8 +225,8 @@ abstract class _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPosition legendPosition,
-      IconType iconType,
+      LegendPositions legendPosition,
+      LegendIconTypes iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
@@ -302,11 +302,11 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPosition,
+              as LegendPositions,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconType,
+              as LegendIconTypes,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -374,8 +374,8 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
         'fontBold': true
       },
       this.legendVisibility = true,
-      this.legendPosition = LegendPosition.right,
-      this.iconType = IconType.rectangle,
+      this.legendPosition = LegendPositions.right,
+      this.iconType = LegendIconTypes.rectangle,
       this.dataLabelVisibility = true,
       this.bgColor = 0xFFFFFFFF,
       this.borderColor = 0xFFFFFFFF,
@@ -414,10 +414,10 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   bool legendVisibility;
   @override
   @JsonKey()
-  LegendPosition legendPosition;
+  LegendPositions legendPosition;
   @override
   @JsonKey()
-  IconType iconType;
+  LegendIconTypes iconType;
   @override
   @JsonKey()
   bool dataLabelVisibility;
@@ -477,8 +477,8 @@ abstract class _DeviceFieldScatterChartWidgetConfig
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPosition legendPosition,
-      IconType iconType,
+      LegendPositions legendPosition,
+      LegendIconTypes iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
@@ -516,11 +516,11 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   bool get legendVisibility;
   set legendVisibility(bool value);
   @override
-  LegendPosition get legendPosition;
-  set legendPosition(LegendPosition value);
+  LegendPositions get legendPosition;
+  set legendPosition(LegendPositions value);
   @override
-  IconType get iconType;
-  set iconType(IconType value);
+  LegendIconTypes get iconType;
+  set iconType(LegendIconTypes value);
   @override
   bool get dataLabelVisibility;
   set dataLabelVisibility(bool value);

@@ -4,12 +4,12 @@ import 'package:twinned_models/models.dart';
 part 'multi_device_single_field_pie_chart.freezed.dart';
 part 'multi_device_single_field_pie_chart.g.dart';
 
-enum _ChartDataLabelPosition {
+enum ChartDataLabelPositions {
   inside,
   outside,
 }
 
-enum _IconType {
+enum IconTypes {
   rectangle,
   circle,
   seriesType,
@@ -22,7 +22,7 @@ enum _IconType {
   invertedTriangle
 }
 
-enum LegendPosition {
+enum LegendPositions {
   top,
   bottom,
   left,
@@ -63,7 +63,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> labelFont,
     @Default(true) bool legendVisibility,
-    @Default(_IconType.rectangle) _IconType iconType,
+    @Default(IconTypes.rectangle) IconTypes iconType,
     @Default(true) bool dataLabelVisibility,
     @Default(0x00FFFFFF) int labelBgColor,
     @Default(0x00000000) int labelBorderColor,
@@ -71,9 +71,9 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(0.0) double labelBorderWidth,
     @Default(5.0) double labelBorderRadius,
     @Default(1.0) double labelOpacity,
-    @Default(_ChartDataLabelPosition.outside)
-    _ChartDataLabelPosition labelPosition,
-    @Default(LegendPosition.right) LegendPosition legendPosition,
+    @Default(ChartDataLabelPositions.outside)
+    ChartDataLabelPositions labelPosition,
+    @Default(LegendPositions.right) LegendPositions legendPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
@@ -147,11 +147,11 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'labelPosition':
-        return _ChartDataLabelPosition.values.asNameMap().keys.toList();
+        return ChartDataLabelPositions.values.asNameMap().keys.toList();
       case 'legendPosition':
-        return LegendPosition.values.asNameMap().keys.toList();
+        return LegendPositions.values.asNameMap().keys.toList();
       case 'iconType':
-        return _IconType.values.asNameMap().keys.toList();
+        return IconTypes.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
