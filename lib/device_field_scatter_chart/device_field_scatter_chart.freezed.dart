@@ -53,8 +53,8 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
   set plotAreaBackgroundColor(int value) => throw _privateConstructorUsedError;
   bool get enableTooltip => throw _privateConstructorUsedError;
   set enableTooltip(bool value) => throw _privateConstructorUsedError;
-  int get duration => throw _privateConstructorUsedError;
-  set duration(int value) => throw _privateConstructorUsedError;
+  double get duration => throw _privateConstructorUsedError;
+  set duration(double value) => throw _privateConstructorUsedError;
   int get toolTipColor => throw _privateConstructorUsedError;
   set toolTipColor(int value) => throw _privateConstructorUsedError;
   int get toolTipBorderColor => throw _privateConstructorUsedError;
@@ -92,7 +92,7 @@ abstract class $DeviceFieldScatterChartWidgetConfigCopyWith<$Res> {
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor});
@@ -191,7 +191,7 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       toolTipColor: null == toolTipColor
           ? _value.toolTipColor
           : toolTipColor // ignore: cast_nullable_to_non_nullable
@@ -232,7 +232,7 @@ abstract class _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<$Res>
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor});
@@ -330,7 +330,7 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       toolTipColor: null == toolTipColor
           ? _value.toolTipColor
           : toolTipColor // ignore: cast_nullable_to_non_nullable
@@ -435,7 +435,7 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   bool enableTooltip;
   @override
   @JsonKey()
-  int duration;
+  double duration;
   @override
   @JsonKey()
   int toolTipColor;
@@ -484,7 +484,7 @@ abstract class _DeviceFieldScatterChartWidgetConfig
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor}) = _$DeviceFieldScatterChartWidgetConfigImpl;
@@ -537,8 +537,8 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   bool get enableTooltip;
   set enableTooltip(bool value);
   @override
-  int get duration;
-  set duration(int value);
+  double get duration;
+  set duration(double value);
   @override
   int get toolTipColor;
   set toolTipColor(int value);

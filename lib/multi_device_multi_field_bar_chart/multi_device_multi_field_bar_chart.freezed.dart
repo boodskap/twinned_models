@@ -37,11 +37,11 @@ mixin _$MultiDeviceMultiFieldBarChartWidgetConfig {
   BarChartDirection get chartDirection => throw _privateConstructorUsedError;
   set chartDirection(BarChartDirection value) =>
       throw _privateConstructorUsedError;
-  LegendPosition get legendPosition => throw _privateConstructorUsedError;
-  set legendPosition(LegendPosition value) =>
+  LegendPositions get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPositions value) =>
       throw _privateConstructorUsedError;
-  IconType get iconType => throw _privateConstructorUsedError;
-  set iconType(IconType value) => throw _privateConstructorUsedError;
+  IconTypes get iconType => throw _privateConstructorUsedError;
+  set iconType(IconTypes value) => throw _privateConstructorUsedError;
   List<int> get barColor => throw _privateConstructorUsedError;
   set barColor(List<int> value) => throw _privateConstructorUsedError;
   double get barWidth => throw _privateConstructorUsedError;
@@ -86,8 +86,8 @@ abstract class $MultiDeviceMultiFieldBarChartWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> titleFont,
       Map<String, dynamic> legendFont,
       BarChartDirection chartDirection,
-      LegendPosition legendPosition,
-      IconType iconType,
+      LegendPositions legendPosition,
+      IconTypes iconType,
       List<int> barColor,
       double barWidth,
       double barRadius,
@@ -162,11 +162,11 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPosition,
+              as LegendPositions,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconType,
+              as IconTypes,
       barColor: null == barColor
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
@@ -227,8 +227,8 @@ abstract class _$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> titleFont,
       Map<String, dynamic> legendFont,
       BarChartDirection chartDirection,
-      LegendPosition legendPosition,
-      IconType iconType,
+      LegendPositions legendPosition,
+      IconTypes iconType,
       List<int> barColor,
       double barWidth,
       double barRadius,
@@ -301,11 +301,11 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPosition,
+              as LegendPositions,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconType,
+              as IconTypes,
       barColor: null == barColor
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
@@ -371,8 +371,8 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
         'fontBold': false
       },
       this.chartDirection = BarChartDirection.vertical,
-      this.legendPosition = LegendPosition.right,
-      this.iconType = IconType.seriesType,
+      this.legendPosition = LegendPositions.right,
+      this.iconType = IconTypes.seriesType,
       this.barColor = const [],
       this.barWidth = 0.2,
       this.barRadius = 0.0,
@@ -414,10 +414,10 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
   BarChartDirection chartDirection;
   @override
   @JsonKey()
-  LegendPosition legendPosition;
+  LegendPositions legendPosition;
   @override
   @JsonKey()
-  IconType iconType;
+  IconTypes iconType;
   @override
   @JsonKey()
   List<int> barColor;
@@ -481,8 +481,8 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
           Map<String, dynamic> titleFont,
           Map<String, dynamic> legendFont,
           BarChartDirection chartDirection,
-          LegendPosition legendPosition,
-          IconType iconType,
+          LegendPositions legendPosition,
+          IconTypes iconType,
           List<int> barColor,
           double barWidth,
           double barRadius,
@@ -519,11 +519,11 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
   BarChartDirection get chartDirection;
   set chartDirection(BarChartDirection value);
   @override
-  LegendPosition get legendPosition;
-  set legendPosition(LegendPosition value);
+  LegendPositions get legendPosition;
+  set legendPosition(LegendPositions value);
   @override
-  IconType get iconType;
-  set iconType(IconType value);
+  IconTypes get iconType;
+  set iconType(IconTypes value);
   @override
   List<int> get barColor;
   set barColor(List<int> value);
