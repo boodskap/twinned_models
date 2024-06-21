@@ -24,26 +24,36 @@ MultiDeviceMultiFieldBarChartWidgetConfig
 mixin _$MultiDeviceMultiFieldBarChartWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  List<String> get deviceId => throw _privateConstructorUsedError;
-  set deviceId(List<String> value) => throw _privateConstructorUsedError;
-  List<String> get field => throw _privateConstructorUsedError;
-  set field(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get deviceIds => throw _privateConstructorUsedError;
+  set deviceIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  BarChartType get chartType => throw _privateConstructorUsedError;
-  set chartType(BarChartType value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get legendFont => throw _privateConstructorUsedError;
+  set legendFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   BarChartDirection get chartDirection => throw _privateConstructorUsedError;
   set chartDirection(BarChartDirection value) =>
       throw _privateConstructorUsedError;
-  int get barColor => throw _privateConstructorUsedError;
-  set barColor(int value) => throw _privateConstructorUsedError;
-  int get barBorderColor => throw _privateConstructorUsedError;
-  set barBorderColor(int value) => throw _privateConstructorUsedError;
+  LegendPosition get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPosition value) =>
+      throw _privateConstructorUsedError;
+  IconType get iconType => throw _privateConstructorUsedError;
+  set iconType(IconType value) => throw _privateConstructorUsedError;
+  List<int> get barColor => throw _privateConstructorUsedError;
+  set barColor(List<int> value) => throw _privateConstructorUsedError;
   double get barWidth => throw _privateConstructorUsedError;
   set barWidth(double value) => throw _privateConstructorUsedError;
+  double get barRadius => throw _privateConstructorUsedError;
+  set barRadius(double value) => throw _privateConstructorUsedError;
+  double get legendDuration => throw _privateConstructorUsedError;
+  set legendDuration(double value) => throw _privateConstructorUsedError;
   bool get showTooltip => throw _privateConstructorUsedError;
   set showTooltip(bool value) => throw _privateConstructorUsedError;
+  bool get legendVisibility => throw _privateConstructorUsedError;
+  set legendVisibility(bool value) => throw _privateConstructorUsedError;
   int get chartBgColor => throw _privateConstructorUsedError;
   set chartBgColor(int value) => throw _privateConstructorUsedError;
   int get chartAreaColor => throw _privateConstructorUsedError;
@@ -71,15 +81,19 @@ abstract class $MultiDeviceMultiFieldBarChartWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
-      List<String> deviceId,
-      List<String> field,
+      List<String> deviceIds,
+      List<String> fields,
       Map<String, dynamic> titleFont,
-      BarChartType chartType,
+      Map<String, dynamic> legendFont,
       BarChartDirection chartDirection,
-      int barColor,
-      int barBorderColor,
+      LegendPosition legendPosition,
+      IconType iconType,
+      List<int> barColor,
       double barWidth,
+      double barRadius,
+      double legendDuration,
       bool showTooltip,
+      bool legendVisibility,
       int chartBgColor,
       int chartAreaColor,
       int tooltipBgColor,
@@ -102,15 +116,19 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? title = null,
-    Object? deviceId = null,
-    Object? field = null,
+    Object? deviceIds = null,
+    Object? fields = null,
     Object? titleFont = null,
-    Object? chartType = null,
+    Object? legendFont = null,
     Object? chartDirection = null,
+    Object? legendPosition = null,
+    Object? iconType = null,
     Object? barColor = null,
-    Object? barBorderColor = null,
     Object? barWidth = null,
+    Object? barRadius = null,
+    Object? legendDuration = null,
     Object? showTooltip = null,
+    Object? legendVisibility = null,
     Object? chartBgColor = null,
     Object? chartAreaColor = null,
     Object? tooltipBgColor = null,
@@ -121,41 +139,57 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      deviceId: null == deviceId
-          ? _value.deviceId
-          : deviceId // ignore: cast_nullable_to_non_nullable
+      deviceIds: null == deviceIds
+          ? _value.deviceIds
+          : deviceIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      chartType: null == chartType
-          ? _value.chartType
-          : chartType // ignore: cast_nullable_to_non_nullable
-              as BarChartType,
+      legendFont: null == legendFont
+          ? _value.legendFont
+          : legendFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       chartDirection: null == chartDirection
           ? _value.chartDirection
           : chartDirection // ignore: cast_nullable_to_non_nullable
               as BarChartDirection,
+      legendPosition: null == legendPosition
+          ? _value.legendPosition
+          : legendPosition // ignore: cast_nullable_to_non_nullable
+              as LegendPosition,
+      iconType: null == iconType
+          ? _value.iconType
+          : iconType // ignore: cast_nullable_to_non_nullable
+              as IconType,
       barColor: null == barColor
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      barBorderColor: null == barBorderColor
-          ? _value.barBorderColor
-          : barBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
+              as List<int>,
       barWidth: null == barWidth
           ? _value.barWidth
           : barWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      barRadius: null == barRadius
+          ? _value.barRadius
+          : barRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      legendDuration: null == legendDuration
+          ? _value.legendDuration
+          : legendDuration // ignore: cast_nullable_to_non_nullable
+              as double,
       showTooltip: null == showTooltip
           ? _value.showTooltip
           : showTooltip // ignore: cast_nullable_to_non_nullable
+              as bool,
+      legendVisibility: null == legendVisibility
+          ? _value.legendVisibility
+          : legendVisibility // ignore: cast_nullable_to_non_nullable
               as bool,
       chartBgColor: null == chartBgColor
           ? _value.chartBgColor
@@ -188,15 +222,19 @@ abstract class _$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String title,
-      List<String> deviceId,
-      List<String> field,
+      List<String> deviceIds,
+      List<String> fields,
       Map<String, dynamic> titleFont,
-      BarChartType chartType,
+      Map<String, dynamic> legendFont,
       BarChartDirection chartDirection,
-      int barColor,
-      int barBorderColor,
+      LegendPosition legendPosition,
+      IconType iconType,
+      List<int> barColor,
       double barWidth,
+      double barRadius,
+      double legendDuration,
       bool showTooltip,
+      bool legendVisibility,
       int chartBgColor,
       int chartAreaColor,
       int tooltipBgColor,
@@ -217,15 +255,19 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? deviceId = null,
-    Object? field = null,
+    Object? deviceIds = null,
+    Object? fields = null,
     Object? titleFont = null,
-    Object? chartType = null,
+    Object? legendFont = null,
     Object? chartDirection = null,
+    Object? legendPosition = null,
+    Object? iconType = null,
     Object? barColor = null,
-    Object? barBorderColor = null,
     Object? barWidth = null,
+    Object? barRadius = null,
+    Object? legendDuration = null,
     Object? showTooltip = null,
+    Object? legendVisibility = null,
     Object? chartBgColor = null,
     Object? chartAreaColor = null,
     Object? tooltipBgColor = null,
@@ -236,41 +278,57 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      deviceId: null == deviceId
-          ? _value.deviceId
-          : deviceId // ignore: cast_nullable_to_non_nullable
+      deviceIds: null == deviceIds
+          ? _value.deviceIds
+          : deviceIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      chartType: null == chartType
-          ? _value.chartType
-          : chartType // ignore: cast_nullable_to_non_nullable
-              as BarChartType,
+      legendFont: null == legendFont
+          ? _value.legendFont
+          : legendFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       chartDirection: null == chartDirection
           ? _value.chartDirection
           : chartDirection // ignore: cast_nullable_to_non_nullable
               as BarChartDirection,
+      legendPosition: null == legendPosition
+          ? _value.legendPosition
+          : legendPosition // ignore: cast_nullable_to_non_nullable
+              as LegendPosition,
+      iconType: null == iconType
+          ? _value.iconType
+          : iconType // ignore: cast_nullable_to_non_nullable
+              as IconType,
       barColor: null == barColor
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      barBorderColor: null == barBorderColor
-          ? _value.barBorderColor
-          : barBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
+              as List<int>,
       barWidth: null == barWidth
           ? _value.barWidth
           : barWidth // ignore: cast_nullable_to_non_nullable
               as double,
+      barRadius: null == barRadius
+          ? _value.barRadius
+          : barRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      legendDuration: null == legendDuration
+          ? _value.legendDuration
+          : legendDuration // ignore: cast_nullable_to_non_nullable
+              as double,
       showTooltip: null == showTooltip
           ? _value.showTooltip
           : showTooltip // ignore: cast_nullable_to_non_nullable
+              as bool,
+      legendVisibility: null == legendVisibility
+          ? _value.legendVisibility
+          : legendVisibility // ignore: cast_nullable_to_non_nullable
               as bool,
       chartBgColor: null == chartBgColor
           ? _value.chartBgColor
@@ -298,26 +356,35 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
     extends _MultiDeviceMultiFieldBarChartWidgetConfig {
   _$MultiDeviceMultiFieldBarChartWidgetConfigImpl(
       {this.title = 'Multi Device Multi Field Bar Chart',
-      this.deviceId = const [],
-      this.field = const [],
+      this.deviceIds = const [],
+      this.fields = const [],
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 18,
         'fontColor': 0XFF000000,
         'fontBold': false
       },
-      this.chartType = BarChartType.rectangularBar,
+      this.legendFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 12,
+        'fontColor': 0XFF000000,
+        'fontBold': false
+      },
       this.chartDirection = BarChartDirection.vertical,
-      this.barColor = 0XFF008B8B,
-      this.barBorderColor = 0xFF000000,
+      this.legendPosition = LegendPosition.right,
+      this.iconType = IconType.seriesType,
+      this.barColor = const [],
       this.barWidth = 0.2,
-      this.showTooltip = false,
+      this.barRadius = 0.0,
+      this.legendDuration = 1000,
+      this.showTooltip = true,
+      this.legendVisibility = true,
       this.chartBgColor = 0xFFEAEFF2,
       this.chartAreaColor = 0xFFE8E8E8,
       this.tooltipBgColor = 0xFF000000,
       this.tooltipFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 12,
         'fontColor': 0XFFFFFFFF,
         'fontBold': false
       }})
@@ -332,31 +399,43 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
   String title;
   @override
   @JsonKey()
-  List<String> deviceId;
+  List<String> deviceIds;
   @override
   @JsonKey()
-  List<String> field;
+  List<String> fields;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
-  BarChartType chartType;
+  Map<String, dynamic> legendFont;
   @override
   @JsonKey()
   BarChartDirection chartDirection;
   @override
   @JsonKey()
-  int barColor;
+  LegendPosition legendPosition;
   @override
   @JsonKey()
-  int barBorderColor;
+  IconType iconType;
+  @override
+  @JsonKey()
+  List<int> barColor;
   @override
   @JsonKey()
   double barWidth;
   @override
   @JsonKey()
+  double barRadius;
+  @override
+  @JsonKey()
+  double legendDuration;
+  @override
+  @JsonKey()
   bool showTooltip;
+  @override
+  @JsonKey()
+  bool legendVisibility;
   @override
   @JsonKey()
   int chartBgColor;
@@ -372,7 +451,7 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceMultiFieldBarChartWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, chartType: $chartType, chartDirection: $chartDirection, barColor: $barColor, barBorderColor: $barBorderColor, barWidth: $barWidth, showTooltip: $showTooltip, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
+    return 'MultiDeviceMultiFieldBarChartWidgetConfig(title: $title, deviceIds: $deviceIds, fields: $fields, titleFont: $titleFont, legendFont: $legendFont, chartDirection: $chartDirection, legendPosition: $legendPosition, iconType: $iconType, barColor: $barColor, barWidth: $barWidth, barRadius: $barRadius, legendDuration: $legendDuration, showTooltip: $showTooltip, legendVisibility: $legendVisibility, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
   }
 
   @JsonKey(ignore: true)
@@ -397,15 +476,19 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
     extends MultiDeviceMultiFieldBarChartWidgetConfig {
   factory _MultiDeviceMultiFieldBarChartWidgetConfig(
           {String title,
-          List<String> deviceId,
-          List<String> field,
+          List<String> deviceIds,
+          List<String> fields,
           Map<String, dynamic> titleFont,
-          BarChartType chartType,
+          Map<String, dynamic> legendFont,
           BarChartDirection chartDirection,
-          int barColor,
-          int barBorderColor,
+          LegendPosition legendPosition,
+          IconType iconType,
+          List<int> barColor,
           double barWidth,
+          double barRadius,
+          double legendDuration,
           bool showTooltip,
+          bool legendVisibility,
           int chartBgColor,
           int chartAreaColor,
           int tooltipBgColor,
@@ -421,32 +504,44 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
   String get title;
   set title(String value);
   @override
-  List<String> get deviceId;
-  set deviceId(List<String> value);
+  List<String> get deviceIds;
+  set deviceIds(List<String> value);
   @override
-  List<String> get field;
-  set field(List<String> value);
+  List<String> get fields;
+  set fields(List<String> value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
-  BarChartType get chartType;
-  set chartType(BarChartType value);
+  Map<String, dynamic> get legendFont;
+  set legendFont(Map<String, dynamic> value);
   @override
   BarChartDirection get chartDirection;
   set chartDirection(BarChartDirection value);
   @override
-  int get barColor;
-  set barColor(int value);
+  LegendPosition get legendPosition;
+  set legendPosition(LegendPosition value);
   @override
-  int get barBorderColor;
-  set barBorderColor(int value);
+  IconType get iconType;
+  set iconType(IconType value);
+  @override
+  List<int> get barColor;
+  set barColor(List<int> value);
   @override
   double get barWidth;
   set barWidth(double value);
   @override
+  double get barRadius;
+  set barRadius(double value);
+  @override
+  double get legendDuration;
+  set legendDuration(double value);
+  @override
   bool get showTooltip;
   set showTooltip(bool value);
+  @override
+  bool get legendVisibility;
+  set legendVisibility(bool value);
   @override
   int get chartBgColor;
   set chartBgColor(int value);

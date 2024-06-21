@@ -371,7 +371,7 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
   _$MultiDeviceFieldPageWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
-      this.title = '',
+      this.title = 'Multi Device Field Page',
       this.cityName = '',
       this.paraTitle = '',
       this.paraText = '',
