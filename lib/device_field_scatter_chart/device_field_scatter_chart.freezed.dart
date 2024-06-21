@@ -30,8 +30,8 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
-  set valueFont(Map<String, dynamic> value) =>
+  Map<String, dynamic> get tooltipFont => throw _privateConstructorUsedError;
+  set tooltipFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get legendFont => throw _privateConstructorUsedError;
   set legendFont(Map<String, dynamic> value) =>
@@ -61,6 +61,9 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
   set toolTipBorderColor(int value) => throw _privateConstructorUsedError;
   int get markerColor => throw _privateConstructorUsedError;
   set markerColor(int value) => throw _privateConstructorUsedError;
+  DataMarkerType get dataMarkerType => throw _privateConstructorUsedError;
+  set dataMarkerType(DataMarkerType value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -82,7 +85,7 @@ abstract class $DeviceFieldScatterChartWidgetConfigCopyWith<$Res> {
       String deviceId,
       String field,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
+      Map<String, dynamic> tooltipFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
       LegendPosition legendPosition,
@@ -95,7 +98,8 @@ abstract class $DeviceFieldScatterChartWidgetConfigCopyWith<$Res> {
       double duration,
       int toolTipColor,
       int toolTipBorderColor,
-      int markerColor});
+      int markerColor,
+      DataMarkerType dataMarkerType});
 }
 
 /// @nodoc
@@ -116,7 +120,7 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
-    Object? valueFont = null,
+    Object? tooltipFont = null,
     Object? legendFont = null,
     Object? legendVisibility = null,
     Object? legendPosition = null,
@@ -130,6 +134,7 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
     Object? toolTipColor = null,
     Object? toolTipBorderColor = null,
     Object? markerColor = null,
+    Object? dataMarkerType = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -148,9 +153,9 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
+      tooltipFont: null == tooltipFont
+          ? _value.tooltipFont
+          : tooltipFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       legendFont: null == legendFont
           ? _value.legendFont
@@ -204,6 +209,10 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
           ? _value.markerColor
           : markerColor // ignore: cast_nullable_to_non_nullable
               as int,
+      dataMarkerType: null == dataMarkerType
+          ? _value.dataMarkerType
+          : dataMarkerType // ignore: cast_nullable_to_non_nullable
+              as DataMarkerType,
     ) as $Val);
   }
 }
@@ -222,7 +231,7 @@ abstract class _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String field,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
+      Map<String, dynamic> tooltipFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
       LegendPosition legendPosition,
@@ -235,7 +244,8 @@ abstract class _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<$Res>
       double duration,
       int toolTipColor,
       int toolTipBorderColor,
-      int markerColor});
+      int markerColor,
+      DataMarkerType dataMarkerType});
 }
 
 /// @nodoc
@@ -255,7 +265,7 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
-    Object? valueFont = null,
+    Object? tooltipFont = null,
     Object? legendFont = null,
     Object? legendVisibility = null,
     Object? legendPosition = null,
@@ -269,6 +279,7 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
     Object? toolTipColor = null,
     Object? toolTipBorderColor = null,
     Object? markerColor = null,
+    Object? dataMarkerType = null,
   }) {
     return _then(_$DeviceFieldScatterChartWidgetConfigImpl(
       title: null == title
@@ -287,9 +298,9 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
+      tooltipFont: null == tooltipFont
+          ? _value.tooltipFont
+          : tooltipFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       legendFont: null == legendFont
           ? _value.legendFont
@@ -343,6 +354,10 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.markerColor
           : markerColor // ignore: cast_nullable_to_non_nullable
               as int,
+      dataMarkerType: null == dataMarkerType
+          ? _value.dataMarkerType
+          : dataMarkerType // ignore: cast_nullable_to_non_nullable
+              as DataMarkerType,
     ));
   }
 }
@@ -361,10 +376,10 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.valueFont = const {
+      this.tooltipFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0xFF000000,
+        'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.legendFont = const {
@@ -384,7 +399,8 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
       this.duration = 1000,
       this.toolTipColor = 0xFF263238,
       this.toolTipBorderColor = 0xFF000000,
-      this.markerColor = 0xFF00C3FF})
+      this.markerColor = 0xFF00C3FF,
+      this.dataMarkerType = DataMarkerType.circle})
       : super._();
 
   factory _$DeviceFieldScatterChartWidgetConfigImpl.fromJson(
@@ -405,7 +421,7 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
-  Map<String, dynamic> valueFont;
+  Map<String, dynamic> tooltipFont;
   @override
   @JsonKey()
   Map<String, dynamic> legendFont;
@@ -445,10 +461,13 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   @override
   @JsonKey()
   int markerColor;
+  @override
+  @JsonKey()
+  DataMarkerType dataMarkerType;
 
   @override
   String toString() {
-    return 'DeviceFieldScatterChartWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, legendFont: $legendFont, legendVisibility: $legendVisibility, legendPosition: $legendPosition, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, bgColor: $bgColor, borderColor: $borderColor, plotAreaBackgroundColor: $plotAreaBackgroundColor, enableTooltip: $enableTooltip, duration: $duration, toolTipColor: $toolTipColor, toolTipBorderColor: $toolTipBorderColor, markerColor: $markerColor)';
+    return 'DeviceFieldScatterChartWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, tooltipFont: $tooltipFont, legendFont: $legendFont, legendVisibility: $legendVisibility, legendPosition: $legendPosition, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, bgColor: $bgColor, borderColor: $borderColor, plotAreaBackgroundColor: $plotAreaBackgroundColor, enableTooltip: $enableTooltip, duration: $duration, toolTipColor: $toolTipColor, toolTipBorderColor: $toolTipBorderColor, markerColor: $markerColor, dataMarkerType: $dataMarkerType)';
   }
 
   @JsonKey(ignore: true)
@@ -470,24 +489,26 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
 abstract class _DeviceFieldScatterChartWidgetConfig
     extends DeviceFieldScatterChartWidgetConfig {
   factory _DeviceFieldScatterChartWidgetConfig(
-      {String title,
-      String deviceId,
-      String field,
-      Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> legendFont,
-      bool legendVisibility,
-      LegendPosition legendPosition,
-      LegendIconType iconType,
-      bool dataLabelVisibility,
-      int bgColor,
-      int borderColor,
-      int plotAreaBackgroundColor,
-      bool enableTooltip,
-      double duration,
-      int toolTipColor,
-      int toolTipBorderColor,
-      int markerColor}) = _$DeviceFieldScatterChartWidgetConfigImpl;
+          {String title,
+          String deviceId,
+          String field,
+          Map<String, dynamic> titleFont,
+          Map<String, dynamic> tooltipFont,
+          Map<String, dynamic> legendFont,
+          bool legendVisibility,
+          LegendPosition legendPosition,
+          LegendIconType iconType,
+          bool dataLabelVisibility,
+          int bgColor,
+          int borderColor,
+          int plotAreaBackgroundColor,
+          bool enableTooltip,
+          double duration,
+          int toolTipColor,
+          int toolTipBorderColor,
+          int markerColor,
+          DataMarkerType dataMarkerType}) =
+      _$DeviceFieldScatterChartWidgetConfigImpl;
   _DeviceFieldScatterChartWidgetConfig._() : super._();
 
   factory _DeviceFieldScatterChartWidgetConfig.fromJson(
@@ -507,8 +528,8 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get valueFont;
-  set valueFont(Map<String, dynamic> value);
+  Map<String, dynamic> get tooltipFont;
+  set tooltipFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get legendFont;
   set legendFont(Map<String, dynamic> value);
@@ -548,6 +569,9 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   @override
   int get markerColor;
   set markerColor(int value);
+  @override
+  DataMarkerType get dataMarkerType;
+  set dataMarkerType(DataMarkerType value);
   @override
   @JsonKey(ignore: true)
   _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<

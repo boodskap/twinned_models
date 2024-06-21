@@ -20,11 +20,11 @@ _$DeviceFieldScatterChartWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          valueFont: json['valueFont'] as Map<String, dynamic>? ??
+          tooltipFont: json['tooltipFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
-                'fontColor': 0xFF000000,
+                'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
           legendFont: json['legendFont'] as Map<String, dynamic>? ??
@@ -52,6 +52,9 @@ _$DeviceFieldScatterChartWidgetConfigImpl
           toolTipBorderColor:
               (json['toolTipBorderColor'] as num?)?.toInt() ?? 0xFF000000,
           markerColor: (json['markerColor'] as num?)?.toInt() ?? 0xFF00C3FF,
+          dataMarkerType: $enumDecodeNullable(
+                  _$DataMarkerTypeEnumMap, json['dataMarkerType']) ??
+              DataMarkerType.circle,
         );
 
 Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
@@ -61,7 +64,7 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'field': instance.field,
       'titleFont': instance.titleFont,
-      'valueFont': instance.valueFont,
+      'tooltipFont': instance.tooltipFont,
       'legendFont': instance.legendFont,
       'legendVisibility': instance.legendVisibility,
       'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
@@ -75,6 +78,7 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'toolTipColor': instance.toolTipColor,
       'toolTipBorderColor': instance.toolTipBorderColor,
       'markerColor': instance.markerColor,
+      'dataMarkerType': _$DataMarkerTypeEnumMap[instance.dataMarkerType]!,
     };
 
 const _$LegendPositionEnumMap = {
@@ -96,4 +100,17 @@ const _$LegendIconTypeEnumMap = {
   LegendIconType.diamond: 'diamond',
   LegendIconType.triangle: 'triangle',
   LegendIconType.invertedTriangle: 'invertedTriangle',
+};
+
+const _$DataMarkerTypeEnumMap = {
+  DataMarkerType.circle: 'circle',
+  DataMarkerType.rectangle: 'rectangle',
+  DataMarkerType.image: 'image',
+  DataMarkerType.pentagon: 'pentagon',
+  DataMarkerType.verticalLine: 'verticalLine',
+  DataMarkerType.horizontalLine: 'horizontalLine',
+  DataMarkerType.diamond: 'diamond',
+  DataMarkerType.triangle: 'triangle',
+  DataMarkerType.invertedTriangle: 'invertedTriangle',
+  DataMarkerType.none: 'none',
 };
