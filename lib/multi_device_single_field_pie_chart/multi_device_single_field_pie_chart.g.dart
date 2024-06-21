@@ -44,8 +44,8 @@ _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
                 'fontBold': true
               },
           legendVisibility: json['legendVisibility'] as bool? ?? true,
-          iconType: $enumDecodeNullable(_$IconTypeEnumMap, json['iconType']) ??
-              IconType.rectangle,
+          iconType: $enumDecodeNullable(_$_IconTypeEnumMap, json['iconType']) ??
+              _IconType.rectangle,
           dataLabelVisibility: json['dataLabelVisibility'] as bool? ?? true,
           labelBgColor: (json['labelBgColor'] as num?)?.toInt() ?? 0x00FFFFFF,
           labelBorderColor:
@@ -57,8 +57,8 @@ _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
               (json['labelBorderRadius'] as num?)?.toDouble() ?? 5.0,
           labelOpacity: (json['labelOpacity'] as num?)?.toDouble() ?? 1.0,
           labelPosition: $enumDecodeNullable(
-                  _$ChartDataLabelPositionEnumMap, json['labelPosition']) ??
-              ChartDataLabelPosition.outside,
+                  _$_ChartDataLabelPositionEnumMap, json['labelPosition']) ??
+              _ChartDataLabelPosition.outside,
           legendPosition: $enumDecodeNullable(
                   _$LegendPositionEnumMap, json['legendPosition']) ??
               LegendPosition.right,
@@ -82,7 +82,7 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
       'valueFont': instance.valueFont,
       'labelFont': instance.labelFont,
       'legendVisibility': instance.legendVisibility,
-      'iconType': _$IconTypeEnumMap[instance.iconType]!,
+      'iconType': _$_IconTypeEnumMap[instance.iconType]!,
       'dataLabelVisibility': instance.dataLabelVisibility,
       'labelBgColor': instance.labelBgColor,
       'labelBorderColor': instance.labelBorderColor,
@@ -90,7 +90,8 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
       'labelBorderWidth': instance.labelBorderWidth,
       'labelBorderRadius': instance.labelBorderRadius,
       'labelOpacity': instance.labelOpacity,
-      'labelPosition': _$ChartDataLabelPositionEnumMap[instance.labelPosition]!,
+      'labelPosition':
+          _$_ChartDataLabelPositionEnumMap[instance.labelPosition]!,
       'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
       'enableTooltip': instance.enableTooltip,
       'explode': instance.explode,
@@ -99,22 +100,22 @@ Map<String, dynamic> _$$MultiDeviceSingleFieldPieChartWidgetConfigImplToJson(
       'strokeColor': instance.strokeColor,
     };
 
-const _$IconTypeEnumMap = {
-  IconType.rectangle: 'rectangle',
-  IconType.circle: 'circle',
-  IconType.seriesType: 'seriesType',
-  IconType.image: 'image',
-  IconType.pentagon: 'pentagon',
-  IconType.verticalLine: 'verticalLine',
-  IconType.horizontalLine: 'horizontalLine',
-  IconType.diamond: 'diamond',
-  IconType.triangle: 'triangle',
-  IconType.invertedTriangle: 'invertedTriangle',
+const _$_IconTypeEnumMap = {
+  _IconType.rectangle: 'rectangle',
+  _IconType.circle: 'circle',
+  _IconType.seriesType: 'seriesType',
+  _IconType.image: 'image',
+  _IconType.pentagon: 'pentagon',
+  _IconType.verticalLine: 'verticalLine',
+  _IconType.horizontalLine: 'horizontalLine',
+  _IconType.diamond: 'diamond',
+  _IconType.triangle: 'triangle',
+  _IconType.invertedTriangle: 'invertedTriangle',
 };
 
-const _$ChartDataLabelPositionEnumMap = {
-  ChartDataLabelPosition.inside: 'inside',
-  ChartDataLabelPosition.outside: 'outside',
+const _$_ChartDataLabelPositionEnumMap = {
+  _ChartDataLabelPosition.inside: 'inside',
+  _ChartDataLabelPosition.outside: 'outside',
 };
 
 const _$LegendPositionEnumMap = {
