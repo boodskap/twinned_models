@@ -1,30 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 part 'multi_device_multi_field_bar_chart.freezed.dart';
 part 'multi_device_multi_field_bar_chart.g.dart';
 
 enum BarChartDirection { vertical, horizontal }
-
-enum IconTypes {
-  rectangle,
-  circle,
-  seriesType,
-  image,
-  pentagon,
-  verticalLine,
-  horizontalLine,
-  diamond,
-  triangle,
-  invertedTriangle,
-}
-
-enum LegendPositions {
-  top,
-  bottom,
-  left,
-  right,
-}
 
 @unfreezed
 class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
@@ -39,19 +20,19 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 18,
       'fontColor': 0XFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
       'fontColor': 0XFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> legendFont,
     @Default(BarChartDirection.vertical) BarChartDirection chartDirection,
-    @Default(LegendPositions.right) LegendPositions legendPosition,
-    @Default(IconTypes.seriesType) IconTypes iconType,
+    @Default(LegendPosition.right) LegendPosition legendPosition,
+    @Default(LegendIconType.seriesType) LegendIconType iconType,
     @Default([]) List<int> barColor,
     @Default(0.2) double barWidth,
     @Default(0.0) double barRadius,
@@ -65,7 +46,7 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 12,
       'fontColor': 0XFFFFFFFF,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> tooltipFont,
   }) = _MultiDeviceMultiFieldBarChartWidgetConfig;
@@ -131,9 +112,9 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
       case 'chartDirection':
         return BarChartDirection.values.asNameMap().keys.toList();
       case 'legendPosition':
-        return LegendPositions.values.asNameMap().keys.toList();
+        return LegendPosition.values.asNameMap().keys.toList();
       case 'iconType':
-        return IconTypes.values.asNameMap().keys.toList();
+        return LegendIconType.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
@@ -204,4 +185,6 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
   bool isValid(String parameter, value) {
     return true;
   }
+
+  
 }

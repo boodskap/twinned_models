@@ -36,11 +36,11 @@ _$DeviceFieldScatterChartWidgetConfigImpl
               },
           legendVisibility: json['legendVisibility'] as bool? ?? true,
           legendPosition: $enumDecodeNullable(
-                  _$LegendPositionsEnumMap, json['legendPosition']) ??
-              LegendPositions.right,
+                  _$LegendPositionEnumMap, json['legendPosition']) ??
+              LegendPosition.right,
           iconType:
-              $enumDecodeNullable(_$LegendIconTypesEnumMap, json['iconType']) ??
-                  LegendIconTypes.rectangle,
+              $enumDecodeNullable(_$LegendIconTypeEnumMap, json['iconType']) ??
+                  LegendIconType.rectangle,
           dataLabelVisibility: json['dataLabelVisibility'] as bool? ?? true,
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
@@ -64,8 +64,8 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'valueFont': instance.valueFont,
       'legendFont': instance.legendFont,
       'legendVisibility': instance.legendVisibility,
-      'legendPosition': _$LegendPositionsEnumMap[instance.legendPosition]!,
-      'iconType': _$LegendIconTypesEnumMap[instance.iconType]!,
+      'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
+      'iconType': _$LegendIconTypeEnumMap[instance.iconType]!,
       'dataLabelVisibility': instance.dataLabelVisibility,
       'bgColor': instance.bgColor,
       'borderColor': instance.borderColor,
@@ -77,22 +77,23 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'markerColor': instance.markerColor,
     };
 
-const _$LegendPositionsEnumMap = {
-  LegendPositions.top: 'top',
-  LegendPositions.bottom: 'bottom',
-  LegendPositions.left: 'left',
-  LegendPositions.right: 'right',
+const _$LegendPositionEnumMap = {
+  LegendPosition.auto: 'auto',
+  LegendPosition.bottom: 'bottom',
+  LegendPosition.left: 'left',
+  LegendPosition.right: 'right',
+  LegendPosition.top: 'top',
 };
 
-const _$LegendIconTypesEnumMap = {
-  LegendIconTypes.rectangle: 'rectangle',
-  LegendIconTypes.circle: 'circle',
-  LegendIconTypes.seriesType: 'seriesType',
-  LegendIconTypes.image: 'image',
-  LegendIconTypes.pentagon: 'pentagon',
-  LegendIconTypes.verticalLine: 'verticalLine',
-  LegendIconTypes.horizontalLine: 'horizontalLine',
-  LegendIconTypes.diamond: 'diamond',
-  LegendIconTypes.triangle: 'triangle',
-  LegendIconTypes.invertedTriangle: 'invertedTriangle',
+const _$LegendIconTypeEnumMap = {
+  LegendIconType.seriesType: 'seriesType',
+  LegendIconType.circle: 'circle',
+  LegendIconType.rectangle: 'rectangle',
+  LegendIconType.image: 'image',
+  LegendIconType.pentagon: 'pentagon',
+  LegendIconType.verticalLine: 'verticalLine',
+  LegendIconType.horizontalLine: 'horizontalLine',
+  LegendIconType.diamond: 'diamond',
+  LegendIconType.triangle: 'triangle',
+  LegendIconType.invertedTriangle: 'invertedTriangle',
 };

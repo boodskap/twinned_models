@@ -25,23 +25,24 @@ _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
                 'fontFamily': 'Open Sans',
                 'fontSize': 18,
                 'fontColor': 0XFF000000,
-                'fontBold': false
+                'fontBold': true
               },
           legendFont: json['legendFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 12,
                 'fontColor': 0XFF000000,
-                'fontBold': false
+                'fontBold': true
               },
           chartDirection: $enumDecodeNullable(
                   _$BarChartDirectionEnumMap, json['chartDirection']) ??
               BarChartDirection.vertical,
           legendPosition: $enumDecodeNullable(
-                  _$LegendPositionsEnumMap, json['legendPosition']) ??
-              LegendPositions.right,
-          iconType: $enumDecodeNullable(_$IconTypesEnumMap, json['iconType']) ??
-              IconTypes.seriesType,
+                  _$LegendPositionEnumMap, json['legendPosition']) ??
+              LegendPosition.right,
+          iconType:
+              $enumDecodeNullable(_$LegendIconTypeEnumMap, json['iconType']) ??
+                  LegendIconType.seriesType,
           barColor: (json['barColor'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
@@ -61,7 +62,7 @@ _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
                 'fontFamily': 'Open Sans',
                 'fontSize': 12,
                 'fontColor': 0XFFFFFFFF,
-                'fontBold': false
+                'fontBold': true
               },
         );
 
@@ -74,8 +75,8 @@ Map<String, dynamic> _$$MultiDeviceMultiFieldBarChartWidgetConfigImplToJson(
       'titleFont': instance.titleFont,
       'legendFont': instance.legendFont,
       'chartDirection': _$BarChartDirectionEnumMap[instance.chartDirection]!,
-      'legendPosition': _$LegendPositionsEnumMap[instance.legendPosition]!,
-      'iconType': _$IconTypesEnumMap[instance.iconType]!,
+      'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
+      'iconType': _$LegendIconTypeEnumMap[instance.iconType]!,
       'barColor': instance.barColor,
       'barWidth': instance.barWidth,
       'barRadius': instance.barRadius,
@@ -93,22 +94,23 @@ const _$BarChartDirectionEnumMap = {
   BarChartDirection.horizontal: 'horizontal',
 };
 
-const _$LegendPositionsEnumMap = {
-  LegendPositions.top: 'top',
-  LegendPositions.bottom: 'bottom',
-  LegendPositions.left: 'left',
-  LegendPositions.right: 'right',
+const _$LegendPositionEnumMap = {
+  LegendPosition.auto: 'auto',
+  LegendPosition.bottom: 'bottom',
+  LegendPosition.left: 'left',
+  LegendPosition.right: 'right',
+  LegendPosition.top: 'top',
 };
 
-const _$IconTypesEnumMap = {
-  IconTypes.rectangle: 'rectangle',
-  IconTypes.circle: 'circle',
-  IconTypes.seriesType: 'seriesType',
-  IconTypes.image: 'image',
-  IconTypes.pentagon: 'pentagon',
-  IconTypes.verticalLine: 'verticalLine',
-  IconTypes.horizontalLine: 'horizontalLine',
-  IconTypes.diamond: 'diamond',
-  IconTypes.triangle: 'triangle',
-  IconTypes.invertedTriangle: 'invertedTriangle',
+const _$LegendIconTypeEnumMap = {
+  LegendIconType.seriesType: 'seriesType',
+  LegendIconType.circle: 'circle',
+  LegendIconType.rectangle: 'rectangle',
+  LegendIconType.image: 'image',
+  LegendIconType.pentagon: 'pentagon',
+  LegendIconType.verticalLine: 'verticalLine',
+  LegendIconType.horizontalLine: 'horizontalLine',
+  LegendIconType.diamond: 'diamond',
+  LegendIconType.triangle: 'triangle',
+  LegendIconType.invertedTriangle: 'invertedTriangle',
 };

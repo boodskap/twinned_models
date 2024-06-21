@@ -1,33 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
-
+import 'package:syncfusion_flutter_charts/charts.dart';
 part 'multi_device_single_field_pie_chart.freezed.dart';
 part 'multi_device_single_field_pie_chart.g.dart';
-
-enum ChartDataLabelPositions {
-  inside,
-  outside,
-}
-
-enum IconTypes {
-  rectangle,
-  circle,
-  seriesType,
-  image,
-  pentagon,
-  verticalLine,
-  horizontalLine,
-  diamond,
-  triangle,
-  invertedTriangle
-}
-
-enum LegendPositions {
-  top,
-  bottom,
-  left,
-  right,
-}
 
 @unfreezed
 class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
@@ -63,7 +38,7 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> labelFont,
     @Default(true) bool legendVisibility,
-    @Default(IconTypes.rectangle) IconTypes iconType,
+    @Default(LegendIconType.rectangle) LegendIconType iconType,
     @Default(true) bool dataLabelVisibility,
     @Default(0x00FFFFFF) int labelBgColor,
     @Default(0x00000000) int labelBorderColor,
@@ -71,9 +46,9 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
     @Default(0.0) double labelBorderWidth,
     @Default(5.0) double labelBorderRadius,
     @Default(1.0) double labelOpacity,
-    @Default(ChartDataLabelPositions.outside)
-    ChartDataLabelPositions labelPosition,
-    @Default(LegendPositions.right) LegendPositions legendPosition,
+    @Default(ChartDataLabelPosition.outside)
+    ChartDataLabelPosition labelPosition,
+    @Default(LegendPosition.right) LegendPosition legendPosition,
     @Default(true) bool enableTooltip,
     @Default(true) bool explode,
     @Default(1.0) double opacity,
@@ -147,11 +122,11 @@ class MultiDeviceSingleFieldPieChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'labelPosition':
-        return ChartDataLabelPositions.values.asNameMap().keys.toList();
+        return ChartDataLabelPosition.values.asNameMap().keys.toList();
       case 'legendPosition':
-        return LegendPositions.values.asNameMap().keys.toList();
+        return LegendPosition.values.asNameMap().keys.toList();
       case 'iconType':
-        return IconTypes.values.asNameMap().keys.toList();
+        return LegendIconType.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }

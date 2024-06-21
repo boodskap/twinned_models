@@ -45,8 +45,8 @@ mixin _$MultiDeviceSingleFieldPieChartWidgetConfig {
       throw _privateConstructorUsedError;
   bool get legendVisibility => throw _privateConstructorUsedError;
   set legendVisibility(bool value) => throw _privateConstructorUsedError;
-  IconTypes get iconType => throw _privateConstructorUsedError;
-  set iconType(IconTypes value) => throw _privateConstructorUsedError;
+  LegendIconType get iconType => throw _privateConstructorUsedError;
+  set iconType(LegendIconType value) => throw _privateConstructorUsedError;
   bool get dataLabelVisibility => throw _privateConstructorUsedError;
   set dataLabelVisibility(bool value) => throw _privateConstructorUsedError;
   int get labelBgColor => throw _privateConstructorUsedError;
@@ -61,12 +61,12 @@ mixin _$MultiDeviceSingleFieldPieChartWidgetConfig {
   set labelBorderRadius(double value) => throw _privateConstructorUsedError;
   double get labelOpacity => throw _privateConstructorUsedError;
   set labelOpacity(double value) => throw _privateConstructorUsedError;
-  ChartDataLabelPositions get labelPosition =>
+  ChartDataLabelPosition get labelPosition =>
       throw _privateConstructorUsedError;
-  set labelPosition(ChartDataLabelPositions value) =>
+  set labelPosition(ChartDataLabelPosition value) =>
       throw _privateConstructorUsedError;
-  LegendPositions get legendPosition => throw _privateConstructorUsedError;
-  set legendPosition(LegendPositions value) =>
+  LegendPosition get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPosition value) =>
       throw _privateConstructorUsedError;
   bool get enableTooltip => throw _privateConstructorUsedError;
   set enableTooltip(bool value) => throw _privateConstructorUsedError;
@@ -105,7 +105,7 @@ abstract class $MultiDeviceSingleFieldPieChartWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       bool legendVisibility,
-      IconTypes iconType,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int labelBgColor,
       int labelBorderColor,
@@ -113,8 +113,8 @@ abstract class $MultiDeviceSingleFieldPieChartWidgetConfigCopyWith<$Res> {
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      ChartDataLabelPositions labelPosition,
-      LegendPositions legendPosition,
+      ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -207,7 +207,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconTypes,
+              as LegendIconType,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -239,11 +239,11 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
       labelPosition: null == labelPosition
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
-              as ChartDataLabelPositions,
+              as ChartDataLabelPosition,
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPositions,
+              as LegendPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -289,7 +289,7 @@ abstract class _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       bool legendVisibility,
-      IconTypes iconType,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int labelBgColor,
       int labelBorderColor,
@@ -297,8 +297,8 @@ abstract class _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<$Res>
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      ChartDataLabelPositions labelPosition,
-      LegendPositions legendPosition,
+      ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -389,7 +389,7 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as IconTypes,
+              as LegendIconType,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -421,11 +421,11 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
       labelPosition: null == labelPosition
           ? _value.labelPosition
           : labelPosition // ignore: cast_nullable_to_non_nullable
-              as ChartDataLabelPositions,
+              as ChartDataLabelPosition,
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPositions,
+              as LegendPosition,
       enableTooltip: null == enableTooltip
           ? _value.enableTooltip
           : enableTooltip // ignore: cast_nullable_to_non_nullable
@@ -480,7 +480,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
         'fontBold': true
       },
       this.legendVisibility = true,
-      this.iconType = IconTypes.rectangle,
+      this.iconType = LegendIconType.rectangle,
       this.dataLabelVisibility = true,
       this.labelBgColor = 0x00FFFFFF,
       this.labelBorderColor = 0x00000000,
@@ -488,8 +488,8 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
       this.labelBorderWidth = 0.0,
       this.labelBorderRadius = 5.0,
       this.labelOpacity = 1.0,
-      this.labelPosition = ChartDataLabelPositions.outside,
-      this.legendPosition = LegendPositions.right,
+      this.labelPosition = ChartDataLabelPosition.outside,
+      this.legendPosition = LegendPosition.right,
       this.enableTooltip = true,
       this.explode = true,
       this.opacity = 1.0,
@@ -533,7 +533,7 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
   bool legendVisibility;
   @override
   @JsonKey()
-  IconTypes iconType;
+  LegendIconType iconType;
   @override
   @JsonKey()
   bool dataLabelVisibility;
@@ -557,10 +557,10 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
   double labelOpacity;
   @override
   @JsonKey()
-  ChartDataLabelPositions labelPosition;
+  ChartDataLabelPosition labelPosition;
   @override
   @JsonKey()
-  LegendPositions legendPosition;
+  LegendPosition legendPosition;
   @override
   @JsonKey()
   bool enableTooltip;
@@ -613,7 +613,7 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
       bool legendVisibility,
-      IconTypes iconType,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int labelBgColor,
       int labelBorderColor,
@@ -621,8 +621,8 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
       double labelBorderWidth,
       double labelBorderRadius,
       double labelOpacity,
-      ChartDataLabelPositions labelPosition,
-      LegendPositions legendPosition,
+      ChartDataLabelPosition labelPosition,
+      LegendPosition legendPosition,
       bool enableTooltip,
       bool explode,
       double opacity,
@@ -665,8 +665,8 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
   bool get legendVisibility;
   set legendVisibility(bool value);
   @override
-  IconTypes get iconType;
-  set iconType(IconTypes value);
+  LegendIconType get iconType;
+  set iconType(LegendIconType value);
   @override
   bool get dataLabelVisibility;
   set dataLabelVisibility(bool value);
@@ -689,11 +689,11 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
   double get labelOpacity;
   set labelOpacity(double value);
   @override
-  ChartDataLabelPositions get labelPosition;
-  set labelPosition(ChartDataLabelPositions value);
+  ChartDataLabelPosition get labelPosition;
+  set labelPosition(ChartDataLabelPosition value);
   @override
-  LegendPositions get legendPosition;
-  set legendPosition(LegendPositions value);
+  LegendPosition get legendPosition;
+  set legendPosition(LegendPosition value);
   @override
   bool get enableTooltip;
   set enableTooltip(bool value);

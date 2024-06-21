@@ -1,28 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 part 'device_field_scatter_chart.freezed.dart';
 part 'device_field_scatter_chart.g.dart';
-
-enum LegendIconTypes {
-  rectangle,
-  circle,
-  seriesType,
-  image,
-  pentagon,
-  verticalLine,
-  horizontalLine,
-  diamond,
-  triangle,
-  invertedTriangle
-}
-
-enum LegendPositions {
-  top,
-  bottom,
-  left,
-  right,
-}
 
 @unfreezed
 class DeviceFieldScatterChartWidgetConfig extends BaseConfig
@@ -55,8 +36,8 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> legendFont,
     @Default(true) bool legendVisibility,
-    @Default(LegendPositions.right) LegendPositions legendPosition,
-    @Default(LegendIconTypes.rectangle) LegendIconTypes iconType,
+    @Default(LegendPosition.right) LegendPosition legendPosition,
+    @Default(LegendIconType.rectangle) LegendIconType iconType,
     @Default(true) bool dataLabelVisibility,
     @Default(0xFFFFFFFF) int bgColor,
     @Default(0xFFFFFFFF) int borderColor,
@@ -128,9 +109,9 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'legendPosition':
-        return LegendPositions.values.asNameMap().keys.toList();
+        return LegendPosition.values.asNameMap().keys.toList();
       case 'iconType':
-        return LegendIconTypes.values.asNameMap().keys.toList();
+        return LegendIconType.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
@@ -163,8 +144,8 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
     return true;
   }
 
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
-  }
+  // @override
+  // Map<String, dynamic> toJson() {
+  //   return {};
+  // }
 }
