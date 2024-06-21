@@ -4,7 +4,7 @@ import 'package:twinned_models/models.dart';
 part 'device_field_scatter_chart.freezed.dart';
 part 'device_field_scatter_chart.g.dart';
 
-enum IconType {
+enum LegendIconTypes {
   rectangle,
   circle,
   seriesType,
@@ -17,7 +17,7 @@ enum IconType {
   invertedTriangle
 }
 
-enum LegendPosition {
+enum LegendPositions {
   top,
   bottom,
   left,
@@ -55,8 +55,8 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> legendFont,
     @Default(true) bool legendVisibility,
-    @Default(LegendPosition.right) LegendPosition legendPosition,
-    @Default(IconType.rectangle) IconType iconType,
+    @Default(LegendPositions.right) LegendPositions legendPosition,
+    @Default(LegendIconTypes.rectangle) LegendIconTypes iconType,
     @Default(true) bool dataLabelVisibility,
     @Default(0xFFFFFFFF) int bgColor,
     @Default(0xFFFFFFFF) int borderColor,
@@ -92,6 +92,7 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
         return DataType.enumerated;
 
       case 'duration':
+        return DataType.decimal;
       case 'bgColor':
       case 'borderColor':
       case 'plotAreaBackgroundColor':
@@ -128,9 +129,9 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
       case 'legendPosition':
-        return LegendPosition.values.asNameMap().keys.toList();
+        return LegendPositions.values.asNameMap().keys.toList();
       case 'iconType':
-        return IconType.values.asNameMap().keys.toList();
+        return LegendIconTypes.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
