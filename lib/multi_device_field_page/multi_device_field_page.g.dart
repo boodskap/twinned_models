@@ -12,7 +12,7 @@ _$MultiDeviceFieldPageWidgetConfigImpl
         _$MultiDeviceFieldPageWidgetConfigImpl(
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
-          title: json['title'] as String? ?? '',
+          title: json['title'] as String? ?? 'Multi Device Field Page',
           cityName: json['cityName'] as String? ?? '',
           paraTitle: json['paraTitle'] as String? ?? '',
           paraText: json['paraText'] as String? ?? '',

@@ -38,11 +38,11 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
       throw _privateConstructorUsedError;
   bool get legendVisibility => throw _privateConstructorUsedError;
   set legendVisibility(bool value) => throw _privateConstructorUsedError;
-  LegendPositions get legendPosition => throw _privateConstructorUsedError;
-  set legendPosition(LegendPositions value) =>
+  LegendPosition get legendPosition => throw _privateConstructorUsedError;
+  set legendPosition(LegendPosition value) =>
       throw _privateConstructorUsedError;
-  LegendIconTypes get iconType => throw _privateConstructorUsedError;
-  set iconType(LegendIconTypes value) => throw _privateConstructorUsedError;
+  LegendIconType get iconType => throw _privateConstructorUsedError;
+  set iconType(LegendIconType value) => throw _privateConstructorUsedError;
   bool get dataLabelVisibility => throw _privateConstructorUsedError;
   set dataLabelVisibility(bool value) => throw _privateConstructorUsedError;
   int get bgColor => throw _privateConstructorUsedError;
@@ -53,8 +53,8 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
   set plotAreaBackgroundColor(int value) => throw _privateConstructorUsedError;
   bool get enableTooltip => throw _privateConstructorUsedError;
   set enableTooltip(bool value) => throw _privateConstructorUsedError;
-  int get duration => throw _privateConstructorUsedError;
-  set duration(int value) => throw _privateConstructorUsedError;
+  double get duration => throw _privateConstructorUsedError;
+  set duration(double value) => throw _privateConstructorUsedError;
   int get toolTipColor => throw _privateConstructorUsedError;
   set toolTipColor(int value) => throw _privateConstructorUsedError;
   int get toolTipBorderColor => throw _privateConstructorUsedError;
@@ -85,14 +85,14 @@ abstract class $DeviceFieldScatterChartWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPositions legendPosition,
-      LegendIconTypes iconType,
+      LegendPosition legendPosition,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor});
@@ -163,11 +163,11 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPositions,
+              as LegendPosition,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as LegendIconTypes,
+              as LegendIconType,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -191,7 +191,7 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       toolTipColor: null == toolTipColor
           ? _value.toolTipColor
           : toolTipColor // ignore: cast_nullable_to_non_nullable
@@ -225,14 +225,14 @@ abstract class _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPositions legendPosition,
-      LegendIconTypes iconType,
+      LegendPosition legendPosition,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor});
@@ -302,11 +302,11 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
       legendPosition: null == legendPosition
           ? _value.legendPosition
           : legendPosition // ignore: cast_nullable_to_non_nullable
-              as LegendPositions,
+              as LegendPosition,
       iconType: null == iconType
           ? _value.iconType
           : iconType // ignore: cast_nullable_to_non_nullable
-              as LegendIconTypes,
+              as LegendIconType,
       dataLabelVisibility: null == dataLabelVisibility
           ? _value.dataLabelVisibility
           : dataLabelVisibility // ignore: cast_nullable_to_non_nullable
@@ -330,7 +330,7 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
       duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       toolTipColor: null == toolTipColor
           ? _value.toolTipColor
           : toolTipColor // ignore: cast_nullable_to_non_nullable
@@ -374,8 +374,8 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
         'fontBold': true
       },
       this.legendVisibility = true,
-      this.legendPosition = LegendPositions.right,
-      this.iconType = LegendIconTypes.rectangle,
+      this.legendPosition = LegendPosition.right,
+      this.iconType = LegendIconType.rectangle,
       this.dataLabelVisibility = true,
       this.bgColor = 0xFFFFFFFF,
       this.borderColor = 0xFFFFFFFF,
@@ -414,10 +414,10 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   bool legendVisibility;
   @override
   @JsonKey()
-  LegendPositions legendPosition;
+  LegendPosition legendPosition;
   @override
   @JsonKey()
-  LegendIconTypes iconType;
+  LegendIconType iconType;
   @override
   @JsonKey()
   bool dataLabelVisibility;
@@ -435,7 +435,7 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
   bool enableTooltip;
   @override
   @JsonKey()
-  int duration;
+  double duration;
   @override
   @JsonKey()
   int toolTipColor;
@@ -477,14 +477,14 @@ abstract class _DeviceFieldScatterChartWidgetConfig
       Map<String, dynamic> valueFont,
       Map<String, dynamic> legendFont,
       bool legendVisibility,
-      LegendPositions legendPosition,
-      LegendIconTypes iconType,
+      LegendPosition legendPosition,
+      LegendIconType iconType,
       bool dataLabelVisibility,
       int bgColor,
       int borderColor,
       int plotAreaBackgroundColor,
       bool enableTooltip,
-      int duration,
+      double duration,
       int toolTipColor,
       int toolTipBorderColor,
       int markerColor}) = _$DeviceFieldScatterChartWidgetConfigImpl;
@@ -516,11 +516,11 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   bool get legendVisibility;
   set legendVisibility(bool value);
   @override
-  LegendPositions get legendPosition;
-  set legendPosition(LegendPositions value);
+  LegendPosition get legendPosition;
+  set legendPosition(LegendPosition value);
   @override
-  LegendIconTypes get iconType;
-  set iconType(LegendIconTypes value);
+  LegendIconType get iconType;
+  set iconType(LegendIconType value);
   @override
   bool get dataLabelVisibility;
   set dataLabelVisibility(bool value);
@@ -537,8 +537,8 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   bool get enableTooltip;
   set enableTooltip(bool value);
   @override
-  int get duration;
-  set duration(int value);
+  double get duration;
+  set duration(double value);
   @override
   int get toolTipColor;
   set toolTipColor(int value);
