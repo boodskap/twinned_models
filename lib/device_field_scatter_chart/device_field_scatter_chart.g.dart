@@ -36,10 +36,11 @@ _$DeviceFieldScatterChartWidgetConfigImpl
               },
           legendVisibility: json['legendVisibility'] as bool? ?? true,
           legendPosition: $enumDecodeNullable(
-                  _$LegendPositionEnumMap, json['legendPosition']) ??
-              LegendPosition.right,
-          iconType: $enumDecodeNullable(_$IconTypeEnumMap, json['iconType']) ??
-              IconType.rectangle,
+                  _$LegendPositionsEnumMap, json['legendPosition']) ??
+              LegendPositions.right,
+          iconType:
+              $enumDecodeNullable(_$LegendIconTypesEnumMap, json['iconType']) ??
+                  LegendIconTypes.rectangle,
           dataLabelVisibility: json['dataLabelVisibility'] as bool? ?? true,
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           borderColor: (json['borderColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
@@ -63,8 +64,8 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'valueFont': instance.valueFont,
       'legendFont': instance.legendFont,
       'legendVisibility': instance.legendVisibility,
-      'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
-      'iconType': _$IconTypeEnumMap[instance.iconType]!,
+      'legendPosition': _$LegendPositionsEnumMap[instance.legendPosition]!,
+      'iconType': _$LegendIconTypesEnumMap[instance.iconType]!,
       'dataLabelVisibility': instance.dataLabelVisibility,
       'bgColor': instance.bgColor,
       'borderColor': instance.borderColor,
@@ -76,22 +77,22 @@ Map<String, dynamic> _$$DeviceFieldScatterChartWidgetConfigImplToJson(
       'markerColor': instance.markerColor,
     };
 
-const _$LegendPositionEnumMap = {
-  LegendPosition.top: 'top',
-  LegendPosition.bottom: 'bottom',
-  LegendPosition.left: 'left',
-  LegendPosition.right: 'right',
+const _$LegendPositionsEnumMap = {
+  LegendPositions.top: 'top',
+  LegendPositions.bottom: 'bottom',
+  LegendPositions.left: 'left',
+  LegendPositions.right: 'right',
 };
 
-const _$IconTypeEnumMap = {
-  IconType.rectangle: 'rectangle',
-  IconType.circle: 'circle',
-  IconType.seriesType: 'seriesType',
-  IconType.image: 'image',
-  IconType.pentagon: 'pentagon',
-  IconType.verticalLine: 'verticalLine',
-  IconType.horizontalLine: 'horizontalLine',
-  IconType.diamond: 'diamond',
-  IconType.triangle: 'triangle',
-  IconType.invertedTriangle: 'invertedTriangle',
+const _$LegendIconTypesEnumMap = {
+  LegendIconTypes.rectangle: 'rectangle',
+  LegendIconTypes.circle: 'circle',
+  LegendIconTypes.seriesType: 'seriesType',
+  LegendIconTypes.image: 'image',
+  LegendIconTypes.pentagon: 'pentagon',
+  LegendIconTypes.verticalLine: 'verticalLine',
+  LegendIconTypes.horizontalLine: 'horizontalLine',
+  LegendIconTypes.diamond: 'diamond',
+  LegendIconTypes.triangle: 'triangle',
+  LegendIconTypes.invertedTriangle: 'invertedTriangle',
 };
