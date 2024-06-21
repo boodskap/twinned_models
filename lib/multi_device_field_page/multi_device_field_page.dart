@@ -12,7 +12,7 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
   factory MultiDeviceFieldPageWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
-    @Default('') String title,
+    @Default('Multi Device Field Page') String title,
     @Default('') String cityName,
     @Default('') String paraTitle,
     @Default('') String paraText,

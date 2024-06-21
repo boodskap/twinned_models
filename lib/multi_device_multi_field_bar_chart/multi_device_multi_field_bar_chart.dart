@@ -4,9 +4,27 @@ import 'package:twinned_models/models.dart';
 part 'multi_device_multi_field_bar_chart.freezed.dart';
 part 'multi_device_multi_field_bar_chart.g.dart';
 
-enum BarChartType { rectangularBar, roundedBar }
-
 enum BarChartDirection { vertical, horizontal }
+
+enum IconType {
+  rectangle,
+  circle,
+  seriesType,
+  image,
+  pentagon,
+  verticalLine,
+  horizontalLine,
+  diamond,
+  triangle,
+  invertedTriangle,
+}
+
+enum LegendPosition {
+  top,
+  bottom,
+  left,
+  right,
+}
 
 @unfreezed
 class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
@@ -15,8 +33,8 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
 
   factory MultiDeviceMultiFieldBarChartWidgetConfig({
     @Default('Multi Device Multi Field Bar Chart') String title,
-    @Default([]) List<String> deviceId,
-    @Default([]) List<String> field,
+    @Default([]) List<String> deviceIds,
+    @Default([]) List<String> fields,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
@@ -24,18 +42,28 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> titleFont,
-    @Default(BarChartType.rectangularBar) BarChartType chartType,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0XFF000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> legendFont,
     @Default(BarChartDirection.vertical) BarChartDirection chartDirection,
-    @Default(0XFF008B8B) int barColor,
-    @Default(0xFF000000) int barBorderColor,
+    @Default(LegendPosition.right) LegendPosition legendPosition,
+    @Default(IconType.seriesType) IconType iconType,
+    @Default([]) List<int> barColor,
     @Default(0.2) double barWidth,
-    @Default(false) bool showTooltip,
+    @Default(0.0) double barRadius,
+    @Default(1000) double legendDuration,
+    @Default(true) bool showTooltip,
+    @Default(true) bool legendVisibility,
     @Default(0xFFEAEFF2) int chartBgColor,
     @Default(0xFFE8E8E8) int chartAreaColor,
     @Default(0xFF000000) int tooltipBgColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 12,
       'fontColor': 0XFFFFFFFF,
       'fontBold': false
     })
@@ -51,24 +79,29 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'title':
         return DataType.text;
-      case 'barColor':
-      case 'barBorderColor':
       case 'chartBgColor':
       case 'chartAreaColor':
       case 'tooltipBgColor':
         return DataType.numeric;
-      case 'deviceId':
-      case 'field':
+      case 'deviceIds':
+      case 'fields':
         return DataType.listOfTexts;
+      case 'barColor':
+        return DataType.listOfNumbers;
       case 'titleFont':
       case 'tooltipFont':
+      case 'legendFont':
         return DataType.font;
       case 'barWidth':
+      case 'barRadius':
+      case 'legendDuration':
         return DataType.decimal;
-      case 'chartType':
       case 'chartDirection':
+      case 'legendPosition':
+      case 'iconType':
         return DataType.enumerated;
       case 'showTooltip':
+      case 'legendVisibility':
         return DataType.yesno;
       default:
         return DataType.none;
@@ -79,14 +112,13 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'barColor':
-      case 'barBorderColor':
       case 'chartBgColor':
       case 'chartAreaColor':
       case 'tooltipBgColor':
         return HintType.color;
-      case 'deviceId':
+      case 'deviceIds':
         return HintType.deviceId;
-      case 'field':
+      case 'fields':
         return HintType.field;
       default:
         return HintType.none;
@@ -96,10 +128,12 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
   @override
   List<String> getEnumeratedValues(String parameter) {
     switch (parameter) {
-      case 'chartType':
-        return BarChartType.values.asNameMap().keys.toList();
       case 'chartDirection':
         return BarChartDirection.values.asNameMap().keys.toList();
+      case 'legendPosition':
+        return LegendPosition.values.asNameMap().keys.toList();
+      case 'iconType':
+        return IconType.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }
@@ -110,30 +144,38 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'title':
         return 'Title';
-      case 'deviceId':
-        return 'Device Id';
-      case 'field':
-        return 'Field';
+      case 'deviceIds':
+        return 'Device Ids';
+      case 'fields':
+        return 'Fields';
       case 'titleFont':
         return 'Title Font';
-      case 'chartType':
-        return 'Bar Chart Type';
+      case 'legendFont':
+        return 'Legend Font';
       case 'chartDirection':
         return 'Bar Chart Direction';
+      case 'legendPosition':
+        return 'Legend Position';
+      case 'iconType':
+        return 'Legend Icon Type';
       case 'barWidth':
         return 'Bar Width';
+      case 'barRadius':
+        return 'Bar Radius';
+      case 'legendDuration':
+        return 'Legend Duration';
       case 'barColor':
         return 'Bar Color';
-      case 'barBorderColor':
-        return 'Bar Border Color';
       case 'chartBgColor':
-        return 'Chart Bg Color';
+        return 'Chart BgColor';
       case 'chartAreaColor':
         return 'Chart Area Color';
       case 'tooltipBgColor':
-        return 'Tooltip Bg Color';
+        return 'Tooltip BgColor';
       case 'showTooltip':
         return 'Show Tooltip';
+      case 'legendVisibility':
+        return 'Show Legend Visibility';
       case 'tooltipFont':
         return 'Tooltip Font';
       default:
@@ -149,8 +191,9 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'deviceId':
-      case 'field':
+      case 'deviceIds':
+      case 'fields':
+      case 'barColor':
         return true;
       default:
         return false;
