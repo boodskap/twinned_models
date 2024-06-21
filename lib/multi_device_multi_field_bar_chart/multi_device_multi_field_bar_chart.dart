@@ -6,7 +6,7 @@ part 'multi_device_multi_field_bar_chart.g.dart';
 
 enum BarChartDirection { vertical, horizontal }
 
-enum IconType {
+enum IconTypes {
   rectangle,
   circle,
   seriesType,
@@ -19,7 +19,7 @@ enum IconType {
   invertedTriangle,
 }
 
-enum LegendPosition {
+enum LegendPositions {
   top,
   bottom,
   left,
@@ -50,8 +50,8 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> legendFont,
     @Default(BarChartDirection.vertical) BarChartDirection chartDirection,
-    @Default(LegendPosition.right) LegendPosition legendPosition,
-    @Default(IconType.seriesType) IconType iconType,
+    @Default(LegendPositions.right) LegendPositions legendPosition,
+    @Default(IconTypes.seriesType) IconTypes iconType,
     @Default([]) List<int> barColor,
     @Default(0.2) double barWidth,
     @Default(0.0) double barRadius,
@@ -131,9 +131,9 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
       case 'chartDirection':
         return BarChartDirection.values.asNameMap().keys.toList();
       case 'legendPosition':
-        return LegendPosition.values.asNameMap().keys.toList();
+        return LegendPositions.values.asNameMap().keys.toList();
       case 'iconType':
-        return IconType.values.asNameMap().keys.toList();
+        return IconTypes.values.asNameMap().keys.toList();
       default:
         return ['THIS SHOULD NOT HAPPEN'];
     }

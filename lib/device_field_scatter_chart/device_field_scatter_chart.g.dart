@@ -47,7 +47,7 @@ _$DeviceFieldScatterChartWidgetConfigImpl
           plotAreaBackgroundColor:
               (json['plotAreaBackgroundColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
           enableTooltip: json['enableTooltip'] as bool? ?? true,
-          duration: (json['duration'] as num?)?.toInt() ?? 1000,
+          duration: (json['duration'] as num?)?.toDouble() ?? 1000,
           toolTipColor: (json['toolTipColor'] as num?)?.toInt() ?? 0xFF263238,
           toolTipBorderColor:
               (json['toolTipBorderColor'] as num?)?.toInt() ?? 0xFF000000,
