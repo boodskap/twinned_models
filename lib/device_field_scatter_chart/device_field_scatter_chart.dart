@@ -62,7 +62,7 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
     @Default(0xFFFFFFFF) int borderColor,
     @Default(0xFFFFFFFF) int plotAreaBackgroundColor,
     @Default(true) bool enableTooltip,
-    @Default(1000) int duration,
+    @Default(1000) double duration,
     @Default(0xFF263238) int toolTipColor,
     @Default(0xFF000000) int toolTipBorderColor,
     @Default(0xFF00C3FF) int markerColor,
@@ -90,7 +90,6 @@ class DeviceFieldScatterChartWidgetConfig extends BaseConfig
       case 'iconType':
       case 'legendPosition':
         return DataType.enumerated;
-
       case 'duration':
         return DataType.decimal;
       case 'bgColor':

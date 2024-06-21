@@ -38,10 +38,10 @@ _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
                   _$BarChartDirectionEnumMap, json['chartDirection']) ??
               BarChartDirection.vertical,
           legendPosition: $enumDecodeNullable(
-                  _$LegendPositionEnumMap, json['legendPosition']) ??
-              LegendPosition.right,
-          iconType: $enumDecodeNullable(_$IconTypeEnumMap, json['iconType']) ??
-              IconType.seriesType,
+                  _$LegendPositionsEnumMap, json['legendPosition']) ??
+              LegendPositions.right,
+          iconType: $enumDecodeNullable(_$IconTypesEnumMap, json['iconType']) ??
+              IconTypes.seriesType,
           barColor: (json['barColor'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
@@ -74,8 +74,8 @@ Map<String, dynamic> _$$MultiDeviceMultiFieldBarChartWidgetConfigImplToJson(
       'titleFont': instance.titleFont,
       'legendFont': instance.legendFont,
       'chartDirection': _$BarChartDirectionEnumMap[instance.chartDirection]!,
-      'legendPosition': _$LegendPositionEnumMap[instance.legendPosition]!,
-      'iconType': _$IconTypeEnumMap[instance.iconType]!,
+      'legendPosition': _$LegendPositionsEnumMap[instance.legendPosition]!,
+      'iconType': _$IconTypesEnumMap[instance.iconType]!,
       'barColor': instance.barColor,
       'barWidth': instance.barWidth,
       'barRadius': instance.barRadius,
@@ -93,22 +93,22 @@ const _$BarChartDirectionEnumMap = {
   BarChartDirection.horizontal: 'horizontal',
 };
 
-const _$LegendPositionEnumMap = {
-  LegendPosition.top: 'top',
-  LegendPosition.bottom: 'bottom',
-  LegendPosition.left: 'left',
-  LegendPosition.right: 'right',
+const _$LegendPositionsEnumMap = {
+  LegendPositions.top: 'top',
+  LegendPositions.bottom: 'bottom',
+  LegendPositions.left: 'left',
+  LegendPositions.right: 'right',
 };
 
-const _$IconTypeEnumMap = {
-  IconType.rectangle: 'rectangle',
-  IconType.circle: 'circle',
-  IconType.seriesType: 'seriesType',
-  IconType.image: 'image',
-  IconType.pentagon: 'pentagon',
-  IconType.verticalLine: 'verticalLine',
-  IconType.horizontalLine: 'horizontalLine',
-  IconType.diamond: 'diamond',
-  IconType.triangle: 'triangle',
-  IconType.invertedTriangle: 'invertedTriangle',
+const _$IconTypesEnumMap = {
+  IconTypes.rectangle: 'rectangle',
+  IconTypes.circle: 'circle',
+  IconTypes.seriesType: 'seriesType',
+  IconTypes.image: 'image',
+  IconTypes.pentagon: 'pentagon',
+  IconTypes.verticalLine: 'verticalLine',
+  IconTypes.horizontalLine: 'horizontalLine',
+  IconTypes.diamond: 'diamond',
+  IconTypes.triangle: 'triangle',
+  IconTypes.invertedTriangle: 'invertedTriangle',
 };
