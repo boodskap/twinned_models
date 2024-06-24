@@ -48,8 +48,8 @@ mixin _$MultiDeviceMultiFieldBarChartWidgetConfig {
   set barWidth(double value) => throw _privateConstructorUsedError;
   double get barRadius => throw _privateConstructorUsedError;
   set barRadius(double value) => throw _privateConstructorUsedError;
-  double get legendDuration => throw _privateConstructorUsedError;
-  set legendDuration(double value) => throw _privateConstructorUsedError;
+  double get toolTipDuration => throw _privateConstructorUsedError;
+  set toolTipDuration(double value) => throw _privateConstructorUsedError;
   bool get showTooltip => throw _privateConstructorUsedError;
   set showTooltip(bool value) => throw _privateConstructorUsedError;
   bool get legendVisibility => throw _privateConstructorUsedError;
@@ -91,7 +91,7 @@ abstract class $MultiDeviceMultiFieldBarChartWidgetConfigCopyWith<$Res> {
       List<int> barColor,
       double barWidth,
       double barRadius,
-      double legendDuration,
+      double toolTipDuration,
       bool showTooltip,
       bool legendVisibility,
       int chartBgColor,
@@ -126,7 +126,7 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
     Object? barColor = null,
     Object? barWidth = null,
     Object? barRadius = null,
-    Object? legendDuration = null,
+    Object? toolTipDuration = null,
     Object? showTooltip = null,
     Object? legendVisibility = null,
     Object? chartBgColor = null,
@@ -179,9 +179,9 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
           ? _value.barRadius
           : barRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      legendDuration: null == legendDuration
-          ? _value.legendDuration
-          : legendDuration // ignore: cast_nullable_to_non_nullable
+      toolTipDuration: null == toolTipDuration
+          ? _value.toolTipDuration
+          : toolTipDuration // ignore: cast_nullable_to_non_nullable
               as double,
       showTooltip: null == showTooltip
           ? _value.showTooltip
@@ -232,7 +232,7 @@ abstract class _$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWith<$Res>
       List<int> barColor,
       double barWidth,
       double barRadius,
-      double legendDuration,
+      double toolTipDuration,
       bool showTooltip,
       bool legendVisibility,
       int chartBgColor,
@@ -265,7 +265,7 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
     Object? barColor = null,
     Object? barWidth = null,
     Object? barRadius = null,
-    Object? legendDuration = null,
+    Object? toolTipDuration = null,
     Object? showTooltip = null,
     Object? legendVisibility = null,
     Object? chartBgColor = null,
@@ -318,9 +318,9 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.barRadius
           : barRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      legendDuration: null == legendDuration
-          ? _value.legendDuration
-          : legendDuration // ignore: cast_nullable_to_non_nullable
+      toolTipDuration: null == toolTipDuration
+          ? _value.toolTipDuration
+          : toolTipDuration // ignore: cast_nullable_to_non_nullable
               as double,
       showTooltip: null == showTooltip
           ? _value.showTooltip
@@ -376,7 +376,7 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
       this.barColor = const [],
       this.barWidth = 0.2,
       this.barRadius = 0.0,
-      this.legendDuration = 1000,
+      this.toolTipDuration = 1000,
       this.showTooltip = true,
       this.legendVisibility = true,
       this.chartBgColor = 0xFFEAEFF2,
@@ -429,7 +429,7 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
   double barRadius;
   @override
   @JsonKey()
-  double legendDuration;
+  double toolTipDuration;
   @override
   @JsonKey()
   bool showTooltip;
@@ -451,7 +451,7 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiDeviceMultiFieldBarChartWidgetConfig(title: $title, deviceIds: $deviceIds, fields: $fields, titleFont: $titleFont, legendFont: $legendFont, chartDirection: $chartDirection, legendPosition: $legendPosition, iconType: $iconType, barColor: $barColor, barWidth: $barWidth, barRadius: $barRadius, legendDuration: $legendDuration, showTooltip: $showTooltip, legendVisibility: $legendVisibility, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
+    return 'MultiDeviceMultiFieldBarChartWidgetConfig(title: $title, deviceIds: $deviceIds, fields: $fields, titleFont: $titleFont, legendFont: $legendFont, chartDirection: $chartDirection, legendPosition: $legendPosition, iconType: $iconType, barColor: $barColor, barWidth: $barWidth, barRadius: $barRadius, toolTipDuration: $toolTipDuration, showTooltip: $showTooltip, legendVisibility: $legendVisibility, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
   }
 
   @JsonKey(ignore: true)
@@ -486,7 +486,7 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
           List<int> barColor,
           double barWidth,
           double barRadius,
-          double legendDuration,
+          double toolTipDuration,
           bool showTooltip,
           bool legendVisibility,
           int chartBgColor,
@@ -534,8 +534,8 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
   double get barRadius;
   set barRadius(double value);
   @override
-  double get legendDuration;
-  set legendDuration(double value);
+  double get toolTipDuration;
+  set toolTipDuration(double value);
   @override
   bool get showTooltip;
   set showTooltip(bool value);
