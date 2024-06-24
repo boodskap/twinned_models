@@ -36,7 +36,7 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
     @Default([]) List<int> barColor,
     @Default(0.2) double barWidth,
     @Default(0.0) double barRadius,
-    @Default(1000) double legendDuration,
+    @Default(1000) double toolTipDuration,
     @Default(true) bool showTooltip,
     @Default(true) bool legendVisibility,
     @Default(0xFFEAEFF2) int chartBgColor,
@@ -75,7 +75,7 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
         return DataType.font;
       case 'barWidth':
       case 'barRadius':
-      case 'legendDuration':
+      case 'toolTipDuration':
         return DataType.decimal;
       case 'chartDirection':
       case 'legendPosition':
@@ -143,8 +143,8 @@ class MultiDeviceMultiFieldBarChartWidgetConfig extends BaseConfig
         return 'Bar Width';
       case 'barRadius':
         return 'Bar Radius';
-      case 'legendDuration':
-        return 'Legend Duration';
+      case 'toolTipDuration':
+        return 'ToolTip Duration';
       case 'barColor':
         return 'Bar Color';
       case 'chartBgColor':

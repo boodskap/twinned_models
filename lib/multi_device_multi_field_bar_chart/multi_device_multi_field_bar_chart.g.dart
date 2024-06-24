@@ -49,7 +49,8 @@ _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
               const [],
           barWidth: (json['barWidth'] as num?)?.toDouble() ?? 0.2,
           barRadius: (json['barRadius'] as num?)?.toDouble() ?? 0.0,
-          legendDuration: (json['legendDuration'] as num?)?.toDouble() ?? 1000,
+          toolTipDuration:
+              (json['toolTipDuration'] as num?)?.toDouble() ?? 1000,
           showTooltip: json['showTooltip'] as bool? ?? true,
           legendVisibility: json['legendVisibility'] as bool? ?? true,
           chartBgColor: (json['chartBgColor'] as num?)?.toInt() ?? 0xFFEAEFF2,
@@ -80,7 +81,7 @@ Map<String, dynamic> _$$MultiDeviceMultiFieldBarChartWidgetConfigImplToJson(
       'barColor': instance.barColor,
       'barWidth': instance.barWidth,
       'barRadius': instance.barRadius,
-      'legendDuration': instance.legendDuration,
+      'toolTipDuration': instance.toolTipDuration,
       'showTooltip': instance.showTooltip,
       'legendVisibility': instance.legendVisibility,
       'chartBgColor': instance.chartBgColor,
