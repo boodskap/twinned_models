@@ -37,6 +37,10 @@ mixin _$CircularProgressBarWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  double get width => throw _privateConstructorUsedError;
+  set width(double value) => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  set height(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,7 +63,9 @@ abstract class $CircularProgressBarWidgetConfigCopyWith<$Res> {
       String field,
       String unit,
       int chartColor,
-      Map<String, dynamic> valueFont});
+      Map<String, dynamic> valueFont,
+      double width,
+      double height});
 }
 
 /// @nodoc
@@ -83,6 +89,8 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
     Object? unit = null,
     Object? chartColor = null,
     Object? valueFont = null,
+    Object? width = null,
+    Object? height = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -113,6 +121,14 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -133,7 +149,9 @@ abstract class _$$CircularProgressBarWidgetConfigImplCopyWith<$Res>
       String field,
       String unit,
       int chartColor,
-      Map<String, dynamic> valueFont});
+      Map<String, dynamic> valueFont,
+      double width,
+      double height});
 }
 
 /// @nodoc
@@ -156,6 +174,8 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
     Object? unit = null,
     Object? chartColor = null,
     Object? valueFont = null,
+    Object? width = null,
+    Object? height = null,
   }) {
     return _then(_$CircularProgressBarWidgetConfigImpl(
       title: null == title
@@ -186,6 +206,14 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      width: null == width
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -211,7 +239,9 @@ class _$CircularProgressBarWidgetConfigImpl
         'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
-      }})
+      },
+      this.width = 250,
+      this.height = 250})
       : super._();
 
   factory _$CircularProgressBarWidgetConfigImpl.fromJson(
@@ -239,10 +269,16 @@ class _$CircularProgressBarWidgetConfigImpl
   @override
   @JsonKey()
   Map<String, dynamic> valueFont;
+  @override
+  @JsonKey()
+  double width;
+  @override
+  @JsonKey()
+  double height;
 
   @override
   String toString() {
-    return 'CircularProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont)';
+    return 'CircularProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, width: $width, height: $height)';
   }
 
   @JsonKey(ignore: true)
@@ -270,7 +306,9 @@ abstract class _CircularProgressBarWidgetConfig
       String field,
       String unit,
       int chartColor,
-      Map<String, dynamic> valueFont}) = _$CircularProgressBarWidgetConfigImpl;
+      Map<String, dynamic> valueFont,
+      double width,
+      double height}) = _$CircularProgressBarWidgetConfigImpl;
   _CircularProgressBarWidgetConfig._() : super._();
 
   factory _CircularProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -297,6 +335,12 @@ abstract class _CircularProgressBarWidgetConfig
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+  @override
+  double get width;
+  set width(double value);
+  @override
+  double get height;
+  set height(double value);
   @override
   @JsonKey(ignore: true)
   _$$CircularProgressBarWidgetConfigImplCopyWith<

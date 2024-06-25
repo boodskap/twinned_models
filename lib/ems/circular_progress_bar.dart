@@ -29,6 +29,8 @@ class CircularProgressBarWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
+      @Default(250) double width,
+        @Default(250) double height,
   
   }) = _CircularProgressBarWidgetConfig;
 
@@ -46,6 +48,9 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return DataType.text;
       case 'chartColor':
             return DataType.numeric;
+             case 'width':
+      case 'height':
+        return DataType.decimal;
       case 'titleFont':
       case 'valueFont':
         return DataType.font;
@@ -90,6 +95,10 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return 'Title Font';
       case 'valueFont':
         return 'Value Font';
+        case 'width':
+        return 'Width';
+      case 'height':
+        return 'Height';
       default:
         return parameter;
     }
