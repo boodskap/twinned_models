@@ -268,7 +268,7 @@ class _$VerticalProgressBarWidgetConfigImpl
       {this.title = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
+        'fontSize': 20,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -278,11 +278,11 @@ class _$VerticalProgressBarWidgetConfigImpl
       this.chartColor = 0xFF000000,
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.height = 250,
+      this.height = 300,
       this.dashCount = 50,
       this.dashHeight = 3.0,
       this.dashWidth = 50.0,
