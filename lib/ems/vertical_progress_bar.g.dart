@@ -33,6 +33,7 @@ _$VerticalProgressBarWidgetConfigImpl
           dashHeight: (json['dashHeight'] as num?)?.toDouble() ?? 3.0,
           dashWidth: (json['dashWidth'] as num?)?.toDouble() ?? 50.0,
           dashSpace: (json['dashSpace'] as num?)?.toDouble() ?? 1.5,
+          opacity: (json['opacity'] as num?)?.toDouble() ?? 0.3,
         );
 
 Map<String, dynamic> _$$VerticalProgressBarWidgetConfigImplToJson(
@@ -50,4 +51,5 @@ Map<String, dynamic> _$$VerticalProgressBarWidgetConfigImplToJson(
       'dashHeight': instance.dashHeight,
       'dashWidth': instance.dashWidth,
       'dashSpace': instance.dashSpace,
+      'opacity': instance.opacity,
     };

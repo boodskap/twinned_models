@@ -20,22 +20,21 @@ class CircularProgressBarWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default('') String deviceId,
     @Default('') String field,
-     @Default('') String unit,
-     @Default(0xFF000000) int chartColor,
-       @Default({
+    @Default('') String unit,
+    @Default(0xFF000000) int chartColor,
+    @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-      @Default(250) double width,
-        @Default(250) double height,
-  
+    @Default(250) double width,
+    @Default(250) double height,
+     @Default(0.3) double opacity,
   }) = _CircularProgressBarWidgetConfig;
 
-  factory CircularProgressBarWidgetConfig.fromJson(
-          Map<String, dynamic> json) =>
+  factory CircularProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
       _$CircularProgressBarWidgetConfigFromJson(json);
 
   @override
@@ -47,9 +46,10 @@ class CircularProgressBarWidgetConfig extends BaseConfig
       case 'deviceId':
         return DataType.text;
       case 'chartColor':
-            return DataType.numeric;
-             case 'width':
+        return DataType.numeric;
+      case 'width':
       case 'height':
+      case 'opacity':
         return DataType.decimal;
       case 'titleFont':
       case 'valueFont':
@@ -95,10 +95,12 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return 'Title Font';
       case 'valueFont':
         return 'Value Font';
-        case 'width':
+      case 'width':
         return 'Width';
       case 'height':
         return 'Height';
+      case 'opacity':
+        return 'Opacity';
       default:
         return parameter;
     }

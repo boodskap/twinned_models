@@ -47,6 +47,8 @@ mixin _$VerticalProgressBarWidgetConfig {
   set dashWidth(double value) => throw _privateConstructorUsedError;
   double get dashSpace => throw _privateConstructorUsedError;
   set dashSpace(double value) => throw _privateConstructorUsedError;
+  double get opacity => throw _privateConstructorUsedError;
+  set opacity(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -74,7 +76,8 @@ abstract class $VerticalProgressBarWidgetConfigCopyWith<$Res> {
       double dashCount,
       double dashHeight,
       double dashWidth,
-      double dashSpace});
+      double dashSpace,
+      double opacity});
 }
 
 /// @nodoc
@@ -103,6 +106,7 @@ class _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
     Object? dashHeight = null,
     Object? dashWidth = null,
     Object? dashSpace = null,
+    Object? opacity = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -153,6 +157,10 @@ class _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
           ? _value.dashSpace
           : dashSpace // ignore: cast_nullable_to_non_nullable
               as double,
+      opacity: null == opacity
+          ? _value.opacity
+          : opacity // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -178,7 +186,8 @@ abstract class _$$VerticalProgressBarWidgetConfigImplCopyWith<$Res>
       double dashCount,
       double dashHeight,
       double dashWidth,
-      double dashSpace});
+      double dashSpace,
+      double opacity});
 }
 
 /// @nodoc
@@ -206,6 +215,7 @@ class __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<$Res>
     Object? dashHeight = null,
     Object? dashWidth = null,
     Object? dashSpace = null,
+    Object? opacity = null,
   }) {
     return _then(_$VerticalProgressBarWidgetConfigImpl(
       title: null == title
@@ -256,6 +266,10 @@ class __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<$Res>
           ? _value.dashSpace
           : dashSpace // ignore: cast_nullable_to_non_nullable
               as double,
+      opacity: null == opacity
+          ? _value.opacity
+          : opacity // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -286,7 +300,8 @@ class _$VerticalProgressBarWidgetConfigImpl
       this.dashCount = 50,
       this.dashHeight = 3.0,
       this.dashWidth = 50.0,
-      this.dashSpace = 1.5})
+      this.dashSpace = 1.5,
+      this.opacity = 0.3})
       : super._();
 
   factory _$VerticalProgressBarWidgetConfigImpl.fromJson(
@@ -329,10 +344,13 @@ class _$VerticalProgressBarWidgetConfigImpl
   @override
   @JsonKey()
   double dashSpace;
+  @override
+  @JsonKey()
+  double opacity;
 
   @override
   String toString() {
-    return 'VerticalProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, height: $height, dashCount: $dashCount, dashHeight: $dashHeight, dashWidth: $dashWidth, dashSpace: $dashSpace)';
+    return 'VerticalProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, height: $height, dashCount: $dashCount, dashHeight: $dashHeight, dashWidth: $dashWidth, dashSpace: $dashSpace, opacity: $opacity)';
   }
 
   @JsonKey(ignore: true)
@@ -365,7 +383,8 @@ abstract class _VerticalProgressBarWidgetConfig
       double dashCount,
       double dashHeight,
       double dashWidth,
-      double dashSpace}) = _$VerticalProgressBarWidgetConfigImpl;
+      double dashSpace,
+      double opacity}) = _$VerticalProgressBarWidgetConfigImpl;
   _VerticalProgressBarWidgetConfig._() : super._();
 
   factory _VerticalProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -407,6 +426,9 @@ abstract class _VerticalProgressBarWidgetConfig
   @override
   double get dashSpace;
   set dashSpace(double value);
+  @override
+  double get opacity;
+  set opacity(double value);
   @override
   @JsonKey(ignore: true)
   _$$VerticalProgressBarWidgetConfigImplCopyWith<
