@@ -28,6 +28,8 @@ _$CircularProgressBarWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
+          width: (json['width'] as num?)?.toDouble() ?? 250,
+          height: (json['height'] as num?)?.toDouble() ?? 250,
         );
 
 Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
@@ -40,4 +42,6 @@ Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
       'unit': instance.unit,
       'chartColor': instance.chartColor,
       'valueFont': instance.valueFont,
+      'width': instance.width,
+      'height': instance.height,
     };
