@@ -34,6 +34,7 @@ class VerticalProgressBarWidgetConfig extends BaseConfig
     @Default(3.0) double dashHeight,
     @Default(50.0) double dashWidth,
     @Default(1.5) double dashSpace,
+    @Default(0.3) double opacity,
   }) = _VerticalProgressBarWidgetConfig;
 
   factory VerticalProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -54,6 +55,7 @@ class VerticalProgressBarWidgetConfig extends BaseConfig
       case 'dashHeight':
        case 'dashWidth':
       case 'dashSpace':
+       case 'opacity':
         return DataType.decimal;
       case 'titleFont':
       case 'valueFont':
@@ -110,6 +112,8 @@ class VerticalProgressBarWidgetConfig extends BaseConfig
         return 'Dash Width';
       case 'dashSpace':
         return 'Dash Space';
+         case 'opacity':
+        return 'Opacity';
       default:
         return parameter;
     }
