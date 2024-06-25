@@ -13,7 +13,7 @@ _$VerticalProgressBarWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
+                'fontSize': 20,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -24,11 +24,11 @@ _$VerticalProgressBarWidgetConfigImpl
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 16,
+                'fontSize': 25,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          height: (json['height'] as num?)?.toDouble() ?? 250,
+          height: (json['height'] as num?)?.toDouble() ?? 300,
           dashCount: (json['dashCount'] as num?)?.toDouble() ?? 50,
           dashHeight: (json['dashHeight'] as num?)?.toDouble() ?? 3.0,
           dashWidth: (json['dashWidth'] as num?)?.toDouble() ?? 50.0,

@@ -13,7 +13,7 @@ class VerticalProgressBarWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 20,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -24,12 +24,12 @@ class VerticalProgressBarWidgetConfig extends BaseConfig
     @Default(0xFF000000) int chartColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 25,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(250) double height,
+    @Default(300) double height,
     @Default(50) double dashCount,
     @Default(3.0) double dashHeight,
     @Default(50.0) double dashWidth,
