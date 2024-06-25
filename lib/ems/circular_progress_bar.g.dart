@@ -30,6 +30,7 @@ _$CircularProgressBarWidgetConfigImpl
               },
           width: (json['width'] as num?)?.toDouble() ?? 250,
           height: (json['height'] as num?)?.toDouble() ?? 250,
+          opacity: (json['opacity'] as num?)?.toDouble() ?? 0.3,
         );
 
 Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
@@ -44,4 +45,5 @@ Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
       'valueFont': instance.valueFont,
       'width': instance.width,
       'height': instance.height,
+      'opacity': instance.opacity,
     };
