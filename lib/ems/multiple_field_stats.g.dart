@@ -30,6 +30,9 @@ _$MultipleFieldStatsWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
+          chartType:
+              $enumDecodeNullable(_$ChartTypeEnumMap, json['chartType']) ??
+                  ChartType.spline,
           axisLabelFont: json['axisLabelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -69,9 +72,6 @@ _$MultipleFieldStatsWidgetConfigImpl
           showAvgValue: json['showAvgValue'] as bool? ?? true,
           showTooltip: json['showTooltip'] as bool? ?? true,
           showLegend: json['showLegend'] as bool? ?? true,
-          chartType:
-              $enumDecodeNullable(_$ChartTypeEnumMap, json['chartType']) ??
-                  ChartType.spline,
         );
 
 Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
@@ -83,6 +83,7 @@ Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
       'subTitleFont': instance.subTitleFont,
       'deviceId': instance.deviceId,
       'field': instance.field,
+      'chartType': _$ChartTypeEnumMap[instance.chartType]!,
       'axisLabelFont': instance.axisLabelFont,
       'statsHeadingFont': instance.statsHeadingFont,
       'statsValueFont': instance.statsValueFont,
@@ -101,7 +102,6 @@ Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
       'showAvgValue': instance.showAvgValue,
       'showTooltip': instance.showTooltip,
       'showLegend': instance.showLegend,
-      'chartType': _$ChartTypeEnumMap[instance.chartType]!,
     };
 
 const _$ChartTypeEnumMap = {

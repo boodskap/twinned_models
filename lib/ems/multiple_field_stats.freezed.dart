@@ -35,6 +35,8 @@ mixin _$MultipleFieldStatsWidgetConfig {
   set deviceId(String value) => throw _privateConstructorUsedError;
   List<String> get field => throw _privateConstructorUsedError;
   set field(List<String> value) => throw _privateConstructorUsedError;
+  ChartType get chartType => throw _privateConstructorUsedError;
+  set chartType(ChartType value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get axisLabelFont => throw _privateConstructorUsedError;
   set axisLabelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -75,8 +77,6 @@ mixin _$MultipleFieldStatsWidgetConfig {
   set showTooltip(bool value) => throw _privateConstructorUsedError;
   bool get showLegend => throw _privateConstructorUsedError;
   set showLegend(bool value) => throw _privateConstructorUsedError;
-  ChartType get chartType => throw _privateConstructorUsedError;
-  set chartType(ChartType value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -99,6 +99,7 @@ abstract class $MultipleFieldStatsWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> subTitleFont,
       String deviceId,
       List<String> field,
+      ChartType chartType,
       Map<String, dynamic> axisLabelFont,
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
@@ -116,8 +117,7 @@ abstract class $MultipleFieldStatsWidgetConfigCopyWith<$Res> {
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend,
-      ChartType chartType});
+      bool showLegend});
 }
 
 /// @nodoc
@@ -140,6 +140,7 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
     Object? subTitleFont = null,
     Object? deviceId = null,
     Object? field = null,
+    Object? chartType = null,
     Object? axisLabelFont = null,
     Object? statsHeadingFont = null,
     Object? statsValueFont = null,
@@ -158,7 +159,6 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
-    Object? chartType = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -185,6 +185,10 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      chartType: null == chartType
+          ? _value.chartType
+          : chartType // ignore: cast_nullable_to_non_nullable
+              as ChartType,
       axisLabelFont: null == axisLabelFont
           ? _value.axisLabelFont
           : axisLabelFont // ignore: cast_nullable_to_non_nullable
@@ -257,10 +261,6 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
           ? _value.showLegend
           : showLegend // ignore: cast_nullable_to_non_nullable
               as bool,
-      chartType: null == chartType
-          ? _value.chartType
-          : chartType // ignore: cast_nullable_to_non_nullable
-              as ChartType,
     ) as $Val);
   }
 }
@@ -281,6 +281,7 @@ abstract class _$$MultipleFieldStatsWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> subTitleFont,
       String deviceId,
       List<String> field,
+      ChartType chartType,
       Map<String, dynamic> axisLabelFont,
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
@@ -298,8 +299,7 @@ abstract class _$$MultipleFieldStatsWidgetConfigImplCopyWith<$Res>
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend,
-      ChartType chartType});
+      bool showLegend});
 }
 
 /// @nodoc
@@ -321,6 +321,7 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
     Object? subTitleFont = null,
     Object? deviceId = null,
     Object? field = null,
+    Object? chartType = null,
     Object? axisLabelFont = null,
     Object? statsHeadingFont = null,
     Object? statsValueFont = null,
@@ -339,7 +340,6 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
-    Object? chartType = null,
   }) {
     return _then(_$MultipleFieldStatsWidgetConfigImpl(
       title: null == title
@@ -366,6 +366,10 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      chartType: null == chartType
+          ? _value.chartType
+          : chartType // ignore: cast_nullable_to_non_nullable
+              as ChartType,
       axisLabelFont: null == axisLabelFont
           ? _value.axisLabelFont
           : axisLabelFont // ignore: cast_nullable_to_non_nullable
@@ -438,10 +442,6 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showLegend
           : showLegend // ignore: cast_nullable_to_non_nullable
               as bool,
-      chartType: null == chartType
-          ? _value.chartType
-          : chartType // ignore: cast_nullable_to_non_nullable
-              as ChartType,
     ));
   }
 }
@@ -467,6 +467,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
       },
       this.deviceId = '',
       this.field = const [],
+      this.chartType = ChartType.spline,
       this.axisLabelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 12,
@@ -499,8 +500,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
       this.showTotalValue = true,
       this.showAvgValue = true,
       this.showTooltip = true,
-      this.showLegend = true,
-      this.chartType = ChartType.spline})
+      this.showLegend = true})
       : super._();
 
   factory _$MultipleFieldStatsWidgetConfigImpl.fromJson(
@@ -525,6 +525,9 @@ class _$MultipleFieldStatsWidgetConfigImpl
   @override
   @JsonKey()
   List<String> field;
+  @override
+  @JsonKey()
+  ChartType chartType;
   @override
   @JsonKey()
   Map<String, dynamic> axisLabelFont;
@@ -579,13 +582,10 @@ class _$MultipleFieldStatsWidgetConfigImpl
   @override
   @JsonKey()
   bool showLegend;
-  @override
-  @JsonKey()
-  ChartType chartType;
 
   @override
   String toString() {
-    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend, chartType: $chartType)';
+    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
   }
 
   @JsonKey(ignore: true)
@@ -613,6 +613,7 @@ abstract class _MultipleFieldStatsWidgetConfig
       Map<String, dynamic> subTitleFont,
       String deviceId,
       List<String> field,
+      ChartType chartType,
       Map<String, dynamic> axisLabelFont,
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
@@ -630,8 +631,7 @@ abstract class _MultipleFieldStatsWidgetConfig
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend,
-      ChartType chartType}) = _$MultipleFieldStatsWidgetConfigImpl;
+      bool showLegend}) = _$MultipleFieldStatsWidgetConfigImpl;
   _MultipleFieldStatsWidgetConfig._() : super._();
 
   factory _MultipleFieldStatsWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -655,6 +655,9 @@ abstract class _MultipleFieldStatsWidgetConfig
   @override
   List<String> get field;
   set field(List<String> value);
+  @override
+  ChartType get chartType;
+  set chartType(ChartType value);
   @override
   Map<String, dynamic> get axisLabelFont;
   set axisLabelFont(Map<String, dynamic> value);
@@ -709,9 +712,6 @@ abstract class _MultipleFieldStatsWidgetConfig
   @override
   bool get showLegend;
   set showLegend(bool value);
-  @override
-  ChartType get chartType;
-  set chartType(ChartType value);
   @override
   @JsonKey(ignore: true)
   _$$MultipleFieldStatsWidgetConfigImplCopyWith<
