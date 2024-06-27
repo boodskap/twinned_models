@@ -57,8 +57,9 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> statsValueFont,
-    @Default(700) double width,
-     @Default(300) double height,
+    @Default(480) double width,
+     @Default(370) double height,
+      @Default(270) double chartHeight,
     @Default([]) List<int> chartSeriesColors,
      @Default('Min') String minLabelText,
       @Default('Max') String maxLabelText,
@@ -94,6 +95,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return DataType.listOfNumbers;
       case 'width':
       case 'height':
+       case 'chartHeight':
         return DataType.decimal;
       case 'titleFont':
       case 'subTitleFont':
@@ -156,6 +158,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return 'Width';
         case 'height':
         return 'Height';
+        case 'chartHeight':
+        return 'Chart Height';
       case 'subTitle':
         return 'Sub Title';
       case 'chartSeriesColors':
