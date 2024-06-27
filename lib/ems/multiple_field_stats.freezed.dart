@@ -47,8 +47,18 @@ mixin _$MultipleFieldStatsWidgetConfig {
       throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  set height(double value) => throw _privateConstructorUsedError;
   List<int> get chartSeriesColors => throw _privateConstructorUsedError;
   set chartSeriesColors(List<int> value) => throw _privateConstructorUsedError;
+  String get minLabelText => throw _privateConstructorUsedError;
+  set minLabelText(String value) => throw _privateConstructorUsedError;
+  String get maxLabelText => throw _privateConstructorUsedError;
+  set maxLabelText(String value) => throw _privateConstructorUsedError;
+  String get avgLabelText => throw _privateConstructorUsedError;
+  set avgLabelText(String value) => throw _privateConstructorUsedError;
+  String get totalLabelText => throw _privateConstructorUsedError;
+  set totalLabelText(String value) => throw _privateConstructorUsedError;
   bool get showLabel => throw _privateConstructorUsedError;
   set showLabel(bool value) => throw _privateConstructorUsedError;
   bool get showStats => throw _privateConstructorUsedError;
@@ -57,8 +67,8 @@ mixin _$MultipleFieldStatsWidgetConfig {
   set showMinValue(bool value) => throw _privateConstructorUsedError;
   bool get showMaxValue => throw _privateConstructorUsedError;
   set showMaxValue(bool value) => throw _privateConstructorUsedError;
-  bool get showSumValue => throw _privateConstructorUsedError;
-  set showSumValue(bool value) => throw _privateConstructorUsedError;
+  bool get showTotalValue => throw _privateConstructorUsedError;
+  set showTotalValue(bool value) => throw _privateConstructorUsedError;
   bool get showAvgValue => throw _privateConstructorUsedError;
   set showAvgValue(bool value) => throw _privateConstructorUsedError;
   bool get showTooltip => throw _privateConstructorUsedError;
@@ -91,12 +101,17 @@ abstract class $MultipleFieldStatsWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
       double width,
+      double height,
       List<int> chartSeriesColors,
+      String minLabelText,
+      String maxLabelText,
+      String avgLabelText,
+      String totalLabelText,
       bool showLabel,
       bool showStats,
       bool showMinValue,
       bool showMaxValue,
-      bool showSumValue,
+      bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
       bool showLegend});
@@ -126,12 +141,17 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
     Object? statsHeadingFont = null,
     Object? statsValueFont = null,
     Object? width = null,
+    Object? height = null,
     Object? chartSeriesColors = null,
+    Object? minLabelText = null,
+    Object? maxLabelText = null,
+    Object? avgLabelText = null,
+    Object? totalLabelText = null,
     Object? showLabel = null,
     Object? showStats = null,
     Object? showMinValue = null,
     Object? showMaxValue = null,
-    Object? showSumValue = null,
+    Object? showTotalValue = null,
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
@@ -177,10 +197,30 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
       chartSeriesColors: null == chartSeriesColors
           ? _value.chartSeriesColors
           : chartSeriesColors // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      minLabelText: null == minLabelText
+          ? _value.minLabelText
+          : minLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      maxLabelText: null == maxLabelText
+          ? _value.maxLabelText
+          : maxLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      avgLabelText: null == avgLabelText
+          ? _value.avgLabelText
+          : avgLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalLabelText: null == totalLabelText
+          ? _value.totalLabelText
+          : totalLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
       showLabel: null == showLabel
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
@@ -197,9 +237,9 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
           ? _value.showMaxValue
           : showMaxValue // ignore: cast_nullable_to_non_nullable
               as bool,
-      showSumValue: null == showSumValue
-          ? _value.showSumValue
-          : showSumValue // ignore: cast_nullable_to_non_nullable
+      showTotalValue: null == showTotalValue
+          ? _value.showTotalValue
+          : showTotalValue // ignore: cast_nullable_to_non_nullable
               as bool,
       showAvgValue: null == showAvgValue
           ? _value.showAvgValue
@@ -237,12 +277,17 @@ abstract class _$$MultipleFieldStatsWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
       double width,
+      double height,
       List<int> chartSeriesColors,
+      String minLabelText,
+      String maxLabelText,
+      String avgLabelText,
+      String totalLabelText,
       bool showLabel,
       bool showStats,
       bool showMinValue,
       bool showMaxValue,
-      bool showSumValue,
+      bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
       bool showLegend});
@@ -271,12 +316,17 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
     Object? statsHeadingFont = null,
     Object? statsValueFont = null,
     Object? width = null,
+    Object? height = null,
     Object? chartSeriesColors = null,
+    Object? minLabelText = null,
+    Object? maxLabelText = null,
+    Object? avgLabelText = null,
+    Object? totalLabelText = null,
     Object? showLabel = null,
     Object? showStats = null,
     Object? showMinValue = null,
     Object? showMaxValue = null,
-    Object? showSumValue = null,
+    Object? showTotalValue = null,
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
@@ -322,10 +372,30 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
       chartSeriesColors: null == chartSeriesColors
           ? _value.chartSeriesColors
           : chartSeriesColors // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      minLabelText: null == minLabelText
+          ? _value.minLabelText
+          : minLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      maxLabelText: null == maxLabelText
+          ? _value.maxLabelText
+          : maxLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      avgLabelText: null == avgLabelText
+          ? _value.avgLabelText
+          : avgLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalLabelText: null == totalLabelText
+          ? _value.totalLabelText
+          : totalLabelText // ignore: cast_nullable_to_non_nullable
+              as String,
       showLabel: null == showLabel
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
@@ -342,9 +412,9 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showMaxValue
           : showMaxValue // ignore: cast_nullable_to_non_nullable
               as bool,
-      showSumValue: null == showSumValue
-          ? _value.showSumValue
-          : showSumValue // ignore: cast_nullable_to_non_nullable
+      showTotalValue: null == showTotalValue
+          ? _value.showTotalValue
+          : showTotalValue // ignore: cast_nullable_to_non_nullable
               as bool,
       showAvgValue: null == showAvgValue
           ? _value.showAvgValue
@@ -401,13 +471,18 @@ class _$MultipleFieldStatsWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.width = 250,
+      this.width = 600,
+      this.height = 650,
       this.chartSeriesColors = const [],
+      this.minLabelText = 'Min',
+      this.maxLabelText = 'Max',
+      this.avgLabelText = 'Avg',
+      this.totalLabelText = 'Total',
       this.showLabel = true,
       this.showStats = true,
       this.showMinValue = true,
       this.showMaxValue = true,
-      this.showSumValue = true,
+      this.showTotalValue = true,
       this.showAvgValue = true,
       this.showTooltip = true,
       this.showLegend = true})
@@ -449,7 +524,22 @@ class _$MultipleFieldStatsWidgetConfigImpl
   double width;
   @override
   @JsonKey()
+  double height;
+  @override
+  @JsonKey()
   List<int> chartSeriesColors;
+  @override
+  @JsonKey()
+  String minLabelText;
+  @override
+  @JsonKey()
+  String maxLabelText;
+  @override
+  @JsonKey()
+  String avgLabelText;
+  @override
+  @JsonKey()
+  String totalLabelText;
   @override
   @JsonKey()
   bool showLabel;
@@ -464,7 +554,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
   bool showMaxValue;
   @override
   @JsonKey()
-  bool showSumValue;
+  bool showTotalValue;
   @override
   @JsonKey()
   bool showAvgValue;
@@ -477,7 +567,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, chartSeriesColors: $chartSeriesColors, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showSumValue: $showSumValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
+    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
   }
 
   @JsonKey(ignore: true)
@@ -509,12 +599,17 @@ abstract class _MultipleFieldStatsWidgetConfig
       Map<String, dynamic> statsHeadingFont,
       Map<String, dynamic> statsValueFont,
       double width,
+      double height,
       List<int> chartSeriesColors,
+      String minLabelText,
+      String maxLabelText,
+      String avgLabelText,
+      String totalLabelText,
       bool showLabel,
       bool showStats,
       bool showMinValue,
       bool showMaxValue,
-      bool showSumValue,
+      bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
       bool showLegend}) = _$MultipleFieldStatsWidgetConfigImpl;
@@ -554,8 +649,23 @@ abstract class _MultipleFieldStatsWidgetConfig
   double get width;
   set width(double value);
   @override
+  double get height;
+  set height(double value);
+  @override
   List<int> get chartSeriesColors;
   set chartSeriesColors(List<int> value);
+  @override
+  String get minLabelText;
+  set minLabelText(String value);
+  @override
+  String get maxLabelText;
+  set maxLabelText(String value);
+  @override
+  String get avgLabelText;
+  set avgLabelText(String value);
+  @override
+  String get totalLabelText;
+  set totalLabelText(String value);
   @override
   bool get showLabel;
   set showLabel(bool value);
@@ -569,8 +679,8 @@ abstract class _MultipleFieldStatsWidgetConfig
   bool get showMaxValue;
   set showMaxValue(bool value);
   @override
-  bool get showSumValue;
-  set showSumValue(bool value);
+  bool get showTotalValue;
+  set showTotalValue(bool value);
   @override
   bool get showAvgValue;
   set showAvgValue(bool value);

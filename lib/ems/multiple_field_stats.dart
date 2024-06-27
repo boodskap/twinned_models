@@ -49,13 +49,18 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> statsValueFont,
-    @Default(250) double width,
+    @Default(600) double width,
+     @Default(650) double height,
     @Default([]) List<int> chartSeriesColors,
+     @Default('Min') String minLabelText,
+      @Default('Max') String maxLabelText,
+       @Default('Avg') String avgLabelText,
+        @Default('Total') String totalLabelText,
     @Default(true) bool showLabel,
     @Default(true) bool showStats,
     @Default(true) bool showMinValue,
     @Default(true) bool showMaxValue,
-    @Default(true) bool showSumValue,
+    @Default(true) bool showTotalValue,
     @Default(true) bool showAvgValue,
     @Default(true) bool showTooltip,
     @Default(true) bool showLegend,
@@ -70,12 +75,17 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       case 'title':
       case 'deviceId':
       case 'subTitle':
+       case 'minLabelText':
+      case 'maxLabelText':
+      case 'avgLabelText':
+      case 'totalLabelText':
         return DataType.text;
       case 'field':
         return DataType.listOfTexts;
       case 'chartSeriesColors':
         return DataType.listOfNumbers;
       case 'width':
+      case 'height':
         return DataType.decimal;
       case 'titleFont':
       case 'subTitleFont':
@@ -87,7 +97,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       case 'showStats':
       case 'showMinValue':
       case 'showMaxValue':
-      case 'showSumValue':
+      case 'showTotalValue':
       case 'showAvgValue':
       case 'showTooltip':
       case 'showLegend':
@@ -127,6 +137,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return 'Title Font';
       case 'width':
         return 'Width';
+        case 'height':
+        return 'Height';
       case 'subTitle':
         return 'Sub Title';
       case 'chartSeriesColors':
@@ -147,14 +159,22 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return 'Show Min Value';
       case 'showMaxValue':
         return 'Show Max Value';
-      case 'showSumValue':
-        return 'Show Sum Value';
+      case 'showTotalValue':
+        return 'Show Total Value';
       case 'showAvgValue':
         return 'Show Avg Value';
       case 'showTooltip':
         return 'Show Tooltip';
       case 'showLegend':
         return 'Show Legend';
+          case 'minLabelText':
+        return 'Min Label Text';
+      case 'maxLabelText':
+        return 'Max Label Text';
+      case 'avgLabelText':
+        return 'Avg Label Text';
+      case 'totalLabelText':
+        return 'Total Label Text';
       default:
         return parameter;
     }
