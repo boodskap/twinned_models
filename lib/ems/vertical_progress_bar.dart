@@ -1,19 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'circular_progress_bar.freezed.dart';
-part 'circular_progress_bar.g.dart';
+part 'vertical_progress_bar.freezed.dart';
+part 'vertical_progress_bar.g.dart';
 
 @unfreezed
-class CircularProgressBarWidgetConfig extends BaseConfig
-    with _$CircularProgressBarWidgetConfig {
-  CircularProgressBarWidgetConfig._();
+class VerticalProgressBarWidgetConfig extends BaseConfig
+    with _$VerticalProgressBarWidgetConfig {
+  VerticalProgressBarWidgetConfig._();
 
-  factory CircularProgressBarWidgetConfig({
+  factory VerticalProgressBarWidgetConfig({
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 20,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -24,18 +24,21 @@ class CircularProgressBarWidgetConfig extends BaseConfig
     @Default(0xFF000000) int chartColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 25,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(250) double width,
-    @Default(250) double height,
-     @Default(0.3) double opacity,
-  }) = _CircularProgressBarWidgetConfig;
+    @Default(300) double height,
+    @Default(50) double dashCount,
+    @Default(3.0) double dashHeight,
+    @Default(50.0) double dashWidth,
+    @Default(1.5) double dashSpace,
+    @Default(0.3) double opacity,
+  }) = _VerticalProgressBarWidgetConfig;
 
-  factory CircularProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$CircularProgressBarWidgetConfigFromJson(json);
+  factory VerticalProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$VerticalProgressBarWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -47,9 +50,12 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return DataType.text;
       case 'chartColor':
         return DataType.numeric;
-      case 'width':
       case 'height':
-      case 'opacity':
+       case 'dashCount':
+      case 'dashHeight':
+       case 'dashWidth':
+      case 'dashSpace':
+       case 'opacity':
         return DataType.decimal;
       case 'titleFont':
       case 'valueFont':
@@ -95,11 +101,18 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return 'Title Font';
       case 'valueFont':
         return 'Value Font';
-      case 'width':
-        return 'Width';
       case 'height':
         return 'Height';
-      case 'opacity':
+
+         case 'dashCount':
+        return 'Dash Count';
+      case 'dashHeight':
+        return 'Dash Height';
+         case 'dashWidth':
+        return 'Dash Width';
+      case 'dashSpace':
+        return 'Dash Space';
+         case 'opacity':
         return 'Opacity';
       default:
         return parameter;

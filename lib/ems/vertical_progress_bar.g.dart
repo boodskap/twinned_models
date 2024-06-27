@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'circular_progress_bar.dart';
+part of 'vertical_progress_bar.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CircularProgressBarWidgetConfigImpl
-    _$$CircularProgressBarWidgetConfigImplFromJson(Map<String, dynamic> json) =>
-        _$CircularProgressBarWidgetConfigImpl(
+_$VerticalProgressBarWidgetConfigImpl
+    _$$VerticalProgressBarWidgetConfigImplFromJson(Map<String, dynamic> json) =>
+        _$VerticalProgressBarWidgetConfigImpl(
           title: json['title'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
+                'fontSize': 20,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -24,17 +24,20 @@ _$CircularProgressBarWidgetConfigImpl
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 16,
+                'fontSize': 25,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          width: (json['width'] as num?)?.toDouble() ?? 250,
-          height: (json['height'] as num?)?.toDouble() ?? 250,
+          height: (json['height'] as num?)?.toDouble() ?? 300,
+          dashCount: (json['dashCount'] as num?)?.toDouble() ?? 50,
+          dashHeight: (json['dashHeight'] as num?)?.toDouble() ?? 3.0,
+          dashWidth: (json['dashWidth'] as num?)?.toDouble() ?? 50.0,
+          dashSpace: (json['dashSpace'] as num?)?.toDouble() ?? 1.5,
           opacity: (json['opacity'] as num?)?.toDouble() ?? 0.3,
         );
 
-Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
-        _$CircularProgressBarWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$VerticalProgressBarWidgetConfigImplToJson(
+        _$VerticalProgressBarWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
@@ -43,7 +46,10 @@ Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
       'unit': instance.unit,
       'chartColor': instance.chartColor,
       'valueFont': instance.valueFont,
-      'width': instance.width,
       'height': instance.height,
+      'dashCount': instance.dashCount,
+      'dashHeight': instance.dashHeight,
+      'dashWidth': instance.dashWidth,
+      'dashSpace': instance.dashSpace,
       'opacity': instance.opacity,
     };

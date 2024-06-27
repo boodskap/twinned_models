@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'circular_progress_bar.dart';
+part of 'vertical_progress_bar.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-CircularProgressBarWidgetConfig _$CircularProgressBarWidgetConfigFromJson(
+VerticalProgressBarWidgetConfig _$VerticalProgressBarWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _CircularProgressBarWidgetConfig.fromJson(json);
+  return _VerticalProgressBarWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CircularProgressBarWidgetConfig {
+mixin _$VerticalProgressBarWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -37,26 +37,32 @@ mixin _$CircularProgressBarWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  double get width => throw _privateConstructorUsedError;
-  set width(double value) => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
+  double get dashCount => throw _privateConstructorUsedError;
+  set dashCount(double value) => throw _privateConstructorUsedError;
+  double get dashHeight => throw _privateConstructorUsedError;
+  set dashHeight(double value) => throw _privateConstructorUsedError;
+  double get dashWidth => throw _privateConstructorUsedError;
+  set dashWidth(double value) => throw _privateConstructorUsedError;
+  double get dashSpace => throw _privateConstructorUsedError;
+  set dashSpace(double value) => throw _privateConstructorUsedError;
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CircularProgressBarWidgetConfigCopyWith<CircularProgressBarWidgetConfig>
+  $VerticalProgressBarWidgetConfigCopyWith<VerticalProgressBarWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CircularProgressBarWidgetConfigCopyWith<$Res> {
-  factory $CircularProgressBarWidgetConfigCopyWith(
-          CircularProgressBarWidgetConfig value,
-          $Res Function(CircularProgressBarWidgetConfig) then) =
-      _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
-          CircularProgressBarWidgetConfig>;
+abstract class $VerticalProgressBarWidgetConfigCopyWith<$Res> {
+  factory $VerticalProgressBarWidgetConfigCopyWith(
+          VerticalProgressBarWidgetConfig value,
+          $Res Function(VerticalProgressBarWidgetConfig) then) =
+      _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
+          VerticalProgressBarWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -66,16 +72,19 @@ abstract class $CircularProgressBarWidgetConfigCopyWith<$Res> {
       String unit,
       int chartColor,
       Map<String, dynamic> valueFont,
-      double width,
       double height,
+      double dashCount,
+      double dashHeight,
+      double dashWidth,
+      double dashSpace,
       double opacity});
 }
 
 /// @nodoc
-class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
-        $Val extends CircularProgressBarWidgetConfig>
-    implements $CircularProgressBarWidgetConfigCopyWith<$Res> {
-  _$CircularProgressBarWidgetConfigCopyWithImpl(this._value, this._then);
+class _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
+        $Val extends VerticalProgressBarWidgetConfig>
+    implements $VerticalProgressBarWidgetConfigCopyWith<$Res> {
+  _$VerticalProgressBarWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -92,8 +101,11 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
     Object? unit = null,
     Object? chartColor = null,
     Object? valueFont = null,
-    Object? width = null,
     Object? height = null,
+    Object? dashCount = null,
+    Object? dashHeight = null,
+    Object? dashWidth = null,
+    Object? dashSpace = null,
     Object? opacity = null,
   }) {
     return _then(_value.copyWith(
@@ -125,13 +137,25 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      width: null == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as double,
       height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashCount: null == dashCount
+          ? _value.dashCount
+          : dashCount // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashHeight: null == dashHeight
+          ? _value.dashHeight
+          : dashHeight // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashWidth: null == dashWidth
+          ? _value.dashWidth
+          : dashWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashSpace: null == dashSpace
+          ? _value.dashSpace
+          : dashSpace // ignore: cast_nullable_to_non_nullable
               as double,
       opacity: null == opacity
           ? _value.opacity
@@ -142,12 +166,12 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CircularProgressBarWidgetConfigImplCopyWith<$Res>
-    implements $CircularProgressBarWidgetConfigCopyWith<$Res> {
-  factory _$$CircularProgressBarWidgetConfigImplCopyWith(
-          _$CircularProgressBarWidgetConfigImpl value,
-          $Res Function(_$CircularProgressBarWidgetConfigImpl) then) =
-      __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$VerticalProgressBarWidgetConfigImplCopyWith<$Res>
+    implements $VerticalProgressBarWidgetConfigCopyWith<$Res> {
+  factory _$$VerticalProgressBarWidgetConfigImplCopyWith(
+          _$VerticalProgressBarWidgetConfigImpl value,
+          $Res Function(_$VerticalProgressBarWidgetConfigImpl) then) =
+      __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -158,19 +182,22 @@ abstract class _$$CircularProgressBarWidgetConfigImplCopyWith<$Res>
       String unit,
       int chartColor,
       Map<String, dynamic> valueFont,
-      double width,
       double height,
+      double dashCount,
+      double dashHeight,
+      double dashWidth,
+      double dashSpace,
       double opacity});
 }
 
 /// @nodoc
-class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
-    extends _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
-        _$CircularProgressBarWidgetConfigImpl>
-    implements _$$CircularProgressBarWidgetConfigImplCopyWith<$Res> {
-  __$$CircularProgressBarWidgetConfigImplCopyWithImpl(
-      _$CircularProgressBarWidgetConfigImpl _value,
-      $Res Function(_$CircularProgressBarWidgetConfigImpl) _then)
+class __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<$Res>
+    extends _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
+        _$VerticalProgressBarWidgetConfigImpl>
+    implements _$$VerticalProgressBarWidgetConfigImplCopyWith<$Res> {
+  __$$VerticalProgressBarWidgetConfigImplCopyWithImpl(
+      _$VerticalProgressBarWidgetConfigImpl _value,
+      $Res Function(_$VerticalProgressBarWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -183,11 +210,14 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
     Object? unit = null,
     Object? chartColor = null,
     Object? valueFont = null,
-    Object? width = null,
     Object? height = null,
+    Object? dashCount = null,
+    Object? dashHeight = null,
+    Object? dashWidth = null,
+    Object? dashSpace = null,
     Object? opacity = null,
   }) {
-    return _then(_$CircularProgressBarWidgetConfigImpl(
+    return _then(_$VerticalProgressBarWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -216,13 +246,25 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      width: null == width
-          ? _value.width
-          : width // ignore: cast_nullable_to_non_nullable
-              as double,
       height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashCount: null == dashCount
+          ? _value.dashCount
+          : dashCount // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashHeight: null == dashHeight
+          ? _value.dashHeight
+          : dashHeight // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashWidth: null == dashWidth
+          ? _value.dashWidth
+          : dashWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      dashSpace: null == dashSpace
+          ? _value.dashSpace
+          : dashSpace // ignore: cast_nullable_to_non_nullable
               as double,
       opacity: null == opacity
           ? _value.opacity
@@ -234,13 +276,13 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CircularProgressBarWidgetConfigImpl
-    extends _CircularProgressBarWidgetConfig {
-  _$CircularProgressBarWidgetConfigImpl(
+class _$VerticalProgressBarWidgetConfigImpl
+    extends _VerticalProgressBarWidgetConfig {
+  _$VerticalProgressBarWidgetConfigImpl(
       {this.title = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
+        'fontSize': 20,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -250,18 +292,21 @@ class _$CircularProgressBarWidgetConfigImpl
       this.chartColor = 0xFF000000,
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.width = 250,
-      this.height = 250,
+      this.height = 300,
+      this.dashCount = 50,
+      this.dashHeight = 3.0,
+      this.dashWidth = 50.0,
+      this.dashSpace = 1.5,
       this.opacity = 0.3})
       : super._();
 
-  factory _$CircularProgressBarWidgetConfigImpl.fromJson(
+  factory _$VerticalProgressBarWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$CircularProgressBarWidgetConfigImplFromJson(json);
+      _$$VerticalProgressBarWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -286,38 +331,47 @@ class _$CircularProgressBarWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  double width;
+  double height;
   @override
   @JsonKey()
-  double height;
+  double dashCount;
+  @override
+  @JsonKey()
+  double dashHeight;
+  @override
+  @JsonKey()
+  double dashWidth;
+  @override
+  @JsonKey()
+  double dashSpace;
   @override
   @JsonKey()
   double opacity;
 
   @override
   String toString() {
-    return 'CircularProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, width: $width, height: $height, opacity: $opacity)';
+    return 'VerticalProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, height: $height, dashCount: $dashCount, dashHeight: $dashHeight, dashWidth: $dashWidth, dashSpace: $dashSpace, opacity: $opacity)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CircularProgressBarWidgetConfigImplCopyWith<
-          _$CircularProgressBarWidgetConfigImpl>
-      get copyWith => __$$CircularProgressBarWidgetConfigImplCopyWithImpl<
-          _$CircularProgressBarWidgetConfigImpl>(this, _$identity);
+  _$$VerticalProgressBarWidgetConfigImplCopyWith<
+          _$VerticalProgressBarWidgetConfigImpl>
+      get copyWith => __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<
+          _$VerticalProgressBarWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CircularProgressBarWidgetConfigImplToJson(
+    return _$$VerticalProgressBarWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _CircularProgressBarWidgetConfig
-    extends CircularProgressBarWidgetConfig {
-  factory _CircularProgressBarWidgetConfig(
+abstract class _VerticalProgressBarWidgetConfig
+    extends VerticalProgressBarWidgetConfig {
+  factory _VerticalProgressBarWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String deviceId,
@@ -325,13 +379,16 @@ abstract class _CircularProgressBarWidgetConfig
       String unit,
       int chartColor,
       Map<String, dynamic> valueFont,
-      double width,
       double height,
-      double opacity}) = _$CircularProgressBarWidgetConfigImpl;
-  _CircularProgressBarWidgetConfig._() : super._();
+      double dashCount,
+      double dashHeight,
+      double dashWidth,
+      double dashSpace,
+      double opacity}) = _$VerticalProgressBarWidgetConfigImpl;
+  _VerticalProgressBarWidgetConfig._() : super._();
 
-  factory _CircularProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$CircularProgressBarWidgetConfigImpl.fromJson;
+  factory _VerticalProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$VerticalProgressBarWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -355,17 +412,26 @@ abstract class _CircularProgressBarWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  double get width;
-  set width(double value);
-  @override
   double get height;
   set height(double value);
+  @override
+  double get dashCount;
+  set dashCount(double value);
+  @override
+  double get dashHeight;
+  set dashHeight(double value);
+  @override
+  double get dashWidth;
+  set dashWidth(double value);
+  @override
+  double get dashSpace;
+  set dashSpace(double value);
   @override
   double get opacity;
   set opacity(double value);
   @override
   @JsonKey(ignore: true)
-  _$$CircularProgressBarWidgetConfigImplCopyWith<
-          _$CircularProgressBarWidgetConfigImpl>
+  _$$VerticalProgressBarWidgetConfigImplCopyWith<
+          _$VerticalProgressBarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
