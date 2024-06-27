@@ -35,6 +35,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     Map<String, dynamic> subTitleFont,
     @Default('') String deviceId,
     @Default([]) List<String> field,
+    @Default(ChartType.spline) ChartType chartType,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -71,7 +72,6 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     @Default(true) bool showAvgValue,
     @Default(true) bool showTooltip,
     @Default(true) bool showLegend,
-    @Default(ChartType.spline) ChartType chartType,
   }) = _MultipleFieldStatsWidgetConfig;
 
   factory MultipleFieldStatsWidgetConfig.fromJson(Map<String, dynamic> json) =>
