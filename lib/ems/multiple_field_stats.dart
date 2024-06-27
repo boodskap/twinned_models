@@ -4,6 +4,13 @@ import 'package:twinned_models/models.dart';
 part 'multiple_field_stats.freezed.dart';
 part 'multiple_field_stats.g.dart';
 
+enum ChartType {
+  line,
+  spline,
+  column,
+  area,
+}
+
 @unfreezed
 class MultipleFieldStatsWidgetConfig extends BaseConfig
     with _$MultipleFieldStatsWidgetConfig {
@@ -13,7 +20,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 22,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -21,7 +28,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     @Default('') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': false
     })
@@ -49,14 +56,14 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> statsValueFont,
-    @Default(600) double width,
-     @Default(650) double height,
+    @Default(700) double width,
+     @Default(300) double height,
     @Default([]) List<int> chartSeriesColors,
      @Default('Min') String minLabelText,
       @Default('Max') String maxLabelText,
        @Default('Avg') String avgLabelText,
         @Default('Total') String totalLabelText,
-    @Default(true) bool showLabel,
+    @Default(false) bool showLabel,
     @Default(true) bool showStats,
     @Default(true) bool showMinValue,
     @Default(true) bool showMaxValue,
@@ -64,6 +71,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     @Default(true) bool showAvgValue,
     @Default(true) bool showTooltip,
     @Default(true) bool showLegend,
+    @Default(ChartType.spline) ChartType chartType,
   }) = _MultipleFieldStatsWidgetConfig;
 
   factory MultipleFieldStatsWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -102,6 +110,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       case 'showTooltip':
       case 'showLegend':
         return DataType.yesno;
+        case 'chartType':
+        return DataType.enumerated;
       default:
         return DataType.none;
     }
@@ -114,6 +124,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+        case 'chartSeriesColors':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -121,7 +133,12 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    return [];
+     switch (parameter) {
+      case 'chartType':
+        return ChartType.values.asNameMap().keys.toList();
+      default:
+        return [];
+    }
   }
 
   @override
@@ -175,6 +192,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return 'Avg Label Text';
       case 'totalLabelText':
         return 'Total Label Text';
+         case 'chartType':
+        return 'Chart Type';
       default:
         return parameter;
     }
