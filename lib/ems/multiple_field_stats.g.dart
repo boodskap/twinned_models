@@ -13,7 +13,7 @@ _$MultipleFieldStatsWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 25,
+                'fontSize': 22,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -21,7 +21,7 @@ _$MultipleFieldStatsWidgetConfigImpl
           subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 20,
+                'fontSize': 16,
                 'fontColor': 0xFF000000,
                 'fontBold': false
               },
@@ -51,8 +51,8 @@ _$MultipleFieldStatsWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': false
               },
-          width: (json['width'] as num?)?.toDouble() ?? 600,
-          height: (json['height'] as num?)?.toDouble() ?? 650,
+          width: (json['width'] as num?)?.toDouble() ?? 700,
+          height: (json['height'] as num?)?.toDouble() ?? 300,
           chartSeriesColors: (json['chartSeriesColors'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
@@ -61,7 +61,7 @@ _$MultipleFieldStatsWidgetConfigImpl
           maxLabelText: json['maxLabelText'] as String? ?? 'Max',
           avgLabelText: json['avgLabelText'] as String? ?? 'Avg',
           totalLabelText: json['totalLabelText'] as String? ?? 'Total',
-          showLabel: json['showLabel'] as bool? ?? true,
+          showLabel: json['showLabel'] as bool? ?? false,
           showStats: json['showStats'] as bool? ?? true,
           showMinValue: json['showMinValue'] as bool? ?? true,
           showMaxValue: json['showMaxValue'] as bool? ?? true,
@@ -69,6 +69,9 @@ _$MultipleFieldStatsWidgetConfigImpl
           showAvgValue: json['showAvgValue'] as bool? ?? true,
           showTooltip: json['showTooltip'] as bool? ?? true,
           showLegend: json['showLegend'] as bool? ?? true,
+          chartType:
+              $enumDecodeNullable(_$ChartTypeEnumMap, json['chartType']) ??
+                  ChartType.spline,
         );
 
 Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
@@ -98,4 +101,12 @@ Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
       'showAvgValue': instance.showAvgValue,
       'showTooltip': instance.showTooltip,
       'showLegend': instance.showLegend,
+      'chartType': _$ChartTypeEnumMap[instance.chartType]!,
     };
+
+const _$ChartTypeEnumMap = {
+  ChartType.line: 'line',
+  ChartType.spline: 'spline',
+  ChartType.column: 'column',
+  ChartType.area: 'area',
+};
