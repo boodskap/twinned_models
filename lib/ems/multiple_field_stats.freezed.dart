@@ -51,6 +51,8 @@ mixin _$MultipleFieldStatsWidgetConfig {
   set width(double value) => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
+  double get chartHeight => throw _privateConstructorUsedError;
+  set chartHeight(double value) => throw _privateConstructorUsedError;
   List<int> get chartSeriesColors => throw _privateConstructorUsedError;
   set chartSeriesColors(List<int> value) => throw _privateConstructorUsedError;
   String get minLabelText => throw _privateConstructorUsedError;
@@ -105,6 +107,7 @@ abstract class $MultipleFieldStatsWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> statsValueFont,
       double width,
       double height,
+      double chartHeight,
       List<int> chartSeriesColors,
       String minLabelText,
       String maxLabelText,
@@ -146,6 +149,7 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
     Object? statsValueFont = null,
     Object? width = null,
     Object? height = null,
+    Object? chartHeight = null,
     Object? chartSeriesColors = null,
     Object? minLabelText = null,
     Object? maxLabelText = null,
@@ -208,6 +212,10 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
       height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
+              as double,
+      chartHeight: null == chartHeight
+          ? _value.chartHeight
+          : chartHeight // ignore: cast_nullable_to_non_nullable
               as double,
       chartSeriesColors: null == chartSeriesColors
           ? _value.chartSeriesColors
@@ -287,6 +295,7 @@ abstract class _$$MultipleFieldStatsWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> statsValueFont,
       double width,
       double height,
+      double chartHeight,
       List<int> chartSeriesColors,
       String minLabelText,
       String maxLabelText,
@@ -327,6 +336,7 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
     Object? statsValueFont = null,
     Object? width = null,
     Object? height = null,
+    Object? chartHeight = null,
     Object? chartSeriesColors = null,
     Object? minLabelText = null,
     Object? maxLabelText = null,
@@ -389,6 +399,10 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
       height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
+              as double,
+      chartHeight: null == chartHeight
+          ? _value.chartHeight
+          : chartHeight // ignore: cast_nullable_to_non_nullable
               as double,
       chartSeriesColors: null == chartSeriesColors
           ? _value.chartSeriesColors
@@ -486,8 +500,9 @@ class _$MultipleFieldStatsWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.width = 700,
-      this.height = 300,
+      this.width = 480,
+      this.height = 370,
+      this.chartHeight = 270,
       this.chartSeriesColors = const [],
       this.minLabelText = 'Min',
       this.maxLabelText = 'Max',
@@ -545,6 +560,9 @@ class _$MultipleFieldStatsWidgetConfigImpl
   double height;
   @override
   @JsonKey()
+  double chartHeight;
+  @override
+  @JsonKey()
   List<int> chartSeriesColors;
   @override
   @JsonKey()
@@ -585,7 +603,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
+    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartHeight: $chartHeight, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
   }
 
   @JsonKey(ignore: true)
@@ -619,6 +637,7 @@ abstract class _MultipleFieldStatsWidgetConfig
       Map<String, dynamic> statsValueFont,
       double width,
       double height,
+      double chartHeight,
       List<int> chartSeriesColors,
       String minLabelText,
       String maxLabelText,
@@ -673,6 +692,9 @@ abstract class _MultipleFieldStatsWidgetConfig
   @override
   double get height;
   set height(double value);
+  @override
+  double get chartHeight;
+  set chartHeight(double value);
   @override
   List<int> get chartSeriesColors;
   set chartSeriesColors(List<int> value);
