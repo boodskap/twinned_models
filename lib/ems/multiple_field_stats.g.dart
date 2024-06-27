@@ -54,9 +54,8 @@ _$MultipleFieldStatsWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': false
               },
-          width: (json['width'] as num?)?.toDouble() ?? 480,
-          height: (json['height'] as num?)?.toDouble() ?? 370,
-          chartHeight: (json['chartHeight'] as num?)?.toDouble() ?? 270,
+          width: (json['width'] as num?)?.toDouble() ?? 700,
+          height: (json['height'] as num?)?.toDouble() ?? 300,
           chartSeriesColors: (json['chartSeriesColors'] as List<dynamic>?)
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
@@ -90,7 +89,6 @@ Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
       'statsValueFont': instance.statsValueFont,
       'width': instance.width,
       'height': instance.height,
-      'chartHeight': instance.chartHeight,
       'chartSeriesColors': instance.chartSeriesColors,
       'minLabelText': instance.minLabelText,
       'maxLabelText': instance.maxLabelText,
