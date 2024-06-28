@@ -17,7 +17,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 18,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
