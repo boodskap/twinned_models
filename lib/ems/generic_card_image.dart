@@ -20,6 +20,7 @@ class GenericCardImageWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default('') String deviceId,
     @Default('') String field,
+    @Default('') String unit,
     @Default('') String backgroundImage,
     @Default(0xFF000000) int backgroundColor,
     @Default('') String heading,
@@ -64,6 +65,7 @@ class GenericCardImageWidgetConfig extends BaseConfig
       case 'heading':
       case 'deviceId':
       case 'content':
+      case 'unit':
         return DataType.text;
       case 'backgroundColor':
       case 'seconds':
@@ -112,6 +114,8 @@ class GenericCardImageWidgetConfig extends BaseConfig
         return 'Title';
       case 'field':
         return 'Field';
+        case 'unit':
+        return 'Unit';
       case 'heading':
         return 'Heading';
       case 'deviceId':
