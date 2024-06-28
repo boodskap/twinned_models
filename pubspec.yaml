@@ -38,6 +38,8 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
   syncfusion_flutter_charts: ^25.1.42+1
+  syncfusion_flutter_gauges: ^25.2.6
+
 
 dev_dependencies:
   flutter_test:
