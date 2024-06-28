@@ -426,25 +426,25 @@ class _$MultiFieldDeviceSplineChartWidgetConfigImpl
       },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 18,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 30,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.tooltipFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 12,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },

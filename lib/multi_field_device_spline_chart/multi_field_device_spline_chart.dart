@@ -26,28 +26,28 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> subTitleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 12,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })

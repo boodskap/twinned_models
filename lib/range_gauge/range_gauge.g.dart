@@ -17,7 +17,7 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 20,
+                'fontSize': 18,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -31,7 +31,7 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           legendFont: json['legendFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 12,
+                'fontSize': 16,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },

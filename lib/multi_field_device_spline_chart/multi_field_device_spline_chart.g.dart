@@ -35,28 +35,28 @@ _$MultiFieldDeviceSplineChartWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 30,
+                'fontSize': 18,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 30,
+                'fontSize': 12,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 12,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
           tooltipFont: json['tooltipFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
+                'fontSize': 12,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
