@@ -1,0 +1,171 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:twinned_models/models.dart';
+
+part 'circular_progress_bar.freezed.dart';
+part 'circular_progress_bar.g.dart';
+
+@unfreezed
+class GenericCardImageWidgetConfig extends BaseConfig
+    with _$GenericCardImageWidgetConfig {
+  GenericCardImageWidgetConfig._();
+
+  factory GenericCardImageWidgetConfig({
+    @Default('') String title,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 25,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> titleFont,
+    @Default('') String deviceId,
+    @Default('') String field,
+    @Default('') String backgroundImage,
+    @Default(0xFF000000) int backgroundColor,
+    @Default('') String heading,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 16,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': false
+    })
+    Map<String, dynamic> headingFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default('') String content,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> contentFont,
+    @Default('') String contentImage,
+    @Default(300) double width,
+    @Default(300) double height,
+    @Default(0.3) double opacity,
+    @Default(60) int seconds,
+    @Default(200) double backgroundImageHeight,
+  }) = _GenericCardImageWidgetConfig;
+
+  factory GenericCardImageWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$GenericCardImageWidgetConfigFromJson(json);
+
+  @override
+  DataType getDataType(String parameter) {
+    switch (parameter) {
+      case 'title':
+      case 'field':
+      case 'heading':
+      case 'deviceId':
+      case 'content':
+        return DataType.text;
+      case 'backgroundColor':
+      case 'seconds':
+        return DataType.numeric;
+      case 'width':
+      case 'height':
+      case 'opacity':
+      case 'backgroundImageHeight':
+        return DataType.decimal;
+      case 'titleFont':
+      case 'headingFont':
+      case 'valueFont':
+      case 'contentFont':
+        return DataType.font;
+      case 'backgroundImage':
+      case 'contentImage':
+        return DataType.image;
+      default:
+        return DataType.none;
+    }
+  }
+
+  @override
+  HintType getHintType(String parameter) {
+    switch (parameter) {
+      case 'field':
+        return HintType.field;
+      case 'backgroundColor':
+        return HintType.color;
+      case 'deviceId':
+        return HintType.deviceId;
+      default:
+        return HintType.none;
+    }
+  }
+
+  @override
+  List<String> getEnumeratedValues(String parameter) {
+    return [];
+  }
+
+  @override
+  String getLabel(String parameter) {
+    switch (parameter) {
+      case 'title':
+        return 'Title';
+      case 'field':
+        return 'Field';
+      case 'heading':
+        return 'Heading';
+      case 'deviceId':
+        return 'Device Id';
+      case 'content':
+        return 'Content';
+      case 'backgroundColor':
+        return 'Background Color';
+      case 'seconds':
+        return 'Seconds';
+      case 'width':
+        return 'Width';
+      case 'height':
+        return 'Height';
+      case 'opacity':
+        return 'Opacity';
+      case 'backgroundImageHeight':
+        return 'Background Image Height';
+      case 'titleFont':
+        return 'Title Font';
+      case 'headingFont':
+        return 'Heading Font';
+      case 'valueFont':
+        return 'Value Font';
+      case 'contentFont':
+        return 'Content Font';
+      case 'backgroundImage':
+        return 'Background Image';
+      case 'contentImage':
+        return 'Content Image';
+
+      default:
+        return parameter;
+    }
+  }
+
+  @override
+  String getTooltip(String parameter) {
+    return '';
+  }
+
+  @override
+  bool isRequired(String parameter) {
+    switch (parameter) {
+      case 'deviceId':
+      case 'field':
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  @override
+  bool isValid(String parameter, value) {
+    return true;
+  }
+}
