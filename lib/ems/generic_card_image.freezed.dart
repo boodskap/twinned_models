@@ -30,6 +30,8 @@ mixin _$GenericCardImageWidgetConfig {
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
+  String get unit => throw _privateConstructorUsedError;
+  set unit(String value) => throw _privateConstructorUsedError;
   String get backgroundImage => throw _privateConstructorUsedError;
   set backgroundImage(String value) => throw _privateConstructorUsedError;
   int get backgroundColor => throw _privateConstructorUsedError;
@@ -79,6 +81,7 @@ abstract class $GenericCardImageWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> titleFont,
       String deviceId,
       String field,
+      String unit,
       String backgroundImage,
       int backgroundColor,
       String heading,
@@ -112,6 +115,7 @@ class _$GenericCardImageWidgetConfigCopyWithImpl<$Res,
     Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
+    Object? unit = null,
     Object? backgroundImage = null,
     Object? backgroundColor = null,
     Object? heading = null,
@@ -142,6 +146,10 @@ class _$GenericCardImageWidgetConfigCopyWithImpl<$Res,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      unit: null == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
               as String,
       backgroundImage: null == backgroundImage
           ? _value.backgroundImage
@@ -213,6 +221,7 @@ abstract class _$$GenericCardImageWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> titleFont,
       String deviceId,
       String field,
+      String unit,
       String backgroundImage,
       int backgroundColor,
       String heading,
@@ -245,6 +254,7 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
     Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
+    Object? unit = null,
     Object? backgroundImage = null,
     Object? backgroundColor = null,
     Object? heading = null,
@@ -275,6 +285,10 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
+              as String,
+      unit: null == unit
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
               as String,
       backgroundImage: null == backgroundImage
           ? _value.backgroundImage
@@ -345,6 +359,7 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
       },
       this.deviceId = '',
       this.field = '',
+      this.unit = '',
       this.backgroundImage = '',
       this.backgroundColor = 0xFF000000,
       this.heading = '',
@@ -393,6 +408,9 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
   String field;
   @override
   @JsonKey()
+  String unit;
+  @override
+  @JsonKey()
   String backgroundImage;
   @override
   @JsonKey()
@@ -433,7 +451,7 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
 
   @override
   String toString() {
-    return 'GenericCardImageWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, backgroundImage: $backgroundImage, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, content: $content, contentFont: $contentFont, contentImage: $contentImage, width: $width, height: $height, opacity: $opacity, seconds: $seconds, backgroundImageHeight: $backgroundImageHeight)';
+    return 'GenericCardImageWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, backgroundImage: $backgroundImage, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, content: $content, contentFont: $contentFont, contentImage: $contentImage, width: $width, height: $height, opacity: $opacity, seconds: $seconds, backgroundImageHeight: $backgroundImageHeight)';
   }
 
   @JsonKey(ignore: true)
@@ -459,6 +477,7 @@ abstract class _GenericCardImageWidgetConfig
       Map<String, dynamic> titleFont,
       String deviceId,
       String field,
+      String unit,
       String backgroundImage,
       int backgroundColor,
       String heading,
@@ -489,6 +508,9 @@ abstract class _GenericCardImageWidgetConfig
   @override
   String get field;
   set field(String value);
+  @override
+  String get unit;
+  set unit(String value);
   @override
   String get backgroundImage;
   set backgroundImage(String value);
