@@ -17,7 +17,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -31,7 +31,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     Map<String, dynamic> tooltipFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 12,
+      'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
