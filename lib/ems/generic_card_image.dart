@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'circular_progress_bar.freezed.dart';
-part 'circular_progress_bar.g.dart';
+part 'generic_card_image.freezed.dart';
+part 'generic_card_image.g.dart';
 
 @unfreezed
 class GenericCardImageWidgetConfig extends BaseConfig
