@@ -21,11 +21,6 @@ GenericCardImageWidgetConfig _$GenericCardImageWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$GenericCardImageWidgetConfig {
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
-  Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
-  set titleFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -77,9 +72,7 @@ abstract class $GenericCardImageWidgetConfigCopyWith<$Res> {
           GenericCardImageWidgetConfig>;
   @useResult
   $Res call(
-      {String title,
-      Map<String, dynamic> titleFont,
-      String deviceId,
+      {String deviceId,
       String field,
       String unit,
       String backgroundImage,
@@ -111,8 +104,6 @@ class _$GenericCardImageWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
-    Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
     Object? unit = null,
@@ -131,14 +122,6 @@ class _$GenericCardImageWidgetConfigCopyWithImpl<$Res,
     Object? backgroundImageHeight = null,
   }) {
     return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      titleFont: null == titleFont
-          ? _value.titleFont
-          : titleFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -217,9 +200,7 @@ abstract class _$$GenericCardImageWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
-      Map<String, dynamic> titleFont,
-      String deviceId,
+      {String deviceId,
       String field,
       String unit,
       String backgroundImage,
@@ -250,8 +231,6 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
-    Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
     Object? unit = null,
@@ -270,14 +249,6 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
     Object? backgroundImageHeight = null,
   }) {
     return _then(_$GenericCardImageWidgetConfigImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      titleFont: null == titleFont
-          ? _value.titleFont
-          : titleFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -350,14 +321,7 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
   _$GenericCardImageWidgetConfigImpl(
-      {this.title = '',
-      this.titleFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 25,
-        'fontColor': 0xFF000000,
-        'fontBold': true
-      },
-      this.deviceId = '',
+      {this.deviceId = '',
       this.field = '',
       this.unit = '',
       this.backgroundImage = '',
@@ -371,35 +335,29 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 30,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.content = '',
       this.contentFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 12,
+        'fontSize': 20,
         'fontColor': 0xFF000000,
-        'fontBold': true
+        'fontBold': false
       },
       this.contentImage = '',
-      this.width = 300,
-      this.height = 300,
-      this.opacity = 0.3,
+      this.width = 350,
+      this.height = 380,
+      this.opacity = 0.5,
       this.seconds = 60,
-      this.backgroundImageHeight = 200})
+      this.backgroundImageHeight = 300})
       : super._();
 
   factory _$GenericCardImageWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GenericCardImageWidgetConfigImplFromJson(json);
 
-  @override
-  @JsonKey()
-  String title;
-  @override
-  @JsonKey()
-  Map<String, dynamic> titleFont;
   @override
   @JsonKey()
   String deviceId;
@@ -451,7 +409,7 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
 
   @override
   String toString() {
-    return 'GenericCardImageWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, backgroundImage: $backgroundImage, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, content: $content, contentFont: $contentFont, contentImage: $contentImage, width: $width, height: $height, opacity: $opacity, seconds: $seconds, backgroundImageHeight: $backgroundImageHeight)';
+    return 'GenericCardImageWidgetConfig(deviceId: $deviceId, field: $field, unit: $unit, backgroundImage: $backgroundImage, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, content: $content, contentFont: $contentFont, contentImage: $contentImage, width: $width, height: $height, opacity: $opacity, seconds: $seconds, backgroundImageHeight: $backgroundImageHeight)';
   }
 
   @JsonKey(ignore: true)
@@ -473,9 +431,7 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
 abstract class _GenericCardImageWidgetConfig
     extends GenericCardImageWidgetConfig {
   factory _GenericCardImageWidgetConfig(
-      {String title,
-      Map<String, dynamic> titleFont,
-      String deviceId,
+      {String deviceId,
       String field,
       String unit,
       String backgroundImage,
@@ -496,12 +452,6 @@ abstract class _GenericCardImageWidgetConfig
   factory _GenericCardImageWidgetConfig.fromJson(Map<String, dynamic> json) =
       _$GenericCardImageWidgetConfigImpl.fromJson;
 
-  @override
-  String get title;
-  set title(String value);
-  @override
-  Map<String, dynamic> get titleFont;
-  set titleFont(Map<String, dynamic> value);
   @override
   String get deviceId;
   set deviceId(String value);

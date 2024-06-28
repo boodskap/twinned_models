@@ -9,14 +9,6 @@ part of 'generic_card_image.dart';
 _$GenericCardImageWidgetConfigImpl _$$GenericCardImageWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$GenericCardImageWidgetConfigImpl(
-      title: json['title'] as String? ?? '',
-      titleFont: json['titleFont'] as Map<String, dynamic>? ??
-          const {
-            'fontFamily': 'Open Sans',
-            'fontSize': 25,
-            'fontColor': 0xFF000000,
-            'fontBold': true
-          },
       deviceId: json['deviceId'] as String? ?? '',
       field: json['field'] as String? ?? '',
       unit: json['unit'] as String? ?? '',
@@ -33,7 +25,7 @@ _$GenericCardImageWidgetConfigImpl _$$GenericCardImageWidgetConfigImplFromJson(
       valueFont: json['valueFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 14,
+            'fontSize': 30,
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
@@ -41,24 +33,22 @@ _$GenericCardImageWidgetConfigImpl _$$GenericCardImageWidgetConfigImplFromJson(
       contentFont: json['contentFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 12,
+            'fontSize': 20,
             'fontColor': 0xFF000000,
-            'fontBold': true
+            'fontBold': false
           },
       contentImage: json['contentImage'] as String? ?? '',
-      width: (json['width'] as num?)?.toDouble() ?? 300,
-      height: (json['height'] as num?)?.toDouble() ?? 300,
-      opacity: (json['opacity'] as num?)?.toDouble() ?? 0.3,
+      width: (json['width'] as num?)?.toDouble() ?? 350,
+      height: (json['height'] as num?)?.toDouble() ?? 380,
+      opacity: (json['opacity'] as num?)?.toDouble() ?? 0.5,
       seconds: (json['seconds'] as num?)?.toInt() ?? 60,
       backgroundImageHeight:
-          (json['backgroundImageHeight'] as num?)?.toDouble() ?? 200,
+          (json['backgroundImageHeight'] as num?)?.toDouble() ?? 300,
     );
 
 Map<String, dynamic> _$$GenericCardImageWidgetConfigImplToJson(
         _$GenericCardImageWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'title': instance.title,
-      'titleFont': instance.titleFont,
       'deviceId': instance.deviceId,
       'field': instance.field,
       'unit': instance.unit,

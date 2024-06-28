@@ -10,14 +10,6 @@ class GenericCardImageWidgetConfig extends BaseConfig
   GenericCardImageWidgetConfig._();
 
   factory GenericCardImageWidgetConfig({
-    @Default('') String title,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 25,
-      'fontColor': 0xFF000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> titleFont,
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String unit,
@@ -33,7 +25,7 @@ class GenericCardImageWidgetConfig extends BaseConfig
     Map<String, dynamic> headingFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 30,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
@@ -41,17 +33,17 @@ class GenericCardImageWidgetConfig extends BaseConfig
     @Default('') String content,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 12,
+      'fontSize': 20,
       'fontColor': 0xFF000000,
-      'fontBold': true
+      'fontBold': false
     })
     Map<String, dynamic> contentFont,
     @Default('') String contentImage,
-    @Default(300) double width,
-    @Default(300) double height,
-    @Default(0.3) double opacity,
+    @Default(350) double width,
+    @Default(380) double height,
+    @Default(0.5) double opacity,
     @Default(60) int seconds,
-    @Default(200) double backgroundImageHeight,
+    @Default(300) double backgroundImageHeight,
   }) = _GenericCardImageWidgetConfig;
 
   factory GenericCardImageWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -60,7 +52,6 @@ class GenericCardImageWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'title':
       case 'field':
       case 'heading':
       case 'deviceId':
@@ -75,7 +66,6 @@ class GenericCardImageWidgetConfig extends BaseConfig
       case 'opacity':
       case 'backgroundImageHeight':
         return DataType.decimal;
-      case 'titleFont':
       case 'headingFont':
       case 'valueFont':
       case 'contentFont':
@@ -110,8 +100,6 @@ class GenericCardImageWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'title':
-        return 'Title';
       case 'field':
         return 'Field';
         case 'unit':
@@ -134,8 +122,6 @@ class GenericCardImageWidgetConfig extends BaseConfig
         return 'Opacity';
       case 'backgroundImageHeight':
         return 'Background Image Height';
-      case 'titleFont':
-        return 'Title Font';
       case 'headingFont':
         return 'Heading Font';
       case 'valueFont':
