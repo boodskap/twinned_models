@@ -16,7 +16,7 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 18,
+      'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -24,7 +24,7 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,

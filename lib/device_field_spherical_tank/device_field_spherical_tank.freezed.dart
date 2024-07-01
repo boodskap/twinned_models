@@ -301,14 +301,14 @@ class _$DeviceFieldSphericalTankWidgetConfigImpl
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 18,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.subTitleFont = const {
