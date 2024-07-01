@@ -152,7 +152,7 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'field':
-      case 'deviceIds':
+      case 'deviceId':
         return true;
       default:
         return false;
