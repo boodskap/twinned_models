@@ -539,7 +539,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 20,
+        'fontSize': 14,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -551,7 +551,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
       },
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 12,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       },

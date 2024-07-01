@@ -12,4 +12,5 @@ export 'device_field_scatter_chart/device_field_scatter_chart.dart';
 export 'multi_device_multi_field_bar_chart/multi_device_multi_field_bar_chart.dart';
 export 'multi_field_device_spline_chart/multi_field_device_spline_chart.dart';
 export 'range_gauge/range_gauge.dart';
+export 'device_field_spherical_tank/device_field_spherical_tank.dart';
 export 'device_field_spline_chart/device_field_spline_chart.dart';
