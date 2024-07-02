@@ -16,7 +16,7 @@ class VisibilityAirQualityWidgetConfig extends BaseConfig
     @Default(0XFF03A9F4) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -32,7 +32,7 @@ class VisibilityAirQualityWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 12,
       'fontColor': 0x8A000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> subLabelFont,
   }) = _VisibilityAirQualityWidgetConfig;

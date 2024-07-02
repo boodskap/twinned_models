@@ -17,7 +17,7 @@ _$VisibilityAirQualityWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 16,
+                'fontSize': 14,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
@@ -33,7 +33,7 @@ _$VisibilityAirQualityWidgetConfigImpl
                 'fontFamily': 'Open Sans',
                 'fontSize': 12,
                 'fontColor': 0x8A000000,
-                'fontBold': false
+                'fontBold': true
               },
         );
 
