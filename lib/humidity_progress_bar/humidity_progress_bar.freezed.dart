@@ -202,13 +202,13 @@ class _$HumidityProgressBarWidgetConfigImpl
       this.valueColor = 0XFF7DA9E1,
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 12,
+        'fontSize': 14,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 18,
+        'fontSize': 16,
         'fontColor': 0xFF000000,
         'fontBold': true
       }})

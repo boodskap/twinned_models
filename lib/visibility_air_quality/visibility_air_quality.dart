@@ -1,27 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'humidity_progress_bar.freezed.dart';
-part 'humidity_progress_bar.g.dart';
+part 'visibility_air_quality.freezed.dart';
+part 'visibility_air_quality.g.dart';
 
 @unfreezed
-class HumidityProgressBarWidgetConfig extends BaseConfig
-    with _$HumidityProgressBarWidgetConfig {
-  HumidityProgressBarWidgetConfig._();
+class VisibilityAirQualityWidgetConfig extends BaseConfig
+    with _$VisibilityAirQualityWidgetConfig {
+  VisibilityAirQualityWidgetConfig._();
 
-  factory HumidityProgressBarWidgetConfig({
+  factory VisibilityAirQualityWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String title,
-    @Default(0xFFB3E5FC) int backgroundColor,
-    @Default(0XFF7DA9E1) int valueColor,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xFF000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueFont,
+    @Default(0XFF03A9F4) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 16,
@@ -29,10 +21,25 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-  }) = _HumidityProgressBarWidgetConfig;
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0xDD000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0x8A000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> subLabelFont,
+  }) = _VisibilityAirQualityWidgetConfig;
 
-  factory HumidityProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$HumidityProgressBarWidgetConfigFromJson(json);
+  factory VisibilityAirQualityWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$VisibilityAirQualityWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -43,9 +50,9 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
+      case 'subLabelFont':
         return DataType.font;
-      case 'backgroundColor':
-      case 'valueColor':
+      case 'iconColor':
         return DataType.numeric;
       default:
         return DataType.none;
@@ -54,13 +61,12 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
-     switch (parameter) {
+    switch (parameter) {
       case 'field':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'backgroundColor':
-      case 'valueColor':
+      case 'iconColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -79,7 +85,7 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
 
   @override
   String getTooltip(String parameter) {
-     return "";
+    return "";
   }
 
   @override
