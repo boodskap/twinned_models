@@ -14,6 +14,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String subTitle,
     @Default('') String deviceId,
+    @Default([]) List<String> fields,
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
@@ -28,14 +29,14 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> tooltipFont,
+    Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 16,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
-    Map<String, dynamic> legendFont,
+    Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -60,6 +61,8 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default(10) double markeroffset,
     @Default(20) double markerHeight,
     @Default(5) double markerElevation,
+    @Default(0XFF7DA9E1) int valueColor,
+    @Default(0xFFB3E5FC) int backgroundColor,
     @Default(0xFF000000) int markerColor,
     @Default(5) double annotationAngle,
     @Default(5) double positionFactor,
@@ -97,9 +100,13 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
         return DataType.enumerated;
       case 'stops':
         return DataType.listOfDecimals;
+      case 'fields':
+        return DataType.listOfTexts;
       case 'gradientColors':
         return DataType.listOfNumbers;
       case 'markerColor':
+      case 'backgroundColor':
+      case 'valueColor':
         return DataType.numeric;
       case 'minimum':
       case 'maximum':
@@ -125,11 +132,14 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'field':
+      case 'fields':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
       case 'gradientColors':
       case 'markerColor':
+      case 'backgroundColor':
+      case 'valueColor':
         return HintType.color;
       default:
         return HintType.none;

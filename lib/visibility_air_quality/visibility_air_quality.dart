@@ -1,22 +1,22 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'device_field_spherical_tank.freezed.dart';
-part 'device_field_spherical_tank.g.dart';
+part 'visibility_air_quality.freezed.dart';
+part 'visibility_air_quality.g.dart';
 
 @unfreezed
-class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
-    with _$DeviceFieldSphericalTankWidgetConfig {
-  DeviceFieldSphericalTankWidgetConfig._();
+class VisibilityAirQualityWidgetConfig extends BaseConfig
+    with _$VisibilityAirQualityWidgetConfig {
+  VisibilityAirQualityWidgetConfig._();
 
-  factory DeviceFieldSphericalTankWidgetConfig({
-    @Default('') String title,
-    @Default('') String subTitle,
+  factory VisibilityAirQualityWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
+    @Default('') String title,
+    @Default(0XFF03A9F4) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -24,29 +24,22 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0xFF000000,
+      'fontColor': 0xDD000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
-      'fontColor': 0xFF000000,
+      'fontColor': 0x8A000000,
       'fontBold': true
     })
-    Map<String, dynamic> subTitleFont,
-    @Default(0) double liquidLevel,
-    @Default(0xFF677FEB) int liquidColor,
-    @Default(0xFF677FEB) int bottleColor,
-    @Default(0x00000000) int capColor,
-    @Default(0) double waterLevel,
-    @Default(3) double breakPoint,
-    @Default(false) bool shouldAnimate,
-  }) = _DeviceFieldSphericalTankWidgetConfig;
+    Map<String, dynamic> subLabelFont,
+  }) = _VisibilityAirQualityWidgetConfig;
 
-  factory DeviceFieldSphericalTankWidgetConfig.fromJson(
+  factory VisibilityAirQualityWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$DeviceFieldSphericalTankWidgetConfigFromJson(json);
+      _$VisibilityAirQualityWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -57,21 +50,12 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
-      case 'subTitleFont':
+      case 'subLabelFont':
         return DataType.font;
-      case 'liquidLevel':
-      case 'waterLevel':
-      case 'breakPoint':
-        return DataType.decimal;
-      case 'capColor':
-      case 'bottleColor':
-      case 'liquidColor':
+      case 'iconColor':
         return DataType.numeric;
-      case 'shouldAnimate':
-        return DataType.yesno;
-
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
@@ -82,9 +66,7 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'liquidColor':
-      case 'bottleColor':
-      case 'capColor':
+      case 'iconColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -98,7 +80,7 @@ class DeviceFieldSphericalTankWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return "";
+    return parameter;
   }
 
   @override

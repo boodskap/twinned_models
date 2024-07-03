@@ -13,6 +13,10 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           title: json['title'] as String? ?? '',
           subTitle: json['subTitle'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
+          fields: (json['fields'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
           field: json['field'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
@@ -21,14 +25,14 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          tooltipFont: json['tooltipFont'] as Map<String, dynamic>? ??
+          valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 12,
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
-          legendFont: json['legendFont'] as Map<String, dynamic>? ??
+          labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 16,
@@ -68,6 +72,9 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           markeroffset: (json['markeroffset'] as num?)?.toDouble() ?? 10,
           markerHeight: (json['markerHeight'] as num?)?.toDouble() ?? 20,
           markerElevation: (json['markerElevation'] as num?)?.toDouble() ?? 5,
+          valueColor: (json['valueColor'] as num?)?.toInt() ?? 0XFF7DA9E1,
+          backgroundColor:
+              (json['backgroundColor'] as num?)?.toInt() ?? 0xFFB3E5FC,
           markerColor: (json['markerColor'] as num?)?.toInt() ?? 0xFF000000,
           annotationAngle: (json['annotationAngle'] as num?)?.toDouble() ?? 5,
           positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 5,
@@ -91,10 +98,11 @@ Map<String, dynamic> _$$DeviceFieldRangeGaugeWidgetConfigImplToJson(
       'title': instance.title,
       'subTitle': instance.subTitle,
       'deviceId': instance.deviceId,
+      'fields': instance.fields,
       'field': instance.field,
       'titleFont': instance.titleFont,
-      'tooltipFont': instance.tooltipFont,
-      'legendFont': instance.legendFont,
+      'valueFont': instance.valueFont,
+      'labelFont': instance.labelFont,
       'subTitleFont': instance.subTitleFont,
       'minimum': instance.minimum,
       'maximum': instance.maximum,
@@ -113,6 +121,8 @@ Map<String, dynamic> _$$DeviceFieldRangeGaugeWidgetConfigImplToJson(
       'markeroffset': instance.markeroffset,
       'markerHeight': instance.markerHeight,
       'markerElevation': instance.markerElevation,
+      'valueColor': instance.valueColor,
+      'backgroundColor': instance.backgroundColor,
       'markerColor': instance.markerColor,
       'annotationAngle': instance.annotationAngle,
       'positionFactor': instance.positionFactor,

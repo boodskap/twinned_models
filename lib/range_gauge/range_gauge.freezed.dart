@@ -27,16 +27,18 @@ mixin _$DeviceFieldRangeGaugeWidgetConfig {
   set subTitle(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get tooltipFont => throw _privateConstructorUsedError;
-  set tooltipFont(Map<String, dynamic> value) =>
+  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
+  set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get legendFont => throw _privateConstructorUsedError;
-  set legendFont(Map<String, dynamic> value) =>
+  Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
+  set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get subTitleFont => throw _privateConstructorUsedError;
   set subTitleFont(Map<String, dynamic> value) =>
@@ -76,6 +78,10 @@ mixin _$DeviceFieldRangeGaugeWidgetConfig {
   set markerHeight(double value) => throw _privateConstructorUsedError;
   double get markerElevation => throw _privateConstructorUsedError;
   set markerElevation(double value) => throw _privateConstructorUsedError;
+  int get valueColor => throw _privateConstructorUsedError;
+  set valueColor(int value) => throw _privateConstructorUsedError;
+  int get backgroundColor => throw _privateConstructorUsedError;
+  set backgroundColor(int value) => throw _privateConstructorUsedError;
   int get markerColor => throw _privateConstructorUsedError;
   set markerColor(int value) => throw _privateConstructorUsedError;
   double get annotationAngle => throw _privateConstructorUsedError;
@@ -103,10 +109,11 @@ abstract class $DeviceFieldRangeGaugeWidgetConfigCopyWith<$Res> {
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> tooltipFont,
-      Map<String, dynamic> legendFont,
+      Map<String, dynamic> valueFont,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> subTitleFont,
       double minimum,
       double maximum,
@@ -125,6 +132,8 @@ abstract class $DeviceFieldRangeGaugeWidgetConfigCopyWith<$Res> {
       double markeroffset,
       double markerHeight,
       double markerElevation,
+      int valueColor,
+      int backgroundColor,
       int markerColor,
       double annotationAngle,
       double positionFactor,
@@ -148,10 +157,11 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? subTitle = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? field = null,
     Object? titleFont = null,
-    Object? tooltipFont = null,
-    Object? legendFont = null,
+    Object? valueFont = null,
+    Object? labelFont = null,
     Object? subTitleFont = null,
     Object? minimum = null,
     Object? maximum = null,
@@ -170,6 +180,8 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
     Object? markeroffset = null,
     Object? markerHeight = null,
     Object? markerElevation = null,
+    Object? valueColor = null,
+    Object? backgroundColor = null,
     Object? markerColor = null,
     Object? annotationAngle = null,
     Object? positionFactor = null,
@@ -188,6 +200,10 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -196,13 +212,13 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      tooltipFont: null == tooltipFont
-          ? _value.tooltipFont
-          : tooltipFont // ignore: cast_nullable_to_non_nullable
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      legendFont: null == legendFont
-          ? _value.legendFont
-          : legendFont // ignore: cast_nullable_to_non_nullable
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       subTitleFont: null == subTitleFont
           ? _value.subTitleFont
@@ -276,6 +292,14 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
           ? _value.markerElevation
           : markerElevation // ignore: cast_nullable_to_non_nullable
               as double,
+      valueColor: null == valueColor
+          ? _value.valueColor
+          : valueColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      backgroundColor: null == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as int,
       markerColor: null == markerColor
           ? _value.markerColor
           : markerColor // ignore: cast_nullable_to_non_nullable
@@ -309,10 +333,11 @@ abstract class _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<$Res>
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> tooltipFont,
-      Map<String, dynamic> legendFont,
+      Map<String, dynamic> valueFont,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> subTitleFont,
       double minimum,
       double maximum,
@@ -331,6 +356,8 @@ abstract class _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<$Res>
       double markeroffset,
       double markerHeight,
       double markerElevation,
+      int valueColor,
+      int backgroundColor,
       int markerColor,
       double annotationAngle,
       double positionFactor,
@@ -353,10 +380,11 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? subTitle = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? field = null,
     Object? titleFont = null,
-    Object? tooltipFont = null,
-    Object? legendFont = null,
+    Object? valueFont = null,
+    Object? labelFont = null,
     Object? subTitleFont = null,
     Object? minimum = null,
     Object? maximum = null,
@@ -375,6 +403,8 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
     Object? markeroffset = null,
     Object? markerHeight = null,
     Object? markerElevation = null,
+    Object? valueColor = null,
+    Object? backgroundColor = null,
     Object? markerColor = null,
     Object? annotationAngle = null,
     Object? positionFactor = null,
@@ -393,6 +423,10 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -401,13 +435,13 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      tooltipFont: null == tooltipFont
-          ? _value.tooltipFont
-          : tooltipFont // ignore: cast_nullable_to_non_nullable
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      legendFont: null == legendFont
-          ? _value.legendFont
-          : legendFont // ignore: cast_nullable_to_non_nullable
+      labelFont: null == labelFont
+          ? _value.labelFont
+          : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       subTitleFont: null == subTitleFont
           ? _value.subTitleFont
@@ -480,6 +514,14 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
           ? _value.markerElevation
           : markerElevation // ignore: cast_nullable_to_non_nullable
               as double,
+      valueColor: null == valueColor
+          ? _value.valueColor
+          : valueColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      backgroundColor: null == backgroundColor
+          ? _value.backgroundColor
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as int,
       markerColor: null == markerColor
           ? _value.markerColor
           : markerColor // ignore: cast_nullable_to_non_nullable
@@ -508,6 +550,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
       {this.title = '',
       this.subTitle = '',
       this.deviceId = '',
+      this.fields = const [],
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -515,13 +558,13 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.tooltipFont = const {
+      this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 12,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.legendFont = const {
+      this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 16,
         'fontColor': 0xFF000000,
@@ -550,6 +593,8 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
       this.markeroffset = 10,
       this.markerHeight = 20,
       this.markerElevation = 5,
+      this.valueColor = 0XFF7DA9E1,
+      this.backgroundColor = 0xFFB3E5FC,
       this.markerColor = 0xFF000000,
       this.annotationAngle = 5,
       this.positionFactor = 5,
@@ -576,16 +621,19 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
   String deviceId;
   @override
   @JsonKey()
+  List<String> fields;
+  @override
+  @JsonKey()
   String field;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
-  Map<String, dynamic> tooltipFont;
+  Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  Map<String, dynamic> legendFont;
+  Map<String, dynamic> labelFont;
   @override
   @JsonKey()
   Map<String, dynamic> subTitleFont;
@@ -642,6 +690,12 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
   double markerElevation;
   @override
   @JsonKey()
+  int valueColor;
+  @override
+  @JsonKey()
+  int backgroundColor;
+  @override
+  @JsonKey()
   int markerColor;
   @override
   @JsonKey()
@@ -655,7 +709,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldRangeGaugeWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, field: $field, titleFont: $titleFont, tooltipFont: $tooltipFont, legendFont: $legendFont, subTitleFont: $subTitleFont, minimum: $minimum, maximum: $maximum, interval: $interval, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, startAngle: $startAngle, endAngle: $endAngle, elementsPosition: $elementsPosition, labelOffset: $labelOffset, axisLineThickness: $axisLineThickness, gradientColors: $gradientColors, stops: $stops, markerpointerEnableAnimation: $markerpointerEnableAnimation, markeroffset: $markeroffset, markerHeight: $markerHeight, markerElevation: $markerElevation, markerColor: $markerColor, annotationAngle: $annotationAngle, positionFactor: $positionFactor, gaugeRanges: $gaugeRanges)';
+    return 'DeviceFieldRangeGaugeWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, fields: $fields, field: $field, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, subTitleFont: $subTitleFont, minimum: $minimum, maximum: $maximum, interval: $interval, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, startAngle: $startAngle, endAngle: $endAngle, elementsPosition: $elementsPosition, labelOffset: $labelOffset, axisLineThickness: $axisLineThickness, gradientColors: $gradientColors, stops: $stops, markerpointerEnableAnimation: $markerpointerEnableAnimation, markeroffset: $markeroffset, markerHeight: $markerHeight, markerElevation: $markerElevation, valueColor: $valueColor, backgroundColor: $backgroundColor, markerColor: $markerColor, annotationAngle: $annotationAngle, positionFactor: $positionFactor, gaugeRanges: $gaugeRanges)';
   }
 
   @JsonKey(ignore: true)
@@ -680,10 +734,11 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> tooltipFont,
-      Map<String, dynamic> legendFont,
+      Map<String, dynamic> valueFont,
+      Map<String, dynamic> labelFont,
       Map<String, dynamic> subTitleFont,
       double minimum,
       double maximum,
@@ -702,6 +757,8 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
       double markeroffset,
       double markerHeight,
       double markerElevation,
+      int valueColor,
+      int backgroundColor,
       int markerColor,
       double annotationAngle,
       double positionFactor,
@@ -722,17 +779,20 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
   String get deviceId;
   set deviceId(String value);
   @override
+  List<String> get fields;
+  set fields(List<String> value);
+  @override
   String get field;
   set field(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get tooltipFont;
-  set tooltipFont(Map<String, dynamic> value);
+  Map<String, dynamic> get valueFont;
+  set valueFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get legendFont;
-  set legendFont(Map<String, dynamic> value);
+  Map<String, dynamic> get labelFont;
+  set labelFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get subTitleFont;
   set subTitleFont(Map<String, dynamic> value);
@@ -787,6 +847,12 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
   @override
   double get markerElevation;
   set markerElevation(double value);
+  @override
+  int get valueColor;
+  set valueColor(int value);
+  @override
+  int get backgroundColor;
+  set backgroundColor(int value);
   @override
   int get markerColor;
   set markerColor(int value);
