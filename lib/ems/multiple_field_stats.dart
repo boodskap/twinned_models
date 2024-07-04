@@ -72,6 +72,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
     @Default(true) bool showAvgValue,
     @Default(true) bool showTooltip,
     @Default(true) bool showLegend,
+    @Default(false) bool showTodayData,
   }) = _MultipleFieldStatsWidgetConfig;
 
   factory MultipleFieldStatsWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -109,6 +110,7 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
       case 'showAvgValue':
       case 'showTooltip':
       case 'showLegend':
+       case 'showTodayData':
         return DataType.yesno;
         case 'chartType':
         return DataType.enumerated;
@@ -184,6 +186,8 @@ class MultipleFieldStatsWidgetConfig extends BaseConfig
         return 'Show Tooltip';
       case 'showLegend':
         return 'Show Legend';
+        case 'showTodayData':
+        return 'Show Today Data';
           case 'minLabelText':
         return 'Min Label Text';
       case 'maxLabelText':
