@@ -31,6 +31,8 @@ mixin _$ThermometerTemperatureWidgetConfig {
   set borderColor(int value) => throw _privateConstructorUsedError;
   int get foreColor => throw _privateConstructorUsedError;
   set foreColor(int value) => throw _privateConstructorUsedError;
+  int get cardColor => throw _privateConstructorUsedError;
+  set cardColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -59,6 +61,7 @@ abstract class $ThermometerTemperatureWidgetConfigCopyWith<$Res> {
       String title,
       int borderColor,
       int foreColor,
+      int cardColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont});
 }
@@ -82,6 +85,7 @@ class _$ThermometerTemperatureWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? borderColor = null,
     Object? foreColor = null,
+    Object? cardColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
   }) {
@@ -105,6 +109,10 @@ class _$ThermometerTemperatureWidgetConfigCopyWithImpl<$Res,
       foreColor: null == foreColor
           ? _value.foreColor
           : foreColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      cardColor: null == cardColor
+          ? _value.cardColor
+          : cardColor // ignore: cast_nullable_to_non_nullable
               as int,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -133,6 +141,7 @@ abstract class _$$ThermometerTemperatureWidgetConfigImplCopyWith<$Res>
       String title,
       int borderColor,
       int foreColor,
+      int cardColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont});
 }
@@ -155,6 +164,7 @@ class __$$ThermometerTemperatureWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? borderColor = null,
     Object? foreColor = null,
+    Object? cardColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
   }) {
@@ -179,6 +189,10 @@ class __$$ThermometerTemperatureWidgetConfigImplCopyWithImpl<$Res>
           ? _value.foreColor
           : foreColor // ignore: cast_nullable_to_non_nullable
               as int,
+      cardColor: null == cardColor
+          ? _value.cardColor
+          : cardColor // ignore: cast_nullable_to_non_nullable
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -198,19 +212,20 @@ class _$ThermometerTemperatureWidgetConfigImpl
   _$ThermometerTemperatureWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
-      this.title = '',
+      this.title = 'Temperature Record',
       this.borderColor = 0XFF062C5D,
       this.foreColor = 0xFFB3E5FC,
+      this.cardColor = 0XFFFFFFFF,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
-        'fontColor': 0xFF000000,
+        'fontColor': 0xFF14396B,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
-        'fontColor': 0xDD000000,
+        'fontSize': 12,
+        'fontColor': 0xFF14396B,
         'fontBold': true
       }})
       : super._();
@@ -236,6 +251,9 @@ class _$ThermometerTemperatureWidgetConfigImpl
   int foreColor;
   @override
   @JsonKey()
+  int cardColor;
+  @override
+  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
@@ -243,7 +261,7 @@ class _$ThermometerTemperatureWidgetConfigImpl
 
   @override
   String toString() {
-    return 'ThermometerTemperatureWidgetConfig(deviceId: $deviceId, field: $field, title: $title, borderColor: $borderColor, foreColor: $foreColor, titleFont: $titleFont, valueFont: $valueFont)';
+    return 'ThermometerTemperatureWidgetConfig(deviceId: $deviceId, field: $field, title: $title, borderColor: $borderColor, foreColor: $foreColor, cardColor: $cardColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
@@ -270,6 +288,7 @@ abstract class _ThermometerTemperatureWidgetConfig
           String title,
           int borderColor,
           int foreColor,
+          int cardColor,
           Map<String, dynamic> titleFont,
           Map<String, dynamic> valueFont}) =
       _$ThermometerTemperatureWidgetConfigImpl;
@@ -294,6 +313,9 @@ abstract class _ThermometerTemperatureWidgetConfig
   @override
   int get foreColor;
   set foreColor(int value);
+  @override
+  int get cardColor;
+  set cardColor(int value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);

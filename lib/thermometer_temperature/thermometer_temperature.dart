@@ -12,20 +12,21 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
   factory ThermometerTemperatureWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
-    @Default('') String title,
+    @Default('Temperature Record') String title,
     @Default(0XFF062C5D) int borderColor,
     @Default(0xFFB3E5FC) int foreColor,
+    @Default(0XFFFFFFFF) int cardColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0xFF000000,
+      'fontColor': 0xFF14396B,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xDD000000,
+      'fontSize': 12,
+      'fontColor': 0xFF14396B,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
@@ -47,6 +48,7 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
         return DataType.font;
       case 'borderColor':
       case 'foreColor':
+      case 'cardColor':
         return DataType.numeric;
       default:
         return DataType.none;
@@ -62,6 +64,7 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
         return HintType.deviceId;
       case 'borderColor':
       case 'foreColor':
+      case 'cardColor':
         return HintType.color;
       default:
         return HintType.none;
