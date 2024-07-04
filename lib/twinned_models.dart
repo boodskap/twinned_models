@@ -14,3 +14,4 @@ export 'multi_field_device_spline_chart/multi_field_device_spline_chart.dart';
 export 'range_gauge/range_gauge.dart';
 export 'device_field_spherical_tank/device_field_spherical_tank.dart';
 export 'device_field_spline_chart/device_field_spline_chart.dart';
+export 'temperature_widget/temperature_widget.dart';
