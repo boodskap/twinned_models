@@ -77,6 +77,8 @@ mixin _$MultipleFieldStatsWidgetConfig {
   set showTooltip(bool value) => throw _privateConstructorUsedError;
   bool get showLegend => throw _privateConstructorUsedError;
   set showLegend(bool value) => throw _privateConstructorUsedError;
+  bool get showTodayData => throw _privateConstructorUsedError;
+  set showTodayData(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -117,7 +119,8 @@ abstract class $MultipleFieldStatsWidgetConfigCopyWith<$Res> {
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend});
+      bool showLegend,
+      bool showTodayData});
 }
 
 /// @nodoc
@@ -159,6 +162,7 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
+    Object? showTodayData = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -261,6 +265,10 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
           ? _value.showLegend
           : showLegend // ignore: cast_nullable_to_non_nullable
               as bool,
+      showTodayData: null == showTodayData
+          ? _value.showTodayData
+          : showTodayData // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -299,7 +307,8 @@ abstract class _$$MultipleFieldStatsWidgetConfigImplCopyWith<$Res>
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend});
+      bool showLegend,
+      bool showTodayData});
 }
 
 /// @nodoc
@@ -340,6 +349,7 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
     Object? showAvgValue = null,
     Object? showTooltip = null,
     Object? showLegend = null,
+    Object? showTodayData = null,
   }) {
     return _then(_$MultipleFieldStatsWidgetConfigImpl(
       title: null == title
@@ -442,6 +452,10 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showLegend
           : showLegend // ignore: cast_nullable_to_non_nullable
               as bool,
+      showTodayData: null == showTodayData
+          ? _value.showTodayData
+          : showTodayData // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -500,7 +514,8 @@ class _$MultipleFieldStatsWidgetConfigImpl
       this.showTotalValue = true,
       this.showAvgValue = true,
       this.showTooltip = true,
-      this.showLegend = true})
+      this.showLegend = true,
+      this.showTodayData = false})
       : super._();
 
   factory _$MultipleFieldStatsWidgetConfigImpl.fromJson(
@@ -582,10 +597,13 @@ class _$MultipleFieldStatsWidgetConfigImpl
   @override
   @JsonKey()
   bool showLegend;
+  @override
+  @JsonKey()
+  bool showTodayData;
 
   @override
   String toString() {
-    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend)';
+    return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend, showTodayData: $showTodayData)';
   }
 
   @JsonKey(ignore: true)
@@ -631,7 +649,8 @@ abstract class _MultipleFieldStatsWidgetConfig
       bool showTotalValue,
       bool showAvgValue,
       bool showTooltip,
-      bool showLegend}) = _$MultipleFieldStatsWidgetConfigImpl;
+      bool showLegend,
+      bool showTodayData}) = _$MultipleFieldStatsWidgetConfigImpl;
   _MultipleFieldStatsWidgetConfig._() : super._();
 
   factory _MultipleFieldStatsWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -712,6 +731,9 @@ abstract class _MultipleFieldStatsWidgetConfig
   @override
   bool get showLegend;
   set showLegend(bool value);
+  @override
+  bool get showTodayData;
+  set showTodayData(bool value);
   @override
   @JsonKey(ignore: true)
   _$$MultipleFieldStatsWidgetConfigImplCopyWith<

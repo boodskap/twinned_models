@@ -111,7 +111,7 @@ class TotalGuageWidgetConfig extends BaseConfig with _$TotalGuageWidgetConfig {
         return 'Height';
       case 'thickness':
         return 'Thickness';
-      case 'guageAnimate':
+      case 'gaugeAnimate':
         return 'Gauge Animate';
       case 'showDashes':
         return 'Show Dashes';
