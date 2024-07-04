@@ -12,21 +12,22 @@ _$ThermometerTemperatureWidgetConfigImpl
         _$ThermometerTemperatureWidgetConfigImpl(
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
-          title: json['title'] as String? ?? '',
+          title: json['title'] as String? ?? 'Temperature Record',
           borderColor: (json['borderColor'] as num?)?.toInt() ?? 0XFF062C5D,
           foreColor: (json['foreColor'] as num?)?.toInt() ?? 0xFFB3E5FC,
+          cardColor: (json['cardColor'] as num?)?.toInt() ?? 0XFFFFFFFF,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 14,
-                'fontColor': 0xFF000000,
+                'fontColor': 0xFF14396B,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 14,
-                'fontColor': 0xDD000000,
+                'fontSize': 12,
+                'fontColor': 0xFF14396B,
                 'fontBold': true
               },
         );
@@ -39,6 +40,7 @@ Map<String, dynamic> _$$ThermometerTemperatureWidgetConfigImplToJson(
       'title': instance.title,
       'borderColor': instance.borderColor,
       'foreColor': instance.foreColor,
+      'cardColor': instance.cardColor,
       'titleFont': instance.titleFont,
       'valueFont': instance.valueFont,
     };
