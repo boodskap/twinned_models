@@ -72,6 +72,7 @@ _$MultipleFieldStatsWidgetConfigImpl
           showAvgValue: json['showAvgValue'] as bool? ?? true,
           showTooltip: json['showTooltip'] as bool? ?? true,
           showLegend: json['showLegend'] as bool? ?? true,
+          showTodayData: json['showTodayData'] as bool? ?? false,
         );
 
 Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
@@ -102,6 +103,7 @@ Map<String, dynamic> _$$MultipleFieldStatsWidgetConfigImplToJson(
       'showAvgValue': instance.showAvgValue,
       'showTooltip': instance.showTooltip,
       'showLegend': instance.showLegend,
+      'showTodayData': instance.showTodayData,
     };
 
 const _$ChartTypeEnumMap = {
