@@ -9,9 +9,7 @@ part of 'timeline.dart';
 _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$StaticTimelineWidgetConfigImpl(
-      title:
-          (json['title'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
+      title: json['title'] as String? ?? "",
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -19,6 +17,7 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
             'fontColor': 0XFF000000,
             'fontBold': true
           },
+      section: (json['section'] as num?)?.toInt() ?? 2,
       heading: (json['heading'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -26,9 +25,20 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
       headingFont: json['headingFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 15,
+            'fontSize': 16,
             'fontColor': 0XFF000000,
-            'fontBold': false
+            'fontBold': true
+          },
+      subHeading: (json['subHeading'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      subHeadingFont: json['subHeadingFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 14,
+            'fontColor': 0XFF000000,
+            'fontBold': true
           },
       message: (json['message'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -37,17 +47,12 @@ _$StaticTimelineWidgetConfigImpl _$$StaticTimelineWidgetConfigImplFromJson(
       messageFont: json['messageFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 15,
+            'fontSize': 12,
             'fontColor': 0XFF000000,
             'fontBold': false
           },
-      colors: (json['colors'] as List<dynamic>?)
-              ?.map((e) => (e as num).toInt())
-              .toList() ??
-          const [],
       width: (json['width'] as num?)?.toDouble() ?? 170,
       height: (json['height'] as num?)?.toDouble() ?? 170,
-      section: (json['section'] as num?)?.toInt() ?? 2,
     );
 
 Map<String, dynamic> _$$StaticTimelineWidgetConfigImplToJson(
@@ -55,12 +60,13 @@ Map<String, dynamic> _$$StaticTimelineWidgetConfigImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
+      'section': instance.section,
       'heading': instance.heading,
       'headingFont': instance.headingFont,
+      'subHeading': instance.subHeading,
+      'subHeadingFont': instance.subHeadingFont,
       'message': instance.message,
       'messageFont': instance.messageFont,
-      'colors': instance.colors,
       'width': instance.width,
       'height': instance.height,
-      'section': instance.section,
     };

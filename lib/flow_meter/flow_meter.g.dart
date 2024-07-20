@@ -15,14 +15,14 @@ _$FlowMeterWidgetConfigImpl _$$FlowMeterWidgetConfigImplFromJson(
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': false
           },
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
-            'fontColor': 0,
+            'fontColor': 0XFF000000,
             'fontBold': false
           },
       field: json['field'] as String? ?? '',

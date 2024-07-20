@@ -21,29 +21,32 @@ StaticTimelineWidgetConfig _$StaticTimelineWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$StaticTimelineWidgetConfig {
-  List<String> get title => throw _privateConstructorUsedError;
-  set title(List<String> value) => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  int get section => throw _privateConstructorUsedError;
+  set section(int value) => throw _privateConstructorUsedError;
   List<String> get heading => throw _privateConstructorUsedError;
   set heading(List<String> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get headingFont => throw _privateConstructorUsedError;
   set headingFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
+  List<String> get subHeading => throw _privateConstructorUsedError;
+  set subHeading(List<String> value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get subHeadingFont => throw _privateConstructorUsedError;
+  set subHeadingFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   List<String> get message => throw _privateConstructorUsedError;
   set message(List<String> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get messageFont => throw _privateConstructorUsedError;
   set messageFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  List<int> get colors => throw _privateConstructorUsedError;
-  set colors(List<int> value) => throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
-  int get section => throw _privateConstructorUsedError;
-  set section(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,16 +62,17 @@ abstract class $StaticTimelineWidgetConfigCopyWith<$Res> {
           StaticTimelineWidgetConfig>;
   @useResult
   $Res call(
-      {List<String> title,
+      {String title,
       Map<String, dynamic> titleFont,
+      int section,
       List<String> heading,
       Map<String, dynamic> headingFont,
+      List<String> subHeading,
+      Map<String, dynamic> subHeadingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
-      double height,
-      int section});
+      double height});
 }
 
 /// @nodoc
@@ -87,24 +91,29 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? section = null,
     Object? heading = null,
     Object? headingFont = null,
+    Object? subHeading = null,
+    Object? subHeadingFont = null,
     Object? message = null,
     Object? messageFont = null,
-    Object? colors = null,
     Object? width = null,
     Object? height = null,
-    Object? section = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      section: null == section
+          ? _value.section
+          : section // ignore: cast_nullable_to_non_nullable
+              as int,
       heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
@@ -112,6 +121,14 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
       headingFont: null == headingFont
           ? _value.headingFont
           : headingFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      subHeading: null == subHeading
+          ? _value.subHeading
+          : subHeading // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      subHeadingFont: null == subHeadingFont
+          ? _value.subHeadingFont
+          : subHeadingFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       message: null == message
           ? _value.message
@@ -121,10 +138,6 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
           ? _value.messageFont
           : messageFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      colors: null == colors
-          ? _value.colors
-          : colors // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -133,10 +146,6 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double,
-      section: null == section
-          ? _value.section
-          : section // ignore: cast_nullable_to_non_nullable
-              as int,
     ) as $Val);
   }
 }
@@ -151,16 +160,17 @@ abstract class _$$StaticTimelineWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> title,
+      {String title,
       Map<String, dynamic> titleFont,
+      int section,
       List<String> heading,
       Map<String, dynamic> headingFont,
+      List<String> subHeading,
+      Map<String, dynamic> subHeadingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
-      double height,
-      int section});
+      double height});
 }
 
 /// @nodoc
@@ -178,24 +188,29 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? titleFont = null,
+    Object? section = null,
     Object? heading = null,
     Object? headingFont = null,
+    Object? subHeading = null,
+    Object? subHeadingFont = null,
     Object? message = null,
     Object? messageFont = null,
-    Object? colors = null,
     Object? width = null,
     Object? height = null,
-    Object? section = null,
   }) {
     return _then(_$StaticTimelineWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      section: null == section
+          ? _value.section
+          : section // ignore: cast_nullable_to_non_nullable
+              as int,
       heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
@@ -203,6 +218,14 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
       headingFont: null == headingFont
           ? _value.headingFont
           : headingFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      subHeading: null == subHeading
+          ? _value.subHeading
+          : subHeading // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      subHeadingFont: null == subHeadingFont
+          ? _value.subHeadingFont
+          : subHeadingFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       message: null == message
           ? _value.message
@@ -212,10 +235,6 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
           ? _value.messageFont
           : messageFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      colors: null == colors
-          ? _value.colors
-          : colors // ignore: cast_nullable_to_non_nullable
-              as List<int>,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
@@ -224,10 +243,6 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double,
-      section: null == section
-          ? _value.section
-          : section // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -236,31 +251,37 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
   _$StaticTimelineWidgetConfigImpl(
-      {this.title = const [],
+      {this.title = "",
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0XFF000000,
         'fontBold': true
       },
+      this.section = 2,
       this.heading = const [],
       this.headingFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 15,
+        'fontSize': 16,
         'fontColor': 0XFF000000,
-        'fontBold': false
+        'fontBold': true
+      },
+      this.subHeading = const [],
+      this.subHeadingFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 14,
+        'fontColor': 0XFF000000,
+        'fontBold': true
       },
       this.message = const [],
       this.messageFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 15,
+        'fontSize': 12,
         'fontColor': 0XFF000000,
         'fontBold': false
       },
-      this.colors = const [],
       this.width = 170,
-      this.height = 170,
-      this.section = 2})
+      this.height = 170})
       : super._();
 
   factory _$StaticTimelineWidgetConfigImpl.fromJson(
@@ -269,10 +290,13 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
 
   @override
   @JsonKey()
-  List<String> title;
+  String title;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  int section;
   @override
   @JsonKey()
   List<String> heading;
@@ -281,26 +305,26 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
   Map<String, dynamic> headingFont;
   @override
   @JsonKey()
+  List<String> subHeading;
+  @override
+  @JsonKey()
+  Map<String, dynamic> subHeadingFont;
+  @override
+  @JsonKey()
   List<String> message;
   @override
   @JsonKey()
   Map<String, dynamic> messageFont;
   @override
   @JsonKey()
-  List<int> colors;
-  @override
-  @JsonKey()
   double width;
   @override
   @JsonKey()
   double height;
-  @override
-  @JsonKey()
-  int section;
 
   @override
   String toString() {
-    return 'StaticTimelineWidgetConfig(title: $title, titleFont: $titleFont, heading: $heading, headingFont: $headingFont, message: $message, messageFont: $messageFont, colors: $colors, width: $width, height: $height, section: $section)';
+    return 'StaticTimelineWidgetConfig(title: $title, titleFont: $titleFont, section: $section, heading: $heading, headingFont: $headingFont, subHeading: $subHeading, subHeadingFont: $subHeadingFont, message: $message, messageFont: $messageFont, width: $width, height: $height)';
   }
 
   @JsonKey(ignore: true)
@@ -320,27 +344,31 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
 
 abstract class _StaticTimelineWidgetConfig extends StaticTimelineWidgetConfig {
   factory _StaticTimelineWidgetConfig(
-      {List<String> title,
+      {String title,
       Map<String, dynamic> titleFont,
+      int section,
       List<String> heading,
       Map<String, dynamic> headingFont,
+      List<String> subHeading,
+      Map<String, dynamic> subHeadingFont,
       List<String> message,
       Map<String, dynamic> messageFont,
-      List<int> colors,
       double width,
-      double height,
-      int section}) = _$StaticTimelineWidgetConfigImpl;
+      double height}) = _$StaticTimelineWidgetConfigImpl;
   _StaticTimelineWidgetConfig._() : super._();
 
   factory _StaticTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =
       _$StaticTimelineWidgetConfigImpl.fromJson;
 
   @override
-  List<String> get title;
-  set title(List<String> value);
+  String get title;
+  set title(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  int get section;
+  set section(int value);
   @override
   List<String> get heading;
   set heading(List<String> value);
@@ -348,23 +376,23 @@ abstract class _StaticTimelineWidgetConfig extends StaticTimelineWidgetConfig {
   Map<String, dynamic> get headingFont;
   set headingFont(Map<String, dynamic> value);
   @override
+  List<String> get subHeading;
+  set subHeading(List<String> value);
+  @override
+  Map<String, dynamic> get subHeadingFont;
+  set subHeadingFont(Map<String, dynamic> value);
+  @override
   List<String> get message;
   set message(List<String> value);
   @override
   Map<String, dynamic> get messageFont;
   set messageFont(Map<String, dynamic> value);
   @override
-  List<int> get colors;
-  set colors(List<int> value);
-  @override
   double get width;
   set width(double value);
   @override
   double get height;
   set height(double value);
-  @override
-  int get section;
-  set section(int value);
   @override
   @JsonKey(ignore: true)
   _$$StaticTimelineWidgetConfigImplCopyWith<_$StaticTimelineWidgetConfigImpl>

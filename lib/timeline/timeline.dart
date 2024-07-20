@@ -10,7 +10,7 @@ class StaticTimelineWidgetConfig extends BaseConfig
   StaticTimelineWidgetConfig._();
 
   factory StaticTimelineWidgetConfig({
-    @Default([]) List<String> title,
+    @Default("") String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -18,26 +18,34 @@ class StaticTimelineWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default(2) int section,
     @Default([]) List<String> heading,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 15,
+      'fontSize': 16,
       'fontColor': 0XFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> headingFont,
+     @Default([]) List<String> subHeading,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0XFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> subHeadingFont,
     @Default([]) List<String> message,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 15,
+      'fontSize': 12,
       'fontColor': 0XFF000000,
       'fontBold': false
     })
     Map<String, dynamic> messageFont,
-    @Default([]) List<int> colors,
     @Default(170) double width,
     @Default(170) double height,
-    @Default(2) int section,
+   
   }) = _StaticTimelineWidgetConfig;
 
   factory StaticTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -47,13 +55,14 @@ class StaticTimelineWidgetConfig extends BaseConfig
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'title':
+      return DataType.text;
       case 'heading':
+      case 'subHeading':
       case 'message':
         return DataType.listOfTexts;
-      case 'colors':
-        return DataType.listOfNumbers;
       case 'titleFont':
       case 'headingFont':
+      case 'subHeadingFont':
       case 'messageFont':
         return DataType.font;
       case 'width':
@@ -82,16 +91,20 @@ class StaticTimelineWidgetConfig extends BaseConfig
         return 'Section';
       case 'title':
         return 'Title';
-      case 'heading ':
+      case 'heading':
         return 'Heading';
+         case 'subHeading':
+        return 'Sub Heading';
       case 'message':
         return 'Message';
       case 'label':
         return 'Label';
       case 'titleFont':
         return 'Title Font';
-      case 'headerFont':
+      case 'headingFont':
         return 'Header Font';
+         case 'subHeadingFont':
+        return 'Sub Heading Font';
       case 'messageFont':
         return 'Message Font';
       case 'width':

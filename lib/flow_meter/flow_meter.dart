@@ -14,14 +14,14 @@ class FlowMeterWidgetConfig extends BaseConfig with _$FlowMeterWidgetConfig {
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': false
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
-      'fontColor': 0,
+      'fontColor': 0XFF000000,
       'fontBold': false
     })
     Map<String, dynamic> labelFont,
