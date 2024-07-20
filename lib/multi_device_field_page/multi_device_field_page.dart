@@ -10,21 +10,17 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
   MultiDeviceFieldPageWidgetConfig._();
 
   factory MultiDeviceFieldPageWidgetConfig({
-    @Default('') String field,
     @Default('') String deviceId,
-    @Default('') String title,
+    @Default('') String field,
+    @Default('Multi Device Field Page') String title,
     @Default('') String cityName,
-    @Default('') String imageId,
-    @Default('') String subText,
-    @Default('') String contentText,
-    @Default(0XFF640062) int fillColor,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 32,
-      'fontColor': 0x99FFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueFont,
+    @Default('') String paraTitle,
+    @Default('') String paraText,
+    @Default([]) List<int> gradientBgColor,
+    @Default(0XFFADBBDA) int curveBgColor,
+    @Default(0XFFFEFBF6) int cardBgColor,
+    @Default(8.0) double elevation,
+    @Default([]) List<String> excludeFields,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -34,18 +30,53 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
+      'fontSize': 16,
+      'fontColor': 0XFFFFFAFA,
+      'fontBold': false
+    })
+    Map<String, dynamic> timeStampFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 36,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 14,
+      'fontColor': 0x99FFFFFF,
+      'fontBold': false
+    })
+    Map<String, dynamic> suffixFont,
+    @Default({
+      'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> subTextFont,
+    Map<String, dynamic> paraTitleFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
       'fontColor': 0xB3FFFFFF,
       'fontBold': false
     })
-    Map<String, dynamic> contentTextFont,
+    Map<String, dynamic> paraTextFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0x8A000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> cardFontText,
   }) = _MultiDeviceFieldPageWidgetConfig;
 
   factory MultiDeviceFieldPageWidgetConfig.fromJson(
@@ -59,18 +90,27 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'title':
       case 'cityName':
-      case 'subText':
-      case 'contentText':
+      case 'paraTitle':
+      case 'paraText':
         return DataType.text;
-      case 'fillColor':
+      case 'curveBgColor':
+      case 'cardBgColor':
         return DataType.numeric;
-      case 'valueFont':
+      case 'elevation':
+        return DataType.decimal;
+      case 'excludeFields':
+        return DataType.listOfTexts;
+      case 'gradientBgColor':
+        return DataType.listOfNumbers;
       case 'titleFont':
-      case 'subTextFont':
-      case 'contentTextFont':
+      case 'timeStampFont':
+      case 'valueFont':
+      case 'labelFont':
+      case 'suffixFont':
+      case 'paraTitleFont':
+      case 'paraTextFont':
+      case 'cardFontText':
         return DataType.font;
-      case 'imageId':
-        return DataType.image;
       default:
         return DataType.none;
     }
@@ -80,10 +120,13 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'field':
+      case 'excludeFields':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'fillColor':
+      case 'curveBgColor':
+      case 'cardBgColor':
+      case 'gradientBgColor':
         return HintType.color;
       default:
         return HintType.none;
@@ -102,26 +145,40 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
         return 'Sensor Field';
       case 'deviceId':
         return 'Device ID';
-      case 'subTextFont':
-        return 'Sub Text Font';
-      case 'contentTextFont':
-        return 'Content Text Font';
-      case 'valueFont':
-        return 'Value Font';
-      case 'titleFont':
-        return 'Title Font';
       case 'title':
         return 'Title';
       case 'cityName':
         return 'City Name';
-      case 'subText':
-        return 'Sub Text';
-      case 'contentText':
-        return 'Content Text';
-      case 'fillColor':
-        return 'Fill Color';
-      case 'imageId':
-        return 'Image Upload';
+      case 'titleFont':
+        return 'Title Font';
+      case 'timeStampFont':
+        return 'Time Stamp Font';
+      case 'valueFont':
+        return 'Value Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'suffixFont':
+        return 'Suffix Font';
+      case 'paraTitleFont':
+        return 'Paragraph Title Font';
+      case 'paraTextFont':
+        return 'Paragraph Content Font';
+      case 'elevation':
+        return 'Card Elevation';
+      case 'cardFontText':
+        return 'Card Font';
+      case 'paraTitle':
+        return 'Paragraph Title';
+      case 'paraText':
+        return 'Paragraph Content';
+      case 'curveBgColor':
+        return 'Curve BgColor';
+      case 'cardBgColor':
+        return 'Card BgColor';
+      case 'excludeFields':
+        return 'Exclude Fields';
+      case 'gradientBgColor':
+        return 'Gradient BgColor';
       default:
         return parameter;
     }
@@ -137,9 +194,8 @@ class MultiDeviceFieldPageWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'field':
       case 'deviceId':
-      case 'imageId':
-      case 'cityName':
-      case 'title': 
+      case 'title':
+      case 'gradientBgColor':
         return true;
       default:
         return false;
