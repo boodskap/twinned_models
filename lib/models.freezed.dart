@@ -370,6 +370,16 @@ mixin _$TotalValueWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   List<String> get modelIds => throw _privateConstructorUsedError;
   set modelIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get assetModelIds => throw _privateConstructorUsedError;
+  set assetModelIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get premiseIds => throw _privateConstructorUsedError;
+  set premiseIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get facilityIds => throw _privateConstructorUsedError;
+  set facilityIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get floorIds => throw _privateConstructorUsedError;
+  set floorIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get assetIds => throw _privateConstructorUsedError;
+  set assetIds(List<String> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -395,7 +405,12 @@ abstract class $TotalValueWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
-      List<String> modelIds});
+      List<String> modelIds,
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds});
 }
 
 /// @nodoc
@@ -424,6 +439,11 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
     Object? labelFont = null,
     Object? field = null,
     Object? modelIds = null,
+    Object? assetModelIds = null,
+    Object? premiseIds = null,
+    Object? facilityIds = null,
+    Object? floorIds = null,
+    Object? assetIds = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -474,6 +494,26 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
           ? _value.modelIds
           : modelIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      assetModelIds: null == assetModelIds
+          ? _value.assetModelIds
+          : assetModelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      premiseIds: null == premiseIds
+          ? _value.premiseIds
+          : premiseIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      facilityIds: null == facilityIds
+          ? _value.facilityIds
+          : facilityIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      floorIds: null == floorIds
+          ? _value.floorIds
+          : floorIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetIds: null == assetIds
+          ? _value.assetIds
+          : assetIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -499,7 +539,12 @@ abstract class _$$TotalValueWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
-      List<String> modelIds});
+      List<String> modelIds,
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds});
 }
 
 /// @nodoc
@@ -527,6 +572,11 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
     Object? labelFont = null,
     Object? field = null,
     Object? modelIds = null,
+    Object? assetModelIds = null,
+    Object? premiseIds = null,
+    Object? facilityIds = null,
+    Object? floorIds = null,
+    Object? assetIds = null,
   }) {
     return _then(_$TotalValueWidgetConfigImpl(
       title: null == title
@@ -577,6 +627,26 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
           ? _value.modelIds
           : modelIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      assetModelIds: null == assetModelIds
+          ? _value.assetModelIds
+          : assetModelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      premiseIds: null == premiseIds
+          ? _value.premiseIds
+          : premiseIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      facilityIds: null == facilityIds
+          ? _value.facilityIds
+          : facilityIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      floorIds: null == floorIds
+          ? _value.floorIds
+          : floorIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetIds: null == assetIds
+          ? _value.assetIds
+          : assetIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -604,7 +674,12 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
         'fontBold': false
       },
       this.field = '',
-      this.modelIds = const []})
+      this.modelIds = const [],
+      this.assetModelIds = const [],
+      this.premiseIds = const [],
+      this.facilityIds = const [],
+      this.floorIds = const [],
+      this.assetIds = const []})
       : super._();
 
   factory _$TotalValueWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -646,10 +721,25 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
   @override
   @JsonKey()
   List<String> modelIds;
+  @override
+  @JsonKey()
+  List<String> assetModelIds;
+  @override
+  @JsonKey()
+  List<String> premiseIds;
+  @override
+  @JsonKey()
+  List<String> facilityIds;
+  @override
+  @JsonKey()
+  List<String> floorIds;
+  @override
+  @JsonKey()
+  List<String> assetIds;
 
   @override
   String toString() {
-    return 'TotalValueWidgetConfig(title: $title, fieldPrefix: $fieldPrefix, fieldSuffix: $fieldSuffix, bgColor: $bgColor, borderColor: $borderColor, borderWidth: $borderWidth, borderRadius: $borderRadius, borderStyle: $borderStyle, headerFont: $headerFont, labelFont: $labelFont, field: $field, modelIds: $modelIds)';
+    return 'TotalValueWidgetConfig(title: $title, fieldPrefix: $fieldPrefix, fieldSuffix: $fieldSuffix, bgColor: $bgColor, borderColor: $borderColor, borderWidth: $borderWidth, borderRadius: $borderRadius, borderStyle: $borderStyle, headerFont: $headerFont, labelFont: $labelFont, field: $field, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds)';
   }
 
   @JsonKey(ignore: true)
@@ -680,7 +770,12 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
       Map<String, dynamic> headerFont,
       Map<String, dynamic> labelFont,
       String field,
-      List<String> modelIds}) = _$TotalValueWidgetConfigImpl;
+      List<String> modelIds,
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds}) = _$TotalValueWidgetConfigImpl;
   _TotalValueWidgetConfig._() : super._();
 
   factory _TotalValueWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -722,6 +817,21 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   @override
   List<String> get modelIds;
   set modelIds(List<String> value);
+  @override
+  List<String> get assetModelIds;
+  set assetModelIds(List<String> value);
+  @override
+  List<String> get premiseIds;
+  set premiseIds(List<String> value);
+  @override
+  List<String> get facilityIds;
+  set facilityIds(List<String> value);
+  @override
+  List<String> get floorIds;
+  set floorIds(List<String> value);
+  @override
+  List<String> get assetIds;
+  set assetIds(List<String> value);
   @override
   @JsonKey(ignore: true)
   _$$TotalValueWidgetConfigImplCopyWith<_$TotalValueWidgetConfigImpl>
@@ -919,10 +1029,20 @@ mixin _$ValueDistributionPieChartWidgetConfig {
   set type(DistributionChartType value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
-  List<String> get modelIds => throw _privateConstructorUsedError;
-  set modelIds(List<String> value) => throw _privateConstructorUsedError;
   List<dynamic> get segments => throw _privateConstructorUsedError;
   set segments(List<dynamic> value) => throw _privateConstructorUsedError;
+  List<String> get modelIds => throw _privateConstructorUsedError;
+  set modelIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get assetModelIds => throw _privateConstructorUsedError;
+  set assetModelIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get premiseIds => throw _privateConstructorUsedError;
+  set premiseIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get facilityIds => throw _privateConstructorUsedError;
+  set facilityIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get floorIds => throw _privateConstructorUsedError;
+  set floorIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get assetIds => throw _privateConstructorUsedError;
+  set assetIds(List<String> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -945,8 +1065,13 @@ abstract class $ValueDistributionPieChartWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
+      List<dynamic> segments,
       List<String> modelIds,
-      List<dynamic> segments});
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds});
 }
 
 /// @nodoc
@@ -968,8 +1093,13 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
     Object? labelFont = null,
     Object? type = null,
     Object? field = null,
-    Object? modelIds = null,
     Object? segments = null,
+    Object? modelIds = null,
+    Object? assetModelIds = null,
+    Object? premiseIds = null,
+    Object? facilityIds = null,
+    Object? floorIds = null,
+    Object? assetIds = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -992,14 +1122,34 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      modelIds: null == modelIds
-          ? _value.modelIds
-          : modelIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
+      modelIds: null == modelIds
+          ? _value.modelIds
+          : modelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetModelIds: null == assetModelIds
+          ? _value.assetModelIds
+          : assetModelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      premiseIds: null == premiseIds
+          ? _value.premiseIds
+          : premiseIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      facilityIds: null == facilityIds
+          ? _value.facilityIds
+          : facilityIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      floorIds: null == floorIds
+          ? _value.floorIds
+          : floorIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetIds: null == assetIds
+          ? _value.assetIds
+          : assetIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -1019,8 +1169,13 @@ abstract class _$$ValueDistributionPieChartWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
+      List<dynamic> segments,
       List<String> modelIds,
-      List<dynamic> segments});
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds});
 }
 
 /// @nodoc
@@ -1041,8 +1196,13 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
     Object? labelFont = null,
     Object? type = null,
     Object? field = null,
-    Object? modelIds = null,
     Object? segments = null,
+    Object? modelIds = null,
+    Object? assetModelIds = null,
+    Object? premiseIds = null,
+    Object? facilityIds = null,
+    Object? floorIds = null,
+    Object? assetIds = null,
   }) {
     return _then(_$ValueDistributionPieChartWidgetConfigImpl(
       title: null == title
@@ -1065,14 +1225,34 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      modelIds: null == modelIds
-          ? _value.modelIds
-          : modelIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       segments: null == segments
           ? _value.segments
           : segments // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
+      modelIds: null == modelIds
+          ? _value.modelIds
+          : modelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetModelIds: null == assetModelIds
+          ? _value.assetModelIds
+          : assetModelIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      premiseIds: null == premiseIds
+          ? _value.premiseIds
+          : premiseIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      facilityIds: null == facilityIds
+          ? _value.facilityIds
+          : facilityIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      floorIds: null == floorIds
+          ? _value.floorIds
+          : floorIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      assetIds: null == assetIds
+          ? _value.assetIds
+          : assetIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -1095,13 +1275,18 @@ class _$ValueDistributionPieChartWidgetConfigImpl
       },
       this.type = DistributionChartType.pie,
       this.field = '',
-      this.modelIds = const [],
       this.segments = const [
         {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
         {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
         {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
         {'from': 76, 'color': 0xFFFFFFFF}
-      ]})
+      ],
+      this.modelIds = const [],
+      this.assetModelIds = const [],
+      this.premiseIds = const [],
+      this.facilityIds = const [],
+      this.floorIds = const [],
+      this.assetIds = const []})
       : super._();
 
   factory _$ValueDistributionPieChartWidgetConfigImpl.fromJson(
@@ -1125,14 +1310,29 @@ class _$ValueDistributionPieChartWidgetConfigImpl
   String field;
   @override
   @JsonKey()
+  List<dynamic> segments;
+  @override
+  @JsonKey()
   List<String> modelIds;
   @override
   @JsonKey()
-  List<dynamic> segments;
+  List<String> assetModelIds;
+  @override
+  @JsonKey()
+  List<String> premiseIds;
+  @override
+  @JsonKey()
+  List<String> facilityIds;
+  @override
+  @JsonKey()
+  List<String> floorIds;
+  @override
+  @JsonKey()
+  List<String> assetIds;
 
   @override
   String toString() {
-    return 'ValueDistributionPieChartWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, type: $type, field: $field, modelIds: $modelIds, segments: $segments)';
+    return 'ValueDistributionPieChartWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, type: $type, field: $field, segments: $segments, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds)';
   }
 
   @JsonKey(ignore: true)
@@ -1159,8 +1359,13 @@ abstract class _ValueDistributionPieChartWidgetConfig
       Map<String, dynamic> labelFont,
       DistributionChartType type,
       String field,
+      List<dynamic> segments,
       List<String> modelIds,
-      List<dynamic> segments}) = _$ValueDistributionPieChartWidgetConfigImpl;
+      List<String> assetModelIds,
+      List<String> premiseIds,
+      List<String> facilityIds,
+      List<String> floorIds,
+      List<String> assetIds}) = _$ValueDistributionPieChartWidgetConfigImpl;
   _ValueDistributionPieChartWidgetConfig._() : super._();
 
   factory _ValueDistributionPieChartWidgetConfig.fromJson(
@@ -1183,11 +1388,26 @@ abstract class _ValueDistributionPieChartWidgetConfig
   String get field;
   set field(String value);
   @override
+  List<dynamic> get segments;
+  set segments(List<dynamic> value);
+  @override
   List<String> get modelIds;
   set modelIds(List<String> value);
   @override
-  List<dynamic> get segments;
-  set segments(List<dynamic> value);
+  List<String> get assetModelIds;
+  set assetModelIds(List<String> value);
+  @override
+  List<String> get premiseIds;
+  set premiseIds(List<String> value);
+  @override
+  List<String> get facilityIds;
+  set facilityIds(List<String> value);
+  @override
+  List<String> get floorIds;
+  set floorIds(List<String> value);
+  @override
+  List<String> get assetIds;
+  set assetIds(List<String> value);
   @override
   @JsonKey(ignore: true)
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
