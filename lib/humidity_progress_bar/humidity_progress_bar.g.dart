@@ -25,7 +25,7 @@ _$HumidityProgressBarWidgetConfigImpl
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
-                'fontSize': 16,
+                'fontSize': 14,
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
