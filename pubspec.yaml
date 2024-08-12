@@ -37,8 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
-  syncfusion_flutter_charts: ^25.1.42+1
-  syncfusion_flutter_gauges: ^25.2.6
+  syncfusion_flutter_charts: ^26.2.8
+  syncfusion_flutter_gauges: ^26.2.8
 
 
 dev_dependencies:
