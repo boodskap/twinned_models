@@ -56,6 +56,30 @@ _$TotalValueWidgetConfigImpl _$$TotalValueWidgetConfigImplFromJson(
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      assetModelIds: (json['assetModelIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      premiseIds: (json['premiseIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      facilityIds: (json['facilityIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      floorIds: (json['floorIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      assetIds: (json['assetIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
+      clientIds: (json['clientIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$TotalValueWidgetConfigImplToJson(
@@ -73,6 +97,12 @@ Map<String, dynamic> _$$TotalValueWidgetConfigImplToJson(
       'labelFont': instance.labelFont,
       'field': instance.field,
       'modelIds': instance.modelIds,
+      'assetModelIds': instance.assetModelIds,
+      'premiseIds': instance.premiseIds,
+      'facilityIds': instance.facilityIds,
+      'floorIds': instance.floorIds,
+      'assetIds': instance.assetIds,
+      'clientIds': instance.clientIds,
     };
 
 const _$BorderStyleEnumMap = {
@@ -108,10 +138,6 @@ _$ValueDistributionPieChartWidgetConfigImpl
                   _$DistributionChartTypeEnumMap, json['type']) ??
               DistributionChartType.pie,
           field: json['field'] as String? ?? '',
-          modelIds: (json['modelIds'] as List<dynamic>?)
-                  ?.map((e) => e as String)
-                  .toList() ??
-              const [],
           segments: json['segments'] as List<dynamic>? ??
               const [
                 {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
@@ -119,6 +145,30 @@ _$ValueDistributionPieChartWidgetConfigImpl
                 {'from': 51, 'to': 75, 'color': 0xFFFFFFFF},
                 {'from': 76, 'color': 0xFFFFFFFF}
               ],
+          modelIds: (json['modelIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          assetModelIds: (json['assetModelIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          premiseIds: (json['premiseIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          facilityIds: (json['facilityIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          floorIds: (json['floorIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
+          assetIds: (json['assetIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
         );
 
 Map<String, dynamic> _$$ValueDistributionPieChartWidgetConfigImplToJson(
@@ -129,8 +179,13 @@ Map<String, dynamic> _$$ValueDistributionPieChartWidgetConfigImplToJson(
       'labelFont': instance.labelFont,
       'type': _$DistributionChartTypeEnumMap[instance.type]!,
       'field': instance.field,
-      'modelIds': instance.modelIds,
       'segments': instance.segments,
+      'modelIds': instance.modelIds,
+      'assetModelIds': instance.assetModelIds,
+      'premiseIds': instance.premiseIds,
+      'facilityIds': instance.facilityIds,
+      'floorIds': instance.floorIds,
+      'assetIds': instance.assetIds,
     };
 
 const _$DistributionChartTypeEnumMap = {
