@@ -169,6 +169,10 @@ _$ValueDistributionPieChartWidgetConfigImpl
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
+          clientIds: (json['clientIds'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
         );
 
 Map<String, dynamic> _$$ValueDistributionPieChartWidgetConfigImplToJson(
@@ -186,6 +190,7 @@ Map<String, dynamic> _$$ValueDistributionPieChartWidgetConfigImplToJson(
       'facilityIds': instance.facilityIds,
       'floorIds': instance.floorIds,
       'assetIds': instance.assetIds,
+      'clientIds': instance.clientIds,
     };
 
 const _$DistributionChartTypeEnumMap = {

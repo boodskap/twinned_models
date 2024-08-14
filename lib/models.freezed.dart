@@ -1065,6 +1065,8 @@ mixin _$ValueDistributionPieChartWidgetConfig {
   set floorIds(List<String> value) => throw _privateConstructorUsedError;
   List<String> get assetIds => throw _privateConstructorUsedError;
   set assetIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get clientIds => throw _privateConstructorUsedError;
+  set clientIds(List<String> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1093,7 +1095,8 @@ abstract class $ValueDistributionPieChartWidgetConfigCopyWith<$Res> {
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds});
+      List<String> assetIds,
+      List<String> clientIds});
 }
 
 /// @nodoc
@@ -1122,6 +1125,7 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
     Object? facilityIds = null,
     Object? floorIds = null,
     Object? assetIds = null,
+    Object? clientIds = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -1172,6 +1176,10 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
           ? _value.assetIds
           : assetIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      clientIds: null == clientIds
+          ? _value.clientIds
+          : clientIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -1197,7 +1205,8 @@ abstract class _$$ValueDistributionPieChartWidgetConfigImplCopyWith<$Res>
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds});
+      List<String> assetIds,
+      List<String> clientIds});
 }
 
 /// @nodoc
@@ -1225,6 +1234,7 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
     Object? facilityIds = null,
     Object? floorIds = null,
     Object? assetIds = null,
+    Object? clientIds = null,
   }) {
     return _then(_$ValueDistributionPieChartWidgetConfigImpl(
       title: null == title
@@ -1275,6 +1285,10 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.assetIds
           : assetIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      clientIds: null == clientIds
+          ? _value.clientIds
+          : clientIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -1308,7 +1322,8 @@ class _$ValueDistributionPieChartWidgetConfigImpl
       this.premiseIds = const [],
       this.facilityIds = const [],
       this.floorIds = const [],
-      this.assetIds = const []})
+      this.assetIds = const [],
+      this.clientIds = const []})
       : super._();
 
   factory _$ValueDistributionPieChartWidgetConfigImpl.fromJson(
@@ -1351,10 +1366,13 @@ class _$ValueDistributionPieChartWidgetConfigImpl
   @override
   @JsonKey()
   List<String> assetIds;
+  @override
+  @JsonKey()
+  List<String> clientIds;
 
   @override
   String toString() {
-    return 'ValueDistributionPieChartWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, type: $type, field: $field, segments: $segments, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds)';
+    return 'ValueDistributionPieChartWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, type: $type, field: $field, segments: $segments, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds, clientIds: $clientIds)';
   }
 
   @JsonKey(ignore: true)
@@ -1387,7 +1405,8 @@ abstract class _ValueDistributionPieChartWidgetConfig
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds}) = _$ValueDistributionPieChartWidgetConfigImpl;
+      List<String> assetIds,
+      List<String> clientIds}) = _$ValueDistributionPieChartWidgetConfigImpl;
   _ValueDistributionPieChartWidgetConfig._() : super._();
 
   factory _ValueDistributionPieChartWidgetConfig.fromJson(
@@ -1430,6 +1449,9 @@ abstract class _ValueDistributionPieChartWidgetConfig
   @override
   List<String> get assetIds;
   set assetIds(List<String> value);
+  @override
+  List<String> get clientIds;
+  set clientIds(List<String> value);
   @override
   @JsonKey(ignore: true)
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
