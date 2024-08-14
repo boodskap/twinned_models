@@ -34,7 +34,8 @@ enum HintType {
   floorId,
   deviceModelId,
   font,
-  textArea
+  textArea,
+  clientId,
 }
 
 enum SortType { asc, desc }
@@ -164,6 +165,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
     @Default([]) List<String> facilityIds,
     @Default([]) List<String> floorIds,
     @Default([]) List<String> assetIds,
+    @Default([]) List<String> clientIds,
   }) = _TotalValueWidgetConfig;
 
   factory TotalValueWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -189,6 +191,7 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
       case 'facilityIds':
       case 'floorIds':
       case 'assetIds':
+      case 'clientIds':
         return DataType.listOfTexts;
       default:
         return DataType.text;
@@ -213,6 +216,8 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
         return HintType.floorId;
       case 'assetIds':
         return HintType.assetId;
+      case 'clientIds':
+        return HintType.clientId;
       case 'field':
         return HintType.field;
     }

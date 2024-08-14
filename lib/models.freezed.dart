@@ -380,6 +380,8 @@ mixin _$TotalValueWidgetConfig {
   set floorIds(List<String> value) => throw _privateConstructorUsedError;
   List<String> get assetIds => throw _privateConstructorUsedError;
   set assetIds(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get clientIds => throw _privateConstructorUsedError;
+  set clientIds(List<String> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -410,7 +412,8 @@ abstract class $TotalValueWidgetConfigCopyWith<$Res> {
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds});
+      List<String> assetIds,
+      List<String> clientIds});
 }
 
 /// @nodoc
@@ -444,6 +447,7 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
     Object? facilityIds = null,
     Object? floorIds = null,
     Object? assetIds = null,
+    Object? clientIds = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -514,6 +518,10 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
           ? _value.assetIds
           : assetIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      clientIds: null == clientIds
+          ? _value.clientIds
+          : clientIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -544,7 +552,8 @@ abstract class _$$TotalValueWidgetConfigImplCopyWith<$Res>
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds});
+      List<String> assetIds,
+      List<String> clientIds});
 }
 
 /// @nodoc
@@ -577,6 +586,7 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
     Object? facilityIds = null,
     Object? floorIds = null,
     Object? assetIds = null,
+    Object? clientIds = null,
   }) {
     return _then(_$TotalValueWidgetConfigImpl(
       title: null == title
@@ -647,6 +657,10 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
           ? _value.assetIds
           : assetIds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      clientIds: null == clientIds
+          ? _value.clientIds
+          : clientIds // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -679,7 +693,8 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
       this.premiseIds = const [],
       this.facilityIds = const [],
       this.floorIds = const [],
-      this.assetIds = const []})
+      this.assetIds = const [],
+      this.clientIds = const []})
       : super._();
 
   factory _$TotalValueWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -736,10 +751,13 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
   @override
   @JsonKey()
   List<String> assetIds;
+  @override
+  @JsonKey()
+  List<String> clientIds;
 
   @override
   String toString() {
-    return 'TotalValueWidgetConfig(title: $title, fieldPrefix: $fieldPrefix, fieldSuffix: $fieldSuffix, bgColor: $bgColor, borderColor: $borderColor, borderWidth: $borderWidth, borderRadius: $borderRadius, borderStyle: $borderStyle, headerFont: $headerFont, labelFont: $labelFont, field: $field, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds)';
+    return 'TotalValueWidgetConfig(title: $title, fieldPrefix: $fieldPrefix, fieldSuffix: $fieldSuffix, bgColor: $bgColor, borderColor: $borderColor, borderWidth: $borderWidth, borderRadius: $borderRadius, borderStyle: $borderStyle, headerFont: $headerFont, labelFont: $labelFont, field: $field, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds, clientIds: $clientIds)';
   }
 
   @JsonKey(ignore: true)
@@ -775,7 +793,8 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
       List<String> premiseIds,
       List<String> facilityIds,
       List<String> floorIds,
-      List<String> assetIds}) = _$TotalValueWidgetConfigImpl;
+      List<String> assetIds,
+      List<String> clientIds}) = _$TotalValueWidgetConfigImpl;
   _TotalValueWidgetConfig._() : super._();
 
   factory _TotalValueWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -833,6 +852,8 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   List<String> get assetIds;
   set assetIds(List<String> value);
   @override
+  List<String> get clientIds;
+  set clientIds(List<String> value);
   @JsonKey(ignore: true)
   _$$TotalValueWidgetConfigImplCopyWith<_$TotalValueWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
