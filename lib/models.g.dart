@@ -76,6 +76,10 @@ _$TotalValueWidgetConfigImpl _$$TotalValueWidgetConfigImplFromJson(
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      clientIds: (json['clientIds'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$TotalValueWidgetConfigImplToJson(
@@ -98,6 +102,7 @@ Map<String, dynamic> _$$TotalValueWidgetConfigImplToJson(
       'facilityIds': instance.facilityIds,
       'floorIds': instance.floorIds,
       'assetIds': instance.assetIds,
+      'clientIds': instance.clientIds,
     };
 
 const _$BorderStyleEnumMap = {
