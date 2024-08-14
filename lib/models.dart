@@ -302,6 +302,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
     @Default([]) List<String> facilityIds,
     @Default([]) List<String> floorIds,
     @Default([]) List<String> assetIds,
+    @Default([]) List<String> clientIds,
   }) = _ValueDistributionPieChartWidgetConfig;
 
   factory ValueDistributionPieChartWidgetConfig.fromJson(
@@ -322,6 +323,7 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
       case 'facilityIds':
       case 'floorIds':
       case 'assetIds':
+      case 'clientIds':
         return DataType.listOfTexts;
       case 'segments':
         return DataType.listOfRanges;
@@ -345,6 +347,8 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
         return HintType.floorId;
       case 'assetIds':
         return HintType.assetId;
+      case 'clientIds':
+        return HintType.clientId;
       case 'field':
         return HintType.field;
     }
