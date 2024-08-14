@@ -854,7 +854,6 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   @override
   List<String> get clientIds;
   set clientIds(List<String> value);
-  @override
   @JsonKey(ignore: true)
   _$$TotalValueWidgetConfigImplCopyWith<_$TotalValueWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
