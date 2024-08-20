@@ -6,9 +6,9 @@ part of 'humidity_week_widget.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HumidityWeekWidgetImpl _$$HumidityWeekWidgetImplFromJson(
+_$HumidityWeekWidgetConfigImpl _$$HumidityWeekWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
-    _$HumidityWeekWidgetImpl(
+    _$HumidityWeekWidgetConfigImpl(
       deviceId: json['deviceId'] as String? ?? '',
       field: json['field'] as String? ?? '',
       title: json['title'] as String? ?? 'Last 7 days Humidity Level',
@@ -29,8 +29,8 @@ _$HumidityWeekWidgetImpl _$$HumidityWeekWidgetImplFromJson(
           },
     );
 
-Map<String, dynamic> _$$HumidityWeekWidgetImplToJson(
-        _$HumidityWeekWidgetImpl instance) =>
+Map<String, dynamic> _$$HumidityWeekWidgetConfigImplToJson(
+        _$HumidityWeekWidgetConfigImpl instance) =>
     <String, dynamic>{
       'deviceId': instance.deviceId,
       'field': instance.field,
