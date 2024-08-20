@@ -18,3 +18,5 @@ export 'temperature_widget/temperature_widget.dart';
 export 'thermometer_temperature/thermometer_temperature.dart';
 export 'humidity_progress_bar/humidity_progress_bar.dart';
 export 'visibility_air_quality/visibility_air_quality.dart';
+export 'current_day_status/current_day_status.dart';
+export 'humidity_week_widget/humidity_week_widget.dart';
