@@ -5,10 +5,10 @@ part 'humidity_week_widget.freezed.dart';
 part 'humidity_week_widget.g.dart';
 
 @unfreezed
-class HumidityWeekWidget extends BaseConfig with _$HumidityWeekWidget {
-  HumidityWeekWidget._();
+class HumidityWeekWidgetConfig extends BaseConfig with _$HumidityWeekWidgetConfig {
+  HumidityWeekWidgetConfig._();
 
-  factory HumidityWeekWidget({
+  factory HumidityWeekWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
     @Default('Last 7 days Humidity Level') String title,
@@ -27,10 +27,10 @@ class HumidityWeekWidget extends BaseConfig with _$HumidityWeekWidget {
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-  }) = _HumidityWeekWidget;
+  }) = _HumidityWeekWidgetConfig;
 
-  factory HumidityWeekWidget.fromJson(Map<String, dynamic> json) =>
-      _$HumidityWeekWidgetFromJson(json);
+  factory HumidityWeekWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$HumidityWeekWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
