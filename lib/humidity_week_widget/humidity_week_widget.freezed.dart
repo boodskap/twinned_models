@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-HumidityWeekWidget _$HumidityWeekWidgetFromJson(Map<String, dynamic> json) {
-  return _HumidityWeekWidget.fromJson(json);
+HumidityWeekWidgetConfig _$HumidityWeekWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _HumidityWeekWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$HumidityWeekWidget {
+mixin _$HumidityWeekWidgetConfig {
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -37,15 +38,15 @@ mixin _$HumidityWeekWidget {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HumidityWeekWidgetCopyWith<HumidityWeekWidget> get copyWith =>
+  $HumidityWeekWidgetConfigCopyWith<HumidityWeekWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HumidityWeekWidgetCopyWith<$Res> {
-  factory $HumidityWeekWidgetCopyWith(
-          HumidityWeekWidget value, $Res Function(HumidityWeekWidget) then) =
-      _$HumidityWeekWidgetCopyWithImpl<$Res, HumidityWeekWidget>;
+abstract class $HumidityWeekWidgetConfigCopyWith<$Res> {
+  factory $HumidityWeekWidgetConfigCopyWith(HumidityWeekWidgetConfig value,
+          $Res Function(HumidityWeekWidgetConfig) then) =
+      _$HumidityWeekWidgetConfigCopyWithImpl<$Res, HumidityWeekWidgetConfig>;
   @useResult
   $Res call(
       {String deviceId,
@@ -57,9 +58,10 @@ abstract class $HumidityWeekWidgetCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HumidityWeekWidgetCopyWithImpl<$Res, $Val extends HumidityWeekWidget>
-    implements $HumidityWeekWidgetCopyWith<$Res> {
-  _$HumidityWeekWidgetCopyWithImpl(this._value, this._then);
+class _$HumidityWeekWidgetConfigCopyWithImpl<$Res,
+        $Val extends HumidityWeekWidgetConfig>
+    implements $HumidityWeekWidgetConfigCopyWith<$Res> {
+  _$HumidityWeekWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -106,11 +108,12 @@ class _$HumidityWeekWidgetCopyWithImpl<$Res, $Val extends HumidityWeekWidget>
 }
 
 /// @nodoc
-abstract class _$$HumidityWeekWidgetImplCopyWith<$Res>
-    implements $HumidityWeekWidgetCopyWith<$Res> {
-  factory _$$HumidityWeekWidgetImplCopyWith(_$HumidityWeekWidgetImpl value,
-          $Res Function(_$HumidityWeekWidgetImpl) then) =
-      __$$HumidityWeekWidgetImplCopyWithImpl<$Res>;
+abstract class _$$HumidityWeekWidgetConfigImplCopyWith<$Res>
+    implements $HumidityWeekWidgetConfigCopyWith<$Res> {
+  factory _$$HumidityWeekWidgetConfigImplCopyWith(
+          _$HumidityWeekWidgetConfigImpl value,
+          $Res Function(_$HumidityWeekWidgetConfigImpl) then) =
+      __$$HumidityWeekWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +126,13 @@ abstract class _$$HumidityWeekWidgetImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$HumidityWeekWidgetImplCopyWithImpl<$Res>
-    extends _$HumidityWeekWidgetCopyWithImpl<$Res, _$HumidityWeekWidgetImpl>
-    implements _$$HumidityWeekWidgetImplCopyWith<$Res> {
-  __$$HumidityWeekWidgetImplCopyWithImpl(_$HumidityWeekWidgetImpl _value,
-      $Res Function(_$HumidityWeekWidgetImpl) _then)
+class __$$HumidityWeekWidgetConfigImplCopyWithImpl<$Res>
+    extends _$HumidityWeekWidgetConfigCopyWithImpl<$Res,
+        _$HumidityWeekWidgetConfigImpl>
+    implements _$$HumidityWeekWidgetConfigImplCopyWith<$Res> {
+  __$$HumidityWeekWidgetConfigImplCopyWithImpl(
+      _$HumidityWeekWidgetConfigImpl _value,
+      $Res Function(_$HumidityWeekWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +145,7 @@ class __$$HumidityWeekWidgetImplCopyWithImpl<$Res>
     Object? titleFont = null,
     Object? valueFont = null,
   }) {
-    return _then(_$HumidityWeekWidgetImpl(
+    return _then(_$HumidityWeekWidgetConfigImpl(
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -171,8 +176,8 @@ class __$$HumidityWeekWidgetImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$HumidityWeekWidgetImpl extends _HumidityWeekWidget {
-  _$HumidityWeekWidgetImpl(
+class _$HumidityWeekWidgetConfigImpl extends _HumidityWeekWidgetConfig {
+  _$HumidityWeekWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
       this.title = 'Last 7 days Humidity Level',
@@ -191,8 +196,8 @@ class _$HumidityWeekWidgetImpl extends _HumidityWeekWidget {
       }})
       : super._();
 
-  factory _$HumidityWeekWidgetImpl.fromJson(Map<String, dynamic> json) =>
-      _$$HumidityWeekWidgetImplFromJson(json);
+  factory _$HumidityWeekWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HumidityWeekWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -215,36 +220,36 @@ class _$HumidityWeekWidgetImpl extends _HumidityWeekWidget {
 
   @override
   String toString() {
-    return 'HumidityWeekWidget(deviceId: $deviceId, field: $field, title: $title, cardColor: $cardColor, titleFont: $titleFont, valueFont: $valueFont)';
+    return 'HumidityWeekWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cardColor: $cardColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$HumidityWeekWidgetImplCopyWith<_$HumidityWeekWidgetImpl> get copyWith =>
-      __$$HumidityWeekWidgetImplCopyWithImpl<_$HumidityWeekWidgetImpl>(
-          this, _$identity);
+  _$$HumidityWeekWidgetConfigImplCopyWith<_$HumidityWeekWidgetConfigImpl>
+      get copyWith => __$$HumidityWeekWidgetConfigImplCopyWithImpl<
+          _$HumidityWeekWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HumidityWeekWidgetImplToJson(
+    return _$$HumidityWeekWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _HumidityWeekWidget extends HumidityWeekWidget {
-  factory _HumidityWeekWidget(
+abstract class _HumidityWeekWidgetConfig extends HumidityWeekWidgetConfig {
+  factory _HumidityWeekWidgetConfig(
       {String deviceId,
       String field,
       String title,
       int cardColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont}) = _$HumidityWeekWidgetImpl;
-  _HumidityWeekWidget._() : super._();
+      Map<String, dynamic> valueFont}) = _$HumidityWeekWidgetConfigImpl;
+  _HumidityWeekWidgetConfig._() : super._();
 
-  factory _HumidityWeekWidget.fromJson(Map<String, dynamic> json) =
-      _$HumidityWeekWidgetImpl.fromJson;
+  factory _HumidityWeekWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$HumidityWeekWidgetConfigImpl.fromJson;
 
   @override
   String get deviceId;
@@ -266,6 +271,6 @@ abstract class _HumidityWeekWidget extends HumidityWeekWidget {
   set valueFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
-  _$$HumidityWeekWidgetImplCopyWith<_$HumidityWeekWidgetImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HumidityWeekWidgetConfigImplCopyWith<_$HumidityWeekWidgetConfigImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
