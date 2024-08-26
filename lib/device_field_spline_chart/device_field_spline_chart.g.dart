@@ -10,11 +10,11 @@ _$DeviceFieldSplineChartWidgetConfigImpl
     _$$DeviceFieldSplineChartWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$DeviceFieldSplineChartWidgetConfigImpl(
-          field: json['field'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
+          field: json['field'] as String? ?? '',
           title: json['title'] as String? ?? '',
           subTitle: json['subTitle'] as String? ?? '',
-          charColor: (json['charColor'] as num?)?.toInt() ?? 0x00000000,
+          chartColor: (json['chartColor'] as num?)?.toInt() ?? 0x00000000,
           chartAreaColor:
               (json['chartAreaColor'] as num?)?.toInt() ?? 0XFFEEF4FE,
           chartAreaBorderColor:
@@ -51,11 +51,11 @@ _$DeviceFieldSplineChartWidgetConfigImpl
 Map<String, dynamic> _$$DeviceFieldSplineChartWidgetConfigImplToJson(
         _$DeviceFieldSplineChartWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'field': instance.field,
       'deviceId': instance.deviceId,
+      'field': instance.field,
       'title': instance.title,
       'subTitle': instance.subTitle,
-      'charColor': instance.charColor,
+      'chartColor': instance.chartColor,
       'chartAreaColor': instance.chartAreaColor,
       'chartAreaBorderColor': instance.chartAreaBorderColor,
       'dataPointsHighlights': instance.dataPointsHighlights,

@@ -37,9 +37,9 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'deviceId':
       case 'title':
       case 'field':
-      case 'deviceId':
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
@@ -54,11 +54,11 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
-     switch (parameter) {
-      case 'field':
-        return HintType.field;
+    switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
+      case 'field':
+        return HintType.field;
       case 'backgroundColor':
       case 'valueColor':
         return HintType.color;
@@ -74,12 +74,29 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'deviceId':
+        return 'Asset Model';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'backgroundColor':
+        return 'Background Color';
+      case 'valueColor':
+        return 'Value Color';
+      case 'valueFont':
+        return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
+      default:
+        return parameter;
+    }
   }
 
   @override
   String getTooltip(String parameter) {
-     return "";
+    return "";
   }
 
   @override

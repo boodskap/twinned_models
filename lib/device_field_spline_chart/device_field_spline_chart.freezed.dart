@@ -21,16 +21,16 @@ DeviceFieldSplineChartWidgetConfig _$DeviceFieldSplineChartWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DeviceFieldSplineChartWidgetConfig {
-  String get field => throw _privateConstructorUsedError;
-  set field(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   String get subTitle => throw _privateConstructorUsedError;
   set subTitle(String value) => throw _privateConstructorUsedError;
-  int get charColor => throw _privateConstructorUsedError;
-  set charColor(int value) => throw _privateConstructorUsedError;
+  int get chartColor => throw _privateConstructorUsedError;
+  set chartColor(int value) => throw _privateConstructorUsedError;
   int get chartAreaColor => throw _privateConstructorUsedError;
   set chartAreaColor(int value) => throw _privateConstructorUsedError;
   int get chartAreaBorderColor => throw _privateConstructorUsedError;
@@ -69,11 +69,11 @@ abstract class $DeviceFieldSplineChartWidgetConfigCopyWith<$Res> {
           DeviceFieldSplineChartWidgetConfig>;
   @useResult
   $Res call(
-      {String field,
-      String deviceId,
+      {String deviceId,
+      String field,
       String title,
       String subTitle,
-      int charColor,
+      int chartColor,
       int chartAreaColor,
       int chartAreaBorderColor,
       bool dataPointsHighlights,
@@ -99,11 +99,11 @@ class _$DeviceFieldSplineChartWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
     Object? deviceId = null,
+    Object? field = null,
     Object? title = null,
     Object? subTitle = null,
-    Object? charColor = null,
+    Object? chartColor = null,
     Object? chartAreaColor = null,
     Object? chartAreaBorderColor = null,
     Object? dataPointsHighlights = null,
@@ -115,13 +115,13 @@ class _$DeviceFieldSplineChartWidgetConfigCopyWithImpl<$Res,
     Object? tooltipFont = null,
   }) {
     return _then(_value.copyWith(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as String,
       title: null == title
           ? _value.title
@@ -131,9 +131,9 @@ class _$DeviceFieldSplineChartWidgetConfigCopyWithImpl<$Res,
           ? _value.subTitle
           : subTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      charColor: null == charColor
-          ? _value.charColor
-          : charColor // ignore: cast_nullable_to_non_nullable
+      chartColor: null == chartColor
+          ? _value.chartColor
+          : chartColor // ignore: cast_nullable_to_non_nullable
               as int,
       chartAreaColor: null == chartAreaColor
           ? _value.chartAreaColor
@@ -185,11 +185,11 @@ abstract class _$$DeviceFieldSplineChartWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String field,
-      String deviceId,
+      {String deviceId,
+      String field,
       String title,
       String subTitle,
-      int charColor,
+      int chartColor,
       int chartAreaColor,
       int chartAreaBorderColor,
       bool dataPointsHighlights,
@@ -214,11 +214,11 @@ class __$$DeviceFieldSplineChartWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
     Object? deviceId = null,
+    Object? field = null,
     Object? title = null,
     Object? subTitle = null,
-    Object? charColor = null,
+    Object? chartColor = null,
     Object? chartAreaColor = null,
     Object? chartAreaBorderColor = null,
     Object? dataPointsHighlights = null,
@@ -230,13 +230,13 @@ class __$$DeviceFieldSplineChartWidgetConfigImplCopyWithImpl<$Res>
     Object? tooltipFont = null,
   }) {
     return _then(_$DeviceFieldSplineChartWidgetConfigImpl(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as String,
       title: null == title
           ? _value.title
@@ -246,9 +246,9 @@ class __$$DeviceFieldSplineChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.subTitle
           : subTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      charColor: null == charColor
-          ? _value.charColor
-          : charColor // ignore: cast_nullable_to_non_nullable
+      chartColor: null == chartColor
+          ? _value.chartColor
+          : chartColor // ignore: cast_nullable_to_non_nullable
               as int,
       chartAreaColor: null == chartAreaColor
           ? _value.chartAreaColor
@@ -295,11 +295,11 @@ class __$$DeviceFieldSplineChartWidgetConfigImplCopyWithImpl<$Res>
 class _$DeviceFieldSplineChartWidgetConfigImpl
     extends _DeviceFieldSplineChartWidgetConfig {
   _$DeviceFieldSplineChartWidgetConfigImpl(
-      {this.field = '',
-      this.deviceId = '',
+      {this.deviceId = '',
+      this.field = '',
       this.title = '',
       this.subTitle = '',
-      this.charColor = 0x00000000,
+      this.chartColor = 0x00000000,
       this.chartAreaColor = 0XFFEEF4FE,
       this.chartAreaBorderColor = 0XFF0077B6,
       this.dataPointsHighlights = false,
@@ -332,10 +332,10 @@ class _$DeviceFieldSplineChartWidgetConfigImpl
 
   @override
   @JsonKey()
-  String field;
+  String deviceId;
   @override
   @JsonKey()
-  String deviceId;
+  String field;
   @override
   @JsonKey()
   String title;
@@ -344,7 +344,7 @@ class _$DeviceFieldSplineChartWidgetConfigImpl
   String subTitle;
   @override
   @JsonKey()
-  int charColor;
+  int chartColor;
   @override
   @JsonKey()
   int chartAreaColor;
@@ -375,7 +375,7 @@ class _$DeviceFieldSplineChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldSplineChartWidgetConfig(field: $field, deviceId: $deviceId, title: $title, subTitle: $subTitle, charColor: $charColor, chartAreaColor: $chartAreaColor, chartAreaBorderColor: $chartAreaBorderColor, dataPointsHighlights: $dataPointsHighlights, enableTooltip: $enableTooltip, tooltipDuration: $tooltipDuration, chartAreaBorderWidth: $chartAreaBorderWidth, titleFont: $titleFont, subTitleFont: $subTitleFont, tooltipFont: $tooltipFont)';
+    return 'DeviceFieldSplineChartWidgetConfig(deviceId: $deviceId, field: $field, title: $title, subTitle: $subTitle, chartColor: $chartColor, chartAreaColor: $chartAreaColor, chartAreaBorderColor: $chartAreaBorderColor, dataPointsHighlights: $dataPointsHighlights, enableTooltip: $enableTooltip, tooltipDuration: $tooltipDuration, chartAreaBorderWidth: $chartAreaBorderWidth, titleFont: $titleFont, subTitleFont: $subTitleFont, tooltipFont: $tooltipFont)';
   }
 
   @JsonKey(ignore: true)
@@ -397,11 +397,11 @@ class _$DeviceFieldSplineChartWidgetConfigImpl
 abstract class _DeviceFieldSplineChartWidgetConfig
     extends DeviceFieldSplineChartWidgetConfig {
   factory _DeviceFieldSplineChartWidgetConfig(
-          {String field,
-          String deviceId,
+          {String deviceId,
+          String field,
           String title,
           String subTitle,
-          int charColor,
+          int chartColor,
           int chartAreaColor,
           int chartAreaBorderColor,
           bool dataPointsHighlights,
@@ -419,11 +419,11 @@ abstract class _DeviceFieldSplineChartWidgetConfig
       _$DeviceFieldSplineChartWidgetConfigImpl.fromJson;
 
   @override
-  String get field;
-  set field(String value);
-  @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  String get field;
+  set field(String value);
   @override
   String get title;
   set title(String value);
@@ -431,8 +431,8 @@ abstract class _DeviceFieldSplineChartWidgetConfig
   String get subTitle;
   set subTitle(String value);
   @override
-  int get charColor;
-  set charColor(int value);
+  int get chartColor;
+  set chartColor(int value);
   @override
   int get chartAreaColor;
   set chartAreaColor(int value);

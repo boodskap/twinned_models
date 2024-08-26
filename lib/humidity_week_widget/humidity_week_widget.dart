@@ -35,9 +35,9 @@ class HumidityWeekWidgetConfig extends BaseConfig with _$HumidityWeekWidgetConfi
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'deviceId':
       case 'title':
       case 'field':
-      case 'deviceId':
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
@@ -52,10 +52,10 @@ class HumidityWeekWidgetConfig extends BaseConfig with _$HumidityWeekWidgetConfi
   @override
   HintType getHintType(String parameter) {
         switch (parameter) {
-      case 'field':
-        return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'field':
+        return HintType.field;
       case 'cardColor':
         return HintType.color;
       default:
@@ -70,7 +70,23 @@ class HumidityWeekWidgetConfig extends BaseConfig with _$HumidityWeekWidgetConfi
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'deviceId':
+        return 'Asset Model';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'cardColor':
+        return 'Card Color';
+      case 'valueFont':
+        return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
+      default:
+        return parameter;
+    }
+  
   }
 
   @override
