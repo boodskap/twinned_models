@@ -39,9 +39,9 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'deviceId':
       case 'title':
       case 'field':
-      case 'deviceId':
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
@@ -58,10 +58,10 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'field':
-        return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'field':
+        return HintType.field;
       case 'borderColor':
       case 'foreColor':
       case 'cardColor':
@@ -78,7 +78,27 @@ class ThermometerTemperatureWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'deviceId':
+        return 'Asset Model';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'borderColor':
+        return 'Border Color';
+      case 'foreColor':
+        return 'Fore Color';
+      case 'cardColor':
+        return 'Card Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'valueFont':
+        return 'Value Font';
+      default:
+        return parameter;
+    }
+  
   }
 
   @override
