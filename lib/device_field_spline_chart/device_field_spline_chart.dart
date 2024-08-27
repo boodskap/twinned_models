@@ -74,7 +74,8 @@ class DeviceFieldSplineChartWidgetConfig extends BaseConfig
         return DataType.none;
     }
   }
-
+ 
+ 
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
