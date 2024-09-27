@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -36,7 +34,8 @@ enum HintType {
   floorId,
   deviceModelId,
   font,
-  textArea
+  textArea,
+  clientId,
 }
 
 enum SortType { asc, desc }
@@ -161,6 +160,12 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
     Map<String, dynamic> labelFont,
     @Default('') String field,
     @Default([]) List<String> modelIds,
+    @Default([]) List<String> assetModelIds,
+    @Default([]) List<String> premiseIds,
+    @Default([]) List<String> facilityIds,
+    @Default([]) List<String> floorIds,
+    @Default([]) List<String> assetIds,
+    @Default([]) List<String> clientIds,
   }) = _TotalValueWidgetConfig;
 
   factory TotalValueWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -181,6 +186,12 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
       case 'labelFont':
         return DataType.font;
       case 'modelIds':
+      case 'assetModelIds':
+      case 'premiseIds':
+      case 'facilityIds':
+      case 'floorIds':
+      case 'assetIds':
+      case 'clientIds':
         return DataType.listOfTexts;
       default:
         return DataType.text;
@@ -195,6 +206,18 @@ class TotalValueWidgetConfig extends BaseConfig with _$TotalValueWidgetConfig {
         return HintType.color;
       case 'modelIds':
         return HintType.deviceModelId;
+      case 'assetModelIds':
+        return HintType.assetModelId;
+      case 'premiseIds':
+        return HintType.premiseId;
+      case 'facilityIds':
+        return HintType.facilityId;
+      case 'floorIds':
+        return HintType.floorId;
+      case 'assetIds':
+        return HintType.assetId;
+      case 'clientIds':
+        return HintType.clientId;
       case 'field':
         return HintType.field;
     }
@@ -266,7 +289,6 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
     Map<String, dynamic> labelFont,
     @Default(DistributionChartType.pie) DistributionChartType type,
     @Default('') String field,
-    @Default([]) List<String> modelIds,
     @Default([
       {'from': 0, 'to': 25, 'color': 0xFFFFFFFF},
       {'from': 26, 'to': 50, 'color': 0xFFFFFFFF},
@@ -274,6 +296,13 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
       {'from': 76, 'color': 0xFFFFFFFF},
     ])
     List<dynamic> segments,
+    @Default([]) List<String> modelIds,
+    @Default([]) List<String> assetModelIds,
+    @Default([]) List<String> premiseIds,
+    @Default([]) List<String> facilityIds,
+    @Default([]) List<String> floorIds,
+    @Default([]) List<String> assetIds,
+    @Default([]) List<String> clientIds,
   }) = _ValueDistributionPieChartWidgetConfig;
 
   factory ValueDistributionPieChartWidgetConfig.fromJson(
@@ -289,6 +318,12 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
       case 'type':
         return DataType.enumerated;
       case 'modelIds':
+      case 'assetModelIds':
+      case 'premiseIds':
+      case 'facilityIds':
+      case 'floorIds':
+      case 'assetIds':
+      case 'clientIds':
         return DataType.listOfTexts;
       case 'segments':
         return DataType.listOfRanges;
@@ -302,6 +337,18 @@ class ValueDistributionPieChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'modelIds':
         return HintType.deviceModelId;
+      case 'assetModelIds':
+        return HintType.assetModelId;
+      case 'premiseIds':
+        return HintType.premiseId;
+      case 'facilityIds':
+        return HintType.facilityId;
+      case 'floorIds':
+        return HintType.floorId;
+      case 'assetIds':
+        return HintType.assetId;
+      case 'clientIds':
+        return HintType.clientId;
       case 'field':
         return HintType.field;
     }

@@ -10,11 +10,11 @@ class DeviceFieldSplineChartWidgetConfig extends BaseConfig
   DeviceFieldSplineChartWidgetConfig._();
 
   factory DeviceFieldSplineChartWidgetConfig({
-    @Default('') String field,
     @Default('') String deviceId,
+    @Default('') String field,
     @Default('') String title,
     @Default('') String subTitle,
-    @Default(0x00000000) int charColor,
+    @Default(0x00000000) int chartColor,
     @Default(0XFFEEF4FE) int chartAreaColor,
     @Default(0XFF0077B6) int chartAreaBorderColor,
     @Default(false) bool dataPointsHighlights,
@@ -51,21 +51,42 @@ class DeviceFieldSplineChartWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'field':
       case 'deviceId':
+      case 'field':
+      case 'title':
+      case 'subTitle':
         return DataType.text;
+      case 'chartColor':
+      case 'chartAreaColor':
+      case 'chartAreaBorderColor':
+        return DataType.numeric;
+      case 'enableTooltip':
+      case 'dataPointsHighlights':
+        return DataType.yesno;
+      case 'tooltipDuration':
+      case 'chartAreaBorderWidth':
+        return DataType.decimal;
+      case 'titleFont':
+      case 'subTitleFont':
+      case 'tooltipFont':
+        return DataType.font;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
-
+ 
+ 
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'field':
-        return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'field':
+        return HintType.field;
+      case 'chartColor':
+      case 'chartAreaColor':
+      case 'chartAreaBorderColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -79,10 +100,34 @@ class DeviceFieldSplineChartWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'field':
-        return 'Select Field';
       case 'deviceId':
         return 'Asset Models';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'subTitle':
+        return 'Sub Title';
+      case 'chartColor':
+        return 'Chart Color';
+      case 'chartAreaColor':
+        return 'Chart Area Color';
+      case 'chartAreaBorderColor':
+        return 'Chart Area Border Color';
+      case 'dataPointsHighlights':
+        return 'Data Points Highlights';
+      case 'enableTooltip':
+        return 'Enable Tooltip';
+      case 'tooltipDuration':
+        return 'Tooltip Duration';
+      case 'chartAreaBorderWidth':
+        return 'Chart Area Border Width';
+      case 'titleFont':
+        return 'Title Font';
+      case 'subTitleFont':
+        return 'Sub Title Font';
+      case 'tooltipFont':
+        return 'ToolTip Font';
       default:
         return parameter;
     }

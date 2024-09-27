@@ -1,52 +1,64 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'humidity_progress_bar.freezed.dart';
-part 'humidity_progress_bar.g.dart';
+part 'current_day_status.freezed.dart';
+part 'current_day_status.g.dart';
 
 @unfreezed
-class HumidityProgressBarWidgetConfig extends BaseConfig
-    with _$HumidityProgressBarWidgetConfig {
-  HumidityProgressBarWidgetConfig._();
+class CurrentDayStatusWidgetConfig extends BaseConfig
+    with _$CurrentDayStatusWidgetConfig {
+  CurrentDayStatusWidgetConfig._();
 
-  factory HumidityProgressBarWidgetConfig({
+  factory CurrentDayStatusWidgetConfig({
+    @Default('Curent Day Status') String title,
     @Default('') String deviceId,
-    @Default('') String field,
-    @Default('') String title,
-    @Default(0xFFB3E5FC) int backgroundColor,
-    @Default(0XFF7DA9E1) int valueColor,
+    @Default([]) List<String> fields,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 30,
+      'fontColor': 0xFFFFFFFF,
+      'fontBold': true
+    })
+    Map<String, dynamic> titleFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 20,
+      'fontColor': 0xFF000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> labelFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 30,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 30,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
-    Map<String, dynamic> titleFont,
-  }) = _HumidityProgressBarWidgetConfig;
+    Map<String, dynamic> dateFont,
+  }) = _CurrentDayStatusWidgetConfig;
 
-  factory HumidityProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$HumidityProgressBarWidgetConfigFromJson(json);
+  factory CurrentDayStatusWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$CurrentDayStatusWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'name':
       case 'deviceId':
-      case 'title':
-      case 'field':
         return DataType.text;
+      case 'fields':
+        return DataType.listOfTexts;
       case 'titleFont':
       case 'valueFont':
+      case 'labelFont':
+      case 'dateFont':
         return DataType.font;
-      case 'backgroundColor':
-      case 'valueColor':
-        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -57,11 +69,8 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
-      case 'field':
+      case 'fields':
         return HintType.field;
-      case 'backgroundColor':
-      case 'valueColor':
-        return HintType.color;
       default:
         return HintType.none;
     }
@@ -75,20 +84,20 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'deviceId':
-        return 'Asset Model';
-      case 'field':
-        return 'Select Field';
       case 'title':
         return 'Title';
-      case 'backgroundColor':
-        return 'Background Color';
-      case 'valueColor':
-        return 'Value Color';
-      case 'valueFont':
-        return 'Value Font';
+      case 'deviceId':
+        return 'Device Id';
+      case 'fields':
+        return 'Fields';
       case 'titleFont':
         return 'Title Font';
+      case 'labelFont':
+        return 'Label Font';
+      case 'valueFont':
+        return 'Value Font';
+      case 'dateFont':
+        return 'Date Font';
       default:
         return parameter;
     }
@@ -96,14 +105,14 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
 
   @override
   String getTooltip(String parameter) {
-    return "";
+    return '';
   }
 
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'field':
       case 'deviceId':
+      case 'fields':
         return true;
       default:
         return false;
@@ -113,10 +122,5 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
   @override
   bool isValid(String parameter, value) {
     return true;
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return {};
   }
 }
