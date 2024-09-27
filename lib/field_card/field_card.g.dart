@@ -9,58 +9,56 @@ part of 'field_card.dart';
 _$FieldCardWidgetConfigImpl _$$FieldCardWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$FieldCardWidgetConfigImpl(
-      deviceId: json['deviceId'] as String? ?? '',
-      field: json['field'] as String? ?? '',
-      image: json['image'] as String? ?? '',
-      topSectionColor: (json['topSectionColor'] as num?)?.toInt() ?? 0xFF000000,
-      bottomSectionColor:
-          (json['bottomSectionColor'] as num?)?.toInt() ?? 0xFF000000,
       title: json['title'] as String? ?? '',
-      valueFont: json['valueFont'] as Map<String, dynamic>? ??
-          const {
-            'fontFamily': 'Open Sans',
-            'fontSize': 30,
-            'fontColor': 0xFFFFFFFF,
-            'fontBold': true
-          },
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 16,
+            'fontSize': 25,
             'fontColor': 0xFF000000,
             'fontBold': false
+          },
+      deviceId: json['deviceId'] as String? ?? '',
+      field: json['field'] as String? ?? '',
+      topSectionColor: (json['topSectionColor'] as num?)?.toInt() ?? 0xFF189309,
+      bottomSectionColor:
+          (json['bottomSectionColor'] as num?)?.toInt() ?? 0XFFFFFFFF,
+      valueFont: json['valueFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 40,
+            'fontColor': 0xFFFFFFFF,
+            'fontBold': true
           },
       headingFont: json['headingFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 16,
+            'fontSize': 25,
             'fontColor': 0xFFFFFFFF,
             'fontBold': false
           },
       contentFont: json['contentFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 20,
+            'fontSize': 15,
             'fontColor': 0xFF000000,
             'fontBold': false
           },
-      width: (json['width'] as num?)?.toDouble() ?? 350,
+      width: (json['width'] as num?)?.toDouble() ?? 230,
       height: (json['height'] as num?)?.toDouble() ?? 350,
-      topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 200,
-      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 50,
+      topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 220,
+      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 100,
     );
 
 Map<String, dynamic> _$$FieldCardWidgetConfigImplToJson(
         _$FieldCardWidgetConfigImpl instance) =>
     <String, dynamic>{
+      'title': instance.title,
+      'titleFont': instance.titleFont,
       'deviceId': instance.deviceId,
       'field': instance.field,
-      'image': instance.image,
       'topSectionColor': instance.topSectionColor,
       'bottomSectionColor': instance.bottomSectionColor,
-      'title': instance.title,
       'valueFont': instance.valueFont,
-      'titleFont': instance.titleFont,
       'headingFont': instance.headingFont,
       'contentFont': instance.contentFont,
       'width': instance.width,

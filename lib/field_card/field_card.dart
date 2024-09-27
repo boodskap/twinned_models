@@ -9,44 +9,43 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
   FieldCardWidgetConfig._();
 
   factory FieldCardWidgetConfig({
-    @Default('') String deviceId,
-    @Default('') String field,
-    @Default('') String image,
-    @Default(0xFF000000) int topSectionColor,
-    @Default(0xFF000000) int bottomSectionColor,
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 30,
+      'fontSize': 25,
+      'fontColor': 0xFF000000,
+      'fontBold': false
+    })
+    Map<String, dynamic> titleFont,
+    @Default('') String deviceId,
+    @Default('') String field,
+    @Default(0xFF189309) int topSectionColor,
+    @Default(0XFFFFFFFF) int bottomSectionColor,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 40,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
-      'fontColor': 0xFF000000,
-      'fontBold': false
-    })
-    Map<String, dynamic> titleFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 25,
       'fontColor': 0xFFFFFFFF,
       'fontBold': false
     })
     Map<String, dynamic> headingFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 15,
       'fontColor': 0xFF000000,
       'fontBold': false
     })
     Map<String, dynamic> contentFont,
-    @Default(350) double width,
+    @Default(230) double width,
     @Default(350) double height,
-    @Default(200) double topSectionHeight,
-    @Default(50) double imageSize,
+    @Default(220) double topSectionHeight,
+    @Default(100) double imageSize,
   }) = _FieldCardWidgetConfig;
 
   factory FieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -72,8 +71,6 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
       case 'valueFont':
       case 'contentFont':
         return DataType.font;
-      case 'image':
-        return DataType.image;
       default:
         return DataType.none;
     }
@@ -106,8 +103,6 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
         return 'Device Id';
       case 'field':
         return 'Field';
-      case 'image':
-        return 'Image';
       case 'title':
         return 'Title';
       case 'topSectionColor':
