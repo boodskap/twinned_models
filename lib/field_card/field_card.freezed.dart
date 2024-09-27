@@ -21,23 +21,21 @@ FieldCardWidgetConfig _$FieldCardWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$FieldCardWidgetConfig {
+  String get title => throw _privateConstructorUsedError;
+  set title(String value) => throw _privateConstructorUsedError;
+  Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
+  set titleFont(Map<String, dynamic> value) =>
+      throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
-  set image(String value) => throw _privateConstructorUsedError;
   int get topSectionColor => throw _privateConstructorUsedError;
   set topSectionColor(int value) => throw _privateConstructorUsedError;
   int get bottomSectionColor => throw _privateConstructorUsedError;
   set bottomSectionColor(int value) => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
-  set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get headingFont => throw _privateConstructorUsedError;
   set headingFont(Map<String, dynamic> value) =>
@@ -67,14 +65,13 @@ abstract class $FieldCardWidgetConfigCopyWith<$Res> {
       _$FieldCardWidgetConfigCopyWithImpl<$Res, FieldCardWidgetConfig>;
   @useResult
   $Res call(
-      {String deviceId,
+      {String title,
+      Map<String, dynamic> titleFont,
+      String deviceId,
       String field,
-      String image,
       int topSectionColor,
       int bottomSectionColor,
-      String title,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> titleFont,
       Map<String, dynamic> headingFont,
       Map<String, dynamic> contentFont,
       double width,
@@ -97,14 +94,13 @@ class _$FieldCardWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? title = null,
+    Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
-    Object? image = null,
     Object? topSectionColor = null,
     Object? bottomSectionColor = null,
-    Object? title = null,
     Object? valueFont = null,
-    Object? titleFont = null,
     Object? headingFont = null,
     Object? contentFont = null,
     Object? width = null,
@@ -113,6 +109,14 @@ class _$FieldCardWidgetConfigCopyWithImpl<$Res,
     Object? imageSize = null,
   }) {
     return _then(_value.copyWith(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -120,10 +124,6 @@ class _$FieldCardWidgetConfigCopyWithImpl<$Res,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
               as String,
       topSectionColor: null == topSectionColor
           ? _value.topSectionColor
@@ -133,17 +133,9 @@ class _$FieldCardWidgetConfigCopyWithImpl<$Res,
           ? _value.bottomSectionColor
           : bottomSectionColor // ignore: cast_nullable_to_non_nullable
               as int,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      titleFont: null == titleFont
-          ? _value.titleFont
-          : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       headingFont: null == headingFont
           ? _value.headingFont
@@ -183,14 +175,13 @@ abstract class _$$FieldCardWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String deviceId,
+      {String title,
+      Map<String, dynamic> titleFont,
+      String deviceId,
       String field,
-      String image,
       int topSectionColor,
       int bottomSectionColor,
-      String title,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> titleFont,
       Map<String, dynamic> headingFont,
       Map<String, dynamic> contentFont,
       double width,
@@ -211,14 +202,13 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? title = null,
+    Object? titleFont = null,
     Object? deviceId = null,
     Object? field = null,
-    Object? image = null,
     Object? topSectionColor = null,
     Object? bottomSectionColor = null,
-    Object? title = null,
     Object? valueFont = null,
-    Object? titleFont = null,
     Object? headingFont = null,
     Object? contentFont = null,
     Object? width = null,
@@ -227,6 +217,14 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
     Object? imageSize = null,
   }) {
     return _then(_$FieldCardWidgetConfigImpl(
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      titleFont: null == titleFont
+          ? _value.titleFont
+          : titleFont // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -234,10 +232,6 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
-              as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
               as String,
       topSectionColor: null == topSectionColor
           ? _value.topSectionColor
@@ -247,17 +241,9 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.bottomSectionColor
           : bottomSectionColor // ignore: cast_nullable_to_non_nullable
               as int,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      titleFont: null == titleFont
-          ? _value.titleFont
-          : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       headingFont: null == headingFont
           ? _value.headingFont
@@ -291,45 +277,50 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
   _$FieldCardWidgetConfigImpl(
-      {this.deviceId = '',
-      this.field = '',
-      this.image = '',
-      this.topSectionColor = 0xFF000000,
-      this.bottomSectionColor = 0xFF000000,
-      this.title = '',
-      this.valueFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 30,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
+      {this.title = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': false
       },
+      this.deviceId = '',
+      this.field = '',
+      this.topSectionColor = 0xFF189309,
+      this.bottomSectionColor = 0XFFFFFFFF,
+      this.valueFont = const {
+        'fontFamily': 'Open Sans',
+        'fontSize': 40,
+        'fontColor': 0xFFFFFFFF,
+        'fontBold': true
+      },
       this.headingFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 25,
         'fontColor': 0xFFFFFFFF,
         'fontBold': false
       },
       this.contentFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 20,
+        'fontSize': 15,
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.width = 350,
+      this.width = 230,
       this.height = 350,
-      this.topSectionHeight = 200,
-      this.imageSize = 50})
+      this.topSectionHeight = 220,
+      this.imageSize = 100})
       : super._();
 
   factory _$FieldCardWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
       _$$FieldCardWidgetConfigImplFromJson(json);
 
+  @override
+  @JsonKey()
+  String title;
+  @override
+  @JsonKey()
+  Map<String, dynamic> titleFont;
   @override
   @JsonKey()
   String deviceId;
@@ -338,22 +329,13 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
   String field;
   @override
   @JsonKey()
-  String image;
-  @override
-  @JsonKey()
   int topSectionColor;
   @override
   @JsonKey()
   int bottomSectionColor;
   @override
   @JsonKey()
-  String title;
-  @override
-  @JsonKey()
   Map<String, dynamic> valueFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> titleFont;
   @override
   @JsonKey()
   Map<String, dynamic> headingFont;
@@ -375,7 +357,7 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
 
   @override
   String toString() {
-    return 'FieldCardWidgetConfig(deviceId: $deviceId, field: $field, image: $image, topSectionColor: $topSectionColor, bottomSectionColor: $bottomSectionColor, title: $title, valueFont: $valueFont, titleFont: $titleFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
+    return 'FieldCardWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, topSectionColor: $topSectionColor, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -395,14 +377,13 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
 
 abstract class _FieldCardWidgetConfig extends FieldCardWidgetConfig {
   factory _FieldCardWidgetConfig(
-      {String deviceId,
+      {String title,
+      Map<String, dynamic> titleFont,
+      String deviceId,
       String field,
-      String image,
       int topSectionColor,
       int bottomSectionColor,
-      String title,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> titleFont,
       Map<String, dynamic> headingFont,
       Map<String, dynamic> contentFont,
       double width,
@@ -415,14 +396,17 @@ abstract class _FieldCardWidgetConfig extends FieldCardWidgetConfig {
       _$FieldCardWidgetConfigImpl.fromJson;
 
   @override
+  String get title;
+  set title(String value);
+  @override
+  Map<String, dynamic> get titleFont;
+  set titleFont(Map<String, dynamic> value);
+  @override
   String get deviceId;
   set deviceId(String value);
   @override
   String get field;
   set field(String value);
-  @override
-  String get image;
-  set image(String value);
   @override
   int get topSectionColor;
   set topSectionColor(int value);
@@ -430,14 +414,8 @@ abstract class _FieldCardWidgetConfig extends FieldCardWidgetConfig {
   int get bottomSectionColor;
   set bottomSectionColor(int value);
   @override
-  String get title;
-  set title(String value);
-  @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get titleFont;
-  set titleFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get headingFont;
   set headingFont(Map<String, dynamic> value);
