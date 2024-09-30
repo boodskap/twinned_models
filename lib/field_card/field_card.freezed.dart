@@ -282,7 +282,7 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.deviceId = '',
       this.field = '',
@@ -298,13 +298,13 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFFFFFFFF,
-        'fontBold': false
+        'fontBold': true
       },
       this.contentFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 15,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.width = 230,
       this.height = 350,

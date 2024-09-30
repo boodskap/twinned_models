@@ -284,7 +284,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.modelId = '',
       this.field = const [],
@@ -299,17 +299,17 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFFFFFFFF,
-        'fontBold': false
+        'fontBold': true
       },
       this.contentFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 15,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
-      this.width = 230,
-      this.height = 350,
-      this.topSectionHeight = 220,
+      this.width = 250,
+      this.height = 400,
+      this.topSectionHeight = 250,
       this.imageSize = 100,
       this.spacing = 10})
       : super._();
