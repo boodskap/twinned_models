@@ -17,10 +17,7 @@ _$MultiFieldCardWidgetConfigImpl _$$MultiFieldCardWidgetConfigImplFromJson(
             'fontColor': 0xFF000000,
             'fontBold': false
           },
-      modelIds: (json['modelIds'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
+      modelId: json['modelId'] as String? ?? '',
       field:
           (json['field'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const [],
@@ -58,7 +55,7 @@ Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
-      'modelIds': instance.modelIds,
+      'modelId': instance.modelId,
       'field': instance.field,
       'bottomSectionColor': instance.bottomSectionColor,
       'valueFont': instance.valueFont,

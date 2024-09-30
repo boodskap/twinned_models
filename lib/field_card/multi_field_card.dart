@@ -18,7 +18,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> titleFont,
-    @Default([]) List<String> modelIds,
+    @Default('') String modelId,
     @Default([]) List<String> field,
     @Default(0XFFFFFFFF) int bottomSectionColor,
     @Default({
@@ -55,6 +55,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'title':
+      case 'modelId':
         return DataType.text;
       case 'bottomSectionColor':
         return DataType.numeric;
@@ -68,7 +69,6 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       case 'valueFont':
       case 'contentFont':
         return DataType.font;
-      case 'modelIds':
       case 'field':
         return DataType.listOfTexts;
       default:
@@ -83,7 +83,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
         return HintType.field;
       case 'bottomSectionColor':
         return HintType.color;
-      case 'modelIds':
+      case 'modelId':
         return HintType.deviceModelId;
       default:
         return HintType.none;
@@ -98,7 +98,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'modelIds':
+      case 'modelId':
         return 'Model Id';
       case 'field':
         return 'Field';
@@ -135,7 +135,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'modelIds':
+      case 'modelId':
       case 'field':
         return true;
       default:
