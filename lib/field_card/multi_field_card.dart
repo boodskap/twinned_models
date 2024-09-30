@@ -43,10 +43,9 @@ class MultiFieldCardWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> contentFont,
     @Default(250) double width,
-    @Default(400) double height,
-    @Default(250) double topSectionHeight,
-    @Default(100) double imageSize,
-    @Default(10) double spacing,
+    @Default(350) double height,
+    @Default(220) double topSectionHeight,
+    @Default(65) double imageSize,
   }) = _MultiFieldCardWidgetConfig;
 
   factory MultiFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -64,8 +63,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       case 'height':
       case 'topSectionHeight':
       case 'imageSize':
-      case 'spacing':
-        return DataType.decimal;
+     
       case 'headingFont':
       case 'titleFont':
       case 'valueFont':
@@ -124,8 +122,6 @@ class MultiFieldCardWidgetConfig extends BaseConfig
         return 'Top Section Height';
       case 'imageSize':
         return 'Image Size';
-        case 'spacing':
-        return 'Spacing';
       default:
         return parameter;
     }
