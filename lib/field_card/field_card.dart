@@ -14,7 +14,7 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
       'fontFamily': 'Open Sans',
       'fontSize': 25,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default('') String deviceId,
@@ -32,14 +32,14 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
       'fontFamily': 'Open Sans',
       'fontSize': 25,
       'fontColor': 0xFFFFFFFF,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> headingFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 15,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> contentFont,
     @Default(230) double width,

@@ -15,7 +15,7 @@ _$FieldCardWidgetConfigImpl _$$FieldCardWidgetConfigImplFromJson(
             'fontFamily': 'Open Sans',
             'fontSize': 25,
             'fontColor': 0xFF000000,
-            'fontBold': false
+            'fontBold': true
           },
       deviceId: json['deviceId'] as String? ?? '',
       field: json['field'] as String? ?? '',
@@ -34,14 +34,14 @@ _$FieldCardWidgetConfigImpl _$$FieldCardWidgetConfigImplFromJson(
             'fontFamily': 'Open Sans',
             'fontSize': 25,
             'fontColor': 0xFFFFFFFF,
-            'fontBold': false
+            'fontBold': true
           },
       contentFont: json['contentFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 15,
             'fontColor': 0xFF000000,
-            'fontBold': false
+            'fontBold': true
           },
       width: (json['width'] as num?)?.toDouble() ?? 230,
       height: (json['height'] as num?)?.toDouble() ?? 350,
