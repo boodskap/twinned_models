@@ -48,6 +48,7 @@ _$MultiFieldCardWidgetConfigImpl _$$MultiFieldCardWidgetConfigImplFromJson(
       height: (json['height'] as num?)?.toDouble() ?? 350,
       topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 220,
       imageSize: (json['imageSize'] as num?)?.toDouble() ?? 100,
+      spacing: (json['spacing'] as num?)?.toDouble() ?? 10,
     );
 
 Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(
@@ -65,4 +66,5 @@ Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(
       'height': instance.height,
       'topSectionHeight': instance.topSectionHeight,
       'imageSize': instance.imageSize,
+      'spacing': instance.spacing,
     };
