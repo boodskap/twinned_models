@@ -63,7 +63,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       case 'height':
       case 'topSectionHeight':
       case 'imageSize':
-     
+        return DataType.decimal;
       case 'headingFont':
       case 'titleFont':
       case 'valueFont':
