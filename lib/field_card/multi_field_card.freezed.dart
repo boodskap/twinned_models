@@ -49,8 +49,6 @@ mixin _$MultiFieldCardWidgetConfig {
   set topSectionHeight(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
-  double get spacing => throw _privateConstructorUsedError;
-  set spacing(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -77,8 +75,7 @@ abstract class $MultiFieldCardWidgetConfigCopyWith<$Res> {
       double width,
       double height,
       double topSectionHeight,
-      double imageSize,
-      double spacing});
+      double imageSize});
 }
 
 /// @nodoc
@@ -107,7 +104,6 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
     Object? height = null,
     Object? topSectionHeight = null,
     Object? imageSize = null,
-    Object? spacing = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -158,10 +154,6 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
           ? _value.imageSize
           : imageSize // ignore: cast_nullable_to_non_nullable
               as double,
-      spacing: null == spacing
-          ? _value.spacing
-          : spacing // ignore: cast_nullable_to_non_nullable
-              as double,
     ) as $Val);
   }
 }
@@ -187,8 +179,7 @@ abstract class _$$MultiFieldCardWidgetConfigImplCopyWith<$Res>
       double width,
       double height,
       double topSectionHeight,
-      double imageSize,
-      double spacing});
+      double imageSize});
 }
 
 /// @nodoc
@@ -216,7 +207,6 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
     Object? height = null,
     Object? topSectionHeight = null,
     Object? imageSize = null,
-    Object? spacing = null,
   }) {
     return _then(_$MultiFieldCardWidgetConfigImpl(
       title: null == title
@@ -267,10 +257,6 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.imageSize
           : imageSize // ignore: cast_nullable_to_non_nullable
               as double,
-      spacing: null == spacing
-          ? _value.spacing
-          : spacing // ignore: cast_nullable_to_non_nullable
-              as double,
     ));
   }
 }
@@ -308,10 +294,9 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontBold': true
       },
       this.width = 250,
-      this.height = 400,
-      this.topSectionHeight = 250,
-      this.imageSize = 100,
-      this.spacing = 10})
+      this.height = 350,
+      this.topSectionHeight = 220,
+      this.imageSize = 65})
       : super._();
 
   factory _$MultiFieldCardWidgetConfigImpl.fromJson(
@@ -354,13 +339,10 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
   @override
   @JsonKey()
   double imageSize;
-  @override
-  @JsonKey()
-  double spacing;
 
   @override
   String toString() {
-    return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelId: $modelId, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize, spacing: $spacing)';
+    return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelId: $modelId, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -391,8 +373,7 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
       double width,
       double height,
       double topSectionHeight,
-      double imageSize,
-      double spacing}) = _$MultiFieldCardWidgetConfigImpl;
+      double imageSize}) = _$MultiFieldCardWidgetConfigImpl;
   _MultiFieldCardWidgetConfig._() : super._();
 
   factory _MultiFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -434,9 +415,6 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
   @override
   double get imageSize;
   set imageSize(double value);
-  @override
-  double get spacing;
-  set spacing(double value);
   @override
   @JsonKey(ignore: true)
   _$$MultiFieldCardWidgetConfigImplCopyWith<_$MultiFieldCardWidgetConfigImpl>
