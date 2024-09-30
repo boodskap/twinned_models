@@ -26,8 +26,8 @@ mixin _$MultiFieldCardWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  List<String> get modelIds => throw _privateConstructorUsedError;
-  set modelIds(List<String> value) => throw _privateConstructorUsedError;
+  String get modelId => throw _privateConstructorUsedError;
+  set modelId(String value) => throw _privateConstructorUsedError;
   List<String> get field => throw _privateConstructorUsedError;
   set field(List<String> value) => throw _privateConstructorUsedError;
   int get bottomSectionColor => throw _privateConstructorUsedError;
@@ -66,7 +66,7 @@ abstract class $MultiFieldCardWidgetConfigCopyWith<$Res> {
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
-      List<String> modelIds,
+      String modelId,
       List<String> field,
       int bottomSectionColor,
       Map<String, dynamic> valueFont,
@@ -94,7 +94,7 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? title = null,
     Object? titleFont = null,
-    Object? modelIds = null,
+    Object? modelId = null,
     Object? field = null,
     Object? bottomSectionColor = null,
     Object? valueFont = null,
@@ -114,10 +114,10 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      modelIds: null == modelIds
-          ? _value.modelIds
-          : modelIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      modelId: null == modelId
+          ? _value.modelId
+          : modelId // ignore: cast_nullable_to_non_nullable
+              as String,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -170,7 +170,7 @@ abstract class _$$MultiFieldCardWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String title,
       Map<String, dynamic> titleFont,
-      List<String> modelIds,
+      String modelId,
       List<String> field,
       int bottomSectionColor,
       Map<String, dynamic> valueFont,
@@ -197,7 +197,7 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? titleFont = null,
-    Object? modelIds = null,
+    Object? modelId = null,
     Object? field = null,
     Object? bottomSectionColor = null,
     Object? valueFont = null,
@@ -217,10 +217,10 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      modelIds: null == modelIds
-          ? _value.modelIds
-          : modelIds // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      modelId: null == modelId
+          ? _value.modelId
+          : modelId // ignore: cast_nullable_to_non_nullable
+              as String,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -272,7 +272,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.modelIds = const [],
+      this.modelId = '',
       this.field = const [],
       this.bottomSectionColor = 0XFFFFFFFF,
       this.valueFont = const {
@@ -311,7 +311,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
-  List<String> modelIds;
+  String modelId;
   @override
   @JsonKey()
   List<String> field;
@@ -342,7 +342,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
 
   @override
   String toString() {
-    return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelIds: $modelIds, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
+    return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelId: $modelId, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -364,7 +364,7 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
   factory _MultiFieldCardWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
-      List<String> modelIds,
+      String modelId,
       List<String> field,
       int bottomSectionColor,
       Map<String, dynamic> valueFont,
@@ -386,8 +386,8 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
-  List<String> get modelIds;
-  set modelIds(List<String> value);
+  String get modelId;
+  set modelId(String value);
   @override
   List<String> get field;
   set field(List<String> value);
