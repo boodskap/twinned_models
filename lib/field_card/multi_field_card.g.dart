@@ -45,10 +45,9 @@ _$MultiFieldCardWidgetConfigImpl _$$MultiFieldCardWidgetConfigImplFromJson(
             'fontBold': true
           },
       width: (json['width'] as num?)?.toDouble() ?? 250,
-      height: (json['height'] as num?)?.toDouble() ?? 400,
-      topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 250,
-      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 100,
-      spacing: (json['spacing'] as num?)?.toDouble() ?? 10,
+      height: (json['height'] as num?)?.toDouble() ?? 350,
+      topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 220,
+      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 65,
     );
 
 Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(
@@ -66,5 +65,4 @@ Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(
       'height': instance.height,
       'topSectionHeight': instance.topSectionHeight,
       'imageSize': instance.imageSize,
-      'spacing': instance.spacing,
     };
