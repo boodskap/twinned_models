@@ -273,7 +273,7 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
         'fontBold': true
       },
       this.width = 500,
-      this.height = 500,
+      this.height = 350,
       this.deviceId = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
