@@ -18,7 +18,7 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
     })
     Map<String, dynamic> titleFont,
     @Default(500) double width,
-    @Default(500) double height,
+    @Default(350) double height,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
