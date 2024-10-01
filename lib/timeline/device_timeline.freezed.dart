@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-DeviceTimelineConfig _$DeviceTimelineConfigFromJson(Map<String, dynamic> json) {
-  return _DeviceTimelineConfig.fromJson(json);
+DeviceTimelineWidgetConfig _$DeviceTimelineWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _DeviceTimelineWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DeviceTimelineConfig {
+mixin _$DeviceTimelineWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -49,15 +50,16 @@ mixin _$DeviceTimelineConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceTimelineConfigCopyWith<DeviceTimelineConfig> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeviceTimelineWidgetConfigCopyWith<DeviceTimelineWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeviceTimelineConfigCopyWith<$Res> {
-  factory $DeviceTimelineConfigCopyWith(DeviceTimelineConfig value,
-          $Res Function(DeviceTimelineConfig) then) =
-      _$DeviceTimelineConfigCopyWithImpl<$Res, DeviceTimelineConfig>;
+abstract class $DeviceTimelineWidgetConfigCopyWith<$Res> {
+  factory $DeviceTimelineWidgetConfigCopyWith(DeviceTimelineWidgetConfig value,
+          $Res Function(DeviceTimelineWidgetConfig) then) =
+      _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
+          DeviceTimelineWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -74,10 +76,10 @@ abstract class $DeviceTimelineConfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceTimelineConfigCopyWithImpl<$Res,
-        $Val extends DeviceTimelineConfig>
-    implements $DeviceTimelineConfigCopyWith<$Res> {
-  _$DeviceTimelineConfigCopyWithImpl(this._value, this._then);
+class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceTimelineWidgetConfig>
+    implements $DeviceTimelineWidgetConfigCopyWith<$Res> {
+  _$DeviceTimelineWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -149,11 +151,12 @@ class _$DeviceTimelineConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$DeviceTimelineConfigImplCopyWith<$Res>
-    implements $DeviceTimelineConfigCopyWith<$Res> {
-  factory _$$DeviceTimelineConfigImplCopyWith(_$DeviceTimelineConfigImpl value,
-          $Res Function(_$DeviceTimelineConfigImpl) then) =
-      __$$DeviceTimelineConfigImplCopyWithImpl<$Res>;
+abstract class _$$DeviceTimelineWidgetConfigImplCopyWith<$Res>
+    implements $DeviceTimelineWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceTimelineWidgetConfigImplCopyWith(
+          _$DeviceTimelineWidgetConfigImpl value,
+          $Res Function(_$DeviceTimelineWidgetConfigImpl) then) =
+      __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -171,11 +174,13 @@ abstract class _$$DeviceTimelineConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$DeviceTimelineConfigImplCopyWithImpl<$Res>
-    extends _$DeviceTimelineConfigCopyWithImpl<$Res, _$DeviceTimelineConfigImpl>
-    implements _$$DeviceTimelineConfigImplCopyWith<$Res> {
-  __$$DeviceTimelineConfigImplCopyWithImpl(_$DeviceTimelineConfigImpl _value,
-      $Res Function(_$DeviceTimelineConfigImpl) _then)
+class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
+        _$DeviceTimelineWidgetConfigImpl>
+    implements _$$DeviceTimelineWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceTimelineWidgetConfigImplCopyWithImpl(
+      _$DeviceTimelineWidgetConfigImpl _value,
+      $Res Function(_$DeviceTimelineWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -193,7 +198,7 @@ class __$$DeviceTimelineConfigImplCopyWithImpl<$Res>
     Object? imageSize = null,
     Object? opacity = null,
   }) {
-    return _then(_$DeviceTimelineConfigImpl(
+    return _then(_$DeviceTimelineWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -244,8 +249,8 @@ class __$$DeviceTimelineConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$DeviceTimelineConfigImpl extends _DeviceTimelineConfig {
-  _$DeviceTimelineConfigImpl(
+class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
+  _$DeviceTimelineWidgetConfigImpl(
       {this.title = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -279,8 +284,9 @@ class _$DeviceTimelineConfigImpl extends _DeviceTimelineConfig {
       this.opacity = 0.4})
       : super._();
 
-  factory _$DeviceTimelineConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeviceTimelineConfigImplFromJson(json);
+  factory _$DeviceTimelineWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DeviceTimelineWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -318,27 +324,26 @@ class _$DeviceTimelineConfigImpl extends _DeviceTimelineConfig {
 
   @override
   String toString() {
-    return 'DeviceTimelineConfig(title: $title, titleFont: $titleFont, width: $width, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
+    return 'DeviceTimelineWidgetConfig(title: $title, titleFont: $titleFont, width: $width, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeviceTimelineConfigImplCopyWith<_$DeviceTimelineConfigImpl>
-      get copyWith =>
-          __$$DeviceTimelineConfigImplCopyWithImpl<_$DeviceTimelineConfigImpl>(
-              this, _$identity);
+  _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
+      get copyWith => __$$DeviceTimelineWidgetConfigImplCopyWithImpl<
+          _$DeviceTimelineWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeviceTimelineConfigImplToJson(
+    return _$$DeviceTimelineWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _DeviceTimelineConfig extends DeviceTimelineConfig {
-  factory _DeviceTimelineConfig(
+abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
+  factory _DeviceTimelineWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       double width,
@@ -349,11 +354,11 @@ abstract class _DeviceTimelineConfig extends DeviceTimelineConfig {
       Map<String, dynamic> indicatorFont,
       double borderWidth,
       double imageSize,
-      double opacity}) = _$DeviceTimelineConfigImpl;
-  _DeviceTimelineConfig._() : super._();
+      double opacity}) = _$DeviceTimelineWidgetConfigImpl;
+  _DeviceTimelineWidgetConfig._() : super._();
 
-  factory _DeviceTimelineConfig.fromJson(Map<String, dynamic> json) =
-      _$DeviceTimelineConfigImpl.fromJson;
+  factory _DeviceTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$DeviceTimelineWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -390,6 +395,6 @@ abstract class _DeviceTimelineConfig extends DeviceTimelineConfig {
   set opacity(double value);
   @override
   @JsonKey(ignore: true)
-  _$$DeviceTimelineConfigImplCopyWith<_$DeviceTimelineConfigImpl>
+  _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
