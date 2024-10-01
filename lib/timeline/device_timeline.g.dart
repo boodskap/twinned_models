@@ -6,9 +6,9 @@ part of 'device_timeline.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeviceTimelineConfigImpl _$$DeviceTimelineConfigImplFromJson(
+_$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
-    _$DeviceTimelineConfigImpl(
+    _$DeviceTimelineWidgetConfigImpl(
       title: json['title'] as String? ?? '',
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
@@ -46,8 +46,8 @@ _$DeviceTimelineConfigImpl _$$DeviceTimelineConfigImplFromJson(
       opacity: (json['opacity'] as num?)?.toDouble() ?? 0.4,
     );
 
-Map<String, dynamic> _$$DeviceTimelineConfigImplToJson(
-        _$DeviceTimelineConfigImpl instance) =>
+Map<String, dynamic> _$$DeviceTimelineWidgetConfigImplToJson(
+        _$DeviceTimelineWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,

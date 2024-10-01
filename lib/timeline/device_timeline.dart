@@ -5,10 +5,10 @@ part 'device_timeline.freezed.dart';
 part 'device_timeline.g.dart';
 
 @unfreezed
-class DeviceTimelineConfig extends BaseConfig with _$DeviceTimelineConfig {
-  DeviceTimelineConfig._();
+class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetConfig {
+  DeviceTimelineWidgetConfig._();
 
-  factory DeviceTimelineConfig({
+  factory DeviceTimelineWidgetConfig({
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
@@ -44,10 +44,10 @@ class DeviceTimelineConfig extends BaseConfig with _$DeviceTimelineConfig {
     @Default(2) double borderWidth,
     @Default(25) double imageSize,
     @Default(0.4) double opacity,
-  }) = _DeviceTimelineConfig;
+  }) = _DeviceTimelineWidgetConfig;
 
-  factory DeviceTimelineConfig.fromJson(Map<String, dynamic> json) =>
-      _$DeviceTimelineConfigFromJson(json);
+  factory DeviceTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$DeviceTimelineWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
