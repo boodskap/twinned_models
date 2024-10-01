@@ -18,7 +18,7 @@ _$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
             'fontBold': true
           },
       width: (json['width'] as num?)?.toDouble() ?? 500,
-      height: (json['height'] as num?)?.toDouble() ?? 500,
+      height: (json['height'] as num?)?.toDouble() ?? 350,
       deviceId: json['deviceId'] as String? ?? '',
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
