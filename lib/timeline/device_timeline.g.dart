@@ -13,31 +13,32 @@ _$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 25,
+            'fontSize': 20,
             'fontColor': 0xFF000000,
             'fontBold': true
           },
-      width: (json['width'] as num?)?.toDouble() ?? 230,
+      width: (json['width'] as num?)?.toDouble() ?? 500,
+      height: (json['height'] as num?)?.toDouble() ?? 500,
       deviceId: json['deviceId'] as String? ?? '',
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 40,
+            'fontSize': 18,
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
       contentFont: json['contentFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 15,
+            'fontSize': 14,
             'fontColor': 0xFF000000,
-            'fontBold': true
+            'fontBold': false
           },
       indicatorColor: (json['indicatorColor'] as num?)?.toInt() ?? 0XFFC41E3A,
       indicatorFont: json['indicatorFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 25,
+            'fontSize': 15,
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
@@ -52,6 +53,7 @@ Map<String, dynamic> _$$DeviceTimelineWidgetConfigImplToJson(
       'title': instance.title,
       'titleFont': instance.titleFont,
       'width': instance.width,
+      'height': instance.height,
       'deviceId': instance.deviceId,
       'labelFont': instance.labelFont,
       'contentFont': instance.contentFont,

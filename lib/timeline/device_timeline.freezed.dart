@@ -28,6 +28,8 @@ mixin _$DeviceTimelineWidgetConfig {
       throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   set width(double value) => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  set height(double value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
@@ -65,6 +67,7 @@ abstract class $DeviceTimelineWidgetConfigCopyWith<$Res> {
       {String title,
       Map<String, dynamic> titleFont,
       double width,
+      double height,
       String deviceId,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> contentFont,
@@ -92,6 +95,7 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? titleFont = null,
     Object? width = null,
+    Object? height = null,
     Object? deviceId = null,
     Object? labelFont = null,
     Object? contentFont = null,
@@ -113,6 +117,10 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
               as double,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -163,6 +171,7 @@ abstract class _$$DeviceTimelineWidgetConfigImplCopyWith<$Res>
       {String title,
       Map<String, dynamic> titleFont,
       double width,
+      double height,
       String deviceId,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> contentFont,
@@ -189,6 +198,7 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? titleFont = null,
     Object? width = null,
+    Object? height = null,
     Object? deviceId = null,
     Object? labelFont = null,
     Object? contentFont = null,
@@ -210,6 +220,10 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
       width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
+              as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
               as double,
       deviceId: null == deviceId
           ? _value.deviceId
@@ -254,28 +268,29 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
       {this.title = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
+        'fontSize': 20,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.width = 230,
+      this.width = 500,
+      this.height = 500,
       this.deviceId = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 40,
+        'fontSize': 18,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
       this.contentFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 15,
+        'fontSize': 14,
         'fontColor': 0xFF000000,
-        'fontBold': true
+        'fontBold': false
       },
       this.indicatorColor = 0XFFC41E3A,
       this.indicatorFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 25,
+        'fontSize': 15,
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
@@ -297,6 +312,9 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
   @override
   @JsonKey()
   double width;
+  @override
+  @JsonKey()
+  double height;
   @override
   @JsonKey()
   String deviceId;
@@ -324,7 +342,7 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
 
   @override
   String toString() {
-    return 'DeviceTimelineWidgetConfig(title: $title, titleFont: $titleFont, width: $width, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
+    return 'DeviceTimelineWidgetConfig(title: $title, titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
   }
 
   @JsonKey(ignore: true)
@@ -347,6 +365,7 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
       {String title,
       Map<String, dynamic> titleFont,
       double width,
+      double height,
       String deviceId,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> contentFont,
@@ -369,6 +388,9 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   @override
   double get width;
   set width(double value);
+  @override
+  double get height;
+  set height(double value);
   @override
   String get deviceId;
   set deviceId(String value);

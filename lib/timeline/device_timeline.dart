@@ -12,31 +12,32 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
     @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 20,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default(230) double width,
+    @Default(500) double width,
+    @Default(500) double height,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 40,
+      'fontSize': 18,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 15,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
-      'fontBold': true
+      'fontBold': false
     })
     Map<String, dynamic> contentFont,
     @Default(0XFFC41E3A) int indicatorColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 15,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
@@ -58,6 +59,7 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
       case 'indicatorColor':
         return DataType.numeric;
       case 'width':
+      case 'height':
       case 'borderWidth':
       case 'opacity':
       case 'imageSize':
@@ -100,6 +102,8 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
         return 'Indicator Color';
       case 'width':
         return 'Width';
+        case 'height':
+        return 'Height';
       case 'borderWidth':
         return 'Border Width';
       case 'opacity':
