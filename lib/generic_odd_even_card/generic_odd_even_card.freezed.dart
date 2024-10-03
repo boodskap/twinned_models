@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_air_quality_circle.dart';
+part of 'generic_odd_even_card.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericAirQualityCircleWidgetConfig
-    _$GenericAirQualityCircleWidgetConfigFromJson(Map<String, dynamic> json) {
-  return _GenericAirQualityCircleWidgetConfig.fromJson(json);
+GenericOddEvenCardWidgetConfig _$GenericOddEvenCardWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _GenericOddEvenCardWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericAirQualityCircleWidgetConfig {
+mixin _$GenericOddEvenCardWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -33,13 +33,6 @@ mixin _$GenericAirQualityCircleWidgetConfig {
       throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
-  String get mainText => throw _privateConstructorUsedError;
-  set mainText(String value) => throw _privateConstructorUsedError;
-  String get mainField => throw _privateConstructorUsedError;
-  set mainField(String value) => throw _privateConstructorUsedError;
-  Map<String, dynamic> get mainTextFont => throw _privateConstructorUsedError;
-  set mainTextFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
   Map<String, dynamic> get prefixFont => throw _privateConstructorUsedError;
   set prefixFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -58,44 +51,36 @@ mixin _$GenericAirQualityCircleWidgetConfig {
   Map<String, dynamic> get valueMainFont => throw _privateConstructorUsedError;
   set valueMainFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  double get activeCircleRadius => throw _privateConstructorUsedError;
-  set activeCircleRadius(double value) => throw _privateConstructorUsedError;
-  int get activeCircleBGColor => throw _privateConstructorUsedError;
-  set activeCircleBGColor(int value) => throw _privateConstructorUsedError;
-  int get activeCircleBorderColor => throw _privateConstructorUsedError;
-  set activeCircleBorderColor(int value) => throw _privateConstructorUsedError;
-  double get inactiveCircleRadius => throw _privateConstructorUsedError;
-  set inactiveCircleRadius(double value) => throw _privateConstructorUsedError;
-  int get inactiveCircleBGColor => throw _privateConstructorUsedError;
-  set inactiveCircleBGColor(int value) => throw _privateConstructorUsedError;
-  int get inactiveCircleBorderColor => throw _privateConstructorUsedError;
-  set inactiveCircleBorderColor(int value) =>
-      throw _privateConstructorUsedError;
+  double get oddCardElevation => throw _privateConstructorUsedError;
+  set oddCardElevation(double value) => throw _privateConstructorUsedError;
+  int get oddCardBGColor => throw _privateConstructorUsedError;
+  set oddCardBGColor(int value) => throw _privateConstructorUsedError;
+  double get evenCardElevation => throw _privateConstructorUsedError;
+  set evenCardElevation(double value) => throw _privateConstructorUsedError;
+  int get evenCardBGColor => throw _privateConstructorUsedError;
+  set evenCardBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
-  double get verticalSpacing => throw _privateConstructorUsedError;
-  set verticalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericAirQualityCircleWidgetConfig to a JSON map.
+  /// Serializes this GenericOddEvenCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
+  /// Create a copy of GenericOddEvenCardWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenericAirQualityCircleWidgetConfigCopyWith<
-          GenericAirQualityCircleWidgetConfig>
+  $GenericOddEvenCardWidgetConfigCopyWith<GenericOddEvenCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
-  factory $GenericAirQualityCircleWidgetConfigCopyWith(
-          GenericAirQualityCircleWidgetConfig value,
-          $Res Function(GenericAirQualityCircleWidgetConfig) then) =
-      _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
-          GenericAirQualityCircleWidgetConfig>;
+abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
+  factory $GenericOddEvenCardWidgetConfigCopyWith(
+          GenericOddEvenCardWidgetConfig value,
+          $Res Function(GenericOddEvenCardWidgetConfig) then) =
+      _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
+          GenericOddEvenCardWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -103,38 +88,32 @@ abstract class $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
       String subTitle,
       Map<String, dynamic> subTitleFont,
       String deviceId,
-      String mainText,
-      String mainField,
-      Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double activeCircleRadius,
-      int activeCircleBGColor,
-      int activeCircleBorderColor,
-      double inactiveCircleRadius,
-      int inactiveCircleBGColor,
-      int inactiveCircleBorderColor,
+      double oddCardElevation,
+      int oddCardBGColor,
+      double evenCardElevation,
+      int evenCardBGColor,
       double horizontalSpacing,
-      double verticalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericAirQualityCircleWidgetConfig>
-    implements $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
-  _$GenericAirQualityCircleWidgetConfigCopyWithImpl(this._value, this._then);
+class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
+        $Val extends GenericOddEvenCardWidgetConfig>
+    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
+  _$GenericOddEvenCardWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
+  /// Create a copy of GenericOddEvenCardWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -144,23 +123,17 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
     Object? subTitle = null,
     Object? subTitleFont = null,
     Object? deviceId = null,
-    Object? mainText = null,
-    Object? mainField = null,
-    Object? mainTextFont = null,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? prefixMainFont = null,
     Object? suffixMainFont = null,
     Object? valueMainFont = null,
-    Object? activeCircleRadius = null,
-    Object? activeCircleBGColor = null,
-    Object? activeCircleBorderColor = null,
-    Object? inactiveCircleRadius = null,
-    Object? inactiveCircleBGColor = null,
-    Object? inactiveCircleBorderColor = null,
+    Object? oddCardElevation = null,
+    Object? oddCardBGColor = null,
+    Object? evenCardElevation = null,
+    Object? evenCardBGColor = null,
     Object? horizontalSpacing = null,
-    Object? verticalSpacing = null,
     Object? imageSize = null,
   }) {
     return _then(_value.copyWith(
@@ -184,18 +157,6 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      mainText: null == mainText
-          ? _value.mainText
-          : mainText // ignore: cast_nullable_to_non_nullable
-              as String,
-      mainField: null == mainField
-          ? _value.mainField
-          : mainField // ignore: cast_nullable_to_non_nullable
-              as String,
-      mainTextFont: null == mainTextFont
-          ? _value.mainTextFont
-          : mainTextFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
       prefixFont: null == prefixFont
           ? _value.prefixFont
           : prefixFont // ignore: cast_nullable_to_non_nullable
@@ -220,37 +181,25 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
           ? _value.valueMainFont
           : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      activeCircleRadius: null == activeCircleRadius
-          ? _value.activeCircleRadius
-          : activeCircleRadius // ignore: cast_nullable_to_non_nullable
+      oddCardElevation: null == oddCardElevation
+          ? _value.oddCardElevation
+          : oddCardElevation // ignore: cast_nullable_to_non_nullable
               as double,
-      activeCircleBGColor: null == activeCircleBGColor
-          ? _value.activeCircleBGColor
-          : activeCircleBGColor // ignore: cast_nullable_to_non_nullable
+      oddCardBGColor: null == oddCardBGColor
+          ? _value.oddCardBGColor
+          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      activeCircleBorderColor: null == activeCircleBorderColor
-          ? _value.activeCircleBorderColor
-          : activeCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      inactiveCircleRadius: null == inactiveCircleRadius
-          ? _value.inactiveCircleRadius
-          : inactiveCircleRadius // ignore: cast_nullable_to_non_nullable
+      evenCardElevation: null == evenCardElevation
+          ? _value.evenCardElevation
+          : evenCardElevation // ignore: cast_nullable_to_non_nullable
               as double,
-      inactiveCircleBGColor: null == inactiveCircleBGColor
-          ? _value.inactiveCircleBGColor
-          : inactiveCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      inactiveCircleBorderColor: null == inactiveCircleBorderColor
-          ? _value.inactiveCircleBorderColor
-          : inactiveCircleBorderColor // ignore: cast_nullable_to_non_nullable
+      evenCardBGColor: null == evenCardBGColor
+          ? _value.evenCardBGColor
+          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
           : horizontalSpacing // ignore: cast_nullable_to_non_nullable
-              as double,
-      verticalSpacing: null == verticalSpacing
-          ? _value.verticalSpacing
-          : verticalSpacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -261,12 +210,12 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericAirQualityCircleWidgetConfigImplCopyWith<$Res>
-    implements $GenericAirQualityCircleWidgetConfigCopyWith<$Res> {
-  factory _$$GenericAirQualityCircleWidgetConfigImplCopyWith(
-          _$GenericAirQualityCircleWidgetConfigImpl value,
-          $Res Function(_$GenericAirQualityCircleWidgetConfigImpl) then) =
-      __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
+    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
+  factory _$$GenericOddEvenCardWidgetConfigImplCopyWith(
+          _$GenericOddEvenCardWidgetConfigImpl value,
+          $Res Function(_$GenericOddEvenCardWidgetConfigImpl) then) =
+      __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -275,37 +224,31 @@ abstract class _$$GenericAirQualityCircleWidgetConfigImplCopyWith<$Res>
       String subTitle,
       Map<String, dynamic> subTitleFont,
       String deviceId,
-      String mainText,
-      String mainField,
-      Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double activeCircleRadius,
-      int activeCircleBGColor,
-      int activeCircleBorderColor,
-      double inactiveCircleRadius,
-      int inactiveCircleBGColor,
-      int inactiveCircleBorderColor,
+      double oddCardElevation,
+      int oddCardBGColor,
+      double evenCardElevation,
+      int evenCardBGColor,
       double horizontalSpacing,
-      double verticalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
-        _$GenericAirQualityCircleWidgetConfigImpl>
-    implements _$$GenericAirQualityCircleWidgetConfigImplCopyWith<$Res> {
-  __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl(
-      _$GenericAirQualityCircleWidgetConfigImpl _value,
-      $Res Function(_$GenericAirQualityCircleWidgetConfigImpl) _then)
+class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
+    extends _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
+        _$GenericOddEvenCardWidgetConfigImpl>
+    implements _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res> {
+  __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl(
+      _$GenericOddEvenCardWidgetConfigImpl _value,
+      $Res Function(_$GenericOddEvenCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
+  /// Create a copy of GenericOddEvenCardWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -315,26 +258,20 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
     Object? subTitle = null,
     Object? subTitleFont = null,
     Object? deviceId = null,
-    Object? mainText = null,
-    Object? mainField = null,
-    Object? mainTextFont = null,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? prefixMainFont = null,
     Object? suffixMainFont = null,
     Object? valueMainFont = null,
-    Object? activeCircleRadius = null,
-    Object? activeCircleBGColor = null,
-    Object? activeCircleBorderColor = null,
-    Object? inactiveCircleRadius = null,
-    Object? inactiveCircleBGColor = null,
-    Object? inactiveCircleBorderColor = null,
+    Object? oddCardElevation = null,
+    Object? oddCardBGColor = null,
+    Object? evenCardElevation = null,
+    Object? evenCardBGColor = null,
     Object? horizontalSpacing = null,
-    Object? verticalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericAirQualityCircleWidgetConfigImpl(
+    return _then(_$GenericOddEvenCardWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -355,18 +292,6 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      mainText: null == mainText
-          ? _value.mainText
-          : mainText // ignore: cast_nullable_to_non_nullable
-              as String,
-      mainField: null == mainField
-          ? _value.mainField
-          : mainField // ignore: cast_nullable_to_non_nullable
-              as String,
-      mainTextFont: null == mainTextFont
-          ? _value.mainTextFont
-          : mainTextFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
       prefixFont: null == prefixFont
           ? _value.prefixFont
           : prefixFont // ignore: cast_nullable_to_non_nullable
@@ -391,37 +316,25 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueMainFont
           : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      activeCircleRadius: null == activeCircleRadius
-          ? _value.activeCircleRadius
-          : activeCircleRadius // ignore: cast_nullable_to_non_nullable
+      oddCardElevation: null == oddCardElevation
+          ? _value.oddCardElevation
+          : oddCardElevation // ignore: cast_nullable_to_non_nullable
               as double,
-      activeCircleBGColor: null == activeCircleBGColor
-          ? _value.activeCircleBGColor
-          : activeCircleBGColor // ignore: cast_nullable_to_non_nullable
+      oddCardBGColor: null == oddCardBGColor
+          ? _value.oddCardBGColor
+          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      activeCircleBorderColor: null == activeCircleBorderColor
-          ? _value.activeCircleBorderColor
-          : activeCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      inactiveCircleRadius: null == inactiveCircleRadius
-          ? _value.inactiveCircleRadius
-          : inactiveCircleRadius // ignore: cast_nullable_to_non_nullable
+      evenCardElevation: null == evenCardElevation
+          ? _value.evenCardElevation
+          : evenCardElevation // ignore: cast_nullable_to_non_nullable
               as double,
-      inactiveCircleBGColor: null == inactiveCircleBGColor
-          ? _value.inactiveCircleBGColor
-          : inactiveCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      inactiveCircleBorderColor: null == inactiveCircleBorderColor
-          ? _value.inactiveCircleBorderColor
-          : inactiveCircleBorderColor // ignore: cast_nullable_to_non_nullable
+      evenCardBGColor: null == evenCardBGColor
+          ? _value.evenCardBGColor
+          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
           : horizontalSpacing // ignore: cast_nullable_to_non_nullable
-              as double,
-      verticalSpacing: null == verticalSpacing
-          ? _value.verticalSpacing
-          : verticalSpacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -433,17 +346,17 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericAirQualityCircleWidgetConfigImpl
-    extends _GenericAirQualityCircleWidgetConfig {
-  _$GenericAirQualityCircleWidgetConfigImpl(
-      {this.title = 'Air Quality Monitoring',
+class _$GenericOddEvenCardWidgetConfigImpl
+    extends _GenericOddEvenCardWidgetConfig {
+  _$GenericOddEvenCardWidgetConfigImpl(
+      {this.title = 'Generic Odd Even Card',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.subTitle = 'WHAT AM  I BREATHING RIGHT NOW',
+      this.subTitle = 'Check My Device Data here!',
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -451,14 +364,6 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontBold': false
       },
       this.deviceId = '',
-      this.mainText = '',
-      this.mainField = '',
-      this.mainTextFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 11,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': false
-      },
       this.prefixFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 12,
@@ -495,20 +400,17 @@ class _$GenericAirQualityCircleWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.activeCircleRadius = 60,
-      this.activeCircleBGColor = 0XFFbbdb44,
-      this.activeCircleBorderColor = 0XFFbbdb44,
-      this.inactiveCircleRadius = 50,
-      this.inactiveCircleBGColor = 0XFFbcf766,
-      this.inactiveCircleBorderColor = 0XFFbcf766,
+      this.oddCardElevation = 60,
+      this.oddCardBGColor = 0XFFbbdb44,
+      this.evenCardElevation = 50,
+      this.evenCardBGColor = 0XFFbcf766,
       this.horizontalSpacing = 5,
-      this.verticalSpacing = 20,
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericAirQualityCircleWidgetConfigImpl.fromJson(
+  factory _$GenericOddEvenCardWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$GenericAirQualityCircleWidgetConfigImplFromJson(json);
+      _$$GenericOddEvenCardWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -525,15 +427,6 @@ class _$GenericAirQualityCircleWidgetConfigImpl
   @override
   @JsonKey()
   String deviceId;
-  @override
-  @JsonKey()
-  String mainText;
-  @override
-  @JsonKey()
-  String mainField;
-  @override
-  @JsonKey()
-  Map<String, dynamic> mainTextFont;
   @override
   @JsonKey()
   Map<String, dynamic> prefixFont;
@@ -554,86 +447,70 @@ class _$GenericAirQualityCircleWidgetConfigImpl
   Map<String, dynamic> valueMainFont;
   @override
   @JsonKey()
-  double activeCircleRadius;
+  double oddCardElevation;
   @override
   @JsonKey()
-  int activeCircleBGColor;
+  int oddCardBGColor;
   @override
   @JsonKey()
-  int activeCircleBorderColor;
+  double evenCardElevation;
   @override
   @JsonKey()
-  double inactiveCircleRadius;
-  @override
-  @JsonKey()
-  int inactiveCircleBGColor;
-  @override
-  @JsonKey()
-  int inactiveCircleBorderColor;
+  int evenCardBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
-  @override
-  @JsonKey()
-  double verticalSpacing;
   @override
   @JsonKey()
   double imageSize;
 
   @override
   String toString() {
-    return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, mainText: $mainText, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
+  /// Create a copy of GenericOddEvenCardWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericAirQualityCircleWidgetConfigImplCopyWith<
-          _$GenericAirQualityCircleWidgetConfigImpl>
-      get copyWith => __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<
-          _$GenericAirQualityCircleWidgetConfigImpl>(this, _$identity);
+  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
+          _$GenericOddEvenCardWidgetConfigImpl>
+      get copyWith => __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<
+          _$GenericOddEvenCardWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericAirQualityCircleWidgetConfigImplToJson(
+    return _$$GenericOddEvenCardWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericAirQualityCircleWidgetConfig
-    extends GenericAirQualityCircleWidgetConfig {
-  factory _GenericAirQualityCircleWidgetConfig(
+abstract class _GenericOddEvenCardWidgetConfig
+    extends GenericOddEvenCardWidgetConfig {
+  factory _GenericOddEvenCardWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
       Map<String, dynamic> subTitleFont,
       String deviceId,
-      String mainText,
-      String mainField,
-      Map<String, dynamic> mainTextFont,
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double activeCircleRadius,
-      int activeCircleBGColor,
-      int activeCircleBorderColor,
-      double inactiveCircleRadius,
-      int inactiveCircleBGColor,
-      int inactiveCircleBorderColor,
+      double oddCardElevation,
+      int oddCardBGColor,
+      double evenCardElevation,
+      int evenCardBGColor,
       double horizontalSpacing,
-      double verticalSpacing,
-      double imageSize}) = _$GenericAirQualityCircleWidgetConfigImpl;
-  _GenericAirQualityCircleWidgetConfig._() : super._();
+      double imageSize}) = _$GenericOddEvenCardWidgetConfigImpl;
+  _GenericOddEvenCardWidgetConfig._() : super._();
 
-  factory _GenericAirQualityCircleWidgetConfig.fromJson(
-          Map<String, dynamic> json) =
-      _$GenericAirQualityCircleWidgetConfigImpl.fromJson;
+  factory _GenericOddEvenCardWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$GenericOddEvenCardWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -650,15 +527,6 @@ abstract class _GenericAirQualityCircleWidgetConfig
   @override
   String get deviceId;
   set deviceId(String value);
-  @override
-  String get mainText;
-  set mainText(String value);
-  @override
-  String get mainField;
-  set mainField(String value);
-  @override
-  Map<String, dynamic> get mainTextFont;
-  set mainTextFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get prefixFont;
   set prefixFont(Map<String, dynamic> value);
@@ -678,38 +546,29 @@ abstract class _GenericAirQualityCircleWidgetConfig
   Map<String, dynamic> get valueMainFont;
   set valueMainFont(Map<String, dynamic> value);
   @override
-  double get activeCircleRadius;
-  set activeCircleRadius(double value);
+  double get oddCardElevation;
+  set oddCardElevation(double value);
   @override
-  int get activeCircleBGColor;
-  set activeCircleBGColor(int value);
+  int get oddCardBGColor;
+  set oddCardBGColor(int value);
   @override
-  int get activeCircleBorderColor;
-  set activeCircleBorderColor(int value);
+  double get evenCardElevation;
+  set evenCardElevation(double value);
   @override
-  double get inactiveCircleRadius;
-  set inactiveCircleRadius(double value);
-  @override
-  int get inactiveCircleBGColor;
-  set inactiveCircleBGColor(int value);
-  @override
-  int get inactiveCircleBorderColor;
-  set inactiveCircleBorderColor(int value);
+  int get evenCardBGColor;
+  set evenCardBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
   @override
-  double get verticalSpacing;
-  set verticalSpacing(double value);
-  @override
   double get imageSize;
   set imageSize(double value);
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
+  /// Create a copy of GenericOddEvenCardWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenericAirQualityCircleWidgetConfigImplCopyWith<
-          _$GenericAirQualityCircleWidgetConfigImpl>
+  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
+          _$GenericOddEvenCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

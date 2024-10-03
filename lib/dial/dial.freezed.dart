@@ -52,8 +52,12 @@ mixin _$DeviceMultiFieldDialWidgetConfig {
   List<dynamic> get ranges => throw _privateConstructorUsedError;
   set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceMultiFieldDialWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceMultiFieldDialWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceMultiFieldDialWidgetConfigCopyWith<DeviceMultiFieldDialWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -94,6 +98,8 @@ class _$DeviceMultiFieldDialWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceMultiFieldDialWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -209,6 +215,8 @@ class __$$DeviceMultiFieldDialWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceMultiFieldDialWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceMultiFieldDialWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -376,7 +384,9 @@ class _$DeviceMultiFieldDialWidgetConfigImpl
     return 'DeviceMultiFieldDialWidgetConfig(field: $field, bgColor: $bgColor, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, positionFactor: $positionFactor, angle: $angle, radiusFactor: $radiusFactor, axisThickness: $axisThickness, needleLength: $needleLength, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceMultiFieldDialWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<
@@ -457,8 +467,11 @@ abstract class _DeviceMultiFieldDialWidgetConfig
   @override
   List<dynamic> get ranges;
   set ranges(List<dynamic> value);
+
+  /// Create a copy of DeviceMultiFieldDialWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceMultiFieldDialWidgetConfigImplCopyWith<
           _$DeviceMultiFieldDialWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -53,8 +53,12 @@ mixin _$SingleValueSliderWidgetConfig {
   int get contentFontSize => throw _privateConstructorUsedError;
   set contentFontSize(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this SingleValueSliderWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SingleValueSliderWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SingleValueSliderWidgetConfigCopyWith<SingleValueSliderWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,6 +99,8 @@ class _$SingleValueSliderWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SingleValueSliderWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -210,6 +216,8 @@ class __$$SingleValueSliderWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$SingleValueSliderWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SingleValueSliderWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -377,7 +385,9 @@ class _$SingleValueSliderWidgetConfigImpl
     return 'SingleValueSliderWidgetConfig(title: $title, titleFont: $titleFont, label: $label, labelFont: $labelFont, valueFont: $valueFont, deviceId: $deviceId, min: $min, max: $max, width: $width, height: $height, field: $field, activeColor: $activeColor, inactiveColor: $inactiveColor, contentFontSize: $contentFontSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SingleValueSliderWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SingleValueSliderWidgetConfigImplCopyWith<
@@ -457,8 +467,11 @@ abstract class _SingleValueSliderWidgetConfig
   @override
   int get contentFontSize;
   set contentFontSize(int value);
+
+  /// Create a copy of SingleValueSliderWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SingleValueSliderWidgetConfigImplCopyWith<
           _$SingleValueSliderWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
