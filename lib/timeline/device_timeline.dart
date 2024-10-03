@@ -9,7 +9,6 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
   DeviceTimelineWidgetConfig._();
 
   factory DeviceTimelineWidgetConfig({
-    @Default('') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -53,7 +52,6 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'title':
       case 'deviceId':
         return DataType.text;
       case 'indicatorColor':
@@ -96,8 +94,6 @@ class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetC
     switch (parameter) {
       case 'deviceId':
         return 'Device Id';
-      case 'title':
-        return 'Title';
       case 'indicatorColor':
         return 'Indicator Color';
       case 'width':
