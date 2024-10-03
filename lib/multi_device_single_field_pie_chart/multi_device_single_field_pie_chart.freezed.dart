@@ -79,8 +79,12 @@ mixin _$MultiDeviceSingleFieldPieChartWidgetConfig {
   int get strokeColor => throw _privateConstructorUsedError;
   set strokeColor(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this MultiDeviceSingleFieldPieChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiDeviceSingleFieldPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiDeviceSingleFieldPieChartWidgetConfigCopyWith<
           MultiDeviceSingleFieldPieChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -134,6 +138,8 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiDeviceSingleFieldPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -316,6 +322,8 @@ class __$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiDeviceSingleFieldPieChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiDeviceSingleFieldPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -582,7 +590,9 @@ class _$MultiDeviceSingleFieldPieChartWidgetConfigImpl
     return 'MultiDeviceSingleFieldPieChartWidgetConfig(deviceIds: $deviceIds, field: $field, chartColors: $chartColors, title: $title, value: $value, label: $label, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, legendVisibility: $legendVisibility, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, angle: $angle, labelBorderWidth: $labelBorderWidth, labelBorderRadius: $labelBorderRadius, labelOpacity: $labelOpacity, labelPosition: $labelPosition, legendPosition: $legendPosition, enableTooltip: $enableTooltip, explode: $explode, opacity: $opacity, chartRadius: $chartRadius, strokeColor: $strokeColor)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiDeviceSingleFieldPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<
@@ -709,8 +719,11 @@ abstract class _MultiDeviceSingleFieldPieChartWidgetConfig
   @override
   int get strokeColor;
   set strokeColor(int value);
+
+  /// Create a copy of MultiDeviceSingleFieldPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiDeviceSingleFieldPieChartWidgetConfigImplCopyWith<
           _$MultiDeviceSingleFieldPieChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

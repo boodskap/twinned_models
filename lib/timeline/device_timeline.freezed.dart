@@ -50,8 +50,12 @@ mixin _$DeviceTimelineWidgetConfig {
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceTimelineWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceTimelineWidgetConfigCopyWith<DeviceTimelineWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,6 +198,8 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceTimelineWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -345,7 +353,9 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
     return 'DeviceTimelineWidgetConfig(title: $title, titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
@@ -415,8 +425,11 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   @override
   double get opacity;
   set opacity(double value);
+
+  /// Create a copy of DeviceTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
