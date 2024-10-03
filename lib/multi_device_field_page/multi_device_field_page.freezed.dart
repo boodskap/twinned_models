@@ -68,8 +68,12 @@ mixin _$MultiDeviceFieldPageWidgetConfig {
   set cardFontText(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MultiDeviceFieldPageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiDeviceFieldPageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiDeviceFieldPageWidgetConfigCopyWith<MultiDeviceFieldPageWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -115,6 +119,8 @@ class _$MultiDeviceFieldPageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiDeviceFieldPageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -260,6 +266,8 @@ class __$$MultiDeviceFieldPageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiDeviceFieldPageWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiDeviceFieldPageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -497,7 +505,9 @@ class _$MultiDeviceFieldPageWidgetConfigImpl
     return 'MultiDeviceFieldPageWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cityName: $cityName, paraTitle: $paraTitle, paraText: $paraText, gradientBgColor: $gradientBgColor, curveBgColor: $curveBgColor, cardBgColor: $cardBgColor, elevation: $elevation, excludeFields: $excludeFields, titleFont: $titleFont, timeStampFont: $timeStampFont, valueFont: $valueFont, labelFont: $labelFont, suffixFont: $suffixFont, paraTitleFont: $paraTitleFont, paraTextFont: $paraTextFont, cardFontText: $cardFontText)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiDeviceFieldPageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<
@@ -599,8 +609,11 @@ abstract class _MultiDeviceFieldPageWidgetConfig
   @override
   Map<String, dynamic> get cardFontText;
   set cardFontText(Map<String, dynamic> value);
+
+  /// Create a copy of MultiDeviceFieldPageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiDeviceFieldPageWidgetConfigImplCopyWith<
           _$MultiDeviceFieldPageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

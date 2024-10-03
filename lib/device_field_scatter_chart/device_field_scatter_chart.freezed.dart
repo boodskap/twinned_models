@@ -65,8 +65,12 @@ mixin _$DeviceFieldScatterChartWidgetConfig {
   set dataMarkerType(DataMarkerType value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceFieldScatterChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceFieldScatterChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceFieldScatterChartWidgetConfigCopyWith<
           DeviceFieldScatterChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -113,6 +117,8 @@ class _$DeviceFieldScatterChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceFieldScatterChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,6 +264,8 @@ class __$$DeviceFieldScatterChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldScatterChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceFieldScatterChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +478,9 @@ class _$DeviceFieldScatterChartWidgetConfigImpl
     return 'DeviceFieldScatterChartWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, tooltipFont: $tooltipFont, legendFont: $legendFont, legendVisibility: $legendVisibility, legendPosition: $legendPosition, iconType: $iconType, dataLabelVisibility: $dataLabelVisibility, bgColor: $bgColor, borderColor: $borderColor, plotAreaBackgroundColor: $plotAreaBackgroundColor, enableTooltip: $enableTooltip, duration: $duration, toolTipColor: $toolTipColor, toolTipBorderColor: $toolTipBorderColor, markerColor: $markerColor, dataMarkerType: $dataMarkerType)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceFieldScatterChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<
@@ -572,8 +582,11 @@ abstract class _DeviceFieldScatterChartWidgetConfig
   @override
   DataMarkerType get dataMarkerType;
   set dataMarkerType(DataMarkerType value);
+
+  /// Create a copy of DeviceFieldScatterChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceFieldScatterChartWidgetConfigImplCopyWith<
           _$DeviceFieldScatterChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

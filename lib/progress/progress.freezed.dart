@@ -46,8 +46,12 @@ mixin _$DeviceFieldPercentageWidgetConfig {
   PercentageWidgetShape get shape => throw _privateConstructorUsedError;
   set shape(PercentageWidgetShape value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceFieldPercentageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceFieldPercentageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceFieldPercentageWidgetConfigCopyWith<DeviceFieldPercentageWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -85,6 +89,8 @@ class _$DeviceFieldPercentageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceFieldPercentageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,6 +188,8 @@ class __$$DeviceFieldPercentageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldPercentageWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceFieldPercentageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -317,7 +325,9 @@ class _$DeviceFieldPercentageWidgetConfigImpl
     return 'DeviceFieldPercentageWidgetConfig(field: $field, title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, unfillColor: $unfillColor, fillColor: $fillColor, titleBgColor: $titleBgColor, progressbarWidth: $progressbarWidth, circularRadius: $circularRadius, shape: $shape)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceFieldPercentageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldPercentageWidgetConfigImplCopyWith<
@@ -386,8 +396,11 @@ abstract class _DeviceFieldPercentageWidgetConfig
   @override
   PercentageWidgetShape get shape;
   set shape(PercentageWidgetShape value);
+
+  /// Create a copy of DeviceFieldPercentageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceFieldPercentageWidgetConfigImplCopyWith<
           _$DeviceFieldPercentageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
