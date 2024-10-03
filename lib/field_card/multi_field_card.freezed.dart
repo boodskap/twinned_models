@@ -50,8 +50,12 @@ mixin _$MultiFieldCardWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this MultiFieldCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiFieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiFieldCardWidgetConfigCopyWith<MultiFieldCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiFieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,6 +198,8 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiFieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiFieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -270,7 +278,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
       this.modelId = '',
       this.field = const [],
@@ -285,18 +293,18 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFFFFFFFF,
-        'fontBold': false
+        'fontBold': true
       },
       this.contentFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 15,
         'fontColor': 0xFF000000,
-        'fontBold': false
+        'fontBold': true
       },
-      this.width = 230,
+      this.width = 250,
       this.height = 350,
       this.topSectionHeight = 220,
-      this.imageSize = 100})
+      this.imageSize = 65})
       : super._();
 
   factory _$MultiFieldCardWidgetConfigImpl.fromJson(
@@ -345,7 +353,9 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
     return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelId: $modelId, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiFieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiFieldCardWidgetConfigImplCopyWith<_$MultiFieldCardWidgetConfigImpl>
@@ -415,8 +425,11 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
   @override
   double get imageSize;
   set imageSize(double value);
+
+  /// Create a copy of MultiFieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiFieldCardWidgetConfigImplCopyWith<_$MultiFieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

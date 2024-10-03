@@ -15,7 +15,7 @@ _$MultiFieldCardWidgetConfigImpl _$$MultiFieldCardWidgetConfigImplFromJson(
             'fontFamily': 'Open Sans',
             'fontSize': 25,
             'fontColor': 0xFF000000,
-            'fontBold': false
+            'fontBold': true
           },
       modelId: json['modelId'] as String? ?? '',
       field:
@@ -35,19 +35,19 @@ _$MultiFieldCardWidgetConfigImpl _$$MultiFieldCardWidgetConfigImplFromJson(
             'fontFamily': 'Open Sans',
             'fontSize': 25,
             'fontColor': 0xFFFFFFFF,
-            'fontBold': false
+            'fontBold': true
           },
       contentFont: json['contentFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 15,
             'fontColor': 0xFF000000,
-            'fontBold': false
+            'fontBold': true
           },
-      width: (json['width'] as num?)?.toDouble() ?? 230,
+      width: (json['width'] as num?)?.toDouble() ?? 250,
       height: (json['height'] as num?)?.toDouble() ?? 350,
       topSectionHeight: (json['topSectionHeight'] as num?)?.toDouble() ?? 220,
-      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 100,
+      imageSize: (json['imageSize'] as num?)?.toDouble() ?? 65,
     );
 
 Map<String, dynamic> _$$MultiFieldCardWidgetConfigImplToJson(

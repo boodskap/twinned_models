@@ -15,7 +15,7 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 25,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default('') String modelId,
@@ -32,20 +32,20 @@ class MultiFieldCardWidgetConfig extends BaseConfig
       'fontFamily': 'Open Sans',
       'fontSize': 25,
       'fontColor': 0xFFFFFFFF,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> headingFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 15,
       'fontColor': 0xFF000000,
-      'fontBold': false
+      'fontBold': true
     })
     Map<String, dynamic> contentFont,
-    @Default(230) double width,
+    @Default(250) double width,
     @Default(350) double height,
     @Default(220) double topSectionHeight,
-    @Default(100) double imageSize,
+    @Default(65) double imageSize,
   }) = _MultiFieldCardWidgetConfig;
 
   factory MultiFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>

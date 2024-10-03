@@ -1,75 +1,71 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'field_card.freezed.dart';
-part 'field_card.g.dart';
+part 'device_timeline.freezed.dart';
+part 'device_timeline.g.dart';
 
 @unfreezed
-class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
-  FieldCardWidgetConfig._();
+class DeviceTimelineWidgetConfig extends BaseConfig with _$DeviceTimelineWidgetConfig {
+  DeviceTimelineWidgetConfig._();
 
-  factory FieldCardWidgetConfig({
-    @Default('') String title,
+  factory DeviceTimelineWidgetConfig({
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
+      'fontSize': 20,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
+    @Default(500) double width,
+    @Default(350) double height,
     @Default('') String deviceId,
-    @Default('') String field,
-    @Default(0xFF189309) int topSectionColor,
-    @Default(0XFFFFFFFF) int bottomSectionColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 40,
+      'fontSize': 18,
       'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> valueFont,
+    Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 25,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
+      'fontSize': 14,
+      'fontColor': 0xFF000000,
+      'fontBold': false
     })
-    Map<String, dynamic> headingFont,
+    Map<String, dynamic> contentFont,
+    @Default(0XFFC41E3A) int indicatorColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 15,
-      'fontColor': 0xFF000000,
+      'fontColor': 0xFFFFFFFF,
       'fontBold': true
     })
-    Map<String, dynamic> contentFont,
-    @Default(230) double width,
-    @Default(350) double height,
-    @Default(220) double topSectionHeight,
-    @Default(100) double imageSize,
-  }) = _FieldCardWidgetConfig;
+    Map<String, dynamic> indicatorFont,
+    @Default(2) double borderWidth,
+    @Default(25) double imageSize,
+    @Default(0.4) double opacity,
+  }) = _DeviceTimelineWidgetConfig;
 
-  factory FieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$FieldCardWidgetConfigFromJson(json);
+  factory DeviceTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$DeviceTimelineWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'field':
-      case 'title':
       case 'deviceId':
         return DataType.text;
-      case 'topSectionColor':
-      case 'bottomSectionColor':
+      case 'indicatorColor':
         return DataType.numeric;
       case 'width':
       case 'height':
-      case 'topSectionHeight':
+      case 'borderWidth':
+      case 'opacity':
       case 'imageSize':
         return DataType.decimal;
-      case 'headingFont':
+      case 'labelFont':
       case 'titleFont':
-      case 'valueFont':
       case 'contentFont':
+      case 'indicatorFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -79,10 +75,7 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'field':
-        return HintType.field;
-      case 'topSectionColor':
-      case 'bottomSectionColor':
+      case 'indicatorColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -101,30 +94,26 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
     switch (parameter) {
       case 'deviceId':
         return 'Device Id';
-      case 'field':
-        return 'Field';
-      case 'title':
-        return 'Title';
-      case 'topSectionColor':
-        return 'Top Section Color';
-      case 'bottomSectionColor':
-        return 'Bottom Section Color';
-      case 'valueFont':
-        return 'Value Font';
-      case 'titleFont':
-        return 'Title Font';
-      case 'headingFont':
-        return 'Heading Font';
-      case 'contentFont':
-        return 'Content Font';
+      case 'indicatorColor':
+        return 'Indicator Color';
       case 'width':
         return 'Width';
-      case 'height':
+        case 'height':
         return 'Height';
-      case 'topSectionHeight':
-        return 'Top Section Height';
+      case 'borderWidth':
+        return 'Border Width';
+      case 'opacity':
+        return 'Opacity';
       case 'imageSize':
         return 'Image Size';
+      case 'titleFont':
+        return 'Title Font';
+      case 'contentFont':
+        return 'Content Font';
+      case 'indicatorFont':
+        return 'Indicator Font';
+      case 'labelFont':
+        return 'Label Font';
       default:
         return parameter;
     }
@@ -139,7 +128,6 @@ class FieldCardWidgetConfig extends BaseConfig with _$FieldCardWidgetConfig {
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'deviceId':
-      case 'field':
         return true;
       default:
         return false;
