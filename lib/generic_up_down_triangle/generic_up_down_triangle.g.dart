@@ -1,15 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'generic_odd_even_card.dart';
+part of 'generic_up_down_triangle.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenericOddEvenCardWidgetConfigImpl
-    _$$GenericOddEvenCardWidgetConfigImplFromJson(Map<String, dynamic> json) =>
-        _$GenericOddEvenCardWidgetConfigImpl(
-          title: json['title'] as String? ?? 'Generic Odd Even Card',
+_$GenericUpDownTriangleWidgetConfigImpl
+    _$$GenericUpDownTriangleWidgetConfigImplFromJson(
+            Map<String, dynamic> json) =>
+        _$GenericUpDownTriangleWidgetConfigImpl(
+          title: json['title'] as String? ?? 'Generic Up Down Triangle',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -68,20 +69,17 @@ _$GenericOddEvenCardWidgetConfigImpl
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
-          oddCardElevation: (json['oddCardElevation'] as num?)?.toDouble() ?? 5,
-          oddCardBGColor:
-              (json['oddCardBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          evenCardElevation:
-              (json['evenCardElevation'] as num?)?.toDouble() ?? 5,
-          evenCardBGColor:
-              (json['evenCardBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          upTriangleBGColor:
+              (json['upTriangleBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
+          downTriangleBGColor:
+              (json['downTriangleBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
-Map<String, dynamic> _$$GenericOddEvenCardWidgetConfigImplToJson(
-        _$GenericOddEvenCardWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$GenericUpDownTriangleWidgetConfigImplToJson(
+        _$GenericUpDownTriangleWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
@@ -94,10 +92,8 @@ Map<String, dynamic> _$$GenericOddEvenCardWidgetConfigImplToJson(
       'prefixMainFont': instance.prefixMainFont,
       'suffixMainFont': instance.suffixMainFont,
       'valueMainFont': instance.valueMainFont,
-      'oddCardElevation': instance.oddCardElevation,
-      'oddCardBGColor': instance.oddCardBGColor,
-      'evenCardElevation': instance.evenCardElevation,
-      'evenCardBGColor': instance.evenCardBGColor,
+      'upTriangleBGColor': instance.upTriangleBGColor,
+      'downTriangleBGColor': instance.downTriangleBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };

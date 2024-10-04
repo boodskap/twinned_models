@@ -75,31 +75,46 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
-    return HintType.none;
+    switch (parameter) {
+      case 'fields':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      case 'axisBgColor':
+        return HintType.color;
+      default:
+        return HintType.none;
+    }
   }
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    throw UnimplementedError();
+    return [];
   }
 
   @override
   String getLabel(String parameter) {
-    throw UnimplementedError();
+    return parameter;
   }
 
   @override
   String getTooltip(String parameter) {
-    throw UnimplementedError();
+    return "";
   }
 
   @override
   bool isRequired(String parameter) {
-    throw UnimplementedError();
+    switch (parameter) {
+      case 'fields':
+      case 'deviceId':
+        return true;
+      default:
+        return false;
+    }
   }
 
   @override
   bool isValid(String parameter, value) {
-    throw UnimplementedError();
+    return true;
   }
 }

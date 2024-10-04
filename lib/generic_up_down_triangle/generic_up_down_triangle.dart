@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_odd_even_card.freezed.dart';
-part 'generic_odd_even_card.g.dart';
+part 'generic_up_down_triangle.freezed.dart';
+part 'generic_up_down_triangle.g.dart';
 
 @unfreezed
-class GenericOddEvenCardWidgetConfig extends BaseConfig
-    with _$GenericOddEvenCardWidgetConfig {
-  GenericOddEvenCardWidgetConfig._();
+class GenericUpDownTriangleWidgetConfig extends BaseConfig
+    with _$GenericUpDownTriangleWidgetConfig {
+  GenericUpDownTriangleWidgetConfig._();
 
-  factory GenericOddEvenCardWidgetConfig({
-    @Default('Generic Odd Even Card') String title,
+  factory GenericUpDownTriangleWidgetConfig({
+    @Default('Generic Up Down Triangle') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -69,16 +69,15 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueMainFont,
-    @Default(5) double oddCardElevation,
-    @Default(0XFF7CDAB8) int oddCardBGColor,
-    @Default(5) double evenCardElevation,
-    @Default(0XFFf79cA1) int evenCardBGColor,
+    @Default(0XFF7CDAB8) int upTriangleBGColor,
+    @Default(0XFFf79cA1) int downTriangleBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericOddEvenCardWidgetConfig;
+  }) = _GenericUpDownTriangleWidgetConfig;
 
-  factory GenericOddEvenCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$GenericOddEvenCardWidgetConfigFromJson(json);
+  factory GenericUpDownTriangleWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$GenericUpDownTriangleWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -87,11 +86,9 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'subTitle':
         return DataType.text;
-      case 'oddCardBGColor':
-      case 'evenCardBGColor':
+      case 'upTriangleBGColor':
+      case 'downTriangleBGColor':
         return DataType.numeric;
-      case 'oddCardElevation':
-      case 'evenCardElevation':
       case 'horizontalSpacing':
       case 'imageSize':
         return DataType.decimal;
@@ -112,8 +109,8 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'oddCardBGColor':
-      case 'evenCardBGColor':
+      case 'upTriangleBGColor':
+      case 'downTriangleBGColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -140,14 +137,10 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
         return 'Sub Title';
       case 'subTitleFont':
         return 'Sub Title Font';
-      case 'oddCardBGColor':
-        return 'Odd Card Bg Color';
-      case 'evenCardBGColor':
-        return 'Even Card Bg Color';
-      case 'oddCardElevation':
-        return 'Odd Card Elevation';
-      case 'evenCardElevation':
-        return 'Even Card Elevation';
+      case 'upTriangleBGColor':
+        return 'Upper Triangle Bg Color';
+      case 'downTriangleBGColor':
+        return 'Down Triangle Bg Color';
       case 'prefixFont':
         return 'Prefix Font';
       case 'suffixFont':

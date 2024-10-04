@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_odd_even_card.dart';
+part of 'generic_up_down_triangle.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericOddEvenCardWidgetConfig _$GenericOddEvenCardWidgetConfigFromJson(
+GenericUpDownTriangleWidgetConfig _$GenericUpDownTriangleWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _GenericOddEvenCardWidgetConfig.fromJson(json);
+  return _GenericUpDownTriangleWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericOddEvenCardWidgetConfig {
+mixin _$GenericUpDownTriangleWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -51,14 +51,10 @@ mixin _$GenericOddEvenCardWidgetConfig {
   Map<String, dynamic> get valueMainFont => throw _privateConstructorUsedError;
   set valueMainFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  double get oddCardElevation => throw _privateConstructorUsedError;
-  set oddCardElevation(double value) => throw _privateConstructorUsedError;
-  int get oddCardBGColor => throw _privateConstructorUsedError;
-  set oddCardBGColor(int value) => throw _privateConstructorUsedError;
-  double get evenCardElevation => throw _privateConstructorUsedError;
-  set evenCardElevation(double value) => throw _privateConstructorUsedError;
-  int get evenCardBGColor => throw _privateConstructorUsedError;
-  set evenCardBGColor(int value) => throw _privateConstructorUsedError;
+  int get upTriangleBGColor => throw _privateConstructorUsedError;
+  set upTriangleBGColor(int value) => throw _privateConstructorUsedError;
+  int get downTriangleBGColor => throw _privateConstructorUsedError;
+  set downTriangleBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
@@ -66,17 +62,17 @@ mixin _$GenericOddEvenCardWidgetConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GenericOddEvenCardWidgetConfigCopyWith<GenericOddEvenCardWidgetConfig>
+  $GenericUpDownTriangleWidgetConfigCopyWith<GenericUpDownTriangleWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  factory $GenericOddEvenCardWidgetConfigCopyWith(
-          GenericOddEvenCardWidgetConfig value,
-          $Res Function(GenericOddEvenCardWidgetConfig) then) =
-      _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-          GenericOddEvenCardWidgetConfig>;
+abstract class $GenericUpDownTriangleWidgetConfigCopyWith<$Res> {
+  factory $GenericUpDownTriangleWidgetConfigCopyWith(
+          GenericUpDownTriangleWidgetConfig value,
+          $Res Function(GenericUpDownTriangleWidgetConfig) then) =
+      _$GenericUpDownTriangleWidgetConfigCopyWithImpl<$Res,
+          GenericUpDownTriangleWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -90,19 +86,17 @@ abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int upTriangleBGColor,
+      int downTriangleBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericOddEvenCardWidgetConfig>
-    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  _$GenericOddEvenCardWidgetConfigCopyWithImpl(this._value, this._then);
+class _$GenericUpDownTriangleWidgetConfigCopyWithImpl<$Res,
+        $Val extends GenericUpDownTriangleWidgetConfig>
+    implements $GenericUpDownTriangleWidgetConfigCopyWith<$Res> {
+  _$GenericUpDownTriangleWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -123,10 +117,8 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
     Object? prefixMainFont = null,
     Object? suffixMainFont = null,
     Object? valueMainFont = null,
-    Object? oddCardElevation = null,
-    Object? oddCardBGColor = null,
-    Object? evenCardElevation = null,
-    Object? evenCardBGColor = null,
+    Object? upTriangleBGColor = null,
+    Object? downTriangleBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -175,21 +167,13 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
           ? _value.valueMainFont
           : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCardElevation: null == oddCardElevation
-          ? _value.oddCardElevation
-          : oddCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCardBGColor: null == oddCardBGColor
-          ? _value.oddCardBGColor
-          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
+      upTriangleBGColor: null == upTriangleBGColor
+          ? _value.upTriangleBGColor
+          : upTriangleBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evenCardElevation: null == evenCardElevation
-          ? _value.evenCardElevation
-          : evenCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCardBGColor: null == evenCardBGColor
-          ? _value.evenCardBGColor
-          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
+      downTriangleBGColor: null == downTriangleBGColor
+          ? _value.downTriangleBGColor
+          : downTriangleBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -204,12 +188,12 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
-    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  factory _$$GenericOddEvenCardWidgetConfigImplCopyWith(
-          _$GenericOddEvenCardWidgetConfigImpl value,
-          $Res Function(_$GenericOddEvenCardWidgetConfigImpl) then) =
-      __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$GenericUpDownTriangleWidgetConfigImplCopyWith<$Res>
+    implements $GenericUpDownTriangleWidgetConfigCopyWith<$Res> {
+  factory _$$GenericUpDownTriangleWidgetConfigImplCopyWith(
+          _$GenericUpDownTriangleWidgetConfigImpl value,
+          $Res Function(_$GenericUpDownTriangleWidgetConfigImpl) then) =
+      __$$GenericUpDownTriangleWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -224,22 +208,20 @@ abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int upTriangleBGColor,
+      int downTriangleBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-        _$GenericOddEvenCardWidgetConfigImpl>
-    implements _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res> {
-  __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl(
-      _$GenericOddEvenCardWidgetConfigImpl _value,
-      $Res Function(_$GenericOddEvenCardWidgetConfigImpl) _then)
+class __$$GenericUpDownTriangleWidgetConfigImplCopyWithImpl<$Res>
+    extends _$GenericUpDownTriangleWidgetConfigCopyWithImpl<$Res,
+        _$GenericUpDownTriangleWidgetConfigImpl>
+    implements _$$GenericUpDownTriangleWidgetConfigImplCopyWith<$Res> {
+  __$$GenericUpDownTriangleWidgetConfigImplCopyWithImpl(
+      _$GenericUpDownTriangleWidgetConfigImpl _value,
+      $Res Function(_$GenericUpDownTriangleWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -256,14 +238,12 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixMainFont = null,
     Object? suffixMainFont = null,
     Object? valueMainFont = null,
-    Object? oddCardElevation = null,
-    Object? oddCardBGColor = null,
-    Object? evenCardElevation = null,
-    Object? evenCardBGColor = null,
+    Object? upTriangleBGColor = null,
+    Object? downTriangleBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericOddEvenCardWidgetConfigImpl(
+    return _then(_$GenericUpDownTriangleWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -308,21 +288,13 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueMainFont
           : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCardElevation: null == oddCardElevation
-          ? _value.oddCardElevation
-          : oddCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCardBGColor: null == oddCardBGColor
-          ? _value.oddCardBGColor
-          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
+      upTriangleBGColor: null == upTriangleBGColor
+          ? _value.upTriangleBGColor
+          : upTriangleBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evenCardElevation: null == evenCardElevation
-          ? _value.evenCardElevation
-          : evenCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCardBGColor: null == evenCardBGColor
-          ? _value.evenCardBGColor
-          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
+      downTriangleBGColor: null == downTriangleBGColor
+          ? _value.downTriangleBGColor
+          : downTriangleBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -338,10 +310,10 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericOddEvenCardWidgetConfigImpl
-    extends _GenericOddEvenCardWidgetConfig {
-  _$GenericOddEvenCardWidgetConfigImpl(
-      {this.title = 'Generic Odd Even Card',
+class _$GenericUpDownTriangleWidgetConfigImpl
+    extends _GenericUpDownTriangleWidgetConfig {
+  _$GenericUpDownTriangleWidgetConfigImpl(
+      {this.title = 'Generic Up Down Triangle',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
@@ -392,17 +364,15 @@ class _$GenericOddEvenCardWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.oddCardElevation = 5,
-      this.oddCardBGColor = 0XFF7CDAB8,
-      this.evenCardElevation = 5,
-      this.evenCardBGColor = 0XFFf79cA1,
+      this.upTriangleBGColor = 0XFF7CDAB8,
+      this.downTriangleBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericOddEvenCardWidgetConfigImpl.fromJson(
+  factory _$GenericUpDownTriangleWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$GenericOddEvenCardWidgetConfigImplFromJson(json);
+      _$$GenericUpDownTriangleWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -439,16 +409,10 @@ class _$GenericOddEvenCardWidgetConfigImpl
   Map<String, dynamic> valueMainFont;
   @override
   @JsonKey()
-  double oddCardElevation;
+  int upTriangleBGColor;
   @override
   @JsonKey()
-  int oddCardBGColor;
-  @override
-  @JsonKey()
-  double evenCardElevation;
-  @override
-  @JsonKey()
-  int evenCardBGColor;
+  int downTriangleBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
@@ -458,28 +422,28 @@ class _$GenericOddEvenCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericUpDownTriangleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, upTriangleBGColor: $upTriangleBGColor, downTriangleBGColor: $downTriangleBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
-          _$GenericOddEvenCardWidgetConfigImpl>
-      get copyWith => __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<
-          _$GenericOddEvenCardWidgetConfigImpl>(this, _$identity);
+  _$$GenericUpDownTriangleWidgetConfigImplCopyWith<
+          _$GenericUpDownTriangleWidgetConfigImpl>
+      get copyWith => __$$GenericUpDownTriangleWidgetConfigImplCopyWithImpl<
+          _$GenericUpDownTriangleWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericOddEvenCardWidgetConfigImplToJson(
+    return _$$GenericUpDownTriangleWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericOddEvenCardWidgetConfig
-    extends GenericOddEvenCardWidgetConfig {
-  factory _GenericOddEvenCardWidgetConfig(
+abstract class _GenericUpDownTriangleWidgetConfig
+    extends GenericUpDownTriangleWidgetConfig {
+  factory _GenericUpDownTriangleWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
@@ -491,16 +455,15 @@ abstract class _GenericOddEvenCardWidgetConfig
       Map<String, dynamic> prefixMainFont,
       Map<String, dynamic> suffixMainFont,
       Map<String, dynamic> valueMainFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int upTriangleBGColor,
+      int downTriangleBGColor,
       double horizontalSpacing,
-      double imageSize}) = _$GenericOddEvenCardWidgetConfigImpl;
-  _GenericOddEvenCardWidgetConfig._() : super._();
+      double imageSize}) = _$GenericUpDownTriangleWidgetConfigImpl;
+  _GenericUpDownTriangleWidgetConfig._() : super._();
 
-  factory _GenericOddEvenCardWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$GenericOddEvenCardWidgetConfigImpl.fromJson;
+  factory _GenericUpDownTriangleWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$GenericUpDownTriangleWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -536,17 +499,11 @@ abstract class _GenericOddEvenCardWidgetConfig
   Map<String, dynamic> get valueMainFont;
   set valueMainFont(Map<String, dynamic> value);
   @override
-  double get oddCardElevation;
-  set oddCardElevation(double value);
+  int get upTriangleBGColor;
+  set upTriangleBGColor(int value);
   @override
-  int get oddCardBGColor;
-  set oddCardBGColor(int value);
-  @override
-  double get evenCardElevation;
-  set evenCardElevation(double value);
-  @override
-  int get evenCardBGColor;
-  set evenCardBGColor(int value);
+  int get downTriangleBGColor;
+  set downTriangleBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
@@ -555,7 +512,7 @@ abstract class _GenericOddEvenCardWidgetConfig
   set imageSize(double value);
   @override
   @JsonKey(ignore: true)
-  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
-          _$GenericOddEvenCardWidgetConfigImpl>
+  _$$GenericUpDownTriangleWidgetConfigImplCopyWith<
+          _$GenericUpDownTriangleWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
