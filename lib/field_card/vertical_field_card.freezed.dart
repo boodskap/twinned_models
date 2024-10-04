@@ -287,7 +287,7 @@ class _$VerticalFieldCardWidgetConfigImpl
         'fontBold': true
       },
       this.width = 650,
-      this.height = 350,
+      this.height = 320,
       this.deviceId = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',

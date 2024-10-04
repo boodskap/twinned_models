@@ -18,7 +18,7 @@ class VerticalFieldCardWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> titleFont,
     @Default(650) double width,
-    @Default(350) double height,
+    @Default(320) double height,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
