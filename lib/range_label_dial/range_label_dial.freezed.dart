@@ -57,12 +57,8 @@ mixin _$DeviceFieldRangeLabelDialWidgetConfig {
   bool get showLabel => throw _privateConstructorUsedError;
   set showLabel(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceFieldRangeLabelDialWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceFieldRangeLabelDialWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceFieldRangeLabelDialWidgetConfigCopyWith<
           DeviceFieldRangeLabelDialWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -106,8 +102,6 @@ class _$DeviceFieldRangeLabelDialWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceFieldRangeLabelDialWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -235,8 +229,6 @@ class __$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldRangeLabelDialWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceFieldRangeLabelDialWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -427,9 +419,7 @@ class _$DeviceFieldRangeLabelDialWidgetConfigImpl
     return 'DeviceFieldRangeLabelDialWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleBgColor: $titleBgColor, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, gaugeAnimate: $gaugeAnimate, ranges: $ranges, positionFactor: $positionFactor, radiusFactor: $radiusFactor, dialStartWidth: $dialStartWidth, dialEndWidth: $dialEndWidth, angle: $angle, axisThickness: $axisThickness, showLabel: $showLabel)';
   }
 
-  /// Create a copy of DeviceFieldRangeLabelDialWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<
@@ -518,11 +508,8 @@ abstract class _DeviceFieldRangeLabelDialWidgetConfig
   @override
   bool get showLabel;
   set showLabel(bool value);
-
-  /// Create a copy of DeviceFieldRangeLabelDialWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceFieldRangeLabelDialWidgetConfigImplCopyWith<
           _$DeviceFieldRangeLabelDialWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -53,12 +53,8 @@ mixin _$DeviceFieldSplineChartWidgetConfig {
   set tooltipFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceFieldSplineChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceFieldSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceFieldSplineChartWidgetConfigCopyWith<
           DeviceFieldSplineChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -100,8 +96,6 @@ class _$DeviceFieldSplineChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceFieldSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,8 +211,6 @@ class __$$DeviceFieldSplineChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldSplineChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceFieldSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -386,9 +378,7 @@ class _$DeviceFieldSplineChartWidgetConfigImpl
     return 'DeviceFieldSplineChartWidgetConfig(deviceId: $deviceId, field: $field, title: $title, subTitle: $subTitle, chartColor: $chartColor, chartAreaColor: $chartAreaColor, chartAreaBorderColor: $chartAreaBorderColor, dataPointsHighlights: $dataPointsHighlights, enableTooltip: $enableTooltip, tooltipDuration: $tooltipDuration, chartAreaBorderWidth: $chartAreaBorderWidth, titleFont: $titleFont, subTitleFont: $subTitleFont, tooltipFont: $tooltipFont)';
   }
 
-  /// Create a copy of DeviceFieldSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldSplineChartWidgetConfigImplCopyWith<
@@ -470,11 +460,8 @@ abstract class _DeviceFieldSplineChartWidgetConfig
   @override
   Map<String, dynamic> get tooltipFont;
   set tooltipFont(Map<String, dynamic> value);
-
-  /// Create a copy of DeviceFieldSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceFieldSplineChartWidgetConfigImplCopyWith<
           _$DeviceFieldSplineChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
