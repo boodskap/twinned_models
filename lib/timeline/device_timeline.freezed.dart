@@ -21,8 +21,6 @@ DeviceTimelineWidgetConfig _$DeviceTimelineWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DeviceTimelineWidgetConfig {
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -50,12 +48,8 @@ mixin _$DeviceTimelineWidgetConfig {
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceTimelineWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceTimelineWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceTimelineWidgetConfigCopyWith<DeviceTimelineWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -68,8 +62,7 @@ abstract class $DeviceTimelineWidgetConfigCopyWith<$Res> {
           DeviceTimelineWidgetConfig>;
   @useResult
   $Res call(
-      {String title,
-      Map<String, dynamic> titleFont,
+      {Map<String, dynamic> titleFont,
       double width,
       double height,
       String deviceId,
@@ -93,12 +86,9 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceTimelineWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? titleFont = null,
     Object? width = null,
     Object? height = null,
@@ -112,10 +102,6 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
     Object? opacity = null,
   }) {
     return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -174,8 +160,7 @@ abstract class _$$DeviceTimelineWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
-      Map<String, dynamic> titleFont,
+      {Map<String, dynamic> titleFont,
       double width,
       double height,
       String deviceId,
@@ -198,12 +183,9 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceTimelineWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceTimelineWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? titleFont = null,
     Object? width = null,
     Object? height = null,
@@ -217,10 +199,6 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
     Object? opacity = null,
   }) {
     return _then(_$DeviceTimelineWidgetConfigImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -273,8 +251,7 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
   _$DeviceTimelineWidgetConfigImpl(
-      {this.title = '',
-      this.titleFont = const {
+      {this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
         'fontColor': 0xFF000000,
@@ -313,9 +290,6 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
 
   @override
   @JsonKey()
-  String title;
-  @override
-  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
@@ -350,12 +324,10 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
 
   @override
   String toString() {
-    return 'DeviceTimelineWidgetConfig(title: $title, titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
+    return 'DeviceTimelineWidgetConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
   }
 
-  /// Create a copy of DeviceTimelineWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
@@ -372,8 +344,7 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
 
 abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   factory _DeviceTimelineWidgetConfig(
-      {String title,
-      Map<String, dynamic> titleFont,
+      {Map<String, dynamic> titleFont,
       double width,
       double height,
       String deviceId,
@@ -389,9 +360,6 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   factory _DeviceTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =
       _$DeviceTimelineWidgetConfigImpl.fromJson;
 
-  @override
-  String get title;
-  set title(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
@@ -425,11 +393,8 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   @override
   double get opacity;
   set opacity(double value);
-
-  /// Create a copy of DeviceTimelineWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
