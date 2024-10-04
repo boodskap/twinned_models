@@ -36,12 +36,8 @@ mixin _$HumidityWeekWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this HumidityWeekWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of HumidityWeekWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $HumidityWeekWidgetConfigCopyWith<HumidityWeekWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -72,8 +68,6 @@ class _$HumidityWeekWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of HumidityWeekWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,8 +135,6 @@ class __$$HumidityWeekWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$HumidityWeekWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HumidityWeekWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,9 +223,7 @@ class _$HumidityWeekWidgetConfigImpl extends _HumidityWeekWidgetConfig {
     return 'HumidityWeekWidgetConfig(deviceId: $deviceId, field: $field, title: $title, cardColor: $cardColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  /// Create a copy of HumidityWeekWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$HumidityWeekWidgetConfigImplCopyWith<_$HumidityWeekWidgetConfigImpl>
@@ -279,11 +269,8 @@ abstract class _HumidityWeekWidgetConfig extends HumidityWeekWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-
-  /// Create a copy of HumidityWeekWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$HumidityWeekWidgetConfigImplCopyWith<_$HumidityWeekWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

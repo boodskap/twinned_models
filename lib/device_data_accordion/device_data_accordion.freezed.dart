@@ -50,12 +50,8 @@ mixin _$DeviceDataAccordionWidgetConfig {
   bool get showExpandable => throw _privateConstructorUsedError;
   set showExpandable(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceDataAccordionWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceDataAccordionWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceDataAccordionWidgetConfigCopyWith<DeviceDataAccordionWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -93,8 +89,6 @@ class _$DeviceDataAccordionWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceDataAccordionWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,8 +186,6 @@ class __$$DeviceDataAccordionWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceDataAccordionWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceDataAccordionWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -339,9 +331,7 @@ class _$DeviceDataAccordionWidgetConfigImpl
     return 'DeviceDataAccordionWidgetConfig(title: $title, deviceId: $deviceId, imageId: $imageId, titleFont: $titleFont, accordionTitleFont: $accordionTitleFont, tableColumnFont: $tableColumnFont, tableRowFont: $tableRowFont, openedHeaderColor: $openedHeaderColor, closedHeaderColor: $closedHeaderColor, tableContentColor: $tableContentColor, showExpandable: $showExpandable)';
   }
 
-  /// Create a copy of DeviceDataAccordionWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceDataAccordionWidgetConfigImplCopyWith<
@@ -409,11 +399,8 @@ abstract class _DeviceDataAccordionWidgetConfig
   @override
   bool get showExpandable;
   set showExpandable(bool value);
-
-  /// Create a copy of DeviceDataAccordionWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceDataAccordionWidgetConfigImplCopyWith<
           _$DeviceDataAccordionWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

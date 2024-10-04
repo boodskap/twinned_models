@@ -392,10 +392,10 @@ class _$GenericOddEvenCardWidgetConfigImpl
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.oddCardElevation = 60,
-      this.oddCardBGColor = 0XFFbbdb44,
-      this.evenCardElevation = 50,
-      this.evenCardBGColor = 0XFFbcf766,
+      this.oddCardElevation = 5,
+      this.oddCardBGColor = 0XFF7CDAB8,
+      this.evenCardElevation = 5,
+      this.evenCardBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();

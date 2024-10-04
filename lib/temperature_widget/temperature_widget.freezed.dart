@@ -72,12 +72,8 @@ mixin _$DeviceFieldTemperatureGaugeWidgetConfig {
   bool get enableAnimation => throw _privateConstructorUsedError;
   set enableAnimation(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceFieldTemperatureGaugeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceFieldTemperatureGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceFieldTemperatureGaugeWidgetConfigCopyWith<
           DeviceFieldTemperatureGaugeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -128,8 +124,6 @@ class _$DeviceFieldTemperatureGaugeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceFieldTemperatureGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -293,8 +287,6 @@ class __$$DeviceFieldTemperatureGaugeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldTemperatureGaugeWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceFieldTemperatureGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -538,9 +530,7 @@ class _$DeviceFieldTemperatureGaugeWidgetConfigImpl
     return 'DeviceFieldTemperatureGaugeWidgetConfig(field: $field, deviceId: $deviceId, title: $title, subTitle: $subTitle, titleFont: $titleFont, subTitleFont: $subTitleFont, valueFont: $valueFont, labelFont: $labelFont, minimum: $minimum, maximum: $maximum, temperatureValue: $temperatureValue, backgroundColor: $backgroundColor, gaugeColor: $gaugeColor, pointerColor: $pointerColor, aboveTemperatureColor: $aboveTemperatureColor, belowTemperatureColor: $belowTemperatureColor, interval: $interval, isMirrored: $isMirrored, axisTrackStyleThickness: $axisTrackStyleThickness, minorTicksPerInterval: $minorTicksPerInterval, linearElementPosition: $linearElementPosition, enableAnimation: $enableAnimation)';
   }
 
-  /// Create a copy of DeviceFieldTemperatureGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldTemperatureGaugeWidgetConfigImplCopyWith<
@@ -654,11 +644,8 @@ abstract class _DeviceFieldTemperatureGaugeWidgetConfig
   @override
   bool get enableAnimation;
   set enableAnimation(bool value);
-
-  /// Create a copy of DeviceFieldTemperatureGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceFieldTemperatureGaugeWidgetConfigImplCopyWith<
           _$DeviceFieldTemperatureGaugeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
