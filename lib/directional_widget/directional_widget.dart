@@ -13,8 +13,8 @@ class DirectionalWidgetConfig extends BaseConfig
     @Default('Directional Widget') String title,
     @Default([]) List<String> fields,
     @Default('') String deviceId,
-    @Default(0x00000000) int titleBgColor,
-    @Default(0x00000000) int widgetColor,
+    @Default(0xFFFFFFFF) int bgColor,
+    @Default(0xFF2196F3) int widgetColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 10,
@@ -24,7 +24,7 @@ class DirectionalWidgetConfig extends BaseConfig
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 10,
+      'fontSize': 12,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -49,7 +49,7 @@ class DirectionalWidgetConfig extends BaseConfig
         return DataType.text;
       case 'fields':
         return DataType.listOfTexts;
-      case 'titleBgColor':
+      case 'bgColor':
       case 'widgetColor':
         return DataType.numeric;
       case 'titleFont':
@@ -61,7 +61,6 @@ class DirectionalWidgetConfig extends BaseConfig
     }
   }
 
- 
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
@@ -70,7 +69,7 @@ class DirectionalWidgetConfig extends BaseConfig
       case 'deviceId':
         return HintType.deviceId;
       case 'widgetColor':
-      case 'titleBgColor':
+      case 'bgColor':
         return HintType.color;
 
       default:
@@ -78,12 +77,12 @@ class DirectionalWidgetConfig extends BaseConfig
     }
   }
 
-   @override
+  @override
   List<String> getEnumeratedValues(String parameter) {
     return [];
   }
 
- @override
+  @override
   String getLabel(String parameter) {
     switch (parameter) {
       case 'fields':
@@ -98,8 +97,8 @@ class DirectionalWidgetConfig extends BaseConfig
         return 'Label Font';
       case 'valueFont':
         return 'Value Font';
-      case 'titleBgColor':
-        return 'Title BgColor';
+      case 'bgColor':
+        return 'BgColor';
       case 'widgetColor':
         return 'WidgetColor';
 
@@ -117,7 +116,7 @@ class DirectionalWidgetConfig extends BaseConfig
   bool isRequired(String parameter) {
     switch (parameter) {
       case 'fields':
-      case 'deviceId': 
+      case 'deviceId':
       default:
         return false;
     }

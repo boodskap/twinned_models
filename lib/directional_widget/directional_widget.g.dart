@@ -15,8 +15,8 @@ _$DirectionalWidgetConfigImpl _$$DirectionalWidgetConfigImplFromJson(
               .toList() ??
           const [],
       deviceId: json['deviceId'] as String? ?? '',
-      titleBgColor: (json['titleBgColor'] as num?)?.toInt() ?? 0x00000000,
-      widgetColor: (json['widgetColor'] as num?)?.toInt() ?? 0x00000000,
+      bgColor: (json['bgColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
+      widgetColor: (json['widgetColor'] as num?)?.toInt() ?? 0xFF2196F3,
       labelFont: json['labelFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -27,7 +27,7 @@ _$DirectionalWidgetConfigImpl _$$DirectionalWidgetConfigImplFromJson(
       valueFont: json['valueFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 10,
+            'fontSize': 12,
             'fontColor': 0xFF000000,
             'fontBold': true
           },
@@ -46,7 +46,7 @@ Map<String, dynamic> _$$DirectionalWidgetConfigImplToJson(
       'title': instance.title,
       'fields': instance.fields,
       'deviceId': instance.deviceId,
-      'titleBgColor': instance.titleBgColor,
+      'bgColor': instance.bgColor,
       'widgetColor': instance.widgetColor,
       'labelFont': instance.labelFont,
       'valueFont': instance.valueFont,
