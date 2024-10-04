@@ -50,12 +50,8 @@ mixin _$GenericValueCardWidgetConfig {
   bool get bottomLabelAsSuffix => throw _privateConstructorUsedError;
   set bottomLabelAsSuffix(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericValueCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericValueCardWidgetConfigCopyWith<GenericValueCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$GenericValueCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -206,8 +200,6 @@ class __$$GenericValueCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericValueCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -365,9 +357,7 @@ class _$GenericValueCardWidgetConfigImpl extends _GenericValueCardWidgetConfig {
     return 'GenericValueCardWidgetConfig(field: $field, deviceId: $deviceId, topLabel: $topLabel, bottomLabel: $bottomLabel, iconId: $iconId, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, valueBgColor: $valueBgColor, topFont: $topFont, valueFont: $valueFont, bottomFont: $bottomFont, bottomLabelAsSuffix: $bottomLabelAsSuffix)';
   }
 
-  /// Create a copy of GenericValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericValueCardWidgetConfigImplCopyWith<
@@ -443,11 +433,8 @@ abstract class _GenericValueCardWidgetConfig
   @override
   bool get bottomLabelAsSuffix;
   set bottomLabelAsSuffix(bool value);
-
-  /// Create a copy of GenericValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericValueCardWidgetConfigImplCopyWith<
           _$GenericValueCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

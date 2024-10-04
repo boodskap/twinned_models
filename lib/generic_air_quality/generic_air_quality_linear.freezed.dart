@@ -63,12 +63,8 @@ mixin _$GenericAirQualityLinearWidgetConfig {
   double get markerSize => throw _privateConstructorUsedError;
   set markerSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericAirQualityLinearWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericAirQualityLinearWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericAirQualityLinearWidgetConfigCopyWith<
           GenericAirQualityLinearWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -114,8 +110,6 @@ class _$GenericAirQualityLinearWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericAirQualityLinearWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,8 +249,6 @@ class __$$GenericAirQualityLinearWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericAirQualityLinearWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericAirQualityLinearWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -476,9 +468,7 @@ class _$GenericAirQualityLinearWidgetConfigImpl
     return 'GenericAirQualityLinearWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, fieldLabel: $fieldLabel, fieldLabelFont: $fieldLabelFont, valueFont: $valueFont, labelFont: $labelFont, axisLabelFont: $axisLabelFont, gaugeAnimate: $gaugeAnimate, interval: $interval, ranges: $ranges, width: $width, markerColor: $markerColor, markerOffset: $markerOffset, showLabel: $showLabel, rangeWidth: $rangeWidth, markerSize: $markerSize)';
   }
 
-  /// Create a copy of GenericAirQualityLinearWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericAirQualityLinearWidgetConfigImplCopyWith<
@@ -575,11 +565,8 @@ abstract class _GenericAirQualityLinearWidgetConfig
   @override
   double get markerSize;
   set markerSize(double value);
-
-  /// Create a copy of GenericAirQualityLinearWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericAirQualityLinearWidgetConfigImplCopyWith<
           _$GenericAirQualityLinearWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

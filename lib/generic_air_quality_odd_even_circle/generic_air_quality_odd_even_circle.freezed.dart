@@ -75,12 +75,8 @@ mixin _$GenericAirQualityOddEvenCircleWidgetConfig {
   bool get isBouncing => throw _privateConstructorUsedError;
   set isBouncing(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericAirQualityOddEvenCircleWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericAirQualityOddEvenCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericAirQualityOddEvenCircleWidgetConfigCopyWith<
           GenericAirQualityOddEvenCircleWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -131,8 +127,6 @@ class _$GenericAirQualityOddEvenCircleWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericAirQualityOddEvenCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -297,8 +291,6 @@ class __$$GenericAirQualityOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericAirQualityOddEvenCircleWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericAirQualityOddEvenCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -563,9 +555,7 @@ class _$GenericAirQualityOddEvenCircleWidgetConfigImpl
     return 'GenericAirQualityOddEvenCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, mainField: $mainField, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, oddCircleRadius: $oddCircleRadius, oddCircleBGColor: $oddCircleBGColor, oddCircleBorderColor: $oddCircleBorderColor, evenCircleRadius: $evenCircleRadius, evenCircleBGColor: $evenCircleBGColor, evenCircleBorderColor: $evenCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize, isBouncing: $isBouncing)';
   }
 
-  /// Create a copy of GenericAirQualityOddEvenCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericAirQualityOddEvenCircleWidgetConfigImplCopyWith<
@@ -680,11 +670,8 @@ abstract class _GenericAirQualityOddEvenCircleWidgetConfig
   @override
   bool get isBouncing;
   set isBouncing(bool value);
-
-  /// Create a copy of GenericAirQualityOddEvenCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericAirQualityOddEvenCircleWidgetConfigImplCopyWith<
           _$GenericAirQualityOddEvenCircleWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

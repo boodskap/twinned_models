@@ -52,12 +52,8 @@ mixin _$GenericTemperatureWidgetConfig {
   String get windChillField => throw _privateConstructorUsedError;
   set windChillField(String value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericTemperatureWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericTemperatureWidgetConfigCopyWith<GenericTemperatureWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -98,8 +94,6 @@ class _$GenericTemperatureWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,8 +209,6 @@ class __$$GenericTemperatureWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericTemperatureWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -379,9 +371,7 @@ class _$GenericTemperatureWidgetConfigImpl
     return 'GenericTemperatureWidgetConfig(title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, widgetColor: $widgetColor, currentTitle: $currentTitle, dewPointTitle: $dewPointTitle, humidityTitle: $humidityTitle, windChillTitle: $windChillTitle, displayInCelcius: $displayInCelcius, temperatureField: $temperatureField, dewPointField: $dewPointField, humidityField: $humidityField, windChillField: $windChillField)';
   }
 
-  /// Create a copy of GenericTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericTemperatureWidgetConfigImplCopyWith<
@@ -461,11 +451,8 @@ abstract class _GenericTemperatureWidgetConfig
   @override
   String get windChillField;
   set windChillField(String value);
-
-  /// Create a copy of GenericTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericTemperatureWidgetConfigImplCopyWith<
           _$GenericTemperatureWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

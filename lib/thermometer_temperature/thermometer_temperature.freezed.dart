@@ -40,12 +40,8 @@ mixin _$ThermometerTemperatureWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this ThermometerTemperatureWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ThermometerTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ThermometerTemperatureWidgetConfigCopyWith<
           ThermometerTemperatureWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -81,8 +77,6 @@ class _$ThermometerTemperatureWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ThermometerTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,8 +156,6 @@ class __$$ThermometerTemperatureWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ThermometerTemperatureWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ThermometerTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -272,9 +264,7 @@ class _$ThermometerTemperatureWidgetConfigImpl
     return 'ThermometerTemperatureWidgetConfig(deviceId: $deviceId, field: $field, title: $title, borderColor: $borderColor, foreColor: $foreColor, cardColor: $cardColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  /// Create a copy of ThermometerTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ThermometerTemperatureWidgetConfigImplCopyWith<
@@ -332,11 +322,8 @@ abstract class _ThermometerTemperatureWidgetConfig
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-
-  /// Create a copy of ThermometerTemperatureWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ThermometerTemperatureWidgetConfigImplCopyWith<
           _$ThermometerTemperatureWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
