@@ -29,16 +29,17 @@ _$VerticalFieldCardConfigImpl _$$VerticalFieldCardConfigImplFromJson(
       valueFont: json['valueFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 14,
+            'fontSize': 18,
             'fontColor': 0xFF000000,
             'fontBold': false
           },
-      valueBgColor: (json['valueBgColor'] as num?)?.toInt() ?? 0XFFC41E3A,
-      borderColor: (json['borderColor'] as num?)?.toInt() ?? 0XFFC41E3A,
-      borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 2,
-      spacing: (json['spacing'] as num?)?.toDouble() ?? 2,
+      valueBgColor: (json['valueBgColor'] as num?)?.toInt() ?? 0XFFFFFFFf,
+      borderColor: (json['borderColor'] as num?)?.toInt() ?? 0XFF808080,
+      borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 1,
+      spacing: (json['spacing'] as num?)?.toDouble() ?? 5,
       imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
       opacity: (json['opacity'] as num?)?.toDouble() ?? 0.4,
+      valueSectionWidth: (json['valueSectionWidth'] as num?)?.toDouble() ?? 80,
     );
 
 Map<String, dynamic> _$$VerticalFieldCardConfigImplToJson(
@@ -56,4 +57,5 @@ Map<String, dynamic> _$$VerticalFieldCardConfigImplToJson(
       'spacing': instance.spacing,
       'imageSize': instance.imageSize,
       'opacity': instance.opacity,
+      'valueSectionWidth': instance.valueSectionWidth,
     };

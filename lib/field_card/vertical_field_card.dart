@@ -29,17 +29,18 @@ class VerticalFieldCardConfig extends BaseConfig
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': false
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFFC41E3A) int valueBgColor,
-    @Default(0XFFC41E3A) int borderColor,
-    @Default(2) double borderWidth,
-    @Default(2) double spacing,
+    @Default(0XFFFFFFFf) int valueBgColor,
+    @Default(0XFF808080) int borderColor,
+    @Default(1) double borderWidth,
+    @Default(5) double spacing,
     @Default(25) double imageSize,
     @Default(0.4) double opacity,
+    @Default(80) double valueSectionWidth,
   }) = _VerticalFieldCardConfig;
 
   factory VerticalFieldCardConfig.fromJson(Map<String, dynamic> json) =>
@@ -58,6 +59,7 @@ class VerticalFieldCardConfig extends BaseConfig
       case 'borderWidth':
       case 'opacity':
       case 'imageSize':
+      case 'valueSectionWidth':
         return DataType.decimal;
       case 'labelFont':
       case 'titleFont':
@@ -116,6 +118,8 @@ class VerticalFieldCardConfig extends BaseConfig
         return 'Indicator Font';
       case 'labelFont':
         return 'Label Font';
+      case 'valueSectionWidth':
+        return 'Value Section Width';
       default:
         return parameter;
     }
