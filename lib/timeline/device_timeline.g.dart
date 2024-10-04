@@ -9,7 +9,6 @@ part of 'device_timeline.dart';
 _$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceTimelineWidgetConfigImpl(
-      title: json['title'] as String? ?? '',
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -50,7 +49,6 @@ _$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
 Map<String, dynamic> _$$DeviceTimelineWidgetConfigImplToJson(
         _$DeviceTimelineWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'title': instance.title,
       'titleFont': instance.titleFont,
       'width': instance.width,
       'height': instance.height,

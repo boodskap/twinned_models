@@ -70,12 +70,8 @@ mixin _$MultiDeviceFieldCardWidgetConfig {
   List<int> get cardBgColors => throw _privateConstructorUsedError;
   set cardBgColors(List<int> value) => throw _privateConstructorUsedError;
 
-  /// Serializes this MultiDeviceFieldCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MultiDeviceFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MultiDeviceFieldCardWidgetConfigCopyWith<MultiDeviceFieldCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -124,8 +120,6 @@ class _$MultiDeviceFieldCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MultiDeviceFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -289,8 +283,6 @@ class __$$MultiDeviceFieldCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiDeviceFieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MultiDeviceFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -540,9 +532,7 @@ class _$MultiDeviceFieldCardWidgetConfigImpl
     return 'MultiDeviceFieldCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, iconId: $iconId, title: $title, topLabel: $topLabel, bottomLabel: $bottomLabel, message: $message, messageWidth: $messageWidth, iconWidth: $iconWidth, iconHeight: $iconHeight, fieldIconWidth: $fieldIconWidth, fieldIconHeight: $fieldIconHeight, fieldSpacing: $fieldSpacing, fieldElevation: $fieldElevation, cardElevation: $cardElevation, titleFont: $titleFont, messageFont: $messageFont, topFont: $topFont, bottomFont: $bottomFont, valueFont: $valueFont, bottomLabelAsSuffix: $bottomLabelAsSuffix, cardBgColors: $cardBgColors)';
   }
 
-  /// Create a copy of MultiDeviceFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiDeviceFieldCardWidgetConfigImplCopyWith<
@@ -655,11 +645,8 @@ abstract class _MultiDeviceFieldCardWidgetConfig
   @override
   List<int> get cardBgColors;
   set cardBgColors(List<int> value);
-
-  /// Create a copy of MultiDeviceFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MultiDeviceFieldCardWidgetConfigImplCopyWith<
           _$MultiDeviceFieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

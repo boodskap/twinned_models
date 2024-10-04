@@ -57,12 +57,8 @@ mixin _$GenericCardImageWidgetConfig {
   double get backgroundImageHeight => throw _privateConstructorUsedError;
   set backgroundImageHeight(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericCardImageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericCardImageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericCardImageWidgetConfigCopyWith<GenericCardImageWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -105,8 +101,6 @@ class _$GenericCardImageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericCardImageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -234,8 +228,6 @@ class __$$GenericCardImageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericCardImageWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericCardImageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -420,9 +412,7 @@ class _$GenericCardImageWidgetConfigImpl extends _GenericCardImageWidgetConfig {
     return 'GenericCardImageWidgetConfig(deviceId: $deviceId, field: $field, unit: $unit, backgroundImage: $backgroundImage, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, content: $content, contentFont: $contentFont, contentImage: $contentImage, width: $width, height: $height, opacity: $opacity, seconds: $seconds, backgroundImageHeight: $backgroundImageHeight)';
   }
 
-  /// Create a copy of GenericCardImageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericCardImageWidgetConfigImplCopyWith<
@@ -510,11 +500,8 @@ abstract class _GenericCardImageWidgetConfig
   @override
   double get backgroundImageHeight;
   set backgroundImageHeight(double value);
-
-  /// Create a copy of GenericCardImageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericCardImageWidgetConfigImplCopyWith<
           _$GenericCardImageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

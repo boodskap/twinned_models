@@ -50,12 +50,8 @@ mixin _$GenericWindInfoWidgetConfig {
   int get contentFontSize => throw _privateConstructorUsedError;
   set contentFontSize(int value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericWindInfoWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericWindInfoWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericWindInfoWidgetConfigCopyWith<GenericWindInfoWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$GenericWindInfoWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericWindInfoWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -206,8 +200,6 @@ class __$$GenericWindInfoWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericWindInfoWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericWindInfoWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -360,9 +352,7 @@ class _$GenericWindInfoWidgetConfigImpl extends _GenericWindInfoWidgetConfig {
     return 'GenericWindInfoWidgetConfig(windTitle: $windTitle, separator: $separator, gustTitle: $gustTitle, speedTitle: $speedTitle, titleFont: $titleFont, labelFont: $labelFont, deviceId: $deviceId, windField: $windField, gustField: $gustField, directionField: $directionField, width: $width, height: $height, contentFontSize: $contentFontSize)';
   }
 
-  /// Create a copy of GenericWindInfoWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericWindInfoWidgetConfigImplCopyWith<_$GenericWindInfoWidgetConfigImpl>
@@ -437,11 +427,8 @@ abstract class _GenericWindInfoWidgetConfig
   @override
   int get contentFontSize;
   set contentFontSize(int value);
-
-  /// Create a copy of GenericWindInfoWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericWindInfoWidgetConfigImplCopyWith<_$GenericWindInfoWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
