@@ -50,12 +50,8 @@ mixin _$MultiFieldCardWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this MultiFieldCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MultiFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MultiFieldCardWidgetConfigCopyWith<MultiFieldCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -93,8 +89,6 @@ class _$MultiFieldCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MultiFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,8 +192,6 @@ class __$$MultiFieldCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiFieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MultiFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,9 +345,7 @@ class _$MultiFieldCardWidgetConfigImpl extends _MultiFieldCardWidgetConfig {
     return 'MultiFieldCardWidgetConfig(title: $title, titleFont: $titleFont, modelId: $modelId, field: $field, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
-  /// Create a copy of MultiFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiFieldCardWidgetConfigImplCopyWith<_$MultiFieldCardWidgetConfigImpl>
@@ -425,11 +415,8 @@ abstract class _MultiFieldCardWidgetConfig extends MultiFieldCardWidgetConfig {
   @override
   double get imageSize;
   set imageSize(double value);
-
-  /// Create a copy of MultiFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MultiFieldCardWidgetConfigImplCopyWith<_$MultiFieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

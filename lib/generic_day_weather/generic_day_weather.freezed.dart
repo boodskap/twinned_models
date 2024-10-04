@@ -84,12 +84,8 @@ mixin _$GenericDayWeatherWidgetConfig {
   int get humidityColor => throw _privateConstructorUsedError;
   set humidityColor(int value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericDayWeatherWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericDayWeatherWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericDayWeatherWidgetConfigCopyWith<GenericDayWeatherWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -146,8 +142,6 @@ class _$GenericDayWeatherWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericDayWeatherWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -359,8 +353,6 @@ class __$$GenericDayWeatherWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericDayWeatherWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericDayWeatherWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -667,9 +659,7 @@ class _$GenericDayWeatherWidgetConfigImpl
     return 'GenericDayWeatherWidgetConfig(deviceId: $deviceId, sunriseTitle: $sunriseTitle, sunsetTitle: $sunsetTitle, temperatureTitle: $temperatureTitle, currentTitle: $currentTitle, feelsLikeTitle: $feelsLikeTitle, minTitle: $minTitle, maxTitle: $maxTitle, pressureTitle: $pressureTitle, humidityTitle: $humidityTitle, temperaturSuffix: $temperaturSuffix, pressureSuffix: $pressureSuffix, labelFont: $labelFont, titleFont: $titleFont, sunriseField: $sunriseField, sunsetField: $sunsetField, temperatureField: $temperatureField, feelsLikeField: $feelsLikeField, minField: $minField, maxField: $maxField, pressureField: $pressureField, humidityField: $humidityField, sunriseColor: $sunriseColor, sunsetColor: $sunsetColor, currentColor: $currentColor, feelsLikeColor: $feelsLikeColor, minColor: $minColor, maxColor: $maxColor, pressureColor: $pressureColor, humidityColor: $humidityColor)';
   }
 
-  /// Create a copy of GenericDayWeatherWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericDayWeatherWidgetConfigImplCopyWith<
@@ -813,11 +803,8 @@ abstract class _GenericDayWeatherWidgetConfig
   @override
   int get humidityColor;
   set humidityColor(int value);
-
-  /// Create a copy of GenericDayWeatherWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericDayWeatherWidgetConfigImplCopyWith<
           _$GenericDayWeatherWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
