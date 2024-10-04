@@ -27,8 +27,8 @@ mixin _$DirectionalWidgetConfig {
   set fields(List<String> value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
-  int get titleBgColor => throw _privateConstructorUsedError;
-  set titleBgColor(int value) => throw _privateConstructorUsedError;
+  int get bgColor => throw _privateConstructorUsedError;
+  set bgColor(int value) => throw _privateConstructorUsedError;
   int get widgetColor => throw _privateConstructorUsedError;
   set widgetColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $DirectionalWidgetConfigCopyWith<$Res> {
       {String title,
       List<String> fields,
       String deviceId,
-      int titleBgColor,
+      int bgColor,
       int widgetColor,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
@@ -81,7 +81,7 @@ class _$DirectionalWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? fields = null,
     Object? deviceId = null,
-    Object? titleBgColor = null,
+    Object? bgColor = null,
     Object? widgetColor = null,
     Object? labelFont = null,
     Object? valueFont = null,
@@ -100,9 +100,9 @@ class _$DirectionalWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      titleBgColor: null == titleBgColor
-          ? _value.titleBgColor
-          : titleBgColor // ignore: cast_nullable_to_non_nullable
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
               as int,
       widgetColor: null == widgetColor
           ? _value.widgetColor
@@ -137,7 +137,7 @@ abstract class _$$DirectionalWidgetConfigImplCopyWith<$Res>
       {String title,
       List<String> fields,
       String deviceId,
-      int titleBgColor,
+      int bgColor,
       int widgetColor,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
@@ -160,7 +160,7 @@ class __$$DirectionalWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? fields = null,
     Object? deviceId = null,
-    Object? titleBgColor = null,
+    Object? bgColor = null,
     Object? widgetColor = null,
     Object? labelFont = null,
     Object? valueFont = null,
@@ -179,9 +179,9 @@ class __$$DirectionalWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      titleBgColor: null == titleBgColor
-          ? _value.titleBgColor
-          : titleBgColor // ignore: cast_nullable_to_non_nullable
+      bgColor: null == bgColor
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
               as int,
       widgetColor: null == widgetColor
           ? _value.widgetColor
@@ -210,8 +210,8 @@ class _$DirectionalWidgetConfigImpl extends _DirectionalWidgetConfig {
       {this.title = 'Directional Widget',
       this.fields = const [],
       this.deviceId = '',
-      this.titleBgColor = 0x00000000,
-      this.widgetColor = 0x00000000,
+      this.bgColor = 0xFFFFFFFF,
+      this.widgetColor = 0xFF2196F3,
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 10,
@@ -220,7 +220,7 @@ class _$DirectionalWidgetConfigImpl extends _DirectionalWidgetConfig {
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 10,
+        'fontSize': 12,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
@@ -246,7 +246,7 @@ class _$DirectionalWidgetConfigImpl extends _DirectionalWidgetConfig {
   String deviceId;
   @override
   @JsonKey()
-  int titleBgColor;
+  int bgColor;
   @override
   @JsonKey()
   int widgetColor;
@@ -262,7 +262,7 @@ class _$DirectionalWidgetConfigImpl extends _DirectionalWidgetConfig {
 
   @override
   String toString() {
-    return 'DirectionalWidgetConfig(title: $title, fields: $fields, deviceId: $deviceId, titleBgColor: $titleBgColor, widgetColor: $widgetColor, labelFont: $labelFont, valueFont: $valueFont, titleFont: $titleFont)';
+    return 'DirectionalWidgetConfig(title: $title, fields: $fields, deviceId: $deviceId, bgColor: $bgColor, widgetColor: $widgetColor, labelFont: $labelFont, valueFont: $valueFont, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -285,7 +285,7 @@ abstract class _DirectionalWidgetConfig extends DirectionalWidgetConfig {
       {String title,
       List<String> fields,
       String deviceId,
-      int titleBgColor,
+      int bgColor,
       int widgetColor,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont,
@@ -305,8 +305,8 @@ abstract class _DirectionalWidgetConfig extends DirectionalWidgetConfig {
   String get deviceId;
   set deviceId(String value);
   @override
-  int get titleBgColor;
-  set titleBgColor(int value);
+  int get bgColor;
+  set bgColor(int value);
   @override
   int get widgetColor;
   set widgetColor(int value);
