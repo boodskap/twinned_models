@@ -75,7 +75,16 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
 
   @override
   HintType getHintType(String parameter) {
-    return HintType.none;
+    switch (parameter) {
+      case 'fields':
+        return HintType.field;
+      case 'deviceId':
+        return HintType.deviceId;
+      case 'axisBgColor':
+        return HintType.color;
+      default:
+        return HintType.none;
+    }
   }
 
   @override
