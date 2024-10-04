@@ -17,13 +17,13 @@ class VerticalFieldCardWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default(500) double width,
+    @Default(650) double width,
     @Default(350) double height,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
