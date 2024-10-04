@@ -80,12 +80,8 @@ mixin _$MultipleFieldStatsWidgetConfig {
   bool get showTodayData => throw _privateConstructorUsedError;
   set showTodayData(bool value) => throw _privateConstructorUsedError;
 
-  /// Serializes this MultipleFieldStatsWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MultipleFieldStatsWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MultipleFieldStatsWidgetConfigCopyWith<MultipleFieldStatsWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -138,8 +134,6 @@ class _$MultipleFieldStatsWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MultipleFieldStatsWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -327,8 +321,6 @@ class __$$MultipleFieldStatsWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultipleFieldStatsWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MultipleFieldStatsWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -614,9 +606,7 @@ class _$MultipleFieldStatsWidgetConfigImpl
     return 'MultipleFieldStatsWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, field: $field, chartType: $chartType, axisLabelFont: $axisLabelFont, statsHeadingFont: $statsHeadingFont, statsValueFont: $statsValueFont, width: $width, height: $height, chartSeriesColors: $chartSeriesColors, minLabelText: $minLabelText, maxLabelText: $maxLabelText, avgLabelText: $avgLabelText, totalLabelText: $totalLabelText, showLabel: $showLabel, showStats: $showStats, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showTotalValue: $showTotalValue, showAvgValue: $showAvgValue, showTooltip: $showTooltip, showLegend: $showLegend, showTodayData: $showTodayData)';
   }
 
-  /// Create a copy of MultipleFieldStatsWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MultipleFieldStatsWidgetConfigImplCopyWith<
@@ -744,11 +734,8 @@ abstract class _MultipleFieldStatsWidgetConfig
   @override
   bool get showTodayData;
   set showTodayData(bool value);
-
-  /// Create a copy of MultipleFieldStatsWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MultipleFieldStatsWidgetConfigImplCopyWith<
           _$MultipleFieldStatsWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

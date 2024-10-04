@@ -67,12 +67,8 @@ mixin _$DeviceMinMaxAvgWidgetConfig {
   double get labelSpacing => throw _privateConstructorUsedError;
   set labelSpacing(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceMinMaxAvgWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceMinMaxAvgWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceMinMaxAvgWidgetConfigCopyWith<DeviceMinMaxAvgWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -119,8 +115,6 @@ class _$DeviceMinMaxAvgWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceMinMaxAvgWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -272,8 +266,6 @@ class __$$DeviceMinMaxAvgWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceMinMaxAvgWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceMinMaxAvgWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -504,9 +496,7 @@ class _$DeviceMinMaxAvgWidgetConfigImpl extends _DeviceMinMaxAvgWidgetConfig {
     return 'DeviceMinMaxAvgWidgetConfig(field: $field, deviceId: $deviceId, title: $title, titleFont: $titleFont, valueFont: $valueFont, prefixFont: $prefixFont, suffixFont: $suffixFont, labelFont: $labelFont, minLabel: $minLabel, maxLabel: $maxLabel, avgLabel: $avgLabel, prefixLabel: $prefixLabel, suffixLabel: $suffixLabel, minBgColor: $minBgColor, maxBgColor: $maxBgColor, avgBgColor: $avgBgColor, borderColor: $borderColor, titleBgColor: $titleBgColor, borderWidth: $borderWidth, labelSpacing: $labelSpacing)';
   }
 
-  /// Create a copy of DeviceMinMaxAvgWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceMinMaxAvgWidgetConfigImplCopyWith<_$DeviceMinMaxAvgWidgetConfigImpl>
@@ -609,11 +599,8 @@ abstract class _DeviceMinMaxAvgWidgetConfig
   @override
   double get labelSpacing;
   set labelSpacing(double value);
-
-  /// Create a copy of DeviceMinMaxAvgWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceMinMaxAvgWidgetConfigImplCopyWith<_$DeviceMinMaxAvgWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

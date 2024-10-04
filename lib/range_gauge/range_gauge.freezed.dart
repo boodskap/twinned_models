@@ -91,12 +91,8 @@ mixin _$DeviceFieldRangeGaugeWidgetConfig {
   List<dynamic> get gaugeRanges => throw _privateConstructorUsedError;
   set gaugeRanges(List<dynamic> value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceFieldRangeGaugeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceFieldRangeGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceFieldRangeGaugeWidgetConfigCopyWith<DeviceFieldRangeGaugeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -155,8 +151,6 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceFieldRangeGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -380,8 +374,6 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldRangeGaugeWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceFieldRangeGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -720,9 +712,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
     return 'DeviceFieldRangeGaugeWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, fields: $fields, field: $field, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, subTitleFont: $subTitleFont, minimum: $minimum, maximum: $maximum, interval: $interval, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, startAngle: $startAngle, endAngle: $endAngle, elementsPosition: $elementsPosition, labelOffset: $labelOffset, axisLineThickness: $axisLineThickness, gradientColors: $gradientColors, stops: $stops, markerpointerEnableAnimation: $markerpointerEnableAnimation, markeroffset: $markeroffset, markerHeight: $markerHeight, markerElevation: $markerElevation, valueColor: $valueColor, backgroundColor: $backgroundColor, markerColor: $markerColor, annotationAngle: $annotationAngle, positionFactor: $positionFactor, gaugeRanges: $gaugeRanges)';
   }
 
-  /// Create a copy of DeviceFieldRangeGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<
@@ -875,11 +865,8 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
   @override
   List<dynamic> get gaugeRanges;
   set gaugeRanges(List<dynamic> value);
-
-  /// Create a copy of DeviceFieldRangeGaugeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<
           _$DeviceFieldRangeGaugeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
