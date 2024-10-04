@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'device_timeline.dart';
+part of 'vertical_field_card.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-DeviceTimelineWidgetConfig _$DeviceTimelineWidgetConfigFromJson(
+VerticalFieldCardConfig _$VerticalFieldCardConfigFromJson(
     Map<String, dynamic> json) {
-  return _DeviceTimelineWidgetConfig.fromJson(json);
+  return _VerticalFieldCardConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DeviceTimelineWidgetConfig {
+mixin _$VerticalFieldCardConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -33,33 +33,35 @@ mixin _$DeviceTimelineWidgetConfig {
   Map<String, dynamic> get labelFont => throw _privateConstructorUsedError;
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get contentFont => throw _privateConstructorUsedError;
-  set contentFont(Map<String, dynamic> value) =>
+  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
+  set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  int get indicatorColor => throw _privateConstructorUsedError;
-  set indicatorColor(int value) => throw _privateConstructorUsedError;
-  Map<String, dynamic> get indicatorFont => throw _privateConstructorUsedError;
-  set indicatorFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
+  int get valueBgColor => throw _privateConstructorUsedError;
+  set valueBgColor(int value) => throw _privateConstructorUsedError;
+  int get borderColor => throw _privateConstructorUsedError;
+  set borderColor(int value) => throw _privateConstructorUsedError;
   double get borderWidth => throw _privateConstructorUsedError;
   set borderWidth(double value) => throw _privateConstructorUsedError;
+  double get spacing => throw _privateConstructorUsedError;
+  set spacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
+  double get valueSectionWidth => throw _privateConstructorUsedError;
+  set valueSectionWidth(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceTimelineWidgetConfigCopyWith<DeviceTimelineWidgetConfig>
-      get copyWith => throw _privateConstructorUsedError;
+  $VerticalFieldCardConfigCopyWith<VerticalFieldCardConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeviceTimelineWidgetConfigCopyWith<$Res> {
-  factory $DeviceTimelineWidgetConfigCopyWith(DeviceTimelineWidgetConfig value,
-          $Res Function(DeviceTimelineWidgetConfig) then) =
-      _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
-          DeviceTimelineWidgetConfig>;
+abstract class $VerticalFieldCardConfigCopyWith<$Res> {
+  factory $VerticalFieldCardConfigCopyWith(VerticalFieldCardConfig value,
+          $Res Function(VerticalFieldCardConfig) then) =
+      _$VerticalFieldCardConfigCopyWithImpl<$Res, VerticalFieldCardConfig>;
   @useResult
   $Res call(
       {Map<String, dynamic> titleFont,
@@ -67,19 +69,21 @@ abstract class $DeviceTimelineWidgetConfigCopyWith<$Res> {
       double height,
       String deviceId,
       Map<String, dynamic> labelFont,
-      Map<String, dynamic> contentFont,
-      int indicatorColor,
-      Map<String, dynamic> indicatorFont,
+      Map<String, dynamic> valueFont,
+      int valueBgColor,
+      int borderColor,
       double borderWidth,
+      double spacing,
       double imageSize,
-      double opacity});
+      double opacity,
+      double valueSectionWidth});
 }
 
 /// @nodoc
-class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
-        $Val extends DeviceTimelineWidgetConfig>
-    implements $DeviceTimelineWidgetConfigCopyWith<$Res> {
-  _$DeviceTimelineWidgetConfigCopyWithImpl(this._value, this._then);
+class _$VerticalFieldCardConfigCopyWithImpl<$Res,
+        $Val extends VerticalFieldCardConfig>
+    implements $VerticalFieldCardConfigCopyWith<$Res> {
+  _$VerticalFieldCardConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -94,12 +98,14 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
     Object? height = null,
     Object? deviceId = null,
     Object? labelFont = null,
-    Object? contentFont = null,
-    Object? indicatorColor = null,
-    Object? indicatorFont = null,
+    Object? valueFont = null,
+    Object? valueBgColor = null,
+    Object? borderColor = null,
     Object? borderWidth = null,
+    Object? spacing = null,
     Object? imageSize = null,
     Object? opacity = null,
+    Object? valueSectionWidth = null,
   }) {
     return _then(_value.copyWith(
       titleFont: null == titleFont
@@ -122,21 +128,25 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      contentFont: null == contentFont
-          ? _value.contentFont
-          : contentFont // ignore: cast_nullable_to_non_nullable
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      indicatorColor: null == indicatorColor
-          ? _value.indicatorColor
-          : indicatorColor // ignore: cast_nullable_to_non_nullable
+      valueBgColor: null == valueBgColor
+          ? _value.valueBgColor
+          : valueBgColor // ignore: cast_nullable_to_non_nullable
               as int,
-      indicatorFont: null == indicatorFont
-          ? _value.indicatorFont
-          : indicatorFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      borderColor: null == borderColor
+          ? _value.borderColor
+          : borderColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      spacing: null == spacing
+          ? _value.spacing
+          : spacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -146,17 +156,21 @@ class _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      valueSectionWidth: null == valueSectionWidth
+          ? _value.valueSectionWidth
+          : valueSectionWidth // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$DeviceTimelineWidgetConfigImplCopyWith<$Res>
-    implements $DeviceTimelineWidgetConfigCopyWith<$Res> {
-  factory _$$DeviceTimelineWidgetConfigImplCopyWith(
-          _$DeviceTimelineWidgetConfigImpl value,
-          $Res Function(_$DeviceTimelineWidgetConfigImpl) then) =
-      __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$VerticalFieldCardConfigImplCopyWith<$Res>
+    implements $VerticalFieldCardConfigCopyWith<$Res> {
+  factory _$$VerticalFieldCardConfigImplCopyWith(
+          _$VerticalFieldCardConfigImpl value,
+          $Res Function(_$VerticalFieldCardConfigImpl) then) =
+      __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -165,22 +179,24 @@ abstract class _$$DeviceTimelineWidgetConfigImplCopyWith<$Res>
       double height,
       String deviceId,
       Map<String, dynamic> labelFont,
-      Map<String, dynamic> contentFont,
-      int indicatorColor,
-      Map<String, dynamic> indicatorFont,
+      Map<String, dynamic> valueFont,
+      int valueBgColor,
+      int borderColor,
       double borderWidth,
+      double spacing,
       double imageSize,
-      double opacity});
+      double opacity,
+      double valueSectionWidth});
 }
 
 /// @nodoc
-class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
-    extends _$DeviceTimelineWidgetConfigCopyWithImpl<$Res,
-        _$DeviceTimelineWidgetConfigImpl>
-    implements _$$DeviceTimelineWidgetConfigImplCopyWith<$Res> {
-  __$$DeviceTimelineWidgetConfigImplCopyWithImpl(
-      _$DeviceTimelineWidgetConfigImpl _value,
-      $Res Function(_$DeviceTimelineWidgetConfigImpl) _then)
+class __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>
+    extends _$VerticalFieldCardConfigCopyWithImpl<$Res,
+        _$VerticalFieldCardConfigImpl>
+    implements _$$VerticalFieldCardConfigImplCopyWith<$Res> {
+  __$$VerticalFieldCardConfigImplCopyWithImpl(
+      _$VerticalFieldCardConfigImpl _value,
+      $Res Function(_$VerticalFieldCardConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -191,14 +207,16 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
     Object? height = null,
     Object? deviceId = null,
     Object? labelFont = null,
-    Object? contentFont = null,
-    Object? indicatorColor = null,
-    Object? indicatorFont = null,
+    Object? valueFont = null,
+    Object? valueBgColor = null,
+    Object? borderColor = null,
     Object? borderWidth = null,
+    Object? spacing = null,
     Object? imageSize = null,
     Object? opacity = null,
+    Object? valueSectionWidth = null,
   }) {
-    return _then(_$DeviceTimelineWidgetConfigImpl(
+    return _then(_$VerticalFieldCardConfigImpl(
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -219,21 +237,25 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
           ? _value.labelFont
           : labelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      contentFont: null == contentFont
-          ? _value.contentFont
-          : contentFont // ignore: cast_nullable_to_non_nullable
+      valueFont: null == valueFont
+          ? _value.valueFont
+          : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      indicatorColor: null == indicatorColor
-          ? _value.indicatorColor
-          : indicatorColor // ignore: cast_nullable_to_non_nullable
+      valueBgColor: null == valueBgColor
+          ? _value.valueBgColor
+          : valueBgColor // ignore: cast_nullable_to_non_nullable
               as int,
-      indicatorFont: null == indicatorFont
-          ? _value.indicatorFont
-          : indicatorFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      borderColor: null == borderColor
+          ? _value.borderColor
+          : borderColor // ignore: cast_nullable_to_non_nullable
+              as int,
       borderWidth: null == borderWidth
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
+              as double,
+      spacing: null == spacing
+          ? _value.spacing
+          : spacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -243,14 +265,18 @@ class __$$DeviceTimelineWidgetConfigImplCopyWithImpl<$Res>
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      valueSectionWidth: null == valueSectionWidth
+          ? _value.valueSectionWidth
+          : valueSectionWidth // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
-  _$DeviceTimelineWidgetConfigImpl(
+class _$VerticalFieldCardConfigImpl extends _VerticalFieldCardConfig {
+  _$VerticalFieldCardConfigImpl(
       {this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -266,27 +292,23 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
         'fontColor': 0xFFFFFFFF,
         'fontBold': true
       },
-      this.contentFont = const {
+      this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 18,
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.indicatorColor = 0XFFC41E3A,
-      this.indicatorFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 15,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.borderWidth = 2,
+      this.valueBgColor = 0XFFFFFFFf,
+      this.borderColor = 0XFF808080,
+      this.borderWidth = 1,
+      this.spacing = 5,
       this.imageSize = 25,
-      this.opacity = 0.4})
+      this.opacity = 0.4,
+      this.valueSectionWidth = 80})
       : super._();
 
-  factory _$DeviceTimelineWidgetConfigImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$DeviceTimelineWidgetConfigImplFromJson(json);
+  factory _$VerticalFieldCardConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VerticalFieldCardConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -305,60 +327,68 @@ class _$DeviceTimelineWidgetConfigImpl extends _DeviceTimelineWidgetConfig {
   Map<String, dynamic> labelFont;
   @override
   @JsonKey()
-  Map<String, dynamic> contentFont;
+  Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  int indicatorColor;
+  int valueBgColor;
   @override
   @JsonKey()
-  Map<String, dynamic> indicatorFont;
+  int borderColor;
   @override
   @JsonKey()
   double borderWidth;
+  @override
+  @JsonKey()
+  double spacing;
   @override
   @JsonKey()
   double imageSize;
   @override
   @JsonKey()
   double opacity;
+  @override
+  @JsonKey()
+  double valueSectionWidth;
 
   @override
   String toString() {
-    return 'DeviceTimelineWidgetConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, contentFont: $contentFont, indicatorColor: $indicatorColor, indicatorFont: $indicatorFont, borderWidth: $borderWidth, imageSize: $imageSize, opacity: $opacity)';
+    return 'VerticalFieldCardConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, valueFont: $valueFont, valueBgColor: $valueBgColor, borderColor: $borderColor, borderWidth: $borderWidth, spacing: $spacing, imageSize: $imageSize, opacity: $opacity, valueSectionWidth: $valueSectionWidth)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
-      get copyWith => __$$DeviceTimelineWidgetConfigImplCopyWithImpl<
-          _$DeviceTimelineWidgetConfigImpl>(this, _$identity);
+  _$$VerticalFieldCardConfigImplCopyWith<_$VerticalFieldCardConfigImpl>
+      get copyWith => __$$VerticalFieldCardConfigImplCopyWithImpl<
+          _$VerticalFieldCardConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeviceTimelineWidgetConfigImplToJson(
+    return _$$VerticalFieldCardConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
-  factory _DeviceTimelineWidgetConfig(
+abstract class _VerticalFieldCardConfig extends VerticalFieldCardConfig {
+  factory _VerticalFieldCardConfig(
       {Map<String, dynamic> titleFont,
       double width,
       double height,
       String deviceId,
       Map<String, dynamic> labelFont,
-      Map<String, dynamic> contentFont,
-      int indicatorColor,
-      Map<String, dynamic> indicatorFont,
+      Map<String, dynamic> valueFont,
+      int valueBgColor,
+      int borderColor,
       double borderWidth,
+      double spacing,
       double imageSize,
-      double opacity}) = _$DeviceTimelineWidgetConfigImpl;
-  _DeviceTimelineWidgetConfig._() : super._();
+      double opacity,
+      double valueSectionWidth}) = _$VerticalFieldCardConfigImpl;
+  _VerticalFieldCardConfig._() : super._();
 
-  factory _DeviceTimelineWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$DeviceTimelineWidgetConfigImpl.fromJson;
+  factory _VerticalFieldCardConfig.fromJson(Map<String, dynamic> json) =
+      _$VerticalFieldCardConfigImpl.fromJson;
 
   @override
   Map<String, dynamic> get titleFont;
@@ -376,17 +406,20 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get contentFont;
-  set contentFont(Map<String, dynamic> value);
+  Map<String, dynamic> get valueFont;
+  set valueFont(Map<String, dynamic> value);
   @override
-  int get indicatorColor;
-  set indicatorColor(int value);
+  int get valueBgColor;
+  set valueBgColor(int value);
   @override
-  Map<String, dynamic> get indicatorFont;
-  set indicatorFont(Map<String, dynamic> value);
+  int get borderColor;
+  set borderColor(int value);
   @override
   double get borderWidth;
   set borderWidth(double value);
+  @override
+  double get spacing;
+  set spacing(double value);
   @override
   double get imageSize;
   set imageSize(double value);
@@ -394,7 +427,10 @@ abstract class _DeviceTimelineWidgetConfig extends DeviceTimelineWidgetConfig {
   double get opacity;
   set opacity(double value);
   @override
+  double get valueSectionWidth;
+  set valueSectionWidth(double value);
+  @override
   @JsonKey(ignore: true)
-  _$$DeviceTimelineWidgetConfigImplCopyWith<_$DeviceTimelineWidgetConfigImpl>
+  _$$VerticalFieldCardConfigImplCopyWith<_$VerticalFieldCardConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
