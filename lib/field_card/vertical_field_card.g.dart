@@ -16,14 +16,14 @@ _$VerticalFieldCardWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          width: (json['width'] as num?)?.toDouble() ?? 500,
+          width: (json['width'] as num?)?.toDouble() ?? 650,
           height: (json['height'] as num?)?.toDouble() ?? 350,
           deviceId: json['deviceId'] as String? ?? '',
           labelFont: json['labelFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 18,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
