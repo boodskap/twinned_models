@@ -5,11 +5,11 @@ part 'vertical_field_card.freezed.dart';
 part 'vertical_field_card.g.dart';
 
 @unfreezed
-class VerticalFieldCardConfig extends BaseConfig
-    with _$VerticalFieldCardConfig {
-  VerticalFieldCardConfig._();
+class VerticalFieldCardWidgetConfig extends BaseConfig
+    with _$VerticalFieldCardWidgetConfig {
+  VerticalFieldCardWidgetConfig._();
 
-  factory VerticalFieldCardConfig({
+  factory VerticalFieldCardWidgetConfig({
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -41,10 +41,10 @@ class VerticalFieldCardConfig extends BaseConfig
     @Default(25) double imageSize,
     @Default(0.4) double opacity,
     @Default(80) double valueSectionWidth,
-  }) = _VerticalFieldCardConfig;
+  }) = _VerticalFieldCardWidgetConfig;
 
-  factory VerticalFieldCardConfig.fromJson(Map<String, dynamic> json) =>
-      _$VerticalFieldCardConfigFromJson(json);
+  factory VerticalFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$VerticalFieldCardWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
