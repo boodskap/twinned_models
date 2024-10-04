@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-VerticalFieldCardConfig _$VerticalFieldCardConfigFromJson(
+VerticalFieldCardWidgetConfig _$VerticalFieldCardWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _VerticalFieldCardConfig.fromJson(json);
+  return _VerticalFieldCardWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$VerticalFieldCardConfig {
+mixin _$VerticalFieldCardWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -48,18 +48,22 @@ mixin _$VerticalFieldCardConfig {
   set imageSize(double value) => throw _privateConstructorUsedError;
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
+  double get valueSectionWidth => throw _privateConstructorUsedError;
+  set valueSectionWidth(double value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VerticalFieldCardConfigCopyWith<VerticalFieldCardConfig> get copyWith =>
-      throw _privateConstructorUsedError;
+  $VerticalFieldCardWidgetConfigCopyWith<VerticalFieldCardWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VerticalFieldCardConfigCopyWith<$Res> {
-  factory $VerticalFieldCardConfigCopyWith(VerticalFieldCardConfig value,
-          $Res Function(VerticalFieldCardConfig) then) =
-      _$VerticalFieldCardConfigCopyWithImpl<$Res, VerticalFieldCardConfig>;
+abstract class $VerticalFieldCardWidgetConfigCopyWith<$Res> {
+  factory $VerticalFieldCardWidgetConfigCopyWith(
+          VerticalFieldCardWidgetConfig value,
+          $Res Function(VerticalFieldCardWidgetConfig) then) =
+      _$VerticalFieldCardWidgetConfigCopyWithImpl<$Res,
+          VerticalFieldCardWidgetConfig>;
   @useResult
   $Res call(
       {Map<String, dynamic> titleFont,
@@ -73,14 +77,15 @@ abstract class $VerticalFieldCardConfigCopyWith<$Res> {
       double borderWidth,
       double spacing,
       double imageSize,
-      double opacity});
+      double opacity,
+      double valueSectionWidth});
 }
 
 /// @nodoc
-class _$VerticalFieldCardConfigCopyWithImpl<$Res,
-        $Val extends VerticalFieldCardConfig>
-    implements $VerticalFieldCardConfigCopyWith<$Res> {
-  _$VerticalFieldCardConfigCopyWithImpl(this._value, this._then);
+class _$VerticalFieldCardWidgetConfigCopyWithImpl<$Res,
+        $Val extends VerticalFieldCardWidgetConfig>
+    implements $VerticalFieldCardWidgetConfigCopyWith<$Res> {
+  _$VerticalFieldCardWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -102,6 +107,7 @@ class _$VerticalFieldCardConfigCopyWithImpl<$Res,
     Object? spacing = null,
     Object? imageSize = null,
     Object? opacity = null,
+    Object? valueSectionWidth = null,
   }) {
     return _then(_value.copyWith(
       titleFont: null == titleFont
@@ -152,17 +158,21 @@ class _$VerticalFieldCardConfigCopyWithImpl<$Res,
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      valueSectionWidth: null == valueSectionWidth
+          ? _value.valueSectionWidth
+          : valueSectionWidth // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$VerticalFieldCardConfigImplCopyWith<$Res>
-    implements $VerticalFieldCardConfigCopyWith<$Res> {
-  factory _$$VerticalFieldCardConfigImplCopyWith(
-          _$VerticalFieldCardConfigImpl value,
-          $Res Function(_$VerticalFieldCardConfigImpl) then) =
-      __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>;
+abstract class _$$VerticalFieldCardWidgetConfigImplCopyWith<$Res>
+    implements $VerticalFieldCardWidgetConfigCopyWith<$Res> {
+  factory _$$VerticalFieldCardWidgetConfigImplCopyWith(
+          _$VerticalFieldCardWidgetConfigImpl value,
+          $Res Function(_$VerticalFieldCardWidgetConfigImpl) then) =
+      __$$VerticalFieldCardWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -177,17 +187,18 @@ abstract class _$$VerticalFieldCardConfigImplCopyWith<$Res>
       double borderWidth,
       double spacing,
       double imageSize,
-      double opacity});
+      double opacity,
+      double valueSectionWidth});
 }
 
 /// @nodoc
-class __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>
-    extends _$VerticalFieldCardConfigCopyWithImpl<$Res,
-        _$VerticalFieldCardConfigImpl>
-    implements _$$VerticalFieldCardConfigImplCopyWith<$Res> {
-  __$$VerticalFieldCardConfigImplCopyWithImpl(
-      _$VerticalFieldCardConfigImpl _value,
-      $Res Function(_$VerticalFieldCardConfigImpl) _then)
+class __$$VerticalFieldCardWidgetConfigImplCopyWithImpl<$Res>
+    extends _$VerticalFieldCardWidgetConfigCopyWithImpl<$Res,
+        _$VerticalFieldCardWidgetConfigImpl>
+    implements _$$VerticalFieldCardWidgetConfigImplCopyWith<$Res> {
+  __$$VerticalFieldCardWidgetConfigImplCopyWithImpl(
+      _$VerticalFieldCardWidgetConfigImpl _value,
+      $Res Function(_$VerticalFieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -205,8 +216,9 @@ class __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>
     Object? spacing = null,
     Object? imageSize = null,
     Object? opacity = null,
+    Object? valueSectionWidth = null,
   }) {
-    return _then(_$VerticalFieldCardConfigImpl(
+    return _then(_$VerticalFieldCardWidgetConfigImpl(
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -255,45 +267,52 @@ class __$$VerticalFieldCardConfigImplCopyWithImpl<$Res>
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      valueSectionWidth: null == valueSectionWidth
+          ? _value.valueSectionWidth
+          : valueSectionWidth // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$VerticalFieldCardConfigImpl extends _VerticalFieldCardConfig {
-  _$VerticalFieldCardConfigImpl(
+class _$VerticalFieldCardWidgetConfigImpl
+    extends _VerticalFieldCardWidgetConfig {
+  _$VerticalFieldCardWidgetConfigImpl(
       {this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.width = 500,
+      this.width = 650,
       this.height = 350,
       this.deviceId = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 18,
-        'fontColor': 0xFFFFFFFF,
+        'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 18,
         'fontColor': 0xFF000000,
         'fontBold': false
       },
-      this.valueBgColor = 0XFFC41E3A,
-      this.borderColor = 0XFFC41E3A,
-      this.borderWidth = 2,
-      this.spacing = 2,
+      this.valueBgColor = 0XFFFFFFFf,
+      this.borderColor = 0XFF808080,
+      this.borderWidth = 1,
+      this.spacing = 5,
       this.imageSize = 25,
-      this.opacity = 0.4})
+      this.opacity = 0.4,
+      this.valueSectionWidth = 80})
       : super._();
 
-  factory _$VerticalFieldCardConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$VerticalFieldCardConfigImplFromJson(json);
+  factory _$VerticalFieldCardWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$VerticalFieldCardWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -331,29 +350,34 @@ class _$VerticalFieldCardConfigImpl extends _VerticalFieldCardConfig {
   @override
   @JsonKey()
   double opacity;
+  @override
+  @JsonKey()
+  double valueSectionWidth;
 
   @override
   String toString() {
-    return 'VerticalFieldCardConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, valueFont: $valueFont, valueBgColor: $valueBgColor, borderColor: $borderColor, borderWidth: $borderWidth, spacing: $spacing, imageSize: $imageSize, opacity: $opacity)';
+    return 'VerticalFieldCardWidgetConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, valueFont: $valueFont, valueBgColor: $valueBgColor, borderColor: $borderColor, borderWidth: $borderWidth, spacing: $spacing, imageSize: $imageSize, opacity: $opacity, valueSectionWidth: $valueSectionWidth)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VerticalFieldCardConfigImplCopyWith<_$VerticalFieldCardConfigImpl>
-      get copyWith => __$$VerticalFieldCardConfigImplCopyWithImpl<
-          _$VerticalFieldCardConfigImpl>(this, _$identity);
+  _$$VerticalFieldCardWidgetConfigImplCopyWith<
+          _$VerticalFieldCardWidgetConfigImpl>
+      get copyWith => __$$VerticalFieldCardWidgetConfigImplCopyWithImpl<
+          _$VerticalFieldCardWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerticalFieldCardConfigImplToJson(
+    return _$$VerticalFieldCardWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _VerticalFieldCardConfig extends VerticalFieldCardConfig {
-  factory _VerticalFieldCardConfig(
+abstract class _VerticalFieldCardWidgetConfig
+    extends VerticalFieldCardWidgetConfig {
+  factory _VerticalFieldCardWidgetConfig(
       {Map<String, dynamic> titleFont,
       double width,
       double height,
@@ -365,11 +389,12 @@ abstract class _VerticalFieldCardConfig extends VerticalFieldCardConfig {
       double borderWidth,
       double spacing,
       double imageSize,
-      double opacity}) = _$VerticalFieldCardConfigImpl;
-  _VerticalFieldCardConfig._() : super._();
+      double opacity,
+      double valueSectionWidth}) = _$VerticalFieldCardWidgetConfigImpl;
+  _VerticalFieldCardWidgetConfig._() : super._();
 
-  factory _VerticalFieldCardConfig.fromJson(Map<String, dynamic> json) =
-      _$VerticalFieldCardConfigImpl.fromJson;
+  factory _VerticalFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$VerticalFieldCardWidgetConfigImpl.fromJson;
 
   @override
   Map<String, dynamic> get titleFont;
@@ -408,7 +433,11 @@ abstract class _VerticalFieldCardConfig extends VerticalFieldCardConfig {
   double get opacity;
   set opacity(double value);
   @override
+  double get valueSectionWidth;
+  set valueSectionWidth(double value);
+  @override
   @JsonKey(ignore: true)
-  _$$VerticalFieldCardConfigImplCopyWith<_$VerticalFieldCardConfigImpl>
+  _$$VerticalFieldCardWidgetConfigImplCopyWith<
+          _$VerticalFieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

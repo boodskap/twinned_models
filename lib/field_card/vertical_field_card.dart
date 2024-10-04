@@ -5,11 +5,11 @@ part 'vertical_field_card.freezed.dart';
 part 'vertical_field_card.g.dart';
 
 @unfreezed
-class VerticalFieldCardConfig extends BaseConfig
-    with _$VerticalFieldCardConfig {
-  VerticalFieldCardConfig._();
+class VerticalFieldCardWidgetConfig extends BaseConfig
+    with _$VerticalFieldCardWidgetConfig {
+  VerticalFieldCardWidgetConfig._();
 
-  factory VerticalFieldCardConfig({
+  factory VerticalFieldCardWidgetConfig({
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -17,33 +17,34 @@ class VerticalFieldCardConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default(500) double width,
+    @Default(650) double width,
     @Default(350) double height,
     @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
-      'fontColor': 0xFFFFFFFF,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> labelFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': false
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFFC41E3A) int valueBgColor,
-    @Default(0XFFC41E3A) int borderColor,
-    @Default(2) double borderWidth,
-    @Default(2) double spacing,
+    @Default(0XFFFFFFFf) int valueBgColor,
+    @Default(0XFF808080) int borderColor,
+    @Default(1) double borderWidth,
+    @Default(5) double spacing,
     @Default(25) double imageSize,
     @Default(0.4) double opacity,
-  }) = _VerticalFieldCardConfig;
+    @Default(80) double valueSectionWidth,
+  }) = _VerticalFieldCardWidgetConfig;
 
-  factory VerticalFieldCardConfig.fromJson(Map<String, dynamic> json) =>
-      _$VerticalFieldCardConfigFromJson(json);
+  factory VerticalFieldCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$VerticalFieldCardWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -58,6 +59,7 @@ class VerticalFieldCardConfig extends BaseConfig
       case 'borderWidth':
       case 'opacity':
       case 'imageSize':
+      case 'valueSectionWidth':
         return DataType.decimal;
       case 'labelFont':
       case 'titleFont':
@@ -116,6 +118,8 @@ class VerticalFieldCardConfig extends BaseConfig
         return 'Indicator Font';
       case 'labelFont':
         return 'Label Font';
+      case 'valueSectionWidth':
+        return 'Value Section Width';
       default:
         return parameter;
     }
