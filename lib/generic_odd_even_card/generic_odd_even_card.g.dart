@@ -68,14 +68,13 @@ _$GenericOddEvenCardWidgetConfigImpl
                 'fontColor': 0xFFFFFFFF,
                 'fontBold': true
               },
-          oddCardElevation:
-              (json['oddCardElevation'] as num?)?.toDouble() ?? 60,
+          oddCardElevation: (json['oddCardElevation'] as num?)?.toDouble() ?? 5,
           oddCardBGColor:
-              (json['oddCardBGColor'] as num?)?.toInt() ?? 0XFFbbdb44,
+              (json['oddCardBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
           evenCardElevation:
-              (json['evenCardElevation'] as num?)?.toDouble() ?? 50,
+              (json['evenCardElevation'] as num?)?.toDouble() ?? 5,
           evenCardBGColor:
-              (json['evenCardBGColor'] as num?)?.toInt() ?? 0XFFbcf766,
+              (json['evenCardBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,

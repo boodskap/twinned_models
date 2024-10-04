@@ -69,10 +69,10 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueMainFont,
-    @Default(60) double oddCardElevation,
-    @Default(0XFFbbdb44) int oddCardBGColor,
-    @Default(50) double evenCardElevation,
-    @Default(0XFFbcf766) int evenCardBGColor,
+    @Default(5) double oddCardElevation,
+    @Default(0XFF7CDAB8) int oddCardBGColor,
+    @Default(5) double evenCardElevation,
+    @Default(0XFFf79cA1) int evenCardBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
   }) = _GenericOddEvenCardWidgetConfig;
