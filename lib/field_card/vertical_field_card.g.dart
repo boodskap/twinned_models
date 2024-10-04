@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'device_timeline.dart';
+part of 'vertical_field_card.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
+_$VerticalFieldCardConfigImpl _$$VerticalFieldCardConfigImplFromJson(
         Map<String, dynamic> json) =>
-    _$DeviceTimelineWidgetConfigImpl(
+    _$VerticalFieldCardConfigImpl(
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
@@ -26,38 +26,34 @@ _$DeviceTimelineWidgetConfigImpl _$$DeviceTimelineWidgetConfigImplFromJson(
             'fontColor': 0xFFFFFFFF,
             'fontBold': true
           },
-      contentFont: json['contentFont'] as Map<String, dynamic>? ??
+      valueFont: json['valueFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
             'fontSize': 14,
             'fontColor': 0xFF000000,
             'fontBold': false
           },
-      indicatorColor: (json['indicatorColor'] as num?)?.toInt() ?? 0XFFC41E3A,
-      indicatorFont: json['indicatorFont'] as Map<String, dynamic>? ??
-          const {
-            'fontFamily': 'Open Sans',
-            'fontSize': 15,
-            'fontColor': 0xFFFFFFFF,
-            'fontBold': true
-          },
+      valueBgColor: (json['valueBgColor'] as num?)?.toInt() ?? 0XFFC41E3A,
+      borderColor: (json['borderColor'] as num?)?.toInt() ?? 0XFFC41E3A,
       borderWidth: (json['borderWidth'] as num?)?.toDouble() ?? 2,
+      spacing: (json['spacing'] as num?)?.toDouble() ?? 2,
       imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
       opacity: (json['opacity'] as num?)?.toDouble() ?? 0.4,
     );
 
-Map<String, dynamic> _$$DeviceTimelineWidgetConfigImplToJson(
-        _$DeviceTimelineWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$VerticalFieldCardConfigImplToJson(
+        _$VerticalFieldCardConfigImpl instance) =>
     <String, dynamic>{
       'titleFont': instance.titleFont,
       'width': instance.width,
       'height': instance.height,
       'deviceId': instance.deviceId,
       'labelFont': instance.labelFont,
-      'contentFont': instance.contentFont,
-      'indicatorColor': instance.indicatorColor,
-      'indicatorFont': instance.indicatorFont,
+      'valueFont': instance.valueFont,
+      'valueBgColor': instance.valueBgColor,
+      'borderColor': instance.borderColor,
       'borderWidth': instance.borderWidth,
+      'spacing': instance.spacing,
       'imageSize': instance.imageSize,
       'opacity': instance.opacity,
     };
