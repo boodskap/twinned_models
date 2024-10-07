@@ -13,6 +13,10 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           title: json['title'] as String? ?? '',
           subTitle: json['subTitle'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
+          fields: (json['fields'] as List<dynamic>?)
+                  ?.map((e) => e as String)
+                  .toList() ??
+              const [],
           field: json['field'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
@@ -95,6 +99,7 @@ Map<String, dynamic> _$$DeviceFieldRangeGaugeWidgetConfigImplToJson(
       'title': instance.title,
       'subTitle': instance.subTitle,
       'deviceId': instance.deviceId,
+      'fields': instance.fields,
       'field': instance.field,
       'titleFont': instance.titleFont,
       'valueFont': instance.valueFont,
