@@ -22,8 +22,8 @@ MultiFieldDeviceSplineChartWidgetConfig
 
 /// @nodoc
 mixin _$MultiFieldDeviceSplineChartWidgetConfig {
-  List<String> get field => throw _privateConstructorUsedError;
-  set field(List<String> value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   String get subTitle => throw _privateConstructorUsedError;
@@ -89,7 +89,7 @@ abstract class $MultiFieldDeviceSplineChartWidgetConfigCopyWith<$Res> {
           MultiFieldDeviceSplineChartWidgetConfig>;
   @useResult
   $Res call(
-      {List<String> field,
+      {List<String> fields,
       String title,
       String subTitle,
       List<int> chartColors,
@@ -128,7 +128,7 @@ class _$MultiFieldDeviceSplineChartWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
+    Object? fields = null,
     Object? title = null,
     Object? subTitle = null,
     Object? chartColors = null,
@@ -152,9 +152,9 @@ class _$MultiFieldDeviceSplineChartWidgetConfigCopyWithImpl<$Res,
     Object? splineAreaBorderWidth = null,
   }) {
     return _then(_value.copyWith(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -254,7 +254,7 @@ abstract class _$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String> field,
+      {List<String> fields,
       String title,
       String subTitle,
       List<int> chartColors,
@@ -291,7 +291,7 @@ class __$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = null,
+    Object? fields = null,
     Object? title = null,
     Object? subTitle = null,
     Object? chartColors = null,
@@ -315,9 +315,9 @@ class __$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWithImpl<$Res>
     Object? splineAreaBorderWidth = null,
   }) {
     return _then(_$MultiFieldDeviceSplineChartWidgetConfigImpl(
-      field: null == field
-          ? _value.field
-          : field // ignore: cast_nullable_to_non_nullable
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
               as List<String>,
       title: null == title
           ? _value.title
@@ -412,7 +412,7 @@ class __$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWithImpl<$Res>
 class _$MultiFieldDeviceSplineChartWidgetConfigImpl
     extends _MultiFieldDeviceSplineChartWidgetConfig {
   _$MultiFieldDeviceSplineChartWidgetConfigImpl(
-      {this.field = const [],
+      {this.fields = const [],
       this.title = 'Spline Chart',
       this.subTitle = '',
       this.chartColors = const [],
@@ -467,7 +467,7 @@ class _$MultiFieldDeviceSplineChartWidgetConfigImpl
 
   @override
   @JsonKey()
-  List<String> field;
+  List<String> fields;
   @override
   @JsonKey()
   String title;
@@ -534,7 +534,7 @@ class _$MultiFieldDeviceSplineChartWidgetConfigImpl
 
   @override
   String toString() {
-    return 'MultiFieldDeviceSplineChartWidgetConfig(field: $field, title: $title, subTitle: $subTitle, chartColors: $chartColors, gradientColors: $gradientColors, deviceId: $deviceId, labelFont: $labelFont, titleFont: $titleFont, subTitleFont: $subTitleFont, valueFont: $valueFont, tooltipFont: $tooltipFont, legendVisibility: $legendVisibility, iconType: $iconType, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, legendPosition: $legendPosition, enableTooltip: $enableTooltip, duration: $duration, chartBorderColor: $chartBorderColor, temperatureFieldColor: $temperatureFieldColor, splineAreaBorderColor: $splineAreaBorderColor, splineAreaBorderWidth: $splineAreaBorderWidth)';
+    return 'MultiFieldDeviceSplineChartWidgetConfig(fields: $fields, title: $title, subTitle: $subTitle, chartColors: $chartColors, gradientColors: $gradientColors, deviceId: $deviceId, labelFont: $labelFont, titleFont: $titleFont, subTitleFont: $subTitleFont, valueFont: $valueFont, tooltipFont: $tooltipFont, legendVisibility: $legendVisibility, iconType: $iconType, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, legendPosition: $legendPosition, enableTooltip: $enableTooltip, duration: $duration, chartBorderColor: $chartBorderColor, temperatureFieldColor: $temperatureFieldColor, splineAreaBorderColor: $splineAreaBorderColor, splineAreaBorderWidth: $splineAreaBorderWidth)';
   }
 
   @JsonKey(ignore: true)
@@ -557,7 +557,7 @@ class _$MultiFieldDeviceSplineChartWidgetConfigImpl
 abstract class _MultiFieldDeviceSplineChartWidgetConfig
     extends MultiFieldDeviceSplineChartWidgetConfig {
   factory _MultiFieldDeviceSplineChartWidgetConfig(
-          {List<String> field,
+          {List<String> fields,
           String title,
           String subTitle,
           List<int> chartColors,
@@ -587,8 +587,8 @@ abstract class _MultiFieldDeviceSplineChartWidgetConfig
       _$MultiFieldDeviceSplineChartWidgetConfigImpl.fromJson;
 
   @override
-  List<String> get field;
-  set field(List<String> value);
+  List<String> get fields;
+  set fields(List<String> value);
   @override
   String get title;
   set title(String value);

@@ -29,7 +29,7 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
               const {
                 'fontFamily': 'Open Sans',
                 'fontSize': 12,
-                'fontColor': 0xFFFFFFFF,
+                'fontColor': 0xFF000000,
                 'fontBold': true
               },
           labelFont: json['labelFont'] as Map<String, dynamic>? ??

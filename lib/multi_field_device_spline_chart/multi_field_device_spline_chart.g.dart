@@ -10,7 +10,7 @@ _$MultiFieldDeviceSplineChartWidgetConfigImpl
     _$$MultiFieldDeviceSplineChartWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$MultiFieldDeviceSplineChartWidgetConfigImpl(
-          field: (json['field'] as List<dynamic>?)
+          fields: (json['fields'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
@@ -85,7 +85,7 @@ _$MultiFieldDeviceSplineChartWidgetConfigImpl
 Map<String, dynamic> _$$MultiFieldDeviceSplineChartWidgetConfigImplToJson(
         _$MultiFieldDeviceSplineChartWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'field': instance.field,
+      'fields': instance.fields,
       'title': instance.title,
       'subTitle': instance.subTitle,
       'chartColors': instance.chartColors,
