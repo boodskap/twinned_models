@@ -48,27 +48,6 @@ _$GenericUpDownPentagonWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          prefixMainFont: json['prefixMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 13,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          suffixMainFont: json['suffixMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 13,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          valueMainFont: json['valueMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 17,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
           upperPentagonBGColor:
               (json['upperPentagonBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
           downPentagonBGColor:
@@ -89,9 +68,6 @@ Map<String, dynamic> _$$GenericUpDownPentagonWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
-      'prefixMainFont': instance.prefixMainFont,
-      'suffixMainFont': instance.suffixMainFont,
-      'valueMainFont': instance.valueMainFont,
       'upperPentagonBGColor': instance.upperPentagonBGColor,
       'downPentagonBGColor': instance.downPentagonBGColor,
       'horizontalSpacing': instance.horizontalSpacing,

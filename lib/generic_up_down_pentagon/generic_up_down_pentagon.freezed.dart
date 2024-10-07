@@ -42,15 +42,6 @@ mixin _$GenericUpDownPentagonWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get prefixMainFont => throw _privateConstructorUsedError;
-  set prefixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get suffixMainFont => throw _privateConstructorUsedError;
-  set suffixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueMainFont => throw _privateConstructorUsedError;
-  set valueMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
   int get upperPentagonBGColor => throw _privateConstructorUsedError;
   set upperPentagonBGColor(int value) => throw _privateConstructorUsedError;
   int get downPentagonBGColor => throw _privateConstructorUsedError;
@@ -87,9 +78,6 @@ abstract class $GenericUpDownPentagonWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int upperPentagonBGColor,
       int downPentagonBGColor,
       double horizontalSpacing,
@@ -120,9 +108,6 @@ class _$GenericUpDownPentagonWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? upperPentagonBGColor = null,
     Object? downPentagonBGColor = null,
     Object? horizontalSpacing = null,
@@ -160,18 +145,6 @@ class _$GenericUpDownPentagonWidgetConfigCopyWithImpl<$Res,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       upperPentagonBGColor: null == upperPentagonBGColor
           ? _value.upperPentagonBGColor
@@ -211,9 +184,6 @@ abstract class _$$GenericUpDownPentagonWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int upperPentagonBGColor,
       int downPentagonBGColor,
       double horizontalSpacing,
@@ -243,9 +213,6 @@ class __$$GenericUpDownPentagonWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? upperPentagonBGColor = null,
     Object? downPentagonBGColor = null,
     Object? horizontalSpacing = null,
@@ -283,18 +250,6 @@ class __$$GenericUpDownPentagonWidgetConfigImplCopyWithImpl<$Res>
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       upperPentagonBGColor: null == upperPentagonBGColor
           ? _value.upperPentagonBGColor
@@ -354,24 +309,6 @@ class _$GenericUpDownPentagonWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.prefixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.suffixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.valueMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 17,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
       this.upperPentagonBGColor = 0XFF7CDAB8,
       this.downPentagonBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
@@ -408,15 +345,6 @@ class _$GenericUpDownPentagonWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  Map<String, dynamic> prefixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> suffixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> valueMainFont;
-  @override
-  @JsonKey()
   int upperPentagonBGColor;
   @override
   @JsonKey()
@@ -430,7 +358,7 @@ class _$GenericUpDownPentagonWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericUpDownPentagonWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, upperPentagonBGColor: $upperPentagonBGColor, downPentagonBGColor: $downPentagonBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericUpDownPentagonWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, upperPentagonBGColor: $upperPentagonBGColor, downPentagonBGColor: $downPentagonBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   /// Create a copy of GenericUpDownPentagonWidgetConfig
@@ -462,9 +390,6 @@ abstract class _GenericUpDownPentagonWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int upperPentagonBGColor,
       int downPentagonBGColor,
       double horizontalSpacing,
@@ -499,15 +424,6 @@ abstract class _GenericUpDownPentagonWidgetConfig
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get prefixMainFont;
-  set prefixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get suffixMainFont;
-  set suffixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get valueMainFont;
-  set valueMainFont(Map<String, dynamic> value);
   @override
   int get upperPentagonBGColor;
   set upperPentagonBGColor(int value);

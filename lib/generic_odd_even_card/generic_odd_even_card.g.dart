@@ -47,27 +47,6 @@ _$GenericOddEvenCardWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          prefixMainFont: json['prefixMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 13,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          suffixMainFont: json['suffixMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 13,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
-          valueMainFont: json['valueMainFont'] as Map<String, dynamic>? ??
-              const {
-                'fontFamily': 'Open Sans',
-                'fontSize': 17,
-                'fontColor': 0xFFFFFFFF,
-                'fontBold': true
-              },
           oddCardElevation: (json['oddCardElevation'] as num?)?.toDouble() ?? 5,
           oddCardBGColor:
               (json['oddCardBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
@@ -91,9 +70,6 @@ Map<String, dynamic> _$$GenericOddEvenCardWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
-      'prefixMainFont': instance.prefixMainFont,
-      'suffixMainFont': instance.suffixMainFont,
-      'valueMainFont': instance.valueMainFont,
       'oddCardElevation': instance.oddCardElevation,
       'oddCardBGColor': instance.oddCardBGColor,
       'evenCardElevation': instance.evenCardElevation,

@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_air_quality_odd_even_circle.freezed.dart';
-part 'generic_air_quality_odd_even_circle.g.dart';
+part 'generic_odd_even_circle.freezed.dart';
+part 'generic_odd_even_circle.g.dart';
 
 @unfreezed
-class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
-    with _$GenericAirQualityOddEvenCircleWidgetConfig {
-  GenericAirQualityOddEvenCircleWidgetConfig._();
+class GenericOddEvenCircleWidgetConfig extends BaseConfig
+    with _$GenericOddEvenCircleWidgetConfig {
+  GenericOddEvenCircleWidgetConfig._();
 
-  factory GenericAirQualityOddEvenCircleWidgetConfig({
-    @Default('Air Quality Monitoring') String title,
+  factory GenericOddEvenCircleWidgetConfig({
+    @Default('Generic Odd Even Circle Widget') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -18,7 +18,7 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default('Check my Air Quality here!') String subTitle,
+    @Default('Device Monitoring By Using Circle Widget') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -27,7 +27,6 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> subTitleFont,
     @Default('') String deviceId,
-    @Default('') String mainField,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -49,49 +48,26 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 13,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> prefixMainFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 13,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> suffixMainFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 17,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueMainFont,
     @Default(60) double oddCircleRadius,
-    @Default(0XFFbbdb44) int oddCircleBGColor,
-    @Default(0XFFbbdb44) int oddCircleBorderColor,
+    @Default(0XFF7CB9E8) int oddCircleBGColor,
+    @Default(0XFF00308F) int oddCircleBorderColor,
     @Default(50) double evenCircleRadius,
-    @Default(0XFFbcf766) int evenCircleBGColor,
-    @Default(0XFFbcf766) int evenCircleBorderColor,
+    @Default(0XFFbfd5c63) int evenCircleBGColor,
+    @Default(0XFFD2122E) int evenCircleBorderColor,
     @Default(5) double horizontalSpacing,
     @Default(20) double verticalSpacing,
     @Default(25) double imageSize,
-    @Default(false) bool isBouncing,
-  }) = _GenericAirQualityOddEvenCircleWidgetConfig;
+  }) = _GenericOddEvenCircleWidgetConfig;
 
-  factory GenericAirQualityOddEvenCircleWidgetConfig.fromJson(
+  factory GenericOddEvenCircleWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$GenericAirQualityOddEvenCircleWidgetConfigFromJson(json);
+      _$GenericOddEvenCircleWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'title':
       case 'deviceId':
-      case 'mainField':
       case 'subTitle':
         return DataType.text;
       case 'oddCircleBGColor':
@@ -109,13 +85,8 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
       case 'prefixFont':
       case 'suffixFont':
       case 'valueFont':
-      case 'prefixMainFont':
-      case 'suffixMainFont':
-      case 'valueMainFont':
       case 'subTitleFont':
         return DataType.font;
-      case 'isBouncing':
-        return DataType.yesno;
       default:
         return DataType.none;
     }
@@ -124,8 +95,6 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'mainField':
-        return HintType.field;
       case 'oddCircleBGColor':
       case 'oddCircleBorderColor':
       case 'evenCircleBGColor':
@@ -174,22 +143,12 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
         return 'Suffix Font';
       case 'valueFont':
         return 'Value Font';
-      case 'prefixMainFont':
-        return 'Prefix Main Font';
-      case 'suffixMainFont':
-        return 'Suffix Main Font';
-      case 'valueMainFont':
-        return 'Value Main Font';
-      case 'mainField':
-        return 'Main Field';
       case 'horizontalSpacing':
         return 'Horizontal Spacing';
       case 'verticalSpacing':
         return 'Vertical Spacing';
       case 'imageSize':
         return 'Image Size';
-      case 'isBouncing':
-        return 'Is Bouncing';
       default:
         return parameter;
     }
@@ -205,7 +164,6 @@ class GenericAirQualityOddEvenCircleWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
       case 'title':
-      case 'mainField':
         return true;
       default:
         return false;
