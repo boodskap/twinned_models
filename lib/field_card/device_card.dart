@@ -1,15 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_device_card.freezed.dart';
-part 'generic_device_card.g.dart';
+part 'device_card.freezed.dart';
+part 'device_card.g.dart';
 
 @unfreezed
-class GenericDeviceCardWidgetConfig extends BaseConfig
-    with _$GenericDeviceCardWidgetConfig {
-  GenericDeviceCardWidgetConfig._();
+class DeviceCardWidgetConfig extends BaseConfig
+    with _$DeviceCardWidgetConfig {
+  DeviceCardWidgetConfig._();
 
-  factory GenericDeviceCardWidgetConfig({
+  factory DeviceCardWidgetConfig({
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -38,10 +38,10 @@ class GenericDeviceCardWidgetConfig extends BaseConfig
     @Default(200) double sectionSize,
     @Default(70) double imageSize,
     @Default(40) double parameterImageSize,
-  }) = _GenericDeviceCardWidgetConfig;
+  }) = _DeviceCardWidgetConfig;
 
-  factory GenericDeviceCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$GenericDeviceCardWidgetConfigFromJson(json);
+  factory DeviceCardWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$DeviceCardWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
