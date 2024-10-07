@@ -27,6 +27,8 @@ mixin _$DeviceFieldRangeGaugeWidgetConfig {
   set subTitle(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -108,6 +110,7 @@ abstract class $DeviceFieldRangeGaugeWidgetConfigCopyWith<$Res> {
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -155,6 +158,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
     Object? title = null,
     Object? subTitle = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? field = null,
     Object? titleFont = null,
     Object? valueFont = null,
@@ -197,6 +201,10 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -326,6 +334,7 @@ abstract class _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<$Res>
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -372,6 +381,7 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? subTitle = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? field = null,
     Object? titleFont = null,
     Object? valueFont = null,
@@ -414,6 +424,10 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -538,6 +552,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
       {this.title = '',
       this.subTitle = '',
       this.deviceId = '',
+      this.fields = const [],
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -606,6 +621,9 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
   @override
   @JsonKey()
   String deviceId;
+  @override
+  @JsonKey()
+  List<String> fields;
   @override
   @JsonKey()
   String field;
@@ -693,7 +711,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldRangeGaugeWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, subTitleFont: $subTitleFont, minimum: $minimum, maximum: $maximum, interval: $interval, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, startAngle: $startAngle, endAngle: $endAngle, elementsPosition: $elementsPosition, labelOffset: $labelOffset, axisLineThickness: $axisLineThickness, gradientColors: $gradientColors, stops: $stops, markerpointerEnableAnimation: $markerpointerEnableAnimation, markeroffset: $markeroffset, markerHeight: $markerHeight, markerElevation: $markerElevation, valueColor: $valueColor, backgroundColor: $backgroundColor, markerColor: $markerColor, annotationAngle: $annotationAngle, positionFactor: $positionFactor, gaugeRanges: $gaugeRanges)';
+    return 'DeviceFieldRangeGaugeWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, fields: $fields, field: $field, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, subTitleFont: $subTitleFont, minimum: $minimum, maximum: $maximum, interval: $interval, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, startAngle: $startAngle, endAngle: $endAngle, elementsPosition: $elementsPosition, labelOffset: $labelOffset, axisLineThickness: $axisLineThickness, gradientColors: $gradientColors, stops: $stops, markerpointerEnableAnimation: $markerpointerEnableAnimation, markeroffset: $markeroffset, markerHeight: $markerHeight, markerElevation: $markerElevation, valueColor: $valueColor, backgroundColor: $backgroundColor, markerColor: $markerColor, annotationAngle: $annotationAngle, positionFactor: $positionFactor, gaugeRanges: $gaugeRanges)';
   }
 
   @JsonKey(ignore: true)
@@ -718,6 +736,7 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
       {String title,
       String subTitle,
       String deviceId,
+      List<String> fields,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -761,6 +780,9 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
   @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  List<String> get fields;
+  set fields(List<String> value);
   @override
   String get field;
   set field(String value);
