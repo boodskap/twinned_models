@@ -42,15 +42,6 @@ mixin _$GenericOddEvenCardWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get prefixMainFont => throw _privateConstructorUsedError;
-  set prefixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get suffixMainFont => throw _privateConstructorUsedError;
-  set suffixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueMainFont => throw _privateConstructorUsedError;
-  set valueMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
   double get oddCardElevation => throw _privateConstructorUsedError;
   set oddCardElevation(double value) => throw _privateConstructorUsedError;
   int get oddCardBGColor => throw _privateConstructorUsedError;
@@ -64,8 +55,12 @@ mixin _$GenericOddEvenCardWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this GenericOddEvenCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenericOddEvenCardWidgetConfigCopyWith<GenericOddEvenCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -87,9 +82,6 @@ abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       double oddCardElevation,
       int oddCardBGColor,
       double evenCardElevation,
@@ -109,6 +101,8 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,9 +114,6 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? oddCardElevation = null,
     Object? oddCardBGColor = null,
     Object? evenCardElevation = null,
@@ -162,18 +153,6 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       oddCardElevation: null == oddCardElevation
           ? _value.oddCardElevation
@@ -221,9 +200,6 @@ abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       double oddCardElevation,
       int oddCardBGColor,
       double evenCardElevation,
@@ -242,6 +218,8 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericOddEvenCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -253,9 +231,6 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? oddCardElevation = null,
     Object? oddCardBGColor = null,
     Object? evenCardElevation = null,
@@ -295,18 +270,6 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       oddCardElevation: null == oddCardElevation
           ? _value.oddCardElevation
@@ -374,24 +337,6 @@ class _$GenericOddEvenCardWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.prefixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.suffixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.valueMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 17,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
       this.oddCardElevation = 5,
       this.oddCardBGColor = 0XFF7CDAB8,
       this.evenCardElevation = 5,
@@ -430,15 +375,6 @@ class _$GenericOddEvenCardWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  Map<String, dynamic> prefixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> suffixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> valueMainFont;
-  @override
-  @JsonKey()
   double oddCardElevation;
   @override
   @JsonKey()
@@ -458,10 +394,12 @@ class _$GenericOddEvenCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericOddEvenCardWidgetConfigImplCopyWith<
@@ -488,9 +426,6 @@ abstract class _GenericOddEvenCardWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       double oddCardElevation,
       int oddCardBGColor,
       double evenCardElevation,
@@ -527,15 +462,6 @@ abstract class _GenericOddEvenCardWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get prefixMainFont;
-  set prefixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get suffixMainFont;
-  set suffixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get valueMainFont;
-  set valueMainFont(Map<String, dynamic> value);
-  @override
   double get oddCardElevation;
   set oddCardElevation(double value);
   @override
@@ -553,8 +479,11 @@ abstract class _GenericOddEvenCardWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
+
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenericOddEvenCardWidgetConfigImplCopyWith<
           _$GenericOddEvenCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

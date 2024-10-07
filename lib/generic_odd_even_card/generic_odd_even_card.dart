@@ -48,27 +48,6 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 13,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> prefixMainFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 13,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> suffixMainFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 17,
-      'fontColor': 0xFFFFFFFF,
-      'fontBold': true
-    })
-    Map<String, dynamic> valueMainFont,
     @Default(5) double oddCardElevation,
     @Default(0XFF7CDAB8) int oddCardBGColor,
     @Default(5) double evenCardElevation,
@@ -99,9 +78,6 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
       case 'prefixFont':
       case 'suffixFont':
       case 'valueFont':
-      case 'prefixMainFont':
-      case 'suffixMainFont':
-      case 'valueMainFont':
       case 'subTitleFont':
         return DataType.font;
       default:
@@ -154,12 +130,6 @@ class GenericOddEvenCardWidgetConfig extends BaseConfig
         return 'Suffix Font';
       case 'valueFont':
         return 'Value Font';
-      case 'prefixMainFont':
-        return 'Prefix Main Font';
-      case 'suffixMainFont':
-        return 'Suffix Main Font';
-      case 'valueMainFont':
-        return 'Value Main Font';
       case 'horizontalSpacing':
         return 'Horizontal Spacing';
       case 'imageSize':
