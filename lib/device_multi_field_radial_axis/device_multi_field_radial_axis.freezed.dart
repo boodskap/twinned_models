@@ -24,10 +24,10 @@ DeviceMultiFieldRadialAxisWidgetConfig
 mixin _$DeviceMultiFieldRadialAxisWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  List<String> get fields => throw _privateConstructorUsedError;
-  set fields(List<String> value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
+  List<String> get fields => throw _privateConstructorUsedError;
+  set fields(List<String> value) => throw _privateConstructorUsedError;
   double get axisLineThickness => throw _privateConstructorUsedError;
   set axisLineThickness(double value) => throw _privateConstructorUsedError;
   double get startAngle => throw _privateConstructorUsedError;
@@ -49,12 +49,8 @@ mixin _$DeviceMultiFieldRadialAxisWidgetConfig {
   List<dynamic> get ranges => throw _privateConstructorUsedError;
   set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceMultiFieldRadialAxisWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceMultiFieldRadialAxisWidgetConfigCopyWith<
           DeviceMultiFieldRadialAxisWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -70,8 +66,8 @@ abstract class $DeviceMultiFieldRadialAxisWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String title,
-      List<String> fields,
       String deviceId,
+      List<String> fields,
       double axisLineThickness,
       double startAngle,
       double endAngle,
@@ -94,14 +90,12 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = null,
-    Object? fields = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? axisLineThickness = null,
     Object? startAngle = null,
     Object? endAngle = null,
@@ -117,14 +111,14 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      fields: null == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       axisLineThickness: null == axisLineThickness
           ? _value.axisLineThickness
           : axisLineThickness // ignore: cast_nullable_to_non_nullable
@@ -176,8 +170,8 @@ abstract class _$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String title,
-      List<String> fields,
       String deviceId,
+      List<String> fields,
       double axisLineThickness,
       double startAngle,
       double endAngle,
@@ -199,14 +193,12 @@ class __$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceMultiFieldRadialAxisWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = null,
-    Object? fields = null,
     Object? deviceId = null,
+    Object? fields = null,
     Object? axisLineThickness = null,
     Object? startAngle = null,
     Object? endAngle = null,
@@ -222,14 +214,14 @@ class __$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      fields: null == fields
-          ? _value.fields
-          : fields // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
               as String,
+      fields: null == fields
+          ? _value.fields
+          : fields // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       axisLineThickness: null == axisLineThickness
           ? _value.axisLineThickness
           : axisLineThickness // ignore: cast_nullable_to_non_nullable
@@ -275,9 +267,9 @@ class __$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWithImpl<$Res>
 class _$DeviceMultiFieldRadialAxisWidgetConfigImpl
     extends _DeviceMultiFieldRadialAxisWidgetConfig {
   _$DeviceMultiFieldRadialAxisWidgetConfigImpl(
-      {this.title = 'Multi-Field Gauge',
-      this.fields = const [],
+      {this.title = 'Multi-Field Radial Gauge',
       this.deviceId = '',
+      this.fields = const [],
       this.axisLineThickness = 20.0,
       this.startAngle = 270,
       this.endAngle = 180,
@@ -313,10 +305,10 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigImpl
   String title;
   @override
   @JsonKey()
-  List<String> fields;
+  String deviceId;
   @override
   @JsonKey()
-  String deviceId;
+  List<String> fields;
   @override
   @JsonKey()
   double axisLineThickness;
@@ -347,12 +339,10 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceMultiFieldRadialAxisWidgetConfig(title: $title, fields: $fields, deviceId: $deviceId, axisLineThickness: $axisLineThickness, startAngle: $startAngle, endAngle: $endAngle, axisBgColor: $axisBgColor, radiusFactor: $radiusFactor, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
+    return 'DeviceMultiFieldRadialAxisWidgetConfig(title: $title, deviceId: $deviceId, fields: $fields, axisLineThickness: $axisLineThickness, startAngle: $startAngle, endAngle: $endAngle, axisBgColor: $axisBgColor, radiusFactor: $radiusFactor, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
-  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWith<
@@ -373,8 +363,8 @@ abstract class _DeviceMultiFieldRadialAxisWidgetConfig
     extends DeviceMultiFieldRadialAxisWidgetConfig {
   factory _DeviceMultiFieldRadialAxisWidgetConfig(
       {String title,
-      List<String> fields,
       String deviceId,
+      List<String> fields,
       double axisLineThickness,
       double startAngle,
       double endAngle,
@@ -394,11 +384,11 @@ abstract class _DeviceMultiFieldRadialAxisWidgetConfig
   String get title;
   set title(String value);
   @override
-  List<String> get fields;
-  set fields(List<String> value);
-  @override
   String get deviceId;
   set deviceId(String value);
+  @override
+  List<String> get fields;
+  set fields(List<String> value);
   @override
   double get axisLineThickness;
   set axisLineThickness(double value);
@@ -426,11 +416,8 @@ abstract class _DeviceMultiFieldRadialAxisWidgetConfig
   @override
   List<dynamic> get ranges;
   set ranges(List<dynamic> value);
-
-  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWith<
           _$DeviceMultiFieldRadialAxisWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

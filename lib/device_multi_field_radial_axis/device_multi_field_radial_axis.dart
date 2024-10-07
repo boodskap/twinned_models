@@ -10,9 +10,9 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   DeviceMultiFieldRadialAxisWidgetConfig._();
 
   factory DeviceMultiFieldRadialAxisWidgetConfig({
-    @Default('Multi-Field Gauge') String title,
-    @Default([]) List<String> fields,
+    @Default('Multi-Field Radial Gauge') String title,
     @Default('') String deviceId,
+    @Default([]) List<String> fields,
     @Default(20.0) double axisLineThickness,
     @Default(270) double startAngle,
     @Default(180) double endAngle,
@@ -49,8 +49,8 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'title':
       case 'deviceId':
+      case 'title':
         return DataType.text;
       case 'fields':
         return DataType.listOfTexts;
@@ -76,10 +76,10 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'fields':
-        return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'fields':
+        return HintType.field;
       case 'axisBgColor':
         return HintType.color;
       default:
@@ -94,7 +94,34 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'fields':
+        return 'Select Fields';
+      case 'deviceId':
+        return 'Asset Models';
+      case 'title':
+        return 'Title';
+      case 'axisLineThickness':
+        return 'Axis Line Thickness';
+      case 'startAngle':
+        return 'Start Angle';
+      case 'endAngle':
+        return 'End Angle';
+      case 'axisBgColor':
+        return 'Axis BgColor';
+      case 'radiusFactor':
+        return 'Radius Factor';
+      case 'gaugeAnimate':
+        return 'Gauge Animation';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'ranges':
+        return 'Ranges';
+      default:
+        return parameter;
+    }
   }
 
   @override
@@ -105,8 +132,8 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'fields':
       case 'deviceId':
+      case 'fields':
         return true;
       default:
         return false;
@@ -116,5 +143,10 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   bool isValid(String parameter, value) {
     return true;
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {};
   }
 }

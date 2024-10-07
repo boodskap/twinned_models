@@ -52,7 +52,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default(true) bool showLabel,
     @Default(0) double startAngle,
     @Default(180) double endAngle,
-    @Default(ElementsPosition.outside) elementsPosition,
+    @Default(ElementsPosition.outside)ElementsPosition elementsPosition,
     @Default(20) double labelOffset,
     @Default(15) double axisLineThickness,
     @Default([]) List<int> gradientColors,
