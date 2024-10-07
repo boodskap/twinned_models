@@ -52,7 +52,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default(true) bool showLabel,
     @Default(0) double startAngle,
     @Default(180) double endAngle,
-    @Default(ElementsPosition.outside)ElementsPosition elementsPosition,
+    @Default(ElementsPosition.outside) ElementsPosition elementsPosition,
     @Default(20) double labelOffset,
     @Default(15) double axisLineThickness,
     @Default([]) List<int> gradientColors,
@@ -87,9 +87,9 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
       case 'deviceId':
         return DataType.text;
       case 'titleFont':
-      case 'legendFont':
-      case 'tooltipFont':
       case 'subTitleFont':
+      case 'valueFont':
+      case 'labelFont':
         return DataType.font;
       case 'showFirstLabel':
       case 'showLastLabel':
