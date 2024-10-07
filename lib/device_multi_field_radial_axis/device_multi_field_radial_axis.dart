@@ -99,6 +99,26 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
         return 'Select Field';
       case 'deviceId':
         return 'Asset Models';
+      case 'title':
+        return 'Title';
+      case 'axisLineThickness':
+        return 'Axis Line Thickness';
+      case 'startAngle':
+        return 'Start Angle';
+      case 'endAngle':
+        return 'End Angle';
+      case 'axisBgColor':
+        return 'Axis BgColor';
+      case 'radiusFactor':
+        return 'Radius Factor';
+      case 'gaugeAnimate':
+        return 'Gauge Animation';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'ranges':
+        return 'Ranges';
       default:
         return parameter;
     }
