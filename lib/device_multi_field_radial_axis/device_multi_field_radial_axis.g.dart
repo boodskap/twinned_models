@@ -10,12 +10,12 @@ _$DeviceMultiFieldRadialAxisWidgetConfigImpl
     _$$DeviceMultiFieldRadialAxisWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
         _$DeviceMultiFieldRadialAxisWidgetConfigImpl(
-          title: json['title'] as String? ?? 'Multi-Field Gauge',
+          title: json['title'] as String? ?? 'Multi-Field Radial Gauge',
+          deviceId: json['deviceId'] as String? ?? '',
           fields: (json['fields'] as List<dynamic>?)
                   ?.map((e) => e as String)
                   .toList() ??
               const [],
-          deviceId: json['deviceId'] as String? ?? '',
           axisLineThickness:
               (json['axisLineThickness'] as num?)?.toDouble() ?? 20.0,
           startAngle: (json['startAngle'] as num?)?.toDouble() ?? 270,
@@ -55,8 +55,8 @@ Map<String, dynamic> _$$DeviceMultiFieldRadialAxisWidgetConfigImplToJson(
         _$DeviceMultiFieldRadialAxisWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
-      'fields': instance.fields,
       'deviceId': instance.deviceId,
+      'fields': instance.fields,
       'axisLineThickness': instance.axisLineThickness,
       'startAngle': instance.startAngle,
       'endAngle': instance.endAngle,

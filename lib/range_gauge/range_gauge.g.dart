@@ -54,8 +54,9 @@ _$DeviceFieldRangeGaugeWidgetConfigImpl
           showLabel: json['showLabel'] as bool? ?? true,
           startAngle: (json['startAngle'] as num?)?.toDouble() ?? 0,
           endAngle: (json['endAngle'] as num?)?.toDouble() ?? 180,
-          elementsPosition:
-              json['elementsPosition'] ?? ElementsPosition.outside,
+          elementsPosition: $enumDecodeNullable(
+                  _$ElementsPositionEnumMap, json['elementsPosition']) ??
+              ElementsPosition.outside,
           labelOffset: (json['labelOffset'] as num?)?.toDouble() ?? 20,
           axisLineThickness:
               (json['axisLineThickness'] as num?)?.toDouble() ?? 15,
@@ -112,7 +113,7 @@ Map<String, dynamic> _$$DeviceFieldRangeGaugeWidgetConfigImplToJson(
       'showLabel': instance.showLabel,
       'startAngle': instance.startAngle,
       'endAngle': instance.endAngle,
-      'elementsPosition': instance.elementsPosition,
+      'elementsPosition': _$ElementsPositionEnumMap[instance.elementsPosition]!,
       'labelOffset': instance.labelOffset,
       'axisLineThickness': instance.axisLineThickness,
       'gradientColors': instance.gradientColors,
@@ -128,3 +129,8 @@ Map<String, dynamic> _$$DeviceFieldRangeGaugeWidgetConfigImplToJson(
       'positionFactor': instance.positionFactor,
       'gaugeRanges': instance.gaugeRanges,
     };
+
+const _$ElementsPositionEnumMap = {
+  ElementsPosition.inside: 'inside',
+  ElementsPosition.outside: 'outside',
+};
