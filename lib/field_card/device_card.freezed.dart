@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_device_card.dart';
+part of 'device_card.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericDeviceCardWidgetConfig _$GenericDeviceCardWidgetConfigFromJson(
+DeviceCardWidgetConfig _$DeviceCardWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _GenericDeviceCardWidgetConfig.fromJson(json);
+  return _DeviceCardWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericDeviceCardWidgetConfig {
+mixin _$DeviceCardWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -48,17 +48,15 @@ mixin _$GenericDeviceCardWidgetConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GenericDeviceCardWidgetConfigCopyWith<GenericDeviceCardWidgetConfig>
-      get copyWith => throw _privateConstructorUsedError;
+  $DeviceCardWidgetConfigCopyWith<DeviceCardWidgetConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericDeviceCardWidgetConfigCopyWith<$Res> {
-  factory $GenericDeviceCardWidgetConfigCopyWith(
-          GenericDeviceCardWidgetConfig value,
-          $Res Function(GenericDeviceCardWidgetConfig) then) =
-      _$GenericDeviceCardWidgetConfigCopyWithImpl<$Res,
-          GenericDeviceCardWidgetConfig>;
+abstract class $DeviceCardWidgetConfigCopyWith<$Res> {
+  factory $DeviceCardWidgetConfigCopyWith(DeviceCardWidgetConfig value,
+          $Res Function(DeviceCardWidgetConfig) then) =
+      _$DeviceCardWidgetConfigCopyWithImpl<$Res, DeviceCardWidgetConfig>;
   @useResult
   $Res call(
       {Map<String, dynamic> titleFont,
@@ -74,10 +72,10 @@ abstract class $GenericDeviceCardWidgetConfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GenericDeviceCardWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericDeviceCardWidgetConfig>
-    implements $GenericDeviceCardWidgetConfigCopyWith<$Res> {
-  _$GenericDeviceCardWidgetConfigCopyWithImpl(this._value, this._then);
+class _$DeviceCardWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceCardWidgetConfig>
+    implements $DeviceCardWidgetConfigCopyWith<$Res> {
+  _$DeviceCardWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -144,12 +142,12 @@ class _$GenericDeviceCardWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericDeviceCardWidgetConfigImplCopyWith<$Res>
-    implements $GenericDeviceCardWidgetConfigCopyWith<$Res> {
-  factory _$$GenericDeviceCardWidgetConfigImplCopyWith(
-          _$GenericDeviceCardWidgetConfigImpl value,
-          $Res Function(_$GenericDeviceCardWidgetConfigImpl) then) =
-      __$$GenericDeviceCardWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$DeviceCardWidgetConfigImplCopyWith<$Res>
+    implements $DeviceCardWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceCardWidgetConfigImplCopyWith(
+          _$DeviceCardWidgetConfigImpl value,
+          $Res Function(_$DeviceCardWidgetConfigImpl) then) =
+      __$$DeviceCardWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -166,13 +164,13 @@ abstract class _$$GenericDeviceCardWidgetConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GenericDeviceCardWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericDeviceCardWidgetConfigCopyWithImpl<$Res,
-        _$GenericDeviceCardWidgetConfigImpl>
-    implements _$$GenericDeviceCardWidgetConfigImplCopyWith<$Res> {
-  __$$GenericDeviceCardWidgetConfigImplCopyWithImpl(
-      _$GenericDeviceCardWidgetConfigImpl _value,
-      $Res Function(_$GenericDeviceCardWidgetConfigImpl) _then)
+class __$$DeviceCardWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceCardWidgetConfigCopyWithImpl<$Res,
+        _$DeviceCardWidgetConfigImpl>
+    implements _$$DeviceCardWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceCardWidgetConfigImplCopyWithImpl(
+      _$DeviceCardWidgetConfigImpl _value,
+      $Res Function(_$DeviceCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -189,7 +187,7 @@ class __$$GenericDeviceCardWidgetConfigImplCopyWithImpl<$Res>
     Object? imageSize = null,
     Object? parameterImageSize = null,
   }) {
-    return _then(_$GenericDeviceCardWidgetConfigImpl(
+    return _then(_$DeviceCardWidgetConfigImpl(
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -236,9 +234,8 @@ class __$$GenericDeviceCardWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericDeviceCardWidgetConfigImpl
-    extends _GenericDeviceCardWidgetConfig {
-  _$GenericDeviceCardWidgetConfigImpl(
+class _$DeviceCardWidgetConfigImpl extends _DeviceCardWidgetConfig {
+  _$DeviceCardWidgetConfigImpl(
       {this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
@@ -266,9 +263,8 @@ class _$GenericDeviceCardWidgetConfigImpl
       this.parameterImageSize = 40})
       : super._();
 
-  factory _$GenericDeviceCardWidgetConfigImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GenericDeviceCardWidgetConfigImplFromJson(json);
+  factory _$DeviceCardWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeviceCardWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -303,28 +299,26 @@ class _$GenericDeviceCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericDeviceCardWidgetConfig(titleFont: $titleFont, modelId: $modelId, borderColor: $borderColor, borderRadius: $borderRadius, borderWidth: $borderWidth, labelFont: $labelFont, parameterLabelFont: $parameterLabelFont, sectionSize: $sectionSize, imageSize: $imageSize, parameterImageSize: $parameterImageSize)';
+    return 'DeviceCardWidgetConfig(titleFont: $titleFont, modelId: $modelId, borderColor: $borderColor, borderRadius: $borderRadius, borderWidth: $borderWidth, labelFont: $labelFont, parameterLabelFont: $parameterLabelFont, sectionSize: $sectionSize, imageSize: $imageSize, parameterImageSize: $parameterImageSize)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericDeviceCardWidgetConfigImplCopyWith<
-          _$GenericDeviceCardWidgetConfigImpl>
-      get copyWith => __$$GenericDeviceCardWidgetConfigImplCopyWithImpl<
-          _$GenericDeviceCardWidgetConfigImpl>(this, _$identity);
+  _$$DeviceCardWidgetConfigImplCopyWith<_$DeviceCardWidgetConfigImpl>
+      get copyWith => __$$DeviceCardWidgetConfigImplCopyWithImpl<
+          _$DeviceCardWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericDeviceCardWidgetConfigImplToJson(
+    return _$$DeviceCardWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericDeviceCardWidgetConfig
-    extends GenericDeviceCardWidgetConfig {
-  factory _GenericDeviceCardWidgetConfig(
+abstract class _DeviceCardWidgetConfig extends DeviceCardWidgetConfig {
+  factory _DeviceCardWidgetConfig(
       {Map<String, dynamic> titleFont,
       String modelId,
       int borderColor,
@@ -334,11 +328,11 @@ abstract class _GenericDeviceCardWidgetConfig
       Map<String, dynamic> parameterLabelFont,
       double sectionSize,
       double imageSize,
-      double parameterImageSize}) = _$GenericDeviceCardWidgetConfigImpl;
-  _GenericDeviceCardWidgetConfig._() : super._();
+      double parameterImageSize}) = _$DeviceCardWidgetConfigImpl;
+  _DeviceCardWidgetConfig._() : super._();
 
-  factory _GenericDeviceCardWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$GenericDeviceCardWidgetConfigImpl.fromJson;
+  factory _DeviceCardWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$DeviceCardWidgetConfigImpl.fromJson;
 
   @override
   Map<String, dynamic> get titleFont;
@@ -372,7 +366,6 @@ abstract class _GenericDeviceCardWidgetConfig
   set parameterImageSize(double value);
   @override
   @JsonKey(ignore: true)
-  _$$GenericDeviceCardWidgetConfigImplCopyWith<
-          _$GenericDeviceCardWidgetConfigImpl>
+  _$$DeviceCardWidgetConfigImplCopyWith<_$DeviceCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
