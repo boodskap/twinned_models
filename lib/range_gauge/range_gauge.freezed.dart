@@ -59,8 +59,9 @@ mixin _$DeviceFieldRangeGaugeWidgetConfig {
   set startAngle(double value) => throw _privateConstructorUsedError;
   double get endAngle => throw _privateConstructorUsedError;
   set endAngle(double value) => throw _privateConstructorUsedError;
-  dynamic get elementsPosition => throw _privateConstructorUsedError;
-  set elementsPosition(dynamic value) => throw _privateConstructorUsedError;
+  ElementsPosition get elementsPosition => throw _privateConstructorUsedError;
+  set elementsPosition(ElementsPosition value) =>
+      throw _privateConstructorUsedError;
   double get labelOffset => throw _privateConstructorUsedError;
   set labelOffset(double value) => throw _privateConstructorUsedError;
   double get axisLineThickness => throw _privateConstructorUsedError;
@@ -123,7 +124,7 @@ abstract class $DeviceFieldRangeGaugeWidgetConfigCopyWith<$Res> {
       bool showLabel,
       double startAngle,
       double endAngle,
-      dynamic elementsPosition,
+      ElementsPosition elementsPosition,
       double labelOffset,
       double axisLineThickness,
       List<int> gradientColors,
@@ -171,7 +172,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
     Object? showLabel = null,
     Object? startAngle = null,
     Object? endAngle = null,
-    Object? elementsPosition = freezed,
+    Object? elementsPosition = null,
     Object? labelOffset = null,
     Object? axisLineThickness = null,
     Object? gradientColors = null,
@@ -256,10 +257,10 @@ class _$DeviceFieldRangeGaugeWidgetConfigCopyWithImpl<$Res,
           ? _value.endAngle
           : endAngle // ignore: cast_nullable_to_non_nullable
               as double,
-      elementsPosition: freezed == elementsPosition
+      elementsPosition: null == elementsPosition
           ? _value.elementsPosition
           : elementsPosition // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as ElementsPosition,
       labelOffset: null == labelOffset
           ? _value.labelOffset
           : labelOffset // ignore: cast_nullable_to_non_nullable
@@ -347,7 +348,7 @@ abstract class _$$DeviceFieldRangeGaugeWidgetConfigImplCopyWith<$Res>
       bool showLabel,
       double startAngle,
       double endAngle,
-      dynamic elementsPosition,
+      ElementsPosition elementsPosition,
       double labelOffset,
       double axisLineThickness,
       List<int> gradientColors,
@@ -394,7 +395,7 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
     Object? showLabel = null,
     Object? startAngle = null,
     Object? endAngle = null,
-    Object? elementsPosition = freezed,
+    Object? elementsPosition = null,
     Object? labelOffset = null,
     Object? axisLineThickness = null,
     Object? gradientColors = null,
@@ -479,9 +480,10 @@ class __$$DeviceFieldRangeGaugeWidgetConfigImplCopyWithImpl<$Res>
           ? _value.endAngle
           : endAngle // ignore: cast_nullable_to_non_nullable
               as double,
-      elementsPosition: freezed == elementsPosition
-          ? _value.elementsPosition!
-          : elementsPosition,
+      elementsPosition: null == elementsPosition
+          ? _value.elementsPosition
+          : elementsPosition // ignore: cast_nullable_to_non_nullable
+              as ElementsPosition,
       labelOffset: null == labelOffset
           ? _value.labelOffset
           : labelOffset // ignore: cast_nullable_to_non_nullable
@@ -663,7 +665,7 @@ class _$DeviceFieldRangeGaugeWidgetConfigImpl
   double endAngle;
   @override
   @JsonKey()
-  dynamic elementsPosition;
+  ElementsPosition elementsPosition;
   @override
   @JsonKey()
   double labelOffset;
@@ -748,7 +750,7 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
       bool showLabel,
       double startAngle,
       double endAngle,
-      dynamic elementsPosition,
+      ElementsPosition elementsPosition,
       double labelOffset,
       double axisLineThickness,
       List<int> gradientColors,
@@ -821,8 +823,8 @@ abstract class _DeviceFieldRangeGaugeWidgetConfig
   double get endAngle;
   set endAngle(double value);
   @override
-  dynamic get elementsPosition;
-  set elementsPosition(dynamic value);
+  ElementsPosition get elementsPosition;
+  set elementsPosition(ElementsPosition value);
   @override
   double get labelOffset;
   set labelOffset(double value);

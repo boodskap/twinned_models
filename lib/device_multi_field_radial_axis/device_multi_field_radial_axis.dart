@@ -10,9 +10,9 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   DeviceMultiFieldRadialAxisWidgetConfig._();
 
   factory DeviceMultiFieldRadialAxisWidgetConfig({
-    @Default('Multi-Field Gauge') String title,
-    @Default([]) List<String> fields,
+    @Default('Multi-Field Radial Gauge') String title,
     @Default('') String deviceId,
+    @Default([]) List<String> fields,
     @Default(20.0) double axisLineThickness,
     @Default(270) double startAngle,
     @Default(180) double endAngle,
@@ -94,7 +94,14 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'field':
+        return 'Select Field';
+      case 'deviceId':
+        return 'Asset Models';
+      default:
+        return parameter;
+    }
   }
 
   @override
@@ -116,5 +123,10 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   bool isValid(String parameter, value) {
     return true;
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {};
   }
 }
