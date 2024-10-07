@@ -49,8 +49,8 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'title':
       case 'deviceId':
+      case 'title':
         return DataType.text;
       case 'fields':
         return DataType.listOfTexts;
@@ -76,10 +76,10 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'fields':
-        return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'fields':
+        return HintType.field;
       case 'axisBgColor':
         return HintType.color;
       default:
@@ -95,8 +95,8 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   String getLabel(String parameter) {
     switch (parameter) {
-      case 'field':
-        return 'Select Field';
+      case 'fields':
+        return 'Select Fields';
       case 'deviceId':
         return 'Asset Models';
       case 'title':
@@ -132,8 +132,8 @@ class DeviceMultiFieldRadialAxisWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'fields':
       case 'deviceId':
+      case 'fields':
         return true;
       default:
         return false;
