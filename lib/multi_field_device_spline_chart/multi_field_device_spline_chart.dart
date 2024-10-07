@@ -11,7 +11,7 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
   MultiFieldDeviceSplineChartWidgetConfig._();
 
   factory MultiFieldDeviceSplineChartWidgetConfig({
-    @Default([]) List<String> field,
+    @Default([]) List<String> fields,
     @Default('Spline Chart') String title,
     @Default('') String subTitle,
     @Default([]) List<int> chartColors,
@@ -75,7 +75,7 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'title':
         return DataType.text;
-      case 'field':
+      case 'fields':
         return DataType.listOfTexts;
       case 'titleFont':
       case 'subTitleFont':
@@ -112,13 +112,15 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
     switch (parameter) {
       case 'deviceId':
         return HintType.deviceId;
-      case 'field':
+      case 'fields':
         return HintType.field;
       case 'labelBgColor':
       case 'labelBorderColor':
       case 'chartBorderColor':
       case 'temperatureFieldColor':
       case 'splineAreaBorderColor':
+      case 'gradientColors':
+      case 'chartColors':
         return HintType.color;
 
       default:
@@ -151,7 +153,7 @@ class MultiFieldDeviceSplineChartWidgetConfig extends BaseConfig
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'field':
+      case 'fields':
       case 'deviceId':
         return true;
       default:
