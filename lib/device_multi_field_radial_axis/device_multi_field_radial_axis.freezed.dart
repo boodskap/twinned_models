@@ -49,8 +49,12 @@ mixin _$DeviceMultiFieldRadialAxisWidgetConfig {
   List<dynamic> get ranges => throw _privateConstructorUsedError;
   set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceMultiFieldRadialAxisWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceMultiFieldRadialAxisWidgetConfigCopyWith<
           DeviceMultiFieldRadialAxisWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -90,6 +94,8 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -193,6 +199,8 @@ class __$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceMultiFieldRadialAxisWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -342,7 +350,9 @@ class _$DeviceMultiFieldRadialAxisWidgetConfigImpl
     return 'DeviceMultiFieldRadialAxisWidgetConfig(title: $title, fields: $fields, deviceId: $deviceId, axisLineThickness: $axisLineThickness, startAngle: $startAngle, endAngle: $endAngle, axisBgColor: $axisBgColor, radiusFactor: $radiusFactor, gaugeAnimate: $gaugeAnimate, labelFont: $labelFont, titleFont: $titleFont, ranges: $ranges)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWith<
@@ -416,8 +426,11 @@ abstract class _DeviceMultiFieldRadialAxisWidgetConfig
   @override
   List<dynamic> get ranges;
   set ranges(List<dynamic> value);
+
+  /// Create a copy of DeviceMultiFieldRadialAxisWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceMultiFieldRadialAxisWidgetConfigImplCopyWith<
           _$DeviceMultiFieldRadialAxisWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
