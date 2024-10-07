@@ -14,6 +14,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default('') String title,
     @Default('') String subTitle,
     @Default('') String deviceId,
+    @Default([]) List<String> fields,
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
@@ -51,7 +52,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
     @Default(true) bool showLabel,
     @Default(0) double startAngle,
     @Default(180) double endAngle,
-    @Default(ElementsPosition.outside) ElementsPosition elementsPosition,
+    @Default(ElementsPosition.outside)ElementsPosition elementsPosition,
     @Default(20) double labelOffset,
     @Default(15) double axisLineThickness,
     @Default([]) List<int> gradientColors,
@@ -99,6 +100,8 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
         return DataType.enumerated;
       case 'stops':
         return DataType.listOfDecimals;
+      case 'fields':
+        return DataType.listOfTexts;
       case 'gradientColors':
         return DataType.listOfNumbers;
       case 'markerColor':
@@ -129,6 +132,7 @@ class DeviceFieldRangeGaugeWidgetConfig extends BaseConfig
   HintType getHintType(String parameter) {
     switch (parameter) {
       case 'field':
+      case 'fields':
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
