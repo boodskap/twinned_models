@@ -51,12 +51,8 @@ mixin _$GenericUpDownTriangleWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericUpDownTriangleWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericUpDownTriangleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericUpDownTriangleWidgetConfigCopyWith<GenericUpDownTriangleWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$GenericUpDownTriangleWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericUpDownTriangleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,8 +194,6 @@ class __$$GenericUpDownTriangleWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericUpDownTriangleWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericUpDownTriangleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -361,9 +353,7 @@ class _$GenericUpDownTriangleWidgetConfigImpl
     return 'GenericUpDownTriangleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, upTriangleBGColor: $upTriangleBGColor, downTriangleBGColor: $downTriangleBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericUpDownTriangleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericUpDownTriangleWidgetConfigImplCopyWith<
@@ -436,11 +426,8 @@ abstract class _GenericUpDownTriangleWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
-
-  /// Create a copy of GenericUpDownTriangleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericUpDownTriangleWidgetConfigImplCopyWith<
           _$GenericUpDownTriangleWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
