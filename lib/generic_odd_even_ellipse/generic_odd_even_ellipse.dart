@@ -49,7 +49,7 @@ class GenericOddEvenEllipseWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> valueFont,
     @Default(0XFF7CDAB8) int oddEllipseBGColor,
-    @Default(0XFFf79cA1) int evanEllipseBGColor,
+    @Default(0XFFf79cA1) int evenEllipseBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
   }) = _GenericOddEvenEllipseWidgetConfig;

@@ -49,7 +49,7 @@ class GenericOddEvenOvalWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> valueFont,
     @Default(0XFF7CDAB8) int oddOvalBGColor,
-    @Default(0XFFf79cA1) int evanOvalBGColor,
+    @Default(0XFFf79cA1) int evenOvalBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
   }) = _GenericOddEvenOvalWidgetConfig;
