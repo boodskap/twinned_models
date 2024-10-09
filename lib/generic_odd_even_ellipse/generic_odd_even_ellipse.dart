@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_up_down_semi_circle.freezed.dart';
-part 'generic_up_down_semi_circle.g.dart';
+part 'generic_odd_even_ellipse.freezed.dart';
+part 'generic_odd_even_ellipse.g.dart';
 
 @unfreezed
-class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
-    with _$GenericUpDownSemiCircleWidgetConfig {
-  GenericUpDownSemiCircleWidgetConfig._();
+class GenericOddEvenEllipseWidgetConfig extends BaseConfig
+    with _$GenericOddEvenEllipseWidgetConfig {
+  GenericOddEvenEllipseWidgetConfig._();
 
-  factory GenericUpDownSemiCircleWidgetConfig({
-    @Default('Generic Up Down Semi Circle') String title,
+  factory GenericOddEvenEllipseWidgetConfig({
+    @Default('Generic Odd Even Ellipse Widget') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -18,8 +18,7 @@ class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default('Check Your Device Data By Using Semi Circle Shape!')
-    String subTitle,
+    @Default('Check Your Device Data By Using Ellipse Shape!') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -49,15 +48,15 @@ class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFF7CDAB8) int upSemiCircleBGColor,
-    @Default(0XFFf79cA1) int downSemiCircleBGColor,
+    @Default(0XFF7CDAB8) int oddEllipseBGColor,
+    @Default(0XFFf79cA1) int evanEllipseBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericUpDownSemiCircleWidgetConfig;
+  }) = _GenericOddEvenEllipseWidgetConfig;
 
-  factory GenericUpDownSemiCircleWidgetConfig.fromJson(
+  factory GenericOddEvenEllipseWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$GenericUpDownSemiCircleWidgetConfigFromJson(json);
+      _$GenericOddEvenEllipseWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -66,8 +65,8 @@ class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'subTitle':
         return DataType.text;
-      case 'upSemiCircleBGColor':
-      case 'downSemiCircleBGColor':
+      case 'oddEllipseBGColor':
+      case 'evenEllipseBGColor':
         return DataType.numeric;
       case 'horizontalSpacing':
       case 'imageSize':
@@ -86,8 +85,8 @@ class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'upSemiCircleBGColor':
-      case 'downSemiCircleBGColor':
+      case 'oddEllipseBGColor':
+      case 'evenEllipseBGColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -114,10 +113,10 @@ class GenericUpDownSemiCircleWidgetConfig extends BaseConfig
         return 'Sub Title';
       case 'subTitleFont':
         return 'Sub Title Font';
-      case 'upSemiCircleBGColor':
-        return 'Upper Semi Circle Bg Color';
-      case 'downSemiCircleBGColor':
-        return 'Down Semi Circle Bg Color';
+      case 'oddEllipseBGColor':
+        return 'Odd Ellipse Bg Color';
+      case 'evenEllipseBGColor':
+        return 'Even Ellipse Bg Color';
       case 'prefixFont':
         return 'Prefix Font';
       case 'suffixFont':
