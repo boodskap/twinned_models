@@ -14,7 +14,7 @@ class TextCardWidgetConfig extends BaseConfig with _$TextCardWidgetConfig {
     @Default(400) double cardWidth,
     @Default(5) double cardElevation,
     @Default(50) double cardRadius,
-    @Default(50) double circleRadius,
+    @Default(40) double circleRadius,
     @Default(50) double imageHeight,
     @Default(50) double imageWidth,
     @Default(0XFF3DA5F5) int cardBgColor,
@@ -28,7 +28,7 @@ class TextCardWidgetConfig extends BaseConfig with _$TextCardWidgetConfig {
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 12,
+      'fontSize': 14,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
