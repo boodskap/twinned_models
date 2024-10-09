@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_up_down_semi_circle.dart';
+part of 'generic_odd_even_oval.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericUpDownSemiCircleWidgetConfig
-    _$GenericUpDownSemiCircleWidgetConfigFromJson(Map<String, dynamic> json) {
-  return _GenericUpDownSemiCircleWidgetConfig.fromJson(json);
+GenericOddEvenOvalWidgetConfig _$GenericOddEvenOvalWidgetConfigFromJson(
+    Map<String, dynamic> json) {
+  return _GenericOddEvenOvalWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericUpDownSemiCircleWidgetConfig {
+mixin _$GenericOddEvenOvalWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -42,33 +42,32 @@ mixin _$GenericUpDownSemiCircleWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  int get upSemiCircleBGColor => throw _privateConstructorUsedError;
-  set upSemiCircleBGColor(int value) => throw _privateConstructorUsedError;
-  int get downSemiCircleBGColor => throw _privateConstructorUsedError;
-  set downSemiCircleBGColor(int value) => throw _privateConstructorUsedError;
+  int get oddOvalBGColor => throw _privateConstructorUsedError;
+  set oddOvalBGColor(int value) => throw _privateConstructorUsedError;
+  int get evanOvalBGColor => throw _privateConstructorUsedError;
+  set evanOvalBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericUpDownSemiCircleWidgetConfig to a JSON map.
+  /// Serializes this GenericOddEvenOvalWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of GenericUpDownSemiCircleWidgetConfig
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenericUpDownSemiCircleWidgetConfigCopyWith<
-          GenericUpDownSemiCircleWidgetConfig>
+  $GenericOddEvenOvalWidgetConfigCopyWith<GenericOddEvenOvalWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericUpDownSemiCircleWidgetConfigCopyWith<$Res> {
-  factory $GenericUpDownSemiCircleWidgetConfigCopyWith(
-          GenericUpDownSemiCircleWidgetConfig value,
-          $Res Function(GenericUpDownSemiCircleWidgetConfig) then) =
-      _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
-          GenericUpDownSemiCircleWidgetConfig>;
+abstract class $GenericOddEvenOvalWidgetConfigCopyWith<$Res> {
+  factory $GenericOddEvenOvalWidgetConfigCopyWith(
+          GenericOddEvenOvalWidgetConfig value,
+          $Res Function(GenericOddEvenOvalWidgetConfig) then) =
+      _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
+          GenericOddEvenOvalWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -79,24 +78,24 @@ abstract class $GenericUpDownSemiCircleWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int upSemiCircleBGColor,
-      int downSemiCircleBGColor,
+      int oddOvalBGColor,
+      int evanOvalBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericUpDownSemiCircleWidgetConfig>
-    implements $GenericUpDownSemiCircleWidgetConfigCopyWith<$Res> {
-  _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl(this._value, this._then);
+class _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
+        $Val extends GenericOddEvenOvalWidgetConfig>
+    implements $GenericOddEvenOvalWidgetConfigCopyWith<$Res> {
+  _$GenericOddEvenOvalWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericUpDownSemiCircleWidgetConfig
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -109,8 +108,8 @@ class _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? upSemiCircleBGColor = null,
-    Object? downSemiCircleBGColor = null,
+    Object? oddOvalBGColor = null,
+    Object? evanOvalBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -147,13 +146,13 @@ class _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      upSemiCircleBGColor: null == upSemiCircleBGColor
-          ? _value.upSemiCircleBGColor
-          : upSemiCircleBGColor // ignore: cast_nullable_to_non_nullable
+      oddOvalBGColor: null == oddOvalBGColor
+          ? _value.oddOvalBGColor
+          : oddOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      downSemiCircleBGColor: null == downSemiCircleBGColor
-          ? _value.downSemiCircleBGColor
-          : downSemiCircleBGColor // ignore: cast_nullable_to_non_nullable
+      evanOvalBGColor: null == evanOvalBGColor
+          ? _value.evanOvalBGColor
+          : evanOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -168,12 +167,12 @@ class _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith<$Res>
-    implements $GenericUpDownSemiCircleWidgetConfigCopyWith<$Res> {
-  factory _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith(
-          _$GenericUpDownSemiCircleWidgetConfigImpl value,
-          $Res Function(_$GenericUpDownSemiCircleWidgetConfigImpl) then) =
-      __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$GenericOddEvenOvalWidgetConfigImplCopyWith<$Res>
+    implements $GenericOddEvenOvalWidgetConfigCopyWith<$Res> {
+  factory _$$GenericOddEvenOvalWidgetConfigImplCopyWith(
+          _$GenericOddEvenOvalWidgetConfigImpl value,
+          $Res Function(_$GenericOddEvenOvalWidgetConfigImpl) then) =
+      __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -185,23 +184,23 @@ abstract class _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int upSemiCircleBGColor,
-      int downSemiCircleBGColor,
+      int oddOvalBGColor,
+      int evanOvalBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericUpDownSemiCircleWidgetConfigCopyWithImpl<$Res,
-        _$GenericUpDownSemiCircleWidgetConfigImpl>
-    implements _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith<$Res> {
-  __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl(
-      _$GenericUpDownSemiCircleWidgetConfigImpl _value,
-      $Res Function(_$GenericUpDownSemiCircleWidgetConfigImpl) _then)
+class __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<$Res>
+    extends _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
+        _$GenericOddEvenOvalWidgetConfigImpl>
+    implements _$$GenericOddEvenOvalWidgetConfigImplCopyWith<$Res> {
+  __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl(
+      _$GenericOddEvenOvalWidgetConfigImpl _value,
+      $Res Function(_$GenericOddEvenOvalWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericUpDownSemiCircleWidgetConfig
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -214,12 +213,12 @@ class __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? upSemiCircleBGColor = null,
-    Object? downSemiCircleBGColor = null,
+    Object? oddOvalBGColor = null,
+    Object? evanOvalBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericUpDownSemiCircleWidgetConfigImpl(
+    return _then(_$GenericOddEvenOvalWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -252,13 +251,13 @@ class __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      upSemiCircleBGColor: null == upSemiCircleBGColor
-          ? _value.upSemiCircleBGColor
-          : upSemiCircleBGColor // ignore: cast_nullable_to_non_nullable
+      oddOvalBGColor: null == oddOvalBGColor
+          ? _value.oddOvalBGColor
+          : oddOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      downSemiCircleBGColor: null == downSemiCircleBGColor
-          ? _value.downSemiCircleBGColor
-          : downSemiCircleBGColor // ignore: cast_nullable_to_non_nullable
+      evanOvalBGColor: null == evanOvalBGColor
+          ? _value.evanOvalBGColor
+          : evanOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -274,17 +273,17 @@ class __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericUpDownSemiCircleWidgetConfigImpl
-    extends _GenericUpDownSemiCircleWidgetConfig {
-  _$GenericUpDownSemiCircleWidgetConfigImpl(
-      {this.title = 'Generic Up Down Semi Circle',
+class _$GenericOddEvenOvalWidgetConfigImpl
+    extends _GenericOddEvenOvalWidgetConfig {
+  _$GenericOddEvenOvalWidgetConfigImpl(
+      {this.title = 'Generic Odd Even Oval Widget',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.subTitle = 'Check Your Device Data By Using Semi Circle Shape!',
+      this.subTitle = 'Check Your Device Data By Using Oval Shape!',
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -310,15 +309,15 @@ class _$GenericUpDownSemiCircleWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.upSemiCircleBGColor = 0XFF7CDAB8,
-      this.downSemiCircleBGColor = 0XFFf79cA1,
+      this.oddOvalBGColor = 0XFF7CDAB8,
+      this.evanOvalBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericUpDownSemiCircleWidgetConfigImpl.fromJson(
+  factory _$GenericOddEvenOvalWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$GenericUpDownSemiCircleWidgetConfigImplFromJson(json);
+      _$$GenericOddEvenOvalWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -346,10 +345,10 @@ class _$GenericUpDownSemiCircleWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  int upSemiCircleBGColor;
+  int oddOvalBGColor;
   @override
   @JsonKey()
-  int downSemiCircleBGColor;
+  int evanOvalBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
@@ -359,30 +358,30 @@ class _$GenericUpDownSemiCircleWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericUpDownSemiCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, upSemiCircleBGColor: $upSemiCircleBGColor, downSemiCircleBGColor: $downSemiCircleBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenOvalWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddOvalBGColor: $oddOvalBGColor, evanOvalBGColor: $evanOvalBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericUpDownSemiCircleWidgetConfig
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith<
-          _$GenericUpDownSemiCircleWidgetConfigImpl>
-      get copyWith => __$$GenericUpDownSemiCircleWidgetConfigImplCopyWithImpl<
-          _$GenericUpDownSemiCircleWidgetConfigImpl>(this, _$identity);
+  _$$GenericOddEvenOvalWidgetConfigImplCopyWith<
+          _$GenericOddEvenOvalWidgetConfigImpl>
+      get copyWith => __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<
+          _$GenericOddEvenOvalWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericUpDownSemiCircleWidgetConfigImplToJson(
+    return _$$GenericOddEvenOvalWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericUpDownSemiCircleWidgetConfig
-    extends GenericUpDownSemiCircleWidgetConfig {
-  factory _GenericUpDownSemiCircleWidgetConfig(
+abstract class _GenericOddEvenOvalWidgetConfig
+    extends GenericOddEvenOvalWidgetConfig {
+  factory _GenericOddEvenOvalWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
@@ -391,15 +390,14 @@ abstract class _GenericUpDownSemiCircleWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int upSemiCircleBGColor,
-      int downSemiCircleBGColor,
+      int oddOvalBGColor,
+      int evanOvalBGColor,
       double horizontalSpacing,
-      double imageSize}) = _$GenericUpDownSemiCircleWidgetConfigImpl;
-  _GenericUpDownSemiCircleWidgetConfig._() : super._();
+      double imageSize}) = _$GenericOddEvenOvalWidgetConfigImpl;
+  _GenericOddEvenOvalWidgetConfig._() : super._();
 
-  factory _GenericUpDownSemiCircleWidgetConfig.fromJson(
-          Map<String, dynamic> json) =
-      _$GenericUpDownSemiCircleWidgetConfigImpl.fromJson;
+  factory _GenericOddEvenOvalWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$GenericOddEvenOvalWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -426,11 +424,11 @@ abstract class _GenericUpDownSemiCircleWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  int get upSemiCircleBGColor;
-  set upSemiCircleBGColor(int value);
+  int get oddOvalBGColor;
+  set oddOvalBGColor(int value);
   @override
-  int get downSemiCircleBGColor;
-  set downSemiCircleBGColor(int value);
+  int get evanOvalBGColor;
+  set evanOvalBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
@@ -438,11 +436,11 @@ abstract class _GenericUpDownSemiCircleWidgetConfig
   double get imageSize;
   set imageSize(double value);
 
-  /// Create a copy of GenericUpDownSemiCircleWidgetConfig
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenericUpDownSemiCircleWidgetConfigImplCopyWith<
-          _$GenericUpDownSemiCircleWidgetConfigImpl>
+  _$$GenericOddEvenOvalWidgetConfigImplCopyWith<
+          _$GenericOddEvenOvalWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'generic_up_down_semi_circle.dart';
+part of 'generic_odd_even_ellipse.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenericUpDownSemiCircleWidgetConfigImpl
-    _$$GenericUpDownSemiCircleWidgetConfigImplFromJson(
+_$GenericOddEvenEllipseWidgetConfigImpl
+    _$$GenericOddEvenEllipseWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
-        _$GenericUpDownSemiCircleWidgetConfigImpl(
-          title: json['title'] as String? ?? 'Generic Up Down Semi Circle',
+        _$GenericOddEvenEllipseWidgetConfigImpl(
+          title: json['title'] as String? ?? 'Generic Odd Even Ellipse Widget',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -19,7 +19,7 @@ _$GenericUpDownSemiCircleWidgetConfigImpl
                 'fontBold': true
               },
           subTitle: json['subTitle'] as String? ??
-              'Check Your Device Data By Using Semi Circle Shape!',
+              'Check Your Device Data By Using Ellipse Shape!',
           subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -49,17 +49,17 @@ _$GenericUpDownSemiCircleWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          upSemiCircleBGColor:
-              (json['upSemiCircleBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          downSemiCircleBGColor:
-              (json['downSemiCircleBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          oddEllipseBGColor:
+              (json['oddEllipseBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
+          evanEllipseBGColor:
+              (json['evanEllipseBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
-Map<String, dynamic> _$$GenericUpDownSemiCircleWidgetConfigImplToJson(
-        _$GenericUpDownSemiCircleWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$GenericOddEvenEllipseWidgetConfigImplToJson(
+        _$GenericOddEvenEllipseWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
@@ -69,8 +69,8 @@ Map<String, dynamic> _$$GenericUpDownSemiCircleWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
-      'upSemiCircleBGColor': instance.upSemiCircleBGColor,
-      'downSemiCircleBGColor': instance.downSemiCircleBGColor,
+      'oddEllipseBGColor': instance.oddEllipseBGColor,
+      'evanEllipseBGColor': instance.evanEllipseBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };
