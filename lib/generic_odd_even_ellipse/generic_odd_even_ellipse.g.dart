@@ -51,8 +51,8 @@ _$GenericOddEvenEllipseWidgetConfigImpl
               },
           oddEllipseBGColor:
               (json['oddEllipseBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          evanEllipseBGColor:
-              (json['evanEllipseBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          evenEllipseBGColor:
+              (json['evenEllipseBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
@@ -70,7 +70,7 @@ Map<String, dynamic> _$$GenericOddEvenEllipseWidgetConfigImplToJson(
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
       'oddEllipseBGColor': instance.oddEllipseBGColor,
-      'evanEllipseBGColor': instance.evanEllipseBGColor,
+      'evenEllipseBGColor': instance.evenEllipseBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };

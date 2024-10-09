@@ -44,8 +44,8 @@ mixin _$GenericOddEvenEllipseWidgetConfig {
       throw _privateConstructorUsedError;
   int get oddEllipseBGColor => throw _privateConstructorUsedError;
   set oddEllipseBGColor(int value) => throw _privateConstructorUsedError;
-  int get evanEllipseBGColor => throw _privateConstructorUsedError;
-  set evanEllipseBGColor(int value) => throw _privateConstructorUsedError;
+  int get evenEllipseBGColor => throw _privateConstructorUsedError;
+  set evenEllipseBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
@@ -79,7 +79,7 @@ abstract class $GenericOddEvenEllipseWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddEllipseBGColor,
-      int evanEllipseBGColor,
+      int evenEllipseBGColor,
       double horizontalSpacing,
       double imageSize});
 }
@@ -109,7 +109,7 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? oddEllipseBGColor = null,
-    Object? evanEllipseBGColor = null,
+    Object? evenEllipseBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -150,9 +150,9 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
           ? _value.oddEllipseBGColor
           : oddEllipseBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evanEllipseBGColor: null == evanEllipseBGColor
-          ? _value.evanEllipseBGColor
-          : evanEllipseBGColor // ignore: cast_nullable_to_non_nullable
+      evenEllipseBGColor: null == evenEllipseBGColor
+          ? _value.evenEllipseBGColor
+          : evenEllipseBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -185,7 +185,7 @@ abstract class _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddEllipseBGColor,
-      int evanEllipseBGColor,
+      int evenEllipseBGColor,
       double horizontalSpacing,
       double imageSize});
 }
@@ -214,7 +214,7 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? oddEllipseBGColor = null,
-    Object? evanEllipseBGColor = null,
+    Object? evenEllipseBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -255,9 +255,9 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
           ? _value.oddEllipseBGColor
           : oddEllipseBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evanEllipseBGColor: null == evanEllipseBGColor
-          ? _value.evanEllipseBGColor
-          : evanEllipseBGColor // ignore: cast_nullable_to_non_nullable
+      evenEllipseBGColor: null == evenEllipseBGColor
+          ? _value.evenEllipseBGColor
+          : evenEllipseBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -310,7 +310,7 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
         'fontBold': true
       },
       this.oddEllipseBGColor = 0XFF7CDAB8,
-      this.evanEllipseBGColor = 0XFFf79cA1,
+      this.evenEllipseBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();
@@ -348,7 +348,7 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
   int oddEllipseBGColor;
   @override
   @JsonKey()
-  int evanEllipseBGColor;
+  int evenEllipseBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
@@ -358,7 +358,7 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenEllipseWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddEllipseBGColor: $oddEllipseBGColor, evanEllipseBGColor: $evanEllipseBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenEllipseWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddEllipseBGColor: $oddEllipseBGColor, evenEllipseBGColor: $evenEllipseBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   /// Create a copy of GenericOddEvenEllipseWidgetConfig
@@ -391,7 +391,7 @@ abstract class _GenericOddEvenEllipseWidgetConfig
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddEllipseBGColor,
-      int evanEllipseBGColor,
+      int evenEllipseBGColor,
       double horizontalSpacing,
       double imageSize}) = _$GenericOddEvenEllipseWidgetConfigImpl;
   _GenericOddEvenEllipseWidgetConfig._() : super._();
@@ -428,8 +428,8 @@ abstract class _GenericOddEvenEllipseWidgetConfig
   int get oddEllipseBGColor;
   set oddEllipseBGColor(int value);
   @override
-  int get evanEllipseBGColor;
-  set evanEllipseBGColor(int value);
+  int get evenEllipseBGColor;
+  set evenEllipseBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);

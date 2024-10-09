@@ -44,8 +44,8 @@ mixin _$GenericOddEvenOvalWidgetConfig {
       throw _privateConstructorUsedError;
   int get oddOvalBGColor => throw _privateConstructorUsedError;
   set oddOvalBGColor(int value) => throw _privateConstructorUsedError;
-  int get evanOvalBGColor => throw _privateConstructorUsedError;
-  set evanOvalBGColor(int value) => throw _privateConstructorUsedError;
+  int get evenOvalBGColor => throw _privateConstructorUsedError;
+  set evenOvalBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
@@ -79,7 +79,7 @@ abstract class $GenericOddEvenOvalWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddOvalBGColor,
-      int evanOvalBGColor,
+      int evenOvalBGColor,
       double horizontalSpacing,
       double imageSize});
 }
@@ -109,7 +109,7 @@ class _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? oddOvalBGColor = null,
-    Object? evanOvalBGColor = null,
+    Object? evenOvalBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -150,9 +150,9 @@ class _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
           ? _value.oddOvalBGColor
           : oddOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evanOvalBGColor: null == evanOvalBGColor
-          ? _value.evanOvalBGColor
-          : evanOvalBGColor // ignore: cast_nullable_to_non_nullable
+      evenOvalBGColor: null == evenOvalBGColor
+          ? _value.evenOvalBGColor
+          : evenOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -185,7 +185,7 @@ abstract class _$$GenericOddEvenOvalWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddOvalBGColor,
-      int evanOvalBGColor,
+      int evenOvalBGColor,
       double horizontalSpacing,
       double imageSize});
 }
@@ -214,7 +214,7 @@ class __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<$Res>
     Object? suffixFont = null,
     Object? valueFont = null,
     Object? oddOvalBGColor = null,
-    Object? evanOvalBGColor = null,
+    Object? evenOvalBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -255,9 +255,9 @@ class __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<$Res>
           ? _value.oddOvalBGColor
           : oddOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evanOvalBGColor: null == evanOvalBGColor
-          ? _value.evanOvalBGColor
-          : evanOvalBGColor // ignore: cast_nullable_to_non_nullable
+      evenOvalBGColor: null == evenOvalBGColor
+          ? _value.evenOvalBGColor
+          : evenOvalBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -310,7 +310,7 @@ class _$GenericOddEvenOvalWidgetConfigImpl
         'fontBold': true
       },
       this.oddOvalBGColor = 0XFF7CDAB8,
-      this.evanOvalBGColor = 0XFFf79cA1,
+      this.evenOvalBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();
@@ -348,7 +348,7 @@ class _$GenericOddEvenOvalWidgetConfigImpl
   int oddOvalBGColor;
   @override
   @JsonKey()
-  int evanOvalBGColor;
+  int evenOvalBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
@@ -358,7 +358,7 @@ class _$GenericOddEvenOvalWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenOvalWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddOvalBGColor: $oddOvalBGColor, evanOvalBGColor: $evanOvalBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenOvalWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddOvalBGColor: $oddOvalBGColor, evenOvalBGColor: $evenOvalBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   /// Create a copy of GenericOddEvenOvalWidgetConfig
@@ -391,7 +391,7 @@ abstract class _GenericOddEvenOvalWidgetConfig
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       int oddOvalBGColor,
-      int evanOvalBGColor,
+      int evenOvalBGColor,
       double horizontalSpacing,
       double imageSize}) = _$GenericOddEvenOvalWidgetConfigImpl;
   _GenericOddEvenOvalWidgetConfig._() : super._();
@@ -427,8 +427,8 @@ abstract class _GenericOddEvenOvalWidgetConfig
   int get oddOvalBGColor;
   set oddOvalBGColor(int value);
   @override
-  int get evanOvalBGColor;
-  set evanOvalBGColor(int value);
+  int get evenOvalBGColor;
+  set evenOvalBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);

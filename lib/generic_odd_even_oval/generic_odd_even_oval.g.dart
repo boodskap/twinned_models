@@ -50,8 +50,8 @@ _$GenericOddEvenOvalWidgetConfigImpl
               },
           oddOvalBGColor:
               (json['oddOvalBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          evanOvalBGColor:
-              (json['evanOvalBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          evenOvalBGColor:
+              (json['evenOvalBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
@@ -69,7 +69,7 @@ Map<String, dynamic> _$$GenericOddEvenOvalWidgetConfigImplToJson(
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
       'oddOvalBGColor': instance.oddOvalBGColor,
-      'evanOvalBGColor': instance.evanOvalBGColor,
+      'evenOvalBGColor': instance.evenOvalBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };

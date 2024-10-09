@@ -47,8 +47,12 @@ mixin _$TextCardWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this TextCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TextCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TextCardWidgetConfigCopyWith<TextCardWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -85,6 +89,8 @@ class _$TextCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TextCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -185,6 +191,8 @@ class __$$TextCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$TextCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TextCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -327,7 +335,9 @@ class _$TextCardWidgetConfigImpl extends _TextCardWidgetConfig {
     return 'TextCardWidgetConfig(deviceModelId: $deviceModelId, cardHeight: $cardHeight, cardWidth: $cardWidth, cardElevation: $cardElevation, cardRadius: $cardRadius, circleRadius: $circleRadius, imageHeight: $imageHeight, imageWidth: $imageWidth, cardBgColor: $cardBgColor, circleBgColor: $circleBgColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TextCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TextCardWidgetConfigImplCopyWith<_$TextCardWidgetConfigImpl>
@@ -398,8 +408,11 @@ abstract class _TextCardWidgetConfig extends TextCardWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+
+  /// Create a copy of TextCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TextCardWidgetConfigImplCopyWith<_$TextCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
