@@ -51,12 +51,8 @@ mixin _$GenericOddEvenEllipseWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericOddEvenEllipseWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericOddEvenEllipseWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericOddEvenEllipseWidgetConfigCopyWith<GenericOddEvenEllipseWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericOddEvenEllipseWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,8 +194,6 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericOddEvenEllipseWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericOddEvenEllipseWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -361,9 +353,7 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
     return 'GenericOddEvenEllipseWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddEllipseBGColor: $oddEllipseBGColor, evenEllipseBGColor: $evenEllipseBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericOddEvenEllipseWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<
@@ -436,11 +426,8 @@ abstract class _GenericOddEvenEllipseWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
-
-  /// Create a copy of GenericOddEvenEllipseWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<
           _$GenericOddEvenEllipseWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
