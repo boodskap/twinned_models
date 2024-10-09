@@ -14,7 +14,7 @@ _$TextCardWidgetConfigImpl _$$TextCardWidgetConfigImplFromJson(
       cardWidth: (json['cardWidth'] as num?)?.toDouble() ?? 400,
       cardElevation: (json['cardElevation'] as num?)?.toDouble() ?? 5,
       cardRadius: (json['cardRadius'] as num?)?.toDouble() ?? 50,
-      circleRadius: (json['circleRadius'] as num?)?.toDouble() ?? 50,
+      circleRadius: (json['circleRadius'] as num?)?.toDouble() ?? 40,
       imageHeight: (json['imageHeight'] as num?)?.toDouble() ?? 50,
       imageWidth: (json['imageWidth'] as num?)?.toDouble() ?? 50,
       cardBgColor: (json['cardBgColor'] as num?)?.toInt() ?? 0XFF3DA5F5,
@@ -29,7 +29,7 @@ _$TextCardWidgetConfigImpl _$$TextCardWidgetConfigImplFromJson(
       valueFont: json['valueFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 12,
+            'fontSize': 14,
             'fontColor': 0xFF000000,
             'fontBold': true
           },
