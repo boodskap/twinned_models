@@ -51,12 +51,8 @@ mixin _$GenericOddEvenHexagonWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericOddEvenHexagonWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericOddEvenHexagonWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericOddEvenHexagonWidgetConfigCopyWith<GenericOddEvenHexagonWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$GenericOddEvenHexagonWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericOddEvenHexagonWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,8 +194,6 @@ class __$$GenericOddEvenHexagonWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericOddEvenHexagonWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericOddEvenHexagonWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -361,9 +353,7 @@ class _$GenericOddEvenHexagonWidgetConfigImpl
     return 'GenericOddEvenHexagonWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddHexagonBGColor: $oddHexagonBGColor, evenHexagonBGColor: $evenHexagonBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericOddEvenHexagonWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericOddEvenHexagonWidgetConfigImplCopyWith<
@@ -436,11 +426,8 @@ abstract class _GenericOddEvenHexagonWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
-
-  /// Create a copy of GenericOddEvenHexagonWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericOddEvenHexagonWidgetConfigImplCopyWith<
           _$GenericOddEvenHexagonWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
