@@ -23,8 +23,8 @@ DeviceModelHeatmapWidgetConfig _$DeviceModelHeatmapWidgetConfigFromJson(
 mixin _$DeviceModelHeatmapWidgetConfig {
   String get deviceModelId => throw _privateConstructorUsedError;
   set deviceModelId(String value) => throw _privateConstructorUsedError;
-  List<dynamic> get gaugeRanges => throw _privateConstructorUsedError;
-  set gaugeRanges(List<dynamic> value) => throw _privateConstructorUsedError;
+  List<dynamic> get ranges => throw _privateConstructorUsedError;
+  set ranges(List<dynamic> value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -54,7 +54,7 @@ abstract class $DeviceModelHeatmapWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String deviceModelId,
-      List<dynamic> gaugeRanges,
+      List<dynamic> ranges,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
@@ -76,7 +76,7 @@ class _$DeviceModelHeatmapWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? deviceModelId = null,
-    Object? gaugeRanges = null,
+    Object? ranges = null,
     Object? titleFont = null,
     Object? valueFont = null,
     Object? labelFont = null,
@@ -87,9 +87,9 @@ class _$DeviceModelHeatmapWidgetConfigCopyWithImpl<$Res,
           ? _value.deviceModelId
           : deviceModelId // ignore: cast_nullable_to_non_nullable
               as String,
-      gaugeRanges: null == gaugeRanges
-          ? _value.gaugeRanges
-          : gaugeRanges // ignore: cast_nullable_to_non_nullable
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -122,7 +122,7 @@ abstract class _$$DeviceModelHeatmapWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String deviceModelId,
-      List<dynamic> gaugeRanges,
+      List<dynamic> ranges,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
@@ -143,7 +143,7 @@ class __$$DeviceModelHeatmapWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? deviceModelId = null,
-    Object? gaugeRanges = null,
+    Object? ranges = null,
     Object? titleFont = null,
     Object? valueFont = null,
     Object? labelFont = null,
@@ -154,9 +154,9 @@ class __$$DeviceModelHeatmapWidgetConfigImplCopyWithImpl<$Res>
           ? _value.deviceModelId
           : deviceModelId // ignore: cast_nullable_to_non_nullable
               as String,
-      gaugeRanges: null == gaugeRanges
-          ? _value.gaugeRanges
-          : gaugeRanges // ignore: cast_nullable_to_non_nullable
+      ranges: null == ranges
+          ? _value.ranges
+          : ranges // ignore: cast_nullable_to_non_nullable
               as List<dynamic>,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -184,7 +184,7 @@ class _$DeviceModelHeatmapWidgetConfigImpl
     extends _DeviceModelHeatmapWidgetConfig {
   _$DeviceModelHeatmapWidgetConfigImpl(
       {this.deviceModelId = '',
-      this.gaugeRanges = const [
+      this.ranges = const [
         {'from': 0, 'to': 60, 'color': 0xFF03A9F4, 'label': 'Low'},
         {'from': 61, 'to': 120, 'color': 0xFF4CAF50, 'label': 'Mid Low'},
         {'from': 121, 'to': 180, 'color': 0xFF009688, 'label': 'Medium'},
@@ -227,7 +227,7 @@ class _$DeviceModelHeatmapWidgetConfigImpl
   String deviceModelId;
   @override
   @JsonKey()
-  List<dynamic> gaugeRanges;
+  List<dynamic> ranges;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
@@ -243,7 +243,7 @@ class _$DeviceModelHeatmapWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceModelHeatmapWidgetConfig(deviceModelId: $deviceModelId, gaugeRanges: $gaugeRanges, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, unitFont: $unitFont)';
+    return 'DeviceModelHeatmapWidgetConfig(deviceModelId: $deviceModelId, ranges: $ranges, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, unitFont: $unitFont)';
   }
 
   @JsonKey(ignore: true)
@@ -266,7 +266,7 @@ abstract class _DeviceModelHeatmapWidgetConfig
     extends DeviceModelHeatmapWidgetConfig {
   factory _DeviceModelHeatmapWidgetConfig(
       {String deviceModelId,
-      List<dynamic> gaugeRanges,
+      List<dynamic> ranges,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> labelFont,
@@ -280,8 +280,8 @@ abstract class _DeviceModelHeatmapWidgetConfig
   String get deviceModelId;
   set deviceModelId(String value);
   @override
-  List<dynamic> get gaugeRanges;
-  set gaugeRanges(List<dynamic> value);
+  List<dynamic> get ranges;
+  set ranges(List<dynamic> value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);

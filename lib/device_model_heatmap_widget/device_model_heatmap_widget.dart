@@ -19,7 +19,7 @@ class DeviceModelHeatmapWidgetConfig extends BaseConfig
       {'from': 241, 'to': 300, 'color': 0xFFFF9800, 'label': 'High'},
       {'from': 301, 'color': 0xFFF44336, 'label': 'Very High'},
     ])
-    List<dynamic> gaugeRanges,
+    List<dynamic> ranges,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
