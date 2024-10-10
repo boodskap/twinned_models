@@ -10,7 +10,7 @@ _$DeviceModelHeatmapWidgetConfigImpl
     _$$DeviceModelHeatmapWidgetConfigImplFromJson(Map<String, dynamic> json) =>
         _$DeviceModelHeatmapWidgetConfigImpl(
           deviceModelId: json['deviceModelId'] as String? ?? '',
-          gaugeRanges: json['gaugeRanges'] as List<dynamic>? ??
+          ranges: json['ranges'] as List<dynamic>? ??
               const [
                 {'from': 0, 'to': 60, 'color': 0xFF03A9F4, 'label': 'Low'},
                 {
@@ -68,7 +68,7 @@ Map<String, dynamic> _$$DeviceModelHeatmapWidgetConfigImplToJson(
         _$DeviceModelHeatmapWidgetConfigImpl instance) =>
     <String, dynamic>{
       'deviceModelId': instance.deviceModelId,
-      'gaugeRanges': instance.gaugeRanges,
+      'ranges': instance.ranges,
       'titleFont': instance.titleFont,
       'valueFont': instance.valueFont,
       'labelFont': instance.labelFont,
