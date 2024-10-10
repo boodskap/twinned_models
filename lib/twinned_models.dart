@@ -22,3 +22,4 @@ export 'current_day_status/current_day_status.dart';
 export 'humidity_week_widget/humidity_week_widget.dart';
 export 'device_multi_field_radial_axis/device_multi_field_radial_axis.dart';
 export 'directional_widget/directional_widget.dart';
+export 'device_model_heatmap_widget/device_model_heatmap_widget.dart';
