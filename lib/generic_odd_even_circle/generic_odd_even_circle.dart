@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_up_down_pentagon.freezed.dart';
-part 'generic_up_down_pentagon.g.dart';
+part 'generic_odd_even_circle.freezed.dart';
+part 'generic_odd_even_circle.g.dart';
 
 @unfreezed
-class GenericUpDownPentagonWidgetConfig extends BaseConfig
-    with _$GenericUpDownPentagonWidgetConfig {
-  GenericUpDownPentagonWidgetConfig._();
+class GenericOddEvenCircleWidgetConfig extends BaseConfig
+    with _$GenericOddEvenCircleWidgetConfig {
+  GenericOddEvenCircleWidgetConfig._();
 
-  factory GenericUpDownPentagonWidgetConfig({
-    @Default('Generic Up Down Pentagon') String title,
+  factory GenericOddEvenCircleWidgetConfig({
+    @Default('Generic Odd Even Circle Widget') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -18,7 +18,7 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default('Check My Device Data here!') String subTitle,
+    @Default('Device Monitoring By Using Circle Widget') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -48,15 +48,20 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFF7CDAB8) int upperPentagonBGColor,
-    @Default(0XFFf79cA1) int downPentagonBGColor,
+    @Default(60) double oddCircleRadius,
+    @Default(0XFF7CB9E8) int oddCircleBGColor,
+    @Default(0XFF00308F) int oddCircleBorderColor,
+    @Default(50) double evenCircleRadius,
+    @Default(0XFFbfd5c63) int evenCircleBGColor,
+    @Default(0XFFD2122E) int evenCircleBorderColor,
     @Default(5) double horizontalSpacing,
+    @Default(20) double verticalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericUpDownPentagonWidgetConfig;
+  }) = _GenericOddEvenCircleWidgetConfig;
 
-  factory GenericUpDownPentagonWidgetConfig.fromJson(
+  factory GenericOddEvenCircleWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$GenericUpDownPentagonWidgetConfigFromJson(json);
+      _$GenericOddEvenCircleWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -65,10 +70,15 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'subTitle':
         return DataType.text;
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddCircleBGColor':
+      case 'oddCircleBorderColor':
+      case 'evenCircleBGColor':
+      case 'evenCircleBorderColor':
         return DataType.numeric;
+      case 'oddCircleRadius':
+      case 'evenCircleRadius':
       case 'horizontalSpacing':
+      case 'verticalSpacing':
       case 'imageSize':
         return DataType.decimal;
       case 'titleFont':
@@ -85,8 +95,10 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddCircleBGColor':
+      case 'oddCircleBorderColor':
+      case 'evenCircleBGColor':
+      case 'evenCircleBorderColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -113,10 +125,18 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
         return 'Sub Title';
       case 'subTitleFont':
         return 'Sub Title Font';
-      case 'upperPentagonBGColor':
-        return 'Upper Pentagon Bg Color';
-      case 'downPentagonBGColor':
-        return 'Down Pentagon Bg Color';
+      case 'oddCircleBGColor':
+        return 'Odd Circle Bg Color';
+      case 'oddCircleBorderColor':
+        return 'Odd Circle Border Color';
+      case 'evenCircleBGColor':
+        return 'Even Circle Bg Color';
+      case 'evenCircleBorderColor':
+        return 'Even Circle Border Color';
+      case 'oddCircleRadius':
+        return 'Odd Circle Radius';
+      case 'evenCircleRadius':
+        return 'Even Circle Radius';
       case 'prefixFont':
         return 'Prefix Font';
       case 'suffixFont':
@@ -125,6 +145,8 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
         return 'Value Font';
       case 'horizontalSpacing':
         return 'Horizontal Spacing';
+      case 'verticalSpacing':
+        return 'Vertical Spacing';
       case 'imageSize':
         return 'Image Size';
       default:

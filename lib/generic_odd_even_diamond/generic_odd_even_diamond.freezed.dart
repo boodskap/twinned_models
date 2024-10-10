@@ -42,15 +42,6 @@ mixin _$GenericOddEvenDiamondWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get prefixMainFont => throw _privateConstructorUsedError;
-  set prefixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get suffixMainFont => throw _privateConstructorUsedError;
-  set suffixMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueMainFont => throw _privateConstructorUsedError;
-  set valueMainFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
   int get oddDiamondBGColor => throw _privateConstructorUsedError;
   set oddDiamondBGColor(int value) => throw _privateConstructorUsedError;
   int get evenDiamondBGColor => throw _privateConstructorUsedError;
@@ -83,9 +74,6 @@ abstract class $GenericOddEvenDiamondWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int oddDiamondBGColor,
       int evenDiamondBGColor,
       double horizontalSpacing,
@@ -114,9 +102,6 @@ class _$GenericOddEvenDiamondWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? oddDiamondBGColor = null,
     Object? evenDiamondBGColor = null,
     Object? horizontalSpacing = null,
@@ -154,18 +139,6 @@ class _$GenericOddEvenDiamondWidgetConfigCopyWithImpl<$Res,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       oddDiamondBGColor: null == oddDiamondBGColor
           ? _value.oddDiamondBGColor
@@ -205,9 +178,6 @@ abstract class _$$GenericOddEvenDiamondWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int oddDiamondBGColor,
       int evenDiamondBGColor,
       double horizontalSpacing,
@@ -235,9 +205,6 @@ class __$$GenericOddEvenDiamondWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? prefixMainFont = null,
-    Object? suffixMainFont = null,
-    Object? valueMainFont = null,
     Object? oddDiamondBGColor = null,
     Object? evenDiamondBGColor = null,
     Object? horizontalSpacing = null,
@@ -275,18 +242,6 @@ class __$$GenericOddEvenDiamondWidgetConfigImplCopyWithImpl<$Res>
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      prefixMainFont: null == prefixMainFont
-          ? _value.prefixMainFont
-          : prefixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      suffixMainFont: null == suffixMainFont
-          ? _value.suffixMainFont
-          : suffixMainFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      valueMainFont: null == valueMainFont
-          ? _value.valueMainFont
-          : valueMainFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
       oddDiamondBGColor: null == oddDiamondBGColor
           ? _value.oddDiamondBGColor
@@ -346,24 +301,6 @@ class _$GenericOddEvenDiamondWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.prefixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.suffixMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 13,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
-      this.valueMainFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 17,
-        'fontColor': 0xFFFFFFFF,
-        'fontBold': true
-      },
       this.oddDiamondBGColor = 0XFF7CDAB8,
       this.evenDiamondBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
@@ -400,15 +337,6 @@ class _$GenericOddEvenDiamondWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  Map<String, dynamic> prefixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> suffixMainFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> valueMainFont;
-  @override
-  @JsonKey()
   int oddDiamondBGColor;
   @override
   @JsonKey()
@@ -422,7 +350,7 @@ class _$GenericOddEvenDiamondWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenDiamondWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, oddDiamondBGColor: $oddDiamondBGColor, evenDiamondBGColor: $evenDiamondBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenDiamondWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddDiamondBGColor: $oddDiamondBGColor, evenDiamondBGColor: $evenDiamondBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
@@ -452,9 +380,6 @@ abstract class _GenericOddEvenDiamondWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> prefixMainFont,
-      Map<String, dynamic> suffixMainFont,
-      Map<String, dynamic> valueMainFont,
       int oddDiamondBGColor,
       int evenDiamondBGColor,
       double horizontalSpacing,
@@ -489,15 +414,6 @@ abstract class _GenericOddEvenDiamondWidgetConfig
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get prefixMainFont;
-  set prefixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get suffixMainFont;
-  set suffixMainFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get valueMainFont;
-  set valueMainFont(Map<String, dynamic> value);
   @override
   int get oddDiamondBGColor;
   set oddDiamondBGColor(int value);

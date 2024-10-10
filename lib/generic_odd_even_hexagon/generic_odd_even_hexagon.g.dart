@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'generic_up_down_pentagon.dart';
+part of 'generic_odd_even_hexagon.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenericUpDownPentagonWidgetConfigImpl
-    _$$GenericUpDownPentagonWidgetConfigImplFromJson(
+_$GenericOddEvenHexagonWidgetConfigImpl
+    _$$GenericOddEvenHexagonWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
-        _$GenericUpDownPentagonWidgetConfigImpl(
-          title: json['title'] as String? ?? 'Generic Up Down Pentagon',
+        _$GenericOddEvenHexagonWidgetConfigImpl(
+          title: json['title'] as String? ?? 'Generic Odd Even Hexagon',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -48,17 +48,17 @@ _$GenericUpDownPentagonWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          upperPentagonBGColor:
-              (json['upperPentagonBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          downPentagonBGColor:
-              (json['downPentagonBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          oddHexagonBGColor:
+              (json['oddHexagonBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
+          evenHexagonBGColor:
+              (json['evenHexagonBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
-Map<String, dynamic> _$$GenericUpDownPentagonWidgetConfigImplToJson(
-        _$GenericUpDownPentagonWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$GenericOddEvenHexagonWidgetConfigImplToJson(
+        _$GenericOddEvenHexagonWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
@@ -68,8 +68,8 @@ Map<String, dynamic> _$$GenericUpDownPentagonWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
-      'upperPentagonBGColor': instance.upperPentagonBGColor,
-      'downPentagonBGColor': instance.downPentagonBGColor,
+      'oddHexagonBGColor': instance.oddHexagonBGColor,
+      'evenHexagonBGColor': instance.evenHexagonBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };

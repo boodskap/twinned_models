@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'generic_up_down_pentagon.dart';
+part of 'generic_odd_even_ellipse.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenericUpDownPentagonWidgetConfigImpl
-    _$$GenericUpDownPentagonWidgetConfigImplFromJson(
+_$GenericOddEvenEllipseWidgetConfigImpl
+    _$$GenericOddEvenEllipseWidgetConfigImplFromJson(
             Map<String, dynamic> json) =>
-        _$GenericUpDownPentagonWidgetConfigImpl(
-          title: json['title'] as String? ?? 'Generic Up Down Pentagon',
+        _$GenericOddEvenEllipseWidgetConfigImpl(
+          title: json['title'] as String? ?? 'Generic Odd Even Ellipse Widget',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -18,7 +18,8 @@ _$GenericUpDownPentagonWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          subTitle: json['subTitle'] as String? ?? 'Check My Device Data here!',
+          subTitle: json['subTitle'] as String? ??
+              'Check Your Device Data By Using Ellipse Shape!',
           subTitleFont: json['subTitleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -48,17 +49,17 @@ _$GenericUpDownPentagonWidgetConfigImpl
                 'fontColor': 0xFF000000,
                 'fontBold': true
               },
-          upperPentagonBGColor:
-              (json['upperPentagonBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
-          downPentagonBGColor:
-              (json['downPentagonBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
+          oddEllipseBGColor:
+              (json['oddEllipseBGColor'] as num?)?.toInt() ?? 0XFF7CDAB8,
+          evenEllipseBGColor:
+              (json['evenEllipseBGColor'] as num?)?.toInt() ?? 0XFFf79cA1,
           horizontalSpacing:
               (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
           imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
         );
 
-Map<String, dynamic> _$$GenericUpDownPentagonWidgetConfigImplToJson(
-        _$GenericUpDownPentagonWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$GenericOddEvenEllipseWidgetConfigImplToJson(
+        _$GenericOddEvenEllipseWidgetConfigImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
       'titleFont': instance.titleFont,
@@ -68,8 +69,8 @@ Map<String, dynamic> _$$GenericUpDownPentagonWidgetConfigImplToJson(
       'prefixFont': instance.prefixFont,
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
-      'upperPentagonBGColor': instance.upperPentagonBGColor,
-      'downPentagonBGColor': instance.downPentagonBGColor,
+      'oddEllipseBGColor': instance.oddEllipseBGColor,
+      'evenEllipseBGColor': instance.evenEllipseBGColor,
       'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
     };

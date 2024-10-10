@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_up_down_pentagon.freezed.dart';
-part 'generic_up_down_pentagon.g.dart';
+part 'generic_odd_even_oval.freezed.dart';
+part 'generic_odd_even_oval.g.dart';
 
 @unfreezed
-class GenericUpDownPentagonWidgetConfig extends BaseConfig
-    with _$GenericUpDownPentagonWidgetConfig {
-  GenericUpDownPentagonWidgetConfig._();
+class GenericOddEvenOvalWidgetConfig extends BaseConfig
+    with _$GenericOddEvenOvalWidgetConfig {
+  GenericOddEvenOvalWidgetConfig._();
 
-  factory GenericUpDownPentagonWidgetConfig({
-    @Default('Generic Up Down Pentagon') String title,
+  factory GenericOddEvenOvalWidgetConfig({
+    @Default('Generic Odd Even Oval Widget') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -18,7 +18,7 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-    @Default('Check My Device Data here!') String subTitle,
+    @Default('Check Your Device Data By Using Oval Shape!') String subTitle,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 20,
@@ -48,15 +48,14 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFF7CDAB8) int upperPentagonBGColor,
-    @Default(0XFFf79cA1) int downPentagonBGColor,
+    @Default(0XFF7CDAB8) int oddOvalBGColor,
+    @Default(0XFFf79cA1) int evenOvalBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericUpDownPentagonWidgetConfig;
+  }) = _GenericOddEvenOvalWidgetConfig;
 
-  factory GenericUpDownPentagonWidgetConfig.fromJson(
-          Map<String, dynamic> json) =>
-      _$GenericUpDownPentagonWidgetConfigFromJson(json);
+  factory GenericOddEvenOvalWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$GenericOddEvenOvalWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -65,8 +64,8 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'subTitle':
         return DataType.text;
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddOvalBGColor':
+      case 'evenOvalBGColor':
         return DataType.numeric;
       case 'horizontalSpacing':
       case 'imageSize':
@@ -85,8 +84,8 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddOvalBGColor':
+      case 'evenOvalBGColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -113,10 +112,10 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
         return 'Sub Title';
       case 'subTitleFont':
         return 'Sub Title Font';
-      case 'upperPentagonBGColor':
-        return 'Upper Pentagon Bg Color';
-      case 'downPentagonBGColor':
-        return 'Down Pentagon Bg Color';
+      case 'oddOvalBGColor':
+        return 'Odd Oval Bg Color';
+      case 'evenOvalBGColor':
+        return 'Even Oval Bg Color';
       case 'prefixFont':
         return 'Prefix Font';
       case 'suffixFont':

@@ -56,47 +56,77 @@ class DeviceModelHeatmapWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'name':
+      case 'deviceModelId':
         return DataType.text;
-      case 'age':
-        return DataType.numeric;
+      case 'titleFont':
+      case 'valueFont':
+      case 'labelFont':
+      case 'unitFont':
+        return DataType.font;
+      case 'ranges':
+        return DataType.listOfRanges;
       default:
-        return DataType.text;
+        return DataType.none;
     }
   }
 
   @override
   HintType getHintType(String parameter) {
-    return HintType.none;
+    switch (parameter) {
+      case 'deviceModelId':
+        return HintType.deviceModelId;
+      default:
+        return HintType.none;
+    }
   }
 
   @override
   List<String> getEnumeratedValues(String parameter) {
-    // TODO: implement getEnumeratedValues
-    throw UnimplementedError();
+    return [];
   }
 
   @override
   String getLabel(String parameter) {
-    // TODO: implement getLabel
-    throw UnimplementedError();
+    switch (parameter) {
+      case 'deviceModelId':
+        return 'Device Model';
+      case 'labelFont':
+        return 'Label Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'valueFont':
+        return 'Value Font';
+      case 'unitFont':
+        return 'Unit Font';
+      case 'ranges':
+        return 'Ranges';
+      default:
+        return parameter;
+    }
   }
 
   @override
   String getTooltip(String parameter) {
-    // TODO: implement getTooltip
-    throw UnimplementedError();
+    return "";
   }
 
   @override
   bool isRequired(String parameter) {
-    // TODO: implement isRequired
-    throw UnimplementedError();
+    switch (parameter) {
+      case 'deviceModelId':
+        return true;
+      default:
+        return false;
+    }
   }
 
   @override
   bool isValid(String parameter, value) {
-    // TODO: implement isValid
-    throw UnimplementedError();
+    return true;
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {};
   }
 }

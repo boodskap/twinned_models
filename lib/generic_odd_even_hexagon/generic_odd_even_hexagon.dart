@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'generic_up_down_pentagon.freezed.dart';
-part 'generic_up_down_pentagon.g.dart';
+part 'generic_odd_even_hexagon.freezed.dart';
+part 'generic_odd_even_hexagon.g.dart';
 
 @unfreezed
-class GenericUpDownPentagonWidgetConfig extends BaseConfig
-    with _$GenericUpDownPentagonWidgetConfig {
-  GenericUpDownPentagonWidgetConfig._();
+class GenericOddEvenHexagonWidgetConfig extends BaseConfig
+    with _$GenericOddEvenHexagonWidgetConfig {
+  GenericOddEvenHexagonWidgetConfig._();
 
-  factory GenericUpDownPentagonWidgetConfig({
-    @Default('Generic Up Down Pentagon') String title,
+  factory GenericOddEvenHexagonWidgetConfig({
+    @Default('Generic Odd Even Hexagon') String title,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -48,15 +48,15 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default(0XFF7CDAB8) int upperPentagonBGColor,
-    @Default(0XFFf79cA1) int downPentagonBGColor,
+    @Default(0XFF7CDAB8) int oddHexagonBGColor,
+    @Default(0XFFf79cA1) int evenHexagonBGColor,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericUpDownPentagonWidgetConfig;
+  }) = _GenericOddEvenHexagonWidgetConfig;
 
-  factory GenericUpDownPentagonWidgetConfig.fromJson(
+  factory GenericOddEvenHexagonWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$GenericUpDownPentagonWidgetConfigFromJson(json);
+      _$GenericOddEvenHexagonWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
@@ -65,8 +65,8 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
       case 'deviceId':
       case 'subTitle':
         return DataType.text;
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddHexagonBGColor':
+      case 'evenHexagonBGColor':
         return DataType.numeric;
       case 'horizontalSpacing':
       case 'imageSize':
@@ -85,8 +85,8 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
   @override
   HintType getHintType(String parameter) {
     switch (parameter) {
-      case 'upperPentagonBGColor':
-      case 'downPentagonBGColor':
+      case 'oddHexagonBGColor':
+      case 'evenHexagonBGColor':
         return HintType.color;
       case 'deviceId':
         return HintType.deviceId;
@@ -113,10 +113,10 @@ class GenericUpDownPentagonWidgetConfig extends BaseConfig
         return 'Sub Title';
       case 'subTitleFont':
         return 'Sub Title Font';
-      case 'upperPentagonBGColor':
-        return 'Upper Pentagon Bg Color';
-      case 'downPentagonBGColor':
-        return 'Down Pentagon Bg Color';
+      case 'oddHexagonBGColor':
+        return 'Odd Hexagon Bg Color';
+      case 'evenHexagonBGColor':
+        return 'Even Hexagon Bg Color';
       case 'prefixFont':
         return 'Prefix Font';
       case 'suffixFont':

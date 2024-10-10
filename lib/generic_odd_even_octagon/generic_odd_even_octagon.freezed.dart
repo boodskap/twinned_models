@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_odd_even_card.dart';
+part of 'generic_odd_even_octagon.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericOddEvenCardWidgetConfig _$GenericOddEvenCardWidgetConfigFromJson(
+GenericOddEvenOctagonWidgetConfig _$GenericOddEvenOctagonWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _GenericOddEvenCardWidgetConfig.fromJson(json);
+  return _GenericOddEvenOctagonWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericOddEvenCardWidgetConfig {
+mixin _$GenericOddEvenOctagonWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -42,14 +42,10 @@ mixin _$GenericOddEvenCardWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  double get oddCardElevation => throw _privateConstructorUsedError;
-  set oddCardElevation(double value) => throw _privateConstructorUsedError;
-  int get oddCardBGColor => throw _privateConstructorUsedError;
-  set oddCardBGColor(int value) => throw _privateConstructorUsedError;
-  double get evenCardElevation => throw _privateConstructorUsedError;
-  set evenCardElevation(double value) => throw _privateConstructorUsedError;
-  int get evenCardBGColor => throw _privateConstructorUsedError;
-  set evenCardBGColor(int value) => throw _privateConstructorUsedError;
+  int get oddOctagonBGColor => throw _privateConstructorUsedError;
+  set oddOctagonBGColor(int value) => throw _privateConstructorUsedError;
+  int get evenOctagonBGColor => throw _privateConstructorUsedError;
+  set evenOctagonBGColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
@@ -57,17 +53,17 @@ mixin _$GenericOddEvenCardWidgetConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GenericOddEvenCardWidgetConfigCopyWith<GenericOddEvenCardWidgetConfig>
+  $GenericOddEvenOctagonWidgetConfigCopyWith<GenericOddEvenOctagonWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  factory $GenericOddEvenCardWidgetConfigCopyWith(
-          GenericOddEvenCardWidgetConfig value,
-          $Res Function(GenericOddEvenCardWidgetConfig) then) =
-      _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-          GenericOddEvenCardWidgetConfig>;
+abstract class $GenericOddEvenOctagonWidgetConfigCopyWith<$Res> {
+  factory $GenericOddEvenOctagonWidgetConfigCopyWith(
+          GenericOddEvenOctagonWidgetConfig value,
+          $Res Function(GenericOddEvenOctagonWidgetConfig) then) =
+      _$GenericOddEvenOctagonWidgetConfigCopyWithImpl<$Res,
+          GenericOddEvenOctagonWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -78,19 +74,17 @@ abstract class $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int oddOctagonBGColor,
+      int evenOctagonBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericOddEvenCardWidgetConfig>
-    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  _$GenericOddEvenCardWidgetConfigCopyWithImpl(this._value, this._then);
+class _$GenericOddEvenOctagonWidgetConfigCopyWithImpl<$Res,
+        $Val extends GenericOddEvenOctagonWidgetConfig>
+    implements $GenericOddEvenOctagonWidgetConfigCopyWith<$Res> {
+  _$GenericOddEvenOctagonWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -108,10 +102,8 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddCardElevation = null,
-    Object? oddCardBGColor = null,
-    Object? evenCardElevation = null,
-    Object? evenCardBGColor = null,
+    Object? oddOctagonBGColor = null,
+    Object? evenOctagonBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
@@ -148,21 +140,13 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCardElevation: null == oddCardElevation
-          ? _value.oddCardElevation
-          : oddCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCardBGColor: null == oddCardBGColor
-          ? _value.oddCardBGColor
-          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
+      oddOctagonBGColor: null == oddOctagonBGColor
+          ? _value.oddOctagonBGColor
+          : oddOctagonBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evenCardElevation: null == evenCardElevation
-          ? _value.evenCardElevation
-          : evenCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCardBGColor: null == evenCardBGColor
-          ? _value.evenCardBGColor
-          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
+      evenOctagonBGColor: null == evenOctagonBGColor
+          ? _value.evenOctagonBGColor
+          : evenOctagonBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -177,12 +161,12 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
-    implements $GenericOddEvenCardWidgetConfigCopyWith<$Res> {
-  factory _$$GenericOddEvenCardWidgetConfigImplCopyWith(
-          _$GenericOddEvenCardWidgetConfigImpl value,
-          $Res Function(_$GenericOddEvenCardWidgetConfigImpl) then) =
-      __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$GenericOddEvenOctagonWidgetConfigImplCopyWith<$Res>
+    implements $GenericOddEvenOctagonWidgetConfigCopyWith<$Res> {
+  factory _$$GenericOddEvenOctagonWidgetConfigImplCopyWith(
+          _$GenericOddEvenOctagonWidgetConfigImpl value,
+          $Res Function(_$GenericOddEvenOctagonWidgetConfigImpl) then) =
+      __$$GenericOddEvenOctagonWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -194,22 +178,20 @@ abstract class _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int oddOctagonBGColor,
+      int evenOctagonBGColor,
       double horizontalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
-        _$GenericOddEvenCardWidgetConfigImpl>
-    implements _$$GenericOddEvenCardWidgetConfigImplCopyWith<$Res> {
-  __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl(
-      _$GenericOddEvenCardWidgetConfigImpl _value,
-      $Res Function(_$GenericOddEvenCardWidgetConfigImpl) _then)
+class __$$GenericOddEvenOctagonWidgetConfigImplCopyWithImpl<$Res>
+    extends _$GenericOddEvenOctagonWidgetConfigCopyWithImpl<$Res,
+        _$GenericOddEvenOctagonWidgetConfigImpl>
+    implements _$$GenericOddEvenOctagonWidgetConfigImplCopyWith<$Res> {
+  __$$GenericOddEvenOctagonWidgetConfigImplCopyWithImpl(
+      _$GenericOddEvenOctagonWidgetConfigImpl _value,
+      $Res Function(_$GenericOddEvenOctagonWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -223,14 +205,12 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddCardElevation = null,
-    Object? oddCardBGColor = null,
-    Object? evenCardElevation = null,
-    Object? evenCardBGColor = null,
+    Object? oddOctagonBGColor = null,
+    Object? evenOctagonBGColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericOddEvenCardWidgetConfigImpl(
+    return _then(_$GenericOddEvenOctagonWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -263,21 +243,13 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCardElevation: null == oddCardElevation
-          ? _value.oddCardElevation
-          : oddCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCardBGColor: null == oddCardBGColor
-          ? _value.oddCardBGColor
-          : oddCardBGColor // ignore: cast_nullable_to_non_nullable
+      oddOctagonBGColor: null == oddOctagonBGColor
+          ? _value.oddOctagonBGColor
+          : oddOctagonBGColor // ignore: cast_nullable_to_non_nullable
               as int,
-      evenCardElevation: null == evenCardElevation
-          ? _value.evenCardElevation
-          : evenCardElevation // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCardBGColor: null == evenCardBGColor
-          ? _value.evenCardBGColor
-          : evenCardBGColor // ignore: cast_nullable_to_non_nullable
+      evenOctagonBGColor: null == evenOctagonBGColor
+          ? _value.evenOctagonBGColor
+          : evenOctagonBGColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -293,17 +265,17 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericOddEvenCardWidgetConfigImpl
-    extends _GenericOddEvenCardWidgetConfig {
-  _$GenericOddEvenCardWidgetConfigImpl(
-      {this.title = 'Generic Odd Even Card',
+class _$GenericOddEvenOctagonWidgetConfigImpl
+    extends _GenericOddEvenOctagonWidgetConfig {
+  _$GenericOddEvenOctagonWidgetConfigImpl(
+      {this.title = 'Generic Odd Even Octagon',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.subTitle = 'Check My Device Data here!',
+      this.subTitle = 'Check My Device Data By Using Octagon Widget!',
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -329,17 +301,15 @@ class _$GenericOddEvenCardWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.oddCardElevation = 5,
-      this.oddCardBGColor = 0XFF7CDAB8,
-      this.evenCardElevation = 5,
-      this.evenCardBGColor = 0XFFf79cA1,
+      this.oddOctagonBGColor = 0XFF7CDAB8,
+      this.evenOctagonBGColor = 0XFFf79cA1,
       this.horizontalSpacing = 5,
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericOddEvenCardWidgetConfigImpl.fromJson(
+  factory _$GenericOddEvenOctagonWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$GenericOddEvenCardWidgetConfigImplFromJson(json);
+      _$$GenericOddEvenOctagonWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -367,16 +337,10 @@ class _$GenericOddEvenCardWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  double oddCardElevation;
+  int oddOctagonBGColor;
   @override
   @JsonKey()
-  int oddCardBGColor;
-  @override
-  @JsonKey()
-  double evenCardElevation;
-  @override
-  @JsonKey()
-  int evenCardBGColor;
+  int evenOctagonBGColor;
   @override
   @JsonKey()
   double horizontalSpacing;
@@ -386,28 +350,28 @@ class _$GenericOddEvenCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericOddEvenOctagonWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddOctagonBGColor: $oddOctagonBGColor, evenOctagonBGColor: $evenOctagonBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
-          _$GenericOddEvenCardWidgetConfigImpl>
-      get copyWith => __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<
-          _$GenericOddEvenCardWidgetConfigImpl>(this, _$identity);
+  _$$GenericOddEvenOctagonWidgetConfigImplCopyWith<
+          _$GenericOddEvenOctagonWidgetConfigImpl>
+      get copyWith => __$$GenericOddEvenOctagonWidgetConfigImplCopyWithImpl<
+          _$GenericOddEvenOctagonWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericOddEvenCardWidgetConfigImplToJson(
+    return _$$GenericOddEvenOctagonWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericOddEvenCardWidgetConfig
-    extends GenericOddEvenCardWidgetConfig {
-  factory _GenericOddEvenCardWidgetConfig(
+abstract class _GenericOddEvenOctagonWidgetConfig
+    extends GenericOddEvenOctagonWidgetConfig {
+  factory _GenericOddEvenOctagonWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
@@ -416,16 +380,15 @@ abstract class _GenericOddEvenCardWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCardElevation,
-      int oddCardBGColor,
-      double evenCardElevation,
-      int evenCardBGColor,
+      int oddOctagonBGColor,
+      int evenOctagonBGColor,
       double horizontalSpacing,
-      double imageSize}) = _$GenericOddEvenCardWidgetConfigImpl;
-  _GenericOddEvenCardWidgetConfig._() : super._();
+      double imageSize}) = _$GenericOddEvenOctagonWidgetConfigImpl;
+  _GenericOddEvenOctagonWidgetConfig._() : super._();
 
-  factory _GenericOddEvenCardWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$GenericOddEvenCardWidgetConfigImpl.fromJson;
+  factory _GenericOddEvenOctagonWidgetConfig.fromJson(
+          Map<String, dynamic> json) =
+      _$GenericOddEvenOctagonWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -452,17 +415,11 @@ abstract class _GenericOddEvenCardWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  double get oddCardElevation;
-  set oddCardElevation(double value);
+  int get oddOctagonBGColor;
+  set oddOctagonBGColor(int value);
   @override
-  int get oddCardBGColor;
-  set oddCardBGColor(int value);
-  @override
-  double get evenCardElevation;
-  set evenCardElevation(double value);
-  @override
-  int get evenCardBGColor;
-  set evenCardBGColor(int value);
+  int get evenOctagonBGColor;
+  set evenOctagonBGColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
@@ -471,7 +428,7 @@ abstract class _GenericOddEvenCardWidgetConfig
   set imageSize(double value);
   @override
   @JsonKey(ignore: true)
-  _$$GenericOddEvenCardWidgetConfigImplCopyWith<
-          _$GenericOddEvenCardWidgetConfigImpl>
+  _$$GenericOddEvenOctagonWidgetConfigImplCopyWith<
+          _$GenericOddEvenOctagonWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
