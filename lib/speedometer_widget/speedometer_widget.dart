@@ -14,28 +14,29 @@ class SpeedometerWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default('') String field,
     @Default(0) double minimum,
-    @Default(200) double maximum,
+    @Default(100) double maximum,
     @Default(0.2) double positionFactor,
     @Default(true) bool showTicks,
     @Default(false) bool showLabel,
+    @Default(true) bool enableAnimation,
     @Default(0xFF0CA7EB) int axisColor,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 20,
+      'fontSize': 40,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
@@ -54,6 +55,7 @@ class SpeedometerWidgetConfig extends BaseConfig
         return DataType.text;
       case 'showLabel':
       case 'showTicks':
+      case 'enableAnimation':
         return DataType.yesno;
       case 'minimum':
       case 'maximum':
@@ -96,7 +98,7 @@ class SpeedometerWidgetConfig extends BaseConfig
         return 'Title';
       case 'deviceId':
         return 'Asset Models';
-      case 'fields':
+      case 'field':
         return 'Select Fields';
       case 'minimum':
         return 'Minimum Range';
@@ -108,6 +110,8 @@ class SpeedometerWidgetConfig extends BaseConfig
         return 'Show Ticks';
       case 'showLabel':
         return 'Show Label';
+      case 'enableAnimation':
+        return 'Enable Animation';
       case 'axisColor':
         return 'Axis Color';
       case 'titleFont':

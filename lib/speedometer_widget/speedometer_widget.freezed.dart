@@ -37,6 +37,8 @@ mixin _$SpeedometerWidgetConfig {
   set showTicks(bool value) => throw _privateConstructorUsedError;
   bool get showLabel => throw _privateConstructorUsedError;
   set showLabel(bool value) => throw _privateConstructorUsedError;
+  bool get enableAnimation => throw _privateConstructorUsedError;
+  set enableAnimation(bool value) => throw _privateConstructorUsedError;
   int get axisColor => throw _privateConstructorUsedError;
   set axisColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -70,6 +72,7 @@ abstract class $SpeedometerWidgetConfigCopyWith<$Res> {
       double positionFactor,
       bool showTicks,
       bool showLabel,
+      bool enableAnimation,
       int axisColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -98,6 +101,7 @@ class _$SpeedometerWidgetConfigCopyWithImpl<$Res,
     Object? positionFactor = null,
     Object? showTicks = null,
     Object? showLabel = null,
+    Object? enableAnimation = null,
     Object? axisColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
@@ -135,6 +139,10 @@ class _$SpeedometerWidgetConfigCopyWithImpl<$Res,
       showLabel: null == showLabel
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableAnimation: null == enableAnimation
+          ? _value.enableAnimation
+          : enableAnimation // ignore: cast_nullable_to_non_nullable
               as bool,
       axisColor: null == axisColor
           ? _value.axisColor
@@ -174,6 +182,7 @@ abstract class _$$SpeedometerWidgetConfigImplCopyWith<$Res>
       double positionFactor,
       bool showTicks,
       bool showLabel,
+      bool enableAnimation,
       int axisColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -201,6 +210,7 @@ class __$$SpeedometerWidgetConfigImplCopyWithImpl<$Res>
     Object? positionFactor = null,
     Object? showTicks = null,
     Object? showLabel = null,
+    Object? enableAnimation = null,
     Object? axisColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
@@ -239,6 +249,10 @@ class __$$SpeedometerWidgetConfigImplCopyWithImpl<$Res>
           ? _value.showLabel
           : showLabel // ignore: cast_nullable_to_non_nullable
               as bool,
+      enableAnimation: null == enableAnimation
+          ? _value.enableAnimation
+          : enableAnimation // ignore: cast_nullable_to_non_nullable
+              as bool,
       axisColor: null == axisColor
           ? _value.axisColor
           : axisColor // ignore: cast_nullable_to_non_nullable
@@ -267,26 +281,27 @@ class _$SpeedometerWidgetConfigImpl extends _SpeedometerWidgetConfig {
       this.deviceId = '',
       this.field = '',
       this.minimum = 0,
-      this.maximum = 200,
+      this.maximum = 100,
       this.positionFactor = 0.2,
       this.showTicks = true,
       this.showLabel = false,
+      this.enableAnimation = true,
       this.axisColor = 0xFF0CA7EB,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 18,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.valueFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 20,
+        'fontSize': 40,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
       this.unitFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 18,
         'fontColor': 0xFF000000,
         'fontBold': true
       }})
@@ -321,6 +336,9 @@ class _$SpeedometerWidgetConfigImpl extends _SpeedometerWidgetConfig {
   bool showLabel;
   @override
   @JsonKey()
+  bool enableAnimation;
+  @override
+  @JsonKey()
   int axisColor;
   @override
   @JsonKey()
@@ -334,7 +352,7 @@ class _$SpeedometerWidgetConfigImpl extends _SpeedometerWidgetConfig {
 
   @override
   String toString() {
-    return 'SpeedometerWidgetConfig(title: $title, deviceId: $deviceId, field: $field, minimum: $minimum, maximum: $maximum, positionFactor: $positionFactor, showTicks: $showTicks, showLabel: $showLabel, axisColor: $axisColor, titleFont: $titleFont, valueFont: $valueFont, unitFont: $unitFont)';
+    return 'SpeedometerWidgetConfig(title: $title, deviceId: $deviceId, field: $field, minimum: $minimum, maximum: $maximum, positionFactor: $positionFactor, showTicks: $showTicks, showLabel: $showLabel, enableAnimation: $enableAnimation, axisColor: $axisColor, titleFont: $titleFont, valueFont: $valueFont, unitFont: $unitFont)';
   }
 
   @JsonKey(ignore: true)
@@ -362,6 +380,7 @@ abstract class _SpeedometerWidgetConfig extends SpeedometerWidgetConfig {
       double positionFactor,
       bool showTicks,
       bool showLabel,
+      bool enableAnimation,
       int axisColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -395,6 +414,9 @@ abstract class _SpeedometerWidgetConfig extends SpeedometerWidgetConfig {
   @override
   bool get showLabel;
   set showLabel(bool value);
+  @override
+  bool get enableAnimation;
+  set enableAnimation(bool value);
   @override
   int get axisColor;
   set axisColor(int value);
