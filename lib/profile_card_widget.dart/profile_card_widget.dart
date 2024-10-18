@@ -11,6 +11,7 @@ class ProfileCardWidgetConfig extends BaseConfig
 
   factory ProfileCardWidgetConfig({
     @Default('') String patientName,
+    @Default('') String profileIcon,
     @Default(0) int phoneNumber,
     @Default(0) int age,
     @Default('') String bloodGroup,
@@ -64,6 +65,8 @@ class ProfileCardWidgetConfig extends BaseConfig
         return DataType.decimal;
       case 'cardBgColor':
         return DataType.numeric;
+      case 'profileIcon':
+        return DataType.image;
       case 'nameFont':
       case 'numberFont':
       case 'labelFont':
@@ -108,6 +111,8 @@ class ProfileCardWidgetConfig extends BaseConfig
         return 'Weight';
       case 'cardBgColor':
         return 'Card BgColor';
+      case 'profileIcon':
+        return 'Profile Icon';
       case 'nameFont':
         return 'Name Font';
       case 'valueFont':
