@@ -25,3 +25,4 @@ export 'directional_widget/directional_widget.dart';
 export 'text_card/text_card.dart';
 export 'device_model_heatmap_widget/device_model_heatmap_widget.dart';
 export 'speedometer_widget/speedometer_widget.dart';
+export 'device_list_card_widget/device_list_card_widget.dart';
