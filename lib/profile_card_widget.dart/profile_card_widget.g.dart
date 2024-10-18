@@ -10,6 +10,7 @@ _$ProfileCardWidgetConfigImpl _$$ProfileCardWidgetConfigImplFromJson(
         Map<String, dynamic> json) =>
     _$ProfileCardWidgetConfigImpl(
       patientName: json['patientName'] as String? ?? '',
+      profileIcon: json['profileIcon'] as String? ?? '',
       phoneNumber: (json['phoneNumber'] as num?)?.toInt() ?? 0,
       age: (json['age'] as num?)?.toInt() ?? 0,
       bloodGroup: json['bloodGroup'] as String? ?? '',
@@ -50,6 +51,7 @@ Map<String, dynamic> _$$ProfileCardWidgetConfigImplToJson(
         _$ProfileCardWidgetConfigImpl instance) =>
     <String, dynamic>{
       'patientName': instance.patientName,
+      'profileIcon': instance.profileIcon,
       'phoneNumber': instance.phoneNumber,
       'age': instance.age,
       'bloodGroup': instance.bloodGroup,

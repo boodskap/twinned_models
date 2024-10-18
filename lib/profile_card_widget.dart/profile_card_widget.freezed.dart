@@ -23,6 +23,8 @@ ProfileCardWidgetConfig _$ProfileCardWidgetConfigFromJson(
 mixin _$ProfileCardWidgetConfig {
   String get patientName => throw _privateConstructorUsedError;
   set patientName(String value) => throw _privateConstructorUsedError;
+  String get profileIcon => throw _privateConstructorUsedError;
+  set profileIcon(String value) => throw _privateConstructorUsedError;
   int get phoneNumber => throw _privateConstructorUsedError;
   set phoneNumber(int value) => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
@@ -62,6 +64,7 @@ abstract class $ProfileCardWidgetConfigCopyWith<$Res> {
   @useResult
   $Res call(
       {String patientName,
+      String profileIcon,
       int phoneNumber,
       int age,
       String bloodGroup,
@@ -89,6 +92,7 @@ class _$ProfileCardWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? patientName = null,
+    Object? profileIcon = null,
     Object? phoneNumber = null,
     Object? age = null,
     Object? bloodGroup = null,
@@ -104,6 +108,10 @@ class _$ProfileCardWidgetConfigCopyWithImpl<$Res,
       patientName: null == patientName
           ? _value.patientName
           : patientName // ignore: cast_nullable_to_non_nullable
+              as String,
+      profileIcon: null == profileIcon
+          ? _value.profileIcon
+          : profileIcon // ignore: cast_nullable_to_non_nullable
               as String,
       phoneNumber: null == phoneNumber
           ? _value.phoneNumber
@@ -160,6 +168,7 @@ abstract class _$$ProfileCardWidgetConfigImplCopyWith<$Res>
   @useResult
   $Res call(
       {String patientName,
+      String profileIcon,
       int phoneNumber,
       int age,
       String bloodGroup,
@@ -186,6 +195,7 @@ class __$$ProfileCardWidgetConfigImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? patientName = null,
+    Object? profileIcon = null,
     Object? phoneNumber = null,
     Object? age = null,
     Object? bloodGroup = null,
@@ -201,6 +211,10 @@ class __$$ProfileCardWidgetConfigImplCopyWithImpl<$Res>
       patientName: null == patientName
           ? _value.patientName
           : patientName // ignore: cast_nullable_to_non_nullable
+              as String,
+      profileIcon: null == profileIcon
+          ? _value.profileIcon
+          : profileIcon // ignore: cast_nullable_to_non_nullable
               as String,
       phoneNumber: null == phoneNumber
           ? _value.phoneNumber
@@ -251,6 +265,7 @@ class __$$ProfileCardWidgetConfigImplCopyWithImpl<$Res>
 class _$ProfileCardWidgetConfigImpl extends _ProfileCardWidgetConfig {
   _$ProfileCardWidgetConfigImpl(
       {this.patientName = '',
+      this.profileIcon = '',
       this.phoneNumber = 0,
       this.age = 0,
       this.bloodGroup = '',
@@ -291,6 +306,9 @@ class _$ProfileCardWidgetConfigImpl extends _ProfileCardWidgetConfig {
   String patientName;
   @override
   @JsonKey()
+  String profileIcon;
+  @override
+  @JsonKey()
   int phoneNumber;
   @override
   @JsonKey()
@@ -322,7 +340,7 @@ class _$ProfileCardWidgetConfigImpl extends _ProfileCardWidgetConfig {
 
   @override
   String toString() {
-    return 'ProfileCardWidgetConfig(patientName: $patientName, phoneNumber: $phoneNumber, age: $age, bloodGroup: $bloodGroup, height: $height, weight: $weight, cardBgColor: $cardBgColor, nameFont: $nameFont, numberFont: $numberFont, labelFont: $labelFont, valueFont: $valueFont)';
+    return 'ProfileCardWidgetConfig(patientName: $patientName, profileIcon: $profileIcon, phoneNumber: $phoneNumber, age: $age, bloodGroup: $bloodGroup, height: $height, weight: $weight, cardBgColor: $cardBgColor, nameFont: $nameFont, numberFont: $numberFont, labelFont: $labelFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
@@ -343,6 +361,7 @@ class _$ProfileCardWidgetConfigImpl extends _ProfileCardWidgetConfig {
 abstract class _ProfileCardWidgetConfig extends ProfileCardWidgetConfig {
   factory _ProfileCardWidgetConfig(
       {String patientName,
+      String profileIcon,
       int phoneNumber,
       int age,
       String bloodGroup,
@@ -361,6 +380,9 @@ abstract class _ProfileCardWidgetConfig extends ProfileCardWidgetConfig {
   @override
   String get patientName;
   set patientName(String value);
+  @override
+  String get profileIcon;
+  set profileIcon(String value);
   @override
   int get phoneNumber;
   set phoneNumber(int value);
