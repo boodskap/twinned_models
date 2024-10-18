@@ -15,7 +15,7 @@ class SpeedometerWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default(0) double minimum,
     @Default(100) double maximum,
-    @Default(0.2) double positionFactor,
+    @Default(0.1) double positionFactor,
     @Default(true) bool showTicks,
     @Default(false) bool showLabel,
     @Default(true) bool enableAnimation,
