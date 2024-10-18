@@ -14,7 +14,7 @@ _$SpeedometerWidgetConfigImpl _$$SpeedometerWidgetConfigImplFromJson(
       field: json['field'] as String? ?? '',
       minimum: (json['minimum'] as num?)?.toDouble() ?? 0,
       maximum: (json['maximum'] as num?)?.toDouble() ?? 100,
-      positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.2,
+      positionFactor: (json['positionFactor'] as num?)?.toDouble() ?? 0.1,
       showTicks: json['showTicks'] as bool? ?? true,
       showLabel: json['showLabel'] as bool? ?? false,
       enableAnimation: json['enableAnimation'] as bool? ?? true,

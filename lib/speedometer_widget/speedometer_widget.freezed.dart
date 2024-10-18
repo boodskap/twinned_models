@@ -282,7 +282,7 @@ class _$SpeedometerWidgetConfigImpl extends _SpeedometerWidgetConfig {
       this.field = '',
       this.minimum = 0,
       this.maximum = 100,
-      this.positionFactor = 0.2,
+      this.positionFactor = 0.1,
       this.showTicks = true,
       this.showLabel = false,
       this.enableAnimation = true,
