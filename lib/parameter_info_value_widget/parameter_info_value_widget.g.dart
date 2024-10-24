@@ -1,15 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'visibility_air_quality.dart';
+part of 'parameter_info_value_widget.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$VisibilityAirQualityWidgetConfigImpl
-    _$$VisibilityAirQualityWidgetConfigImplFromJson(
-            Map<String, dynamic> json) =>
-        _$VisibilityAirQualityWidgetConfigImpl(
+_$ParameterInfoValueWidgetConfigImpl
+    _$$ParameterInfoValueWidgetConfigImplFromJson(Map<String, dynamic> json) =>
+        _$ParameterInfoValueWidgetConfigImpl(
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
           title: json['title'] as String? ?? '',
@@ -37,8 +36,8 @@ _$VisibilityAirQualityWidgetConfigImpl
               },
         );
 
-Map<String, dynamic> _$$VisibilityAirQualityWidgetConfigImplToJson(
-        _$VisibilityAirQualityWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$ParameterInfoValueWidgetConfigImplToJson(
+        _$ParameterInfoValueWidgetConfigImpl instance) =>
     <String, dynamic>{
       'deviceId': instance.deviceId,
       'field': instance.field,
