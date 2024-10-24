@@ -1,15 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'visibility_air_quality.freezed.dart';
-part 'visibility_air_quality.g.dart';
+part 'parameter_info_value_widget.freezed.dart';
+part 'parameter_info_value_widget.g.dart';
 
 @unfreezed
-class VisibilityAirQualityWidgetConfig extends BaseConfig
-    with _$VisibilityAirQualityWidgetConfig {
-  VisibilityAirQualityWidgetConfig._();
+class ParameterInfoValueWidgetConfig extends BaseConfig
+    with _$ParameterInfoValueWidgetConfig {
+  ParameterInfoValueWidgetConfig._();
 
-  factory VisibilityAirQualityWidgetConfig({
+  factory ParameterInfoValueWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String title,
@@ -35,11 +35,11 @@ class VisibilityAirQualityWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> subLabelFont,
-  }) = _VisibilityAirQualityWidgetConfig;
+  }) = _ParameterInfoValueWidgetConfig;
 
-  factory VisibilityAirQualityWidgetConfig.fromJson(
+  factory ParameterInfoValueWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$VisibilityAirQualityWidgetConfigFromJson(json);
+      _$ParameterInfoValueWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
