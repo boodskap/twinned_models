@@ -13,7 +13,6 @@ class ParameterValueWidgetConfig extends BaseConfig
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String title,
-    @Default(0XFF03A9F4) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -28,13 +27,6 @@ class ParameterValueWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 12,
-      'fontColor': 0x8A000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> subLabelFont,
   }) = _ParameterValueWidgetConfig;
 
   factory ParameterValueWidgetConfig.fromJson(
@@ -50,10 +42,7 @@ class ParameterValueWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
-      case 'subLabelFont':
         return DataType.font;
-      case 'iconColor':
-        return DataType.numeric;
       default:
         return DataType.none;
     }
@@ -66,8 +55,6 @@ class ParameterValueWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'iconColor':
-        return HintType.color;
       default:
         return HintType.none;
     }
