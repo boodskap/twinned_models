@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'parameter_info_value_widget.dart';
+part of 'parameter_info_widget.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,19 +14,21 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ParameterInfoValueWidgetConfig _$ParameterInfoValueWidgetConfigFromJson(
+ParameterInfoWidgetConfig _$ParameterInfoWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _ParameterInfoValueWidgetConfig.fromJson(json);
+  return _ParameterInfoWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ParameterInfoValueWidgetConfig {
+mixin _$ParameterInfoWidgetConfig {
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
+  String get hintText => throw _privateConstructorUsedError;
+  set hintText(String value) => throw _privateConstructorUsedError;
   int get iconColor => throw _privateConstructorUsedError;
   set iconColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -41,22 +43,21 @@ mixin _$ParameterInfoValueWidgetConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ParameterInfoValueWidgetConfigCopyWith<ParameterInfoValueWidgetConfig>
-      get copyWith => throw _privateConstructorUsedError;
+  $ParameterInfoWidgetConfigCopyWith<ParameterInfoWidgetConfig> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParameterInfoValueWidgetConfigCopyWith<$Res> {
-  factory $ParameterInfoValueWidgetConfigCopyWith(
-          ParameterInfoValueWidgetConfig value,
-          $Res Function(ParameterInfoValueWidgetConfig) then) =
-      _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
-          ParameterInfoValueWidgetConfig>;
+abstract class $ParameterInfoWidgetConfigCopyWith<$Res> {
+  factory $ParameterInfoWidgetConfigCopyWith(ParameterInfoWidgetConfig value,
+          $Res Function(ParameterInfoWidgetConfig) then) =
+      _$ParameterInfoWidgetConfigCopyWithImpl<$Res, ParameterInfoWidgetConfig>;
   @useResult
   $Res call(
       {String deviceId,
       String field,
       String title,
+      String hintText,
       int iconColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -64,10 +65,10 @@ abstract class $ParameterInfoValueWidgetConfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
-        $Val extends ParameterInfoValueWidgetConfig>
-    implements $ParameterInfoValueWidgetConfigCopyWith<$Res> {
-  _$ParameterInfoValueWidgetConfigCopyWithImpl(this._value, this._then);
+class _$ParameterInfoWidgetConfigCopyWithImpl<$Res,
+        $Val extends ParameterInfoWidgetConfig>
+    implements $ParameterInfoWidgetConfigCopyWith<$Res> {
+  _$ParameterInfoWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -80,6 +81,7 @@ class _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? field = null,
     Object? title = null,
+    Object? hintText = null,
     Object? iconColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
@@ -97,6 +99,10 @@ class _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      hintText: null == hintText
+          ? _value.hintText
+          : hintText // ignore: cast_nullable_to_non_nullable
               as String,
       iconColor: null == iconColor
           ? _value.iconColor
@@ -119,18 +125,19 @@ class _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ParameterInfoValueWidgetConfigImplCopyWith<$Res>
-    implements $ParameterInfoValueWidgetConfigCopyWith<$Res> {
-  factory _$$ParameterInfoValueWidgetConfigImplCopyWith(
-          _$ParameterInfoValueWidgetConfigImpl value,
-          $Res Function(_$ParameterInfoValueWidgetConfigImpl) then) =
-      __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$ParameterInfoWidgetConfigImplCopyWith<$Res>
+    implements $ParameterInfoWidgetConfigCopyWith<$Res> {
+  factory _$$ParameterInfoWidgetConfigImplCopyWith(
+          _$ParameterInfoWidgetConfigImpl value,
+          $Res Function(_$ParameterInfoWidgetConfigImpl) then) =
+      __$$ParameterInfoWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String deviceId,
       String field,
       String title,
+      String hintText,
       int iconColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -138,13 +145,13 @@ abstract class _$$ParameterInfoValueWidgetConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>
-    extends _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
-        _$ParameterInfoValueWidgetConfigImpl>
-    implements _$$ParameterInfoValueWidgetConfigImplCopyWith<$Res> {
-  __$$ParameterInfoValueWidgetConfigImplCopyWithImpl(
-      _$ParameterInfoValueWidgetConfigImpl _value,
-      $Res Function(_$ParameterInfoValueWidgetConfigImpl) _then)
+class __$$ParameterInfoWidgetConfigImplCopyWithImpl<$Res>
+    extends _$ParameterInfoWidgetConfigCopyWithImpl<$Res,
+        _$ParameterInfoWidgetConfigImpl>
+    implements _$$ParameterInfoWidgetConfigImplCopyWith<$Res> {
+  __$$ParameterInfoWidgetConfigImplCopyWithImpl(
+      _$ParameterInfoWidgetConfigImpl _value,
+      $Res Function(_$ParameterInfoWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -153,12 +160,13 @@ class __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? field = null,
     Object? title = null,
+    Object? hintText = null,
     Object? iconColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
     Object? subLabelFont = null,
   }) {
-    return _then(_$ParameterInfoValueWidgetConfigImpl(
+    return _then(_$ParameterInfoWidgetConfigImpl(
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -170,6 +178,10 @@ class __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      hintText: null == hintText
+          ? _value.hintText
+          : hintText // ignore: cast_nullable_to_non_nullable
               as String,
       iconColor: null == iconColor
           ? _value.iconColor
@@ -193,12 +205,12 @@ class __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParameterInfoValueWidgetConfigImpl
-    extends _ParameterInfoValueWidgetConfig {
-  _$ParameterInfoValueWidgetConfigImpl(
+class _$ParameterInfoWidgetConfigImpl extends _ParameterInfoWidgetConfig {
+  _$ParameterInfoWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
       this.title = '',
+      this.hintText = '',
       this.iconColor = 0XFF03A9F4,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -220,9 +232,8 @@ class _$ParameterInfoValueWidgetConfigImpl
       }})
       : super._();
 
-  factory _$ParameterInfoValueWidgetConfigImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ParameterInfoValueWidgetConfigImplFromJson(json);
+  factory _$ParameterInfoWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParameterInfoWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -233,6 +244,9 @@ class _$ParameterInfoValueWidgetConfigImpl
   @override
   @JsonKey()
   String title;
+  @override
+  @JsonKey()
+  String hintText;
   @override
   @JsonKey()
   int iconColor;
@@ -248,40 +262,38 @@ class _$ParameterInfoValueWidgetConfigImpl
 
   @override
   String toString() {
-    return 'ParameterInfoValueWidgetConfig(deviceId: $deviceId, field: $field, title: $title, iconColor: $iconColor, titleFont: $titleFont, valueFont: $valueFont, subLabelFont: $subLabelFont)';
+    return 'ParameterInfoWidgetConfig(deviceId: $deviceId, field: $field, title: $title, hintText: $hintText, iconColor: $iconColor, titleFont: $titleFont, valueFont: $valueFont, subLabelFont: $subLabelFont)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ParameterInfoValueWidgetConfigImplCopyWith<
-          _$ParameterInfoValueWidgetConfigImpl>
-      get copyWith => __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<
-          _$ParameterInfoValueWidgetConfigImpl>(this, _$identity);
+  _$$ParameterInfoWidgetConfigImplCopyWith<_$ParameterInfoWidgetConfigImpl>
+      get copyWith => __$$ParameterInfoWidgetConfigImplCopyWithImpl<
+          _$ParameterInfoWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParameterInfoValueWidgetConfigImplToJson(
+    return _$$ParameterInfoWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _ParameterInfoValueWidgetConfig
-    extends ParameterInfoValueWidgetConfig {
-  factory _ParameterInfoValueWidgetConfig(
-          {String deviceId,
-          String field,
-          String title,
-          int iconColor,
-          Map<String, dynamic> titleFont,
-          Map<String, dynamic> valueFont,
-          Map<String, dynamic> subLabelFont}) =
-      _$ParameterInfoValueWidgetConfigImpl;
-  _ParameterInfoValueWidgetConfig._() : super._();
+abstract class _ParameterInfoWidgetConfig extends ParameterInfoWidgetConfig {
+  factory _ParameterInfoWidgetConfig(
+      {String deviceId,
+      String field,
+      String title,
+      String hintText,
+      int iconColor,
+      Map<String, dynamic> titleFont,
+      Map<String, dynamic> valueFont,
+      Map<String, dynamic> subLabelFont}) = _$ParameterInfoWidgetConfigImpl;
+  _ParameterInfoWidgetConfig._() : super._();
 
-  factory _ParameterInfoValueWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$ParameterInfoValueWidgetConfigImpl.fromJson;
+  factory _ParameterInfoWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$ParameterInfoWidgetConfigImpl.fromJson;
 
   @override
   String get deviceId;
@@ -292,6 +304,9 @@ abstract class _ParameterInfoValueWidgetConfig
   @override
   String get title;
   set title(String value);
+  @override
+  String get hintText;
+  set hintText(String value);
   @override
   int get iconColor;
   set iconColor(int value);
@@ -306,7 +321,6 @@ abstract class _ParameterInfoValueWidgetConfig
   set subLabelFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
-  _$$ParameterInfoValueWidgetConfigImplCopyWith<
-          _$ParameterInfoValueWidgetConfigImpl>
+  _$$ParameterInfoWidgetConfigImplCopyWith<_$ParameterInfoWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
