@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'visibility_air_quality.dart';
+part of 'parameter_info_value_widget.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-VisibilityAirQualityWidgetConfig _$VisibilityAirQualityWidgetConfigFromJson(
+ParameterInfoValueWidgetConfig _$ParameterInfoValueWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _VisibilityAirQualityWidgetConfig.fromJson(json);
+  return _ParameterInfoValueWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$VisibilityAirQualityWidgetConfig {
+mixin _$ParameterInfoValueWidgetConfig {
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -41,17 +41,17 @@ mixin _$VisibilityAirQualityWidgetConfig {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VisibilityAirQualityWidgetConfigCopyWith<VisibilityAirQualityWidgetConfig>
+  $ParameterInfoValueWidgetConfigCopyWith<ParameterInfoValueWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VisibilityAirQualityWidgetConfigCopyWith<$Res> {
-  factory $VisibilityAirQualityWidgetConfigCopyWith(
-          VisibilityAirQualityWidgetConfig value,
-          $Res Function(VisibilityAirQualityWidgetConfig) then) =
-      _$VisibilityAirQualityWidgetConfigCopyWithImpl<$Res,
-          VisibilityAirQualityWidgetConfig>;
+abstract class $ParameterInfoValueWidgetConfigCopyWith<$Res> {
+  factory $ParameterInfoValueWidgetConfigCopyWith(
+          ParameterInfoValueWidgetConfig value,
+          $Res Function(ParameterInfoValueWidgetConfig) then) =
+      _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
+          ParameterInfoValueWidgetConfig>;
   @useResult
   $Res call(
       {String deviceId,
@@ -64,10 +64,10 @@ abstract class $VisibilityAirQualityWidgetConfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$VisibilityAirQualityWidgetConfigCopyWithImpl<$Res,
-        $Val extends VisibilityAirQualityWidgetConfig>
-    implements $VisibilityAirQualityWidgetConfigCopyWith<$Res> {
-  _$VisibilityAirQualityWidgetConfigCopyWithImpl(this._value, this._then);
+class _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
+        $Val extends ParameterInfoValueWidgetConfig>
+    implements $ParameterInfoValueWidgetConfigCopyWith<$Res> {
+  _$ParameterInfoValueWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -119,12 +119,12 @@ class _$VisibilityAirQualityWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$VisibilityAirQualityWidgetConfigImplCopyWith<$Res>
-    implements $VisibilityAirQualityWidgetConfigCopyWith<$Res> {
-  factory _$$VisibilityAirQualityWidgetConfigImplCopyWith(
-          _$VisibilityAirQualityWidgetConfigImpl value,
-          $Res Function(_$VisibilityAirQualityWidgetConfigImpl) then) =
-      __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$ParameterInfoValueWidgetConfigImplCopyWith<$Res>
+    implements $ParameterInfoValueWidgetConfigCopyWith<$Res> {
+  factory _$$ParameterInfoValueWidgetConfigImplCopyWith(
+          _$ParameterInfoValueWidgetConfigImpl value,
+          $Res Function(_$ParameterInfoValueWidgetConfigImpl) then) =
+      __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -138,13 +138,13 @@ abstract class _$$VisibilityAirQualityWidgetConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl<$Res>
-    extends _$VisibilityAirQualityWidgetConfigCopyWithImpl<$Res,
-        _$VisibilityAirQualityWidgetConfigImpl>
-    implements _$$VisibilityAirQualityWidgetConfigImplCopyWith<$Res> {
-  __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl(
-      _$VisibilityAirQualityWidgetConfigImpl _value,
-      $Res Function(_$VisibilityAirQualityWidgetConfigImpl) _then)
+class __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<$Res>
+    extends _$ParameterInfoValueWidgetConfigCopyWithImpl<$Res,
+        _$ParameterInfoValueWidgetConfigImpl>
+    implements _$$ParameterInfoValueWidgetConfigImplCopyWith<$Res> {
+  __$$ParameterInfoValueWidgetConfigImplCopyWithImpl(
+      _$ParameterInfoValueWidgetConfigImpl _value,
+      $Res Function(_$ParameterInfoValueWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -158,7 +158,7 @@ class __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl<$Res>
     Object? valueFont = null,
     Object? subLabelFont = null,
   }) {
-    return _then(_$VisibilityAirQualityWidgetConfigImpl(
+    return _then(_$ParameterInfoValueWidgetConfigImpl(
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -193,9 +193,9 @@ class __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$VisibilityAirQualityWidgetConfigImpl
-    extends _VisibilityAirQualityWidgetConfig {
-  _$VisibilityAirQualityWidgetConfigImpl(
+class _$ParameterInfoValueWidgetConfigImpl
+    extends _ParameterInfoValueWidgetConfig {
+  _$ParameterInfoValueWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
       this.title = '',
@@ -220,9 +220,9 @@ class _$VisibilityAirQualityWidgetConfigImpl
       }})
       : super._();
 
-  factory _$VisibilityAirQualityWidgetConfigImpl.fromJson(
+  factory _$ParameterInfoValueWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$VisibilityAirQualityWidgetConfigImplFromJson(json);
+      _$$ParameterInfoValueWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -248,28 +248,28 @@ class _$VisibilityAirQualityWidgetConfigImpl
 
   @override
   String toString() {
-    return 'VisibilityAirQualityWidgetConfig(deviceId: $deviceId, field: $field, title: $title, iconColor: $iconColor, titleFont: $titleFont, valueFont: $valueFont, subLabelFont: $subLabelFont)';
+    return 'ParameterInfoValueWidgetConfig(deviceId: $deviceId, field: $field, title: $title, iconColor: $iconColor, titleFont: $titleFont, valueFont: $valueFont, subLabelFont: $subLabelFont)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VisibilityAirQualityWidgetConfigImplCopyWith<
-          _$VisibilityAirQualityWidgetConfigImpl>
-      get copyWith => __$$VisibilityAirQualityWidgetConfigImplCopyWithImpl<
-          _$VisibilityAirQualityWidgetConfigImpl>(this, _$identity);
+  _$$ParameterInfoValueWidgetConfigImplCopyWith<
+          _$ParameterInfoValueWidgetConfigImpl>
+      get copyWith => __$$ParameterInfoValueWidgetConfigImplCopyWithImpl<
+          _$ParameterInfoValueWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VisibilityAirQualityWidgetConfigImplToJson(
+    return _$$ParameterInfoValueWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _VisibilityAirQualityWidgetConfig
-    extends VisibilityAirQualityWidgetConfig {
-  factory _VisibilityAirQualityWidgetConfig(
+abstract class _ParameterInfoValueWidgetConfig
+    extends ParameterInfoValueWidgetConfig {
+  factory _ParameterInfoValueWidgetConfig(
           {String deviceId,
           String field,
           String title,
@@ -277,12 +277,11 @@ abstract class _VisibilityAirQualityWidgetConfig
           Map<String, dynamic> titleFont,
           Map<String, dynamic> valueFont,
           Map<String, dynamic> subLabelFont}) =
-      _$VisibilityAirQualityWidgetConfigImpl;
-  _VisibilityAirQualityWidgetConfig._() : super._();
+      _$ParameterInfoValueWidgetConfigImpl;
+  _ParameterInfoValueWidgetConfig._() : super._();
 
-  factory _VisibilityAirQualityWidgetConfig.fromJson(
-          Map<String, dynamic> json) =
-      _$VisibilityAirQualityWidgetConfigImpl.fromJson;
+  factory _ParameterInfoValueWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$ParameterInfoValueWidgetConfigImpl.fromJson;
 
   @override
   String get deviceId;
@@ -307,7 +306,7 @@ abstract class _VisibilityAirQualityWidgetConfig
   set subLabelFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
-  _$$VisibilityAirQualityWidgetConfigImplCopyWith<
-          _$VisibilityAirQualityWidgetConfigImpl>
+  _$$ParameterInfoValueWidgetConfigImplCopyWith<
+          _$ParameterInfoValueWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
