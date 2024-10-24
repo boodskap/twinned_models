@@ -27,16 +27,11 @@ mixin _$ParameterValueWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
-  int get iconColor => throw _privateConstructorUsedError;
-  set iconColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
-      throw _privateConstructorUsedError;
-  Map<String, dynamic> get subLabelFont => throw _privateConstructorUsedError;
-  set subLabelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,10 +51,8 @@ abstract class $ParameterValueWidgetConfigCopyWith<$Res> {
       {String deviceId,
       String field,
       String title,
-      int iconColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> subLabelFont});
+      Map<String, dynamic> valueFont});
 }
 
 /// @nodoc
@@ -79,10 +72,8 @@ class _$ParameterValueWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? field = null,
     Object? title = null,
-    Object? iconColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
-    Object? subLabelFont = null,
   }) {
     return _then(_value.copyWith(
       deviceId: null == deviceId
@@ -97,10 +88,6 @@ class _$ParameterValueWidgetConfigCopyWithImpl<$Res,
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      iconColor: null == iconColor
-          ? _value.iconColor
-          : iconColor // ignore: cast_nullable_to_non_nullable
-              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -108,10 +95,6 @@ class _$ParameterValueWidgetConfigCopyWithImpl<$Res,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      subLabelFont: null == subLabelFont
-          ? _value.subLabelFont
-          : subLabelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ) as $Val);
   }
@@ -130,10 +113,8 @@ abstract class _$$ParameterValueWidgetConfigImplCopyWith<$Res>
       {String deviceId,
       String field,
       String title,
-      int iconColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> subLabelFont});
+      Map<String, dynamic> valueFont});
 }
 
 /// @nodoc
@@ -152,10 +133,8 @@ class __$$ParameterValueWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? field = null,
     Object? title = null,
-    Object? iconColor = null,
     Object? titleFont = null,
     Object? valueFont = null,
-    Object? subLabelFont = null,
   }) {
     return _then(_$ParameterValueWidgetConfigImpl(
       deviceId: null == deviceId
@@ -170,10 +149,6 @@ class __$$ParameterValueWidgetConfigImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      iconColor: null == iconColor
-          ? _value.iconColor
-          : iconColor // ignore: cast_nullable_to_non_nullable
-              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -181,10 +156,6 @@ class __$$ParameterValueWidgetConfigImplCopyWithImpl<$Res>
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
-      subLabelFont: null == subLabelFont
-          ? _value.subLabelFont
-          : subLabelFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
     ));
   }
@@ -197,7 +168,6 @@ class _$ParameterValueWidgetConfigImpl extends _ParameterValueWidgetConfig {
       {this.deviceId = '',
       this.field = '',
       this.title = '',
-      this.iconColor = 0XFF03A9F4,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
@@ -208,12 +178,6 @@ class _$ParameterValueWidgetConfigImpl extends _ParameterValueWidgetConfig {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
         'fontColor': 0xDD000000,
-        'fontBold': true
-      },
-      this.subLabelFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 12,
-        'fontColor': 0x8A000000,
         'fontBold': true
       }})
       : super._();
@@ -233,20 +197,14 @@ class _$ParameterValueWidgetConfigImpl extends _ParameterValueWidgetConfig {
   String title;
   @override
   @JsonKey()
-  int iconColor;
-  @override
-  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
   Map<String, dynamic> valueFont;
-  @override
-  @JsonKey()
-  Map<String, dynamic> subLabelFont;
 
   @override
   String toString() {
-    return 'ParameterValueWidgetConfig(deviceId: $deviceId, field: $field, title: $title, iconColor: $iconColor, titleFont: $titleFont, valueFont: $valueFont, subLabelFont: $subLabelFont)';
+    return 'ParameterValueWidgetConfig(deviceId: $deviceId, field: $field, title: $title, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
@@ -269,10 +227,8 @@ abstract class _ParameterValueWidgetConfig extends ParameterValueWidgetConfig {
       {String deviceId,
       String field,
       String title,
-      int iconColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont,
-      Map<String, dynamic> subLabelFont}) = _$ParameterValueWidgetConfigImpl;
+      Map<String, dynamic> valueFont}) = _$ParameterValueWidgetConfigImpl;
   _ParameterValueWidgetConfig._() : super._();
 
   factory _ParameterValueWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -288,17 +244,11 @@ abstract class _ParameterValueWidgetConfig extends ParameterValueWidgetConfig {
   String get title;
   set title(String value);
   @override
-  int get iconColor;
-  set iconColor(int value);
-  @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-  @override
-  Map<String, dynamic> get subLabelFont;
-  set subLabelFont(Map<String, dynamic> value);
   @override
   @JsonKey(ignore: true)
   _$$ParameterValueWidgetConfigImplCopyWith<_$ParameterValueWidgetConfigImpl>
