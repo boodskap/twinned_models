@@ -1,15 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'parameter_info_value_widget.freezed.dart';
-part 'parameter_info_value_widget.g.dart';
+part 'parameter_value_widget.freezed.dart';
+part 'parameter_value_widget.g.dart';
 
 @unfreezed
-class ParameterInfoValueWidgetConfig extends BaseConfig
-    with _$ParameterInfoValueWidgetConfig {
-  ParameterInfoValueWidgetConfig._();
+class ParameterValueWidgetConfig extends BaseConfig
+    with _$ParameterValueWidgetConfig {
+  ParameterValueWidgetConfig._();
 
-  factory ParameterInfoValueWidgetConfig({
+  factory ParameterValueWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String title,
@@ -35,11 +35,11 @@ class ParameterInfoValueWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> subLabelFont,
-  }) = _ParameterInfoValueWidgetConfig;
+  }) = _ParameterValueWidgetConfig;
 
-  factory ParameterInfoValueWidgetConfig.fromJson(
+  factory ParameterValueWidgetConfig.fromJson(
           Map<String, dynamic> json) =>
-      _$ParameterInfoValueWidgetConfigFromJson(json);
+      _$ParameterValueWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
