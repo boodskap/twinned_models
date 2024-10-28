@@ -46,8 +46,12 @@ mixin _$GenericSingleFieldWidgetConfig {
   double get elevation => throw _privateConstructorUsedError;
   set elevation(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this GenericSingleFieldWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenericSingleFieldWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenericSingleFieldWidgetConfigCopyWith<GenericSingleFieldWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -85,6 +89,8 @@ class _$GenericSingleFieldWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenericSingleFieldWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,6 +188,8 @@ class __$$GenericSingleFieldWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericSingleFieldWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenericSingleFieldWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -317,7 +325,9 @@ class _$GenericSingleFieldWidgetConfigImpl
     return 'GenericSingleFieldWidgetConfig(deviceId: $deviceId, field: $field, backgroundColor: $backgroundColor, heading: $heading, headingFont: $headingFont, valueFont: $valueFont, image: $image, width: $width, height: $height, imageSize: $imageSize, elevation: $elevation)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenericSingleFieldWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericSingleFieldWidgetConfigImplCopyWith<
@@ -385,8 +395,11 @@ abstract class _GenericSingleFieldWidgetConfig
   @override
   double get elevation;
   set elevation(double value);
+
+  /// Create a copy of GenericSingleFieldWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenericSingleFieldWidgetConfigImplCopyWith<
           _$GenericSingleFieldWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

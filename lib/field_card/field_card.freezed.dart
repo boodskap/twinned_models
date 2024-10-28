@@ -52,8 +52,12 @@ mixin _$FieldCardWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this FieldCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FieldCardWidgetConfigCopyWith<FieldCardWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,6 +95,8 @@ class _$FieldCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,6 +205,8 @@ class __$$FieldCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$FieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -360,7 +368,9 @@ class _$FieldCardWidgetConfigImpl extends _FieldCardWidgetConfig {
     return 'FieldCardWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, topSectionColor: $topSectionColor, bottomSectionColor: $bottomSectionColor, valueFont: $valueFont, headingFont: $headingFont, contentFont: $contentFont, width: $width, height: $height, topSectionHeight: $topSectionHeight, imageSize: $imageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FieldCardWidgetConfigImplCopyWith<_$FieldCardWidgetConfigImpl>
@@ -434,8 +444,11 @@ abstract class _FieldCardWidgetConfig extends FieldCardWidgetConfig {
   @override
   double get imageSize;
   set imageSize(double value);
+
+  /// Create a copy of FieldCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FieldCardWidgetConfigImplCopyWith<_$FieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
