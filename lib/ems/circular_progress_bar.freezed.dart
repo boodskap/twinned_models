@@ -44,8 +44,12 @@ mixin _$CircularProgressBarWidgetConfig {
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this CircularProgressBarWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircularProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CircularProgressBarWidgetConfigCopyWith<CircularProgressBarWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -82,6 +86,8 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CircularProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,6 +179,8 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$CircularProgressBarWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircularProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,7 +307,9 @@ class _$CircularProgressBarWidgetConfigImpl
     return 'CircularProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, width: $width, height: $height, opacity: $opacity)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircularProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CircularProgressBarWidgetConfigImplCopyWith<
@@ -363,8 +373,11 @@ abstract class _CircularProgressBarWidgetConfig
   @override
   double get opacity;
   set opacity(double value);
+
+  /// Create a copy of CircularProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CircularProgressBarWidgetConfigImplCopyWith<
           _$CircularProgressBarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

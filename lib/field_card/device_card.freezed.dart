@@ -46,8 +46,12 @@ mixin _$DeviceCardWidgetConfig {
   double get parameterImageSize => throw _privateConstructorUsedError;
   set parameterImageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceCardWidgetConfigCopyWith<DeviceCardWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -82,6 +86,8 @@ class _$DeviceCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,6 +179,8 @@ class __$$DeviceCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -302,7 +310,9 @@ class _$DeviceCardWidgetConfigImpl extends _DeviceCardWidgetConfig {
     return 'DeviceCardWidgetConfig(titleFont: $titleFont, modelId: $modelId, borderColor: $borderColor, borderRadius: $borderRadius, borderWidth: $borderWidth, labelFont: $labelFont, parameterLabelFont: $parameterLabelFont, sectionSize: $sectionSize, imageSize: $imageSize, parameterImageSize: $parameterImageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceCardWidgetConfigImplCopyWith<_$DeviceCardWidgetConfigImpl>
@@ -364,8 +374,11 @@ abstract class _DeviceCardWidgetConfig extends DeviceCardWidgetConfig {
   @override
   double get parameterImageSize;
   set parameterImageSize(double value);
+
+  /// Create a copy of DeviceCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceCardWidgetConfigImplCopyWith<_$DeviceCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

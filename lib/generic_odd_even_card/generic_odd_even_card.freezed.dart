@@ -55,8 +55,12 @@ mixin _$GenericOddEvenCardWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this GenericOddEvenCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenericOddEvenCardWidgetConfigCopyWith<GenericOddEvenCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -97,6 +101,8 @@ class _$GenericOddEvenCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -212,6 +218,8 @@ class __$$GenericOddEvenCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericOddEvenCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -389,7 +397,9 @@ class _$GenericOddEvenCardWidgetConfigImpl
     return 'GenericOddEvenCardWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddCardElevation: $oddCardElevation, oddCardBGColor: $oddCardBGColor, evenCardElevation: $evenCardElevation, evenCardBGColor: $evenCardBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericOddEvenCardWidgetConfigImplCopyWith<
@@ -469,8 +479,11 @@ abstract class _GenericOddEvenCardWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
+
+  /// Create a copy of GenericOddEvenCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenericOddEvenCardWidgetConfigImplCopyWith<
           _$GenericOddEvenCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

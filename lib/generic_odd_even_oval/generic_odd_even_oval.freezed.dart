@@ -51,8 +51,12 @@ mixin _$GenericOddEvenOvalWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this GenericOddEvenOvalWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenericOddEvenOvalWidgetConfigCopyWith<GenericOddEvenOvalWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -91,6 +95,8 @@ class _$GenericOddEvenOvalWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,6 +200,8 @@ class __$$GenericOddEvenOvalWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericOddEvenOvalWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,7 +361,9 @@ class _$GenericOddEvenOvalWidgetConfigImpl
     return 'GenericOddEvenOvalWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddOvalBGColor: $oddOvalBGColor, evenOvalBGColor: $evenOvalBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericOddEvenOvalWidgetConfigImplCopyWith<
@@ -425,8 +435,11 @@ abstract class _GenericOddEvenOvalWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
+
+  /// Create a copy of GenericOddEvenOvalWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenericOddEvenOvalWidgetConfigImplCopyWith<
           _$GenericOddEvenOvalWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
