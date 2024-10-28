@@ -14,7 +14,6 @@ class ParameterInfoWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default('') String title,
     @Default('') String hintText,
-    @Default(0XFF03A9F4) int iconColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -29,13 +28,6 @@ class ParameterInfoWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 12,
-      'fontColor': 0x8A000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> subLabelFont,
   }) = _ParameterInfoWidgetConfig;
 
   factory ParameterInfoWidgetConfig.fromJson(
