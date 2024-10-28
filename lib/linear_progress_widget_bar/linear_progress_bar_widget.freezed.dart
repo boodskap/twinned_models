@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'humidity_progress_bar.dart';
+part of 'linear_progress_bar_widget.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-HumidityProgressBarWidgetConfig _$HumidityProgressBarWidgetConfigFromJson(
+LinearProgressBarWidgetConfig _$LinearProgressBarWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _HumidityProgressBarWidgetConfig.fromJson(json);
+  return _LinearProgressBarWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$HumidityProgressBarWidgetConfig {
+mixin _$LinearProgressBarWidgetConfig {
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -38,23 +38,23 @@ mixin _$HumidityProgressBarWidgetConfig {
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this HumidityProgressBarWidgetConfig to a JSON map.
+  /// Serializes this LinearProgressBarWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of HumidityProgressBarWidgetConfig
+  /// Create a copy of LinearProgressBarWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $HumidityProgressBarWidgetConfigCopyWith<HumidityProgressBarWidgetConfig>
+  $LinearProgressBarWidgetConfigCopyWith<LinearProgressBarWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HumidityProgressBarWidgetConfigCopyWith<$Res> {
-  factory $HumidityProgressBarWidgetConfigCopyWith(
-          HumidityProgressBarWidgetConfig value,
-          $Res Function(HumidityProgressBarWidgetConfig) then) =
-      _$HumidityProgressBarWidgetConfigCopyWithImpl<$Res,
-          HumidityProgressBarWidgetConfig>;
+abstract class $LinearProgressBarWidgetConfigCopyWith<$Res> {
+  factory $LinearProgressBarWidgetConfigCopyWith(
+          LinearProgressBarWidgetConfig value,
+          $Res Function(LinearProgressBarWidgetConfig) then) =
+      _$LinearProgressBarWidgetConfigCopyWithImpl<$Res,
+          LinearProgressBarWidgetConfig>;
   @useResult
   $Res call(
       {String deviceId,
@@ -67,17 +67,17 @@ abstract class $HumidityProgressBarWidgetConfigCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HumidityProgressBarWidgetConfigCopyWithImpl<$Res,
-        $Val extends HumidityProgressBarWidgetConfig>
-    implements $HumidityProgressBarWidgetConfigCopyWith<$Res> {
-  _$HumidityProgressBarWidgetConfigCopyWithImpl(this._value, this._then);
+class _$LinearProgressBarWidgetConfigCopyWithImpl<$Res,
+        $Val extends LinearProgressBarWidgetConfig>
+    implements $LinearProgressBarWidgetConfigCopyWith<$Res> {
+  _$LinearProgressBarWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of HumidityProgressBarWidgetConfig
+  /// Create a copy of LinearProgressBarWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -124,12 +124,12 @@ class _$HumidityProgressBarWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$HumidityProgressBarWidgetConfigImplCopyWith<$Res>
-    implements $HumidityProgressBarWidgetConfigCopyWith<$Res> {
-  factory _$$HumidityProgressBarWidgetConfigImplCopyWith(
-          _$HumidityProgressBarWidgetConfigImpl value,
-          $Res Function(_$HumidityProgressBarWidgetConfigImpl) then) =
-      __$$HumidityProgressBarWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$LinearProgressBarWidgetConfigImplCopyWith<$Res>
+    implements $LinearProgressBarWidgetConfigCopyWith<$Res> {
+  factory _$$LinearProgressBarWidgetConfigImplCopyWith(
+          _$LinearProgressBarWidgetConfigImpl value,
+          $Res Function(_$LinearProgressBarWidgetConfigImpl) then) =
+      __$$LinearProgressBarWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -143,16 +143,16 @@ abstract class _$$HumidityProgressBarWidgetConfigImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$HumidityProgressBarWidgetConfigImplCopyWithImpl<$Res>
-    extends _$HumidityProgressBarWidgetConfigCopyWithImpl<$Res,
-        _$HumidityProgressBarWidgetConfigImpl>
-    implements _$$HumidityProgressBarWidgetConfigImplCopyWith<$Res> {
-  __$$HumidityProgressBarWidgetConfigImplCopyWithImpl(
-      _$HumidityProgressBarWidgetConfigImpl _value,
-      $Res Function(_$HumidityProgressBarWidgetConfigImpl) _then)
+class __$$LinearProgressBarWidgetConfigImplCopyWithImpl<$Res>
+    extends _$LinearProgressBarWidgetConfigCopyWithImpl<$Res,
+        _$LinearProgressBarWidgetConfigImpl>
+    implements _$$LinearProgressBarWidgetConfigImplCopyWith<$Res> {
+  __$$LinearProgressBarWidgetConfigImplCopyWithImpl(
+      _$LinearProgressBarWidgetConfigImpl _value,
+      $Res Function(_$LinearProgressBarWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HumidityProgressBarWidgetConfig
+  /// Create a copy of LinearProgressBarWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -165,7 +165,7 @@ class __$$HumidityProgressBarWidgetConfigImplCopyWithImpl<$Res>
     Object? valueFont = null,
     Object? titleFont = null,
   }) {
-    return _then(_$HumidityProgressBarWidgetConfigImpl(
+    return _then(_$LinearProgressBarWidgetConfigImpl(
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -200,9 +200,9 @@ class __$$HumidityProgressBarWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$HumidityProgressBarWidgetConfigImpl
-    extends _HumidityProgressBarWidgetConfig {
-  _$HumidityProgressBarWidgetConfigImpl(
+class _$LinearProgressBarWidgetConfigImpl
+    extends _LinearProgressBarWidgetConfig {
+  _$LinearProgressBarWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
       this.title = '',
@@ -222,9 +222,9 @@ class _$HumidityProgressBarWidgetConfigImpl
       }})
       : super._();
 
-  factory _$HumidityProgressBarWidgetConfigImpl.fromJson(
+  factory _$LinearProgressBarWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$HumidityProgressBarWidgetConfigImplFromJson(json);
+      _$$LinearProgressBarWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -250,41 +250,41 @@ class _$HumidityProgressBarWidgetConfigImpl
 
   @override
   String toString() {
-    return 'HumidityProgressBarWidgetConfig(deviceId: $deviceId, field: $field, title: $title, backgroundColor: $backgroundColor, valueColor: $valueColor, valueFont: $valueFont, titleFont: $titleFont)';
+    return 'LinearProgressBarWidgetConfig(deviceId: $deviceId, field: $field, title: $title, backgroundColor: $backgroundColor, valueColor: $valueColor, valueFont: $valueFont, titleFont: $titleFont)';
   }
 
-  /// Create a copy of HumidityProgressBarWidgetConfig
+  /// Create a copy of LinearProgressBarWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$HumidityProgressBarWidgetConfigImplCopyWith<
-          _$HumidityProgressBarWidgetConfigImpl>
-      get copyWith => __$$HumidityProgressBarWidgetConfigImplCopyWithImpl<
-          _$HumidityProgressBarWidgetConfigImpl>(this, _$identity);
+  _$$LinearProgressBarWidgetConfigImplCopyWith<
+          _$LinearProgressBarWidgetConfigImpl>
+      get copyWith => __$$LinearProgressBarWidgetConfigImplCopyWithImpl<
+          _$LinearProgressBarWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HumidityProgressBarWidgetConfigImplToJson(
+    return _$$LinearProgressBarWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _HumidityProgressBarWidgetConfig
-    extends HumidityProgressBarWidgetConfig {
-  factory _HumidityProgressBarWidgetConfig(
+abstract class _LinearProgressBarWidgetConfig
+    extends LinearProgressBarWidgetConfig {
+  factory _LinearProgressBarWidgetConfig(
       {String deviceId,
       String field,
       String title,
       int backgroundColor,
       int valueColor,
       Map<String, dynamic> valueFont,
-      Map<String, dynamic> titleFont}) = _$HumidityProgressBarWidgetConfigImpl;
-  _HumidityProgressBarWidgetConfig._() : super._();
+      Map<String, dynamic> titleFont}) = _$LinearProgressBarWidgetConfigImpl;
+  _LinearProgressBarWidgetConfig._() : super._();
 
-  factory _HumidityProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$HumidityProgressBarWidgetConfigImpl.fromJson;
+  factory _LinearProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$LinearProgressBarWidgetConfigImpl.fromJson;
 
   @override
   String get deviceId;
@@ -308,11 +308,11 @@ abstract class _HumidityProgressBarWidgetConfig
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
 
-  /// Create a copy of HumidityProgressBarWidgetConfig
+  /// Create a copy of LinearProgressBarWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HumidityProgressBarWidgetConfigImplCopyWith<
-          _$HumidityProgressBarWidgetConfigImpl>
+  _$$LinearProgressBarWidgetConfigImplCopyWith<
+          _$LinearProgressBarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
