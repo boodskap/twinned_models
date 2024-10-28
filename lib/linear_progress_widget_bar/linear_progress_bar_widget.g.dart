@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'humidity_progress_bar.dart';
+part of 'linear_progress_bar_widget.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$HumidityProgressBarWidgetConfigImpl
-    _$$HumidityProgressBarWidgetConfigImplFromJson(Map<String, dynamic> json) =>
-        _$HumidityProgressBarWidgetConfigImpl(
+_$LinearProgressBarWidgetConfigImpl
+    _$$LinearProgressBarWidgetConfigImplFromJson(Map<String, dynamic> json) =>
+        _$LinearProgressBarWidgetConfigImpl(
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
           title: json['title'] as String? ?? '',
@@ -31,8 +31,8 @@ _$HumidityProgressBarWidgetConfigImpl
               },
         );
 
-Map<String, dynamic> _$$HumidityProgressBarWidgetConfigImplToJson(
-        _$HumidityProgressBarWidgetConfigImpl instance) =>
+Map<String, dynamic> _$$LinearProgressBarWidgetConfigImplToJson(
+        _$LinearProgressBarWidgetConfigImpl instance) =>
     <String, dynamic>{
       'deviceId': instance.deviceId,
       'field': instance.field,

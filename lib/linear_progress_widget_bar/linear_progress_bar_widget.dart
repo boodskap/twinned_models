@@ -1,15 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'humidity_progress_bar.freezed.dart';
-part 'humidity_progress_bar.g.dart';
+part 'linear_progress_bar_widget.freezed.dart';
+part 'linear_progress_bar_widget.g.dart';
 
 @unfreezed
-class HumidityProgressBarWidgetConfig extends BaseConfig
-    with _$HumidityProgressBarWidgetConfig {
-  HumidityProgressBarWidgetConfig._();
+class LinearProgressBarWidgetConfig extends BaseConfig
+    with _$LinearProgressBarWidgetConfig {
+  LinearProgressBarWidgetConfig._();
 
-  factory HumidityProgressBarWidgetConfig({
+  factory LinearProgressBarWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
     @Default('') String title,
@@ -29,10 +29,10 @@ class HumidityProgressBarWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> titleFont,
-  }) = _HumidityProgressBarWidgetConfig;
+  }) = _LinearProgressBarWidgetConfig;
 
-  factory HumidityProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$HumidityProgressBarWidgetConfigFromJson(json);
+  factory LinearProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$LinearProgressBarWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {

@@ -16,7 +16,7 @@ export 'device_field_spherical_tank/device_field_spherical_tank.dart';
 export 'device_field_spline_chart/device_field_spline_chart.dart';
 export 'temperature_widget/temperature_widget.dart';
 export 'thermometer_temperature/thermometer_temperature.dart';
-export 'humidity_progress_bar/humidity_progress_bar.dart';
+export 'linear_progress_widget_bar/linear_progress_bar_widget.dart';
 export 'parameter_value_widget/parameter_value_widget.dart';
 export 'parameter_info_widget/parameter_info_widget.dart';
 export 'current_day_status/current_day_status.dart';
