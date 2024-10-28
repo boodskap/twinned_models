@@ -37,8 +37,12 @@ mixin _$CompassWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this CompassWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CompassWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CompassWidgetConfigCopyWith<CompassWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -69,6 +73,8 @@ class _$CompassWidgetConfigCopyWithImpl<$Res, $Val extends CompassWidgetConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CompassWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,6 +145,8 @@ class __$$CompassWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$CompassWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CompassWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -236,7 +244,9 @@ class _$CompassWidgetConfigImpl extends _CompassWidgetConfig {
     return 'CompassWidgetConfig(title: $title, deviceId: $deviceId, field: $field, backgroundColor: $backgroundColor, markerColor: $markerColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CompassWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CompassWidgetConfigImplCopyWith<_$CompassWidgetConfigImpl> get copyWith =>
@@ -286,8 +296,11 @@ abstract class _CompassWidgetConfig extends CompassWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+
+  /// Create a copy of CompassWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CompassWidgetConfigImplCopyWith<_$CompassWidgetConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

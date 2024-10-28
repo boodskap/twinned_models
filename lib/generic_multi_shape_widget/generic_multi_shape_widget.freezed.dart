@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_odd_even_circle.dart';
+part of 'generic_multi_shape_widget.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericOddEvenCircleWidgetConfig _$GenericOddEvenCircleWidgetConfigFromJson(
+GenericMultiShapeWidget _$GenericMultiShapeWidgetFromJson(
     Map<String, dynamic> json) {
-  return _GenericOddEvenCircleWidgetConfig.fromJson(json);
+  return _GenericMultiShapeWidget.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericOddEvenCircleWidgetConfig {
+mixin _$GenericMultiShapeWidget {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -42,42 +42,26 @@ mixin _$GenericOddEvenCircleWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  double get oddCircleRadius => throw _privateConstructorUsedError;
-  set oddCircleRadius(double value) => throw _privateConstructorUsedError;
-  int get oddCircleBGColor => throw _privateConstructorUsedError;
-  set oddCircleBGColor(int value) => throw _privateConstructorUsedError;
-  int get oddCircleBorderColor => throw _privateConstructorUsedError;
-  set oddCircleBorderColor(int value) => throw _privateConstructorUsedError;
-  double get evenCircleRadius => throw _privateConstructorUsedError;
-  set evenCircleRadius(double value) => throw _privateConstructorUsedError;
-  int get evenCircleBGColor => throw _privateConstructorUsedError;
-  set evenCircleBGColor(int value) => throw _privateConstructorUsedError;
-  int get evenCircleBorderColor => throw _privateConstructorUsedError;
-  set evenCircleBorderColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
-  double get verticalSpacing => throw _privateConstructorUsedError;
-  set verticalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericOddEvenCircleWidgetConfig to a JSON map.
+  /// Serializes this GenericMultiShapeWidget to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of GenericOddEvenCircleWidgetConfig
+  /// Create a copy of GenericMultiShapeWidget
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenericOddEvenCircleWidgetConfigCopyWith<GenericOddEvenCircleWidgetConfig>
-      get copyWith => throw _privateConstructorUsedError;
+  $GenericMultiShapeWidgetCopyWith<GenericMultiShapeWidget> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericOddEvenCircleWidgetConfigCopyWith<$Res> {
-  factory $GenericOddEvenCircleWidgetConfigCopyWith(
-          GenericOddEvenCircleWidgetConfig value,
-          $Res Function(GenericOddEvenCircleWidgetConfig) then) =
-      _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
-          GenericOddEvenCircleWidgetConfig>;
+abstract class $GenericMultiShapeWidgetCopyWith<$Res> {
+  factory $GenericMultiShapeWidgetCopyWith(GenericMultiShapeWidget value,
+          $Res Function(GenericMultiShapeWidget) then) =
+      _$GenericMultiShapeWidgetCopyWithImpl<$Res, GenericMultiShapeWidget>;
   @useResult
   $Res call(
       {String title,
@@ -88,29 +72,22 @@ abstract class $GenericOddEvenCircleWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCircleRadius,
-      int oddCircleBGColor,
-      int oddCircleBorderColor,
-      double evenCircleRadius,
-      int evenCircleBGColor,
-      int evenCircleBorderColor,
       double horizontalSpacing,
-      double verticalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericOddEvenCircleWidgetConfig>
-    implements $GenericOddEvenCircleWidgetConfigCopyWith<$Res> {
-  _$GenericOddEvenCircleWidgetConfigCopyWithImpl(this._value, this._then);
+class _$GenericMultiShapeWidgetCopyWithImpl<$Res,
+        $Val extends GenericMultiShapeWidget>
+    implements $GenericMultiShapeWidgetCopyWith<$Res> {
+  _$GenericMultiShapeWidgetCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericOddEvenCircleWidgetConfig
+  /// Create a copy of GenericMultiShapeWidget
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -123,14 +100,7 @@ class _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddCircleRadius = null,
-    Object? oddCircleBGColor = null,
-    Object? oddCircleBorderColor = null,
-    Object? evenCircleRadius = null,
-    Object? evenCircleBGColor = null,
-    Object? evenCircleBorderColor = null,
     Object? horizontalSpacing = null,
-    Object? verticalSpacing = null,
     Object? imageSize = null,
   }) {
     return _then(_value.copyWith(
@@ -166,37 +136,9 @@ class _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCircleRadius: null == oddCircleRadius
-          ? _value.oddCircleRadius
-          : oddCircleRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCircleBGColor: null == oddCircleBGColor
-          ? _value.oddCircleBGColor
-          : oddCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      oddCircleBorderColor: null == oddCircleBorderColor
-          ? _value.oddCircleBorderColor
-          : oddCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenCircleRadius: null == evenCircleRadius
-          ? _value.evenCircleRadius
-          : evenCircleRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCircleBGColor: null == evenCircleBGColor
-          ? _value.evenCircleBGColor
-          : evenCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenCircleBorderColor: null == evenCircleBorderColor
-          ? _value.evenCircleBorderColor
-          : evenCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
           : horizontalSpacing // ignore: cast_nullable_to_non_nullable
-              as double,
-      verticalSpacing: null == verticalSpacing
-          ? _value.verticalSpacing
-          : verticalSpacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -207,12 +149,12 @@ class _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericOddEvenCircleWidgetConfigImplCopyWith<$Res>
-    implements $GenericOddEvenCircleWidgetConfigCopyWith<$Res> {
-  factory _$$GenericOddEvenCircleWidgetConfigImplCopyWith(
-          _$GenericOddEvenCircleWidgetConfigImpl value,
-          $Res Function(_$GenericOddEvenCircleWidgetConfigImpl) then) =
-      __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$GenericMultiShapeWidgetImplCopyWith<$Res>
+    implements $GenericMultiShapeWidgetCopyWith<$Res> {
+  factory _$$GenericMultiShapeWidgetImplCopyWith(
+          _$GenericMultiShapeWidgetImpl value,
+          $Res Function(_$GenericMultiShapeWidgetImpl) then) =
+      __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -224,28 +166,21 @@ abstract class _$$GenericOddEvenCircleWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCircleRadius,
-      int oddCircleBGColor,
-      int oddCircleBorderColor,
-      double evenCircleRadius,
-      int evenCircleBGColor,
-      int evenCircleBorderColor,
       double horizontalSpacing,
-      double verticalSpacing,
       double imageSize});
 }
 
 /// @nodoc
-class __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericOddEvenCircleWidgetConfigCopyWithImpl<$Res,
-        _$GenericOddEvenCircleWidgetConfigImpl>
-    implements _$$GenericOddEvenCircleWidgetConfigImplCopyWith<$Res> {
-  __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl(
-      _$GenericOddEvenCircleWidgetConfigImpl _value,
-      $Res Function(_$GenericOddEvenCircleWidgetConfigImpl) _then)
+class __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>
+    extends _$GenericMultiShapeWidgetCopyWithImpl<$Res,
+        _$GenericMultiShapeWidgetImpl>
+    implements _$$GenericMultiShapeWidgetImplCopyWith<$Res> {
+  __$$GenericMultiShapeWidgetImplCopyWithImpl(
+      _$GenericMultiShapeWidgetImpl _value,
+      $Res Function(_$GenericMultiShapeWidgetImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericOddEvenCircleWidgetConfig
+  /// Create a copy of GenericMultiShapeWidget
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -258,17 +193,10 @@ class __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddCircleRadius = null,
-    Object? oddCircleBGColor = null,
-    Object? oddCircleBorderColor = null,
-    Object? evenCircleRadius = null,
-    Object? evenCircleBGColor = null,
-    Object? evenCircleBorderColor = null,
     Object? horizontalSpacing = null,
-    Object? verticalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericOddEvenCircleWidgetConfigImpl(
+    return _then(_$GenericMultiShapeWidgetImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -301,37 +229,9 @@ class __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddCircleRadius: null == oddCircleRadius
-          ? _value.oddCircleRadius
-          : oddCircleRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      oddCircleBGColor: null == oddCircleBGColor
-          ? _value.oddCircleBGColor
-          : oddCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      oddCircleBorderColor: null == oddCircleBorderColor
-          ? _value.oddCircleBorderColor
-          : oddCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenCircleRadius: null == evenCircleRadius
-          ? _value.evenCircleRadius
-          : evenCircleRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      evenCircleBGColor: null == evenCircleBGColor
-          ? _value.evenCircleBGColor
-          : evenCircleBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenCircleBorderColor: null == evenCircleBorderColor
-          ? _value.evenCircleBorderColor
-          : evenCircleBorderColor // ignore: cast_nullable_to_non_nullable
-              as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
           : horizontalSpacing // ignore: cast_nullable_to_non_nullable
-              as double,
-      verticalSpacing: null == verticalSpacing
-          ? _value.verticalSpacing
-          : verticalSpacing // ignore: cast_nullable_to_non_nullable
               as double,
       imageSize: null == imageSize
           ? _value.imageSize
@@ -343,17 +243,16 @@ class __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericOddEvenCircleWidgetConfigImpl
-    extends _GenericOddEvenCircleWidgetConfig {
-  _$GenericOddEvenCircleWidgetConfigImpl(
-      {this.title = 'Generic Odd Even Circle Widget',
+class _$GenericMultiShapeWidgetImpl extends _GenericMultiShapeWidget {
+  _$GenericMultiShapeWidgetImpl(
+      {this.title = 'Generic Multi Shape Widget',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.subTitle = 'Device Monitoring By Using Circle Widget',
+      this.subTitle = 'Check My Device Data here!',
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -379,20 +278,12 @@ class _$GenericOddEvenCircleWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.oddCircleRadius = 60,
-      this.oddCircleBGColor = 0XFF7CB9E8,
-      this.oddCircleBorderColor = 0XFF00308F,
-      this.evenCircleRadius = 50,
-      this.evenCircleBGColor = 0XFFbfd5c63,
-      this.evenCircleBorderColor = 0XFFD2122E,
       this.horizontalSpacing = 5,
-      this.verticalSpacing = 20,
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericOddEvenCircleWidgetConfigImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GenericOddEvenCircleWidgetConfigImplFromJson(json);
+  factory _$GenericMultiShapeWidgetImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenericMultiShapeWidgetImplFromJson(json);
 
   @override
   @JsonKey()
@@ -420,58 +311,35 @@ class _$GenericOddEvenCircleWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  double oddCircleRadius;
-  @override
-  @JsonKey()
-  int oddCircleBGColor;
-  @override
-  @JsonKey()
-  int oddCircleBorderColor;
-  @override
-  @JsonKey()
-  double evenCircleRadius;
-  @override
-  @JsonKey()
-  int evenCircleBGColor;
-  @override
-  @JsonKey()
-  int evenCircleBorderColor;
-  @override
-  @JsonKey()
   double horizontalSpacing;
-  @override
-  @JsonKey()
-  double verticalSpacing;
   @override
   @JsonKey()
   double imageSize;
 
   @override
   String toString() {
-    return 'GenericOddEvenCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddCircleRadius: $oddCircleRadius, oddCircleBGColor: $oddCircleBGColor, oddCircleBorderColor: $oddCircleBorderColor, evenCircleRadius: $evenCircleRadius, evenCircleBGColor: $evenCircleBGColor, evenCircleBorderColor: $evenCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
+    return 'GenericMultiShapeWidget(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericOddEvenCircleWidgetConfig
+  /// Create a copy of GenericMultiShapeWidget
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericOddEvenCircleWidgetConfigImplCopyWith<
-          _$GenericOddEvenCircleWidgetConfigImpl>
-      get copyWith => __$$GenericOddEvenCircleWidgetConfigImplCopyWithImpl<
-          _$GenericOddEvenCircleWidgetConfigImpl>(this, _$identity);
+  _$$GenericMultiShapeWidgetImplCopyWith<_$GenericMultiShapeWidgetImpl>
+      get copyWith => __$$GenericMultiShapeWidgetImplCopyWithImpl<
+          _$GenericMultiShapeWidgetImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericOddEvenCircleWidgetConfigImplToJson(
+    return _$$GenericMultiShapeWidgetImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericOddEvenCircleWidgetConfig
-    extends GenericOddEvenCircleWidgetConfig {
-  factory _GenericOddEvenCircleWidgetConfig(
+abstract class _GenericMultiShapeWidget extends GenericMultiShapeWidget {
+  factory _GenericMultiShapeWidget(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
@@ -480,20 +348,12 @@ abstract class _GenericOddEvenCircleWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      double oddCircleRadius,
-      int oddCircleBGColor,
-      int oddCircleBorderColor,
-      double evenCircleRadius,
-      int evenCircleBGColor,
-      int evenCircleBorderColor,
       double horizontalSpacing,
-      double verticalSpacing,
-      double imageSize}) = _$GenericOddEvenCircleWidgetConfigImpl;
-  _GenericOddEvenCircleWidgetConfig._() : super._();
+      double imageSize}) = _$GenericMultiShapeWidgetImpl;
+  _GenericMultiShapeWidget._() : super._();
 
-  factory _GenericOddEvenCircleWidgetConfig.fromJson(
-          Map<String, dynamic> json) =
-      _$GenericOddEvenCircleWidgetConfigImpl.fromJson;
+  factory _GenericMultiShapeWidget.fromJson(Map<String, dynamic> json) =
+      _$GenericMultiShapeWidgetImpl.fromJson;
 
   @override
   String get title;
@@ -520,38 +380,16 @@ abstract class _GenericOddEvenCircleWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  double get oddCircleRadius;
-  set oddCircleRadius(double value);
-  @override
-  int get oddCircleBGColor;
-  set oddCircleBGColor(int value);
-  @override
-  int get oddCircleBorderColor;
-  set oddCircleBorderColor(int value);
-  @override
-  double get evenCircleRadius;
-  set evenCircleRadius(double value);
-  @override
-  int get evenCircleBGColor;
-  set evenCircleBGColor(int value);
-  @override
-  int get evenCircleBorderColor;
-  set evenCircleBorderColor(int value);
-  @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
-  @override
-  double get verticalSpacing;
-  set verticalSpacing(double value);
   @override
   double get imageSize;
   set imageSize(double value);
 
-  /// Create a copy of GenericOddEvenCircleWidgetConfig
+  /// Create a copy of GenericMultiShapeWidget
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenericOddEvenCircleWidgetConfigImplCopyWith<
-          _$GenericOddEvenCircleWidgetConfigImpl>
+  _$$GenericMultiShapeWidgetImplCopyWith<_$GenericMultiShapeWidgetImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
