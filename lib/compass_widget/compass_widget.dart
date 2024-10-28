@@ -1,19 +1,19 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'parameter_info_widget.freezed.dart';
-part 'parameter_info_widget.g.dart';
+part 'compass_widget.freezed.dart';
+part 'compass_widget.g.dart';
 
 @unfreezed
-class ParameterInfoWidgetConfig extends BaseConfig
-    with _$ParameterInfoWidgetConfig {
-  ParameterInfoWidgetConfig._();
+class CompassWidgetConfig extends BaseConfig with _$CompassWidgetConfig {
+  CompassWidgetConfig._();
 
-  factory ParameterInfoWidgetConfig({
+  factory CompassWidgetConfig({
+    @Default('') String title,
     @Default('') String deviceId,
     @Default('') String field,
-    @Default('') String title,
-    @Default('') String hintText,
+    @Default(0xFFB3E5FC) int backgroundColor,
+    @Default(0xFF000000) int markerColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -23,34 +23,28 @@ class ParameterInfoWidgetConfig extends BaseConfig
     Map<String, dynamic> titleFont,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 14,
-      'fontColor': 0xDD000000,
+      'fontSize': 12,
+      'fontColor': 0xFF000000,
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
-    @Default({
-      'fontFamily': 'Open Sans',
-      'fontSize': 12,
-      'fontColor': 0x8A000000,
-      'fontBold': true
-    })
-    Map<String, dynamic> hintTextFont,
-  }) = _ParameterInfoWidgetConfig;
+  }) = _CompassWidgetConfig;
 
-  factory ParameterInfoWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$ParameterInfoWidgetConfigFromJson(json);
+  factory CompassWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$CompassWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'title':
-      case 'field':
       case 'deviceId':
-      case 'hintText':
+      case 'field':
         return DataType.text;
+      case 'markerColor':
+      case 'backgroundColor':
+        return DataType.numeric;
       case 'titleFont':
       case 'valueFont':
-      case 'hintTextFont':
         return DataType.font;
       default:
         return DataType.none;
@@ -64,6 +58,9 @@ class ParameterInfoWidgetConfig extends BaseConfig
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'markerColor':
+      case 'backgroundColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -83,14 +80,14 @@ class ParameterInfoWidgetConfig extends BaseConfig
         return 'Select Field';
       case 'title':
         return 'Title';
-      case 'hintText':
-        return 'Hint Text';
       case 'valueFont':
         return 'Value Font';
       case 'titleFont':
         return 'Title Font';
-      case 'hintTextFont':
-        return 'Hint Text Font';
+      case 'markerColor':
+        return 'Marker Color';
+      case 'backgroundColor':
+        return 'Background Color';
       default:
         return parameter;
     }
