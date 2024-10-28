@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericMultiShapeWidget _$GenericMultiShapeWidgetFromJson(
+GenericMultiShapeWidgetConfig _$GenericMultiShapeWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _GenericMultiShapeWidget.fromJson(json);
+  return _GenericMultiShapeWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericMultiShapeWidget {
+mixin _$GenericMultiShapeWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
@@ -47,21 +47,23 @@ mixin _$GenericMultiShapeWidget {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericMultiShapeWidget to a JSON map.
+  /// Serializes this GenericMultiShapeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of GenericMultiShapeWidget
+  /// Create a copy of GenericMultiShapeWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenericMultiShapeWidgetCopyWith<GenericMultiShapeWidget> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GenericMultiShapeWidgetConfigCopyWith<GenericMultiShapeWidgetConfig>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericMultiShapeWidgetCopyWith<$Res> {
-  factory $GenericMultiShapeWidgetCopyWith(GenericMultiShapeWidget value,
-          $Res Function(GenericMultiShapeWidget) then) =
-      _$GenericMultiShapeWidgetCopyWithImpl<$Res, GenericMultiShapeWidget>;
+abstract class $GenericMultiShapeWidgetConfigCopyWith<$Res> {
+  factory $GenericMultiShapeWidgetConfigCopyWith(
+          GenericMultiShapeWidgetConfig value,
+          $Res Function(GenericMultiShapeWidgetConfig) then) =
+      _$GenericMultiShapeWidgetConfigCopyWithImpl<$Res,
+          GenericMultiShapeWidgetConfig>;
   @useResult
   $Res call(
       {String title,
@@ -77,17 +79,17 @@ abstract class $GenericMultiShapeWidgetCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GenericMultiShapeWidgetCopyWithImpl<$Res,
-        $Val extends GenericMultiShapeWidget>
-    implements $GenericMultiShapeWidgetCopyWith<$Res> {
-  _$GenericMultiShapeWidgetCopyWithImpl(this._value, this._then);
+class _$GenericMultiShapeWidgetConfigCopyWithImpl<$Res,
+        $Val extends GenericMultiShapeWidgetConfig>
+    implements $GenericMultiShapeWidgetConfigCopyWith<$Res> {
+  _$GenericMultiShapeWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericMultiShapeWidget
+  /// Create a copy of GenericMultiShapeWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -149,12 +151,12 @@ class _$GenericMultiShapeWidgetCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenericMultiShapeWidgetImplCopyWith<$Res>
-    implements $GenericMultiShapeWidgetCopyWith<$Res> {
-  factory _$$GenericMultiShapeWidgetImplCopyWith(
-          _$GenericMultiShapeWidgetImpl value,
-          $Res Function(_$GenericMultiShapeWidgetImpl) then) =
-      __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>;
+abstract class _$$GenericMultiShapeWidgetConfigImplCopyWith<$Res>
+    implements $GenericMultiShapeWidgetConfigCopyWith<$Res> {
+  factory _$$GenericMultiShapeWidgetConfigImplCopyWith(
+          _$GenericMultiShapeWidgetConfigImpl value,
+          $Res Function(_$GenericMultiShapeWidgetConfigImpl) then) =
+      __$$GenericMultiShapeWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -171,16 +173,16 @@ abstract class _$$GenericMultiShapeWidgetImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>
-    extends _$GenericMultiShapeWidgetCopyWithImpl<$Res,
-        _$GenericMultiShapeWidgetImpl>
-    implements _$$GenericMultiShapeWidgetImplCopyWith<$Res> {
-  __$$GenericMultiShapeWidgetImplCopyWithImpl(
-      _$GenericMultiShapeWidgetImpl _value,
-      $Res Function(_$GenericMultiShapeWidgetImpl) _then)
+class __$$GenericMultiShapeWidgetConfigImplCopyWithImpl<$Res>
+    extends _$GenericMultiShapeWidgetConfigCopyWithImpl<$Res,
+        _$GenericMultiShapeWidgetConfigImpl>
+    implements _$$GenericMultiShapeWidgetConfigImplCopyWith<$Res> {
+  __$$GenericMultiShapeWidgetConfigImplCopyWithImpl(
+      _$GenericMultiShapeWidgetConfigImpl _value,
+      $Res Function(_$GenericMultiShapeWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericMultiShapeWidget
+  /// Create a copy of GenericMultiShapeWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -196,7 +198,7 @@ class __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>
     Object? horizontalSpacing = null,
     Object? imageSize = null,
   }) {
-    return _then(_$GenericMultiShapeWidgetImpl(
+    return _then(_$GenericMultiShapeWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -243,8 +245,9 @@ class __$$GenericMultiShapeWidgetImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericMultiShapeWidgetImpl extends _GenericMultiShapeWidget {
-  _$GenericMultiShapeWidgetImpl(
+class _$GenericMultiShapeWidgetConfigImpl
+    extends _GenericMultiShapeWidgetConfig {
+  _$GenericMultiShapeWidgetConfigImpl(
       {this.title = 'Generic Multi Shape Widget',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -282,8 +285,9 @@ class _$GenericMultiShapeWidgetImpl extends _GenericMultiShapeWidget {
       this.imageSize = 25})
       : super._();
 
-  factory _$GenericMultiShapeWidgetImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GenericMultiShapeWidgetImplFromJson(json);
+  factory _$GenericMultiShapeWidgetConfigImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GenericMultiShapeWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -318,28 +322,30 @@ class _$GenericMultiShapeWidgetImpl extends _GenericMultiShapeWidget {
 
   @override
   String toString() {
-    return 'GenericMultiShapeWidget(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'GenericMultiShapeWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericMultiShapeWidget
+  /// Create a copy of GenericMultiShapeWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericMultiShapeWidgetImplCopyWith<_$GenericMultiShapeWidgetImpl>
-      get copyWith => __$$GenericMultiShapeWidgetImplCopyWithImpl<
-          _$GenericMultiShapeWidgetImpl>(this, _$identity);
+  _$$GenericMultiShapeWidgetConfigImplCopyWith<
+          _$GenericMultiShapeWidgetConfigImpl>
+      get copyWith => __$$GenericMultiShapeWidgetConfigImplCopyWithImpl<
+          _$GenericMultiShapeWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericMultiShapeWidgetImplToJson(
+    return _$$GenericMultiShapeWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericMultiShapeWidget extends GenericMultiShapeWidget {
-  factory _GenericMultiShapeWidget(
+abstract class _GenericMultiShapeWidgetConfig
+    extends GenericMultiShapeWidgetConfig {
+  factory _GenericMultiShapeWidgetConfig(
       {String title,
       Map<String, dynamic> titleFont,
       String subTitle,
@@ -349,11 +355,11 @@ abstract class _GenericMultiShapeWidget extends GenericMultiShapeWidget {
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
       double horizontalSpacing,
-      double imageSize}) = _$GenericMultiShapeWidgetImpl;
-  _GenericMultiShapeWidget._() : super._();
+      double imageSize}) = _$GenericMultiShapeWidgetConfigImpl;
+  _GenericMultiShapeWidgetConfig._() : super._();
 
-  factory _GenericMultiShapeWidget.fromJson(Map<String, dynamic> json) =
-      _$GenericMultiShapeWidgetImpl.fromJson;
+  factory _GenericMultiShapeWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$GenericMultiShapeWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -386,10 +392,11 @@ abstract class _GenericMultiShapeWidget extends GenericMultiShapeWidget {
   double get imageSize;
   set imageSize(double value);
 
-  /// Create a copy of GenericMultiShapeWidget
+  /// Create a copy of GenericMultiShapeWidgetConfig
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenericMultiShapeWidgetImplCopyWith<_$GenericMultiShapeWidgetImpl>
+  _$$GenericMultiShapeWidgetConfigImplCopyWith<
+          _$GenericMultiShapeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
