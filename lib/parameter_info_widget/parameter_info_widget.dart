@@ -28,6 +28,13 @@ class ParameterInfoWidgetConfig extends BaseConfig
       'fontBold': true
     })
     Map<String, dynamic> valueFont,
+    @Default({
+      'fontFamily': 'Open Sans',
+      'fontSize': 12,
+      'fontColor': 0x8A000000,
+      'fontBold': true
+    })
+    Map<String, dynamic> hintTextFont,
   }) = _ParameterInfoWidgetConfig;
 
   factory ParameterInfoWidgetConfig.fromJson(
@@ -44,7 +51,7 @@ class ParameterInfoWidgetConfig extends BaseConfig
         return DataType.text;
       case 'titleFont':
       case 'valueFont':
-      case 'subLabelFont':
+      case 'hintTextFont':
         return DataType.font;
       case 'iconColor':
         return DataType.numeric;
@@ -74,7 +81,24 @@ class ParameterInfoWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+    switch (parameter) {
+      case 'deviceId':
+        return 'Asset Model';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'hintText':
+        return 'Hint Text';
+      case 'valueFont':
+        return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
+      case 'hintTextFont':
+        return 'Hint Text Font';
+      default:
+        return parameter;
+    }
   }
 
   @override

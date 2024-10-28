@@ -27,6 +27,13 @@ _$ParameterInfoWidgetConfigImpl _$$ParameterInfoWidgetConfigImplFromJson(
             'fontColor': 0xDD000000,
             'fontBold': true
           },
+      hintTextFont: json['hintTextFont'] as Map<String, dynamic>? ??
+          const {
+            'fontFamily': 'Open Sans',
+            'fontSize': 12,
+            'fontColor': 0x8A000000,
+            'fontBold': true
+          },
     );
 
 Map<String, dynamic> _$$ParameterInfoWidgetConfigImplToJson(
@@ -38,4 +45,5 @@ Map<String, dynamic> _$$ParameterInfoWidgetConfigImplToJson(
       'hintText': instance.hintText,
       'titleFont': instance.titleFont,
       'valueFont': instance.valueFont,
+      'hintTextFont': instance.hintTextFont,
     };

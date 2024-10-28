@@ -67,7 +67,22 @@ class ParameterValueWidgetConfig extends BaseConfig
 
   @override
   String getLabel(String parameter) {
-    return parameter;
+     switch (parameter) {
+      case 'deviceId':
+        return 'Asset Model';
+      case 'field':
+        return 'Select Field';
+      case 'title':
+        return 'Title';
+      case 'hintText':
+        return 'Hint Text';
+      case 'valueFont':
+        return 'Value Font';
+      case 'titleFont':
+        return 'Title Font';
+      default:
+        return parameter;
+    }
   }
 
   @override
