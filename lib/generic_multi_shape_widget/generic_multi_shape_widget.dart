@@ -7,11 +7,11 @@ part 'generic_multi_shape_widget.freezed.dart';
 part 'generic_multi_shape_widget.g.dart';
 
 @unfreezed
-class GenericMultiShapeWidget extends BaseConfig
-    with _$GenericMultiShapeWidget {
-  GenericMultiShapeWidget._();
+class GenericMultiShapeWidgetConfig extends BaseConfig
+    with _$GenericMultiShapeWidgetConfig {
+  GenericMultiShapeWidgetConfig._();
 
-  factory GenericMultiShapeWidget({
+  factory GenericMultiShapeWidgetConfig({
     @Default('Generic Multi Shape Widget') String title,
     @Default({
       'fontFamily': 'Open Sans',
@@ -52,10 +52,10 @@ class GenericMultiShapeWidget extends BaseConfig
     Map<String, dynamic> valueFont,
     @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
-  }) = _GenericMultiShapeWidget;
+  }) = _GenericMultiShapeWidgetConfig;
 
-  factory GenericMultiShapeWidget.fromJson(Map<String, dynamic> json) =>
-      _$GenericMultiShapeWidgetFromJson(json);
+  factory GenericMultiShapeWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$GenericMultiShapeWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
