@@ -32,8 +32,12 @@ mixin _$CalendarWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this CalendarWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CalendarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CalendarWidgetConfigCopyWith<CalendarWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$CalendarWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CalendarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$CalendarWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$CalendarWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CalendarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -189,7 +197,9 @@ class _$CalendarWidgetConfigImpl extends _CalendarWidgetConfig {
     return 'CalendarWidgetConfig(deviceId: $deviceId, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CalendarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CalendarWidgetConfigImplCopyWith<_$CalendarWidgetConfigImpl>
@@ -228,8 +238,11 @@ abstract class _CalendarWidgetConfig extends CalendarWidgetConfig {
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of CalendarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CalendarWidgetConfigImplCopyWith<_$CalendarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
