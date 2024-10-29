@@ -29,3 +29,5 @@ export 'speedometer_widget/speedometer_widget.dart';
 export 'device_list_card_widget/device_list_card_widget.dart';
 export 'calendar_widget/calendar_widget.dart';
 export 'compass_widget/compass_widget.dart';
+export 'semi_circle_range_widget/semi_circle_range_widget.dart';
+export 'day range widget/day_range_widget.dart';
