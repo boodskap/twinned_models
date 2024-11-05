@@ -78,12 +78,8 @@ mixin _$GenericAirQualityCircleWidgetConfig {
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericAirQualityCircleWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericAirQualityCircleWidgetConfigCopyWith<
           GenericAirQualityCircleWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -134,8 +130,6 @@ class _$GenericAirQualityCircleWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,8 +299,6 @@ class __$$GenericAirQualityCircleWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericAirQualityCircleWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -585,9 +577,7 @@ class _$GenericAirQualityCircleWidgetConfigImpl
     return 'GenericAirQualityCircleWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, mainText: $mainText, mainField: $mainField, mainTextFont: $mainTextFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, prefixMainFont: $prefixMainFont, suffixMainFont: $suffixMainFont, valueMainFont: $valueMainFont, activeCircleRadius: $activeCircleRadius, activeCircleBGColor: $activeCircleBGColor, activeCircleBorderColor: $activeCircleBorderColor, inactiveCircleRadius: $inactiveCircleRadius, inactiveCircleBGColor: $inactiveCircleBGColor, inactiveCircleBorderColor: $inactiveCircleBorderColor, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing, imageSize: $imageSize)';
   }
 
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericAirQualityCircleWidgetConfigImplCopyWith<
@@ -704,11 +694,8 @@ abstract class _GenericAirQualityCircleWidgetConfig
   @override
   double get imageSize;
   set imageSize(double value);
-
-  /// Create a copy of GenericAirQualityCircleWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericAirQualityCircleWidgetConfigImplCopyWith<
           _$GenericAirQualityCircleWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

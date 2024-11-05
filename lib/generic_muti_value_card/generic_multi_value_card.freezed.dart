@@ -57,12 +57,8 @@ mixin _$GenericMultiValueCardWidgetConfig {
   List<int> get valueBgColors => throw _privateConstructorUsedError;
   set valueBgColors(List<int> value) => throw _privateConstructorUsedError;
 
-  /// Serializes this GenericMultiValueCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of GenericMultiValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $GenericMultiValueCardWidgetConfigCopyWith<GenericMultiValueCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -104,8 +100,6 @@ class _$GenericMultiValueCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of GenericMultiValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -227,8 +221,6 @@ class __$$GenericMultiValueCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$GenericMultiValueCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of GenericMultiValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,9 +382,7 @@ class _$GenericMultiValueCardWidgetConfigImpl
     return 'GenericMultiValueCardWidgetConfig(fields: $fields, deviceIds: $deviceIds, topLabels: $topLabels, bottomLabels: $bottomLabels, iconIds: $iconIds, columns: $columns, elevation: $elevation, iconWidth: $iconWidth, iconHeight: $iconHeight, allowScrolling: $allowScrolling, bottomLabelAsSuffix: $bottomLabelAsSuffix, topFonts: $topFonts, valueFonts: $valueFonts, bottomFonts: $bottomFonts, valueBgColors: $valueBgColors)';
   }
 
-  /// Create a copy of GenericMultiValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$GenericMultiValueCardWidgetConfigImplCopyWith<
@@ -477,11 +467,8 @@ abstract class _GenericMultiValueCardWidgetConfig
   @override
   List<int> get valueBgColors;
   set valueBgColors(List<int> value);
-
-  /// Create a copy of GenericMultiValueCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$GenericMultiValueCardWidgetConfigImplCopyWith<
           _$GenericMultiValueCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

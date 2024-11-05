@@ -46,12 +46,8 @@ mixin _$FlowMeterWidgetConfig {
   int get bodyColor => throw _privateConstructorUsedError;
   set bodyColor(int value) => throw _privateConstructorUsedError;
 
-  /// Serializes this FlowMeterWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of FlowMeterWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $FlowMeterWidgetConfigCopyWith<FlowMeterWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -87,8 +83,6 @@ class _$FlowMeterWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of FlowMeterWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -185,8 +179,6 @@ class __$$FlowMeterWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$FlowMeterWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of FlowMeterWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -320,9 +312,7 @@ class _$FlowMeterWidgetConfigImpl extends _FlowMeterWidgetConfig {
     return 'FlowMeterWidgetConfig(title: $title, deviceId: $deviceId, titleFont: $titleFont, labelFont: $labelFont, field: $field, innerFillColor: $innerFillColor, innerIndicatorColor: $innerIndicatorColor, innerBorderColor: $innerBorderColor, flowColor: $flowColor, outerDialColor: $outerDialColor, bodyColor: $bodyColor)';
   }
 
-  /// Create a copy of FlowMeterWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$FlowMeterWidgetConfigImplCopyWith<_$FlowMeterWidgetConfigImpl>
@@ -388,11 +378,8 @@ abstract class _FlowMeterWidgetConfig extends FlowMeterWidgetConfig {
   @override
   int get bodyColor;
   set bodyColor(int value);
-
-  /// Create a copy of FlowMeterWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$FlowMeterWidgetConfigImplCopyWith<_$FlowMeterWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

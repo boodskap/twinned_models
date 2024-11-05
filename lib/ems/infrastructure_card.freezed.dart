@@ -61,12 +61,8 @@ mixin _$InfrastructureCardWidgetConfig {
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this InfrastructureCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of InfrastructureCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $InfrastructureCardWidgetConfigCopyWith<InfrastructureCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -111,8 +107,6 @@ class _$InfrastructureCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of InfrastructureCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -252,8 +246,6 @@ class __$$InfrastructureCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$InfrastructureCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of InfrastructureCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -457,9 +449,7 @@ class _$InfrastructureCardWidgetConfigImpl
     return 'InfrastructureCardWidgetConfig(deviceModelId: $deviceModelId, deviceId: $deviceId, backgroundColor: $backgroundColor, title: $title, titleFont: $titleFont, titleIcon: $titleIcon, premiseHeading: $premiseHeading, premiseIcon: $premiseIcon, facilityHeading: $facilityHeading, facilityIcon: $facilityIcon, floorHeading: $floorHeading, floorIcon: $floorIcon, assetHeading: $assetHeading, assetIcon: $assetIcon, headingFont: $headingFont, valueFont: $valueFont, width: $width, height: $height)';
   }
 
-  /// Create a copy of InfrastructureCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$InfrastructureCardWidgetConfigImplCopyWith<
@@ -555,11 +545,8 @@ abstract class _InfrastructureCardWidgetConfig
   @override
   double get height;
   set height(double value);
-
-  /// Create a copy of InfrastructureCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$InfrastructureCardWidgetConfigImplCopyWith<
           _$InfrastructureCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
