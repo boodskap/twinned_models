@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
@@ -14,13 +12,13 @@ class DeviceFieldPercentageCardWidgetConfig extends BaseConfig
   factory DeviceFieldPercentageCardWidgetConfig({
     @Default('') String deviceId,
     @Default('') String field,
-    @Default(0.0) double maximunValue,
+    @Default(0.0) double maximumValue,
     @Default(0xFF808080) int circleColor,
     @Default(0xFFFFFFFF) int percentageColor,
     @Default([0XFF0AE7FF, 0XFF36AEFF]) List<int> gradientCardBgColor,
-    @Default(0) double circleRadius,
-    @Default(0) double circleWidth,
-    @Default(0) double elevation,
+    @Default(60.0) double circleRadius,
+    @Default(8.0) double circleWidth,
+    @Default(4.0) double elevation,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
