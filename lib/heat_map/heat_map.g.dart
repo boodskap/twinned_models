@@ -15,10 +15,13 @@ _$HeatMapWidgetConfigImpl _$$HeatMapWidgetConfigImplFromJson(
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',
-            'fontSize': 16,
+            'fontSize': 25,
             'fontColor': 0xFF000000,
             'fontBold': false
           },
+      chartThemeColor: $enumDecodeNullable(
+              _$ChartThemeColorEnumMap, json['chartThemeColor']) ??
+          ChartThemeColor.blue,
     );
 
 Map<String, dynamic> _$$HeatMapWidgetConfigImplToJson(
@@ -28,4 +31,15 @@ Map<String, dynamic> _$$HeatMapWidgetConfigImplToJson(
       'deviceId': instance.deviceId,
       'field': instance.field,
       'titleFont': instance.titleFont,
+      'chartThemeColor': _$ChartThemeColorEnumMap[instance.chartThemeColor]!,
     };
+
+const _$ChartThemeColorEnumMap = {
+  ChartThemeColor.red: 'red',
+  ChartThemeColor.green: 'green',
+  ChartThemeColor.blue: 'blue',
+  ChartThemeColor.orange: 'orange',
+  ChartThemeColor.yellow: 'yellow',
+  ChartThemeColor.purple: 'purple',
+  ChartThemeColor.pink: 'pink',
+};

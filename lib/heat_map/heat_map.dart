@@ -4,6 +4,17 @@ import 'package:twinned_models/models.dart';
 part 'heat_map.freezed.dart';
 part 'heat_map.g.dart';
 
+
+enum ChartThemeColor {
+  red,
+  green,
+  blue,
+  orange,
+  yellow,
+  purple,
+  pink
+}
+
 @unfreezed
 class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
   HeatMapWidgetConfig._();
@@ -14,11 +25,12 @@ class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
     @Default('') String field,
     @Default({
       'fontFamily': 'Open Sans',
-      'fontSize': 16,
+      'fontSize': 25,
       'fontColor': 0xFF000000,
       'fontBold': false
     })
     Map<String, dynamic> titleFont,
+    @Default(ChartThemeColor.blue) ChartThemeColor chartThemeColor,
   }) = _HeatMapWidgetConfig;
 
   factory HeatMapWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -33,6 +45,8 @@ class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
         return DataType.text;
       case 'titleFont':
         return DataType.font;
+          case 'chartThemeColor':
+        return DataType.enumerated;
       default:
         return DataType.none;
     }
@@ -45,16 +59,23 @@ class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+        
       default:
         return HintType.none;
     }
   }
 
-  @override
-  List<String> getEnumeratedValues(String parameter) {
-    return [];
-  }
 
+
+     @override
+  List<String> getEnumeratedValues(String parameter) {
+     switch (parameter) {
+      case 'chartThemeColor':
+        return ChartThemeColor.values.asNameMap().keys.toList();
+      default:
+        return [];
+    }
+  } 
   @override
   String getLabel(String parameter) {
     switch (parameter) {
@@ -66,7 +87,8 @@ class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
         return 'Field';
       case 'titleFont':
         return 'Title Font';
-
+  case 'chartThemeColor':
+        return 'Chart Type Color';
       default:
         return parameter;
     }

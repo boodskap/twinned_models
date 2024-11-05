@@ -29,6 +29,9 @@ mixin _$HeatMapWidgetConfig {
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
+  ChartThemeColor get chartThemeColor => throw _privateConstructorUsedError;
+  set chartThemeColor(ChartThemeColor value) =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +49,8 @@ abstract class $HeatMapWidgetConfigCopyWith<$Res> {
       {String title,
       String deviceId,
       String field,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      ChartThemeColor chartThemeColor});
 }
 
 /// @nodoc
@@ -66,6 +70,7 @@ class _$HeatMapWidgetConfigCopyWithImpl<$Res, $Val extends HeatMapWidgetConfig>
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
+    Object? chartThemeColor = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -84,6 +89,10 @@ class _$HeatMapWidgetConfigCopyWithImpl<$Res, $Val extends HeatMapWidgetConfig>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      chartThemeColor: null == chartThemeColor
+          ? _value.chartThemeColor
+          : chartThemeColor // ignore: cast_nullable_to_non_nullable
+              as ChartThemeColor,
     ) as $Val);
   }
 }
@@ -100,7 +109,8 @@ abstract class _$$HeatMapWidgetConfigImplCopyWith<$Res>
       {String title,
       String deviceId,
       String field,
-      Map<String, dynamic> titleFont});
+      Map<String, dynamic> titleFont,
+      ChartThemeColor chartThemeColor});
 }
 
 /// @nodoc
@@ -118,6 +128,7 @@ class __$$HeatMapWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
+    Object? chartThemeColor = null,
   }) {
     return _then(_$HeatMapWidgetConfigImpl(
       title: null == title
@@ -136,6 +147,10 @@ class __$$HeatMapWidgetConfigImplCopyWithImpl<$Res>
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
+      chartThemeColor: null == chartThemeColor
+          ? _value.chartThemeColor
+          : chartThemeColor // ignore: cast_nullable_to_non_nullable
+              as ChartThemeColor,
     ));
   }
 }
@@ -149,10 +164,11 @@ class _$HeatMapWidgetConfigImpl extends _HeatMapWidgetConfig {
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 16,
+        'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': false
-      }})
+      },
+      this.chartThemeColor = ChartThemeColor.blue})
       : super._();
 
   factory _$HeatMapWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -170,10 +186,13 @@ class _$HeatMapWidgetConfigImpl extends _HeatMapWidgetConfig {
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
+  @override
+  @JsonKey()
+  ChartThemeColor chartThemeColor;
 
   @override
   String toString() {
-    return 'HeatMapWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont)';
+    return 'HeatMapWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, chartThemeColor: $chartThemeColor)';
   }
 
   @JsonKey(ignore: true)
@@ -196,7 +215,8 @@ abstract class _HeatMapWidgetConfig extends HeatMapWidgetConfig {
       {String title,
       String deviceId,
       String field,
-      Map<String, dynamic> titleFont}) = _$HeatMapWidgetConfigImpl;
+      Map<String, dynamic> titleFont,
+      ChartThemeColor chartThemeColor}) = _$HeatMapWidgetConfigImpl;
   _HeatMapWidgetConfig._() : super._();
 
   factory _HeatMapWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -214,6 +234,9 @@ abstract class _HeatMapWidgetConfig extends HeatMapWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
+  @override
+  ChartThemeColor get chartThemeColor;
+  set chartThemeColor(ChartThemeColor value);
   @override
   @JsonKey(ignore: true)
   _$$HeatMapWidgetConfigImplCopyWith<_$HeatMapWidgetConfigImpl> get copyWith =>
