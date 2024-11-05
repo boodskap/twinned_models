@@ -73,12 +73,8 @@ mixin _$MultiFieldDeviceSplineChartWidgetConfig {
   double get splineAreaBorderWidth => throw _privateConstructorUsedError;
   set splineAreaBorderWidth(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this MultiFieldDeviceSplineChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of MultiFieldDeviceSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MultiFieldDeviceSplineChartWidgetConfigCopyWith<
           MultiFieldDeviceSplineChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -129,8 +125,6 @@ class _$MultiFieldDeviceSplineChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MultiFieldDeviceSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,8 +288,6 @@ class __$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiFieldDeviceSplineChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MultiFieldDeviceSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -545,9 +537,7 @@ class _$MultiFieldDeviceSplineChartWidgetConfigImpl
     return 'MultiFieldDeviceSplineChartWidgetConfig(fields: $fields, title: $title, subTitle: $subTitle, chartColors: $chartColors, gradientColors: $gradientColors, deviceId: $deviceId, labelFont: $labelFont, titleFont: $titleFont, subTitleFont: $subTitleFont, valueFont: $valueFont, tooltipFont: $tooltipFont, legendVisibility: $legendVisibility, iconType: $iconType, labelBgColor: $labelBgColor, labelBorderColor: $labelBorderColor, legendPosition: $legendPosition, enableTooltip: $enableTooltip, duration: $duration, chartBorderColor: $chartBorderColor, temperatureFieldColor: $temperatureFieldColor, splineAreaBorderColor: $splineAreaBorderColor, splineAreaBorderWidth: $splineAreaBorderWidth)';
   }
 
-  /// Create a copy of MultiFieldDeviceSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWith<
@@ -662,11 +652,8 @@ abstract class _MultiFieldDeviceSplineChartWidgetConfig
   @override
   double get splineAreaBorderWidth;
   set splineAreaBorderWidth(double value);
-
-  /// Create a copy of MultiFieldDeviceSplineChartWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MultiFieldDeviceSplineChartWidgetConfigImplCopyWith<
           _$MultiFieldDeviceSplineChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

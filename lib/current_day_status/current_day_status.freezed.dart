@@ -40,12 +40,8 @@ mixin _$CurrentDayStatusWidgetConfig {
   set dateFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this CurrentDayStatusWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CurrentDayStatusWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CurrentDayStatusWidgetConfigCopyWith<CurrentDayStatusWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -79,8 +75,6 @@ class _$CurrentDayStatusWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CurrentDayStatusWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,8 +148,6 @@ class __$$CurrentDayStatusWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$CurrentDayStatusWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CurrentDayStatusWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -264,9 +256,7 @@ class _$CurrentDayStatusWidgetConfigImpl extends _CurrentDayStatusWidgetConfig {
     return 'CurrentDayStatusWidgetConfig(title: $title, deviceId: $deviceId, fields: $fields, titleFont: $titleFont, labelFont: $labelFont, valueFont: $valueFont, dateFont: $dateFont)';
   }
 
-  /// Create a copy of CurrentDayStatusWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CurrentDayStatusWidgetConfigImplCopyWith<
@@ -318,11 +308,8 @@ abstract class _CurrentDayStatusWidgetConfig
   @override
   Map<String, dynamic> get dateFont;
   set dateFont(Map<String, dynamic> value);
-
-  /// Create a copy of CurrentDayStatusWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CurrentDayStatusWidgetConfigImplCopyWith<
           _$CurrentDayStatusWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
