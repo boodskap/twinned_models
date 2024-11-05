@@ -37,12 +37,8 @@ mixin _$DayRangeWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this DayRangeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DayRangeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DayRangeWidgetConfigCopyWith<DayRangeWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,8 +70,6 @@ class _$DayRangeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DayRangeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,8 +140,6 @@ class __$$DayRangeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DayRangeWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DayRangeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,9 +237,7 @@ class _$DayRangeWidgetConfigImpl extends _DayRangeWidgetConfig {
     return 'DayRangeWidgetConfig(title: $title, deviceId: $deviceId, fields: $fields, valueColor: $valueColor, backgroundColor: $backgroundColor, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  /// Create a copy of DayRangeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DayRangeWidgetConfigImplCopyWith<_$DayRangeWidgetConfigImpl>
@@ -298,11 +288,8 @@ abstract class _DayRangeWidgetConfig extends DayRangeWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-
-  /// Create a copy of DayRangeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DayRangeWidgetConfigImplCopyWith<_$DayRangeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

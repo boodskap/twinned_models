@@ -38,12 +38,8 @@ mixin _$LinearProgressBarWidgetConfig {
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this LinearProgressBarWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of LinearProgressBarWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $LinearProgressBarWidgetConfigCopyWith<LinearProgressBarWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -77,8 +73,6 @@ class _$LinearProgressBarWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LinearProgressBarWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,8 +146,6 @@ class __$$LinearProgressBarWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$LinearProgressBarWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LinearProgressBarWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -253,9 +245,7 @@ class _$LinearProgressBarWidgetConfigImpl
     return 'LinearProgressBarWidgetConfig(deviceId: $deviceId, field: $field, title: $title, backgroundColor: $backgroundColor, valueColor: $valueColor, valueFont: $valueFont, titleFont: $titleFont)';
   }
 
-  /// Create a copy of LinearProgressBarWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LinearProgressBarWidgetConfigImplCopyWith<
@@ -307,11 +297,8 @@ abstract class _LinearProgressBarWidgetConfig
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
-
-  /// Create a copy of LinearProgressBarWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LinearProgressBarWidgetConfigImplCopyWith<
           _$LinearProgressBarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
