@@ -35,12 +35,8 @@ mixin _$DeviceListCardWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceListCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceListCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceListCardWidgetConfigCopyWith<DeviceListCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -71,8 +67,6 @@ class _$DeviceListCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceListCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,8 +128,6 @@ class __$$DeviceListCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceListCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceListCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,9 +213,7 @@ class _$DeviceListCardWidgetConfigImpl extends _DeviceListCardWidgetConfig {
     return 'DeviceListCardWidgetConfig(deviceModelId: $deviceModelId, cardElevation: $cardElevation, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
-  /// Create a copy of DeviceListCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceListCardWidgetConfigImplCopyWith<_$DeviceListCardWidgetConfigImpl>
@@ -265,11 +255,8 @@ abstract class _DeviceListCardWidgetConfig extends DeviceListCardWidgetConfig {
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
-
-  /// Create a copy of DeviceListCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceListCardWidgetConfigImplCopyWith<_$DeviceListCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

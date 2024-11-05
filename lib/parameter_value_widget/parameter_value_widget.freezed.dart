@@ -34,12 +34,8 @@ mixin _$ParameterValueWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this ParameterValueWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ParameterValueWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParameterValueWidgetConfigCopyWith<ParameterValueWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -70,8 +66,6 @@ class _$ParameterValueWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParameterValueWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,8 +127,6 @@ class __$$ParameterValueWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ParameterValueWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParameterValueWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,9 +207,7 @@ class _$ParameterValueWidgetConfigImpl extends _ParameterValueWidgetConfig {
     return 'ParameterValueWidgetConfig(deviceId: $deviceId, field: $field, title: $title, titleFont: $titleFont, valueFont: $valueFont)';
   }
 
-  /// Create a copy of ParameterValueWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParameterValueWidgetConfigImplCopyWith<_$ParameterValueWidgetConfigImpl>
@@ -259,11 +249,8 @@ abstract class _ParameterValueWidgetConfig extends ParameterValueWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
-
-  /// Create a copy of ParameterValueWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParameterValueWidgetConfigImplCopyWith<_$ParameterValueWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
