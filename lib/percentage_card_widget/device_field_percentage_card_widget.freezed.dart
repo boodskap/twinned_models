@@ -25,8 +25,8 @@ mixin _$DeviceFieldPercentageCardWidgetConfig {
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
-  double get maximunValue => throw _privateConstructorUsedError;
-  set maximunValue(double value) => throw _privateConstructorUsedError;
+  double get maximumValue => throw _privateConstructorUsedError;
+  set maximumValue(double value) => throw _privateConstructorUsedError;
   int get circleColor => throw _privateConstructorUsedError;
   set circleColor(int value) => throw _privateConstructorUsedError;
   int get percentageColor => throw _privateConstructorUsedError;
@@ -68,7 +68,7 @@ abstract class $DeviceFieldPercentageCardWidgetConfigCopyWith<$Res> {
   $Res call(
       {String deviceId,
       String field,
-      double maximunValue,
+      double maximumValue,
       int circleColor,
       int percentageColor,
       List<int> gradientCardBgColor,
@@ -96,7 +96,7 @@ class _$DeviceFieldPercentageCardWidgetConfigCopyWithImpl<$Res,
   $Res call({
     Object? deviceId = null,
     Object? field = null,
-    Object? maximunValue = null,
+    Object? maximumValue = null,
     Object? circleColor = null,
     Object? percentageColor = null,
     Object? gradientCardBgColor = null,
@@ -116,9 +116,9 @@ class _$DeviceFieldPercentageCardWidgetConfigCopyWithImpl<$Res,
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      maximunValue: null == maximunValue
-          ? _value.maximunValue
-          : maximunValue // ignore: cast_nullable_to_non_nullable
+      maximumValue: null == maximumValue
+          ? _value.maximumValue
+          : maximumValue // ignore: cast_nullable_to_non_nullable
               as double,
       circleColor: null == circleColor
           ? _value.circleColor
@@ -172,7 +172,7 @@ abstract class _$$DeviceFieldPercentageCardWidgetConfigImplCopyWith<$Res>
   $Res call(
       {String deviceId,
       String field,
-      double maximunValue,
+      double maximumValue,
       int circleColor,
       int percentageColor,
       List<int> gradientCardBgColor,
@@ -199,7 +199,7 @@ class __$$DeviceFieldPercentageCardWidgetConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? deviceId = null,
     Object? field = null,
-    Object? maximunValue = null,
+    Object? maximumValue = null,
     Object? circleColor = null,
     Object? percentageColor = null,
     Object? gradientCardBgColor = null,
@@ -219,9 +219,9 @@ class __$$DeviceFieldPercentageCardWidgetConfigImplCopyWithImpl<$Res>
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      maximunValue: null == maximunValue
-          ? _value.maximunValue
-          : maximunValue // ignore: cast_nullable_to_non_nullable
+      maximumValue: null == maximumValue
+          ? _value.maximumValue
+          : maximumValue // ignore: cast_nullable_to_non_nullable
               as double,
       circleColor: null == circleColor
           ? _value.circleColor
@@ -270,13 +270,13 @@ class _$DeviceFieldPercentageCardWidgetConfigImpl
   _$DeviceFieldPercentageCardWidgetConfigImpl(
       {this.deviceId = '',
       this.field = '',
-      this.maximunValue = 0.0,
+      this.maximumValue = 0.0,
       this.circleColor = 0xFF808080,
       this.percentageColor = 0xFFFFFFFF,
       this.gradientCardBgColor = const [0XFF0AE7FF, 0XFF36AEFF],
-      this.circleRadius = 0,
-      this.circleWidth = 0,
-      this.elevation = 0,
+      this.circleRadius = 60.0,
+      this.circleWidth = 8.0,
+      this.elevation = 4.0,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 18,
@@ -309,7 +309,7 @@ class _$DeviceFieldPercentageCardWidgetConfigImpl
   String field;
   @override
   @JsonKey()
-  double maximunValue;
+  double maximumValue;
   @override
   @JsonKey()
   int circleColor;
@@ -340,7 +340,7 @@ class _$DeviceFieldPercentageCardWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DeviceFieldPercentageCardWidgetConfig(deviceId: $deviceId, field: $field, maximunValue: $maximunValue, circleColor: $circleColor, percentageColor: $percentageColor, gradientCardBgColor: $gradientCardBgColor, circleRadius: $circleRadius, circleWidth: $circleWidth, elevation: $elevation, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
+    return 'DeviceFieldPercentageCardWidgetConfig(deviceId: $deviceId, field: $field, maximumValue: $maximumValue, circleColor: $circleColor, percentageColor: $percentageColor, gradientCardBgColor: $gradientCardBgColor, circleRadius: $circleRadius, circleWidth: $circleWidth, elevation: $elevation, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
   @JsonKey(ignore: true)
@@ -364,7 +364,7 @@ abstract class _DeviceFieldPercentageCardWidgetConfig
   factory _DeviceFieldPercentageCardWidgetConfig(
           {String deviceId,
           String field,
-          double maximunValue,
+          double maximumValue,
           int circleColor,
           int percentageColor,
           List<int> gradientCardBgColor,
@@ -388,8 +388,8 @@ abstract class _DeviceFieldPercentageCardWidgetConfig
   String get field;
   set field(String value);
   @override
-  double get maximunValue;
-  set maximunValue(double value);
+  double get maximumValue;
+  set maximumValue(double value);
   @override
   int get circleColor;
   set circleColor(int value);

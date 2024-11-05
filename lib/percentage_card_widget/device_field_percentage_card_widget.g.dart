@@ -12,7 +12,7 @@ _$DeviceFieldPercentageCardWidgetConfigImpl
         _$DeviceFieldPercentageCardWidgetConfigImpl(
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
-          maximunValue: (json['maximunValue'] as num?)?.toDouble() ?? 0.0,
+          maximumValue: (json['maximumValue'] as num?)?.toDouble() ?? 0.0,
           circleColor: (json['circleColor'] as num?)?.toInt() ?? 0xFF808080,
           percentageColor:
               (json['percentageColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
@@ -20,9 +20,9 @@ _$DeviceFieldPercentageCardWidgetConfigImpl
                   ?.map((e) => (e as num).toInt())
                   .toList() ??
               const [0XFF0AE7FF, 0XFF36AEFF],
-          circleRadius: (json['circleRadius'] as num?)?.toDouble() ?? 0,
-          circleWidth: (json['circleWidth'] as num?)?.toDouble() ?? 0,
-          elevation: (json['elevation'] as num?)?.toDouble() ?? 0,
+          circleRadius: (json['circleRadius'] as num?)?.toDouble() ?? 60.0,
+          circleWidth: (json['circleWidth'] as num?)?.toDouble() ?? 8.0,
+          elevation: (json['elevation'] as num?)?.toDouble() ?? 4.0,
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -51,7 +51,7 @@ Map<String, dynamic> _$$DeviceFieldPercentageCardWidgetConfigImplToJson(
     <String, dynamic>{
       'deviceId': instance.deviceId,
       'field': instance.field,
-      'maximunValue': instance.maximunValue,
+      'maximumValue': instance.maximumValue,
       'circleColor': instance.circleColor,
       'percentageColor': instance.percentageColor,
       'gradientCardBgColor': instance.gradientCardBgColor,
