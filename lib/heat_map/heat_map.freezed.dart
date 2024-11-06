@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'compass_widget.dart';
+part of 'heat_map.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,55 +14,49 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-CompassWidgetConfig _$CompassWidgetConfigFromJson(Map<String, dynamic> json) {
-  return _CompassWidgetConfig.fromJson(json);
+HeatMapWidgetConfig _$HeatMapWidgetConfigFromJson(Map<String, dynamic> json) {
+  return _HeatMapWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CompassWidgetConfig {
+mixin _$HeatMapWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
   set field(String value) => throw _privateConstructorUsedError;
-  int get backgroundColor => throw _privateConstructorUsedError;
-  set backgroundColor(int value) => throw _privateConstructorUsedError;
-  int get markerColor => throw _privateConstructorUsedError;
-  set markerColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
-  set valueFont(Map<String, dynamic> value) =>
+  ChartThemeColor get chartThemeColor => throw _privateConstructorUsedError;
+  set chartThemeColor(ChartThemeColor value) =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CompassWidgetConfigCopyWith<CompassWidgetConfig> get copyWith =>
+  $HeatMapWidgetConfigCopyWith<HeatMapWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CompassWidgetConfigCopyWith<$Res> {
-  factory $CompassWidgetConfigCopyWith(
-          CompassWidgetConfig value, $Res Function(CompassWidgetConfig) then) =
-      _$CompassWidgetConfigCopyWithImpl<$Res, CompassWidgetConfig>;
+abstract class $HeatMapWidgetConfigCopyWith<$Res> {
+  factory $HeatMapWidgetConfigCopyWith(
+          HeatMapWidgetConfig value, $Res Function(HeatMapWidgetConfig) then) =
+      _$HeatMapWidgetConfigCopyWithImpl<$Res, HeatMapWidgetConfig>;
   @useResult
   $Res call(
       {String title,
       String deviceId,
       String field,
-      int backgroundColor,
-      int markerColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont});
+      ChartThemeColor chartThemeColor});
 }
 
 /// @nodoc
-class _$CompassWidgetConfigCopyWithImpl<$Res, $Val extends CompassWidgetConfig>
-    implements $CompassWidgetConfigCopyWith<$Res> {
-  _$CompassWidgetConfigCopyWithImpl(this._value, this._then);
+class _$HeatMapWidgetConfigCopyWithImpl<$Res, $Val extends HeatMapWidgetConfig>
+    implements $HeatMapWidgetConfigCopyWith<$Res> {
+  _$HeatMapWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -75,10 +69,8 @@ class _$CompassWidgetConfigCopyWithImpl<$Res, $Val extends CompassWidgetConfig>
     Object? title = null,
     Object? deviceId = null,
     Object? field = null,
-    Object? backgroundColor = null,
-    Object? markerColor = null,
     Object? titleFont = null,
-    Object? valueFont = null,
+    Object? chartThemeColor = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -93,50 +85,40 @@ class _$CompassWidgetConfigCopyWithImpl<$Res, $Val extends CompassWidgetConfig>
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundColor: null == backgroundColor
-          ? _value.backgroundColor
-          : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      markerColor: null == markerColor
-          ? _value.markerColor
-          : markerColor // ignore: cast_nullable_to_non_nullable
-              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      chartThemeColor: null == chartThemeColor
+          ? _value.chartThemeColor
+          : chartThemeColor // ignore: cast_nullable_to_non_nullable
+              as ChartThemeColor,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$CompassWidgetConfigImplCopyWith<$Res>
-    implements $CompassWidgetConfigCopyWith<$Res> {
-  factory _$$CompassWidgetConfigImplCopyWith(_$CompassWidgetConfigImpl value,
-          $Res Function(_$CompassWidgetConfigImpl) then) =
-      __$$CompassWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$HeatMapWidgetConfigImplCopyWith<$Res>
+    implements $HeatMapWidgetConfigCopyWith<$Res> {
+  factory _$$HeatMapWidgetConfigImplCopyWith(_$HeatMapWidgetConfigImpl value,
+          $Res Function(_$HeatMapWidgetConfigImpl) then) =
+      __$$HeatMapWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String title,
       String deviceId,
       String field,
-      int backgroundColor,
-      int markerColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont});
+      ChartThemeColor chartThemeColor});
 }
 
 /// @nodoc
-class __$$CompassWidgetConfigImplCopyWithImpl<$Res>
-    extends _$CompassWidgetConfigCopyWithImpl<$Res, _$CompassWidgetConfigImpl>
-    implements _$$CompassWidgetConfigImplCopyWith<$Res> {
-  __$$CompassWidgetConfigImplCopyWithImpl(_$CompassWidgetConfigImpl _value,
-      $Res Function(_$CompassWidgetConfigImpl) _then)
+class __$$HeatMapWidgetConfigImplCopyWithImpl<$Res>
+    extends _$HeatMapWidgetConfigCopyWithImpl<$Res, _$HeatMapWidgetConfigImpl>
+    implements _$$HeatMapWidgetConfigImplCopyWith<$Res> {
+  __$$HeatMapWidgetConfigImplCopyWithImpl(_$HeatMapWidgetConfigImpl _value,
+      $Res Function(_$HeatMapWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -145,12 +127,10 @@ class __$$CompassWidgetConfigImplCopyWithImpl<$Res>
     Object? title = null,
     Object? deviceId = null,
     Object? field = null,
-    Object? backgroundColor = null,
-    Object? markerColor = null,
     Object? titleFont = null,
-    Object? valueFont = null,
+    Object? chartThemeColor = null,
   }) {
-    return _then(_$CompassWidgetConfigImpl(
+    return _then(_$HeatMapWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -163,51 +143,36 @@ class __$$CompassWidgetConfigImplCopyWithImpl<$Res>
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundColor: null == backgroundColor
-          ? _value.backgroundColor
-          : backgroundColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      markerColor: null == markerColor
-          ? _value.markerColor
-          : markerColor // ignore: cast_nullable_to_non_nullable
-              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      valueFont: null == valueFont
-          ? _value.valueFont
-          : valueFont // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>,
+      chartThemeColor: null == chartThemeColor
+          ? _value.chartThemeColor
+          : chartThemeColor // ignore: cast_nullable_to_non_nullable
+              as ChartThemeColor,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$CompassWidgetConfigImpl extends _CompassWidgetConfig {
-  _$CompassWidgetConfigImpl(
+class _$HeatMapWidgetConfigImpl extends _HeatMapWidgetConfig {
+  _$HeatMapWidgetConfigImpl(
       {this.title = '',
       this.deviceId = '',
       this.field = '',
-      this.backgroundColor = 0xFFB3E5FC,
-      this.markerColor = 0xFF000000,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
-        'fontSize': 14,
+        'fontSize': 25,
         'fontColor': 0xFF000000,
-        'fontBold': true
+        'fontBold': false
       },
-      this.valueFont = const {
-        'fontFamily': 'Open Sans',
-        'fontSize': 12,
-        'fontColor': 0xFF000000,
-        'fontBold': true
-      }})
+      this.chartThemeColor = ChartThemeColor.blue})
       : super._();
 
-  factory _$CompassWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CompassWidgetConfigImplFromJson(json);
+  factory _$HeatMapWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HeatMapWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
@@ -220,50 +185,42 @@ class _$CompassWidgetConfigImpl extends _CompassWidgetConfig {
   String field;
   @override
   @JsonKey()
-  int backgroundColor;
-  @override
-  @JsonKey()
-  int markerColor;
-  @override
-  @JsonKey()
   Map<String, dynamic> titleFont;
   @override
   @JsonKey()
-  Map<String, dynamic> valueFont;
+  ChartThemeColor chartThemeColor;
 
   @override
   String toString() {
-    return 'CompassWidgetConfig(title: $title, deviceId: $deviceId, field: $field, backgroundColor: $backgroundColor, markerColor: $markerColor, titleFont: $titleFont, valueFont: $valueFont)';
+    return 'HeatMapWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, chartThemeColor: $chartThemeColor)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CompassWidgetConfigImplCopyWith<_$CompassWidgetConfigImpl> get copyWith =>
-      __$$CompassWidgetConfigImplCopyWithImpl<_$CompassWidgetConfigImpl>(
+  _$$HeatMapWidgetConfigImplCopyWith<_$HeatMapWidgetConfigImpl> get copyWith =>
+      __$$HeatMapWidgetConfigImplCopyWithImpl<_$HeatMapWidgetConfigImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CompassWidgetConfigImplToJson(
+    return _$$HeatMapWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _CompassWidgetConfig extends CompassWidgetConfig {
-  factory _CompassWidgetConfig(
+abstract class _HeatMapWidgetConfig extends HeatMapWidgetConfig {
+  factory _HeatMapWidgetConfig(
       {String title,
       String deviceId,
       String field,
-      int backgroundColor,
-      int markerColor,
       Map<String, dynamic> titleFont,
-      Map<String, dynamic> valueFont}) = _$CompassWidgetConfigImpl;
-  _CompassWidgetConfig._() : super._();
+      ChartThemeColor chartThemeColor}) = _$HeatMapWidgetConfigImpl;
+  _HeatMapWidgetConfig._() : super._();
 
-  factory _CompassWidgetConfig.fromJson(Map<String, dynamic> json) =
-      _$CompassWidgetConfigImpl.fromJson;
+  factory _HeatMapWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$HeatMapWidgetConfigImpl.fromJson;
 
   @override
   String get title;
@@ -275,19 +232,13 @@ abstract class _CompassWidgetConfig extends CompassWidgetConfig {
   String get field;
   set field(String value);
   @override
-  int get backgroundColor;
-  set backgroundColor(int value);
-  @override
-  int get markerColor;
-  set markerColor(int value);
-  @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
   @override
-  Map<String, dynamic> get valueFont;
-  set valueFont(Map<String, dynamic> value);
+  ChartThemeColor get chartThemeColor;
+  set chartThemeColor(ChartThemeColor value);
   @override
   @JsonKey(ignore: true)
-  _$$CompassWidgetConfigImplCopyWith<_$CompassWidgetConfigImpl> get copyWith =>
+  _$$HeatMapWidgetConfigImplCopyWith<_$HeatMapWidgetConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

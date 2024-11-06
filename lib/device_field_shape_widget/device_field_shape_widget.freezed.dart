@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'generic_odd_even_ellipse.dart';
+part of 'device_field_shape_widget.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,15 +14,17 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-GenericOddEvenEllipseWidgetConfig _$GenericOddEvenEllipseWidgetConfigFromJson(
+DeviceFieldShapeWidgetConfig _$DeviceFieldShapeWidgetConfigFromJson(
     Map<String, dynamic> json) {
-  return _GenericOddEvenEllipseWidgetConfig.fromJson(json);
+  return _DeviceFieldShapeWidgetConfig.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GenericOddEvenEllipseWidgetConfig {
+mixin _$DeviceFieldShapeWidgetConfig {
   String get title => throw _privateConstructorUsedError;
   set title(String value) => throw _privateConstructorUsedError;
+  String get field => throw _privateConstructorUsedError;
+  set field(String value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -42,31 +44,32 @@ mixin _$GenericOddEvenEllipseWidgetConfig {
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
-  int get oddEllipseBGColor => throw _privateConstructorUsedError;
-  set oddEllipseBGColor(int value) => throw _privateConstructorUsedError;
-  int get evenEllipseBGColor => throw _privateConstructorUsedError;
-  set evenEllipseBGColor(int value) => throw _privateConstructorUsedError;
+  int get shapeWidgetColor => throw _privateConstructorUsedError;
+  set shapeWidgetColor(int value) => throw _privateConstructorUsedError;
   double get horizontalSpacing => throw _privateConstructorUsedError;
   set horizontalSpacing(double value) => throw _privateConstructorUsedError;
   double get imageSize => throw _privateConstructorUsedError;
   set imageSize(double value) => throw _privateConstructorUsedError;
+  DeviceFieldShape get shape => throw _privateConstructorUsedError;
+  set shape(DeviceFieldShape value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GenericOddEvenEllipseWidgetConfigCopyWith<GenericOddEvenEllipseWidgetConfig>
+  $DeviceFieldShapeWidgetConfigCopyWith<DeviceFieldShapeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GenericOddEvenEllipseWidgetConfigCopyWith<$Res> {
-  factory $GenericOddEvenEllipseWidgetConfigCopyWith(
-          GenericOddEvenEllipseWidgetConfig value,
-          $Res Function(GenericOddEvenEllipseWidgetConfig) then) =
-      _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
-          GenericOddEvenEllipseWidgetConfig>;
+abstract class $DeviceFieldShapeWidgetConfigCopyWith<$Res> {
+  factory $DeviceFieldShapeWidgetConfigCopyWith(
+          DeviceFieldShapeWidgetConfig value,
+          $Res Function(DeviceFieldShapeWidgetConfig) then) =
+      _$DeviceFieldShapeWidgetConfigCopyWithImpl<$Res,
+          DeviceFieldShapeWidgetConfig>;
   @useResult
   $Res call(
       {String title,
+      String field,
       Map<String, dynamic> titleFont,
       String subTitle,
       Map<String, dynamic> subTitleFont,
@@ -74,17 +77,17 @@ abstract class $GenericOddEvenEllipseWidgetConfigCopyWith<$Res> {
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int oddEllipseBGColor,
-      int evenEllipseBGColor,
+      int shapeWidgetColor,
       double horizontalSpacing,
-      double imageSize});
+      double imageSize,
+      DeviceFieldShape shape});
 }
 
 /// @nodoc
-class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
-        $Val extends GenericOddEvenEllipseWidgetConfig>
-    implements $GenericOddEvenEllipseWidgetConfigCopyWith<$Res> {
-  _$GenericOddEvenEllipseWidgetConfigCopyWithImpl(this._value, this._then);
+class _$DeviceFieldShapeWidgetConfigCopyWithImpl<$Res,
+        $Val extends DeviceFieldShapeWidgetConfig>
+    implements $DeviceFieldShapeWidgetConfigCopyWith<$Res> {
+  _$DeviceFieldShapeWidgetConfigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -95,6 +98,7 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
   @override
   $Res call({
     Object? title = null,
+    Object? field = null,
     Object? titleFont = null,
     Object? subTitle = null,
     Object? subTitleFont = null,
@@ -102,15 +106,19 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddEllipseBGColor = null,
-    Object? evenEllipseBGColor = null,
+    Object? shapeWidgetColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
+    Object? shape = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -140,13 +148,9 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddEllipseBGColor: null == oddEllipseBGColor
-          ? _value.oddEllipseBGColor
-          : oddEllipseBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenEllipseBGColor: null == evenEllipseBGColor
-          ? _value.evenEllipseBGColor
-          : evenEllipseBGColor // ignore: cast_nullable_to_non_nullable
+      shapeWidgetColor: null == shapeWidgetColor
+          ? _value.shapeWidgetColor
+          : shapeWidgetColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -156,21 +160,26 @@ class _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
           ? _value.imageSize
           : imageSize // ignore: cast_nullable_to_non_nullable
               as double,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as DeviceFieldShape,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<$Res>
-    implements $GenericOddEvenEllipseWidgetConfigCopyWith<$Res> {
-  factory _$$GenericOddEvenEllipseWidgetConfigImplCopyWith(
-          _$GenericOddEvenEllipseWidgetConfigImpl value,
-          $Res Function(_$GenericOddEvenEllipseWidgetConfigImpl) then) =
-      __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>;
+abstract class _$$DeviceFieldShapeWidgetConfigImplCopyWith<$Res>
+    implements $DeviceFieldShapeWidgetConfigCopyWith<$Res> {
+  factory _$$DeviceFieldShapeWidgetConfigImplCopyWith(
+          _$DeviceFieldShapeWidgetConfigImpl value,
+          $Res Function(_$DeviceFieldShapeWidgetConfigImpl) then) =
+      __$$DeviceFieldShapeWidgetConfigImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String title,
+      String field,
       Map<String, dynamic> titleFont,
       String subTitle,
       Map<String, dynamic> subTitleFont,
@@ -178,26 +187,27 @@ abstract class _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<$Res>
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int oddEllipseBGColor,
-      int evenEllipseBGColor,
+      int shapeWidgetColor,
       double horizontalSpacing,
-      double imageSize});
+      double imageSize,
+      DeviceFieldShape shape});
 }
 
 /// @nodoc
-class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
-    extends _$GenericOddEvenEllipseWidgetConfigCopyWithImpl<$Res,
-        _$GenericOddEvenEllipseWidgetConfigImpl>
-    implements _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<$Res> {
-  __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl(
-      _$GenericOddEvenEllipseWidgetConfigImpl _value,
-      $Res Function(_$GenericOddEvenEllipseWidgetConfigImpl) _then)
+class __$$DeviceFieldShapeWidgetConfigImplCopyWithImpl<$Res>
+    extends _$DeviceFieldShapeWidgetConfigCopyWithImpl<$Res,
+        _$DeviceFieldShapeWidgetConfigImpl>
+    implements _$$DeviceFieldShapeWidgetConfigImplCopyWith<$Res> {
+  __$$DeviceFieldShapeWidgetConfigImplCopyWithImpl(
+      _$DeviceFieldShapeWidgetConfigImpl _value,
+      $Res Function(_$DeviceFieldShapeWidgetConfigImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = null,
+    Object? field = null,
     Object? titleFont = null,
     Object? subTitle = null,
     Object? subTitleFont = null,
@@ -205,15 +215,19 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
     Object? prefixFont = null,
     Object? suffixFont = null,
     Object? valueFont = null,
-    Object? oddEllipseBGColor = null,
-    Object? evenEllipseBGColor = null,
+    Object? shapeWidgetColor = null,
     Object? horizontalSpacing = null,
     Object? imageSize = null,
+    Object? shape = null,
   }) {
-    return _then(_$GenericOddEvenEllipseWidgetConfigImpl(
+    return _then(_$DeviceFieldShapeWidgetConfigImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      field: null == field
+          ? _value.field
+          : field // ignore: cast_nullable_to_non_nullable
               as String,
       titleFont: null == titleFont
           ? _value.titleFont
@@ -243,13 +257,9 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      oddEllipseBGColor: null == oddEllipseBGColor
-          ? _value.oddEllipseBGColor
-          : oddEllipseBGColor // ignore: cast_nullable_to_non_nullable
-              as int,
-      evenEllipseBGColor: null == evenEllipseBGColor
-          ? _value.evenEllipseBGColor
-          : evenEllipseBGColor // ignore: cast_nullable_to_non_nullable
+      shapeWidgetColor: null == shapeWidgetColor
+          ? _value.shapeWidgetColor
+          : shapeWidgetColor // ignore: cast_nullable_to_non_nullable
               as int,
       horizontalSpacing: null == horizontalSpacing
           ? _value.horizontalSpacing
@@ -259,23 +269,27 @@ class __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<$Res>
           ? _value.imageSize
           : imageSize // ignore: cast_nullable_to_non_nullable
               as double,
+      shape: null == shape
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as DeviceFieldShape,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$GenericOddEvenEllipseWidgetConfigImpl
-    extends _GenericOddEvenEllipseWidgetConfig {
-  _$GenericOddEvenEllipseWidgetConfigImpl(
-      {this.title = 'Generic Odd Even Ellipse Widget',
+class _$DeviceFieldShapeWidgetConfigImpl extends _DeviceFieldShapeWidgetConfig {
+  _$DeviceFieldShapeWidgetConfigImpl(
+      {this.title = 'Generic Device Field Shape Widget',
+      this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 25,
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.subTitle = 'Check Your Device Data By Using Ellipse Shape!',
+      this.subTitle = 'My Device Field Data',
       this.subTitleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 20,
@@ -301,19 +315,22 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
         'fontColor': 0xFF000000,
         'fontBold': true
       },
-      this.oddEllipseBGColor = 0XFF7CDAB8,
-      this.evenEllipseBGColor = 0XFFf79cA1,
+      this.shapeWidgetColor = 0xFF4F9FDE,
       this.horizontalSpacing = 5,
-      this.imageSize = 25})
+      this.imageSize = 25,
+      this.shape = DeviceFieldShape.circle})
       : super._();
 
-  factory _$GenericOddEvenEllipseWidgetConfigImpl.fromJson(
+  factory _$DeviceFieldShapeWidgetConfigImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$GenericOddEvenEllipseWidgetConfigImplFromJson(json);
+      _$$DeviceFieldShapeWidgetConfigImplFromJson(json);
 
   @override
   @JsonKey()
   String title;
+  @override
+  @JsonKey()
+  String field;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
@@ -337,42 +354,43 @@ class _$GenericOddEvenEllipseWidgetConfigImpl
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
-  int oddEllipseBGColor;
-  @override
-  @JsonKey()
-  int evenEllipseBGColor;
+  int shapeWidgetColor;
   @override
   @JsonKey()
   double horizontalSpacing;
   @override
   @JsonKey()
   double imageSize;
+  @override
+  @JsonKey()
+  DeviceFieldShape shape;
 
   @override
   String toString() {
-    return 'GenericOddEvenEllipseWidgetConfig(title: $title, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, oddEllipseBGColor: $oddEllipseBGColor, evenEllipseBGColor: $evenEllipseBGColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize)';
+    return 'DeviceFieldShapeWidgetConfig(title: $title, field: $field, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, shapeWidgetColor: $shapeWidgetColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize, shape: $shape)';
   }
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<
-          _$GenericOddEvenEllipseWidgetConfigImpl>
-      get copyWith => __$$GenericOddEvenEllipseWidgetConfigImplCopyWithImpl<
-          _$GenericOddEvenEllipseWidgetConfigImpl>(this, _$identity);
+  _$$DeviceFieldShapeWidgetConfigImplCopyWith<
+          _$DeviceFieldShapeWidgetConfigImpl>
+      get copyWith => __$$DeviceFieldShapeWidgetConfigImplCopyWithImpl<
+          _$DeviceFieldShapeWidgetConfigImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenericOddEvenEllipseWidgetConfigImplToJson(
+    return _$$DeviceFieldShapeWidgetConfigImplToJson(
       this,
     );
   }
 }
 
-abstract class _GenericOddEvenEllipseWidgetConfig
-    extends GenericOddEvenEllipseWidgetConfig {
-  factory _GenericOddEvenEllipseWidgetConfig(
+abstract class _DeviceFieldShapeWidgetConfig
+    extends DeviceFieldShapeWidgetConfig {
+  factory _DeviceFieldShapeWidgetConfig(
       {String title,
+      String field,
       Map<String, dynamic> titleFont,
       String subTitle,
       Map<String, dynamic> subTitleFont,
@@ -380,19 +398,21 @@ abstract class _GenericOddEvenEllipseWidgetConfig
       Map<String, dynamic> prefixFont,
       Map<String, dynamic> suffixFont,
       Map<String, dynamic> valueFont,
-      int oddEllipseBGColor,
-      int evenEllipseBGColor,
+      int shapeWidgetColor,
       double horizontalSpacing,
-      double imageSize}) = _$GenericOddEvenEllipseWidgetConfigImpl;
-  _GenericOddEvenEllipseWidgetConfig._() : super._();
+      double imageSize,
+      DeviceFieldShape shape}) = _$DeviceFieldShapeWidgetConfigImpl;
+  _DeviceFieldShapeWidgetConfig._() : super._();
 
-  factory _GenericOddEvenEllipseWidgetConfig.fromJson(
-          Map<String, dynamic> json) =
-      _$GenericOddEvenEllipseWidgetConfigImpl.fromJson;
+  factory _DeviceFieldShapeWidgetConfig.fromJson(Map<String, dynamic> json) =
+      _$DeviceFieldShapeWidgetConfigImpl.fromJson;
 
   @override
   String get title;
   set title(String value);
+  @override
+  String get field;
+  set field(String value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
@@ -415,11 +435,8 @@ abstract class _GenericOddEvenEllipseWidgetConfig
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
   @override
-  int get oddEllipseBGColor;
-  set oddEllipseBGColor(int value);
-  @override
-  int get evenEllipseBGColor;
-  set evenEllipseBGColor(int value);
+  int get shapeWidgetColor;
+  set shapeWidgetColor(int value);
   @override
   double get horizontalSpacing;
   set horizontalSpacing(double value);
@@ -427,8 +444,11 @@ abstract class _GenericOddEvenEllipseWidgetConfig
   double get imageSize;
   set imageSize(double value);
   @override
+  DeviceFieldShape get shape;
+  set shape(DeviceFieldShape value);
+  @override
   @JsonKey(ignore: true)
-  _$$GenericOddEvenEllipseWidgetConfigImplCopyWith<
-          _$GenericOddEvenEllipseWidgetConfigImpl>
+  _$$DeviceFieldShapeWidgetConfigImplCopyWith<
+          _$DeviceFieldShapeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

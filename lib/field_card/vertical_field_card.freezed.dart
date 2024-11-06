@@ -51,12 +51,8 @@ mixin _$VerticalFieldCardWidgetConfig {
   double get valueSectionWidth => throw _privateConstructorUsedError;
   set valueSectionWidth(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this VerticalFieldCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of VerticalFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $VerticalFieldCardWidgetConfigCopyWith<VerticalFieldCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -96,8 +92,6 @@ class _$VerticalFieldCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of VerticalFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,8 +201,6 @@ class __$$VerticalFieldCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$VerticalFieldCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of VerticalFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -367,9 +359,7 @@ class _$VerticalFieldCardWidgetConfigImpl
     return 'VerticalFieldCardWidgetConfig(titleFont: $titleFont, width: $width, height: $height, deviceId: $deviceId, labelFont: $labelFont, valueFont: $valueFont, valueBgColor: $valueBgColor, borderColor: $borderColor, borderWidth: $borderWidth, spacing: $spacing, imageSize: $imageSize, opacity: $opacity, valueSectionWidth: $valueSectionWidth)';
   }
 
-  /// Create a copy of VerticalFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$VerticalFieldCardWidgetConfigImplCopyWith<
@@ -445,11 +435,8 @@ abstract class _VerticalFieldCardWidgetConfig
   @override
   double get valueSectionWidth;
   set valueSectionWidth(double value);
-
-  /// Create a copy of VerticalFieldCardWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$VerticalFieldCardWidgetConfigImplCopyWith<
           _$VerticalFieldCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
