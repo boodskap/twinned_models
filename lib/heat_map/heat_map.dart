@@ -88,7 +88,7 @@ class HeatMapWidgetConfig extends BaseConfig with _$HeatMapWidgetConfig {
       case 'titleFont':
         return 'Title Font';
   case 'chartThemeColor':
-        return 'Chart Type Color';
+        return 'Chart Theme Color';
       default:
         return parameter;
     }
