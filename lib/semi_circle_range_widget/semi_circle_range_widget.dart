@@ -112,7 +112,7 @@ class SemiCircleRangeWidgetConfig extends BaseConfig
       case 'labelFont':
         return 'Title Font';
       case 'valueColor':
-        return 'Marker Color';
+        return 'Value Color';
       case 'backgroundColor':
         return 'Background Color';
       case 'minimum':
