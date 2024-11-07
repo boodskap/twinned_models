@@ -50,8 +50,12 @@ mixin _$ProfileCardWidgetConfig {
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ProfileCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProfileCardWidgetConfigCopyWith<ProfileCardWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -88,6 +92,8 @@ class _$ProfileCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ProfileCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -191,6 +197,8 @@ class __$$ProfileCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ProfileCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -343,7 +351,9 @@ class _$ProfileCardWidgetConfigImpl extends _ProfileCardWidgetConfig {
     return 'ProfileCardWidgetConfig(patientName: $patientName, profileIcon: $profileIcon, phoneNumber: $phoneNumber, age: $age, bloodGroup: $bloodGroup, height: $height, weight: $weight, cardBgColor: $cardBgColor, nameFont: $nameFont, numberFont: $numberFont, labelFont: $labelFont, valueFont: $valueFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ProfileCardWidgetConfigImplCopyWith<_$ProfileCardWidgetConfigImpl>
@@ -413,8 +423,11 @@ abstract class _ProfileCardWidgetConfig extends ProfileCardWidgetConfig {
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
+
+  /// Create a copy of ProfileCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ProfileCardWidgetConfigImplCopyWith<_$ProfileCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

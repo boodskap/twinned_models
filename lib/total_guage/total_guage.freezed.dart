@@ -50,8 +50,12 @@ mixin _$TotalGuageWidgetConfig {
   bool get gaugeAnimate => throw _privateConstructorUsedError;
   set gaugeAnimate(bool value) => throw _privateConstructorUsedError;
 
+  /// Serializes this TotalGuageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TotalGuageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TotalGuageWidgetConfigCopyWith<TotalGuageWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$TotalGuageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TotalGuageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,6 +204,8 @@ class __$$TotalGuageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$TotalGuageWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TotalGuageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -349,7 +357,9 @@ class _$TotalGuageWidgetConfigImpl extends _TotalGuageWidgetConfig {
     return 'TotalGuageWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, totalField: $totalField, field: $field, chartActiveColor: $chartActiveColor, charInActiveColor: $charInActiveColor, valueFont: $valueFont, width: $width, height: $height, thickness: $thickness, showDashes: $showDashes, gaugeAnimate: $gaugeAnimate)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TotalGuageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TotalGuageWidgetConfigImplCopyWith<_$TotalGuageWidgetConfigImpl>
@@ -423,8 +433,11 @@ abstract class _TotalGuageWidgetConfig extends TotalGuageWidgetConfig {
   @override
   bool get gaugeAnimate;
   set gaugeAnimate(bool value);
+
+  /// Create a copy of TotalGuageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TotalGuageWidgetConfigImplCopyWith<_$TotalGuageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
