@@ -39,8 +39,12 @@ mixin _$ParameterInfoWidgetConfig {
   set hintTextFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ParameterInfoWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParameterInfoWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ParameterInfoWidgetConfigCopyWith<ParameterInfoWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$ParameterInfoWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ParameterInfoWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,6 +151,8 @@ class __$$ParameterInfoWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ParameterInfoWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParameterInfoWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -247,7 +255,9 @@ class _$ParameterInfoWidgetConfigImpl extends _ParameterInfoWidgetConfig {
     return 'ParameterInfoWidgetConfig(deviceId: $deviceId, field: $field, title: $title, hintText: $hintText, titleFont: $titleFont, valueFont: $valueFont, hintTextFont: $hintTextFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParameterInfoWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParameterInfoWidgetConfigImplCopyWith<_$ParameterInfoWidgetConfigImpl>
@@ -297,8 +307,11 @@ abstract class _ParameterInfoWidgetConfig extends ParameterInfoWidgetConfig {
   @override
   Map<String, dynamic> get hintTextFont;
   set hintTextFont(Map<String, dynamic> value);
+
+  /// Create a copy of ParameterInfoWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParameterInfoWidgetConfigImplCopyWith<_$ParameterInfoWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -44,8 +44,12 @@ mixin _$AssetModelGridWidgetConfig {
   set headerFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AssetModelGridWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AssetModelGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AssetModelGridWidgetConfigCopyWith<AssetModelGridWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -81,6 +85,8 @@ class _$AssetModelGridWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AssetModelGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,6 +178,8 @@ class __$$AssetModelGridWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$AssetModelGridWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AssetModelGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -297,7 +305,9 @@ class _$AssetModelGridWidgetConfigImpl extends _AssetModelGridWidgetConfig {
     return 'AssetModelGridWidgetConfig(modelIds: $modelIds, fields: $fields, fieldLabels: $fieldLabels, sortingFields: $sortingFields, title: $title, pageSize: $pageSize, titleFont: $titleFont, headerBgColor: $headerBgColor, iconColor: $iconColor, headerFont: $headerFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AssetModelGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AssetModelGridWidgetConfigImplCopyWith<_$AssetModelGridWidgetConfigImpl>
@@ -359,8 +369,11 @@ abstract class _AssetModelGridWidgetConfig extends AssetModelGridWidgetConfig {
   @override
   Map<String, dynamic> get headerFont;
   set headerFont(Map<String, dynamic> value);
+
+  /// Create a copy of AssetModelGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AssetModelGridWidgetConfigImplCopyWith<_$AssetModelGridWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -413,8 +426,12 @@ mixin _$AssetModelDataGridWidgetConfig {
   int get dataWidth => throw _privateConstructorUsedError;
   set dataWidth(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this AssetModelDataGridWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AssetModelDataGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AssetModelDataGridWidgetConfigCopyWith<AssetModelDataGridWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -460,6 +477,8 @@ class _$AssetModelDataGridWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AssetModelDataGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -605,6 +624,8 @@ class __$$AssetModelDataGridWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$AssetModelDataGridWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AssetModelDataGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -812,7 +833,9 @@ class _$AssetModelDataGridWidgetConfigImpl
     return 'AssetModelDataGridWidgetConfig(title: $title, titleFont: $titleFont, labelFont: $labelFont, modelIds: $modelIds, sortField: $sortField, sortType: $sortType, pageSize: $pageSize, showSearch: $showSearch, showFilter: $showFilter, showTimestamp: $showTimestamp, showAsset: $showAsset, showDevice: $showDevice, showPremise: $showPremise, showFacility: $showFacility, showFloor: $showFloor, showData: $showData, oldSearchVersion: $oldSearchVersion, filterFields: $filterFields, dataWidth: $dataWidth)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AssetModelDataGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AssetModelDataGridWidgetConfigImplCopyWith<
@@ -912,8 +935,11 @@ abstract class _AssetModelDataGridWidgetConfig
   @override
   int get dataWidth;
   set dataWidth(int value);
+
+  /// Create a copy of AssetModelDataGridWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AssetModelDataGridWidgetConfigImplCopyWith<
           _$AssetModelDataGridWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

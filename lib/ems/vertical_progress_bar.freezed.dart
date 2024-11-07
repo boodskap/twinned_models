@@ -50,8 +50,12 @@ mixin _$VerticalProgressBarWidgetConfig {
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this VerticalProgressBarWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VerticalProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VerticalProgressBarWidgetConfigCopyWith<VerticalProgressBarWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -91,6 +95,8 @@ class _$VerticalProgressBarWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VerticalProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,6 +206,8 @@ class __$$VerticalProgressBarWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$VerticalProgressBarWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VerticalProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,7 +361,9 @@ class _$VerticalProgressBarWidgetConfigImpl
     return 'VerticalProgressBarWidgetConfig(title: $title, titleFont: $titleFont, deviceId: $deviceId, field: $field, unit: $unit, chartColor: $chartColor, valueFont: $valueFont, height: $height, dashCount: $dashCount, dashHeight: $dashHeight, dashWidth: $dashWidth, dashSpace: $dashSpace, opacity: $opacity)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VerticalProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VerticalProgressBarWidgetConfigImplCopyWith<
@@ -429,8 +439,11 @@ abstract class _VerticalProgressBarWidgetConfig
   @override
   double get opacity;
   set opacity(double value);
+
+  /// Create a copy of VerticalProgressBarWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VerticalProgressBarWidgetConfigImplCopyWith<
           _$VerticalProgressBarWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

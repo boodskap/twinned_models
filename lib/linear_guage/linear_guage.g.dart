@@ -28,6 +28,7 @@ _$LinearGuageWidgetConfigImpl _$$LinearGuageWidgetConfigImplFromJson(
       interval: (json['interval'] as num?)?.toDouble() ?? 20,
       color: (json['color'] as num?)?.toInt() ?? 0xFF0091f7,
       opacity: (json['opacity'] as num?)?.toDouble() ?? 0.6,
+      height: (json['height'] as num?)?.toDouble() ?? 300,
     );
 
 Map<String, dynamic> _$$LinearGuageWidgetConfigImplToJson(
@@ -44,6 +45,7 @@ Map<String, dynamic> _$$LinearGuageWidgetConfigImplToJson(
       'interval': instance.interval,
       'color': instance.color,
       'opacity': instance.opacity,
+      'height': instance.height,
     };
 
 const _$OrientationTypeEnumMap = {
