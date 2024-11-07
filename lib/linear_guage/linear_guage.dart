@@ -29,6 +29,7 @@ class LinearGuageWidgetConfig extends BaseConfig
     @Default(20) double interval,
     @Default(0xFF0091f7) int color,
     @Default(0.6) double opacity,
+    @Default(300) double height,
   }) = _LinearGuageWidgetConfig;
 
   factory LinearGuageWidgetConfig.fromJson(Map<String, dynamic> json) =>
@@ -50,6 +51,7 @@ class LinearGuageWidgetConfig extends BaseConfig
       case 'thickness':
       case 'interval':
       case 'opacity':
+      case 'height':
         return DataType.decimal;
       case 'orientationType':
         return DataType.enumerated;
@@ -108,6 +110,8 @@ class LinearGuageWidgetConfig extends BaseConfig
         return 'Interval';
       case 'opacity':
         return 'Opacity';
+      case 'height':
+        return 'Height';
       default:
         return parameter;
     }

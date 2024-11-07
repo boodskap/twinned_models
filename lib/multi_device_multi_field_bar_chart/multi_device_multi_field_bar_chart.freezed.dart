@@ -64,8 +64,12 @@ mixin _$MultiDeviceMultiFieldBarChartWidgetConfig {
   set tooltipFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MultiDeviceMultiFieldBarChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiDeviceMultiFieldBarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiDeviceMultiFieldBarChartWidgetConfigCopyWith<
           MultiDeviceMultiFieldBarChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -112,6 +116,8 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiDeviceMultiFieldBarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -251,6 +257,8 @@ class __$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiDeviceMultiFieldBarChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiDeviceMultiFieldBarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -454,7 +462,9 @@ class _$MultiDeviceMultiFieldBarChartWidgetConfigImpl
     return 'MultiDeviceMultiFieldBarChartWidgetConfig(title: $title, deviceIds: $deviceIds, fields: $fields, titleFont: $titleFont, legendFont: $legendFont, chartDirection: $chartDirection, legendPosition: $legendPosition, iconType: $iconType, barColor: $barColor, barWidth: $barWidth, barRadius: $barRadius, toolTipDuration: $toolTipDuration, showTooltip: $showTooltip, legendVisibility: $legendVisibility, chartBgColor: $chartBgColor, chartAreaColor: $chartAreaColor, tooltipBgColor: $tooltipBgColor, tooltipFont: $tooltipFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiDeviceMultiFieldBarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWith<
@@ -554,8 +564,11 @@ abstract class _MultiDeviceMultiFieldBarChartWidgetConfig
   @override
   Map<String, dynamic> get tooltipFont;
   set tooltipFont(Map<String, dynamic> value);
+
+  /// Create a copy of MultiDeviceMultiFieldBarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiDeviceMultiFieldBarChartWidgetConfigImplCopyWith<
           _$MultiDeviceMultiFieldBarChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

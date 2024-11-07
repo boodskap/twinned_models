@@ -55,8 +55,12 @@ mixin _$SemiCircleRangeWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this SemiCircleRangeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SemiCircleRangeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SemiCircleRangeWidgetConfigCopyWith<SemiCircleRangeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -98,6 +102,8 @@ class _$SemiCircleRangeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SemiCircleRangeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -219,6 +225,8 @@ class __$$SemiCircleRangeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$SemiCircleRangeWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SemiCircleRangeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -394,7 +402,9 @@ class _$SemiCircleRangeWidgetConfigImpl extends _SemiCircleRangeWidgetConfig {
     return 'SemiCircleRangeWidgetConfig(title: $title, deviceId: $deviceId, field: $field, minimum: $minimum, maximum: $maximum, interval: $interval, valueColor: $valueColor, backgroundColor: $backgroundColor, showFirstLabel: $showFirstLabel, showLastLabel: $showLastLabel, showLabel: $showLabel, enableAnimation: $enableAnimation, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SemiCircleRangeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SemiCircleRangeWidgetConfigImplCopyWith<_$SemiCircleRangeWidgetConfigImpl>
@@ -477,8 +487,11 @@ abstract class _SemiCircleRangeWidgetConfig
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of SemiCircleRangeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SemiCircleRangeWidgetConfigImplCopyWith<_$SemiCircleRangeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

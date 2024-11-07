@@ -71,8 +71,12 @@ mixin _$MultipleLinMinMaxAverageWidgetConfig {
   List<int> get chartSeriesColors => throw _privateConstructorUsedError;
   set chartSeriesColors(List<int> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this MultipleLinMinMaxAverageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultipleLinMinMaxAverageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultipleLinMinMaxAverageWidgetConfigCopyWith<
           MultipleLinMinMaxAverageWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -123,6 +127,8 @@ class _$MultipleLinMinMaxAverageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultipleLinMinMaxAverageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -292,6 +298,8 @@ class __$$MultipleLinMinMaxAverageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultipleLinMinMaxAverageWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultipleLinMinMaxAverageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -540,7 +548,9 @@ class _$MultipleLinMinMaxAverageWidgetConfigImpl
     return 'MultipleLinMinMaxAverageWidgetConfig(title: $title, titleFont: $titleFont, titleBgColor: $titleBgColor, field: $field, modelId: $modelId, showTotalCard: $showTotalCard, totalCardBgColor: $totalCardBgColor, totalText: $totalText, totalTextFont: $totalTextFont, totalCountFont: $totalCountFont, unit: $unit, showGrid: $showGrid, interval: $interval, showAverage: $showAverage, showMinValue: $showMinValue, showMaxValue: $showMaxValue, showLegend: $showLegend, showTooltip: $showTooltip, chartThemeColor: $chartThemeColor, axisLabelColor: $axisLabelColor, width: $width, height: $height, chartSeriesColors: $chartSeriesColors)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultipleLinMinMaxAverageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultipleLinMinMaxAverageWidgetConfigImplCopyWith<
@@ -658,8 +668,11 @@ abstract class _MultipleLinMinMaxAverageWidgetConfig
   @override
   List<int> get chartSeriesColors;
   set chartSeriesColors(List<int> value);
+
+  /// Create a copy of MultipleLinMinMaxAverageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultipleLinMinMaxAverageWidgetConfigImplCopyWith<
           _$MultipleLinMinMaxAverageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

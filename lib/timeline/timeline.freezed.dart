@@ -48,8 +48,12 @@ mixin _$StaticTimelineWidgetConfig {
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
 
+  /// Serializes this StaticTimelineWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StaticTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StaticTimelineWidgetConfigCopyWith<StaticTimelineWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -86,6 +90,8 @@ class _$StaticTimelineWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StaticTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -183,6 +189,8 @@ class __$$StaticTimelineWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$StaticTimelineWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StaticTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -327,7 +335,9 @@ class _$StaticTimelineWidgetConfigImpl extends _StaticTimelineWidgetConfig {
     return 'StaticTimelineWidgetConfig(title: $title, titleFont: $titleFont, section: $section, heading: $heading, headingFont: $headingFont, subHeading: $subHeading, subHeadingFont: $subHeadingFont, message: $message, messageFont: $messageFont, width: $width, height: $height)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StaticTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StaticTimelineWidgetConfigImplCopyWith<_$StaticTimelineWidgetConfigImpl>
@@ -393,8 +403,11 @@ abstract class _StaticTimelineWidgetConfig extends StaticTimelineWidgetConfig {
   @override
   double get height;
   set height(double value);
+
+  /// Create a copy of StaticTimelineWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StaticTimelineWidgetConfigImplCopyWith<_$StaticTimelineWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
