@@ -19,7 +19,7 @@ _$QrCodeWidgetConfigImpl _$$QrCodeWidgetConfigImplFromJson(
           },
       width: (json['width'] as num?)?.toDouble() ?? 250,
       height: (json['height'] as num?)?.toDouble() ?? 250,
-      url: json['url'] as String? ?? 'https://boodskap.io/',
+      url: json['url'] as String? ?? '',
       barColor: (json['barColor'] as num?)?.toInt() ?? 0xFF000000,
       backgroundColor: (json['backgroundColor'] as num?)?.toInt() ?? 0xFFFFFFFF,
       showUrlText: json['showUrlText'] as bool? ?? true,
