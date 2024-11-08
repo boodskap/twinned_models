@@ -69,7 +69,7 @@ class CalendarWidgetConfig extends BaseConfig with _$CalendarWidgetConfig {
   String getLabel(String parameter) {
     switch (parameter) {
       case 'deviceId':
-        return 'Device MoIdel';
+        return 'Device Id';
       case 'labelFont':
         return 'Label Font';
       case 'titleFont':
@@ -90,7 +90,7 @@ class CalendarWidgetConfig extends BaseConfig with _$CalendarWidgetConfig {
   @override
   bool isRequired(String parameter) {
     switch (parameter) {
-      case 'deviceModelId':
+      case 'deviceId':
         return true;
       default:
         return false;
