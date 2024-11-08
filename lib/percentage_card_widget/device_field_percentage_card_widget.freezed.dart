@@ -50,8 +50,12 @@ mixin _$DeviceFieldPercentageCardWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceFieldPercentageCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceFieldPercentageCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceFieldPercentageCardWidgetConfigCopyWith<
           DeviceFieldPercentageCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -91,6 +95,8 @@ class _$DeviceFieldPercentageCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceFieldPercentageCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,6 +200,8 @@ class __$$DeviceFieldPercentageCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldPercentageCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceFieldPercentageCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -343,7 +351,9 @@ class _$DeviceFieldPercentageCardWidgetConfigImpl
     return 'DeviceFieldPercentageCardWidgetConfig(deviceId: $deviceId, field: $field, maximumValue: $maximumValue, circleColor: $circleColor, percentageColor: $percentageColor, gradientCardBgColor: $gradientCardBgColor, circleRadius: $circleRadius, circleWidth: $circleWidth, elevation: $elevation, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceFieldPercentageCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldPercentageCardWidgetConfigImplCopyWith<
@@ -417,8 +427,11 @@ abstract class _DeviceFieldPercentageCardWidgetConfig
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of DeviceFieldPercentageCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceFieldPercentageCardWidgetConfigImplCopyWith<
           _$DeviceFieldPercentageCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
