@@ -110,6 +110,8 @@ class QrCodeWidgetConfig extends BaseConfig with _$QrCodeWidgetConfig {
         return 'Url Text Style';
       case 'urlTextAlign':
         return 'Url Text Align';
+         case 'textspacing':
+        return 'Text Spacing';
       default:
         return parameter;
     }
