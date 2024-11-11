@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
-part 'device_field_shape_widget.freezed.dart';
-part 'device_field_shape_widget.g.dart';
+part 'multi_device_field_single_shape_widget.freezed.dart';
+part 'multi_device_field_single_shape_widget.g.dart';
 
 enum DeviceFieldShape {
   circle,
@@ -17,13 +17,14 @@ enum DeviceFieldShape {
 }
 
 @unfreezed
-class DeviceFieldShapeWidgetConfig extends BaseConfig
-    with _$DeviceFieldShapeWidgetConfig {
-  DeviceFieldShapeWidgetConfig._();
+class MultiDeviceFieldSingleShapeWidgetConfig extends BaseConfig
+    with _$MultiDeviceFieldSingleShapeWidgetConfig {
+  MultiDeviceFieldSingleShapeWidgetConfig._();
 
-  factory DeviceFieldShapeWidgetConfig({
+  factory MultiDeviceFieldSingleShapeWidgetConfig({
     @Default('Generic Device Field Shape Widget') String title,
-    @Default('') String field,
+    @Default('') String deviceId,
+    @Default([]) List<String> field,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 25,
@@ -39,7 +40,6 @@ class DeviceFieldShapeWidgetConfig extends BaseConfig
       'fontBold': false
     })
     Map<String, dynamic> subTitleFont,
-    @Default('') String deviceId,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -62,22 +62,25 @@ class DeviceFieldShapeWidgetConfig extends BaseConfig
     })
     Map<String, dynamic> valueFont,
     @Default(0xFF4F9FDE) int shapeWidgetColor,
+    @Default(5) double horizontalSpacing,
     @Default(25) double imageSize,
     @Default(DeviceFieldShape.circle) DeviceFieldShape shape,
-  }) = _DeviceFieldShapeWidgetConfig;
+  }) = _MultiDeviceFieldSingleShapeWidgetConfig;
 
-  factory DeviceFieldShapeWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$DeviceFieldShapeWidgetConfigFromJson(json);
+  factory MultiDeviceFieldSingleShapeWidgetConfig.fromJson(
+          Map<String, dynamic> json) =>
+      _$MultiDeviceFieldSingleShapeWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
       case 'title':
       case 'deviceId':
-      case 'field':
       case 'subTitle':
         return DataType.text;
-
+      case 'field':
+        return DataType.listOfTexts;
+      case 'horizontalSpacing':
       case 'imageSize':
         return DataType.decimal;
       case 'titleFont':
@@ -144,7 +147,8 @@ class DeviceFieldShapeWidgetConfig extends BaseConfig
         return 'Suffix Font';
       case 'valueFont':
         return 'Value Font';
-
+      case 'horizontalSpacing':
+        return 'Horizontal Spacing';
       case 'imageSize':
         return 'Image Size';
       default:
