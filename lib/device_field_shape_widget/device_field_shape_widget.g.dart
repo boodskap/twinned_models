@@ -50,7 +50,6 @@ _$DeviceFieldShapeWidgetConfigImpl _$$DeviceFieldShapeWidgetConfigImplFromJson(
           },
       shapeWidgetColor:
           (json['shapeWidgetColor'] as num?)?.toInt() ?? 0xFF4F9FDE,
-      horizontalSpacing: (json['horizontalSpacing'] as num?)?.toDouble() ?? 5,
       imageSize: (json['imageSize'] as num?)?.toDouble() ?? 25,
       shape: $enumDecodeNullable(_$DeviceFieldShapeEnumMap, json['shape']) ??
           DeviceFieldShape.circle,
@@ -69,7 +68,6 @@ Map<String, dynamic> _$$DeviceFieldShapeWidgetConfigImplToJson(
       'suffixFont': instance.suffixFont,
       'valueFont': instance.valueFont,
       'shapeWidgetColor': instance.shapeWidgetColor,
-      'horizontalSpacing': instance.horizontalSpacing,
       'imageSize': instance.imageSize,
       'shape': _$DeviceFieldShapeEnumMap[instance.shape]!,
     };
