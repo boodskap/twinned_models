@@ -36,12 +36,8 @@ mixin _$EcgGraphWidgetConfig {
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this EcgGraphWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of EcgGraphWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $EcgGraphWidgetConfigCopyWith<EcgGraphWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,8 +69,6 @@ class _$EcgGraphWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EcgGraphWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,8 +139,6 @@ class __$$EcgGraphWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$EcgGraphWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EcgGraphWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -234,9 +226,7 @@ class _$EcgGraphWidgetConfigImpl extends _EcgGraphWidgetConfig {
     return 'EcgGraphWidgetConfig(title: $title, deviceId: $deviceId, field: $field, borderWidth: $borderWidth, borderColor: $borderColor, chartBgColor: $chartBgColor, titleFont: $titleFont)';
   }
 
-  /// Create a copy of EcgGraphWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EcgGraphWidgetConfigImplCopyWith<_$EcgGraphWidgetConfigImpl>
@@ -287,11 +277,8 @@ abstract class _EcgGraphWidgetConfig extends EcgGraphWidgetConfig {
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
-
-  /// Create a copy of EcgGraphWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EcgGraphWidgetConfigImplCopyWith<_$EcgGraphWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

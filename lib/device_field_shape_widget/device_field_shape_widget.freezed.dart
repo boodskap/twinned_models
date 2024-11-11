@@ -51,12 +51,8 @@ mixin _$DeviceFieldShapeWidgetConfig {
   DeviceFieldShape get shape => throw _privateConstructorUsedError;
   set shape(DeviceFieldShape value) => throw _privateConstructorUsedError;
 
-  /// Serializes this DeviceFieldShapeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeviceFieldShapeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeviceFieldShapeWidgetConfigCopyWith<DeviceFieldShapeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -95,8 +91,6 @@ class _$DeviceFieldShapeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeviceFieldShapeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,8 +194,6 @@ class __$$DeviceFieldShapeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldShapeWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeviceFieldShapeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -360,9 +352,7 @@ class _$DeviceFieldShapeWidgetConfigImpl extends _DeviceFieldShapeWidgetConfig {
     return 'DeviceFieldShapeWidgetConfig(title: $title, field: $field, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, deviceId: $deviceId, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, shapeWidgetColor: $shapeWidgetColor, imageSize: $imageSize, shape: $shape)';
   }
 
-  /// Create a copy of DeviceFieldShapeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldShapeWidgetConfigImplCopyWith<
@@ -434,11 +424,8 @@ abstract class _DeviceFieldShapeWidgetConfig
   @override
   DeviceFieldShape get shape;
   set shape(DeviceFieldShape value);
-
-  /// Create a copy of DeviceFieldShapeWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeviceFieldShapeWidgetConfigImplCopyWith<
           _$DeviceFieldShapeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
