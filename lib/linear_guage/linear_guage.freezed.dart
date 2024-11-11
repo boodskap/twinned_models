@@ -48,12 +48,8 @@ mixin _$LinearGuageWidgetConfig {
   double get height => throw _privateConstructorUsedError;
   set height(double value) => throw _privateConstructorUsedError;
 
-  /// Serializes this LinearGuageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of LinearGuageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $LinearGuageWidgetConfigCopyWith<LinearGuageWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -90,8 +86,6 @@ class _$LinearGuageWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LinearGuageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,8 +189,6 @@ class __$$LinearGuageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$LinearGuageWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of LinearGuageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -334,9 +326,7 @@ class _$LinearGuageWidgetConfigImpl extends _LinearGuageWidgetConfig {
     return 'LinearGuageWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, orientationType: $orientationType, min: $min, max: $max, thickness: $thickness, interval: $interval, color: $color, opacity: $opacity, height: $height)';
   }
 
-  /// Create a copy of LinearGuageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LinearGuageWidgetConfigImplCopyWith<_$LinearGuageWidgetConfigImpl>
@@ -406,11 +396,8 @@ abstract class _LinearGuageWidgetConfig extends LinearGuageWidgetConfig {
   @override
   double get height;
   set height(double value);
-
-  /// Create a copy of LinearGuageWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LinearGuageWidgetConfigImplCopyWith<_$LinearGuageWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
