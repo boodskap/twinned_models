@@ -25,8 +25,12 @@ mixin _$Example {
   int get age => throw _privateConstructorUsedError;
   set age(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this Example to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Example
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExampleCopyWith<Example> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -48,6 +52,8 @@ class _$ExampleCopyWithImpl<$Res, $Val extends Example>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Example
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ExampleImplCopyWithImpl<$Res>
       _$ExampleImpl _value, $Res Function(_$ExampleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Example
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,7 +130,9 @@ class _$ExampleImpl extends _Example {
     return 'Example(name: $name, age: $age)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Example
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExampleImplCopyWith<_$ExampleImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _Example extends Example {
   @override
   int get age;
   set age(int value);
+
+  /// Create a copy of Example
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExampleImplCopyWith<_$ExampleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -165,8 +178,12 @@ mixin _$FontConfig {
   int get fontColor => throw _privateConstructorUsedError;
   bool get fontBold => throw _privateConstructorUsedError;
 
+  /// Serializes this FontConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FontConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FontConfigCopyWith<FontConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -190,6 +207,8 @@ class _$FontConfigCopyWithImpl<$Res, $Val extends FontConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FontConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,6 +257,8 @@ class __$$FontConfigImplCopyWithImpl<$Res>
       _$FontConfigImpl _value, $Res Function(_$FontConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FontConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -298,7 +319,9 @@ class _$FontConfigImpl extends _FontConfig {
     return 'FontConfig(fontFamily: $fontFamily, fontSize: $fontSize, fontColor: $fontColor, fontBold: $fontBold)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FontConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FontConfigImplCopyWith<_$FontConfigImpl> get copyWith =>
@@ -331,8 +354,11 @@ abstract class _FontConfig extends FontConfig {
   int get fontColor;
   @override
   bool get fontBold;
+
+  /// Create a copy of FontConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FontConfigImplCopyWith<_$FontConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -383,8 +409,12 @@ mixin _$TotalValueWidgetConfig {
   List<String> get clientIds => throw _privateConstructorUsedError;
   set clientIds(List<String> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this TotalValueWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TotalValueWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TotalValueWidgetConfigCopyWith<TotalValueWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -427,6 +457,8 @@ class _$TotalValueWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TotalValueWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -566,6 +598,8 @@ class __$$TotalValueWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$TotalValueWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TotalValueWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -760,7 +794,9 @@ class _$TotalValueWidgetConfigImpl extends _TotalValueWidgetConfig {
     return 'TotalValueWidgetConfig(title: $title, fieldPrefix: $fieldPrefix, fieldSuffix: $fieldSuffix, bgColor: $bgColor, borderColor: $borderColor, borderWidth: $borderWidth, borderRadius: $borderRadius, borderStyle: $borderStyle, headerFont: $headerFont, labelFont: $labelFont, field: $field, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds, clientIds: $clientIds)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TotalValueWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TotalValueWidgetConfigImplCopyWith<_$TotalValueWidgetConfigImpl>
@@ -854,8 +890,11 @@ abstract class _TotalValueWidgetConfig extends TotalValueWidgetConfig {
   @override
   List<String> get clientIds;
   set clientIds(List<String> value);
+
+  /// Create a copy of TotalValueWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TotalValueWidgetConfigImplCopyWith<_$TotalValueWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -871,8 +910,12 @@ mixin _$Range {
   int? get color => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this Range to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Range
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RangeCopyWith<Range> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -894,6 +937,8 @@ class _$RangeCopyWithImpl<$Res, $Val extends Range>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Range
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -941,6 +986,8 @@ class __$$RangeImplCopyWithImpl<$Res>
       _$RangeImpl _value, $Res Function(_$RangeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Range
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -994,7 +1041,9 @@ class _$RangeImpl extends _Range {
     return 'Range(from: $from, to: $to, color: $color, label: $label)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Range
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RangeImplCopyWith<_$RangeImpl> get copyWith =>
@@ -1026,8 +1075,11 @@ abstract class _Range extends Range {
   int? get color;
   @override
   String get label;
+
+  /// Create a copy of Range
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RangeImplCopyWith<_$RangeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1068,8 +1120,12 @@ mixin _$ValueDistributionPieChartWidgetConfig {
   List<String> get clientIds => throw _privateConstructorUsedError;
   set clientIds(List<String> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this ValueDistributionPieChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ValueDistributionPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ValueDistributionPieChartWidgetConfigCopyWith<
           ValueDistributionPieChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -1110,6 +1166,8 @@ class _$ValueDistributionPieChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ValueDistributionPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1219,6 +1277,8 @@ class __$$ValueDistributionPieChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ValueDistributionPieChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ValueDistributionPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1375,7 +1435,9 @@ class _$ValueDistributionPieChartWidgetConfigImpl
     return 'ValueDistributionPieChartWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, type: $type, field: $field, segments: $segments, modelIds: $modelIds, assetModelIds: $assetModelIds, premiseIds: $premiseIds, facilityIds: $facilityIds, floorIds: $floorIds, assetIds: $assetIds, clientIds: $clientIds)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ValueDistributionPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
@@ -1452,8 +1514,11 @@ abstract class _ValueDistributionPieChartWidgetConfig
   @override
   List<String> get clientIds;
   set clientIds(List<String> value);
+
+  /// Create a copy of ValueDistributionPieChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ValueDistributionPieChartWidgetConfigImplCopyWith<
           _$ValueDistributionPieChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1477,8 +1542,12 @@ mixin _$TotalAndReportingAssetWidgetConfig {
   List<String> get assetModelIds => throw _privateConstructorUsedError;
   set assetModelIds(List<String> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this TotalAndReportingAssetWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TotalAndReportingAssetWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TotalAndReportingAssetWidgetConfigCopyWith<
           TotalAndReportingAssetWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -1510,6 +1579,8 @@ class _$TotalAndReportingAssetWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TotalAndReportingAssetWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1565,6 +1636,8 @@ class __$$TotalAndReportingAssetWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$TotalAndReportingAssetWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TotalAndReportingAssetWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1635,7 +1708,9 @@ class _$TotalAndReportingAssetWidgetConfigImpl
     return 'TotalAndReportingAssetWidgetConfig(title: $title, headerFont: $headerFont, labelFont: $labelFont, assetModelIds: $assetModelIds)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TotalAndReportingAssetWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TotalAndReportingAssetWidgetConfigImplCopyWith<
@@ -1676,8 +1751,11 @@ abstract class _TotalAndReportingAssetWidgetConfig
   @override
   List<String> get assetModelIds;
   set assetModelIds(List<String> value);
+
+  /// Create a copy of TotalAndReportingAssetWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TotalAndReportingAssetWidgetConfigImplCopyWith<
           _$TotalAndReportingAssetWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1707,8 +1785,12 @@ mixin _$DeviceCartesianChartWidgetConfig {
   int get borderColor => throw _privateConstructorUsedError;
   set borderColor(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceCartesianChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceCartesianChartWidgetConfigCopyWith<DeviceCartesianChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1742,6 +1824,8 @@ class _$DeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1815,6 +1899,8 @@ class __$$DeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceCartesianChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1912,7 +1998,9 @@ class _$DeviceCartesianChartWidgetConfigImpl
     return 'DeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont, bgColor: $bgColor, borderColor: $borderColor)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceCartesianChartWidgetConfigImplCopyWith<
@@ -1965,8 +2053,11 @@ abstract class _DeviceCartesianChartWidgetConfig
   @override
   int get borderColor;
   set borderColor(int value);
+
+  /// Create a copy of DeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceCartesianChartWidgetConfigImplCopyWith<
           _$DeviceCartesianChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1986,8 +2077,12 @@ mixin _$DeviceMultiFieldChartWidgetConfig {
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceMultiFieldChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceMultiFieldChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceMultiFieldChartWidgetConfigCopyWith<DeviceMultiFieldChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2014,6 +2109,8 @@ class _$DeviceMultiFieldChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceMultiFieldChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2060,6 +2157,8 @@ class __$$DeviceMultiFieldChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceMultiFieldChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceMultiFieldChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2111,7 +2210,9 @@ class _$DeviceMultiFieldChartWidgetConfigImpl
     return 'DeviceMultiFieldChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceMultiFieldChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
@@ -2148,8 +2249,11 @@ abstract class _DeviceMultiFieldChartWidgetConfig
   @override
   String get deviceId;
   set deviceId(String value);
+
+  /// Create a copy of DeviceMultiFieldChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceMultiFieldChartWidgetConfigImplCopyWith<
           _$DeviceMultiFieldChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2176,8 +2280,12 @@ mixin _$MultipleDeviceCartesianChartWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MultipleDeviceCartesianChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultipleDeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultipleDeviceCartesianChartWidgetConfigCopyWith<
           MultipleDeviceCartesianChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -2211,6 +2319,8 @@ class _$MultipleDeviceCartesianChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultipleDeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2272,6 +2382,8 @@ class __$$MultipleDeviceCartesianChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultipleDeviceCartesianChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultipleDeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2351,7 +2463,9 @@ class _$MultipleDeviceCartesianChartWidgetConfigImpl
     return 'MultipleDeviceCartesianChartWidgetConfig(title: $title, field: $field, deviceId: $deviceId, headerFont: $headerFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultipleDeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<
@@ -2398,8 +2512,11 @@ abstract class _MultipleDeviceCartesianChartWidgetConfig
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of MultipleDeviceCartesianChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultipleDeviceCartesianChartWidgetConfigImplCopyWith<
           _$MultipleDeviceCartesianChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2419,8 +2536,12 @@ mixin _$StaticTextWidgetConfig {
   Map<String, dynamic> get font => throw _privateConstructorUsedError;
   set font(Map<String, dynamic> value) => throw _privateConstructorUsedError;
 
+  /// Serializes this StaticTextWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StaticTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StaticTextWidgetConfigCopyWith<StaticTextWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2445,6 +2566,8 @@ class _$StaticTextWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StaticTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2491,6 +2614,8 @@ class __$$StaticTextWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$StaticTextWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StaticTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2547,7 +2672,9 @@ class _$StaticTextWidgetConfigImpl extends _StaticTextWidgetConfig {
     return 'StaticTextWidgetConfig(value: $value, fontColor: $fontColor, font: $font)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StaticTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StaticTextWidgetConfigImplCopyWith<_$StaticTextWidgetConfigImpl>
@@ -2581,8 +2708,11 @@ abstract class _StaticTextWidgetConfig extends StaticTextWidgetConfig {
   @override
   Map<String, dynamic> get font;
   set font(Map<String, dynamic> value);
+
+  /// Create a copy of StaticTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StaticTextWidgetConfigImplCopyWith<_$StaticTextWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2633,8 +2763,12 @@ mixin _$DynamicTextWidgetConfig {
   set valueTextAlignment(TextAlignment value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DynamicTextWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DynamicTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DynamicTextWidgetConfigCopyWith<DynamicTextWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2675,6 +2809,8 @@ class _$DynamicTextWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DynamicTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2802,6 +2938,8 @@ class __$$DynamicTextWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DynamicTextWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DynamicTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2990,7 +3128,9 @@ class _$DynamicTextWidgetConfigImpl extends _DynamicTextWidgetConfig {
     return 'DynamicTextWidgetConfig(title: $title, field: $field, deviceId: $deviceId, fontColor: $fontColor, titleFontColor: $titleFontColor, font: $font, titleFont: $titleFont, width: $width, height: $height, prefixText: $prefixText, suffixText: $suffixText, prefixFont: $prefixFont, suffixFont: $suffixFont, prefixTextAlignment: $prefixTextAlignment, suffixTextAlignment: $suffixTextAlignment, valueTextAlignment: $valueTextAlignment)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DynamicTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
@@ -3076,8 +3216,11 @@ abstract class _DynamicTextWidgetConfig extends DynamicTextWidgetConfig {
   @override
   TextAlignment get valueTextAlignment;
   set valueTextAlignment(TextAlignment value);
+
+  /// Create a copy of DynamicTextWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DynamicTextWidgetConfigImplCopyWith<_$DynamicTextWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3102,8 +3245,12 @@ mixin _$MultipleDeviceModelChartWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MultipleDeviceModelChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultipleDeviceModelChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultipleDeviceModelChartWidgetConfigCopyWith<
           MultipleDeviceModelChartWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -3136,6 +3283,8 @@ class _$MultipleDeviceModelChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultipleDeviceModelChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3197,6 +3346,8 @@ class __$$MultipleDeviceModelChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultipleDeviceModelChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultipleDeviceModelChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3276,7 +3427,9 @@ class _$MultipleDeviceModelChartWidgetConfigImpl
     return 'MultipleDeviceModelChartWidgetConfig(title: $title, field: $field, modelId: $modelId, headerFont: $headerFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultipleDeviceModelChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<
@@ -3322,8 +3475,11 @@ abstract class _MultipleDeviceModelChartWidgetConfig
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of MultipleDeviceModelChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultipleDeviceModelChartWidgetConfigImplCopyWith<
           _$MultipleDeviceModelChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3366,8 +3522,12 @@ mixin _$TimeStampWidgetConfig {
   set timeFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this TimeStampWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TimeStampWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TimeStampWidgetConfigCopyWith<TimeStampWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3404,6 +3564,8 @@ class _$TimeStampWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TimeStampWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3506,6 +3668,8 @@ class __$$TimeStampWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$TimeStampWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TimeStampWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3663,7 +3827,9 @@ class _$TimeStampWidgetConfigImpl extends _TimeStampWidgetConfig {
     return 'TimeStampWidgetConfig(field: $field, deviceId: $deviceId, yearFontColor: $yearFontColor, monthFontColor: $monthFontColor, dateFontColor: $dateFontColor, timeFontColor: $timeFontColor, meridiemFontColor: $meridiemFontColor, meridiemFont: $meridiemFont, yearFont: $yearFont, monthFont: $monthFont, dateFont: $dateFont, timeFont: $timeFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TimeStampWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimeStampWidgetConfigImplCopyWith<_$TimeStampWidgetConfigImpl>
@@ -3733,8 +3899,11 @@ abstract class _TimeStampWidgetConfig extends TimeStampWidgetConfig {
   @override
   Map<String, dynamic> get timeFont;
   set timeFont(Map<String, dynamic> value);
+
+  /// Create a copy of TimeStampWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimeStampWidgetConfigImplCopyWith<_$TimeStampWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -53,8 +53,12 @@ mixin _$DeviceFieldSphericalTankWidgetConfig {
   bool get shouldAnimate => throw _privateConstructorUsedError;
   set shouldAnimate(bool value) => throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceFieldSphericalTankWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceFieldSphericalTankWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceFieldSphericalTankWidgetConfigCopyWith<
           DeviceFieldSphericalTankWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -96,6 +100,8 @@ class _$DeviceFieldSphericalTankWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceFieldSphericalTankWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -211,6 +217,8 @@ class __$$DeviceFieldSphericalTankWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldSphericalTankWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceFieldSphericalTankWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -378,7 +386,9 @@ class _$DeviceFieldSphericalTankWidgetConfigImpl
     return 'DeviceFieldSphericalTankWidgetConfig(title: $title, subTitle: $subTitle, deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, subTitleFont: $subTitleFont, liquidLevel: $liquidLevel, liquidColor: $liquidColor, bottleColor: $bottleColor, capColor: $capColor, waterLevel: $waterLevel, breakPoint: $breakPoint, shouldAnimate: $shouldAnimate)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceFieldSphericalTankWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldSphericalTankWidgetConfigImplCopyWith<
@@ -459,8 +469,11 @@ abstract class _DeviceFieldSphericalTankWidgetConfig
   @override
   bool get shouldAnimate;
   set shouldAnimate(bool value);
+
+  /// Create a copy of DeviceFieldSphericalTankWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceFieldSphericalTankWidgetConfigImplCopyWith<
           _$DeviceFieldSphericalTankWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

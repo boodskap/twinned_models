@@ -23,8 +23,12 @@ mixin _$ImageWidgetConfig {
   String get imageId => throw _privateConstructorUsedError;
   set imageId(String value) => throw _privateConstructorUsedError;
 
+  /// Serializes this ImageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ImageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ImageWidgetConfigCopyWith<ImageWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ImageWidgetConfigCopyWithImpl<$Res, $Val extends ImageWidgetConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ImageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$ImageWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$ImageWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -112,7 +120,9 @@ class _$ImageWidgetConfigImpl extends _ImageWidgetConfig {
     return 'ImageWidgetConfig(imageId: $imageId)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImageWidgetConfigImplCopyWith<_$ImageWidgetConfigImpl> get copyWith =>
@@ -137,8 +147,11 @@ abstract class _ImageWidgetConfig extends ImageWidgetConfig {
   @override
   String get imageId;
   set imageId(String value);
+
+  /// Create a copy of ImageWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImageWidgetConfigImplCopyWith<_$ImageWidgetConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

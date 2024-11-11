@@ -51,8 +51,12 @@ mixin _$SpeedometerWidgetConfig {
   set unitFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this SpeedometerWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SpeedometerWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SpeedometerWidgetConfigCopyWith<SpeedometerWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -90,6 +94,8 @@ class _$SpeedometerWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SpeedometerWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -199,6 +205,8 @@ class __$$SpeedometerWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$SpeedometerWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SpeedometerWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -355,7 +363,9 @@ class _$SpeedometerWidgetConfigImpl extends _SpeedometerWidgetConfig {
     return 'SpeedometerWidgetConfig(title: $title, deviceId: $deviceId, field: $field, minimum: $minimum, maximum: $maximum, positionFactor: $positionFactor, showTicks: $showTicks, showLabel: $showLabel, enableAnimation: $enableAnimation, axisColor: $axisColor, titleFont: $titleFont, valueFont: $valueFont, unitFont: $unitFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SpeedometerWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SpeedometerWidgetConfigImplCopyWith<_$SpeedometerWidgetConfigImpl>
@@ -429,8 +439,11 @@ abstract class _SpeedometerWidgetConfig extends SpeedometerWidgetConfig {
   @override
   Map<String, dynamic> get unitFont;
   set unitFont(Map<String, dynamic> value);
+
+  /// Create a copy of SpeedometerWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SpeedometerWidgetConfigImplCopyWith<_$SpeedometerWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

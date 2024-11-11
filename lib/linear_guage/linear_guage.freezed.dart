@@ -45,6 +45,8 @@ mixin _$LinearGuageWidgetConfig {
   set color(int value) => throw _privateConstructorUsedError;
   double get opacity => throw _privateConstructorUsedError;
   set opacity(double value) => throw _privateConstructorUsedError;
+  double get height => throw _privateConstructorUsedError;
+  set height(double value) => throw _privateConstructorUsedError;
 
   /// Serializes this LinearGuageWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -73,7 +75,8 @@ abstract class $LinearGuageWidgetConfigCopyWith<$Res> {
       double thickness,
       double interval,
       int color,
-      double opacity});
+      double opacity,
+      double height});
 }
 
 /// @nodoc
@@ -103,6 +106,7 @@ class _$LinearGuageWidgetConfigCopyWithImpl<$Res,
     Object? interval = null,
     Object? color = null,
     Object? opacity = null,
+    Object? height = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -149,6 +153,10 @@ class _$LinearGuageWidgetConfigCopyWithImpl<$Res,
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -173,7 +181,8 @@ abstract class _$$LinearGuageWidgetConfigImplCopyWith<$Res>
       double thickness,
       double interval,
       int color,
-      double opacity});
+      double opacity,
+      double height});
 }
 
 /// @nodoc
@@ -202,6 +211,7 @@ class __$$LinearGuageWidgetConfigImplCopyWithImpl<$Res>
     Object? interval = null,
     Object? color = null,
     Object? opacity = null,
+    Object? height = null,
   }) {
     return _then(_$LinearGuageWidgetConfigImpl(
       title: null == title
@@ -248,6 +258,10 @@ class __$$LinearGuageWidgetConfigImplCopyWithImpl<$Res>
           ? _value.opacity
           : opacity // ignore: cast_nullable_to_non_nullable
               as double,
+      height: null == height
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -271,7 +285,8 @@ class _$LinearGuageWidgetConfigImpl extends _LinearGuageWidgetConfig {
       this.thickness = 8,
       this.interval = 20,
       this.color = 0xFF0091f7,
-      this.opacity = 0.6})
+      this.opacity = 0.6,
+      this.height = 300})
       : super._();
 
   factory _$LinearGuageWidgetConfigImpl.fromJson(Map<String, dynamic> json) =>
@@ -310,10 +325,13 @@ class _$LinearGuageWidgetConfigImpl extends _LinearGuageWidgetConfig {
   @override
   @JsonKey()
   double opacity;
+  @override
+  @JsonKey()
+  double height;
 
   @override
   String toString() {
-    return 'LinearGuageWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, orientationType: $orientationType, min: $min, max: $max, thickness: $thickness, interval: $interval, color: $color, opacity: $opacity)';
+    return 'LinearGuageWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, orientationType: $orientationType, min: $min, max: $max, thickness: $thickness, interval: $interval, color: $color, opacity: $opacity, height: $height)';
   }
 
   /// Create a copy of LinearGuageWidgetConfig
@@ -345,7 +363,8 @@ abstract class _LinearGuageWidgetConfig extends LinearGuageWidgetConfig {
       double thickness,
       double interval,
       int color,
-      double opacity}) = _$LinearGuageWidgetConfigImpl;
+      double opacity,
+      double height}) = _$LinearGuageWidgetConfigImpl;
   _LinearGuageWidgetConfig._() : super._();
 
   factory _LinearGuageWidgetConfig.fromJson(Map<String, dynamic> json) =
@@ -384,6 +403,9 @@ abstract class _LinearGuageWidgetConfig extends LinearGuageWidgetConfig {
   @override
   double get opacity;
   set opacity(double value);
+  @override
+  double get height;
+  set height(double value);
 
   /// Create a copy of LinearGuageWidgetConfig
   /// with the given fields replaced by the non-null parameter values.

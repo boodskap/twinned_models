@@ -38,8 +38,12 @@ mixin _$DeviceModelHeatmapWidgetConfig {
   set unitFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceModelHeatmapWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceModelHeatmapWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceModelHeatmapWidgetConfigCopyWith<DeviceModelHeatmapWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$DeviceModelHeatmapWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceModelHeatmapWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,6 +145,8 @@ class __$$DeviceModelHeatmapWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceModelHeatmapWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceModelHeatmapWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,7 +254,9 @@ class _$DeviceModelHeatmapWidgetConfigImpl
     return 'DeviceModelHeatmapWidgetConfig(deviceModelId: $deviceModelId, ranges: $ranges, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont, unitFont: $unitFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceModelHeatmapWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceModelHeatmapWidgetConfigImplCopyWith<
@@ -294,8 +304,11 @@ abstract class _DeviceModelHeatmapWidgetConfig
   @override
   Map<String, dynamic> get unitFont;
   set unitFont(Map<String, dynamic> value);
+
+  /// Create a copy of DeviceModelHeatmapWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceModelHeatmapWidgetConfigImplCopyWith<
           _$DeviceModelHeatmapWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
