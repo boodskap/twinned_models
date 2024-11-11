@@ -33,12 +33,8 @@ mixin _$HeatMapWidgetConfig {
   set chartThemeColor(ChartThemeColor value) =>
       throw _privateConstructorUsedError;
 
-  /// Serializes this HeatMapWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of HeatMapWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $HeatMapWidgetConfigCopyWith<HeatMapWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,8 +63,6 @@ class _$HeatMapWidgetConfigCopyWithImpl<$Res, $Val extends HeatMapWidgetConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of HeatMapWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,8 +121,6 @@ class __$$HeatMapWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$HeatMapWidgetConfigImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of HeatMapWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -203,9 +195,7 @@ class _$HeatMapWidgetConfigImpl extends _HeatMapWidgetConfig {
     return 'HeatMapWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, chartThemeColor: $chartThemeColor)';
   }
 
-  /// Create a copy of HeatMapWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$HeatMapWidgetConfigImplCopyWith<_$HeatMapWidgetConfigImpl> get copyWith =>
@@ -247,11 +237,8 @@ abstract class _HeatMapWidgetConfig extends HeatMapWidgetConfig {
   @override
   ChartThemeColor get chartThemeColor;
   set chartThemeColor(ChartThemeColor value);
-
-  /// Create a copy of HeatMapWidgetConfig
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$HeatMapWidgetConfigImplCopyWith<_$HeatMapWidgetConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

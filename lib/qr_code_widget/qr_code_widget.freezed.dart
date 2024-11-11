@@ -252,7 +252,7 @@ class _$QrCodeWidgetConfigImpl extends _QrCodeWidgetConfig {
       },
       this.width = 250,
       this.height = 250,
-      this.url = 'https://boodskap.io/',
+      this.url = '',
       this.barColor = 0xFF000000,
       this.backgroundColor = 0xFFFFFFFF,
       this.showUrlText = true,

@@ -21,7 +21,7 @@ class QrCodeWidgetConfig extends BaseConfig with _$QrCodeWidgetConfig {
     Map<String, dynamic> titleFont,
     @Default(250) double width,
     @Default(250) double height,
-    @Default('https://boodskap.io/') String url,
+    @Default('') String url,
     @Default(0xFF000000) int barColor,
     @Default(0xFFFFFFFF) int backgroundColor,
     @Default(true) bool showUrlText,
@@ -110,6 +110,8 @@ class QrCodeWidgetConfig extends BaseConfig with _$QrCodeWidgetConfig {
         return 'Url Text Style';
       case 'urlTextAlign':
         return 'Url Text Align';
+         case 'textspacing':
+        return 'Text Spacing';
       default:
         return parameter;
     }

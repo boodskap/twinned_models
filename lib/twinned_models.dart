@@ -35,3 +35,4 @@ export 'percentage_card_widget/device_field_percentage_card_widget.dart';
 export 'ecg_graph_widget/ecg_graph_widget.dart';
 export 'profile_card_widget.dart/profile_card_widget.dart';
 export 'bar_chart_widget/bar_chart_widget.dart';
+export 'graph_card_widget.dart/device_field_graph_card_widget.dart';
