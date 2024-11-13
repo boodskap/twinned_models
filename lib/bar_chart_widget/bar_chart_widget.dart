@@ -14,7 +14,7 @@ class BarChartWidgetConfig extends BaseConfig with _$BarChartWidgetConfig {
     @Default('') String field,
     @Default(0.15) double barWidth,
     @Default(8) double barRadius,
-    @Default(0XFFF8F8FF) barColor,
+    @Default(0XFFF8F8FF) int barColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
