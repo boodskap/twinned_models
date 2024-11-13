@@ -36,3 +36,5 @@ export 'ecg_graph_widget/ecg_graph_widget.dart';
 export 'profile_card_widget.dart/profile_card_widget.dart';
 export 'bar_chart_widget/bar_chart_widget.dart';
 export 'graph_card_widget.dart/device_field_graph_card_widget.dart';
+export 'dynamic_text_value_widget/dynamic_text_value_widget.dart';
+export 'dynamic_value_compare_widget/dynamic_value_compare_widget.dart';
