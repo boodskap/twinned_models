@@ -30,8 +30,8 @@ mixin _$BarChartWidgetConfig {
   set barWidth(double value) => throw _privateConstructorUsedError;
   double get barRadius => throw _privateConstructorUsedError;
   set barRadius(double value) => throw _privateConstructorUsedError;
-  dynamic get barColor => throw _privateConstructorUsedError;
-  set barColor(dynamic value) => throw _privateConstructorUsedError;
+  int get barColor => throw _privateConstructorUsedError;
+  set barColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -57,7 +57,7 @@ abstract class $BarChartWidgetConfigCopyWith<$Res> {
       String field,
       double barWidth,
       double barRadius,
-      dynamic barColor,
+      int barColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont});
 }
@@ -81,7 +81,7 @@ class _$BarChartWidgetConfigCopyWithImpl<$Res,
     Object? field = null,
     Object? barWidth = null,
     Object? barRadius = null,
-    Object? barColor = freezed,
+    Object? barColor = null,
     Object? titleFont = null,
     Object? labelFont = null,
   }) {
@@ -106,10 +106,10 @@ class _$BarChartWidgetConfigCopyWithImpl<$Res,
           ? _value.barRadius
           : barRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      barColor: freezed == barColor
+      barColor: null == barColor
           ? _value.barColor
           : barColor // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -136,7 +136,7 @@ abstract class _$$BarChartWidgetConfigImplCopyWith<$Res>
       String field,
       double barWidth,
       double barRadius,
-      dynamic barColor,
+      int barColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont});
 }
@@ -157,7 +157,7 @@ class __$$BarChartWidgetConfigImplCopyWithImpl<$Res>
     Object? field = null,
     Object? barWidth = null,
     Object? barRadius = null,
-    Object? barColor = freezed,
+    Object? barColor = null,
     Object? titleFont = null,
     Object? labelFont = null,
   }) {
@@ -182,7 +182,10 @@ class __$$BarChartWidgetConfigImplCopyWithImpl<$Res>
           ? _value.barRadius
           : barRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      barColor: freezed == barColor ? _value.barColor! : barColor,
+      barColor: null == barColor
+          ? _value.barColor
+          : barColor // ignore: cast_nullable_to_non_nullable
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -239,7 +242,7 @@ class _$BarChartWidgetConfigImpl extends _BarChartWidgetConfig {
   double barRadius;
   @override
   @JsonKey()
-  dynamic barColor;
+  int barColor;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
@@ -275,7 +278,7 @@ abstract class _BarChartWidgetConfig extends BarChartWidgetConfig {
       String field,
       double barWidth,
       double barRadius,
-      dynamic barColor,
+      int barColor,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> labelFont}) = _$BarChartWidgetConfigImpl;
   _BarChartWidgetConfig._() : super._();
@@ -299,8 +302,8 @@ abstract class _BarChartWidgetConfig extends BarChartWidgetConfig {
   double get barRadius;
   set barRadius(double value);
   @override
-  dynamic get barColor;
-  set barColor(dynamic value);
+  int get barColor;
+  set barColor(int value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
