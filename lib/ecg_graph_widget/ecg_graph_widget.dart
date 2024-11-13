@@ -13,8 +13,8 @@ class EcgGraphWidgetConfig extends BaseConfig with _$EcgGraphWidgetConfig {
     @Default('') String deviceId,
     @Default('') String field,
     @Default(2) double borderWidth,
-    @Default(0XFF96281b) borderColor,
-    @Default(0XFFF8F8FF) chartBgColor,
+    @Default(0XFF96281b) int chartLineColor,
+    @Default(0XFFF8F8FF) int chartBgColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -36,7 +36,7 @@ class EcgGraphWidgetConfig extends BaseConfig with _$EcgGraphWidgetConfig {
         return DataType.text;
       case 'borderWidth':
         return DataType.decimal;
-      case 'borderColor':
+      case 'chartLineColor':
       case 'chartBgColor':
         return DataType.numeric;
       case 'titleFont':
@@ -53,7 +53,7 @@ class EcgGraphWidgetConfig extends BaseConfig with _$EcgGraphWidgetConfig {
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
-      case 'borderColor':
+      case 'chartLineColor':
       case 'chartBgColor':
         return HintType.color;
       default:
@@ -79,8 +79,8 @@ class EcgGraphWidgetConfig extends BaseConfig with _$EcgGraphWidgetConfig {
         return 'Title Font';
       case 'borderWidth':
         return 'Border Width';
-      case 'borderColor':
-        return 'Border Color';
+      case 'chartLineColor':
+        return 'Chart Line Color';
       case 'chartBgColor':
         return 'Chart BgColor';
       default:

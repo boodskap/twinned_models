@@ -28,10 +28,10 @@ mixin _$EcgGraphWidgetConfig {
   set field(String value) => throw _privateConstructorUsedError;
   double get borderWidth => throw _privateConstructorUsedError;
   set borderWidth(double value) => throw _privateConstructorUsedError;
-  dynamic get borderColor => throw _privateConstructorUsedError;
-  set borderColor(dynamic value) => throw _privateConstructorUsedError;
-  dynamic get chartBgColor => throw _privateConstructorUsedError;
-  set chartBgColor(dynamic value) => throw _privateConstructorUsedError;
+  int get chartLineColor => throw _privateConstructorUsedError;
+  set chartLineColor(int value) => throw _privateConstructorUsedError;
+  int get chartBgColor => throw _privateConstructorUsedError;
+  set chartBgColor(int value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get titleFont => throw _privateConstructorUsedError;
   set titleFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -53,8 +53,8 @@ abstract class $EcgGraphWidgetConfigCopyWith<$Res> {
       String deviceId,
       String field,
       double borderWidth,
-      dynamic borderColor,
-      dynamic chartBgColor,
+      int chartLineColor,
+      int chartBgColor,
       Map<String, dynamic> titleFont});
 }
 
@@ -76,8 +76,8 @@ class _$EcgGraphWidgetConfigCopyWithImpl<$Res,
     Object? deviceId = null,
     Object? field = null,
     Object? borderWidth = null,
-    Object? borderColor = freezed,
-    Object? chartBgColor = freezed,
+    Object? chartLineColor = null,
+    Object? chartBgColor = null,
     Object? titleFont = null,
   }) {
     return _then(_value.copyWith(
@@ -97,14 +97,14 @@ class _$EcgGraphWidgetConfigCopyWithImpl<$Res,
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
               as double,
-      borderColor: freezed == borderColor
-          ? _value.borderColor
-          : borderColor // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      chartBgColor: freezed == chartBgColor
+      chartLineColor: null == chartLineColor
+          ? _value.chartLineColor
+          : chartLineColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      chartBgColor: null == chartBgColor
           ? _value.chartBgColor
           : chartBgColor // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -126,8 +126,8 @@ abstract class _$$EcgGraphWidgetConfigImplCopyWith<$Res>
       String deviceId,
       String field,
       double borderWidth,
-      dynamic borderColor,
-      dynamic chartBgColor,
+      int chartLineColor,
+      int chartBgColor,
       Map<String, dynamic> titleFont});
 }
 
@@ -146,8 +146,8 @@ class __$$EcgGraphWidgetConfigImplCopyWithImpl<$Res>
     Object? deviceId = null,
     Object? field = null,
     Object? borderWidth = null,
-    Object? borderColor = freezed,
-    Object? chartBgColor = freezed,
+    Object? chartLineColor = null,
+    Object? chartBgColor = null,
     Object? titleFont = null,
   }) {
     return _then(_$EcgGraphWidgetConfigImpl(
@@ -167,9 +167,14 @@ class __$$EcgGraphWidgetConfigImplCopyWithImpl<$Res>
           ? _value.borderWidth
           : borderWidth // ignore: cast_nullable_to_non_nullable
               as double,
-      borderColor: freezed == borderColor ? _value.borderColor! : borderColor,
-      chartBgColor:
-          freezed == chartBgColor ? _value.chartBgColor! : chartBgColor,
+      chartLineColor: null == chartLineColor
+          ? _value.chartLineColor
+          : chartLineColor // ignore: cast_nullable_to_non_nullable
+              as int,
+      chartBgColor: null == chartBgColor
+          ? _value.chartBgColor
+          : chartBgColor // ignore: cast_nullable_to_non_nullable
+              as int,
       titleFont: null == titleFont
           ? _value.titleFont
           : titleFont // ignore: cast_nullable_to_non_nullable
@@ -186,7 +191,7 @@ class _$EcgGraphWidgetConfigImpl extends _EcgGraphWidgetConfig {
       this.deviceId = '',
       this.field = '',
       this.borderWidth = 2,
-      this.borderColor = 0XFF96281b,
+      this.chartLineColor = 0XFF96281b,
       this.chartBgColor = 0XFFF8F8FF,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -213,17 +218,17 @@ class _$EcgGraphWidgetConfigImpl extends _EcgGraphWidgetConfig {
   double borderWidth;
   @override
   @JsonKey()
-  dynamic borderColor;
+  int chartLineColor;
   @override
   @JsonKey()
-  dynamic chartBgColor;
+  int chartBgColor;
   @override
   @JsonKey()
   Map<String, dynamic> titleFont;
 
   @override
   String toString() {
-    return 'EcgGraphWidgetConfig(title: $title, deviceId: $deviceId, field: $field, borderWidth: $borderWidth, borderColor: $borderColor, chartBgColor: $chartBgColor, titleFont: $titleFont)';
+    return 'EcgGraphWidgetConfig(title: $title, deviceId: $deviceId, field: $field, borderWidth: $borderWidth, chartLineColor: $chartLineColor, chartBgColor: $chartBgColor, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -248,8 +253,8 @@ abstract class _EcgGraphWidgetConfig extends EcgGraphWidgetConfig {
       String deviceId,
       String field,
       double borderWidth,
-      dynamic borderColor,
-      dynamic chartBgColor,
+      int chartLineColor,
+      int chartBgColor,
       Map<String, dynamic> titleFont}) = _$EcgGraphWidgetConfigImpl;
   _EcgGraphWidgetConfig._() : super._();
 
@@ -269,11 +274,11 @@ abstract class _EcgGraphWidgetConfig extends EcgGraphWidgetConfig {
   double get borderWidth;
   set borderWidth(double value);
   @override
-  dynamic get borderColor;
-  set borderColor(dynamic value);
+  int get chartLineColor;
+  set chartLineColor(int value);
   @override
-  dynamic get chartBgColor;
-  set chartBgColor(dynamic value);
+  int get chartBgColor;
+  set chartBgColor(int value);
   @override
   Map<String, dynamic> get titleFont;
   set titleFont(Map<String, dynamic> value);
