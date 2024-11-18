@@ -1,41 +1,49 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:twinned_models/models.dart';
 
-part 'dynamic_text_value_widget.freezed.dart';
-part 'dynamic_text_value_widget.g.dart';
+part 'circle_progress_bar_widget.freezed.dart';
+part 'circle_progress_bar_widget.g.dart';
 
 @unfreezed
-class DynamicTextValueWidgetConfig extends BaseConfig with _$DynamicTextValueWidgetConfig {
-  DynamicTextValueWidgetConfig._();
+class CircularProgressBarWidgetConfig extends BaseConfig
+    with _$CircularProgressBarWidgetConfig {
+  CircularProgressBarWidgetConfig._();
 
-  factory DynamicTextValueWidgetConfig({
+  factory CircularProgressBarWidgetConfig({
+    @Default('Circular Progress Bar') String title,
     @Default('') String deviceId,
     @Default('') String field,
+    @Default(0X1F000000) int bgColor,
+    @Default(0XFF00665B2) int fillColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
       'fontColor': 0xFF000000,
-      'fontBold': true
+      'fontBold': false
     })
-    Map<String, dynamic> labelFont,
+    Map<String, dynamic> valueFont,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 18,
       'fontColor': 0xFF000000,
       'fontBold': true
     })
-    Map<String, dynamic> valueFont,
-  }) = _DynamicTextValueWidgetConfig;
+    Map<String, dynamic> titleFont,
+  }) = _CircularProgressBarWidgetConfig;
 
-  factory DynamicTextValueWidgetConfig.fromJson(Map<String, dynamic> json) =>
-      _$DynamicTextValueWidgetConfigFromJson(json);
+  factory CircularProgressBarWidgetConfig.fromJson(Map<String, dynamic> json) =>
+      _$CircularProgressBarWidgetConfigFromJson(json);
 
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
+      case 'title':
       case 'deviceId':
       case 'field':
         return DataType.text;
+      case 'fillColor':
+      case 'bgColor':
+        return DataType.numeric;
       case 'valueFont':
       case 'labelFont':
         return DataType.font;
@@ -51,6 +59,9 @@ class DynamicTextValueWidgetConfig extends BaseConfig with _$DynamicTextValueWid
         return HintType.field;
       case 'deviceId':
         return HintType.deviceId;
+      case 'fillColor':
+      case 'bgColor':
+        return HintType.color;
       default:
         return HintType.none;
     }
@@ -64,14 +75,21 @@ class DynamicTextValueWidgetConfig extends BaseConfig with _$DynamicTextValueWid
   @override
   String getLabel(String parameter) {
     switch (parameter) {
+      case 'title':
+        return 'Title';
       case 'deviceId':
         return 'Asset Model';
       case 'field':
         return 'Select Field';
-       case 'valueFont':
+      case 'valueFont':
         return 'Value Font';
-      case 'labelFont':
+      case 'titleFont':
         return 'Label Font';
+      case 'bgColor':
+        return 'Background Color ';
+      case 'fillColor':
+        return 'Fill Color';
+
       default:
         return parameter;
     }

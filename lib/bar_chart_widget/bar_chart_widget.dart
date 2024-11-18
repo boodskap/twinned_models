@@ -14,7 +14,7 @@ class BarChartWidgetConfig extends BaseConfig with _$BarChartWidgetConfig {
     @Default('') String field,
     @Default(0.15) double barWidth,
     @Default(8) double barRadius,
-    @Default(0XFFF8F8FF) int barColor,
+    @Default(0XFF00665B2) int barColor,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 14,
@@ -79,7 +79,7 @@ class BarChartWidgetConfig extends BaseConfig with _$BarChartWidgetConfig {
       case 'deviceId':
         return 'Asset Model';
       case 'field':
-        return 'Select Fields';
+        return 'Select Field';
       case 'title':
         return 'Title';
       case 'titleFont':

@@ -72,7 +72,7 @@ class EcgGraphWidgetConfig extends BaseConfig with _$EcgGraphWidgetConfig {
       case 'deviceId':
         return 'Asset Model';
       case 'field':
-        return 'Select Fields';
+        return 'Select Field';
       case 'title':
         return 'Title';
       case 'titleFont':

@@ -21,8 +21,6 @@ DynamicValueCompareWidgetConfig _$DynamicValueCompareWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DynamicValueCompareWidgetConfig {
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -52,8 +50,7 @@ abstract class $DynamicValueCompareWidgetConfigCopyWith<$Res> {
           DynamicValueCompareWidgetConfig>;
   @useResult
   $Res call(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -74,7 +71,6 @@ class _$DynamicValueCompareWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
@@ -82,10 +78,6 @@ class _$DynamicValueCompareWidgetConfigCopyWithImpl<$Res,
     Object? textFont = null,
   }) {
     return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -120,8 +112,7 @@ abstract class _$$DynamicValueCompareWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -141,7 +132,6 @@ class __$$DynamicValueCompareWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? deviceId = null,
     Object? field = null,
     Object? titleFont = null,
@@ -149,10 +139,6 @@ class __$$DynamicValueCompareWidgetConfigImplCopyWithImpl<$Res>
     Object? textFont = null,
   }) {
     return _then(_$DynamicValueCompareWidgetConfigImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -182,8 +168,7 @@ class __$$DynamicValueCompareWidgetConfigImplCopyWithImpl<$Res>
 class _$DynamicValueCompareWidgetConfigImpl
     extends _DynamicValueCompareWidgetConfig {
   _$DynamicValueCompareWidgetConfigImpl(
-      {this.title = '',
-      this.deviceId = '',
+      {this.deviceId = '',
       this.field = '',
       this.titleFont = const {
         'fontFamily': 'Open Sans',
@@ -211,9 +196,6 @@ class _$DynamicValueCompareWidgetConfigImpl
 
   @override
   @JsonKey()
-  String title;
-  @override
-  @JsonKey()
   String deviceId;
   @override
   @JsonKey()
@@ -230,7 +212,7 @@ class _$DynamicValueCompareWidgetConfigImpl
 
   @override
   String toString() {
-    return 'DynamicValueCompareWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, textFont: $textFont)';
+    return 'DynamicValueCompareWidgetConfig(deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, textFont: $textFont)';
   }
 
   @JsonKey(ignore: true)
@@ -252,8 +234,7 @@ class _$DynamicValueCompareWidgetConfigImpl
 abstract class _DynamicValueCompareWidgetConfig
     extends DynamicValueCompareWidgetConfig {
   factory _DynamicValueCompareWidgetConfig(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> titleFont,
       Map<String, dynamic> valueFont,
@@ -263,9 +244,6 @@ abstract class _DynamicValueCompareWidgetConfig
   factory _DynamicValueCompareWidgetConfig.fromJson(Map<String, dynamic> json) =
       _$DynamicValueCompareWidgetConfigImpl.fromJson;
 
-  @override
-  String get title;
-  set title(String value);
   @override
   String get deviceId;
   set deviceId(String value);
