@@ -15,6 +15,7 @@ class CircularProgressBarWidgetConfig extends BaseConfig
     @Default('') String field,
     @Default(0X1F000000) int bgColor,
     @Default(0XFF00665B2) int fillColor,
+    @Default(100) double maximum,
     @Default({
       'fontFamily': 'Open Sans',
       'fontSize': 12,
@@ -44,6 +45,8 @@ class CircularProgressBarWidgetConfig extends BaseConfig
       case 'fillColor':
       case 'bgColor':
         return DataType.numeric;
+      case 'maximum':
+        return DataType.decimal;
       case 'valueFont':
       case 'labelFont':
         return DataType.font;
@@ -89,7 +92,8 @@ class CircularProgressBarWidgetConfig extends BaseConfig
         return 'Background Color ';
       case 'fillColor':
         return 'Fill Color';
-
+      case 'maximum':
+        return 'Maximum value';
       default:
         return parameter;
     }
