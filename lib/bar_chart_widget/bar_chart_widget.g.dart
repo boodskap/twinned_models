@@ -14,7 +14,7 @@ _$BarChartWidgetConfigImpl _$$BarChartWidgetConfigImplFromJson(
       field: json['field'] as String? ?? '',
       barWidth: (json['barWidth'] as num?)?.toDouble() ?? 0.15,
       barRadius: (json['barRadius'] as num?)?.toDouble() ?? 8,
-      barColor: (json['barColor'] as num?)?.toInt() ?? 0XFFF8F8FF,
+      barColor: (json['barColor'] as num?)?.toInt() ?? 0XFF00665B2,
       titleFont: json['titleFont'] as Map<String, dynamic>? ??
           const {
             'fontFamily': 'Open Sans',

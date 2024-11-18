@@ -38,3 +38,4 @@ export 'bar_chart_widget/bar_chart_widget.dart';
 export 'graph_card_widget.dart/device_field_graph_card_widget.dart';
 export 'dynamic_text_value_widget/dynamic_text_value_widget.dart';
 export 'dynamic_value_compare_widget/dynamic_value_compare_widget.dart';
+export 'circle_progress_bar_widget/circle_progress_bar_widget.dart';

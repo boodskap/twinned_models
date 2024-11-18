@@ -9,7 +9,6 @@ part of 'dynamic_value_compare_widget.dart';
 _$DynamicValueCompareWidgetConfigImpl
     _$$DynamicValueCompareWidgetConfigImplFromJson(Map<String, dynamic> json) =>
         _$DynamicValueCompareWidgetConfigImpl(
-          title: json['title'] as String? ?? '',
           deviceId: json['deviceId'] as String? ?? '',
           field: json['field'] as String? ?? '',
           titleFont: json['titleFont'] as Map<String, dynamic>? ??
@@ -38,7 +37,6 @@ _$DynamicValueCompareWidgetConfigImpl
 Map<String, dynamic> _$$DynamicValueCompareWidgetConfigImplToJson(
         _$DynamicValueCompareWidgetConfigImpl instance) =>
     <String, dynamic>{
-      'title': instance.title,
       'deviceId': instance.deviceId,
       'field': instance.field,
       'titleFont': instance.titleFont,
