@@ -10,7 +10,6 @@ class DynamicValueCompareWidgetConfig extends BaseConfig
   DynamicValueCompareWidgetConfig._();
 
   factory DynamicValueCompareWidgetConfig({
-    @Default('') String title,
     @Default('') String deviceId,
     @Default('') String field,
     @Default({
@@ -42,7 +41,6 @@ class DynamicValueCompareWidgetConfig extends BaseConfig
   @override
   DataType getDataType(String parameter) {
     switch (parameter) {
-      case 'title':
       case 'deviceId':
       case 'field':
         return DataType.text;
@@ -78,9 +76,7 @@ class DynamicValueCompareWidgetConfig extends BaseConfig
       case 'deviceId':
         return 'Asset Model';
       case 'field':
-        return 'Select Fields';
-      case 'title':
-        return 'Title';
+        return 'Select Field';
       case 'valueFont':
         return 'Value Font';
       case 'labelFont':

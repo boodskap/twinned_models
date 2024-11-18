@@ -21,8 +21,6 @@ DynamicTextValueWidgetConfig _$DynamicTextValueWidgetConfigFromJson(
 
 /// @nodoc
 mixin _$DynamicTextValueWidgetConfig {
-  String get title => throw _privateConstructorUsedError;
-  set title(String value) => throw _privateConstructorUsedError;
   String get deviceId => throw _privateConstructorUsedError;
   set deviceId(String value) => throw _privateConstructorUsedError;
   String get field => throw _privateConstructorUsedError;
@@ -49,8 +47,7 @@ abstract class $DynamicTextValueWidgetConfigCopyWith<$Res> {
           DynamicTextValueWidgetConfig>;
   @useResult
   $Res call(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont});
@@ -70,17 +67,12 @@ class _$DynamicTextValueWidgetConfigCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? deviceId = null,
     Object? field = null,
     Object? labelFont = null,
     Object? valueFont = null,
   }) {
     return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -111,8 +103,7 @@ abstract class _$$DynamicTextValueWidgetConfigImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont});
@@ -131,17 +122,12 @@ class __$$DynamicTextValueWidgetConfigImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = null,
     Object? deviceId = null,
     Object? field = null,
     Object? labelFont = null,
     Object? valueFont = null,
   }) {
     return _then(_$DynamicTextValueWidgetConfigImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       deviceId: null == deviceId
           ? _value.deviceId
           : deviceId // ignore: cast_nullable_to_non_nullable
@@ -166,8 +152,7 @@ class __$$DynamicTextValueWidgetConfigImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$DynamicTextValueWidgetConfigImpl extends _DynamicTextValueWidgetConfig {
   _$DynamicTextValueWidgetConfigImpl(
-      {this.title = '',
-      this.deviceId = '',
+      {this.deviceId = '',
       this.field = '',
       this.labelFont = const {
         'fontFamily': 'Open Sans',
@@ -189,9 +174,6 @@ class _$DynamicTextValueWidgetConfigImpl extends _DynamicTextValueWidgetConfig {
 
   @override
   @JsonKey()
-  String title;
-  @override
-  @JsonKey()
   String deviceId;
   @override
   @JsonKey()
@@ -205,7 +187,7 @@ class _$DynamicTextValueWidgetConfigImpl extends _DynamicTextValueWidgetConfig {
 
   @override
   String toString() {
-    return 'DynamicTextValueWidgetConfig(title: $title, deviceId: $deviceId, field: $field, labelFont: $labelFont, valueFont: $valueFont)';
+    return 'DynamicTextValueWidgetConfig(deviceId: $deviceId, field: $field, labelFont: $labelFont, valueFont: $valueFont)';
   }
 
   @JsonKey(ignore: true)
@@ -227,8 +209,7 @@ class _$DynamicTextValueWidgetConfigImpl extends _DynamicTextValueWidgetConfig {
 abstract class _DynamicTextValueWidgetConfig
     extends DynamicTextValueWidgetConfig {
   factory _DynamicTextValueWidgetConfig(
-      {String title,
-      String deviceId,
+      {String deviceId,
       String field,
       Map<String, dynamic> labelFont,
       Map<String, dynamic> valueFont}) = _$DynamicTextValueWidgetConfigImpl;
@@ -237,9 +218,6 @@ abstract class _DynamicTextValueWidgetConfig
   factory _DynamicTextValueWidgetConfig.fromJson(Map<String, dynamic> json) =
       _$DynamicTextValueWidgetConfigImpl.fromJson;
 
-  @override
-  String get title;
-  set title(String value);
   @override
   String get deviceId;
   set deviceId(String value);

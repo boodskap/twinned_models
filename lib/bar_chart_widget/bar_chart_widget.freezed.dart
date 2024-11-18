@@ -207,7 +207,7 @@ class _$BarChartWidgetConfigImpl extends _BarChartWidgetConfig {
       this.field = '',
       this.barWidth = 0.15,
       this.barRadius = 8,
-      this.barColor = 0XFFF8F8FF,
+      this.barColor = 0XFF00665B2,
       this.titleFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 14,
