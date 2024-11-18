@@ -14,6 +14,7 @@ _$CircularProgressBarWidgetConfigImpl
           field: json['field'] as String? ?? '',
           bgColor: (json['bgColor'] as num?)?.toInt() ?? 0X1F000000,
           fillColor: (json['fillColor'] as num?)?.toInt() ?? 0XFF00665B2,
+          maximum: (json['maximum'] as num?)?.toDouble() ?? 100,
           valueFont: json['valueFont'] as Map<String, dynamic>? ??
               const {
                 'fontFamily': 'Open Sans',
@@ -38,6 +39,7 @@ Map<String, dynamic> _$$CircularProgressBarWidgetConfigImplToJson(
       'field': instance.field,
       'bgColor': instance.bgColor,
       'fillColor': instance.fillColor,
+      'maximum': instance.maximum,
       'valueFont': instance.valueFont,
       'titleFont': instance.titleFont,
     };

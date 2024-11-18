@@ -31,6 +31,8 @@ mixin _$CircularProgressBarWidgetConfig {
   set bgColor(int value) => throw _privateConstructorUsedError;
   int get fillColor => throw _privateConstructorUsedError;
   set fillColor(int value) => throw _privateConstructorUsedError;
+  double get maximum => throw _privateConstructorUsedError;
+  set maximum(double value) => throw _privateConstructorUsedError;
   Map<String, dynamic> get valueFont => throw _privateConstructorUsedError;
   set valueFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
@@ -58,6 +60,7 @@ abstract class $CircularProgressBarWidgetConfigCopyWith<$Res> {
       String field,
       int bgColor,
       int fillColor,
+      double maximum,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> titleFont});
 }
@@ -81,6 +84,7 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
     Object? field = null,
     Object? bgColor = null,
     Object? fillColor = null,
+    Object? maximum = null,
     Object? valueFont = null,
     Object? titleFont = null,
   }) {
@@ -105,6 +109,10 @@ class _$CircularProgressBarWidgetConfigCopyWithImpl<$Res,
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
               as int,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as double,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
@@ -132,6 +140,7 @@ abstract class _$$CircularProgressBarWidgetConfigImplCopyWith<$Res>
       String field,
       int bgColor,
       int fillColor,
+      double maximum,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> titleFont});
 }
@@ -154,6 +163,7 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
     Object? field = null,
     Object? bgColor = null,
     Object? fillColor = null,
+    Object? maximum = null,
     Object? valueFont = null,
     Object? titleFont = null,
   }) {
@@ -178,6 +188,10 @@ class __$$CircularProgressBarWidgetConfigImplCopyWithImpl<$Res>
           ? _value.fillColor
           : fillColor // ignore: cast_nullable_to_non_nullable
               as int,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as double,
       valueFont: null == valueFont
           ? _value.valueFont
           : valueFont // ignore: cast_nullable_to_non_nullable
@@ -200,6 +214,7 @@ class _$CircularProgressBarWidgetConfigImpl
       this.field = '',
       this.bgColor = 0X1F000000,
       this.fillColor = 0XFF00665B2,
+      this.maximum = 100,
       this.valueFont = const {
         'fontFamily': 'Open Sans',
         'fontSize': 12,
@@ -235,6 +250,9 @@ class _$CircularProgressBarWidgetConfigImpl
   int fillColor;
   @override
   @JsonKey()
+  double maximum;
+  @override
+  @JsonKey()
   Map<String, dynamic> valueFont;
   @override
   @JsonKey()
@@ -242,7 +260,7 @@ class _$CircularProgressBarWidgetConfigImpl
 
   @override
   String toString() {
-    return 'CircularProgressBarWidgetConfig(title: $title, deviceId: $deviceId, field: $field, bgColor: $bgColor, fillColor: $fillColor, valueFont: $valueFont, titleFont: $titleFont)';
+    return 'CircularProgressBarWidgetConfig(title: $title, deviceId: $deviceId, field: $field, bgColor: $bgColor, fillColor: $fillColor, maximum: $maximum, valueFont: $valueFont, titleFont: $titleFont)';
   }
 
   @JsonKey(ignore: true)
@@ -269,6 +287,7 @@ abstract class _CircularProgressBarWidgetConfig
       String field,
       int bgColor,
       int fillColor,
+      double maximum,
       Map<String, dynamic> valueFont,
       Map<String, dynamic> titleFont}) = _$CircularProgressBarWidgetConfigImpl;
   _CircularProgressBarWidgetConfig._() : super._();
@@ -291,6 +310,9 @@ abstract class _CircularProgressBarWidgetConfig
   @override
   int get fillColor;
   set fillColor(int value);
+  @override
+  double get maximum;
+  set maximum(double value);
   @override
   Map<String, dynamic> get valueFont;
   set valueFont(Map<String, dynamic> value);
