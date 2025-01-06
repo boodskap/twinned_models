@@ -47,8 +47,12 @@ mixin _$DeviceFieldGraphCardWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DeviceFieldGraphCardWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceFieldGraphCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeviceFieldGraphCardWidgetConfigCopyWith<DeviceFieldGraphCardWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -86,6 +90,8 @@ class _$DeviceFieldGraphCardWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeviceFieldGraphCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -183,6 +189,8 @@ class __$$DeviceFieldGraphCardWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DeviceFieldGraphCardWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceFieldGraphCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -323,7 +331,9 @@ class _$DeviceFieldGraphCardWidgetConfigImpl
     return 'DeviceFieldGraphCardWidgetConfig(deviceId: $deviceId, field: $field, elevation: $elevation, tooltipDuration: $tooltipDuration, cardBgColor: $cardBgColor, chartColor: $chartColor, borderColor: $borderColor, tooltipColor: $tooltipColor, titleFont: $titleFont, valueFont: $valueFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceFieldGraphCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeviceFieldGraphCardWidgetConfigImplCopyWith<
@@ -392,8 +402,11 @@ abstract class _DeviceFieldGraphCardWidgetConfig
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of DeviceFieldGraphCardWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeviceFieldGraphCardWidgetConfigImplCopyWith<
           _$DeviceFieldGraphCardWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

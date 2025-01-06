@@ -45,8 +45,12 @@ mixin _$QrCodeWidgetConfig {
   UrlTextAlign get urlTextAlign => throw _privateConstructorUsedError;
   set urlTextAlign(UrlTextAlign value) => throw _privateConstructorUsedError;
 
+  /// Serializes this QrCodeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of QrCodeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $QrCodeWidgetConfigCopyWith<QrCodeWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -81,6 +85,8 @@ class _$QrCodeWidgetConfigCopyWithImpl<$Res, $Val extends QrCodeWidgetConfig>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of QrCodeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,6 +181,8 @@ class __$$QrCodeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$QrCodeWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of QrCodeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -308,7 +316,9 @@ class _$QrCodeWidgetConfigImpl extends _QrCodeWidgetConfig {
     return 'QrCodeWidgetConfig(title: $title, titleFont: $titleFont, width: $width, height: $height, url: $url, barColor: $barColor, backgroundColor: $backgroundColor, showUrlText: $showUrlText, textspacing: $textspacing, urlTextFont: $urlTextFont, urlTextAlign: $urlTextAlign)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of QrCodeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$QrCodeWidgetConfigImplCopyWith<_$QrCodeWidgetConfigImpl> get copyWith =>
@@ -374,8 +384,11 @@ abstract class _QrCodeWidgetConfig extends QrCodeWidgetConfig {
   @override
   UrlTextAlign get urlTextAlign;
   set urlTextAlign(UrlTextAlign value);
+
+  /// Create a copy of QrCodeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$QrCodeWidgetConfigImplCopyWith<_$QrCodeWidgetConfigImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
