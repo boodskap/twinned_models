@@ -39,8 +39,12 @@ mixin _$BarChartWidgetConfig {
   set labelFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this BarChartWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BarChartWidgetConfigCopyWith<BarChartWidgetConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,6 +77,8 @@ class _$BarChartWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,6 +155,8 @@ class __$$BarChartWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$BarChartWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,7 +263,9 @@ class _$BarChartWidgetConfigImpl extends _BarChartWidgetConfig {
     return 'BarChartWidgetConfig(title: $title, deviceId: $deviceId, field: $field, barWidth: $barWidth, barRadius: $barRadius, barColor: $barColor, titleFont: $titleFont, labelFont: $labelFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BarChartWidgetConfigImplCopyWith<_$BarChartWidgetConfigImpl>
@@ -310,8 +320,11 @@ abstract class _BarChartWidgetConfig extends BarChartWidgetConfig {
   @override
   Map<String, dynamic> get labelFont;
   set labelFont(Map<String, dynamic> value);
+
+  /// Create a copy of BarChartWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BarChartWidgetConfigImplCopyWith<_$BarChartWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

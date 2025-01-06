@@ -54,8 +54,12 @@ mixin _$MultiDeviceFieldSingleShapeWidgetConfig {
   DeviceFieldShape get shape => throw _privateConstructorUsedError;
   set shape(DeviceFieldShape value) => throw _privateConstructorUsedError;
 
+  /// Serializes this MultiDeviceFieldSingleShapeWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiDeviceFieldSingleShapeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiDeviceFieldSingleShapeWidgetConfigCopyWith<
           MultiDeviceFieldSingleShapeWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
@@ -97,6 +101,8 @@ class _$MultiDeviceFieldSingleShapeWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiDeviceFieldSingleShapeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -206,6 +212,8 @@ class __$$MultiDeviceFieldSingleShapeWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiDeviceFieldSingleShapeWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiDeviceFieldSingleShapeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -374,7 +382,9 @@ class _$MultiDeviceFieldSingleShapeWidgetConfigImpl
     return 'MultiDeviceFieldSingleShapeWidgetConfig(title: $title, deviceId: $deviceId, field: $field, titleFont: $titleFont, subTitle: $subTitle, subTitleFont: $subTitleFont, prefixFont: $prefixFont, suffixFont: $suffixFont, valueFont: $valueFont, shapeWidgetColor: $shapeWidgetColor, horizontalSpacing: $horizontalSpacing, imageSize: $imageSize, shape: $shape)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiDeviceFieldSingleShapeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiDeviceFieldSingleShapeWidgetConfigImplCopyWith<
@@ -452,8 +462,11 @@ abstract class _MultiDeviceFieldSingleShapeWidgetConfig
   @override
   DeviceFieldShape get shape;
   set shape(DeviceFieldShape value);
+
+  /// Create a copy of MultiDeviceFieldSingleShapeWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiDeviceFieldSingleShapeWidgetConfigImplCopyWith<
           _$MultiDeviceFieldSingleShapeWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;

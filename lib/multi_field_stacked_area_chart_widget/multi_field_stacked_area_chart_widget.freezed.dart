@@ -56,8 +56,12 @@ mixin _$MultiFieldStackedAreaChartConfig {
   set tooltipFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MultiFieldStackedAreaChartConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MultiFieldStackedAreaChartConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MultiFieldStackedAreaChartConfigCopyWith<MultiFieldStackedAreaChartConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -98,6 +102,8 @@ class _$MultiFieldStackedAreaChartConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MultiFieldStackedAreaChartConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -213,6 +219,8 @@ class __$$MultiFieldStackedAreaChartConfigImplCopyWithImpl<$Res>
       $Res Function(_$MultiFieldStackedAreaChartConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MultiFieldStackedAreaChartConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,7 +398,9 @@ class _$MultiFieldStackedAreaChartConfigImpl
     return 'MultiFieldStackedAreaChartConfig(title: $title, deviceId: $deviceId, fields: $fields, chartColors: $chartColors, legendVisibility: $legendVisibility, enableTooltip: $enableTooltip, enableDataLabel: $enableDataLabel, enableMarkerPoint: $enableMarkerPoint, legendPosition: $legendPosition, titleFont: $titleFont, labelFont: $labelFont, subTitleFont: $subTitleFont, valueFont: $valueFont, tooltipFont: $tooltipFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MultiFieldStackedAreaChartConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MultiFieldStackedAreaChartConfigImplCopyWith<
@@ -472,8 +482,11 @@ abstract class _MultiFieldStackedAreaChartConfig
   @override
   Map<String, dynamic> get tooltipFont;
   set tooltipFont(Map<String, dynamic> value);
+
+  /// Create a copy of MultiFieldStackedAreaChartConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MultiFieldStackedAreaChartConfigImplCopyWith<
           _$MultiFieldStackedAreaChartConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
