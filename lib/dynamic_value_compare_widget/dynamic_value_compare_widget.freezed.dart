@@ -35,8 +35,12 @@ mixin _$DynamicValueCompareWidgetConfig {
   set textFont(Map<String, dynamic> value) =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DynamicValueCompareWidgetConfig to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DynamicValueCompareWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DynamicValueCompareWidgetConfigCopyWith<DynamicValueCompareWidgetConfig>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$DynamicValueCompareWidgetConfigCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DynamicValueCompareWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class __$$DynamicValueCompareWidgetConfigImplCopyWithImpl<$Res>
       $Res Function(_$DynamicValueCompareWidgetConfigImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DynamicValueCompareWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,7 +223,9 @@ class _$DynamicValueCompareWidgetConfigImpl
     return 'DynamicValueCompareWidgetConfig(deviceId: $deviceId, field: $field, titleFont: $titleFont, valueFont: $valueFont, textFont: $textFont)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DynamicValueCompareWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DynamicValueCompareWidgetConfigImplCopyWith<
@@ -259,8 +269,11 @@ abstract class _DynamicValueCompareWidgetConfig
   @override
   Map<String, dynamic> get textFont;
   set textFont(Map<String, dynamic> value);
+
+  /// Create a copy of DynamicValueCompareWidgetConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DynamicValueCompareWidgetConfigImplCopyWith<
           _$DynamicValueCompareWidgetConfigImpl>
       get copyWith => throw _privateConstructorUsedError;
